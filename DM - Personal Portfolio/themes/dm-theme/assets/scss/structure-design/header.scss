@@ -2,11 +2,15 @@
 @import "../functions/functions.scss";
 
 #header {
+    position: fixed;
     background-color: var(--dm-color-secondary);
     color: #fff;
-    margin: 0px;
+    width: 100%;
     min-height: 50px;
+    height: 66px;
     display: flex;
+    z-index: 98;
+    margin: 0px;
     padding: var( --dm-spacing-primary ) 0;
 
     > section {
@@ -185,7 +189,7 @@
 
             &.active {
                 background-color: var( --dm-background-color-primary );
-                position: absolute;
+                position: fixed;
                 z-index: 100;
                 top: 22px;
                 right: var( --dm-spacing-secondary );
@@ -215,11 +219,11 @@
                 display: flex;
             }
             .dm-menu {
-                position: absolute;
+                position: fixed;
                 width: 400px;
                 height: 100%;
                 top: 0;
-                left: -400px;
+                left: -450px;
                 flex-direction: column;
                 background-color: var( --dm-background-color-secondary );
                 background-image: linear-gradient(var( --dm-background-color-secondary ), var( --dm-background-color-primary ) 40%, var( --dm-background-color-secondary ) 120%);
@@ -243,7 +247,7 @@
         > section {
             .dm-menu {
                 width: 100%;
-                left: -100%;
+                left: -110%;
             }
         }
     }

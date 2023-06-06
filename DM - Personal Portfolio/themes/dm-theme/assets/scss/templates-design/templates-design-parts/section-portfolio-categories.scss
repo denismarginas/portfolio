@@ -1,0 +1,45 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-portfolio-categories {
+  background-color: var( --dm-background-color-secondary );
+  
+  > div {
+    @include container( var( --dm-spacing-large ) );
+    gap: var( --dm-spacing-secondary ); 
+
+    > h2 {
+      @include dm-font-heading1();
+      --dm-text-heading1-color: var( --dm-color-white );
+      --dm-text-heading1-font-family: var( --dm-font-family-secondary );
+      --dm-text-heading1-letter-spacing: var( --dm-spacing-primary );
+      text-align: center
+    }
+    > ul {
+      @include reset-list();
+      @include flex-row();
+      @include flex-center();
+      align-items: start;
+      gap: var( --dm-spacing-small ); 
+      padding: var( --dm-spacing-small ) 0;
+
+      > li {
+        @include flex-center();
+        flex-direction: column;
+        gap: var( --dm-spacing-primary );
+
+        > div {
+          > img {
+            width: 100%;
+            height: auto
+          }
+        }
+        > a {
+          @include dm-font-large();
+          --dm-text-large-color: var( --dm-color-white );
+        }
+      }
+    }
+  }
+  
+}

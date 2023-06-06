@@ -84,3 +84,9 @@ svg {
       }
     }
 }
+
+#page-content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 90px;
+}

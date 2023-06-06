@@ -1,10 +1,16 @@
-@mixin container() {
-  width: 100%;
+@mixin container( $var: null ) {
+  @if $var == null {
+    $var: 0;
+ }
+ 
   margin: 0 auto;
-  padding: 0 var( --dm-spacing-secondary );
+  width: 100%;
+  padding: $var var( --dm-spacing-secondary );
   max-width: 1600px;
 
-  @media only screen and ( max-width: --screen-phone-large ) {
+  @media only screen and ( max-width: $screen-tablet-small ) {
+    padding-top: calc( $var / 2 );
+    padding-bottom: calc( $var / 2 );
     padding-left: var( --dm-spacing-primary );
     padding-right: var( --dm-spacing-primary );
   }
