@@ -1,0 +1,173 @@
+@import "../functions/mixins.scss";
+
+#header {
+    background-color: var(--dm-color-secondary);
+    color: #fff;
+    margin: 0px;
+    min-height: 50px;
+    display: flex;
+    padding: var( --dm-spacing-primary ) 0;
+
+    section {
+        @include container();
+        @include flex-row();
+        align-items: center;
+        justify-content: space-between;
+        gap: var( --dm-spacing-secondary );
+    
+        .dm-logo {
+            @include flex-row();
+            align-items: center;
+            gap: var( --dm-spacing-primary );
+
+            .dm-logo-img {
+                @include fix-size(60px);
+                @include border-radius(60px);
+                border: 3px solid var( --dm-color-white );
+                position: relative;
+                overflow: hidden;
+                transition: box-shadow 0.3s;
+                box-shadow: 0px 0px 0px #22222200;
+
+                [data="dm-logo-front"] {
+                    @include fix-size(60px);
+                    transition: top 0.3s, filter 0.4s;
+                    filter: drop-shadow(0px 0px 0px #22222200);
+                    position: absolute;
+                    top: 10%;
+                }
+                [data="dm-logo-background"] {
+                    @include cover-image();
+                    background: var( --dm-background-color-primary );
+                    background: (var( --dm-background-color-primary ), var( --dm-background-color-secondary ));
+                    background-image: linear-gradient(var( --dm-background-color-primary ), var( --dm-background-color-primary ) 20%, var( --dm-background-color-secondary ) 120%);
+                }
+                
+                &:hover {
+                    box-shadow: 3px 3px 3px #222;
+                    transition: box-shadow 0.3s;
+
+                    [data="dm-logo-front"] {
+                        @include fix-size(60px);
+                        transition: top 0.3s, filter 0.4s;
+                        filter: drop-shadow(5px 5px 6px #222);
+                        top: 5%;
+                    }
+                }
+            }
+            .dm-logo-text {
+                @include flex-row();
+                gap: calc( var( --dm-spacing-primary ) / 2 );
+                text-shadow: 0px 0px 0px #22222200;
+                transition: text-shadow 0.3s;
+
+                > span {
+                    @include dm-font-big();
+                    --dm-text-big-color: var( --dm-color-white );
+                    --dm-font-family: var( --dm-font-family-secondary );
+
+                    &:first-of-type {
+                        --dm-text-big-font-weight: 800;
+                    }
+                }
+
+                &:hover {
+                    text-shadow: 3px 3px 3px #222;
+                    transition: text-shadow 0.3s;
+                }
+            }
+        }
+        .dm-menu {
+            @include flex-row();
+            gap: var( --dm-spacing-secondary );
+            align-items: center;
+
+            > ul {
+                @include reset-list();
+                @include flex-row();
+                gap: var( --dm-spacing-secondary );
+    
+                > li {
+                    > a {
+                        @include dm-font-big();
+                        --dm-text-big-color: var( --dm-color-white );
+                        padding: calc( var( --dm-spacing-primary ) / 3 ) 0;
+                    }
+                    :after {
+                        content: '';
+                        display: block;
+                        height: 3px;
+                        width: 0px;
+                        margin-bottom: -3px;
+                        background: transparent;
+                        transition: width .5s ease, background-color .5s ease;
+                      }
+    
+                    :hover:after {
+                        width: 100%;
+                        background: #fff;
+                    }
+                }
+            }
+        }
+        .search {
+            cursor: pointer;
+
+            svg {
+                @include fix-size(30px);
+                @include svg-color(var(--dm-color-white));
+                transform: rotate(-5deg);
+                transition: transform 0.4s;
+                padding: 5px;
+              
+                $duration: 0.3s;
+                $increment: 0.2s;
+              
+                $numPaths: 3;
+              
+                @for $i from 1 through $numPaths {
+                  > path:nth-last-child(#{$i}) {
+                    transition: transform calc(#{$duration} + #{$i * $increment}) ease;
+                    transform-origin: center;
+                    transform: scaleY(0) translateY(100%);
+                  }
+                }
+    
+            }
+
+            &:hover {
+                svg {
+                    $duration: 0.3s;
+                    $increment: 0.2s;
+                  
+                    $numPaths: 3;
+                    
+                    transform: rotate(0deg);
+                    transition: transform 0.4s;
+                
+                    @for $i from 1 through $numPaths {
+                      > path:nth-last-child(#{$i}) {
+                        transform: scaleY(1);
+                        transition: transform calc(#{$duration} + #{$i * $increment}) ease;
+                      }
+                    }
+                }
+            }
+        }
+    }
+    .waveWrapper {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: auto;
+        top: 0;
+        display: block;
+        margin: auto;
+        min-height: 132px;
+        
+        .waveWrapperInner {
+            background-image: none;
+        }
+    }
+}
