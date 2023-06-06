@@ -1,3 +1,5 @@
+@import "../interface-design/screen-sizes.scss";
+
 :root {
     /* ---- Colors ---- */
     --dm-color-primary   : #5d6977;
@@ -10,7 +12,7 @@
     --dm-color-gray      : #222222;
 
     /* ---- Backgrounds ---- */
-    --dm-background-color-body              : #FFFFFF;
+    --dm-background-color-black             : #000000;
     --dm-background-color-white             : #FFFFFF;
     --dm-background-color-gray              : #4A4B44;
     --dm-background-color-primary           : var( --dm-color-primary );
@@ -28,29 +30,15 @@
     --dm-spacing-primary           : 12px;
     --dm-spacing-secondary         : 24px;
     --dm-spacing-tertiary          : 36px;
-
-    --dm-spacing-extra-small  : 40px;
-    --dm-spacing-small        : 50px;
-    --dm-spacing-medium       : 80px;
-    --dm-spacing-large        : 100px;
+    --dm-spacing-extra-small       : 40px;
+    --dm-spacing-small             : 50px;
+    --dm-spacing-medium            : 80px;
+    --dm-spacing-large             : 100px;
 
     /* ---- Transition ---- */
     --dm-transition            : background-color 0.2s ease, color 0.2s ease;
     --dm-transition-svg-fill   : fill 0.2s ease;
     --dm-transition-svg-stroke : stroke 0.2s ease;
-
-    /* ---- Responsive Screens ---- */
-    --screen-desktop-large  : 1920px;
-    --screen-desktop-medium : 1440px;
-    --screen-desktop-small  : 1240px;
-
-    --screen-tablet-large   : 992px;
-    --screen-tablet-medium  : 767px;
-    --screen-tablet-small   : 575px;
-
-    --screen-phone-large    : 420px;
-    --screen-phone-meidum   : 375px;
-    --screen-phone-small    : 295px;
 
     /* ---- Fonts ---- */
     --dm-font-family           : inherit;
