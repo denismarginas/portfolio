@@ -1,0 +1,13 @@
+@import "../scss/mixins.scss";
+
+#header {
+    background-color: var( --dm-color-secondary );
+    color: #fff;
+    margin: 0px;
+    min-height: 50px;
+    display: flex;
+
+    section {
+        @include container();
+    }
+}
