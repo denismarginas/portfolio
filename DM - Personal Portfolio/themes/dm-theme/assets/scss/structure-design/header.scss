@@ -15,11 +15,12 @@
 
     > section {
         @include container();
+        @include padding-x();
         @include flex-row();
         align-items: center;
         justify-content: space-between;
         gap: var( --dm-spacing-secondary );
-    
+
         .dm-logo {
             @include flex-row();
             align-items: center;
@@ -43,7 +44,6 @@
                     position: absolute;
                     top: 10%;
                 }
-                
                 &:hover {
                     box-shadow: 3px 3px 3px #222;
                     transition: box-shadow 0.3s;
@@ -72,7 +72,6 @@
                         --dm-text-big-font-weight: 800;
                     }
                 }
-
                 &:hover {
                     text-shadow: 3px 3px 3px #222;
                     transition: text-shadow 0.3s;
@@ -88,13 +87,12 @@
                 left: 0 !important;
                 z-index: 100;
                 overflow: initial;
-
             }
             > ul {
                 @include reset-list();
                 @include flex-row();
                 gap: var( --dm-spacing-secondary );
-    
+
                 > li {
                     > a {
                         @include dm-font-big();
@@ -109,8 +107,7 @@
                         margin-bottom: -3px;
                         background: transparent;
                         transition: width .5s ease, background-color .5s ease;
-                      }
-    
+                    }
                     :hover:after {
                         width: 100%;
                         background: #fff;
@@ -124,46 +121,45 @@
                 cursor: pointer;
                 border: 2px solid var( --dm-color-white );
                 padding: calc( var( --dm-spacing-primary ) / 2 );
-    
+
                 svg {
                     @include fix-size(20px);
                     @include svg-color(var(--dm-color-white));
                     transform: rotate(-10deg);
                     transition: transform 0.4s;
+
                     $duration: 0.3s;
                     $increment: 0.2s;
-                  
                     $numPaths: 3;
-                  
+
                     @for $i from 1 through $numPaths {
-                      > path:nth-last-child(#{$i}) {
-                        transition: transform calc(#{$duration} + #{$i * $increment}) ease;
-                        transform-origin: center;
-                        transform: scaleY(0) translateY(100%);
-                      }
+                        > path:nth-last-child(#{$i}) {
+                            transition: transform calc(#{$duration} + #{$i * $increment}) ease;
+                            transform-origin: center;
+                            transform: scaleY(0) translateY(100%);
+                        }
                     }
-        
                 }
                 &:hover {
                     background-color: var( --dm-background-color-primary );
                     svg {
                         $duration: 0.3s;
                         $increment: 0.2s;
-                      
+
                         $numPaths: 3;
-                        
+
                         transform: rotate(0deg);
                         transition: transform 0.4s;
-                    
+
                         @for $i from 1 through $numPaths {
-                          > path:nth-last-child(#{$i}) {
-                            transform: scaleY(1);
-                            transition: transform calc(#{$duration} + #{$i * $increment}) ease;
-                          }
+                            > path:nth-last-child(#{$i}) {
+                                transform: scaleY(1);
+                                transition: transform calc(#{$duration} + #{$i * $increment}) ease;
+                            }
                         }
                     }
                 }
-            } 
+            }
         }
         .dm-navbar-toggle {
             @include flex-center();
@@ -173,7 +169,7 @@
             cursor: pointer;
             border: 2px solid var( --dm-color-white );
             padding: calc( var( --dm-spacing-primary ) / 2 );
-            
+
             > svg {
                 @include svg-color(var(--dm-color-white));
 
@@ -181,26 +177,23 @@
                     @include transition( transform 400ms 100ms );
                 }
             }
-
-
             &:hover {
                 background-color: var( --dm-background-color-primary );
             }
-
             &.active {
                 background-color: var( --dm-background-color-primary );
                 position: fixed;
                 z-index: 100;
                 top: 22px;
                 right: var( --dm-spacing-secondary );
-                
+
                 > svg {
                     > path {
                         @include transition( transform 400ms );
                     }
                     > path:nth-child(1) {
                         @include transform( rotate(45deg) translateY(-2px) translateX(2px) );
-                      }
+                    }
                     > path:nth-child(2) {
                         @include transform( rotate(45deg) translateY(-10px) translateX(2px) );
                         opacity: 0;
@@ -212,7 +205,6 @@
             }
         }
     }
-
     @media only screen and (max-width: $screen-tablet-large) {
         > section {
             .dm-navbar-toggle {
@@ -230,7 +222,7 @@
                 transition: 0.3s ease;
                 overflow: auto;
                 box-shadow: 3px 3px 17px #222;
-                
+
                 > ul {
                     padding: var( --dm-spacing-medium ) 0;
                     flex-direction: column;
@@ -240,9 +232,8 @@
                 }
             }
         }
-        
-    }
 
+    }
     @media only screen and (max-width: $screen-phone-large) {
         > section {
             .dm-menu {
@@ -257,7 +248,7 @@
                 .dm-logo-text {
                     gap: 2px;
                     flex-direction: column;
-                    
+
                     > span {
                         @include dm-font-extra-small();
                         --dm-text-extra-small-font-family: var( --dm-font-family-secondary );
@@ -271,7 +262,6 @@
             }
         }
     }
-    
     @media only screen and (max-width: 240px) {
         > section {
             .dm-logo {

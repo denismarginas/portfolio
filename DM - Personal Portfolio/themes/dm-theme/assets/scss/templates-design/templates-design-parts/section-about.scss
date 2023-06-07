@@ -5,6 +5,7 @@
   @include container( var( --dm-spacing-large ) );
   
   > div {
+    @include padding-x();
     @include flex-row();
     @include flex-center();
     gap: var( --dm-spacing-secondary ); 

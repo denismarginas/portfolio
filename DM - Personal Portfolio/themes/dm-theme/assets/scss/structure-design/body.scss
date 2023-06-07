@@ -90,3 +90,8 @@ svg {
   flex-direction: column;
   padding-top: 90px;
 }
+container, .container {
+  @include container( var( --dm-spacing-large ) );
+  @include flex-column();
+  position: relative;
+}

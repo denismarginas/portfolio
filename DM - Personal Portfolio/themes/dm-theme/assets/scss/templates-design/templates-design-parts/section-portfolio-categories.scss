@@ -3,43 +3,66 @@
 
 .dm-portfolio-categories {
   background-color: var( --dm-background-color-secondary );
-  
-  > div {
-    @include container( var( --dm-spacing-large ) );
-    gap: var( --dm-spacing-secondary ); 
 
-    > h2 {
-      @include dm-font-heading1();
-      --dm-text-heading1-color: var( --dm-color-white );
-      --dm-text-heading1-font-family: var( --dm-font-family-secondary );
-      --dm-text-heading1-letter-spacing: var( --dm-spacing-primary );
-      text-align: center
-    }
-    > ul {
-      @include reset-list();
-      @include flex-row();
-      @include flex-center();
-      align-items: start;
-      gap: var( --dm-spacing-small ); 
-      padding: var( --dm-spacing-small ) 0;
+  > container {
+    > div {
+      @include padding-x();
+      @include flex-column();
+      gap: var( --dm-spacing-secondary );
 
-      > li {
-        @include flex-center();
-        flex-direction: column;
-        gap: var( --dm-spacing-primary );
+      > h2 {
+        @include dm-font-heading1();
+        --dm-text-heading1-color: var( --dm-color-white );
+        --dm-text-heading1-font-family: var( --dm-font-family-secondary );
+        --dm-text-heading1-letter-spacing: var( --dm-spacing-primary );
+        text-align: center;
 
-        > div {
-          > img {
-            width: 100%;
-            height: auto
-          }
+        &:after {
+          content: "";
+          display: block;
+          height: 3px;
+          width: 10%;
+          max-width: 35%;
+          margin: 4px auto;
+          background-color: var( --dm-background-color-white );
+          -webkit-transition: width 0.5s ease,background-color 0.5s ease;
+          transition: width 0.5s ease,background-color 0.5s ease;
         }
-        > a {
-          @include dm-font-large();
-          --dm-text-large-color: var( --dm-color-white );
+      }
+      > ul {
+        @include reset-list();
+        @include flex-center();
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: start;
+        gap: var( --dm-spacing-small );
+        padding: var( --dm-spacing-small ) 0;
+
+        > li {
+          width: 100%;
         }
       }
     }
   }
-  
+  @media only screen and (max-width: $screen-tablet-medium) {
+    > container {
+      > div {
+        > ul {
+          @include flex-column();
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-medium) {
+    > container {
+      > div {
+        > h2 {
+          @include dm-font-heading3();
+          --dm-text-heading3-color: var( --dm-color-white );
+          --dm-text-heading3-font-family: var( --dm-font-family-secondary );
+          --dm-text-heading3-letter-spacing: 4px;
+        }
+      }
+    }
+  }
 }
