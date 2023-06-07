@@ -1,0 +1,154 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-web-development-experience {
+  @include padding-x();
+
+  > container {
+
+    > ul {
+      @include reset-list();
+      @include flex-center();
+      display: flex;
+      gap: var( --dm-spacing-small );
+
+      > li {
+        &:first-of-type {
+          width: 70%;
+          display: grid;
+          gap: var( --dm-spacing-tertiary );
+
+          > h2 {
+            display: flex;
+
+            > span {
+              @include dm-font-heading1();
+              --dm-text-heading1-font-family: var( --dm-font-family-secondary );
+              --dm-text-heading1-color: var( --dm-color-primary );
+              --dm-text-heading1-font-size: 50px;
+              padding: var( --dm-spacing-primary ) var( --dm-spacing-tertiary );
+
+              &:first-of-type {
+                background-color: var( --dm-color-primary );
+                --dm-text-heading1-color: var( --dm-color-white );
+              }
+              &:last-of-type {
+                background-color: rgba( var( --dm-color-gray-rgb ), 0.1 );
+              }
+            }
+          }
+          > p {
+            @include dm-font-default();
+            --dm-text-default-color: var( --dm-color-gray );
+          }
+        }
+        &:last-of-type {
+          width: 30%;
+
+          > img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-desktop-large) {
+    > container {
+      > ul {
+        > li:first-of-type {
+          > h2 {
+            > span {
+              --dm-text-heading1-font-size: 36px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-desktop-medium) {
+    > container {
+      > ul {
+        > li:first-of-type {
+          > h2 {
+            > span {
+              @include dm-font-heading2();
+              --dm-text-heading2-font-family: var( --dm-font-family-secondary );
+              padding: var( --dm-spacing-primary );
+
+              &:first-of-type{
+                --dm-text-heading2-color: var( --dm-color-white );
+              }
+              &:last-of-type{
+                --dm-text-heading2-color: var( --dm-color-primary );
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-large) {
+    > container {
+      > ul {
+        > li:first-of-type {
+          > h2 {
+            > span {
+              @include dm-font-heading4();
+              --dm-text-heading4-font-family: var( --dm-font-family-secondary );
+
+              &:first-of-type{
+                --dm-text-heading4-color: var( --dm-color-white );
+              }
+              &:last-of-type{
+                --dm-text-heading4-color: var( --dm-color-primary );
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-medium) {
+    > container {
+      > ul {
+        flex-direction: column;
+        > li:first-of-type, li:last-of-type {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-small) {
+    > container {
+      > ul {
+        > li:first-of-type {
+          > h2 {
+            > span {
+              @include dm-font-heading6();
+              --dm-text-heading6-font-family: var( --dm-font-family-secondary );
+
+              &:first-of-type{
+                --dm-text-heading6-color: var( --dm-color-white );
+              }
+              &:last-of-type{
+                --dm-text-heading6-color: var( --dm-color-primary );
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-medium) {
+    > container {
+      > ul {
+        > li:first-of-type {
+          > h2 {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}

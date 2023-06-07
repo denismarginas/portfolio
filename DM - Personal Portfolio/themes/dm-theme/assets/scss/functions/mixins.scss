@@ -10,8 +10,8 @@
   max-width: 1600px;
 
   @media only screen and ( max-width: $screen-tablet-small ) {
-    padding-top: calc( var( $var ) / 2 );
-    padding-bottom: calc( var( $var ) / 2 );
+    padding-top: calc( $var  / 2 );
+    padding-bottom: calc(  $var  / 2 );
   }
 }
 @mixin padding-x() {
