@@ -48,3 +48,32 @@
     max-width: var( --dm-spacing-small );
   }
 }
+
+@keyframes moveDivider {
+  0% {
+    left: 0%;
+    right: 0%;
+  }
+  25% {
+    left: 0%;
+    right: 10%;
+  }
+  50% {
+    left: 0%;
+    right: 0%;
+  }
+  75% {
+    left: 10%;
+    right: 0%;
+  }
+  100% {
+    left: 0%;
+    right: 0%;
+  }
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
