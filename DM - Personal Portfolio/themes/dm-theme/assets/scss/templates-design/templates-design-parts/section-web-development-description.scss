@@ -1,0 +1,26 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-web-development-description {
+  @include padding-x();
+
+  > container {
+    > ul {
+      @include reset-list();
+      display: grid;
+      grid-template-columns: 20% 60% 20%;
+      align-items: center;
+      justify-content: center;
+
+      > li {
+        > div {
+
+        }
+        > img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

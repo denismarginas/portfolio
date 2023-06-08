@@ -1,0 +1,33 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.svg-list {
+  @include padding-x();
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  gap: var( --dm-spacing-tertiary );
+  background: rgba(var( --dm-color-gray-rgb ), 0.05);
+
+  svg {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    border: 1px solid rgba(var( --dm-color-gray-rgb ), 0.1);
+
+  }
+  @media only screen and (max-width: $screen-desktop-medium) {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  @media only screen and (max-width: $screen-tablet-medium) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  @media only screen and (max-width: $screen-phone-medium) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media only screen and (max-width: $screen-phone-small) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
