@@ -1,0 +1,150 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-socials-list {
+  @include flex-row();
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var( --dm-spacing-primary);
+
+  > a {
+    @include flex-row();
+    align-items: center;
+
+    > svg {
+      @include fix-size( 30px );
+    }
+    &:hover {
+      > svg {
+        @include svg-color( var( --dm-color-primary ) );
+      }
+    }
+  }
+  &[data-socials="rectangle-light"] {
+    > a {
+      background-color: var( --dm-color-primary );
+      padding: var( --dm-spacing-primary );
+      > svg {
+        @include fix-size( 20px );
+        @include svg-color( var( --dm-color-white ) );
+
+      }
+      &:hover {
+        background-color: var( --dm-color-secondary );
+      }
+    }
+  }
+  &[data-socials="rectangle-corners-light"] {
+    > a {
+      @include border-radius( var( --dm-spacing-primary ) );
+      background-color: var( --dm-color-primary );
+      padding: var( --dm-spacing-primary );
+
+      > svg {
+        @include fix-size( 20px );
+        @include svg-color( var( --dm-color-white ) );
+      }
+      &:hover {
+        background-color: var( --dm-color-secondary );
+      }
+    }
+  }
+  &[data-socials="circle-light"] {
+    > a {
+      @include border-radius( 20px );
+      background-color: var( --dm-color-primary );
+      padding: var( --dm-spacing-primary );
+
+      > svg {
+        @include fix-size( 20px );
+        @include svg-color( var( --dm-color-white ) );
+      }
+      &:hover {
+        background-color: var( --dm-color-secondary );
+      }
+    }
+  }
+  &[data-socials="rectangle-light-2"] {
+    > a {
+      background-color: rgba(var( --dm-color-white-rgb ) , 1 );
+      padding: var( --dm-spacing-primary );
+      > svg {
+        @include fix-size( 20px );
+        @include svg-color( var( --dm-color-primary ) );
+
+      }
+      &:hover {
+        background-color: rgba(var( --dm-color-white-rgb ) , 0.8 );
+      }
+    }
+  }
+  &[data-socials="rectangle-corners-light-2"] {
+    > a {
+      @include border-radius( var( --dm-spacing-primary ) );
+      background-color: rgba(var( --dm-color-white-rgb ) , 1 );
+      padding: var( --dm-spacing-primary );
+
+      > svg {
+        @include fix-size( 20px );
+        @include svg-color( var( --dm-color-primary ) );
+      }
+      &:hover {
+        background-color: rgba(var( --dm-color-white-rgb ) , 0.8 );
+      }
+    }
+  }
+  &[data-socials="circle-light-2"] {
+    > a {
+      @include border-radius( 20px );
+      background-color: rgba(var( --dm-color-white-rgb ) , 1 );
+      padding: var( --dm-spacing-primary );
+
+      > svg {
+        @include fix-size( 20px );
+        @include svg-color( var( --dm-color-primary ) );
+      }
+      &:hover {
+        background-color: rgba(var( --dm-color-white-rgb ) , 0.8 );
+      }
+    }
+  }
+  &[data-socials="circle-normal"] {
+    > a {
+      @include border-radius( 20px );
+      background-color: rgba( var( --dm-color-secondary-rgb ) , 0.2 );
+      padding: var( --dm-spacing-primary );
+
+      > svg {
+        @include fix-size( 20px );
+      }
+      &:hover {
+        background-color: rgba( var( --dm-color-primary-rgb ) , 0.3 );
+      }
+    }
+  }
+  &[data-socials="normal-fill"] {
+    > a {
+      position: relative;
+
+      &[data-socials="youtube"]:before {
+        content: "";
+        position: absolute;
+        background: var( --dm-color-white );
+        width: 16px;
+        height: 16px;
+        left: 7px;
+      }
+      &[data-socials="google-site"]:before {
+        content: "";
+        position: absolute;
+        background: var( --dm-color-white );
+        width: 25px;
+        height: 25px;
+        left: 2px;
+      }
+      > svg {
+        z-index: 1;
+      }
+    }
+  }
+}

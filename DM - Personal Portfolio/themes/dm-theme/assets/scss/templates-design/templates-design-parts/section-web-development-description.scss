@@ -90,6 +90,10 @@
     > container {
       > ul {
         grid-template-columns: repeat(1, 1fr);
+
+        > li {
+          gap: var(--dm-spacing-tertiary);
+        }
       }
     }
   }
@@ -97,6 +101,8 @@
     > container {
       > ul {
         > li {
+          gap: var(--dm-spacing-secondary);
+
           > .dm-description-item {
             > h3 {
               @include dm-font-heading5();

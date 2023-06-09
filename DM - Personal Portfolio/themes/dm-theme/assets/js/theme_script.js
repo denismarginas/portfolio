@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-// Image Absolute Scroll Animation Bottom
+    // Image Absolute Scroll Animation Bottom
     function scrollAnimation(element, minBottom, maxBottom) {
         var scrollPosition = window.scrollY || window.pageYOffset;
         var bottomValue = Math.max(Math.min(-scrollPosition, maxBottom), minBottom);
@@ -31,15 +31,9 @@ document.addEventListener("DOMContentLoaded", function() {
                         scrollAnimation(element, -300, 0);
                     }
                 });
-            });s
+            });
         }
     };
-
-
-
-
-
-
 
 });
   

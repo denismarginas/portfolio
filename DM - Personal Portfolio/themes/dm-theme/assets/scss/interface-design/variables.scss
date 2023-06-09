@@ -13,6 +13,7 @@
     --dm-color-black                    : #000000;
     --dm-color-white                    : #FFFFFF;
     --dm-color-gray                     : #222222;
+    --dm-color-gray-darken              : #141414;
 
     /* ---- Colors RGB---- */
     --dm-color-primary-rgb              : #{hexToRGB( #5d6977 )};
@@ -24,6 +25,7 @@
     --dm-color-black-rgb               : #{hexToRGB( #000000 )};
     --dm-color-white-rgb               : #{hexToRGB( #FFFFFF )};
     --dm-color-gray-rgb                : #{hexToRGB( #4A4B44 )};
+    --dm-color-gray-darken             : #{hexToRGB( #141414 )};;
 
     /* ---- Backgrounds ---- */
     --dm-background-color-primary      : var( --dm-color-primary );
@@ -33,6 +35,7 @@
     --dm-background-color-black        : #000000;
     --dm-background-color-white        : #FFFFFF;
     --dm-background-color-gray         : #4A4B44;
+    --dm-background-color-gray-darken  : #141414;
 
     /* ---- Border Radius ---- */
     --dm-border-radius-primary   : 6px;
