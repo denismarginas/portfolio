@@ -13,23 +13,43 @@
     gap: var( --dm-spacing-tertiary );
 
     > .dm-footer-portfolio, .dm-footer-contact {
+      @include flex-column();
+      gap: var( --dm-spacing-primary );
+
       > h5 {
         @include dm-font-medium();
         --dm-text-medium-color: var( --dm-color-white );
         --dm-text-medium-font-weight: 600;
       }
       > ul {
-        li {
-          display: list-item;
+        @include reset-list();
+
+        > li {
+          display: flex;
+          flex-shrink: 0;
           color: var( --dm-color-white );
 
           > a {
-            @include limit-line-text(1);
-            @include dm-font-small();
-            --dm-text-small-color: var( --dm-color-white );
+            @include flex-row();
+            align-items: center;
+            gap: calc( var( --dm-spacing-primary ) / 3 );
 
             &:hover {
-              --dm-text-small-color: var( --dm-color-primary );
+              > span {
+                --dm-text-small-color: var( --dm-color-primary );
+              }
+              > svg {
+                @include svg-color( var( --dm-color-primary ) );
+              }
+            }
+            > span {
+              @include limit-line-text(1);
+              @include dm-font-small();
+              --dm-text-small-color: var( --dm-color-white );
+            }
+            > svg {
+              @include fix-size( 10px );
+              @include svg-color( var( --dm-color-white ) );
             }
           }
         }
@@ -37,7 +57,7 @@
     }
     > .dm-socials-footer {
       @include flex-column();
-      gap: var( --dm-spacing-secondary );
+      gap: var( --dm-spacing-primary );
 
       .dm-socials-list {
         > a {
@@ -57,7 +77,7 @@
     > .dm-footer-copyrights {
       @include flex-column();
 
-      gap: var( --dm-spacing-primary );
+
       > span {
         @include dm-font-small();
         --dm-text-small-color: var( --dm-color-white );

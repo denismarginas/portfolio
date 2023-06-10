@@ -4,6 +4,8 @@
 .dm-web-development-description {
   @include padding-x();
   background-color: var( --dm-background-color-secondary );
+  padding-top: var( --dm-spacing-medium );
+  padding-bottom: var( --dm-spacing-medium );
 
   > container {
     > ul {
@@ -80,6 +82,9 @@
     }
   }
   @media only screen and (max-width: $screen-desktop-medium) {
+    padding-top: 0;
+    padding-bottom: 0;
+
     > container {
       > ul {
         grid-template-columns: 2fr 2fr 2fr;

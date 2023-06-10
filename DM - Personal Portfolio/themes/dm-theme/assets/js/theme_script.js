@@ -14,9 +14,15 @@ document.addEventListener("DOMContentLoaded", function() {
     // Image Absolute Scroll Animation Bottom
     function scrollAnimation(element, minBottom, maxBottom) {
         var scrollPosition = window.scrollY || window.pageYOffset;
-        var bottomValue = Math.max(Math.min(-scrollPosition, maxBottom), minBottom);
+        var elementRect = element.getBoundingClientRect();
+        var viewportHeight = window.innerHeight;
+        var minScroll = elementRect.top - (elementRect.height - viewportHeight) + minBottom;
+        //var maxScroll = elementRect.top + maxBottom;
+        var bottomValue = Math.max(Math.min(scrollPosition - minScroll, maxBottom), minBottom);
         element.style.bottom = bottomValue + "px";
     }
+
+
 
     window.onload = function() {
         var scrollElements = document.querySelectorAll('[data-animation="dm-scroll"]');
