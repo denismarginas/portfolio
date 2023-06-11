@@ -3,6 +3,7 @@
     font-style: normal;
     font-weight: normal;
     src: url('../fonts/Roboto/robotoregular.eot'); /* IE9 Compat Modes */
+    font-display: swap;
     src: local(''),
          url('../fonts/Roboto/robotoregular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
          url('../fonts/Roboto/robotoregular.woff2') format('woff2'), /* Super Modern Browsers */
@@ -17,7 +18,7 @@
     font-style: normal;
     font-weight: normal;
     src: url('../fonts/Gerth/gerthregular.ttf'); /* IE9 Compat Modes */
-    
+    font-display: swap;
     src: local(''),
          url('../fonts/Gerth/gerthregular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
          url('../fonts/Gerth/gerthregular.woff2') format('woff2'), /* Super Modern Browsers */

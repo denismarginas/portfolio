@@ -4,8 +4,8 @@
 .dm-web-development-experience {
   @include padding-x();
 
-  > container {
 
+  > container {
     > ul {
       @include reset-list();
       @include flex-center();

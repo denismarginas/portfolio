@@ -4,6 +4,8 @@ body {
     font-family: var( --dm-font-family-primary );
     background-color: var( --dm-background-color-body );
     padding: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 ul,
