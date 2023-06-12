@@ -1,7 +1,0 @@
-Editing code with Visual Studio Code.
-
-
-Prepros is using for compilation of scss files. In order to modify the CSS you have you have to save all SCSS files in order of usage. To use the Prepros with the project you have the import the theme file project in it, the folder with data of theme.
-
-Prepros: https://prepros.io/downloads
-Visual Studio Code: https://code.visualstudio.com/download

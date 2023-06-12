@@ -1,0 +1,104 @@
+@import "../functions/mixins.scss";
+
+body {
+    font-family: var( --dm-font-family-primary );
+    background-color: var( --dm-background-color-white );
+    padding: 0;
+}
+
+ul,
+ol {
+  @include dm-font-default();
+}
+
+body,
+div,
+nav,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd,
+svg,
+path,
+label {
+  margin: 0;
+  @include transition( var( --dm-transition ) );
+}
+
+a {
+    text-decoration: none;
+  
+    &:hover {
+      text-decoration: none;
+      color: var( --dm-link-color );
+    }
+}
+
+h1 { @include dm-font-heading1(); }
+h2 { @include dm-font-heading2(); }
+h3 { @include dm-font-heading3(); }
+h4 { @include dm-font-heading4(); }
+h5 { @include dm-font-heading5(); }
+h6 { @include dm-font-heading6(); }
+
+p {
+    margin: 0;
+    @include dm-font-default();
+    @include transition( var( --dm-transition ) );
+}
+
+span,
+a,
+ul,
+ol,
+li,
+nav,
+label,
+input
+table th,
+table td {
+    @include dm-font-default();
+}
+  
+svg {
+    &[data-svg-type="fill"] {
+      > path {
+        @include transition( var( --dm-transition-svg-fill ) );
+      }
+    }
+    &[data-svg-type="stroke"] {
+      > path {
+        @include transition( var( --dm-transition-svg-stroke ) );
+      }
+    }
+}
+
+#page-content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 90px;
+}
+container, .container {
+  @include container( var( --dm-spacing-large ) );
+  @include flex-column();
+  position: relative;
+}
+
+.theme-dark {
+  background-color: var( --dm-background-color-gray-darken );
+}
+.theme-light {
+  background-color: var( --dm-background-color-white );
+}

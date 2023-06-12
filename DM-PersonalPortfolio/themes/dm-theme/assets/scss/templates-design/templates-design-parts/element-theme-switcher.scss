@@ -1,0 +1,96 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+/* The switch - the box around the slider */
+.dm-toggletheme {
+  position: relative;
+  display: inline-block;
+  width: 58px;
+  height: 25px;
+
+  > input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:checked + span {
+      background-color: lighten(#a6a6a6, 10%);
+    }
+
+    &:focus + span {
+      box-shadow: 0 0 1px var( --dm-color-primary );
+    }
+
+    &:checked + span > svg {
+      @include svg-color( var( --dm-color-white ) );
+      -webkit-transform: translateX(24px) rotate(-30deg);
+      -ms-transform: translateX(24px) rotate(-30deg);
+      transform: translateX(24px) rotate(-30deg);
+      background: red;
+      background: var( --dm-background-color-gray );
+      background-repeat: no-repeat;
+      background-position: center;
+
+      > path {
+        &:first-of-type {
+          display: block;
+
+        }
+        &:not(:first-of-type) {
+          transition: opacity 0.6s;
+        }
+        @for $j from 2 through 7 {
+          &:nth-of-type(#{$j}) {
+
+            @if $j>0 {
+              opacity: 0;
+            }
+          }
+        }
+        &:nth-of-type(8) {
+          transform: rotate(270deg) translateY(6.5px) translateX(-18.5px);
+          transition: opacity 0.6s, transform 0.4s;
+        }
+        &:nth-of-type(9) {
+          transform: rotate(0deg) translateY(0px) translateX(-5px);
+          transition: opacity 0.6s, transform 0.6s;
+        }
+      }
+    }
+
+
+  }
+  > span {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 34px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: darken(#a6a6a6, 10%);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+
+    > svg {
+      @include svg-color( var( --dm-color-gray ) );
+      @include fix-size(24px);
+      padding: 6px;
+      position: absolute;
+      border-radius: 34px;
+      content: "";
+      left: 0px;
+      bottom: 4px;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+      box-shadow: 0 0px 15px #2020203d;
+      background: var( --dm-background-color-white );
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+

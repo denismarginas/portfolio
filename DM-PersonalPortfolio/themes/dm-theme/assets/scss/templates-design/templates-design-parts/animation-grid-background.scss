@@ -1,0 +1,64 @@
+body, body.theme-light {
+  .grid-background-animation {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAHFJREFUeJzt2sEJgDAMQNFs2dEsZEELdocWQV3hR/6DHHLLvyd6P1psY5yt6sQjM7+loPv+Oa/SES9DaAyhMYTGEBpDaAyhMYTGEBpDaAyhMYTGEBpDaAyhMYTGEBpDaAyhMYTGEBpDaAyhMYToD/9aC1j2LUASeR8QAAAAAElFTkSuQmCC") repeat 0 0;
+  }
+}
+body.theme-dark {
+  .grid-background-animation {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAG1JREFUeJzt2sEJwDAMxVAvkP3BE9aQ7JBSSGeQgx78u3V3ZOaIV9Uzui6OE9PVd/9as3XEzxAaQ2gMoTGExhAaQ2gMoTGExhAaQ2gMoTGExhAaQ2gMoTGExhAaQ2gMoTGExhAaQ2gMIbrhX2sDdd8QncujvIQAAAAASUVORK5CYII=") repeat 0 0;
+
+  }
+}
+
+
+.grid-background-animation {
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+  -moz-animation: bg-scrolling-reverse 0.92s infinite;
+  -o-animation: bg-scrolling-reverse 0.92s infinite;
+  animation: bg-scrolling-reverse 0.92s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}

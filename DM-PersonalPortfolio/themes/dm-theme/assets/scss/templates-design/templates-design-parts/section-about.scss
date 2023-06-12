@@ -1,0 +1,144 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-about {
+  @include padding-x();
+
+  > container {
+    @include flex-row();
+    @include flex-center();
+    gap: var( --dm-spacing-secondary ); 
+
+    > div {
+      &:first-of-type {
+        position: relative;
+        width: 40%;
+        z-index: 0;
+
+        > img {
+          max-width: 100%;
+          height: auto;
+          clip-path: polygon(0 0, 100% 0, 100% 87%, 0 95%);
+        }
+        > svg {
+          position: absolute;
+          z-index: -1;
+          width: 400px;
+          height: auto;
+          left: 20%;
+          transform: rotate(40deg);
+          opacity: 0.2;
+        }
+        > span {
+          position: absolute;
+          z-index: -2;
+          width: 100%;
+          height: 100%;
+          height: 400px;
+          left: 0;
+          bottom: 5.8%;
+          background-color: var( --dm-background-color-primary );
+          background-image: linear-gradient(var( --dm-background-color-secondary ), var( --dm-background-color-primary ) 20%, var( --dm-background-color-secondary ) 170%);
+          clip-path: polygon(0 0, 100% 28%, 100% 80%, 0 100%);
+        }
+      }
+      &:last-of-type {
+        width: 60%;
+        display: grid;
+        gap: var( --dm-spacing-secondary );
+
+        > h2 {
+          @include dm-font-heading1();
+          --dm-text-heading1-font-family: var(--dm-font-family-secondary);
+
+
+          &:after {
+            position: relative;
+            display: block;
+            content: "";
+            width: 100%;
+            max-width: var( --dm-spacing-small );
+            height: 3px;
+            background-color: var( --dm-color-primary );
+            transition: max-width 0.3s;
+            transition-delay: 0.3s;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+            animation-name: growDivider;
+            animation-fill-mode: both;
+
+          }
+          &:hover {
+            &:after {
+              max-width: var( --dm-spacing-medium );
+              transition: max-width 0.3s;
+            }
+          }
+        }
+        p {
+          @include dm-font-default();
+          word-break: break-word;
+
+          @for $j from 1 through 3 {
+            $delay: ($j - 1) * 0.6s;
+            &:nth-of-type(#{$j}) {
+              transition-delay: $delay;
+            }
+          }
+        }
+      }
+  }
+  }
+  @media only screen and (max-width: $screen-tablet-large) {
+    overflow: hidden;
+
+    > container {
+      flex-direction: column;
+      
+      > div {
+        &:first-of-type {
+          width: 100%;
+        }
+        &:last-of-type {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+body, body.theme-light {
+  .dm-about {
+    > container {
+      > div {
+        > h2 {
+          --dm-text-heading1-color: var( --dm-color-black );
+        }
+        > p {
+          --dm-text-default-color: var( --dm-color-gray );
+        }
+        > svg {
+          @include svg-color( var( --dm-background-color-secondary ) );
+        }
+      }
+    }
+  }
+}
+body.theme-dark {
+  .dm-about {
+    > container {
+      > div {
+        > h2 {
+          --dm-text-heading1-color: var( --dm-color-white );
+        }
+        > p {
+          --dm-text-default-color: var( --dm-color-white );
+        }
+        > svg {
+          @include svg-color( var( --dm-background-color-white ) );
+        }
+      }
+    }
+  }
+}
