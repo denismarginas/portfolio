@@ -3,6 +3,7 @@
 
 .dm-about {
   @include padding-x();
+  overflow: hidden;
 
   > container {
     @include flex-row();

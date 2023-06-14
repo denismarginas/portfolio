@@ -6,6 +6,7 @@
   background-color: var( --dm-background-color-primary );
   padding-top: var( --dm-spacing-medium );
   padding-bottom: var( --dm-spacing-medium );
+  overflow: hidden;
 
   &.blurred-lines-animation {
     > container {

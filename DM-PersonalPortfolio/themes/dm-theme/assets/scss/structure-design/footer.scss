@@ -50,10 +50,19 @@
             > svg {
               @include fix-size( 10px );
               @include svg-color( var( --dm-color-white ) );
-
+            }
+          }
+        }
+      }
+    }
+    .dm-footer-contact {
+      > ul {
+        > li {
+          > a {
+            > svg {
               &:last-of-type {
                 @include fix-width( auto );
-                @include fix-height( 12px );
+                @include fix-height( 14px );
                 padding: 2px;
               }
             }

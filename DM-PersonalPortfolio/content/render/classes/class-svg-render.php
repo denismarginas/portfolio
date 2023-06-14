@@ -1,108 +1,28 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <title>Denis Marginas - Portfolio</title>
-    <link rel="stylesheet" href="../../themes/dm-theme/assets/css/style.css">
-    <link rel="icon" type="image/x-icon" href="../../content/img/favicon/favicon.ico">
-    <script src="../../themes/dm-theme/assets/js/theme_script-dist.js"></script>
-</head>
-<body id="body">
-<header id="header">
-    <section>
-        <div class="dm-logo">
-            <a href="#" class="dm-logo-img">
-                <img data="dm-logo-front" src="../../content/img/logo/logo.png" alt="Denis Marginas Personal Icon">
-            </a>
-            <a href="home.html" class="dm-logo-text">
-                <span>Denis</span>
-                <span>Marginas</span>
-            </a>
-        </div>
-        <div class="dm-menu">
-            <ul>
-                <li>
-                    <a href="home.html">Home</a>
-                </li>
-                <li>
-                    <a href="experience.html">Experience</a>
-                </li>
-                <li>
-                    <a href="portfolio.html">Portfolio</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-            </ul>
-            <div class="dm-menu-utility">
-                <span class="dm-search">
-                    <svg data-svg-type="fill" width="20" height="20" viewBox="0 0 256 256">
+<?php
+
+class SVGRenderer {
+    private static $icons = array(
+                          'menu'         => '<svg data-svg-type="fill" width="21" height="17" viewBox="0 0 21 17" >
+                                              <path d="M0 0.75C0 0.335786 0.335786 0 0.75 0H10.5H20.25C20.6642 0 21 0.335786 21 0.75V0.75C21 1.16421 20.6642 1.5 20.25 1.5H0.75C0.335786 1.5 0 1.16421 0 0.75V0.75Z"/>
+                                              <path d="M0 8.25C0 7.83579 0.335786 7.5 0.75 7.5H10.5H20.25C20.6642 7.5 21 7.83579 21 8.25V8.25C21 8.66421 20.6642 9 20.25 9H0.75C0.335786 9 0 8.66421 0 8.25V8.25Z"/>
+                                              <path d="M0 15.75C0 15.3358 0.335786 15 0.75 15H10.5H20.25C20.6642 15 21 15.3358 21 15.75V15.75C21 16.1642 20.6642 16.5 20.25 16.5H0.75C0.335786 16.5 0 16.1642 0 15.75V15.75Z"/>
+                                            </svg>',
+                          'search'       => '<svg data-svg-type="fill" width="20" height="20" viewBox="0 0 256 256">
                                                <path d="M155.518 23.8866C175.902 23.8866 195.063 31.8249 209.476 46.2373C223.888 60.6498 231.827 79.8112 231.827 100.195C231.827 120.579 223.888 139.74 209.476 154.153C195.063 168.565 175.902 176.503 155.518 176.503C135.134 176.503 115.973 168.565 101.561 154.153C87.1481 139.74 79.2099 120.579 79.2099 100.195C79.2099 79.8112 87.1481 60.6498 101.561 46.2373C115.973 31.8249 135.137 23.8866 155.518 23.8866ZM155.518 1.4066C130.237 1.4066 104.955 11.0505 85.6644 30.3412C47.086 68.9197 47.086 131.47 85.6644 170.049C104.955 189.339 130.237 198.983 155.518 198.983C180.8 198.983 206.081 189.339 225.372 170.049C263.951 131.47 263.951 68.9197 225.372 30.3412C206.084 11.0505 180.8 1.4066 155.518 1.4066Z"/>
                                                <path d="M12.6466 254.307C9.76915 254.307 6.89452 253.208 4.6971 251.013C0.307882 246.624 0.307882 239.506 4.6971 235.12L85.3132 154.501C89.7052 150.109 96.8201 150.109 101.209 154.501C105.599 158.89 105.599 166.008 101.209 170.394L20.5961 251.013C18.3987 253.208 15.524 254.307 12.6466 254.307Z"/>
                                                <path d="M135.705 125.592C135.705 122.846 133.479 120.621 130.734 120.621H114.863C112.118 120.621 109.892 122.846 109.892 125.592V146.818C117.476 153.394 126.246 158.191 135.705 160.981V125.592Z"/>
                                                <path d="M169.164 162.529V105.003C169.164 102.258 166.938 100.032 164.193 100.032H148.322C145.576 100.032 143.351 102.258 143.351 105.003V162.762C147.35 163.465 151.435 163.844 155.58 163.844C160.194 163.841 164.738 163.395 169.164 162.529Z"/>
                                                <path d="M197.651 71.7212H181.78C179.035 71.7212 176.81 73.9467 176.81 76.6921V160.559C186.31 157.544 195.097 152.503 202.622 145.638V76.6921C202.622 73.9467 200.397 71.7212 197.651 71.7212Z"/>
-                                             </svg>                </span>
-                <label class="dm-toggletheme">
-                    <input type="checkbox" id="toggleTheme">
-                    <span>
-                        <svg data-svg-type="fill" width="30" height="30" viewBox="0 0 30 30">
-                                               <path d="M15 22.1C11 22.1 7.79999 18.9 7.79999 15C7.79999 11 11 7.79999 15 7.79999C18.9 7.79999 22.1 11 22.1 15C22.1 18.9 18.9 22.1 15 22.1Z"/>
-                                               <path d="M9.09999 22C9.09999 22.1333 9.06665 22.2333 8.99999 22.3L5.99999 25.3C5.93332 25.3667 5.83332 25.4 5.69999 25.4C5.56665 25.4 5.46665 25.3333 5.39999 25.2L4.69999 24.6C4.63332 24.4667 4.59999 24.3667 4.59999 24.3C4.53332 24.1667 4.53332 24.0667 4.59999 24L7.69999 20.9C7.76665 20.8333 7.83332 20.8333 7.89999 20.9C8.03332 20.9 8.13332 20.9333 8.19999 21L8.89999 21.7C9.03332 21.7667 9.09999 21.8667 9.09999 22Z"/>
-                                               <path d="M20.9 8.00001C20.9 7.86667 20.9334 7.76667 21 7.70001L24 4.70001C24.0667 4.63334 24.1667 4.60001 24.3 4.60001C24.4334 4.60001 24.5334 4.66667 24.6 4.80001L25.3 5.40001C25.3667 5.53334 25.4 5.63334 25.4 5.70001C25.4667 5.83334 25.4667 5.93334 25.4 6.00001L22.3 9.10001C22.2334 9.16667 22.1667 9.16667 22.1 9.10001C21.9667 9.10001 21.8667 9.06667 21.8 9.00001L21.1 8.30001C20.9667 8.23334 20.9 8.13334 20.9 8.00001Z"/>
-                                               <path d="M20.9 22C20.9 22.1333 20.9334 22.2333 21 22.3L24 25.3C24.0667 25.3667 24.1667 25.4 24.3 25.4C24.4334 25.4 24.5334 25.3333 24.6 25.2L25.3 24.6C25.3667 24.4667 25.4 24.3667 25.4 24.3C25.4667 24.1667 25.4667 24.0667 25.4 24L22.3 20.9C22.2334 20.8333 22.1667 20.8333 22.1 20.9C21.9667 20.9 21.8667 20.9333 21.8 21L21.1 21.7C20.9667 21.7667 20.9 21.8667 20.9 22Z"/>
-                                               <path d="M9.09999 8.00001C9.09999 7.86667 9.06665 7.76667 8.99999 7.70001L5.99999 4.70001C5.93332 4.63334 5.83332 4.60001 5.69999 4.60001C5.56665 4.60001 5.46665 4.66667 5.39999 4.80001L4.69999 5.40001C4.63332 5.53334 4.59999 5.63334 4.59999 5.70001C4.53332 5.83334 4.53332 5.93334 4.59999 6.00001L7.69999 9.10001C7.76665 9.16667 7.83332 9.16667 7.89999 9.10001C8.03332 9.10001 8.13332 9.06667 8.19999 9.00001L8.89999 8.30001C9.03332 8.23334 9.09999 8.13334 9.09999 8.00001Z"/>
-                                               <path d="M15.8 6.10001C15.8667 6.03335 15.9 5.96668 15.9 5.90001V1.50001C15.9 1.43335 15.8667 1.36668 15.8 1.30001C15.7333 1.23335 15.6333 1.20001 15.5 1.20001H14.5C14.3667 1.20001 14.2667 1.23335 14.2 1.30001C14.0667 1.36668 14 1.43335 14 1.50001V5.90001C14 5.96668 14.0667 6.03335 14.2 6.10001C14.2667 6.16668 14.3667 6.20001 14.5 6.20001H15.5C15.6333 6.20001 15.7333 6.16668 15.8 6.10001Z"/>
-                                               <path d="M15.8 23.9C15.8667 23.9667 15.9 24.0333 15.9 24.1V28.5C15.9 28.5667 15.8667 28.6333 15.8 28.7C15.7333 28.7667 15.6333 28.8 15.5 28.8H14.5C14.3667 28.8 14.2667 28.7667 14.2 28.7C14.0667 28.6333 14 28.5667 14 28.5V24.1C14 24.0333 14.0667 23.9667 14.2 23.9C14.2667 23.8333 14.3667 23.8 14.5 23.8H15.5C15.6333 23.8 15.7333 23.8333 15.8 23.9Z"/>
-                                               <path d="M6.10001 15.8C6.03335 15.8667 5.96668 15.9 5.90001 15.9H1.50001C1.43335 15.9 1.36668 15.8667 1.30001 15.8C1.23335 15.7333 1.20001 15.6333 1.20001 15.5V14.5C1.20001 14.3667 1.23335 14.2667 1.30001 14.2C1.36668 14.0667 1.43335 14 1.50001 14H5.90001C5.96668 14 6.03335 14.0667 6.10001 14.2C6.16668 14.2667 6.20001 14.3667 6.20001 14.5V15.5C6.20001 15.6333 6.16668 15.7333 6.10001 15.8Z"/>
-                                               <path d="M23.9 15.8C23.9667 15.8667 24.0333 15.9 24.1 15.9H28.5C28.5667 15.9 28.6333 15.8667 28.7 15.8C28.7667 15.7333 28.8 15.6333 28.8 15.5V14.5C28.8 14.3667 28.7667 14.2667 28.7 14.2C28.6333 14.0667 28.5667 14 28.5 14H24.1C24.0333 14 23.9667 14.0667 23.9 14.2C23.8333 14.2667 23.8 14.3667 23.8 14.5V15.5C23.8 15.6333 23.8333 15.7333 23.9 15.8Z"/>
-                                              </svg>                    </span>
-                </label>
-            </div>
-        </div>
-        <span class="dm-navbar-toggle">
-            <svg data-svg-type="fill" width="21" height="17" viewBox="0 0 21 17" >
-                                              <path d="M0 0.75C0 0.335786 0.335786 0 0.75 0H10.5H20.25C20.6642 0 21 0.335786 21 0.75V0.75C21 1.16421 20.6642 1.5 20.25 1.5H0.75C0.335786 1.5 0 1.16421 0 0.75V0.75Z"/>
-                                              <path d="M0 8.25C0 7.83579 0.335786 7.5 0.75 7.5H10.5H20.25C20.6642 7.5 21 7.83579 21 8.25V8.25C21 8.66421 20.6642 9 20.25 9H0.75C0.335786 9 0 8.66421 0 8.25V8.25Z"/>
-                                              <path d="M0 15.75C0 15.3358 0.335786 15 0.75 15H10.5H20.25C20.6642 15 21 15.3358 21 15.75V15.75C21 16.1642 20.6642 16.5 20.25 16.5H0.75C0.335786 16.5 0 16.1642 0 15.75V15.75Z"/>
-                                            </svg>          </span>
-    </section>
-</header><div id="page-content">
-<section class="dm-about grid-background-animation">
-    <container>
-        <div data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s" data-delay="0.3s">
-            <img data-motion="transition-fade-0" data-duration="1s" data-delay="0.7s" src="../../content/img/personal-images/dm-personal-image-1.png" width="357px" height="570px" alt="DM - Personal Image">
-            <svg data-svg-type="fill" width="40" height="62" viewBox="0 0 40 62">
+                                             </svg>',
+                'background-shape-1'     => '<svg data-svg-type="fill" width="40" height="62" viewBox="0 0 40 62">
                                                  <path d="M0 18.5C0 16.9 1.4 15.6 3 15.6C4.6 15.6 6 16.9 6 18.5V35.7C6 37.4 4.6 38.7 3 38.7C1.4 38.7 0 37.4 0 35.7V18.5Z"/>
                                                  <path d="M11.7 29.4C11.7 27.8 13.1 26.4 14.7 26.4C16.4 26.4 17.7 27.8 17.7 29.4V46.6C17.7 48.3 16.4 49.6 14.7 49.6C13.1 49.6 11.7 48.3 11.7 46.6V29.4Z"/>
                                                  <path d="M11.7 3C11.7 1.4 13.1 0 14.7 0C16.4 0 17.7 1.4 17.7 3V20.2C17.7 21.9 16.4 23.2 14.7 23.2C13.1 23.2 11.7 21.9 11.7 20.2V3Z"/>
                                                  <path d="M23.2 15.3C23.2 13.7 24.6 12.3 26.2 12.3C27.8 12.3 29.2 13.7 29.2 15.3V32.5C29.2 34.2 27.8 35.5 26.2 35.5C24.6 35.5 23.2 34.2 23.2 32.5V15.3Z"/>
                                                  <path d="M23.2 41.8C23.2 40.2 24.6 38.9 26.2 38.9C27.8 38.9 29.2 40.2 29.2 41.8V59C29.2 60.7 27.8 62 26.2 62C24.6 62 23.2 60.7 23.2 59V41.8Z"/>
                                                  <path d="M34.1 30.1C34.1 28.5 35.4 27.1 37 27.1C38.7 27.1 40 28.5 40 30.1V47.3C40 49 38.7 50.3 37 50.3C35.4 50.3 34.1 49 34.1 47.3V30.1Z"/>
-                                             </svg>            <span data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s" data-delay="0.7s"></span>
-        </div>
-        <div>
-            <h2 data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.5s">About</h2>
-            <p data-motion="transition-fade-0 transition-slideInLeft-0">My name is Denis Ionuț Mărginaș, I'm 25-year-old, and I've been working as a full-stack web developer and photo-video editor since 2019. Before entering the web development field, I worked as a freelance video editor, specializing in editing videos for video games. After completing my university studies in Mathematics and Informatics, I shifted my focus to web development and began pursuing a career in that field.</p>
-            <p data-motion="transition-fade-0 transition-slideInLeft-0">In 2019, I joined Pia Soft Product as a web developer and video-photo editor. During my time there, I worked on various tasks, including creating presentation websites and online shops using platforms like WordPress and Prestashop. I also handled SEO optimization, website and host maintenance, customer communication, and designing banners, logos, and video advertisements. Working independently on my tasks, I took the initiative to learn from scratch, except for my prior experience in video editing. Additionally, I developed web applications using PHP, TPL, SQL, JavaScript, jQuery, HTML, CSS, and more.</p>
-            <p data-motion="transition-fade-0 transition-slideInLeft-0">Towards the end of 2021, I transitioned to working full time at Netex Romania, where I was hired as a front-end developer. My responsibilities involved maintaining multiple WordPress websites and working on web design projects. The web design aspect was particularly challenging as I received templates and page sections in formats, similar to Figma projects, and had to recreate them as static web pages using HTML, SASS, Node.js, Bootstrap, JavaScript, and jQuery. Initially, I worked independently on my part of the project, but later collaborated with a colleague who joined to assist with the same project. During this time, I gained valuable experience with the GitLab platform, learned Git commands, and improved my teamwork skills.</p>
-        </div>
-    </container>
-</section>
-
-<section class="dm-portfolio-categories">
-    <container>
-        <div>
-            <h2 data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.7s" data-delay="0.1s">Portfolio</h2>
-            <ul>
-                <li data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.5s" data-delay="0.2s">
-                    <div class="category-card">
-                        <img src="../../content/img/design-elements/overlay-particles.png" alt="Background">
-                        <img src="../../content/img/categories/category-photo-web-development-photo.jpg" alt="Web Development Projects Background Image">
-                        <span>
-                  <a href="#">
-                      <svg width="512" height="512" viewBox="0 0 512 512" fill="none">
+                                             </svg>',
+           'category-web-development'    => '<svg width="512" height="512" viewBox="0 0 512 512" fill="none">
                                                    <g clip-path="url(#clip0_1_37)">
                                                      <mask id="mask0_1_37" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512">
                                                        <path d="M512 0H0V512H512V0Z" fill="white"/>
@@ -158,23 +78,8 @@
                                                        <rect width="512" height="512" fill="white"/>
                                                      </clipPath>
                                                    </defs>
-                                                 </svg>                  </a>
-                </span>
-                        <div>
-                            <a href="#">Web Development Projects</a>
-                            <p>
-                                <span>Showcase of websites and online shops I have created, featuring engaging designs and seamless functionality.</span>
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.5s" data-delay="0.4s">
-                    <div class="category-card">
-                        <img src="../../content/img/design-elements/overlay-particles.png" alt="Background">
-                        <img src="../../content/img/categories/category-photo-visual-media.jpg" alt="Visual Media Projects Background Image">
-                        <span>
-                  <a href="#">
-                      <svg width="512" height="512" viewBox="0 0 512 512" fill="none">
+                                                 </svg>',
+                'category-visual-media'  => '<svg width="512" height="512" viewBox="0 0 512 512" fill="none">
                                                <g clip-path="url(#clip0_1_2)">
                                                  <mask id="mask0_1_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512">
                                                    <path d="M512 0H0V512H512V0Z" fill="white"/>
@@ -216,23 +121,8 @@
                                                    <rect width="512" height="512" fill="white"/>
                                                  </clipPath>
                                                </defs>
-                                             </svg>                  </a>
-                </span>
-                        <div>
-                            <a href="#">Visual Media Projects</a>
-                            <p>
-                                <span>Collection of visually captivating projects showcasing my expertise in graphic design, photo editing, and video production.</span>
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.5s" data-delay="0.6s">
-                    <div class="category-card">
-                        <img src="../../content/img/design-elements/overlay-particles.png" alt="Background">
-                        <img src="../../content/img/categories/category-photo-miscellaneous.jpg" alt="Miscellaneous Projects Background Image">
-                        <span>
-                  <a href="#">
-                    <svg width="512" height="512" viewBox="0 0 512 512" fill="none">
+                                             </svg>',
+                'category-miscellaneous' => '<svg width="512" height="512" viewBox="0 0 512 512" fill="none">
                                                <g clip-path="url(#clip0_3_2)">
                                                  <mask id="mask0_3_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512">
                                                    <path d="M0 0H512V512H0V0Z" fill="white"/>
@@ -277,184 +167,89 @@
                                                    <rect width="512" height="512" fill="white"/>
                                                  </clipPath>
                                                </defs>
-                                             </svg>                  </a>
-                </span>
-                        <div>
-                            <a href="#">Miscellaneous Projects</a>
-                            <p>
-                                <span>Assortment of non-profit initiatives and personal passion projects, reflecting my diverse range of creative endeavors.</span>
-                            </p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </container>
-    <!-- Ocean Animation Start -->
-
-    <div class="ocean" data-motion="transition-fade-0" data-duration="4s" data-delay="0s">
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-    </div>
-
-    <!-- Ocean Animation End -->
-</section><section class="dm-web-development-experience grid-background-animation">
-    <container>
-        <ul>
-            <li>
-                <h2 data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s" data-delay="0s">
-                    <span>WEB DEVELOPMENT</span>
-                    <span>EXPERIENCE</span>
-                </h2>
-                <p data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s" data-delay="0.4s">Since 2019, I have actively immersed myself in numerous web projects, collaborating with diverse companies to create a wide range of online solutions. Throughout this period, my expertise has encompassed the development of presentation sites, online stores, web applications, SEO optimization, as well as web design.</p>
-            </li>
-            <li>
-                <img width="320px" height="260" src="../../content/img/design-elements/portfolio-experience-image.png" alt="Web Development Experience" data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="1s" data-delay="0.1s">
-            </li>
-        </ul>
-    </container>
-</section><section class="dm-web-development-description blurred-lines-animation">
-    <container>
-        <ul>
-            <li>
-                <div class="dm-description-item">
-                    <h3 data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.3s" data-delay="0s">DESIGN</h3>
-                    <p data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.3s" data-delay="0.3s">
-                        I can create a responsive website using HTML and CSS/SCSS to ensure that all your pages look and fit perfectly on every device. Additionally, you have the freedom to choose any theme or design that you would like to implement according to your preferences.</p>
-                </div>
-                <div class="dm-description-item">
-                    <h3 data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.3s" data-delay="0.2s">SEO</h3>
-                    <p data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.3s" data-delay="0.5s">
-                        Boost your website's search engine traffic with my SEO expertise. I'll optimize all pages with keyword-specific meta titles and descriptions, and generate a sitemap for improved visibility.</p>
-                </div>
-            </li>
-            <li>
-                <section class="dm-web-responsive" data-motion="transition-fade-0">
-                    <img width="320px" height="260" class="dm-laptop-responsive" src="../../content/img/design-elements/website-responsive-laptop.png" alt="Web Development Responsive Design">
-                    <img width="320px" height="260" class="dm-tablet-responsive" data-animation="dm-scroll" src="../../content/img/design-elements/website-responsive-tablet.png" alt="Web Development Responsive Design">
-                    <img width="320px" height="260" class="dm-phone-responsive" data-animation="dm-scroll" src="../../content/img/design-elements/website-responsive-phone.png"  alt="Web Development Responsive Design">
-                </section>
-            </li>
-            <li>
-                <div class="dm-description-item">
-                    <h3 data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.3s" data-delay="0.2s">DEVELOPMENT</h3>
-                    <p data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.3s" data-delay="0.5s">
-                        I specialize in implementing modules, developing web applications, and creating functions for platforms such as Prestashop and WordPress. My expertise covers a range of languages including PHP, TPL, HTML, CSS, JavaScript, and MySQL.</p>
-                </div>
-                <div class="dm-description-item">
-                    <h3 data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.3s" data-delay="0s">SUPPORT</h3>
-                    <p data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.3s" data-delay="0.3s">I offer comprehensive solutions and assistance for all your project needs, helping you achieve the desired results. For further information, please use the contact form available on the website's contact page.</p>
-                </div>
-            </li>
-        </ul>
-    </container>
-    <div class='light x1'></div>
-    <div class='light x2'></div>
-    <div class='light x3'></div>
-    <div class='light x4'></div>
-    <div class='light x5'></div>
-    <div class='light x6'></div>
-    <div class='light x7'></div>
-    <div class='light x8'></div>
-    <div class='light x9'></div>
-</section>
-</div>        <footer id="footer">
-            <section>
-                <div class="dm-footer-contact">
-                    <h5>Contact</h5>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <svg data-svg-type="fill" viewBox="0 0 320 512">
-                                               <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
-                                             </svg>                                <svg data-svg-type="fill" width="384" height="486" viewBox="0 0 384 486">
-                                               <path fill-rule="evenodd" clip-rule="evenodd" d="M191.5 0.199991C193.7 0.0999908 199.1 0.699991 203.5 1.49999C208.7 2.39999 214.5 4.39999 220 7.09999C226.6 10.4 230.3 13.1 236.6 19.4C242.6 25.4 245.7 29.5 252.5 43.1L384 43V427H0V43H131.5L135.4 35.2C138.3 29.6 141.6 25.3 147.4 19.4C153.9 12.9 157.2 10.5 164 7.19999C168.7 4.99999 175 2.69999 178 2.09999C181 1.49999 184.4 0.799991 185.5 0.599991C186.6 0.399991 189.3 0.199991 191.5 0.199991ZM177.7 48.8C176.1 50.3 174 53.2 172.9 55.3C171.8 57.5 171 61.1 171 64C171 66.8 171.7 70.7 172.6 72.8C173.4 74.8 175.1 77.6 176.3 78.8C177.5 80.1 180.3 82.1 182.5 83.3C185.1 84.7 188.4 85.4 192 85.4C196 85.4 198.7 84.8 202 83C204.4 81.6 207.8 78.5 209.5 76.2C211.9 72.7 212.6 70.5 212.9 65.7C213.2 60.9 212.8 58.6 211.2 55.5C210.1 53.3 207.9 50.3 206.3 48.8C204.8 47.3 201.8 45.4 199.7 44.6C197.7 43.7 194.1 43 191.7 43C189.4 43.1 185.9 43.8 184 44.6C182.1 45.4 179.2 47.3 177.7 48.8ZM171 155C168.5 156.3 164.2 159.6 161.5 162.4C158.7 165.2 155.2 170.1 153.7 173.2C152.2 176.4 150.5 181.8 149.9 185.2C149.1 189.8 149.1 193.3 149.9 198.5C150.6 202.3 152.4 208.2 154 211.5C155.6 214.8 159 219.7 161.7 222.4C164.3 225.1 169.2 228.6 172.5 230.1C175.8 231.7 181.7 233.6 185.5 234.2C190.9 235.1 194 235.1 199.2 234.2C203 233.5 208.5 231.8 211.6 230.2C214.7 228.7 219.5 225.2 222.2 222.5C224.9 219.7 228.5 214.8 230 211.5C231.6 208.2 233.4 202.6 234 199C234.8 194.3 234.8 190.6 234.1 185.7C233.5 182 231.9 176.6 230.5 173.7C229.1 170.9 225.9 166.1 223.3 163.1C219.9 159.3 216.3 156.7 211 154.1C204.2 150.8 202.8 150.5 193.5 150.3C187.3 150.1 182 150.5 179.5 151.3C177.3 152.1 173.5 153.7 171 155ZM160.5 259.6C156.1 260.5 149.3 262.4 145.5 263.7C141.7 265.1 135.6 267.7 132 269.6C128.4 271.4 122.8 275.4 119.5 278.3C116.2 281.3 112.2 286.1 110.5 289.1C107.7 294.2 107.5 295.2 107.3 307.3L107 320H277C276.5 295.2 276.3 294.2 273.5 289.1C271.8 286.2 268 281.4 265 278.6C261.9 275.8 256.3 271.8 252.5 269.8C248.6 267.8 241.4 264.8 236.5 263.2C231.6 261.5 223.2 259.5 218 258.6C212.8 257.7 203.1 256.8 196.5 256.6C189.9 256.3 180.9 256.5 176.5 257C172.1 257.5 164.9 258.7 160.5 259.6Z" fill="white"/>
-                                             </svg>                                <span>CV English</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <svg data-svg-type="fill" viewBox="0 0 320 512">
-                                               <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
-                                             </svg>                                <svg data-svg-type="fill" width="384" height="486" viewBox="0 0 384 486">
-                                               <path fill-rule="evenodd" clip-rule="evenodd" d="M191.5 0.199991C193.7 0.0999908 199.1 0.699991 203.5 1.49999C208.7 2.39999 214.5 4.39999 220 7.09999C226.6 10.4 230.3 13.1 236.6 19.4C242.6 25.4 245.7 29.5 252.5 43.1L384 43V427H0V43H131.5L135.4 35.2C138.3 29.6 141.6 25.3 147.4 19.4C153.9 12.9 157.2 10.5 164 7.19999C168.7 4.99999 175 2.69999 178 2.09999C181 1.49999 184.4 0.799991 185.5 0.599991C186.6 0.399991 189.3 0.199991 191.5 0.199991ZM177.7 48.8C176.1 50.3 174 53.2 172.9 55.3C171.8 57.5 171 61.1 171 64C171 66.8 171.7 70.7 172.6 72.8C173.4 74.8 175.1 77.6 176.3 78.8C177.5 80.1 180.3 82.1 182.5 83.3C185.1 84.7 188.4 85.4 192 85.4C196 85.4 198.7 84.8 202 83C204.4 81.6 207.8 78.5 209.5 76.2C211.9 72.7 212.6 70.5 212.9 65.7C213.2 60.9 212.8 58.6 211.2 55.5C210.1 53.3 207.9 50.3 206.3 48.8C204.8 47.3 201.8 45.4 199.7 44.6C197.7 43.7 194.1 43 191.7 43C189.4 43.1 185.9 43.8 184 44.6C182.1 45.4 179.2 47.3 177.7 48.8ZM171 155C168.5 156.3 164.2 159.6 161.5 162.4C158.7 165.2 155.2 170.1 153.7 173.2C152.2 176.4 150.5 181.8 149.9 185.2C149.1 189.8 149.1 193.3 149.9 198.5C150.6 202.3 152.4 208.2 154 211.5C155.6 214.8 159 219.7 161.7 222.4C164.3 225.1 169.2 228.6 172.5 230.1C175.8 231.7 181.7 233.6 185.5 234.2C190.9 235.1 194 235.1 199.2 234.2C203 233.5 208.5 231.8 211.6 230.2C214.7 228.7 219.5 225.2 222.2 222.5C224.9 219.7 228.5 214.8 230 211.5C231.6 208.2 233.4 202.6 234 199C234.8 194.3 234.8 190.6 234.1 185.7C233.5 182 231.9 176.6 230.5 173.7C229.1 170.9 225.9 166.1 223.3 163.1C219.9 159.3 216.3 156.7 211 154.1C204.2 150.8 202.8 150.5 193.5 150.3C187.3 150.1 182 150.5 179.5 151.3C177.3 152.1 173.5 153.7 171 155ZM160.5 259.6C156.1 260.5 149.3 262.4 145.5 263.7C141.7 265.1 135.6 267.7 132 269.6C128.4 271.4 122.8 275.4 119.5 278.3C116.2 281.3 112.2 286.1 110.5 289.1C107.7 294.2 107.5 295.2 107.3 307.3L107 320H277C276.5 295.2 276.3 294.2 273.5 289.1C271.8 286.2 268 281.4 265 278.6C261.9 275.8 256.3 271.8 252.5 269.8C248.6 267.8 241.4 264.8 236.5 263.2C231.6 261.5 223.2 259.5 218 258.6C212.8 257.7 203.1 256.8 196.5 256.6C189.9 256.3 180.9 256.5 176.5 257C172.1 257.5 164.9 258.7 160.5 259.6Z" fill="white"/>
-                                             </svg>                                <span>CV Romanian</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <svg data-svg-type="fill" viewBox="0 0 320 512">
-                                               <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
-                                             </svg>                                <svg data-svg-type="fill" width="84" height="84" viewBox="0 0 84 84">
-                                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1L1 0H83L84 1V83H83V84H1V83H0V1ZM34 28H70V16H34V28ZM12 24H28V20H12V24ZM34 52H70V40H34V52ZM12 48H28V44H12V48ZM34 72H42V64H34V72ZM48 70H72V66H48V70ZM0 83L1 84H0V83ZM84 84V83L83 84H84Z" fill="white"/>
-                                              </svg>                                <span>Contact Form</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="dm-footer-portfolio">
-                    <h5>Portfolio</h5>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <svg data-svg-type="fill" viewBox="0 0 320 512">
-                                               <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
-                                             </svg>                                <span>Web Development Projects</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <svg data-svg-type="fill" viewBox="0 0 320 512">
-                                               <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
-                                             </svg>                                <span>Visual Media Projects</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <svg data-svg-type="fill" viewBox="0 0 320 512">
-                                               <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
-                                             </svg>                                <span>Miscellaneous Projects</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="dm-socials-footer">
-                    <h5>Socials</h5>
-                    <div class="dm-socials-list" data-socials="circle-light-2">
-                        <a href="https://www.youtube.com/channel/UCZGb7hnkyawMgnSO9T-rnnQ" target="_blank">
-                            <svg data-svg-type="fill" width="44" height="32" viewBox="0 0 44 32">
+                                             </svg>',
+                        'wave-ocean'     => '<svg width="1600" height="198" viewBox="0 0 1600 198">
+                                               <g clip-path="url(#clip0_1_2)">
+                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M1600 121C1289 121 1190.1 -0.250011 789 -1.06613e-05C389 -1.06613e-05 289 121 0 121V198H1600C1600 198 1600 150 1600 121Z" fill="url(#paint0_linear_1_2)"/>
+                                               </g>
+                                               <defs>
+                                                 <linearGradient id="paint0_linear_1_2" x1="-78400" y1="-2169.89" x2="-78400" y2="19800" gradientUnits="userSpaceOnUse">
+                                                   <stop stop-color="#99C1F0" stop-opacity="0.25"/>
+                                                   <stop offset="1" stop-color="#5D6977"/>
+                                                 </linearGradient>
+                                                 <clipPath id="clip0_1_2">
+                                                   <rect width="1600" height="198" fill="white"/>
+                                                 </clipPath>
+                                               </defs>
+                                             </svg>',
+                       'socials-youtube' => '<svg data-svg-type="fill" width="44" height="32" viewBox="0 0 44 32">
                                                <path d="M41.8984 5.5C41.5 3.30078 39.6016 1.69922 37.3984 1.19922C34.1016 0.5 28 0 21.3984 0C14.8008 0 8.60156 0.5 5.30078 1.19922C3.10156 1.69922 1.19922 3.19922 0.800781 5.5C0.398438 8 0 11.5 0 16C0 20.5 0.398438 24 0.898438 26.5C1.30078 28.6992 3.19922 30.3008 5.39844 30.8008C8.89844 31.5 14.8984 32 21.5 32C28.1016 32 34.1016 31.5 37.6016 30.8008C39.8008 30.3008 41.6992 28.8008 42.1016 26.5C42.5 24 43 20.3984 43.1016 16C42.8984 11.5 42.3984 8 41.8984 5.5ZM16 23V9L28.1992 16L16 23Z" fill="#FF3D00"/>
-                                             </svg>                        </a>
-                        <a href="https://www.facebook.com/denismarginas09" target="_blank">
-                            <svg data-svg-type="fill" width="22" height="42" viewBox="0 0 22 42">
+                                             </svg>',
+                      'socials-facebook' => '<svg data-svg-type="fill" width="22" height="42" viewBox="0 0 22 42">
                                               <path d="M16 -1.10493e-06C10.477 -1.10493e-06 6 4.477 6 10V15H0V23H6V42H14V23H21L22 15H14V11C14 8.791 15.791 7 18 7H22V0.321999C20.091 0.124999 17.921 -0.00400111 16 -1.10493e-06Z" fill="#0573E7"/>
-                                             </svg>                        </a>
-                        <a href="https://www.linkedin.com/in/denismarginas09/" target="_blank">
-                            <svg data-svg-type="fill" width="40" height="38" viewBox="0 0 40 38">
+                                             </svg>',
+                      'socials-linkedin' => '<svg data-svg-type="fill" width="40" height="38" viewBox="0 0 40 38">
                                                <path d="M4.421 9H4.473C7.263 9 9 7 9 4.5C8.948 1.945 7.263 0 4.526 0C1.789 0 0 1.945 0 4.5C0 7 1.736 9 4.421 9ZM0 12H9V38H0V12ZM40 21.5C40 16.253 35.747 12 30.5 12C27.447 12 24.738 13.446 23 15.684V12H14V38H23V23C23 20.791 24.791 19 27 19C29.209 19 31 20.791 31 23V38H40C40 38 40 22.955 40 21.5Z" fill="#0288D1"/>
-                                             </svg>                        </a>
-                        <a href="https://twitter.com/DenisMarginas" target="_blank">
-                            <svg data-svg-type="fill" width="37" height="29" viewBox="0 0 37 29">
+                                             </svg>',
+                       'socials-twitter' => '<svg data-svg-type="fill" width="37" height="29" viewBox="0 0 37 29">
                                                <path d="M37 3.429C35.677 4.015 34.254 4.406 32.753 4.591C34.279 3.685 35.453 2.24 36.004 0.533C34.576 1.37 32.994 1.985 31.311 2.309C29.967 0.884 28.05 0 25.926 0C21.846 0 18.539 3.278 18.539 7.32C18.539 7.892 18.606 8.449 18.732 8.99C12.594 8.682 7.15001 5.764 3.50801 1.336C2.86801 2.418 2.50801 3.685 2.50801 5.022C2.50801 7.563 3.80901 9.8 5.79301 11.118C4.58201 11.081 3.44201 10.744 2.44401 10.204C2.44401 10.226 2.44401 10.259 2.44401 10.29C2.44401 13.841 4.99101 16.798 8.36701 17.471C7.75001 17.64 7.09801 17.734 6.42601 17.734C5.94901 17.734 5.48401 17.68 5.03401 17.599C5.97401 20.501 8.70101 22.622 11.932 22.685C9.40401 24.645 6.22001 25.819 2.75801 25.819C2.16001 25.819 1.57501 25.785 0.997009 25.715C4.26801 27.786 8.15201 29 12.321 29C25.906 29 33.338 17.844 33.338 8.166C33.338 7.849 33.328 7.533 33.313 7.221C34.763 6.197 36.013 4.905 37 3.429Z" fill="#03A9F4"/>
-                                             </svg>                        </a>
-                        <a href="https://sites.google.com/view/denis-marginas" target="_blank">
-                            <svg data-svg-type="fill" width="45" height="47" viewBox="0 0 45 47">
+                                             </svg>',
+                   'socials-google-site' => '<svg data-svg-type="fill" width="45" height="47" viewBox="0 0 45 47">
                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.950012H45V46.05H0V0.950012ZM5.55 15.05H39.4V9.40001H5.55V15.05ZM5.55 35.65H28.05V20.65H5.55V35.65ZM33.6 35.75H39.4V20.7H33.6V35.75Z" fill="#3949AB"/>
-                                             </svg>                        </a>
-                        <a href="https://github.com/denismarginas" target="_blank">
-                            <svg data-svg-type="fill" width="40" height="39" viewBox="0 0 40 39">
+                                             </svg>',
+                        'socials-github' => '<svg data-svg-type="fill" width="40" height="39" viewBox="0 0 40 39">
                                                <path d="M17.8 0.200015C8.60002 1.20002 1.20002 8.60002 0.200018 17.6C-0.799982 27 4.60002 35.4 12.8 38.6C13.4 38.8 14 38.4 14 37.6V34.4C14 34.4 13.2 34.6 12.2 34.6C9.40002 34.6 8.20002 32.2 8.00002 30.8C7.80002 30 7.40002 29.4 6.80002 28.8C6.20002 28.6 6.00002 28.6 6.00002 28.4C6.00002 28 6.60002 28 6.80002 28C8.00002 28 9.00002 29.4 9.40002 30C10.4 31.6 11.6 32 12.2 32C13 32 13.6 31.8 14 31.6C14.2 30.2 14.8 28.8 16 28C11.4 27 8.00002 24.4 8.00002 20C8.00002 17.8 9.00002 15.6 10.4 14C10.2 13.6 10 12.6 10 11.2C10 10.4 10 9.20002 10.6 8.00002C10.6 8.00002 13.4 8.00002 16.2 10.6C17.2 10.2 18.6 10 20 10C21.4 10 22.8 10.2 24 10.6C26.6 8.00002 29.6 8.00002 29.6 8.00002C30 9.20002 30 10.4 30 11.2C30 12.8 29.8 13.6 29.6 14C31 15.6 32 17.6 32 20C32 24.4 28.6 27 24 28C25.2 29 26 30.8 26 32.6V37.8C26 38.4 26.6 39 27.4 38.8C34.8 35.8 40 28.6 40 20.2C40 8.20002 29.8 -1.19998 17.8 0.200015Z" fill="white"/>
-                                             </svg>                        </a>
-                    </div>
-                </div>
-                <div class="dm-footer-copyrights">
-                    <span>Last update of webiste: 09 June 2023</span>
-                    <span>©All copyrights reserved by Denis Marginas</span>
-                </div>
-            </section>
-        </footer>
-    </body>
-</html>
+                                             </svg>',
+                            'chevron-up' => '<svg data-svg-type="fill" viewBox="0 0 512 512">
+                                               <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/>
+                                             </svg>',
+                          'chevron-down' => '<svg data-svg-type="fill" viewBox="0 0 512 512">
+                                               <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                                             </svg>',
+                         'chevron-right' => '<svg data-svg-type="fill" viewBox="0 0 320 512">
+                                               <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                                             </svg>',
+                          'chevron-left' => '<svg data-svg-type="fill" viewBox="0 0 320 512">
+                                               <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/>
+                                              </svg>',
+                                  'form' => '<svg data-svg-type="fill" width="84" height="84" viewBox="0 0 84 84">
+                                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1L1 0H83L84 1V83H83V84H1V83H0V1ZM34 28H70V16H34V28ZM12 24H28V20H12V24ZM34 52H70V40H34V52ZM12 48H28V44H12V48ZM34 72H42V64H34V72ZM48 70H72V66H48V70ZM0 83L1 84H0V83ZM84 84V83L83 84H84Z" fill="white"/>
+                                              </svg>',
+                                'resume' => '<svg data-svg-type="fill" width="384" height="486" viewBox="0 0 384 486">
+                                               <path fill-rule="evenodd" clip-rule="evenodd" d="M191.5 0.199991C193.7 0.0999908 199.1 0.699991 203.5 1.49999C208.7 2.39999 214.5 4.39999 220 7.09999C226.6 10.4 230.3 13.1 236.6 19.4C242.6 25.4 245.7 29.5 252.5 43.1L384 43V427H0V43H131.5L135.4 35.2C138.3 29.6 141.6 25.3 147.4 19.4C153.9 12.9 157.2 10.5 164 7.19999C168.7 4.99999 175 2.69999 178 2.09999C181 1.49999 184.4 0.799991 185.5 0.599991C186.6 0.399991 189.3 0.199991 191.5 0.199991ZM177.7 48.8C176.1 50.3 174 53.2 172.9 55.3C171.8 57.5 171 61.1 171 64C171 66.8 171.7 70.7 172.6 72.8C173.4 74.8 175.1 77.6 176.3 78.8C177.5 80.1 180.3 82.1 182.5 83.3C185.1 84.7 188.4 85.4 192 85.4C196 85.4 198.7 84.8 202 83C204.4 81.6 207.8 78.5 209.5 76.2C211.9 72.7 212.6 70.5 212.9 65.7C213.2 60.9 212.8 58.6 211.2 55.5C210.1 53.3 207.9 50.3 206.3 48.8C204.8 47.3 201.8 45.4 199.7 44.6C197.7 43.7 194.1 43 191.7 43C189.4 43.1 185.9 43.8 184 44.6C182.1 45.4 179.2 47.3 177.7 48.8ZM171 155C168.5 156.3 164.2 159.6 161.5 162.4C158.7 165.2 155.2 170.1 153.7 173.2C152.2 176.4 150.5 181.8 149.9 185.2C149.1 189.8 149.1 193.3 149.9 198.5C150.6 202.3 152.4 208.2 154 211.5C155.6 214.8 159 219.7 161.7 222.4C164.3 225.1 169.2 228.6 172.5 230.1C175.8 231.7 181.7 233.6 185.5 234.2C190.9 235.1 194 235.1 199.2 234.2C203 233.5 208.5 231.8 211.6 230.2C214.7 228.7 219.5 225.2 222.2 222.5C224.9 219.7 228.5 214.8 230 211.5C231.6 208.2 233.4 202.6 234 199C234.8 194.3 234.8 190.6 234.1 185.7C233.5 182 231.9 176.6 230.5 173.7C229.1 170.9 225.9 166.1 223.3 163.1C219.9 159.3 216.3 156.7 211 154.1C204.2 150.8 202.8 150.5 193.5 150.3C187.3 150.1 182 150.5 179.5 151.3C177.3 152.1 173.5 153.7 171 155ZM160.5 259.6C156.1 260.5 149.3 262.4 145.5 263.7C141.7 265.1 135.6 267.7 132 269.6C128.4 271.4 122.8 275.4 119.5 278.3C116.2 281.3 112.2 286.1 110.5 289.1C107.7 294.2 107.5 295.2 107.3 307.3L107 320H277C276.5 295.2 276.3 294.2 273.5 289.1C271.8 286.2 268 281.4 265 278.6C261.9 275.8 256.3 271.8 252.5 269.8C248.6 267.8 241.4 264.8 236.5 263.2C231.6 261.5 223.2 259.5 218 258.6C212.8 257.7 203.1 256.8 196.5 256.6C189.9 256.3 180.9 256.5 176.5 257C172.1 257.5 164.9 258.7 160.5 259.6Z" fill="white"/>
+                                             </svg>',
+                                   'sun' => '<svg data-svg-type="fill" width="30" height="30" viewBox="0 0 30 30">
+                                               <path d="M15 22.1C11 22.1 7.79999 18.9 7.79999 15C7.79999 11 11 7.79999 15 7.79999C18.9 7.79999 22.1 11 22.1 15C22.1 18.9 18.9 22.1 15 22.1Z"/>
+                                               <path d="M9.09999 22C9.09999 22.1333 9.06665 22.2333 8.99999 22.3L5.99999 25.3C5.93332 25.3667 5.83332 25.4 5.69999 25.4C5.56665 25.4 5.46665 25.3333 5.39999 25.2L4.69999 24.6C4.63332 24.4667 4.59999 24.3667 4.59999 24.3C4.53332 24.1667 4.53332 24.0667 4.59999 24L7.69999 20.9C7.76665 20.8333 7.83332 20.8333 7.89999 20.9C8.03332 20.9 8.13332 20.9333 8.19999 21L8.89999 21.7C9.03332 21.7667 9.09999 21.8667 9.09999 22Z"/>
+                                               <path d="M20.9 8.00001C20.9 7.86667 20.9334 7.76667 21 7.70001L24 4.70001C24.0667 4.63334 24.1667 4.60001 24.3 4.60001C24.4334 4.60001 24.5334 4.66667 24.6 4.80001L25.3 5.40001C25.3667 5.53334 25.4 5.63334 25.4 5.70001C25.4667 5.83334 25.4667 5.93334 25.4 6.00001L22.3 9.10001C22.2334 9.16667 22.1667 9.16667 22.1 9.10001C21.9667 9.10001 21.8667 9.06667 21.8 9.00001L21.1 8.30001C20.9667 8.23334 20.9 8.13334 20.9 8.00001Z"/>
+                                               <path d="M20.9 22C20.9 22.1333 20.9334 22.2333 21 22.3L24 25.3C24.0667 25.3667 24.1667 25.4 24.3 25.4C24.4334 25.4 24.5334 25.3333 24.6 25.2L25.3 24.6C25.3667 24.4667 25.4 24.3667 25.4 24.3C25.4667 24.1667 25.4667 24.0667 25.4 24L22.3 20.9C22.2334 20.8333 22.1667 20.8333 22.1 20.9C21.9667 20.9 21.8667 20.9333 21.8 21L21.1 21.7C20.9667 21.7667 20.9 21.8667 20.9 22Z"/>
+                                               <path d="M9.09999 8.00001C9.09999 7.86667 9.06665 7.76667 8.99999 7.70001L5.99999 4.70001C5.93332 4.63334 5.83332 4.60001 5.69999 4.60001C5.56665 4.60001 5.46665 4.66667 5.39999 4.80001L4.69999 5.40001C4.63332 5.53334 4.59999 5.63334 4.59999 5.70001C4.53332 5.83334 4.53332 5.93334 4.59999 6.00001L7.69999 9.10001C7.76665 9.16667 7.83332 9.16667 7.89999 9.10001C8.03332 9.10001 8.13332 9.06667 8.19999 9.00001L8.89999 8.30001C9.03332 8.23334 9.09999 8.13334 9.09999 8.00001Z"/>
+                                               <path d="M15.8 6.10001C15.8667 6.03335 15.9 5.96668 15.9 5.90001V1.50001C15.9 1.43335 15.8667 1.36668 15.8 1.30001C15.7333 1.23335 15.6333 1.20001 15.5 1.20001H14.5C14.3667 1.20001 14.2667 1.23335 14.2 1.30001C14.0667 1.36668 14 1.43335 14 1.50001V5.90001C14 5.96668 14.0667 6.03335 14.2 6.10001C14.2667 6.16668 14.3667 6.20001 14.5 6.20001H15.5C15.6333 6.20001 15.7333 6.16668 15.8 6.10001Z"/>
+                                               <path d="M15.8 23.9C15.8667 23.9667 15.9 24.0333 15.9 24.1V28.5C15.9 28.5667 15.8667 28.6333 15.8 28.7C15.7333 28.7667 15.6333 28.8 15.5 28.8H14.5C14.3667 28.8 14.2667 28.7667 14.2 28.7C14.0667 28.6333 14 28.5667 14 28.5V24.1C14 24.0333 14.0667 23.9667 14.2 23.9C14.2667 23.8333 14.3667 23.8 14.5 23.8H15.5C15.6333 23.8 15.7333 23.8333 15.8 23.9Z"/>
+                                               <path d="M6.10001 15.8C6.03335 15.8667 5.96668 15.9 5.90001 15.9H1.50001C1.43335 15.9 1.36668 15.8667 1.30001 15.8C1.23335 15.7333 1.20001 15.6333 1.20001 15.5V14.5C1.20001 14.3667 1.23335 14.2667 1.30001 14.2C1.36668 14.0667 1.43335 14 1.50001 14H5.90001C5.96668 14 6.03335 14.0667 6.10001 14.2C6.16668 14.2667 6.20001 14.3667 6.20001 14.5V15.5C6.20001 15.6333 6.16668 15.7333 6.10001 15.8Z"/>
+                                               <path d="M23.9 15.8C23.9667 15.8667 24.0333 15.9 24.1 15.9H28.5C28.5667 15.9 28.6333 15.8667 28.7 15.8C28.7667 15.7333 28.8 15.6333 28.8 15.5V14.5C28.8 14.3667 28.7667 14.2667 28.7 14.2C28.6333 14.0667 28.5667 14 28.5 14H24.1C24.0333 14 23.9667 14.0667 23.9 14.2C23.8333 14.2667 23.8 14.3667 23.8 14.5V15.5C23.8 15.6333 23.8333 15.7333 23.9 15.8Z"/>
+                                              </svg>',
+                                  'moon' => '<svg data-svg-type="fill" width="30" height="30" viewBox="0 0 30 30">
+                                               <path d="M15 22.1C11 22.1 7.79999 18.9 7.79999 15C7.79999 11 11 7.79999 15 7.79999C18.9 7.79999 12 10.5 12 15C12 19.5 18.9 22.1 15 22.1Z"/>
+                                               <path d="M24.55 21.15C24.55 21.2833 24.5167 21.3833 24.45 21.45L21.45 24.45C21.3833 24.5167 21.2833 24.55 21.15 24.55C21.0167 24.55 20.9167 24.4833 20.85 24.35L20.15 23.75C20.0833 23.6167 20.05 23.5167 20.05 23.45C19.9833 23.3167 19.9833 23.2167 20.05 23.15L23.15 20.05C23.2167 19.9833 23.2833 19.9833 23.35 20.05C23.4833 20.05 23.5833 20.0833 23.65 20.15L24.35 20.85C24.4833 20.9167 24.55 21.0167 24.55 21.15Z"/>
+                                               <path d="M21 16.4C21 16.2667 21.0333 16.1667 21.1 16.1L24.1 13.1C24.1667 13.0333 24.2667 13 24.4 13C24.5333 13 24.6333 13.0667 24.7 13.2L25.4 13.8C25.4667 13.9333 25.5 14.0333 25.5 14.1C25.5667 14.2333 25.5667 14.3333 25.5 14.4L22.4 17.5C22.3333 17.5667 22.2667 17.5667 22.2 17.5C22.0667 17.5 21.9667 17.4667 21.9 17.4L21.2 16.7C21.0667 16.6333 21 16.5333 21 16.4Z"/>
+                                               <path d="M21 14.15C21 14.2833 21.0333 14.3833 21.1 14.45L24.1 17.45C24.1667 17.5167 24.2667 17.55 24.4 17.55C24.5333 17.55 24.6333 17.4833 24.7 17.35L25.4 16.75C25.4667 16.6167 25.5 16.5167 25.5 16.45C25.5667 16.3167 25.5667 16.2167 25.5 16.15L22.4 13.05C22.3333 12.9833 22.2667 12.9833 22.2 13.05C22.0667 13.05 21.9667 13.0833 21.9 13.15L21.2 13.85C21.0667 13.9167 21 14.0167 21 14.15Z"/>
+                                               <path d="M24.55 23.4C24.55 23.2667 24.5167 23.1667 24.45 23.1L21.45 20.1C21.3833 20.0333 21.2833 20 21.15 20C21.0167 20 20.9167 20.0667 20.85 20.2L20.15 20.8C20.0833 20.9333 20.05 21.0333 20.05 21.1C19.9833 21.2333 19.9833 21.3333 20.05 21.4L23.15 24.5C23.2167 24.5667 23.2833 24.5667 23.35 24.5C23.4833 24.5 23.5833 24.4667 23.65 24.4L24.35 23.7C24.4833 23.6333 24.55 23.5333 24.55 23.4Z"/>
+                                               <path d="M12.8 14.9C12.8667 14.8333 12.9 14.7667 12.9 14.7V10.3C12.9 10.2333 12.8667 10.1667 12.8 10.1C12.7333 10.0333 12.6333 10 12.5 10H11.5C11.3667 10 11.2667 10.0333 11.2 10.1C11.0667 10.1667 11 10.2333 11 10.3V14.7C11 14.7667 11.0667 14.8333 11.2 14.9C11.2667 14.9667 11.3667 15 11.5 15H12.5C12.6333 15 12.7333 14.9667 12.8 14.9Z"/>
+                                               <path d="M12.8 14.1C12.8667 14.1667 12.9 14.2333 12.9 14.3V18.7C12.9 18.7667 12.8667 18.8333 12.8 18.9C12.7333 18.9667 12.6333 19 12.5 19H11.5C11.3667 19 11.2667 18.9667 11.2 18.9C11.0667 18.8333 11 18.7667 11 18.7V14.3C11 14.2333 11.0667 14.1667 11.2 14.1C11.2667 14.0333 11.3667 14 11.5 14H12.5C12.6333 14 12.7333 14.0333 12.8 14.1Z"/>
+                                               <path d="M12.9 15.8C12.8333 15.8667 12.7667 15.9 12.7 15.9H8.3C8.23333 15.9 8.16667 15.8667 8.1 15.8C8.03333 15.7333 8 15.6333 8 15.5V14.5C8 14.3667 8.03333 14.2667 8.1 14.2C8.16667 14.0667 8.23333 14 8.3 14H12.7C12.7667 14 12.8333 14.0667 12.9 14.2C12.9667 14.2667 13 14.3667 13 14.5V15.5C13 15.6333 12.9667 15.7333 12.9 15.8Z"/>
+                                               <path d="M8.1 15.8C8.16667 15.8667 8.23333 15.9 8.3 15.9H12.7C12.7667 15.9 12.8333 15.8667 12.9 15.8C12.9667 15.7333 13 15.6333 13 15.5V14.5C13 14.3667 12.9667 14.2667 12.9 14.2C12.8333 14.0667 12.7667 14 12.7 14H8.3C8.23333 14 8.16667 14.0667 8.1 14.2C8.03333 14.2667 8 14.3667 8 14.5V15.5C8 15.6333 8.03333 15.7333 8.1 15.8Z"/>
+                                             </svg>',
+    );
+
+    public static function renderSVG($name) {
+        if (isset(self::$icons[$name])) {
+            echo self::$icons[$name];
+        } else {
+            echo "<span>SVG icon not found: ".$name."</>";
+        }
+    }
+}
+
+
+?>
