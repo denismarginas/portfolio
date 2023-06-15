@@ -13,17 +13,13 @@ class RendererStructure {
 }
 
 class RendererSections {
-    public function section_about() {
-        include 'render_sections/section-about.php';
-    }
-    public function section_categories() {
-        include 'render_sections/section-categories.php';
-    }
-    public function section_web_development_experience() {
-        include 'render_sections/section-web-development-experience.php';
-    }
-    public function section_web_development_description() {
-        include 'render_sections/section-web-development-description.php';
+    public function renderSection($sectionName) {
+        $filePath = 'render_sections/section-' . strtolower(str_replace('_', '-', $sectionName)) . '.php';
+        if (file_exists($filePath)) {
+            include $filePath;
+        } else {
+            echo 'Section not found';
+        }
     }
 }
 class URLPath {

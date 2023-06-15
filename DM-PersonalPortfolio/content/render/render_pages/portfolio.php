@@ -6,7 +6,7 @@ $renderer_sections = new RendererSections();
 $renderer_structure->header();
 
 
-$renderer_sections->section_categories();
+$renderer_sections->renderSection('categories');
 
 
 

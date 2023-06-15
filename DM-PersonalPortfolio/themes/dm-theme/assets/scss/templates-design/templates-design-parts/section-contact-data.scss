@@ -149,35 +149,6 @@
   @media only screen and (max-width: $screen-phone-small) {
     > container {
       > ul {
-        > li:first-of-type {
-          .dm-person-circle-card {
-            width: 100%;
-
-              > span {
-                height: 140vw;
-                overflow: hidden;
-                width: 90vw;
-
-                > div {
-                  top: -15vw;
-                  clip-path: none;
-
-                  > span {
-                    @include fix-size(80vw);
-                  }
-                  > img {
-                    @include cover-image();
-                    @include fix-width(60vw);
-                    @include fix-height(auto);
-                  }
-                }
-                &:after {
-                  content: none;
-                  opacity: 0;
-                }
-              }
-          }
-        }
         > li:last-of-type {
           > ul {
             margin: 0;

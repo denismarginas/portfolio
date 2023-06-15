@@ -13,7 +13,8 @@
             </li>
             <li>
                 <h2 data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.5s">Contact Data</h2>
-                <p data-motion="transition-fade-0 transition-slideInLeft-0">You can reach me by phone on WhatsApp or through my personal email address. Contact details are provided in the section below.</p>
+                <p data-motion="transition-fade-0 transition-slideInLeft-0">You can reach me by phone on WhatsApp or through my personal email address.</p>
+                <p data-motion="transition-fade-0 transition-slideInLeft-0">Contact details are provided in the section below.</p>
                 <ul>
                     <li data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.6s">
                         <?php SVGRenderer::renderSVG('chevron-right'); ?>

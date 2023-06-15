@@ -106,19 +106,71 @@ document.addEventListener("DOMContentLoaded", function() {
             localStorage.setItem('theme', 'light');
         }
     }
-
-    var themePreference = localStorage.getItem('theme');
     var toggle = document.getElementById('toggleTheme');
-
-    if (themePreference === 'dark') {
-        toggle.checked = true;
-        toggleTheme();
-    } else {
-        toggle.checked = false;
+    if (toggle !== null) {
+        var themePreference = localStorage.getItem('theme');
+        if (themePreference === 'dark') {
+            toggle.checked = true;
+            toggleTheme();
+        } else {
+            toggle.checked = false;
+        }
+        toggle.addEventListener('change', toggleTheme);
     }
 
-    toggle.addEventListener('change', toggleTheme);
 
+    // Debug
+    var btnLog = document.querySelector('.btn-log');
+    var dataLog = document.querySelector('.data-log');
+    var logClose = document.querySelector('.log-close');
+    if (( btnLog !== null ) && (dataLog !== null)) {
+        dataLog.style.display = 'none';
+        logClose.style.display = 'none';
+        btnLog.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            if (dataLog.style.display === 'none') {
+                dataLog.style.display = 'block';
+                logClose.style.display = 'block';
+            } else {
+                dataLog.style.display = 'none';
+                logClose.style.display = 'none';
+            }
+        });
+        logClose.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+
+            dataLog.style.display = 'none';
+            logClose.style.display = 'none';
+        });
+    }
+    var btnRender = document.querySelector('.btn-render');
+    if (btnRender !== null) {
+        btnRender.addEventListener('click', function(event) {
+            var renderUrl = btnRender.getAttribute('data-href');
+            event.preventDefault(); // Prevent the default link behavior
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', renderUrl, true);
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    location.reload();
+                } else {
+                }
+            };
+            xhr.send();
+        });
+    }
+
+    // Download File
+    const downloadButtons = document.querySelectorAll('.downloadButton');
+    downloadButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const fileUrl = this.dataset.url;
+            const link = document.createElement('a');
+            link.href = fileUrl;
+            link.setAttribute('download', '');
+            link.click();
+        });
+    });
 
 });
 

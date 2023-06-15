@@ -1,13 +1,6 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <title>Denis Marginas - Portfolio</title>
-    <link rel="stylesheet" href="<?php echo $GLOBALS['urlPath']; ?>themes/dm-theme/assets/css/style.css">
-    <link rel="icon" type="image/x-icon" href="<?php echo $GLOBALS['urlPath']; ?>content/img/favicon/favicon.ico">
-    <script src="<?php echo $GLOBALS['urlPath']; ?>themes/dm-theme/assets/js/theme_script-dist.js"></script>
-</head>
+<?php @include("head.php"); ?>
 <body id="body">
 <header id="header">
     <section>
@@ -52,3 +45,9 @@
           </span>
     </section>
 </header>
+
+<?php
+$renderer_sections = new RendererSections();
+$renderer_sections->renderSection('debug');
+?>
+

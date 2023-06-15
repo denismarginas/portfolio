@@ -1,0 +1,264 @@
+@import "../functions/mixins.scss";
+@import "../functions/functions.scss";
+
+@mixin dm-button() {
+    margin          : 0 !important;
+    border          : none;
+    height          : inherit;
+    cursor          : pointer;
+    padding         : 6px var( --dm-spacing-secondary );
+    font-weight     : 800 !important;
+    box-shadow      : none;
+    text-shadow     : none;
+    display         : flex;
+    align-items     : center;
+    align-content   : center;
+    text-decoration : none;
+    justify-content : center;
+    width           : fit-content;
+    text-align      : center;
+
+    @include box-sizing( border-box );
+    @include border-radius( 100px !important );
+    @include box-shadow( none );
+    @include transition( all 0.2s ease );
+    @include dm-font-default();
+    line-height: unset;
+
+    > svg {
+        > path {
+            @include transition( all 0.2s ease );
+        }
+    }
+}
+
+@mixin dm-button-primary() {
+    display          : inline-flex;
+    color            : var( --dm-color-white ) !important;
+    background-color : var( --dm-color-primary) !important;
+    border           : 2px solid var( --dm-color-primary );
+
+    &:hover {
+        color            : var( --dm-color-primary ) !important;
+        background-color : transparent !important;
+        border           : 2px solid var( --dm-color-primary );
+    }
+    > svg {
+        margin : 0 0 0 var( --dm-spacing-primary );
+        width: 15px;
+        min-width: 15px;
+        @include svg-color( var( --dm-color-white ) );
+    }
+}
+
+@mixin dm-button-gray() {
+    background       : var( --dm-color-gray ) !important;
+    border           : 2px solid var( --dm-color-gray-darken ) !important;
+    display          : inline-flex;
+    color            : var( --dm-color-gray-darken ) !important;
+
+    &:hover {
+        background-color : var( --dm-color-gray-darken ) !important;
+        color            : var( --dm-color-gray ) !important;
+    }
+    &:focus {
+        background-color : var( --dm-color-gray-darken ) !important;
+        color            : var( --dm-color-gray ) !important;
+    }
+}
+
+@mixin dm-button-outline() {
+    background       : none !important;
+    display          : inline-flex;
+    color            : var( --dm-color-primary ) !important;
+    border           : 2px solid var( --dm-color-primary ) !important;
+
+    > svg {
+        width: 15px;
+        min-width: 15px;
+        margin : 0 0 0 var( --dm-spacing-primary );
+    }
+    &:hover, &:focus {
+        color            : var( --dm-color-white ) !important;
+        background-color : var( --dm-color-primary ) !important;
+
+        > svg {
+            > path {
+                fill: var( --dm-color-white ) !important;
+            }
+        }
+    }
+}
+
+@mixin dm-button-primary-icon() {
+    display          : inline-flex;
+    color            : var( --dm-color-white ) !important;
+    background-color : var( --dm-color-primary) !important;
+    border           : 2px solid var( --dm-color-primary );
+    padding          : 6px var( --dm-spacing-primary );
+
+    > svg {
+        margin : 0 var( --dm-spacing-primary ) 0 0;
+        width: 15px;
+        min-width: 15px;
+        @include svg-color( var( --dm-color-white ) );
+    }
+    &:hover {
+        color            : var( --dm-color-primary ) !important;
+        background-color : transparent !important;
+        border           : 2px solid var( --dm-color-primary );
+
+        > svg {
+            @include svg-color( var( --dm-color-primary ) );
+        }
+    }
+}
+
+@mixin dm-button-icon-download-file() {
+    display     : flex;
+    align-items : center;
+
+    &:hover {
+        --dm-icon-primary-color : var( --dm-color-primary );
+    }
+}
+
+@mixin dm-button-success() {
+    color: var( --dm-color-status-primary  ) !important;
+    background: var( --dm-background-color-status-primary ) !important;
+
+    &:hover {
+        color: var( --dm-color-white  ) !important;
+        background: var( --dm-color-status-primary ) !important;
+    }
+}
+
+@mixin dm-button-danger() {
+    color            : var( --dm-color-status-tertiary ) !important;
+    background-color : var( --dm-background-color-status-tertiary ) !important;
+    border           : 2px solid var( --dm-color-status-tertiary );
+
+    &:hover {
+        color            : var( --dm-color-white ) !important;
+        background-color : var( --dm-color-status-tertiary ) !important;
+    }
+    &:focus {
+        color            : var( --dm-color-white ) !important;
+        background-color : var( --dm-color-status-tertiary ) !important;
+    }
+}
+
+@mixin dm-button-warning() {
+    color            : var( --dm-color-status-secondary ) !important;
+    background-color : var( --dm-background-color-status-secondary ) !important;
+    border           : 2px solid var( --dm-color-status-secondary );
+
+    &:hover {
+        color            : var( --dm-color-white ) !important;
+        background-color : var( --dm-color-status-secondary ) !important;
+    }
+    &:focus {
+        color            : var( --dm-color-white ) !important;
+        background-color : var( --dm-color-status-secondary ) !important;
+    }
+}
+
+@mixin dm-button-danger-plain() {
+    color       : var( --dm-color-status-tertiary ) !important;
+    border      : 2px solid transparent;
+
+    &:hover {
+        background-color : var( --dm-color-status-tertiary  ) !important;
+        color            : var( --dm-color-white ) !important;
+    }
+}
+
+@mixin dm-button-danger-text() {
+    color       : var( --dm-color-status-tertiary ) !important;
+    background  : none;
+    border      : none;
+    padding     : 0 !important;
+
+    &:hover {
+        background : none !important;
+        color      : var( --dm-background-color-status-tertiary ) !important;
+    }
+}
+
+@mixin dm-button-plain() {
+    background: transparent !important;
+    color: var( --dm-color-primary ) !important;
+    font-weight : bold;
+    padding: 0 !important;
+
+    &:hover, &[data-button-state="active"] {
+        background: none !important;
+        color: var( --dm-color-primary ) !important;
+    }
+}
+
+[data-button] {
+    @include dm-button();
+
+    > svg {
+        @include svg-color(--dm-color-white);
+    }
+
+    &[data-button-state="active"] {
+        cursor: default;
+        opacity: 0.9;
+    }
+
+    &[data-button-state="highlight"] {
+        opacity: 0.5;
+    }
+
+    &[data-button="primary"] {
+        @include dm-button-primary();
+    }
+
+    &[data-button="gray"] {
+        @include dm-button-gray();
+    }
+
+    &[data-button="outline"] {
+        @include dm-button-outline();
+    }
+
+    &[data-button="primary-icon"] {
+        @include dm-button-primary-icon();
+    }
+
+    &[data-button="icon"],
+    &[data-button="download_file"] {
+        @include dm-button-icon-download-file();
+    }
+
+    &[data-button="success"] {
+        @include dm-button-success();
+    }
+
+    &[data-button="danger"] {
+        @include dm-button-danger();
+    }
+
+    &[data-button="danger-plain"] {
+        @include dm-button-danger-plain();
+    }
+
+    &[data-button="danger-text"] {
+        @include dm-button-danger-text();
+    }
+
+    &[data-button="warning"] {
+        @include dm-button-warning();
+    }
+
+    &[data-button="danger-plain"] {
+        @include dm-button-danger-plain();
+    }
+
+    &[data-button="plain"] {
+        @include dm-button-plain();
+    }
+}

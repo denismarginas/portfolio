@@ -7,10 +7,10 @@ $renderer_structure->header();
 
 
 
-$renderer_sections->section_about();
-$renderer_sections->section_categories();
-$renderer_sections->section_web_development_experience();
-$renderer_sections->section_web_development_description();
+$renderer_sections->renderSection('about');
+$renderer_sections->renderSection('categories');
+$renderer_sections->renderSection('web_development_experience');
+$renderer_sections->renderSection('web_development_description');
 
 
 
