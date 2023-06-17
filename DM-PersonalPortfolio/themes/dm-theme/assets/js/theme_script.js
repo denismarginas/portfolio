@@ -174,4 +174,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
+//Contact Form
+function contact_form_exec() {
+    var buttonDiv = document.querySelector('#dm-form-button').parentNode;
+    var statusMessageSpan = document.querySelector('#dm-send-status');
+
+    if (!statusMessageSpan) {
+        statusMessageSpan = document.createElement('span');
+        statusMessageSpan.id = 'dm-send-status';
+        statusMessageSpan.textContent = 'There was an error.';
+        buttonDiv.appendChild(statusMessageSpan);
+    }
+
+    return false;
+}
+
+
+
 

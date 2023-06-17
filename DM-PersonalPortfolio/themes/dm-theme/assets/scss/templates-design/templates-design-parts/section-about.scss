@@ -8,7 +8,7 @@
   > container {
     @include flex-row();
     @include flex-center();
-    gap: var( --dm-spacing-secondary ); 
+    gap: var( --dm-spacing-large);
 
     > div {
       &:first-of-type {
@@ -17,7 +17,8 @@
         z-index: 0;
 
         > img {
-          max-width: 100%;
+          width: 100%;
+          max-width: 357px;
           height: auto;
           clip-path: polygon(0 0, 100% 0, 100% 87%, 0 95%);
         }
@@ -82,31 +83,151 @@
           word-break: break-word;
 
           @for $j from 1 through 3 {
-            $delay: ($j - 1) * 0.6s;
+            $delay: ($j - 1) * 0.1s;
             &:nth-of-type(#{$j}) {
               transition-delay: $delay;
             }
           }
         }
       }
+    }
   }
-  }
-  @media only screen and (max-width: $screen-tablet-large) {
-    overflow: hidden;
-
+  &[data-layout="standard"] {
     > container {
-      flex-direction: column;
-      
       > div {
         &:first-of-type {
-          width: 100%;
+          width: 50%;
+
+          > img {
+            width: 100%;
+            max-width: 100%;
+            clip-path: none;
+          }
+          > svg {
+            width: 100%;
+            height: auto;
+            left: 2%;
+          }
+          > span {
+            width: 100%;
+            height: 100%;
+            clip-path: none;
+            bottom: 0;
+            background: var( --dm-color-white );
+            background-image: none;
+            display: none;
+          }
         }
         &:last-of-type {
-          width: 100%;
+          width: 50%;
+        }
+      }
+    }
+    @media only screen and (max-width: $screen-desktop-medium) {
+      > container {
+        gap: var( --dm-spacing-tertiary);
+      }
+    }
+    @media only screen and (max-width: $screen-tablet-large) {
+      > container {
+        flex-direction: column;
+        gap: var( --dm-spacing-secondary );
+
+        > div {
+          &:first-of-type {
+            width: 100%;
+
+            > img {
+              width: 100%;
+              max-width: 300px;
+              clip-path: none;
+            }
+            > svg {
+              max-width: 300px;
+            }
+          }
+          &:last-of-type {
+            width: 100%;
+          }
         }
       }
     }
   }
+  &[data-layout="compress"] {
+    @media only screen and (max-width: $screen-desktop-medium) {
+      > container {
+        gap: var( --dm-spacing-tertiary);
+      }
+    }
+    @media only screen and (max-width: $screen-desktop-small) {
+      > container {
+        > div {
+          &:first-of-type {
+            > img {
+              clip-path: none;
+            }
+          }
+        }
+      }
+    }
+    @media only screen and (max-width: $screen-tablet-large) {
+      > container {
+        flex-direction: column;
+        gap: var( --dm-spacing-secondary );
+
+        > div {
+          &:first-of-type {
+            width: 100%;
+
+            > img {
+              width: 100%;
+              max-width: 300px;
+              clip-path: none;
+            }
+            > svg {
+              max-width: 300px;
+            }
+          }
+          &:last-of-type {
+            width: 100%;
+          }
+        }
+      }
+    }
+    @media only screen and (max-width: $screen-phone-large) {
+      > container {
+        > div {
+          &:first-of-type {
+            > img {
+              max-width: 200px;
+            }
+            > span {
+              height: 200px;
+            }
+            > svg {
+              width: 65%;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+    @media only screen and (max-width: $screen-phone-small) {
+      > container {
+        > div {
+          &:first-of-type {
+            > img {
+              max-width: 150px;
+            }
+            > span {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
 
 body, body.theme-light {

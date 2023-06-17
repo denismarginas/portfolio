@@ -13,15 +13,19 @@ class RendererStructure {
 }
 
 class RendererSections {
-    public function renderSection($sectionName) {
+    public function renderSection($sectionName, $layout = null) {
         $filePath = 'render_sections/section-' . strtolower(str_replace('_', '-', $sectionName)) . '.php';
         if (file_exists($filePath)) {
+            if ($layout !== null) {
+                // Do something with $layout if needed
+            }
             include $filePath;
         } else {
             echo 'Section not found';
         }
     }
 }
+
 class URLPath {
     private static $urlPaths = [
         'page' => '../../',

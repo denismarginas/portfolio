@@ -6,9 +6,10 @@ $renderer_sections = new RendererSections();
 $renderer_structure->header();
 
 
-$renderer_sections->renderSection('contact-data');
-$renderer_sections->renderSection('resume-data');
-$renderer_sections->renderSection('contact-details');
+
+$renderer_sections->renderSection('about', "standard");
+
+
 
 // Function Footer
 $renderer_structure->footer();

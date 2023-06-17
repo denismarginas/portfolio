@@ -142,8 +142,58 @@
         height: 25px;
         left: 2px;
       }
+      &[data-socials="github"]:before {
+        content: "";
+        position: absolute;
+        background: var( --dm-color-white );
+        width: 28px;
+        height: 28px;
+        top:2px;
+        left: 1px;
+        border-radius: 30px;
+      }
       > svg {
         z-index: 1;
+      }
+    }
+  }
+}
+
+body, body.theme-light {
+  .dm-socials-list {
+    &[data-socials="normal-fill"] {
+      > a {
+        &[data-socials="github"] {
+          > svg {
+            @include svg-color( var( --dm-color-gray ) );
+          }
+        }
+        &:hover {
+          > svg {
+            @include svg-color( var( --dm-color-primary ) );
+          }
+        }
+      }
+    }
+  }
+}
+body.theme-dark {
+  .dm-socials-list {
+    &[data-socials="normal-fill"] {
+      > a {
+        &[data-socials="github"] {
+          &:before {
+            background: none;
+          }
+          > svg {
+            @include svg-color( var( --dm-color-white ) );
+          }
+        }
+        &:hover {
+          > svg {
+            @include svg-color( var( --dm-color-primary ) );
+          }
+        }
       }
     }
   }

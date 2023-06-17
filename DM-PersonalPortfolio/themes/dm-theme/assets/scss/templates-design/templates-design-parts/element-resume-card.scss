@@ -1,0 +1,195 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.resume-card {
+  container-type: inline-size;
+
+  > div {
+    @include border-radius( var( --dm-border-radius-primary ) );
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
+    gap: var( --dm-spacing-primary );
+    background-color: rgba( var( --dm-color-primary-rgb ) , 0.2);
+    padding: var( --dm-spacing-tertiary );
+    transition: background-color 0.5s;
+
+    > span {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 9/13;
+      background-color: rgba( var( --dm-color-gray-rgb ) , 0.2);
+      border: 1px solid rgba( var( --dm-color-gray-rgb ) , 0.2);
+
+      > img {
+        @include cover-image();
+        transition: width 0.4s, height 0.4s;
+      }
+      > svg {
+        @include fix-size(30%);
+        @include svg-color( var( --dm-color-white ) );
+        position: absolute;
+        right: 20%;
+        bottom: 10%;
+        transition: bottom 0.3s, right 0.3s;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        transform: rotate(60deg);
+        bottom: -35%;
+        right: -20%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba( var( --dm-color-primary-rgb ) , 0.9);
+        border: 6px solid rgba( var( --dm-color-white-rgb ) , 0.1);
+        transition: bottom 0.3s, right 0.3s;
+      }
+      &:hover {
+        > img {
+          width: 110%;
+          height: 110%;
+          transition: width 0.4s, height 0.4s;
+        }
+        > svg {
+          right: -50%;
+          bottom: -50%;
+          transition: bottom 0.3s, right 0.3s;
+        }
+        &:before {
+          bottom: -75%;
+          right: -50%;
+          transition: bottom 0.3s, right 0.3s;
+        }
+      }
+    }
+    > div {
+      @include flex-column();
+
+      > a {
+        @include limit-line-text(1);
+        @include dm-font-big();
+        --dm-text-big-font-weight: 600;
+      }
+      > span {
+        @include limit-line-text(1);
+        @include dm-font-small();
+
+        &:last-of-type {
+          margin-bottom: var( --dm-spacing-primary );
+        }
+      }
+      > button {
+        @include dm-font-small();
+      }
+    }
+    &:hover {
+        background-color: rgba( var( --dm-color-primary-rgb ) , 0.3);
+        transition: background-color 0.5s;
+    }
+  }
+  @container (max-width: 375px) {
+    > div {
+      padding: var( --dm-spacing-secondary );
+
+      > div {
+        > a {
+          @include dm-font-medium();
+          --dm-text-medium-font-weight: 600;
+        }
+      }
+    }
+  }
+  @container (max-width: 250px) {
+    > div {
+      padding: var( --dm-spacing-secondary ) var( --dm-spacing-primary );
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+
+      > span {
+        max-width: 130px;
+      }
+      > div {
+        @include flex-center();
+
+        > a {
+          @include dm-font-medium();
+          --dm-text-medium-font-weight: 600;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-medium) {
+    > div {
+      padding: var( --dm-spacing-secondary ) var( --dm-spacing-primary );
+
+      > div {
+        > a {
+          @include dm-font-medium();
+          --dm-text-medium-font-weight: 600;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-small) {
+    > div {
+      padding: var( --dm-spacing-secondary ) var( --dm-spacing-primary );
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+
+      > span {
+        max-width: 130px;
+      }
+      > div {
+        @include flex-center();
+
+        > a {
+          @include dm-font-medium();
+          --dm-text-medium-font-weight: 600;
+        }
+      }
+    }
+  }
+}
+body, body.theme-light {
+  .resume-card {
+    > div {
+      > div {
+        >  a {
+          --dm-text-big-color: var( --dm-color-gray-darken );
+          --dm-text-medium-color: var( --dm-color-gray-darken );
+
+          &:hover {
+            text-decoration: underline;
+            text-decoration-color: var( --dm-color-primary );
+          }
+        }
+        > span {
+          --dm-text-small-color: var( --dm-color-gray );
+        }
+      }
+    }
+  }
+}
+body.theme-dark {
+  .resume-card {
+    > div {
+      > div {
+        >  a {
+          --dm-text-big-color: var( --dm-color-white );
+          --dm-text-medium-color: var( --dm-color-white );
+
+          &:hover {
+            text-decoration: underline;
+            text-decoration-color: var( --dm-color-white );
+          }
+        }
+        > span {
+          --dm-text-small-color: var( --dm-color-white );
+        }
+      }
+    }
+  }
+}

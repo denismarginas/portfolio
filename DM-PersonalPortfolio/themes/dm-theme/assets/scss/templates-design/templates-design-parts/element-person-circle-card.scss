@@ -105,6 +105,8 @@
     }
   }
   @media only screen and (max-width: $screen-phone-small ) {
+    max-width: 112px;
+
       > span {
         height: 70vw;
         width: 100vw;

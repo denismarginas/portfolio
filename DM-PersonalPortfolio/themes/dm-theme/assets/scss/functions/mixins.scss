@@ -1,3 +1,6 @@
+@import "../interface-design/screen-sizes.scss";
+@import "../interface-design/variables.scss";
+
 @mixin container( $var: null ) {
   @if $var == null {
     $var: 0;
@@ -10,6 +13,7 @@
   max-width: 1600px;
 
   @media only screen and ( max-width: $screen-tablet-small ) {
+
     padding-top: calc( $var  / 2 );
     padding-bottom: calc(  $var  / 2 );
   }

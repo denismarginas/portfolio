@@ -1,0 +1,92 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-contact-form {
+  @include flex-column();
+  @include padding-x();
+  gap: var( --dm-spacing-secondary );
+  overflow: hidden;
+
+  > h3 {
+    @include dm-font-heading3();
+    --dm-text-heading3-font-family: var( --dm-font-family-secondary );
+  }
+  > form {
+    @include flex-column();
+    gap: var( --dm-spacing-secondary );
+
+    > input, textarea {
+      @include border-radius( var( --dm-border-radius-primary ) );
+      @include dm-font-default();
+      padding: calc(var( --dm-spacing-primary ) / 3) var( --dm-spacing-primary );
+      border: 2px solid var( --dm-border-color-primary );
+      background-color: rgba( var(--dm-color-gray-rgb) , 0.1 );
+
+      &::placeholder {
+        opacity: 0.5;
+      }
+      &:focus {
+        outline: none;
+        background-color: rgba( var(--dm-color-primary-rgb) , 0.2 );
+      }
+    }
+    > textarea {
+      width: auto;
+      max-width: 100%;
+      min-height: 100px;
+      max-height: 400px;
+      resize: none;
+    }
+    > div {
+      @include flex-column();
+      gap: var( --dm-spacing-primary );
+
+      #dm-send-status {
+        @include dm-font-default();
+      }
+    }
+  }
+}
+
+body, body.theme-light {
+  .dm-contact-form {
+    > h3 {
+      --dm-text-heading3-color: var( --dm-color-gray-darken );
+    }
+    > form {
+      > input, textarea {
+        --dm-text-default-color: var( --dm-color-gray-darken );
+
+        &::placeholder {
+          --dm-text-default-color: var( --dm-color-gray );
+        }
+      }
+      > div {
+        #dm-send-status {
+          --dm-text-default-color: var( --dm-color-gray-darken );
+        }
+      }
+    }
+  }
+}
+body.theme-dark {
+  .dm-contact-form {
+    > h3 {
+      --dm-text-heading3-color: var( --dm-color-white );
+    }
+    > form {
+      > input, textarea {
+        --dm-text-default-color: var( --dm-color-white );
+
+        &::placeholder {
+          --dm-text-default-color: var( --dm-color-white );
+        }
+      }
+      > div {
+        #dm-send-status {
+          --dm-text-default-color: var( --dm-color-white );
+        }
+      }
+    }
+  }
+}

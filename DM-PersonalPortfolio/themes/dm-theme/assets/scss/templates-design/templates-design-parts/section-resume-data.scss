@@ -2,19 +2,19 @@
 @import "../../functions/functions.scss";
 
 .dm-resume-data {
-
-
   > container {
     > ul {
       @include reset-list();
       @include padding-x();
       display: grid;
       align-items: center;
-      grid-template-columns: 1fr 1.3fr;
-      gap: var( --dm-spacing-secondary );
+      grid-template-columns: 1fr 1.2fr;
+      gap: var( --dm-spacing-tertiary );
 
       > li {
         &:first-of-type {
+          overflow: hidden;
+
           > ul {
             @include reset-list();
             display: grid;
@@ -22,58 +22,65 @@
             grid-template-columns: repeat(2, 1fr);
             gap: var( --dm-spacing-secondary );
 
-            > .cv-card {
-              @include border-radius( var( --dm-border-radius-primary ) );
-              display: grid;
-              align-items: center;
-              grid-template-columns: 1fr 2fr;
-              gap: var( --dm-spacing-primary );
-              background-color: rgba( var( --dm-color-primary-rgb ) , 0.2);
-              padding: var( --dm-spacing-primary );
-              
-
-              > img {
-                width: 100%;
-                height: auto;
-                background-color: rgba( var( --dm-color-gray-rgb ) , 0.2);
-                border: 1px solid rgba( var( --dm-color-gray-rgb ) , 0.2);
-              }
-              > div {
-                @include flex-column();
-
-                > a {
-                  @include dm-font-big();
-                  --dm-text-big-font-weight: 600;
-
-                }
-                > span {
-                  @include dm-font-small();
-                  margin-bottom: var( --dm-spacing-primary );
-                }
-                > button {
-                  @include dm-font-small();
-                }
-              }
-            }
           }
         }
         &:last-of-type {
           @include flex-column();
           gap: var( --dm-spacing-secondary );
 
-          > img {
-            width: 100%;
-            height: auto;
-            margin-top: -300px;
+          > div {
+            @include flex-column();
+            gap: var( --dm-spacing-secondary );
+            overflow: hidden;
+
+            &:first-of-type {
+              position: relative;
+              margin-top: -300px;
+
+              > img {
+                border-bottom-left-radius: var( --dm-border-radius-secondary );
+                border-bottom-right-radius: var( --dm-border-radius-secondary );
+                width: 100%;
+                height: auto;
+              }
+            }
+          }
+          > p {
+            @include dm-font-default();
           }
         }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-desktop-large) {
+    > container {
+      > ul {
+        grid-template-columns: 1.1fr 1fr;
       }
     }
   }
   @media only screen and (max-width: $screen-desktop-medium) {
     > container {
       > ul {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-desktop-small) {
+    > container {
+      > ul {
+        grid-template-columns: 1fr 1.5fr;
+
+        > li {
+          &:last-of-type {
+            > div {
+              &:first-of-type {
+                position: relative;
+                margin-top: -400px;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -81,6 +88,16 @@
     > container {
       > ul {
         grid-template-columns: repeat(1, 1fr);
+
+        > li {
+          &:last-of-type {
+            > div {
+              &:first-of-type {
+                margin-top: 0px;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -102,15 +119,36 @@
 }
 
 body, body.theme-light {
-  .dm-contact-data {
+  .dm-resume-data {
     > container {
-
+      > ul {
+        > li {
+          &:last-of-type {
+            > div {
+              > p {
+                --dm-text-default-color: var( --dm-color-gray );
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
 body.theme-dark {
-  .dm-contact-data {
+  .dm-resume-data {
     > container {
+      > ul {
+        > li {
+          &:last-of-type {
+            > div {
+              > p {
+                --dm-text-default-color: var( --dm-color-white );
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

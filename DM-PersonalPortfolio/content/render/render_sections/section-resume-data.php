@@ -1,28 +1,32 @@
 <?php
 $cv_list = [
             [
-                "name" => "CV #2 English",
+                "name" => "Resume #2 English",
                 "image" => "content/cv/cv-2/dm-cv-2-english-public.jpg",
                 "pdf" => "content/cv/cv-2/dm-cv-2-english-public-compressed.pdf",
-                "date" => "Jun 3, 2023"
+                "date" => "Jun 3, 2023",
+                "description" => "CV - Model 2"
             ],
             [
-                "name" => "CV #2 Romanian",
+                "name" => "Resume #2 Romanian",
                 "image" => "content/cv/cv-2/dm-cv-2-romana-public.jpg",
                 "pdf" => "content/cv/cv-2/dm-cv-2-romana-public-compressed.pdf",
-                "date" => "Jun 3, 2023"
+                "date" => "Jun 3, 2023",
+                "description" => "CV - Model 2"
             ],
             [
-                "name" => "CV #1 English",
+                "name" => "Resume #1 English",
                 "image" => "content/cv/cv-1/dm-cv-1-english-public.jpg",
                 "pdf" => "content/cv/cv-1/dm-cv-1-english-public-compressed.pdf",
-                "date" => "Jun 3, 2023"
+                "date" => "Jun 3, 2023",
+                "description" => "CV - Model 1"
             ],
             [
-                "name" => "CV #1 Romanian",
+                "name" => "Resume #1 Romanian",
                 "image" => "content/cv/cv-1/dm-cv-1-romana-public.jpg",
                 "pdf" => "content/cv/cv-1/dm-cv-1-romana-public-compressed.pdf",
-                "date" => "Jun 3, 2023"
+                "date" => "Jun 3, 2023",
+                "description" => "CV - Model 1"
             ]
            ];
 
@@ -39,35 +43,47 @@ $cv_text = [
         <ul>
             <li>
                 <ul>
-                    <?php foreach ($cv_list as $cv_item) : ?>
-                        <li class="cv-card">
-                            <?php if(isset($cv_item['image'])) : ?>
-                                <img width="100" height="100" src="<?php echo $GLOBALS['urlPath'] . $cv_item['image']; ?>" alt="CV Image">
-                            <?php endif; ?>
-
+                    <?php $i = 1; foreach ($cv_list as $cv_item) : ?>
+                        <li class="resume-card" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.<?php echo 1 + $i; ?>s">
                             <div>
-                                <?php if(isset($cv_item['pdf']) && isset($cv_item['name'])) : ?>
-                                    <a href="<?php echo $GLOBALS['urlPath'] . $cv_item['pdf']; ?>" target="_blank"><?php echo $cv_item['name']; ?></a>
+                                <?php if(isset($cv_item['image'])) : ?>
+                                    <span>
+                                        <img width="100" height="141" src="<?php echo $GLOBALS['urlPath'] . $cv_item['image']; ?>" alt="CV Image">
+                                        <?php SVGRenderer::renderSVG('resume'); ?>
+                                    </span>
                                 <?php endif; ?>
 
-                                <?php if(isset($cv_item['date'])) : ?>
-                                    <span><?php echo $cv_item['date']; ?></span>
-                                <?php endif; ?>
+                                <div>
+                                    <?php if(isset($cv_item['pdf']) && isset($cv_item['name'])) : ?>
+                                        <a href="<?php echo $GLOBALS['urlPath'] . $cv_item['pdf']; ?>" target="_blank"><?php echo $cv_item['name']; ?></a>
+                                    <?php endif; ?>
 
-                                <?php if(isset($cv_item['pdf'])) : ?>
-                                    <button data-button="success" class="downloadButton" data-url="<?php echo $GLOBALS['urlPath'] . $cv_item['pdf']; ?>">Download</button>
-                                <?php endif; ?>
+                                    <?php if(isset($cv_item['description'])) : ?>
+                                        <span><?php echo $cv_item['description']; ?></span>
+                                    <?php endif; ?>
+
+                                    <?php if(isset($cv_item['date'])) : ?>
+                                        <span><?php echo $cv_item['date']; ?></span>
+                                    <?php endif; ?>
+
+                                    <?php if(isset($cv_item['pdf'])) : ?>
+                                        <button data-button="success" class="downloadButton" data-url="<?php echo $GLOBALS['urlPath'] . $cv_item['pdf']; ?>">Download</button>
+                                    <?php endif; ?>
+                                </div>
                             </div>
                         </li>
-                    <?php endforeach; ?>
+                    <?php $i++; endforeach; ?>
                 </ul>
             </li>
             <li>
-                <img width="500" height="300" src="<?php echo $GLOBALS['urlPath']; ?>content/img/personal-images/dm-desktop-working.png" alt="DM - Working On Desktop">
-
-                <?php $i = 1; foreach ($cv_text as $cv_text_item) : ?>
-                    <p data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.<?php echo 1 + $i; ?>s"><?php echo $cv_text_item; ?></p>
-                <?php $i++; endforeach; ?>
+                <div>
+                    <img data-motion="transition-fade-0 transition-slideInLeft-0" width="500" height="300" src="<?php echo $GLOBALS['urlPath']; ?>content/img/personal-images/dm-desktop-working.png" alt="DM - Working On Desktop">
+                </div>
+                <div>
+                    <?php $i = 1; foreach ($cv_text as $cv_text_item) : ?>
+                        <p data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.<?php echo 1 + $i; ?>s"><?php echo $cv_text_item; ?></p>
+                    <?php $i++; endforeach; ?>
+                </div>
             </li>
         </ul>
     </container>

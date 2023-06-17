@@ -19,6 +19,9 @@
                     <a href="home.html">Home</a>
                 </li>
                 <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
                     <a href="experience.html">Experience</a>
                 </li>
                 <li>
@@ -45,9 +48,4 @@
           </span>
     </section>
 </header>
-
-<?php
-$renderer_sections = new RendererSections();
-$renderer_sections->renderSection('debug');
-?>
 

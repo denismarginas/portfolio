@@ -1,0 +1,113 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+
+.dm-contact-details {
+  @include padding-x();
+  overflow: hidden;
+
+  > container {
+    > ul {
+      @include reset-list();
+      display: grid;
+      align-items: center;
+      grid-template-columns: 2fr 1fr;
+      gap: var(--dm-spacing-secondary);
+      padding-bottom: var(--dm-spacing-large);
+
+      > .dm-socials {
+        @include border-radius( var( --dm-border-radius-primary ) );
+        background-color: rgba(var(--dm-color-primary-rgb),0.2);
+        padding: var( --dm-spacing-secondary );
+        display: grid;
+        gap: var(--dm-spacing-secondary);
+
+        > h4 {
+          @include dm-font-heading3();
+          --dm-text-heading3-font-family: var( --dm-font-family-secondary );
+        }
+        > .dm-socials-text {
+          > a {
+            @include limit-line-text(1);
+            word-break: break-all;
+
+            &, span, b {
+              @include dm-font-medium();
+            }
+            > span {
+              --dm-text-medium-color: var( --dm-color-primary );
+              margin-right: var( --dm-spacing-primary );
+            }
+            > b {
+              --dm-text-medium-font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-large) {
+    > container {
+      > ul {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-medium) {
+    > container {
+      > ul {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
+
+body, body.theme-light {
+  .dm-contact-details  {
+    > container {
+      > ul {
+        > .dm-socials  {
+          > h4 {
+            --dm-text-heading3-color: var( --dm-color-gray-darken );
+          }
+          > .dm-socials-text {
+            > a {
+              &, span, b {
+                --dm-text-medium-color: var( --dm-color-gray-darken );
+              }
+              > span {
+                --dm-text-medium-color: var( --dm-color-primary );
+              }
+              &:hover {
+                --dm-text-medium-color: var( --dm-color-primary );
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+body.theme-dark {
+  .dm-contact-details  {
+    > container {
+      > ul {
+        > .dm-socials  {
+          > h4 {
+            --dm-text-heading3-color: var( --dm-color-white);
+          }
+          > .dm-socials-text {
+            > a {
+              &, span, b {
+                --dm-text-medium-color: var( --dm-color-white );
+              }
+              &:hover, &:hover span, &:hover b {
+                --dm-text-medium-color: var( --dm-color-primary );
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

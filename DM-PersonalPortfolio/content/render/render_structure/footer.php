@@ -1,3 +1,8 @@
+        <?php
+        $renderer_sections = new RendererSections();
+        $renderer_sections->renderSection('debug');
+        ?>
+
         <footer id="footer">
             <section>
                 <div class="dm-footer-contact">
