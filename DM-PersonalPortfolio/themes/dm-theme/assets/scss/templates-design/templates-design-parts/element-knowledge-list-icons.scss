@@ -1,0 +1,11 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-knowledge-lists-icons {
+  > ul {
+    @include reset-list();
+    @include flex-row();
+    align-items: center;
+    gap: var( --dm-spacing-secondary);
+  }
+}

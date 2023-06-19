@@ -22,14 +22,18 @@ $about_text = [
         <div>
             <h2 data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.5s">About</h2>
             <?php $i = 1; foreach ($about_text as $about_text_item) : ?>
-            <p data-motion="transition-fade-0 transition-slideInLeft-0">
-                <?php echo $about_text_item; ?>
-            </p>
-            <?php if( $layout == "compress" ) : ?>
-                <a data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.4s" href="about.html" data-button="primary">More Details</a>
-                <?php break;?>
-            <?php endif; ?>
+                <p data-motion="transition-fade-0 transition-slideInLeft-0">
+                    <?php echo $about_text_item; ?>
+                </p>
+                <?php if( $layout == "compress" ) : ?>
+                    <a data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.4s" href="about.html" data-button="primary">More Details</a>
+                    <?php break;?>
+                <?php endif; ?>
             <?php $i++; endforeach; ?>
+            <?php if( $layout == "standard" ) :
+                $renderer = new RendererElements();
+                $renderer->renderElement('knowledge-list-icons');
+            endif; ?>
         </div>
     </container>
 </section>

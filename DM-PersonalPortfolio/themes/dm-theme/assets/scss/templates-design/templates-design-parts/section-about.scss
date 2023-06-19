@@ -96,15 +96,16 @@
     > container {
       > div {
         &:first-of-type {
-          width: 50%;
+          width: 30%;
 
           > img {
             width: 100%;
-            max-width: 100%;
+            max-width: 500px;
             clip-path: none;
           }
           > svg {
             width: 100%;
+            max-width: 500px;
             height: auto;
             left: 2%;
           }
@@ -119,7 +120,7 @@
           }
         }
         &:last-of-type {
-          width: 50%;
+          width: 70%;
         }
       }
     }

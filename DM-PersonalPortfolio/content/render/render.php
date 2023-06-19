@@ -3,7 +3,7 @@
 require_once __DIR__ . '/classes/classes-general.php';
 require_once __DIR__ . '/classes/class-svg-render.php';
 require_once __DIR__ . '/classes/class-video-render.php';
-require_once __DIR__ . '/config/config_debug.php';
+require_once __DIR__ . '/config/config-debug.php';
 
 $pagePath = __DIR__ . '/../pages/';
 $pageFiles = glob('render_pages/*.php');
