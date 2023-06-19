@@ -1,0 +1,61 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-experience-categories {
+  @include padding-x();
+  overflow: hidden;
+
+
+  > container {
+    z-index: 1;
+
+    > ul {
+      @include reset-list();
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: start;
+      gap: var( --dm-spacing-small );
+      padding: var( --dm-spacing-small ) 0;
+    }
+  }
+  @media only screen and (max-width: $screen-desktop-medium) {
+    > container {
+      > ul {
+        gap: var( --dm-spacing-secondary );
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-large) {
+    > container {
+      > ul {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var( --dm-spacing-secondary );
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-medium) {
+    > container {
+      > ul {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+
+}
+
+body, body.theme-light {
+  .dm-experience-categories {
+    > container {
+      > ul {
+
+      }
+    }
+  }
+}
+body.theme-dark {
+  .dm-experience-categories {
+    > container {
+
+    }
+  }
+}

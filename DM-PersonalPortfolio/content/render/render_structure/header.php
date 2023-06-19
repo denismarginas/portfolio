@@ -19,9 +19,6 @@
                     <a href="home.html">Home</a>
                 </li>
                 <li>
-                    <a href="about.html">About</a>
-                </li>
-                <li>
                     <a href="experience.html">Experience</a>
                 </li>
                 <li>

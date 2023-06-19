@@ -6,7 +6,7 @@ $renderer_sections = new RendererSections();
 $renderer_structure->header();
 
 
-
+$renderer_sections->renderSection('experience-categories');
 
 
 

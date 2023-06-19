@@ -1,0 +1,135 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-experience-category {
+  width: 100%;
+  container-type: inline-size;
+
+  > div {
+    background-color: var( --dm-color-primary );
+    position: relative;
+    z-index: 0;
+    height: 100px;
+
+    > a {
+      @include flex-center();
+      justify-content: start;
+      gap: var( --dm-spacing-secondary );
+      overflow: hidden;
+      height: 100px;
+
+        > span {
+          @include dm-font-heading5();
+          --dm-text-heading5-color: var( --dm-color-white );
+          --dm-text-heading5-font-weight: 600;
+          text-transform: uppercase;
+          padding: var( --dm-spacing-secondary );
+          font-style: italic;
+
+        }
+      > div {
+        padding: var( --dm-spacing-secondary );
+        background-color: var( --dm-color-gray );
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          z-index: -1;
+          transform: rotate(-20deg);
+          content: "";
+          display: flex;
+          position: absolute;
+          width: 100%;
+          height: 200%;
+          background-color: var( --dm-color-gray );
+          top: 0;
+          right: -40%;
+        }
+        > svg {
+          @include svg-color( var( --dm-color-white ) );
+          @include fix-size( 50px );
+          z-index: 1;
+          filter: drop-shadow(2px 2px 1px rgba(34,34,34,0.4));
+        }
+      }
+      > img {
+        @include cover-image();
+        position: absolute;
+        opacity: 0.4;
+        mix-blend-mode: color-burn;
+      }
+      &:hover {
+        > div {
+          > svg {
+            @include svg-color( var( --dm-color-highlight-primary ) );
+          }
+        }
+      }
+    }
+  }
+  @container (max-width: 300px) {
+    > div {
+      > a {
+        > div {
+          padding: var( --dm-spacing-tertiary ) var( --dm-spacing-secondary );
+
+          &:before {
+            transform: rotate(-10deg);
+          }
+          > svg {
+            @include fix-size( 25px );
+          }
+        }
+        > span {
+          @include dm-font-big();
+          --dm-text-big-font-weight: 600;
+          --dm-text-big-color: var( --dm-color-white );
+          font-style: italic;
+        }
+      }
+    }
+  }
+  @container (max-width: 240px) {
+    > div {
+      > a {
+        > span {
+          @include dm-font-medium();
+          --dm-text-medium-font-weight: 600;
+          --dm-text-medium-color: var( --dm-color-white );
+          font-style: italic;
+          padding: var( --dm-spacing-primary );
+        }
+      }
+    }
+  }
+  @container (max-width: 220px) {
+    > div {
+      height: 150px;
+      > a {
+        height: 150px;
+        flex-direction: column;
+        gap: 0;
+
+        > div {
+          @include flex-center();
+          width: 100%;
+          padding: var( --dm-spacing-secondary ) var( --dm-spacing-primary );
+
+          &:before {
+            content: none;
+          }
+          > svg {
+            @include fix-size(40px);
+          }
+        }
+        > span {
+          @include flex-center();
+          width: 100%;
+          max-width: 80%;
+          height: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

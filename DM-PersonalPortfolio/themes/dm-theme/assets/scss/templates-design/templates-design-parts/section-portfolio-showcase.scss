@@ -1,0 +1,86 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-portfolio-showcase  {
+  overflow: hidden;
+
+  > container {
+    > ul {
+      @include padding-x();
+      @include reset-list();
+      display: grid;
+      align-items: center;
+      grid-template-columns: 2fr 1fr;
+      gap: var( --dm-spacing-secondary );
+
+      > li {
+        @include flex-column();
+        gap: var( --dm-spacing-secondary );
+
+        > h2 {
+          @include dm-font-heading1();
+          --dm-text-heading1-font-family: var( --dm-font-family-secondary );
+
+          &:after {
+            position: relative;
+            display: block;
+            content: "";
+            width: 100%;
+            max-width: var( --dm-spacing-small );
+            height: 3px;
+            background-color: var( --dm-color-primary );
+            transition: max-width 0.3s;
+            transition-delay: 0.3s;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+            animation-name: growDivider;
+            animation-fill-mode: both;
+
+          }
+        }
+        > p, div p, div ul li span {
+          @include dm-font-default();
+
+        }
+        >  div {
+          > p {
+            --dm-text-default-font-weight: 600;
+          }
+          > ul {
+            @include reset-list();
+            padding: 6px;
+
+            > li {
+              > svg {
+                @include fix-size( 15px );
+                @include svg-color( var( --dm-color-primary ) );
+              }
+            }
+          }
+        }
+        .dm-watch-on-youtube {
+          @include flex-row();
+          align-items: center;
+          gap: var( --dm-spacing-primary );
+
+          > svg {
+            @include fix-size( 40px );
+          }
+          > span {
+            @include dm-font-big();
+            --dm-text-big-font-weight: 600;
+            --dm-text-big-color: var( --dm-color-gray );
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-small) {
+    > container {
+      > ul {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

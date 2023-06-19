@@ -3,7 +3,6 @@
 
 .dm-contact-form {
   @include flex-column();
-  @include padding-x();
   gap: var( --dm-spacing-secondary );
   overflow: hidden;
 
