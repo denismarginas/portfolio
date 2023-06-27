@@ -13,7 +13,7 @@ class RendererStructure {
 }
 
 class RendererSections {
-    public function renderSection($sectionName, $layout = null) {
+    public function renderSection($sectionName, $layout = null, $args = null) {
         $filePath = 'render_sections/section-' . strtolower(str_replace('_', '-', $sectionName)) . '.php';
         if (file_exists($filePath)) {
             if ($layout !== null) {
@@ -41,7 +41,9 @@ class RendererElements {
 class URLPath {
     private static $urlPaths = [
         'page' => '../../',
-        'template' => '../../../'
+        'template' => '../../../',
+        'post' => '../../'
+
     ];
 
     public static function getUrlPaths() {
@@ -52,7 +54,8 @@ class URLPath {
 class MediaPath {
     private static $urlPaths = [
         'page' => '../../',
-        'template' => '../../../'
+        'template' => '../../../',
+        'post' => '../../'
     ];
 
     public static function getUrlPaths() {
