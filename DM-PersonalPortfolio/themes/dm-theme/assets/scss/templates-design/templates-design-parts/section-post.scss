@@ -7,6 +7,248 @@
   > container {
       display: grid;
       grid-template-columns: 3fr 1fr;
+      gap: var( --dm-spacing-tertiary );
+
+    > .post-data {
+      @include border-radius( var( --dm-border-radius-primary ));
+      background-color: rgba( var( --dm-color-gray-rgb ) , 0.1);
+      padding: var( --dm-spacing-secondary );
+
+      > .post-logo {
+        @include flex-center();
+        @include border-radius( var( --dm-border-radius-primary ));
+        padding: var( --dm-spacing-secondary ) var( --dm-spacing-primary );
+        background-color: var( --post_color_background );
+        margin-bottom: var( --dm-spacing-secondary );
+
+        > img {
+          height: auto;
+          width: 100%;
+          max-width: 200px;
+        }
+      }
+      > .post-text {
+        @include flex-column();
+        gap: calc( var( --dm-spacing-primary ) / 3 );
+        word-break: break-word;
+
+        > .post-title {
+          @include dm-font-heading4();
+          --dm-text-heading4-font-family: var( --dm-font-family-secondary );
+          margin: calc( var( --dm-spacing-primary ) / 2 ) 0;
+
+          &:after {
+            position: relative;
+            display: block;
+            content: "";
+            width: 100%;
+            max-width: var( --dm-spacing-small );
+            height: 3px;
+            background-color: var( --post_color_primary );
+          }
+        }
+        > .post-description {
+          @include dm-font-medium();
+          margin: calc( var( --dm-spacing-primary ) / 2 ) 0;
+          text-align: justify;
+        }
+        > .post-website {
+            > span {
+              font-weight: 600;
+            }
+            > a:hover {
+              color: var( --post_color_primary );
+            }
+        }
+        > .post-website-platform {
+          > span {
+            font-weight: 600;
+          }
+        }
+        > .post-website-status {
+          > span {
+            font-weight: 600;
+          }
+        }
+        > .post-media-facebook {
+          @include flex-row();
+          flex-wrap: wrap;
+          align-items: center;
+
+          > span {
+            font-weight: 600;
+          }
+          > a {
+            &:first-of-type {
+              @include flex-center();
+              @include fix-size(24px);
+              @include border-radius(5px);
+              background-color: var( --post_color_secondary );
+              padding: 5px;
+              margin-right: 5px;
+
+              > svg {
+                @include svg-color( var( --post_color_primary ) );
+                @include fix-size(16px);
+              }
+              &:hover {
+                background-color: var( --post_color_primary );
+
+                > svg {
+                  @include svg-color( var( --post_color_secondary ) );
+                }              }
+            }
+            &:last-of-type {
+              @include limit-line-text(1);
+
+              &:hover {
+                color: var( --post_color_primary );
+              }
+            }
+          }
+        }
+        > .post-media-instagram {
+          @include flex-row();
+          flex-wrap: wrap;
+          align-items: center;
+
+          > span {
+            font-weight: 600;
+          }
+          > a {
+            &:first-of-type {
+              @include flex-center();
+              @include fix-size(24px);
+              @include border-radius(5px);
+              background-color: var( --post_color_secondary );
+              padding: 5px;
+              margin-right: 5px;
+
+              > svg {
+                @include svg-color( var( --post_color_primary ) );
+                @include fix-size(16px);
+              }
+              &:hover {
+                background-color: var( --post_color_primary );
+
+                > svg {
+                  @include svg-color( var( --post_color_secondary ) );
+                }              }
+            }
+            &:last-of-type {
+              @include limit-line-text(1);
+
+              &:hover {
+                color: var( --post_color_primary );
+              }
+            }
+          }
+        }
+        > .post-media-custom {
+          > span {
+            font-weight: 600;
+          }
+          > a:hover {
+            color: var( --post_color_primary );
+          }
+        }
+        > .post-employ {
+          > span {
+            font-weight: 600;
+          }
+        }
+        > .post-data {
+          > span {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    > .post-content {
+      @include border-radius( var( --dm-border-radius-primary ));
+      background-color: rgba( var( --dm-color-gray-rgb ) , 0.1);
+      padding: var( --dm-spacing-secondary );
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-large) {
+    > container {
+      @include flex-column();
+      flex-direction: column-reverse;
+    }
+  }
+  @media only screen and (max-width: $screen-phone-large) {
+    > container {
+      @include flex-column();
+      flex-direction: column-reverse;
+      gap: var( --dm-spacing-secondary );
+
+      > .post-data {
+        padding: var( --dm-spacing-primary );
+
+      }
+      > .post-content {
+        padding: var( --dm-spacing-primary );
+      }
+    }
+  }
+}
+
+body, body.theme-light {
+  .dm-post {
+    > container {
+      > .post-data {
+        > .post-text {
+          > .post-title {
+            --dm-text-heading4-color: var( --dm-color-gray );
+          }
+          > .post-description {
+            --dm-text-medium-color: var( --dm-color-gray );
+          }
+          > * {
+            --dm-text-default-color: var( --dm-color-gray );
+          }
+        }
+      }
+    }
+  }
+}
+body.theme-dark {
+  .dm-post {
+    > container {
+      > .post-data {
+        > .post-text {
+          > .post-title {
+            --dm-text-heading4-color: var( --dm-color-white );
+          }
+          > .post-description {
+            --dm-text-medium-color: var( --dm-color-white );
+          }
+          > * {
+            --dm-text-default-color: var( --dm-color-white );
+          }
+          > .post-media-facebook,
+          .post-media-instagram,
+          .post-media-custom {
+            >  a {
+              &:first-of-type {
+                background-color: var( --post_color_primary );
+
+                > svg {
+                  @include svg-color( var( --post_color_secondary ) );
+                }
+                &:hover {
+                  background-color: var( --post_color_secondary  );
+
+                  > svg {
+                    @include svg-color( var( --post_color_primary ) );
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
