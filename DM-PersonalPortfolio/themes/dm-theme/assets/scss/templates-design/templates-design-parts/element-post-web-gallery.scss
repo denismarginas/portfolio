@@ -1,0 +1,131 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-gallery-web-content {
+  @include border-radius( var( --dm-border-radius-primary ));
+  background-color: rgba( var( --dm-color-gray-rgb ) , 0.1);
+  padding: var( --dm-spacing-secondary );
+
+  > .dm-web-home-banner {
+    @include flex-row();
+    @include border-radius( var( --dm-border-radius-primary ));
+    background-color: var( --post_color_primary );
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    margin-bottom: var( --dm-spacing-secondary );
+
+    > img {
+      cursor: pointer;
+      width: 100%;
+      height: auto;
+    }
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: var( --post_color_primary );
+      position: absolute;
+      transform: rotate(138deg);
+      display: block;
+      opacity: 0.8;
+      -webkit-filter: blur(200px);
+      filter: blur(200px);
+      transition: right 0.6s, bottom 0.6s;
+      right: -100%;
+      bottom: -100%;
+    }
+    &:hover {
+      &:after {
+        right: -40%;
+        bottom: -60%;
+        transition: right 0.3s, bottom 0.3s;
+      }
+    }
+  }
+  > .dm-web-gallery {
+    @include reset-list();
+    @include flex-center();
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var( --dm-spacing-secondary );
+
+    > .dm-web-gallery-item {
+      @include fix-height(300px);
+      @include flex-center();
+      @include border-radius( var( --dm-border-radius-primary ));
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+      background-color: var( --post_color_primary );
+
+      > img {
+        cursor: pointer;
+        z-index: 1;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        transition: width 0.4s, max-width 0.4s;
+      }
+      > div {
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        filter: blur(10px);
+        height: 120%;
+        width: 120%;
+        opacity: 0.7;
+        mix-blend-mode: multiply;
+        transition: width 0.3s, height 0.3s;
+      }
+      &:hover {
+        > img {
+          width: 105%;
+          max-width: 105%;
+          transition: width 0.4s, max-width 0.4s;
+        }
+        > div {
+          height: 140%;
+          width: 140%;
+          transition: width 0.3s, height 0.3s;
+        }
+      }
+      &.gallery-item-phone {
+        > img {
+          width: auto;
+          max-height: 90%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-large) {
+    > .dm-web-gallery {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-medium) {
+    > .dm-web-gallery {
+      grid-template-columns: repeat(2, 1fr);
+      > .dm-web-gallery-item {
+        @include fix-height(200px);
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-medium) {
+    > .dm-web-gallery {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+
+
+body, body.theme-light {
+
+}
+body.theme-dark {
+
+}
+
+

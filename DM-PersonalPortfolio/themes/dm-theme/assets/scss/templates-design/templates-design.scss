@@ -8,7 +8,8 @@
 @import "templates-design-parts/animation-grid-background.scss";
 @import "templates-design-parts/animation-blurred-lines.scss";
 
-@import "templates-design-parts/element-contact-form";
+@import "templates-design-parts/element-popup.scss";
+@import "templates-design-parts/element-contact-form.scss";
 @import "templates-design-parts/element-category-card.scss";
 @import "templates-design-parts/element-category-experience-card.scss";
 @import "templates-design-parts/element-resume-card.scss";
@@ -16,9 +17,13 @@
 @import "templates-design-parts/element-theme-switcher.scss";
 @import "templates-design-parts/element-video-container.scss";
 @import "templates-design-parts/element-knowledge-list-icons.scss";
+@import "templates-design-parts/element-post-wallpaper.scss";
+@import "templates-design-parts/element-post-web-gallery.scss";
+@import "templates-design-parts/element-post-media-gallery.scss";
+@import "templates-design-parts/element-post-media-videos.scss";
 
-@import "templates-design-parts/section-debug.scss";
 @import "templates-design-parts/section-post.scss";
+@import "templates-design-parts/section-debug.scss";
 @import "templates-design-parts/section-contact-data.scss";
 @import "templates-design-parts/section-contact-details.scss";
 @import "templates-design-parts/section-resume-data.scss";

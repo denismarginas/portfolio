@@ -44,7 +44,10 @@ if (!isset($post_data)) {
 <?php endif; ?>
 
 
-<section class="dm-post">
+<section class="dm-post grid-background-animation">
+
+    <?php echo renderWallpaperPost($post_data); ?>
+
     <container>
         <div class="post-content">
             <?php if (isset($post_content)) :
@@ -72,6 +75,17 @@ if (!isset($post_data)) {
                 <?php if (isset($post_data["description"]) && !empty($post_data["description"])) : ?>
                     <p class="post-description"><?php echo $post_data["description"]; ?></p>
                 <?php endif; ?>
+
+                <?php if (isset($post_data["category"]) && !empty($post_data["category"])) : ?>
+                    <div class="post-categories">
+                        <?php foreach ($post_data["category"] as $post_category) : ?>
+                            <a class="post-category" href="#<?php echo removeSpaceAndLowercase($post_category)?>">
+                                <?php echo $post_category; ?>
+                            </a>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+
 
                 <?php if (isset($post_data["website_url"]) && !empty($post_data["website_url"])) : ?>
                     <p class="post-website">
@@ -139,6 +153,16 @@ if (!isset($post_data)) {
                         <span>Date:</span>
                         <?php echo $post_data["date"]; ?>
                     </p>
+                <?php endif; ?>
+
+                <?php if (isset($post_data["tags"]) && !empty($post_data["tags"])) : ?>
+                    <div class="post-tags">
+                        <?php foreach ($post_data["tags"] as $post_tag) : ?>
+                            <a class="post-tag" href="#<?php echo removeSpaceAndLowercase($post_tag)?>">
+                                <?php echo $post_tag; ?>
+                            </a>
+                        <?php endforeach; ?>
+                    </div>
                 <?php endif; ?>
 
             </div>

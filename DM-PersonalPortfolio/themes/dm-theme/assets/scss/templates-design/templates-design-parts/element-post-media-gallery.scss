@@ -1,0 +1,66 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-gallery-media-content {
+  @include border-radius( var( --dm-border-radius-primary ));
+  @include flex-column();
+  background-color: rgba( var( --dm-color-gray-rgb ) , 0.1);
+  padding: var( --dm-spacing-secondary );
+  gap: var( --dm-spacing-secondary );
+
+  > .dm-media-gallery {
+    @include reset-list();
+    @include flex-center();
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var( --dm-spacing-secondary );
+
+    > .dm-media-gallery-item {
+      @include flex-center();
+      @include border-radius( var( --dm-border-radius-primary ));
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+      background-color: var( --post_color_primary );
+
+      > img {
+        cursor: pointer;
+        z-index: 1;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        transition: width 0.4s, max-width 0.4s;
+      }
+
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-large) {
+    > .dm-media-gallery {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media only screen and (max-width: $screen-phone-medium) {
+    > .dm-media-gallery {
+      grid-template-columns: repeat(2, 1fr);
+      > .dm-web-gallery-item {
+        @include fix-height(200px);
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-small) {
+    > .dm-media-gallery {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+
+
+body, body.theme-light {
+
+}
+body.theme-dark {
+
+}
+
+

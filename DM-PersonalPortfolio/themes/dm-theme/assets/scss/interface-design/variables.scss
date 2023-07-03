@@ -29,7 +29,13 @@
     --dm-color-black-rgb                   : #{hexToRGB( #000000 )};
     --dm-color-white-rgb                   : #{hexToRGB( #FFFFFF )};
     --dm-color-gray-rgb                    : #{hexToRGB( #4A4B44 )};
-    --dm-color-gray-darken                 : #{hexToRGB( #141414 )};;
+    --dm-color-gray-darken                 : #{hexToRGB( #141414 )};
+
+    /* ---- Post Colors ---- */
+    --post_color_primary                   : #5d6977;
+    --post_color_secondary                 : #1b2431;
+    --post_color_background                : #FFFFFF;
+    --post_color_text_on_background        : #FFFFFF;
 
     /* ---- Backgrounds ---- */
     --dm-background-color-primary          : var( --dm-color-primary );
@@ -70,6 +76,7 @@
     --dm-font-family           : inherit;
     --dm-font-family-primary   : "Roboto", sans-serif;
     --dm-font-family-secondary : "Gerth", sans-serif;
+
 
     /* ---- Text Elements ---- */
     --dm-text-extra-small-font-family    : var( --dm-font-family-primary );

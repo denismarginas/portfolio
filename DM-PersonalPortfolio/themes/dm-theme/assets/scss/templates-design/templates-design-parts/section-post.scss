@@ -10,16 +10,14 @@
       gap: var( --dm-spacing-tertiary );
 
     > .post-data {
-      @include border-radius( var( --dm-border-radius-primary ));
-      background-color: rgba( var( --dm-color-gray-rgb ) , 0.1);
-      padding: var( --dm-spacing-secondary );
+      @include flex-column();
+      gap: var( --dm-spacing-secondary );
 
       > .post-logo {
         @include flex-center();
         @include border-radius( var( --dm-border-radius-primary ));
-        padding: var( --dm-spacing-secondary ) var( --dm-spacing-primary );
         background-color: var( --post_color_background );
-        margin-bottom: var( --dm-spacing-secondary );
+        padding: var( --dm-spacing-secondary );
 
         > img {
           height: auto;
@@ -28,8 +26,11 @@
         }
       }
       > .post-text {
+        @include border-radius( var( --dm-border-radius-primary ));
         @include flex-column();
         gap: calc( var( --dm-spacing-primary ) / 3 );
+        padding: var( --dm-spacing-secondary );
+        background-color: rgba( var( --dm-color-gray-rgb ) , 0.1);
         word-break: break-word;
 
         > .post-title {
@@ -52,6 +53,22 @@
           margin: calc( var( --dm-spacing-primary ) / 2 ) 0;
           text-align: justify;
         }
+        > .post-categories, >.post-tags {
+          @include flex-row();
+          flex-wrap: wrap;
+          word-break: break-word;
+          gap: calc( var( --dm-spacing-primary ) / 2 );
+
+          > .post-category, >.post-tag {
+            @include border-radius( var( --dm-border-radius-primary ));
+            @include dm-font-extra-small();
+            text-transform: uppercase;
+            --dm-text-extra-small-color: var(--post_color_secondary);
+            --dm-text-extra-small-font-weight: 600;
+            padding: 6px 8px;
+            background-color: var(--post_color_primary);
+          }
+        }
         > .post-website {
             > span {
               font-weight: 600;
@@ -70,44 +87,7 @@
             font-weight: 600;
           }
         }
-        > .post-media-facebook {
-          @include flex-row();
-          flex-wrap: wrap;
-          align-items: center;
-
-          > span {
-            font-weight: 600;
-          }
-          > a {
-            &:first-of-type {
-              @include flex-center();
-              @include fix-size(24px);
-              @include border-radius(5px);
-              background-color: var( --post_color_secondary );
-              padding: 5px;
-              margin-right: 5px;
-
-              > svg {
-                @include svg-color( var( --post_color_primary ) );
-                @include fix-size(16px);
-              }
-              &:hover {
-                background-color: var( --post_color_primary );
-
-                > svg {
-                  @include svg-color( var( --post_color_secondary ) );
-                }              }
-            }
-            &:last-of-type {
-              @include limit-line-text(1);
-
-              &:hover {
-                color: var( --post_color_primary );
-              }
-            }
-          }
-        }
-        > .post-media-instagram {
+        > .post-media-facebook, > .post-media-instagram {
           @include flex-row();
           flex-wrap: wrap;
           align-items: center;
@@ -165,15 +145,28 @@
       }
     }
     > .post-content {
-      @include border-radius( var( --dm-border-radius-primary ));
-      background-color: rgba( var( --dm-color-gray-rgb ) , 0.1);
-      padding: var( --dm-spacing-secondary );
+      @include flex-column();
+      gap: var( --dm-spacing-tertiary );
+
+      > .dm-post-title-category {
+        @include border-radius( var( --dm-border-radius-primary ));
+        @include flex-center();
+        @include dm-font-heading4();
+        padding: var( --dm-spacing-secondary );
+        --dm-text-heading4-color: var(--post_color_secondary);
+        background-color: var(--post_color_primary);
+        text-transform: uppercase;
+      }
     }
   }
   @media only screen and (max-width: $screen-tablet-large) {
     > container {
       @include flex-column();
       flex-direction: column-reverse;
+
+      > .post-content, > .post-data {
+        gap: var( --dm-spacing-secondary );
+      }
     }
   }
   @media only screen and (max-width: $screen-phone-large) {
@@ -182,12 +175,15 @@
       flex-direction: column-reverse;
       gap: var( --dm-spacing-secondary );
 
-      > .post-data {
-        padding: var( --dm-spacing-primary );
+      > .post-content, > .post-data{
+        gap: var( --dm-spacing-primary );
 
-      }
-      > .post-content {
-        padding: var( --dm-spacing-primary );
+        > .dm-post-title-category {
+          @include dm-font-big();
+          --dm-text-big-color: var(--post_color_secondary);
+          --dm-text-big-font-weight: 600;
+          background-color: var(--post_color_primary);
+        }
       }
     }
   }

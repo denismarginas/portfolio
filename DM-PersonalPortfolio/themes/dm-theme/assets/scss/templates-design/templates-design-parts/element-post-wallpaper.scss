@@ -1,0 +1,53 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-post-wallpaper {
+  @include flex-center();
+  @include flex-column();
+  background-color: var( --post_color_background );
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-height: 400px;
+  margin-left: calc(-1 * var( --dm-spacing-secondary ));
+  margin-right: calc(-1 * var( --dm-spacing-secondary ));
+  width: calc(100% + var( --dm-spacing-secondary ) * 2 );
+  margin-bottom: calc( -1 * var(--dm-spacing-tertiary) );
+
+  > img {
+    @include cover-image();
+    opacity: 0.3;
+  }
+  > .dm-post-heading {
+    display: none;
+  }
+  > .dm-post-wallpaper-logo {
+    position: absolute;
+    padding: var( --dm-spacing-secondary );
+
+    > img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-large) {
+    display: none;
+  }
+  @media only screen and (max-width: $screen-phone-medium) {
+    margin-left: calc(-1 * var( --dm-spacing-primary ));
+    margin-right: calc(-1 * var( --dm-spacing-primary ));
+    width: calc(100% + var( --dm-spacing-primary-secondary ) * 2 );
+  }
+}
+
+
+
+body, body.theme-light {
+
+}
+body.theme-dark {
+
+}
+
+

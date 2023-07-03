@@ -1,0 +1,57 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-video-media-content {
+  @include border-radius( var( --dm-border-radius-primary ));
+  @include flex-column();
+  background-color: rgba( var( --dm-color-gray-rgb ) , 0.1);
+  padding: var( --dm-spacing-secondary );
+  gap: var( --dm-spacing-secondary );
+
+  > .dm-media-video {
+    @include reset-list();
+    @include flex-center();
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var( --dm-spacing-secondary );
+
+    > .dm-media-video-item {
+      @include flex-center();
+
+      > .video-container {
+        width: 100%;
+
+        > .video-controls-container {
+          > .timeline-container {
+            > .timeline {
+              background-color: var( --dm-color-gray );
+
+              &:after {
+                background-color: var( --post_color_primary );
+              }
+              > .thumb-indicator {
+                background-color: var( --post_color_primary );
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-medium) {
+    > .dm-media-video {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+
+
+body, body.theme-light {
+
+}
+body.theme-dark {
+
+}
+
+

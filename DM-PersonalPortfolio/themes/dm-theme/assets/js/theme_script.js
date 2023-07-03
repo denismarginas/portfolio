@@ -331,6 +331,68 @@ document.addEventListener("DOMContentLoaded", function() {
 
     });
     // **************
+    // Pop-Up
+    function createPopup(content) {
+        var popupElement = document.querySelector("#popup");
+        if (!popupElement) {
+            popupElement = document.createElement("div");
+            popupElement.id = "popup";
+            popupElement.classList.add("dm-popup");
+
+            var popupContent = document.createElement("div");
+            popupContent.classList.add("popup-content");
+
+            var closeButton = document.createElement("button");
+            closeButton.classList.add("popup-close-button");
+            closeButton.textContent = "Close";
+            closeButton.addEventListener("click", function() {
+                document.body.removeChild(popupElement);
+            });
+
+            popupContent.appendChild(content);
+            popupContent.appendChild(closeButton);
+            popupElement.appendChild(popupContent);
+            document.body.appendChild(popupElement);
+
+            content.addEventListener("click", function() {
+                toggleZoom(this);
+            });
+        }
+    }
+    var zoomLevel = 0;
+
+    function toggleZoom(imageElement) {
+        zoomLevel++;
+        if (zoomLevel === 1) {
+            imageElement.style.transform = "scale(1.5)";
+        } else if (zoomLevel === 2) {
+            imageElement.style.transform = "scale(2)";
+        } else if (zoomLevel === 3) {
+            imageElement.style.transform = "scale(3)";
+        } else {
+            imageElement.style.transform = "scale(1)";
+            zoomLevel = 0;
+        }
+    }
+
+
+
+    document.addEventListener("click", function(event) {
+        var target = event.target;
+        if (target.getAttribute("data-popup") === "true") {
+            if (target.tagName.toLowerCase() === "img") {
+                createPopup(target.cloneNode());
+            } else {
+                var imgElement = target.querySelector("img");
+                if (imgElement) {
+                    createPopup(imgElement.cloneNode());
+                } else {
+                    createPopup(target.cloneNode(true));
+                }
+            }
+        }
+    });
+
 });
 
 //Contact Form
