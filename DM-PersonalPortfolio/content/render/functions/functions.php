@@ -21,7 +21,7 @@ function removeHttps($url) {
 }
 
 function getImagesInFolder($path) {
-    $imageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp']; // Add more extensions if needed
+    $imageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
     $images = [];
 
     $files = scandir($path);
@@ -37,7 +37,7 @@ function getImagesInFolder($path) {
 }
 
 function getVideosInFolder($path) {
-    $videoExtensions = ['webp', 'mp4', 'avi']; // Add more extensions if needed
+    $videoExtensions = ['webm', 'mp4', 'avi'];
     $videos = [];
 
     $files = scandir($path);
@@ -50,6 +50,21 @@ function getVideosInFolder($path) {
     }
 
     return $videos;
+}
+
+function getFilesInFolder($path) {
+    $files = [];
+    $items = scandir($path);
+
+    foreach ($items as $item) {
+        $item_path = $path . $item;
+
+        if (is_file($item_path)) {
+            $files[] = $item;
+        }
+    }
+
+    return $files;
 }
 
 function renderImage($src, $popup = false) {
@@ -75,7 +90,6 @@ function renderImage($src, $popup = false) {
 
 function renderVideo($src) {
     $html = '<div class="video-container paused" data-volume-level="high">
-                <img class="thumbnail-img">
                 <div class="video-controls-container">
                   <div class="timeline-container">
                     <div class="timeline">
@@ -131,7 +145,7 @@ function renderVideo($src) {
 
 
 function renderGalleryWeb($post_data) {
-    $gallery_web_content = "<div id='web' class='dm-gallery-web-content'>";
+    $gallery_web_content = "<div id='web' class='dm-gallery-web-content' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.5s'>";
 
     if(isset($post_data)) {
         $gallery_path_web = "web";
@@ -143,7 +157,7 @@ function renderGalleryWeb($post_data) {
         $gallery_web_home = $gallery_web_path.$gallery_path_web_banner."/";
         $home_image = getImagesInFolder($gallery_web_home );
         if( !empty($home_image) ) {
-            $gallery_web_content .= "<div class='dm-web-home-banner'>";
+            $gallery_web_content .= "<div class='dm-web-home-banner' data-motion='transition-fade-0' data-duration='0.8s'>";
             foreach ($home_image as $image_home) {
                 $image_path = $gallery_web_home.$image_home;
                 $gallery_web_content .=  renderImage($image_path, true);
@@ -157,14 +171,14 @@ function renderGalleryWeb($post_data) {
             $gallery_web_content .= '<ul class="dm-web-gallery">';
             foreach ($gallery_web as $image_web) {
                 $image_path = $gallery_web_desktop.$image_web;
-                $gallery_web_content .=  "<li class='dm-web-gallery-item gallery-item-web'>".renderImage($image_path, true)."<div style='background-image: url(\"".$image_path."\")'></div></li>";
+                $gallery_web_content .=  "<li class='dm-web-gallery-item gallery-item-web' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderImage($image_path, true)."<div style='background-image: url(\"".$image_path."\")'></div></li>";
             }
             $gallery_web_phone = $gallery_web_path.$gallery_path_web_phone."/";
             $gallery_phone = getImagesInFolder($gallery_web_phone );
             if( !empty($gallery_phone) ) {
                 foreach ($gallery_phone as $image_web) {
                     $image_path = $gallery_web_phone.$image_web;
-                    $gallery_web_content .=  "<li class='dm-web-gallery-item gallery-item-phone'>".renderImage($image_path, true)."<div style='background-image: url(\"".$image_path."\")'></div></li>";
+                    $gallery_web_content .=  "<li class='dm-web-gallery-item gallery-item-phone' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderImage($image_path, true)."<div style='background-image: url(\"".$image_path."\")'></div></li>";
                 }
             }
             $gallery_web_content .= '</ul>';
@@ -174,8 +188,34 @@ function renderGalleryWeb($post_data) {
 
     return $gallery_web_content;
 }
+
+function renderGalleryWebMedia($post_data) {
+    $gallery_media_web_content = "<div id='media-web' class='dm-gallery-web-content' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.5s'>";
+
+    if(isset($post_data)) {
+        $gallery_path_web_dir = "web";
+        $gallery_path_dir = "media-website";
+        $gallery_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$gallery_path_web_dir."/".$gallery_path_dir."/";
+        $gallery = getImagesInFolder($gallery_path );
+        if( !empty($gallery) ) {
+            $gallery_media_web_content .= "<ul class='dm-web-media-gallery' data-motion='transition-fade-0' data-duration='0.8s'>";
+
+            foreach ($gallery as $item) {
+                $image_path = $gallery_path.$item;
+                $gallery_media_web_content .=  "<li class='dm-web-media-gallery-item' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderImage($image_path, true)."<div style='background-image: url(\"".$image_path."\")'></div></li>";
+            }
+
+            $gallery_media_web_content .= "</ul>";
+        }
+    }
+
+    $gallery_media_web_content .= '</div>';
+
+    return $gallery_media_web_content;
+}
+
 function renderGalleryMedia($post_data) {
-    $gallery_media_content = "<div id='photo' class='dm-gallery-media-content'>";
+    $gallery_media_content = "<div id='photo' class='dm-gallery-media-content' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.5s'>";
 
     if(isset($post_data)) {
         $gallery_path_media = "media";
@@ -187,12 +227,12 @@ function renderGalleryMedia($post_data) {
                 $directoryName = basename($directory);
                 $gallery_items = getImagesInFolder($gallery_media_path.$directoryName );
 
-                if( !empty($gallery_items) ) {
+                if( !empty($gallery_items ) ) {
                     $gallery_media_content .= "<ul class='dm-media-gallery'>";
 
                     foreach ($gallery_items as $gallery_item) {
                         $image_path = $gallery_media_path.$directoryName."/".$gallery_item;
-                        $gallery_media_content .=  "<li class='dm-media-gallery-item'>".renderImage($image_path, true)."</li>";
+                        $gallery_media_content .=  "<li class='dm-media-gallery-item' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderImage($image_path, true)."</li>";
                     }
                     $gallery_media_content .= "</ul>";
                 }
@@ -206,7 +246,7 @@ function renderGalleryMedia($post_data) {
 }
 
 function renderVideoMedia($post_data) {
-    $video_media_content = "<div id='video' class='dm-video-media-content'>";
+    $video_media_content = "<div id='video' class='dm-video-media-content' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.5s'>";
 
     if(isset($post_data)) {
 
@@ -218,7 +258,7 @@ function renderVideoMedia($post_data) {
 
             foreach ($video_files as $video_file) {
                 $video_path = $video_media_path.$video_file;
-                $video_media_content .=  "<li class='dm-media-video-item'>".renderVideo($video_path)."</li>";
+                $video_media_content .=  "<li class='dm-media-video-item' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderVideo($video_path)."</li>";
 
             }
             $video_media_content .= "</ul>";
@@ -263,6 +303,31 @@ function removeSpaceAndLowercase($string) {
     $string = strtolower($string);
 
     return $string;
+}
+function extractDataPosts($post_path) {
+    $php_files = getFilesInFolder($post_path);
+    $posts = [];
+
+    if (!empty($php_files)) {
+        foreach ($php_files as $file) {
+            $file_path = $post_path . $file;
+            $file_content = file_get_contents($file_path);
+            preg_match('/\$post_data\s*=\s*\[(.*?)\];/s', $file_content, $matches);
+            if (!empty($matches)) {
+                $post_data = eval("return [{$matches[1]}];");
+                if($post_data["visibility"] = "enable") {
+                    $posts[] =  [ $file, $post_data ];
+                }
+            } else {
+                //$error =  "Unable to extract \$post_data from the file: $file<br><br>";
+                //$posts[] =  [ $file, $error ];
+            }
+        }
+    }
+    return $posts;
+}
+function getFirstCharacters($string, $n) {
+    return substr($string, 0, $n);
 }
 
 

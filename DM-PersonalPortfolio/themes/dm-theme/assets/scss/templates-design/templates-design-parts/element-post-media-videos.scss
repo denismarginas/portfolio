@@ -7,6 +7,8 @@
   background-color: rgba( var( --dm-color-gray-rgb ) , 0.1);
   padding: var( --dm-spacing-secondary );
   gap: var( --dm-spacing-secondary );
+  position: relative;
+  overflow: hidden;
 
   > .dm-media-video {
     @include reset-list();
@@ -45,13 +47,5 @@
   }
 }
 
-
-
-body, body.theme-light {
-
-}
-body.theme-dark {
-
-}
 
 

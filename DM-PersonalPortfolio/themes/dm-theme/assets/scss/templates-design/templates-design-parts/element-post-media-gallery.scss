@@ -7,6 +7,8 @@
   background-color: rgba( var( --dm-color-gray-rgb ) , 0.1);
   padding: var( --dm-spacing-secondary );
   gap: var( --dm-spacing-secondary );
+  position: relative;
+  overflow: hidden;
 
   > .dm-media-gallery {
     @include reset-list();
@@ -21,7 +23,7 @@
       flex-direction: column;
       overflow: hidden;
       position: relative;
-      background-color: var( --post_color_primary );
+      background-color: rgba( var( --dm-color-gray-rgb ) , 0.2);
 
       > img {
         cursor: pointer;
@@ -39,12 +41,15 @@
       grid-template-columns: repeat(3, 1fr);
     }
   }
+  @media only screen and (max-width: $screen-phone-large) {
+    > .dm-media-gallery {
+      gap: var( --dm-spacing-primary );
+    }
+  }
   @media only screen and (max-width: $screen-phone-medium) {
     > .dm-media-gallery {
       grid-template-columns: repeat(2, 1fr);
-      > .dm-web-gallery-item {
-        @include fix-height(200px);
-      }
+
     }
   }
   @media only screen and (max-width: $screen-phone-small) {
@@ -55,12 +60,5 @@
 }
 
 
-
-body, body.theme-light {
-
-}
-body.theme-dark {
-
-}
 
 

@@ -46,7 +46,9 @@ if (!isset($post_data)) {
 
 <section class="dm-post grid-background-animation">
 
-    <?php echo renderWallpaperPost($post_data); ?>
+    <?php
+    //echo renderWallpaperPost($post_data);
+    ?>
 
     <container>
         <div class="post-content">
@@ -55,7 +57,7 @@ if (!isset($post_data)) {
              endif; ?>
         </div>
         <aside class="post-data">
-            <div class="post-logo">
+            <div class="post-logo" data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.4s">
                 <?php if (isset($post_data["logo_type"]) && !empty($post_data["logo_type"])) : ?>
                 
                     <?php if ( $post_data["logo_type"] == "svg" ) : ?>
@@ -67,7 +69,7 @@ if (!isset($post_data)) {
                 <?php endif; ?>
                 
             </div>
-            <div class="post-text">
+            <div class="post-text" data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.6s">
                 <?php if (isset($post_data["title"]) && !empty($post_data["title"])) : ?>
                     <h2 class="post-title"><?php echo $post_data["title"]; ?></h2>
                 <?php endif; ?>

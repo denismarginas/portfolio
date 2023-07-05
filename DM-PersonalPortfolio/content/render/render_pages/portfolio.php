@@ -7,7 +7,7 @@ $renderer_structure->header();
 
 
 $renderer_sections->renderSection('categories');
-
+$renderer_sections->renderSection('post-items');
 
 
 // Function Footer

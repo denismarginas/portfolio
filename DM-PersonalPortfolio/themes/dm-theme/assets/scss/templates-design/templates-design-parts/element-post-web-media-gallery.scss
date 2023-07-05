@@ -1,0 +1,23 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-web-media-gallery {
+  @include reset-list();
+  @include flex-center();
+  gap: var( --dm-spacing-secondary );
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+
+  > .dm-web-media-gallery-item {
+
+    > img {
+      cursor: pointer;
+      width: 100%;
+      height: auto;
+      max-height: 200px;
+      max-width: 300px;
+    }
+  }
+
+}
