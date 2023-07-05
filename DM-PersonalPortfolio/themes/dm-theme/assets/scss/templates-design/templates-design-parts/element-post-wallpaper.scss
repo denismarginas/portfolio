@@ -13,6 +13,8 @@
   margin-right: calc(-1 * var( --dm-spacing-secondary ));
   width: calc(100% + var( --dm-spacing-secondary ) * 2 );
   margin-bottom: calc( -1 * var(--dm-spacing-tertiary) );
+  position: relative;
+  overflow: hidden;
 
   > img {
     @include cover-image();
@@ -39,15 +41,6 @@
     margin-right: calc(-1 * var( --dm-spacing-primary ));
     width: calc(100% + var( --dm-spacing-primary-secondary ) * 2 );
   }
-}
-
-
-
-body, body.theme-light {
-
-}
-body.theme-dark {
-
 }
 
 

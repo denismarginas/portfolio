@@ -5,6 +5,8 @@
   @include border-radius( var( --dm-border-radius-primary ));
   background-color: rgba( var( --dm-color-gray-rgb ) , 0.1);
   padding: var( --dm-spacing-secondary );
+  position: relative;
+  overflow: hidden;
 
   > .dm-web-home-banner {
     @include flex-row();
@@ -19,28 +21,6 @@
       cursor: pointer;
       width: 100%;
       height: auto;
-    }
-    &:after {
-      content: "";
-      width: 100%;
-      height: 100%;
-      background-color: var( --post_color_primary );
-      position: absolute;
-      transform: rotate(138deg);
-      display: block;
-      opacity: 0.8;
-      -webkit-filter: blur(200px);
-      filter: blur(200px);
-      transition: right 0.6s, bottom 0.6s;
-      right: -100%;
-      bottom: -100%;
-    }
-    &:hover {
-      &:after {
-        right: -40%;
-        bottom: -60%;
-        transition: right 0.3s, bottom 0.3s;
-      }
     }
   }
   > .dm-web-gallery {
@@ -107,9 +87,15 @@
   @media only screen and (max-width: $screen-tablet-medium) {
     > .dm-web-gallery {
       grid-template-columns: repeat(2, 1fr);
+
       > .dm-web-gallery-item {
         @include fix-height(200px);
       }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-large) {
+    > .dm-web-gallery {
+      gap: var( --dm-spacing-primary );
     }
   }
   @media only screen and (max-width: $screen-phone-medium) {
@@ -119,13 +105,5 @@
   }
 }
 
-
-
-body, body.theme-light {
-
-}
-body.theme-dark {
-
-}
 
 
