@@ -134,6 +134,18 @@ if (!isset($post_data)) {
                     </p>
                 <?php endif; ?>
 
+              <?php if (isset($post_data["media_youtube_url"]) && !empty($post_data["media_youtube_url"])) : ?>
+                <p class="post-media-facebook">
+                  <a href="<?php echo addHttps($post_data["media_youtube_url"]); ?>" target="_blank">
+                    <?php SVGRenderer::renderSVG('socials-youtube'); ?>
+                  </a>
+                  <span>YouTube: </span>
+                  <a href="<?php echo addHttps($post_data["media_youtube_url"]); ?>" target="_blank">
+                    <?php echo removeHttps($post_data["media_youtube_url"]); ?>
+                  </a>
+                </p>
+              <?php endif; ?>
+
                 <?php if (isset($post_data["media_custom_url"]) && !empty($post_data["media_custom_url"])) : ?>
                     <p class="post-media-custom">
                         <span><?php dm_echo($post_data["media_custom_text"]); ?></span>

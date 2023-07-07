@@ -47,10 +47,15 @@
             @include dm-font-default();
             --dm-text-default-font-weight: 600;
             text-transform: uppercase;
+
+            &:hover {
+              --dm-text-default-color: var( --dm-color-primary );
+            }
           }
           > .dm-post-item-description {
             @include limit-line-text(2);
             @include dm-font-small();
+            word-break: break-all;
           }
           > .dm-post-item-categories {
             @include reset-list();

@@ -21,14 +21,15 @@ $post_data = [
     "website_platform" => "Wordpress",
     "website_status" => "Done",
     "media_facebook_url" => "www.facebook.com/piasoftproduct",
+    "media_youtube_url" => "www.youtube.com/channel/UCtTxge0ZhOW3jVxsXzBaJJg",
     "media_instagram_url" => "www.instagram.com/piasoftproduct/",
     "employ" => "Pia Soft Product",
-    "date" => "10.2019-11.2022",
+    "date" => "10.2019 - 11.2022",
     "tags" => [
                 "web",
                 "media-web",
                 "photo",
-                "video",
+                "video"
     ],
     "colors" => [
         "post_color_primary" => "#ffcc00",

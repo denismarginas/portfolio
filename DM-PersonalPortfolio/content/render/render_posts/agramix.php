@@ -23,12 +23,12 @@ $post_data = [
     "media_facebook_url" => "https://www.facebook.com/agramix.mm",
     "media_instagram_url" => "https://www.instagram.com/agramix.ro/",
     "employ" => "Pia Soft Product",
-    "date" => "07.2020-01.2021",
+    "date" => "07.2020 - 12.2021",
     "tags" => [
                 "web",
                 "media-web",
                 "photo",
-                "video",
+                "video"
     ],
     "colors" => [
                 "post_color_primary" => "#ae0000",

@@ -12,6 +12,7 @@
   > .dm-web-media-gallery-item {
 
     > img {
+      background-color: rgba(var(--dm-color-gray-rgb),0.2);
       cursor: pointer;
       width: 100%;
       height: auto;

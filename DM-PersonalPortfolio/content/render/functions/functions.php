@@ -67,6 +67,22 @@ function getFilesInFolder($path) {
     return $files;
 }
 
+function getDirectoriesInFolder($path) {
+  $directories = [];
+  $items = scandir($path);
+
+  foreach ($items as $item) {
+    $item_path = $path . $item;
+
+    if (is_dir($item_path) && $item !== '.' && $item !== '..') {
+      $directories[] = $item;
+    }
+  }
+
+  return $directories;
+}
+
+
 function renderImage($src, $popup = false) {
     $imageInfo = getimagesize($src);
 
@@ -197,6 +213,8 @@ function renderGalleryWebMedia($post_data) {
         $gallery_path_dir = "media-website";
         $gallery_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$gallery_path_web_dir."/".$gallery_path_dir."/";
         $gallery = getImagesInFolder($gallery_path );
+        $dirs = getDirectoriesInFolder($gallery_path );
+
         if( !empty($gallery) ) {
             $gallery_media_web_content .= "<ul class='dm-web-media-gallery' data-motion='transition-fade-0' data-duration='0.8s'>";
 
@@ -206,6 +224,22 @@ function renderGalleryWebMedia($post_data) {
             }
 
             $gallery_media_web_content .= "</ul>";
+        }
+        if( !empty($dirs) ) {
+          foreach ($dirs as $dir) {
+            $gallery = getImagesInFolder($gallery_path.$dir."/");
+
+            if( !empty($gallery) ) {
+              $gallery_media_web_content .= "<ul class='dm-web-media-gallery' data-motion='transition-fade-0' data-duration='0.8s'>";
+
+              foreach ($gallery as $item) {
+                $image_path = $gallery_path.$dir."/".$item;
+                $gallery_media_web_content .=  "<li class='dm-web-media-gallery-item' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderImage($image_path, true)."<div style='background-image: url(\"".$image_path."\")'></div></li>";
+              }
+
+              $gallery_media_web_content .= "</ul>";
+            }
+          }
         }
     }
 

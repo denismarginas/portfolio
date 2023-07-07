@@ -206,10 +206,11 @@ body, body.theme-light {
     > container {
       > .post-data {
         > .post-logo {
-          border: 1px solid rgba( var( --dm-color-white-rgb ) , 0.2);
+          border: 1px solid rgba( var( --dm-color-gray-rgb ) , 0.2);
         }
         > .post-text {
-          border: 1px solid rgba( var( --dm-color-white-rgb ) , 0.2);
+          border: 1px solid rgba( var( --dm-color-gray-rgb ) , 0.2);
+
           > .post-title {
             --dm-text-heading4-color: var( --dm-color-gray );
           }
@@ -249,15 +250,25 @@ body.theme-dark {
             >  a {
               &:first-of-type {
                 background-color: var( --post_color_primary );
+                transition: all 0.4s;
 
                 > svg {
                   @include svg-color( var( --post_color_secondary ) );
+
+                  > * {
+                    transition: all 0.3s;
+                  }
                 }
                 &:hover {
                   background-color: var( --post_color_secondary  );
+                  transition: all 0.4s;
 
                   > svg {
                     @include svg-color( var( --post_color_primary ) );
+
+                    > * {
+                      transition: all 0.3s;
+                    }
                   }
                 }
               }

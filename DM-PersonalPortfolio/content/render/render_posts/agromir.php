@@ -23,12 +23,12 @@ $post_data = [
     "media_facebook_url" => "https://www.facebook.com/cauciucuriagricole",
     "media_instagram_url" => "https://www.instagram.com/agromir_insta/",
     "employ" => "Pia Soft Product",
-    "date" => "02.2020-11.2022",
+    "date" => "02.2020 - 11.2022",
     "tags" => [
                 "web",
                 "media-web",
                 "photo",
-                "video",
+                "video"
     ],
     "colors" => [
                 "post_color_primary" => "#72b334",

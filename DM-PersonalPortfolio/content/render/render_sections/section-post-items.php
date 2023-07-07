@@ -11,7 +11,8 @@
                 $post_data = $post[1];
                 ?>
                 <li class="dm-post-item">
-                    <a class="dm-post-item-logo" href="<?php echo $post_path; ?>" style="background-color: <?php echo $post_data["colors"]["post_color_background"]; ?>;">
+                    <a class="dm-post-item-logo" href="<?php echo $post_path; ?>" data-animation="shine"
+                       style="background-color: <?php echo $post_data["colors"]["post_color_background"]; ?>;">
                         <?php echo renderLogoPost($post_data); ?>
                     </a>
                     <div class="dm-post-item-details">

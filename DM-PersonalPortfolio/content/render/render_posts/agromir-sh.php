@@ -12,7 +12,7 @@ $post_data = [
     "title" => "Agromir Second-Hand",
     "logo" => "logo/logo.png",
     "logo_type" => "png",
-    "description" => "The online shop for tools, industrial equipment tires, tractor tires is made in Prestashop 1.7. The products cannot be added to the cart, but there is 1 button to contact by phone for the product and 1 button to contact by email. The form was created by editing TPL, HTML, CSS and the Wordpress platform with the Contact Form 7 module and a JS script. The site has implemented modules from Prestashop Addons such as JoliSearch, Amazing gallery and other modules purchased or adapted free of charge for the site. ",
+    "description" => "The online shop for tools, industrial equipment tires, tractor tires is made in Prestashop 1.7. The products cannot be added to the cart, but there is 1 button to contact by phone for the product and 1 button to contact by email. The form was created by editing TPL, HTML, CSS and the Wordpress platform with the Contact Form 7 module and a JS script. The site has implemented modules from Prestashop Addons such as JoliSearch, Amazing gallery and other modules purchased or adapted free of charge for the site.",
     "categories" => [
                     "Web Development Projects"
                   ],
@@ -20,10 +20,10 @@ $post_data = [
     "website_platform" => "Prestashop",
     "website_status" => "Done",
     "employ" => "Pia Soft Product",
-    "date" => "08.2020-11.2022",
+    "date" => "09.2020 - 11.2022",
     "tags" => [
                 "web",
-                "media-web",
+                "media-web"
               ],
     "colors" => [
         "post_color_primary" => "#fdb819",
