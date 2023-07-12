@@ -7,6 +7,11 @@ require_once __DIR__ . '/functions/functions.php';
 require_once __DIR__ . '/config/config-debug.php';
 
 $sectionPath = __DIR__ . '/../../themes/dm-theme/templates-html/';
+$sectionFiles = glob($sectionPath . '*.html');
+foreach ($sectionFiles as $sectionFile) {
+    unlink($sectionFile);
+    $log[] = "Deleted $sectionFile" . PHP_EOL;
+}
 $sectionFiles = glob('render_sections/*.php');
 
 foreach ($sectionFiles as $sectionFile) {
@@ -25,6 +30,11 @@ foreach ($sectionFiles as $sectionFile) {
 }
 
 $pagePath = __DIR__ . '/../pages/';
+$pageFiles = glob($pagePath . '*.html');
+foreach ($pageFiles as $pageFile) {
+    unlink($pageFile);
+    $log[] = "Deleted $pageFile" . PHP_EOL;
+}
 $pageFiles = glob('render_pages/*.php');
 
 foreach ($pageFiles as $pageFile) {

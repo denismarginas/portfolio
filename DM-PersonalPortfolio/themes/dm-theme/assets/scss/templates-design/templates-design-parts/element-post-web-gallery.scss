@@ -3,6 +3,8 @@
 
 .dm-gallery-web-content {
   @include border-radius( var( --dm-border-radius-primary ));
+  @include flex-column();
+  gap: var( --dm-spacing-secondary );
   background-color: rgba( var( --dm-color-gray-rgb ) , 0.1);
   padding: var( --dm-spacing-secondary );
   position: relative;
@@ -15,7 +17,6 @@
     position: relative;
     z-index: 0;
     overflow: hidden;
-    margin-bottom: var( --dm-spacing-secondary );
 
     > img {
       cursor: pointer;
@@ -99,6 +100,8 @@
     }
   }
   @media only screen and (max-width: $screen-phone-medium) {
+    gap: var( --dm-spacing-primary );
+
     > .dm-web-gallery {
       grid-template-columns: repeat(1, 1fr);
     }

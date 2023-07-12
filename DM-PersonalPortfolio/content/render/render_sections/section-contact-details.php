@@ -51,13 +51,13 @@
                     </a>
                 </div>
                 <div class="dm-socials-text">
-                    <a href="https://sites.google.com/view/denis-marginas/portfolio"><span>●</span><b>Google Site:</b> sites.google.com/view/denis-marginas</a>
-                    <a href="https://forms.gle/vTHeLVkc1TwXCxBJA"><span>●</span><b>Google Form:</b> forms.gle/vTHeLVkc1TwXCxBJA</a>
-                    <a href="https://www.facebook.com/denismarginas09"><span>●</span><b>Facebook Page:</b> facebook.com/denismarginas09</a>
-                    <a href="https://www.linkedin.com/in/denismarginas09/"><span>●</span><b>Linkedin:</b> linkedin.com/in/denismarginas09</a>
-                    <a href="https://github.com/denismarginas"><span>●</span><b>Github:</b> github.com/denismarginas</a>
-                    <a href="https://drive.google.com/file/d/1-RYU6uYovCR_LT48nD7CZ1sa6xQ8QJh_/view"><span>●</span><b>CV English:</b> drive.google.com/file/d/1-RYU6uYovCR_LT48nD7CZ1sa6xQ8QJh_/view</a>
-                    <a href="https://drive.google.com/file/d/1_gPqX2MgLJD7bYCgZ977GHX25pVC_ihz/view"><span>●</span><b>CV Romanian:</b> drive.google.com/file/d/1_gPqX2MgLJD7bYCgZ977GHX25pVC_ihz/view</a>
+                    <a target="_blank" href="https://sites.google.com/view/denis-marginas/portfolio"><span>●</span><b>Google Site:</b> sites.google.com/view/denis-marginas</a>
+                    <a target="_blank" href="https://forms.gle/vTHeLVkc1TwXCxBJA"><span>●</span><b>Google Form:</b> forms.gle/vTHeLVkc1TwXCxBJA</a>
+                    <a target="_blank" href="https://www.facebook.com/denismarginas09"><span>●</span><b>Facebook Page:</b> facebook.com/denismarginas09</a>
+                    <a target="_blank" href="https://www.linkedin.com/in/denismarginas09/"><span>●</span><b>Linkedin:</b> linkedin.com/in/denismarginas09</a>
+                    <a target="_blank" href="https://github.com/denismarginas"><span>●</span><b>Github:</b> github.com/denismarginas</a>
+                    <a target="_blank" href="https://drive.google.com/file/d/1-RYU6uYovCR_LT48nD7CZ1sa6xQ8QJh_/view"><span>●</span><b>CV English:</b> drive.google.com/file/d/1-RYU6uYovCR_LT48nD7CZ1sa6xQ8QJh_/view</a>
+                    <a target="_blank" href="https://drive.google.com/file/d/1_gPqX2MgLJD7bYCgZ977GHX25pVC_ihz/view"><span>●</span><b>CV Romanian:</b> drive.google.com/file/d/1_gPqX2MgLJD7bYCgZ977GHX25pVC_ihz/view</a>
                 </div>
             </li>
         </ul>

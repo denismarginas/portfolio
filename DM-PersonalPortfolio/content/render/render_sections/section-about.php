@@ -15,7 +15,7 @@ $about_text = [
     >
     <container>
         <div data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
-            <img data-motion="transition-fade-0" data-duration="1s" data-delay="0.4s" src="<?php echo $GLOBALS['urlPath']; ?>content/img/personal-images/dm-personal-image-1.png" width="357px" height="570px" alt="DM - Personal Image">
+            <img data-motion="transition-fade-0" data-duration="1s" data-delay="0.4s" src="<?php echo $GLOBALS['urlPath']; ?>content/img/personal-images/dm-personal-image-1.webp" width="357px" height="570px" alt="DM - Personal Image">
             <?php SVGRenderer::renderSVG('background-shape-1'); ?>
             <span data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s" data-delay="0.5s"></span>
         </div>

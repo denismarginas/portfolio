@@ -6,7 +6,7 @@
                     <span>
                         <div>
                             <span class="circle-background"></span>
-                            <img data-motion="transition-fade-0" data-duration="1.4s"  src="<?php echo $GLOBALS['urlPath']; ?>content/img/personal-images/dm-personal-image-0.png" width="357px" height="570px" alt="DM - Personal Image">
+                            <img data-motion="transition-fade-0" data-duration="1.4s"  src="<?php echo $GLOBALS['urlPath']; ?>content/img/personal-images/dm-personal-image-0.webp" width="357px" height="570px" alt="DM - Personal Image">
                         </div>
                     </span>
                 </div>

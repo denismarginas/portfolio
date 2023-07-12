@@ -25,3 +25,31 @@
     }
   }
 }
+
+[data-animation="shine-gray"] {
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    background: linear-gradient(to right, rgba(220, 220, 240, 0) 0%, rgba(188, 188, 200, .3) 100%);
+    content: "";
+    display: block;
+    height: 100%;
+    left: -100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transform: skewX(-25deg);
+    width: 50%;
+    z-index: 1;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+  &:hover {
+    &:after {
+      left: 100%;
+      opacity: 1;
+      transition: left 0.5s, opacity 0.2s;
+    }
+  }
+}

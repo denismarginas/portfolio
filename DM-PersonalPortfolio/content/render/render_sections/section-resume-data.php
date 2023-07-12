@@ -2,28 +2,28 @@
 $cv_list = [
             [
                 "name" => "Resume #2 English",
-                "image" => "content/cv/cv-2/dm-cv-2-english-public.jpg",
+                "image" => "content/cv/cv-2/dm-cv-2-english-public-thumbnail.webp",
                 "pdf" => "content/cv/cv-2/dm-cv-2-english-public-compressed.pdf",
                 "date" => "Jun 3, 2023",
                 "description" => "CV - Model 2"
             ],
             [
                 "name" => "Resume #2 Romanian",
-                "image" => "content/cv/cv-2/dm-cv-2-romana-public.jpg",
+                "image" => "content/cv/cv-2/dm-cv-2-romana-public-thumbnail.webp",
                 "pdf" => "content/cv/cv-2/dm-cv-2-romana-public-compressed.pdf",
                 "date" => "Jun 3, 2023",
                 "description" => "CV - Model 2"
             ],
             [
                 "name" => "Resume #1 English",
-                "image" => "content/cv/cv-1/dm-cv-1-english-public.jpg",
+                "image" => "content/cv/cv-1/dm-cv-1-english-public-thumbnail.webp",
                 "pdf" => "content/cv/cv-1/dm-cv-1-english-public-compressed.pdf",
                 "date" => "Jun 3, 2023",
                 "description" => "CV - Model 1"
             ],
             [
                 "name" => "Resume #1 Romanian",
-                "image" => "content/cv/cv-1/dm-cv-1-romana-public.jpg",
+                "image" => "content/cv/cv-1/dm-cv-1-romana-public-thumbnail.webp",
                 "pdf" => "content/cv/cv-1/dm-cv-1-romana-public-compressed.pdf",
                 "date" => "Jun 3, 2023",
                 "description" => "CV - Model 1"
@@ -77,7 +77,7 @@ $cv_text = [
             </li>
             <li>
                 <div>
-                    <img data-motion="transition-fade-0 transition-slideInLeft-0" width="500" height="300" src="<?php echo $GLOBALS['urlPath']; ?>content/img/personal-images/dm-desktop-working.png" alt="DM - Working On Desktop">
+                    <img data-motion="transition-fade-0 transition-slideInLeft-0" width="500" height="300" src="<?php echo $GLOBALS['urlPath']; ?>content/img/personal-images/dm-desktop-working.webp" alt="DM - Working On Desktop">
                 </div>
                 <div>
                     <?php $i = 1; foreach ($cv_text as $cv_text_item) : ?>

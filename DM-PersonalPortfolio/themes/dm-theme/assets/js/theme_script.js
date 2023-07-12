@@ -403,7 +403,7 @@ function contact_form_exec() {
     if (!statusMessageSpan) {
         statusMessageSpan = document.createElement('span');
         statusMessageSpan.id = 'dm-send-status';
-        statusMessageSpan.textContent = 'There was an error.';
+        statusMessageSpan.innerHTML = 'The form is inactive. Use the <a target="_blank" href="https://forms.gle/vTHeLVkc1TwXCxBJA"><b>Google Form:</b> forms.gle/vTHeLVkc1TwXCxBJA</a>';
         buttonDiv.appendChild(statusMessageSpan);
     }
     return false;

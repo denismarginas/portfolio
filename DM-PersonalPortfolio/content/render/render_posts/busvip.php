@@ -6,19 +6,22 @@ $renderer_sections = new RendererSections();
 $renderer_structure->header();
 
 $post_data = [
-    "visibility" => "enable",
-    "post_type" => "portfolio",
+    "display" => "enable",
+    "post_type" => "catalog",
     "media_path" => "busvip",
-    "title" => "Bus Vip",
+    "title" => "Bus-Vip",
     "logo" => "logo/logo.png",
     "logo_type" => "png",
-    "description" => "Experience the artistry behind my meticulously crafted media content for ".$post_data['title'].". Discover a captivating collection of photos and videos that showcase my expertise in delivering impactful visuals for social media promotion. From stunning imagery to engaging videos, each piece is meticulously created to elevate your brand's online presence. Explore the power of my unique visual creations and unlock the potential to captivate your audience.",
+    "description" => renderTextVisualMediaPost("catalog","busvip"),
     "categories" => [
                     "Visual Media Projects"
                   ],
     "media_facebook_url" => "https://www.facebook.com/curseocazionalebusvip",
     "employ" => "Pia Soft Product",
-    "date" => "01.2020 - 11.2022",
+    "date" => [
+        "date_start" => "01.2020",
+        "date_end" => "11.2022"
+    ],
     "tags" => [
                 "photo",
                 "video"

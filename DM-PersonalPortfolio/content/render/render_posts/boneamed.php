@@ -6,30 +6,74 @@ $renderer_sections = new RendererSections();
 $renderer_structure->header();
 
 $post_data = [
-    "visibility" => "enable",
-    "post_type" => "portfolio",
+    "display" => "enable",
+    "post_type" => "catalog",
     "media_path" => "boneamed",
-    "title" => "AXA Company",
+    "title" => "Bonea Med",
     "logo" => "logo/logo.png",
     "logo_type" => "png",
     "description" => "This project involved creating a clinic website with appointment booking functionality. I used the Booked module in a WordPress website. Clients can book appointments with specific doctors, and doctors can access, edit, and add appointments.",
     "categories" => [
                     "Web Development Projects"
                   ],
-    "website_url" => "www.boneamed.ro",
-    "website_platform" => "Wordpress",
-    "website_status" => "Done",
+    "web_url" => "www.boneamed.ro",
+    "web_platform" => [
+                [
+                    "name" => "Wordpress",
+                    "svg" => "wordpress"
+                ]
+    ],
+    "web_languages" => [
+        [
+            "name" => "HTML",
+            "svg" => "html"
+        ],
+        [
+            "name" => "CSS",
+            "svg" => "css"
+        ],
+        [
+            "name" => "JS",
+            "svg" => "js"
+        ],
+        [
+            "name" => "SQL",
+            "svg" => "sql"
+        ],
+		[
+            "name" => "PHP",
+            "svg" => "php"
+        ],
+    ],
+    "web_plugins" => [
+        [
+            "name" => "Elementor Website Builder",
+            "svg" => "elementor"
+        ],
+        [
+            "name" => "Contact Form 7",
+            "svg" => "ctf7"
+        ],
+        [
+            "name" => "Booked",
+            "svg" => "booked"
+        ]
+    ],
+    "web_development_project" => "Done",
     "employ" => "Pia Soft Product",
-    "date" => "06.2021 - 06.2022",
+    "date" => [
+        "date_start" => "06.2021",
+        "date_end" => "06.2022"
+    ],
     "tags" => [
                 "web",
                 "media-web"
               ],
     "colors" => [
         "post_color_primary" => "#02aeae",
-        "post_color_secondary" => "#FFFFFF",
-        "post_color_background" => "#FFFFFF",
-        "post_color_text_on_background" => "#FFFFFF"
+        "post_color_secondary" => "#ffffff",
+        "post_color_background" => "#ffffff",
+        "post_color_text_on_background" => "#ffffff"
     ]
 ];
 

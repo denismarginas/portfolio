@@ -12,7 +12,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: var( --dm-spacing-tertiary );
 
-    > .dm-footer-portfolio, .dm-footer-contact {
+    > .dm-footer-catalog, .dm-footer-contact {
       @include flex-column();
       gap: var( --dm-spacing-primary );
 

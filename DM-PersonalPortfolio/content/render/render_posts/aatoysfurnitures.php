@@ -6,8 +6,8 @@ $renderer_sections = new RendererSections();
 $renderer_structure->header();
 
 $post_data = [
-    "visibility" => "enable",
-    "post_type" => "portfolio",
+    "display" => "enable",
+    "post_type" => "catalog",
     "media_path" => "aatoysfurnitures",
     "title" => "A&A Toys & Furniture",
     "logo" => "logo/logo.png",
@@ -16,11 +16,47 @@ $post_data = [
     "categories" => [
                     "Web Development Projects"
                   ],
-    "website_url" => "www.aatoys.ro",
-    "website_platform" => "Wordpress",
-    "website_status" => "Done",
+    "web_url" => "www.aatoys.ro",
+    "web_platform" => [
+                [
+                    "name" => "Wordpress",
+                    "svg" => "wordpress"
+                ]
+    ],
+    "web_languages" => [
+        [
+            "name" => "HTML",
+            "svg" => "html"
+        ],
+        [
+            "name" => "CSS",
+            "svg" => "css"
+        ],
+        [
+            "name" => "JS",
+            "svg" => "js"
+        ],
+        [
+            "name" => "PHP",
+            "svg" => "php"
+        ]
+    ],
+    "web_plugins" => [
+        [
+            "name" => "Elementor Website Builder",
+            "svg" => "elementor"
+        ],
+        [
+            "name" => "Contact Form 7",
+            "svg" => "cf7"
+        ]
+    ],
+    "web_development_project" => "Done",
     "employ" => "Pia Soft Product",
-    "date" => "10.2019 - 12.2019",
+    "date" => [
+        "date_start" => "10.2019",
+        "date_end" => "12.2019"
+    ],
     "tags" => [
                 "web"
               ],

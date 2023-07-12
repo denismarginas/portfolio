@@ -1,24 +1,35 @@
 @import "../../functions/mixins.scss";
 @import "../../functions/functions.scss";
+.dm-gallery-web-content {
+  > .dm-web-media-gallery {
+    @include reset-list();
+    @include flex-center();
+    gap: var( --dm-spacing-secondary );
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+    align-items: stretch;
 
-.dm-web-media-gallery {
-  @include reset-list();
-  @include flex-center();
-  gap: var( --dm-spacing-secondary );
-  flex-wrap: wrap;
-  position: relative;
-  overflow: hidden;
-
-  > .dm-web-media-gallery-item {
-
-    > img {
+    > .dm-web-media-gallery-item {
+      @include flex-center();
+      @include border-radius( var( --dm-border-radius-primary ));
       background-color: rgba(var(--dm-color-gray-rgb),0.2);
-      cursor: pointer;
-      width: 100%;
-      height: auto;
-      max-height: 200px;
-      max-width: 300px;
+      padding:  var(--dm-spacing-primary);
+      min-height: 45px;
+
+      > img {
+        background-color: rgba(var(--dm-color-gray-rgb),0.2);
+        cursor: pointer;
+        width: auto;
+        height: auto;
+        max-height: 200px;
+        max-width: 100%;
+      }
+    }
+    &[data-list-item="logo"] {
+      > li {
+        max-height: 80px;
+      }
     }
   }
-
 }

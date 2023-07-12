@@ -1,0 +1,293 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+[data-list-design] {
+  display: grid !important;
+}
+[data-list-design="items-exactly-1"] {
+  grid-template-columns: repeat(1, 1fr) !important;
+}
+
+[data-list-design="items-divisible-by-2"] {
+  grid-template-columns: repeat(2, 1fr) !important;
+
+  @media only screen and (max-width: $screen-phone-small) {
+    grid-template-columns: repeat(1, 1fr) !important;
+
+    li {
+      &:nth-child(n) {
+        grid-column: span 1 !important;
+      }
+    }
+  }
+}
+
+[data-list-design="items-divisible-by-3"] {
+  grid-template-columns: repeat(3, 1fr) !important;
+
+  @media only screen and (max-width: $screen-phone-medium) {
+    grid-template-columns: repeat(2, 1fr) !important;
+
+    li {
+      &:nth-child(3n) {
+        grid-column: span 2 !important;
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-small) {
+    grid-template-columns: repeat(1, 1fr) !important;
+
+    li {
+      &:nth-child(3n) {
+        grid-column: span 1 !important;
+      }
+    }
+  }
+}
+
+[data-list-design="items-divisible-by-4"] {
+  grid-template-columns: repeat(4, 1fr) !important;
+
+  @media only screen and (max-width: $screen-phone-large) {
+    grid-template-columns: repeat(12, 1fr) !important;
+    li {
+      &:nth-child(4n - 0),
+      &:nth-child(4n - 1),
+      &:nth-child(4n - 2){
+        grid-column: span 4 !important;
+      }
+      &:nth-child(4n - 3) {
+        grid-column: span 12 !important;
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-medium) {
+    grid-template-columns: repeat(2, 1fr) !important;
+    li {
+      &:nth-child(n) {
+        grid-column: span 2 !important;
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-small) {
+    grid-template-columns: repeat(1, 1fr) !important;
+
+    li {
+      &:nth-child(n) {
+        grid-column: span 1 !important;
+      }
+    }
+  }
+}
+
+[data-list-design="items-divisible-by-5"] {
+  grid-template-columns: repeat(5, 1fr) !important;
+
+  @media only screen and (max-width: $screen-desktop-medium) {
+    grid-template-columns: repeat(12, 1fr) !important;
+
+    li {
+      &:nth-child(5n - 3),
+      &:nth-child(5n - 4), {
+        grid-column: span 6 !important;
+      }
+
+      &:nth-child(5n - 0),
+      &:nth-child(5n - 1),
+      &:nth-child(5n - 2) {
+        grid-column: span 4 !important;
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-medium) {
+    grid-template-columns: repeat(2, 1fr) !important;
+
+    li {
+      &:nth-child(n) {
+        grid-column: span 1 !important;
+      }
+      &:nth-child(5n) {
+        grid-column: span 2 !important;
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-small) {
+    grid-template-columns: repeat(1, 1fr) !important;
+
+    li {
+      &:nth-child(n) {
+        grid-column: span 1 !important;
+      }
+    }
+  }
+
+}
+[data-list-design="items-divisible-by-6"] {
+  grid-template-columns: repeat(6, 1fr) !important;
+
+  @media only screen and (max-width: $screen-desktop-medium) {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  @media only screen and (max-width: $screen-phone-medium) {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  @media only screen and (max-width: $screen-phone-small) {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+
+[data-list-design="items-divisible-by-7"] {
+  grid-template-columns: repeat(12, 1fr) !important;
+
+  li {
+    &:nth-child(7n - 4),
+    &:nth-child(7n - 5),
+    &:nth-child(7n - 6) {
+      grid-column: span 4 !important;
+    }
+
+    &:nth-child(7n - 0),
+    &:nth-child(7n - 1),
+    &:nth-child(7n - 2),
+    &:nth-child(7n - 3) {
+      grid-column: span 3 !important;
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-large) {
+    grid-template-columns: repeat(12, 1fr) !important;
+
+    li {
+      &:nth-child(7n - 5),
+      &:nth-child(7n - 6) {
+        grid-column: span 6 !important;
+      }
+      &:nth-child(7n - 3),
+      &:nth-child(7n - 4) {
+        grid-column: span 6 !important;
+      }
+      &:nth-child(7n - 0),
+      &:nth-child(7n - 1),
+      &:nth-child(7n - 2) {
+        grid-column: span 4 !important;
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-medium) {
+    grid-template-columns: repeat(2, 1fr) !important;
+
+    li {
+      &:nth-child(n) {
+        grid-column: span 1 !important;
+      }
+      &:nth-child(7n) {
+        grid-column: span 2 !important;
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-small) {
+    grid-template-columns: repeat(1, 1fr) !important;
+
+    li {
+      &:nth-child(n) {
+        grid-column: span 1 !important;
+      }
+    }
+  }
+}
+
+[data-list-design="items-divisible-by-13"] {
+  grid-template-columns: repeat(12, 1fr) !important;
+
+  li {
+    &:nth-child(13n - 0),
+    &:nth-child(13n - 1),
+    &:nth-child(13n - 2),
+    &:nth-child(13n - 3) {
+      grid-column: span 3 !important;
+    }
+    &:nth-child(13n - 4),
+    &:nth-child(13n - 5),
+    &:nth-child(13n - 6),
+    &:nth-child(13n - 7),
+    &:nth-child(13n - 8),
+    &:nth-child(13n - 9),
+    &:nth-child(13n - 10),
+    &:nth-child(13n - 11),
+    &:nth-child(13n - 12){
+      grid-column: span 4 !important;
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-small) {
+    grid-template-columns: repeat(3, 1fr) !important;
+
+    li {
+      &:nth-child(n) {
+        grid-column: span 1 !important;
+      }
+      &:nth-child(13n) {
+        grid-column: span 3 !important;
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-medium) {
+    grid-template-columns: repeat(2, 1fr) !important;
+
+    li {
+      &:nth-child(n) {
+        grid-column: span 1 !important;
+      }
+      &:nth-child(13n) {
+        grid-column: span 2 !important;
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-small) {
+    grid-template-columns: repeat(1, 1fr) !important;
+
+    li {
+      &:nth-child(n) {
+        grid-column: span 1 !important;
+      }
+    }
+  }
+}
+
+[data-list-design] {
+  &.dm-media-video {
+    @media only screen and (max-width: $screen-tablet-medium) {
+      grid-template-columns: repeat(1, 1fr) !important;
+
+      > li {
+        &:nth-child(n) {
+        grid-column: span 1 !important;
+        }
+      }
+    }
+    &[data-list-design="items-divisible-by-3"], &[data-list-design="items-divisible-by-4"], &[data-list-design="items-divisible-by-4"],&[data-list-design="items-divisible-by-5"], &[data-list-design="items-divisible-by-6"],&[data-list-design="items-divisible-by-7"],&[data-list-design="items-divisible-by-13"] {
+      grid-template-columns: repeat(2,1fr);
+
+      @media only screen and (max-width: $screen-tablet-medium) {
+        grid-template-columns: repeat(1, 1fr) !important;
+      }
+    }
+  }
+  &.dm-web-media-gallery {
+      &[data-list-design="items-exactly-1"] {
+      > li {
+        > img {
+          max-height: 100%;
+        }
+      }
+    }
+  }
+  &.dm-media-gallery {
+    &[data-list-design="items-exactly-1"] {
+      > li {
+        > img {
+          width: auto;
+          min-width: 10px;
+        }
+      }
+    }
+  }
+}

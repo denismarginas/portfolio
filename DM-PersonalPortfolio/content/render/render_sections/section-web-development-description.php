@@ -15,9 +15,9 @@
             </li>
             <li>
                 <section class="dm-web-responsive" data-motion="transition-fade-0">
-                    <img width="320px" height="260" class="dm-laptop-responsive" src="<?php echo $GLOBALS['urlPath']; ?>content/img/design-elements/website-responsive-laptop.png" alt="Web Development Responsive Design">
-                    <img width="320px" height="260" class="dm-tablet-responsive" data-animation="dm-scroll" src="<?php echo $GLOBALS['urlPath']; ?>content/img/design-elements/website-responsive-tablet.png" alt="Web Development Responsive Design">
-                    <img width="320px" height="260" class="dm-phone-responsive" data-animation="dm-scroll" src="<?php echo $GLOBALS['urlPath']; ?>content/img/design-elements/website-responsive-phone.png"  alt="Web Development Responsive Design">
+                    <img width="320px" height="260" class="dm-laptop-responsive" src="<?php echo $GLOBALS['urlPath']; ?>content/img/design-elements/website-responsive-laptop.webp" alt="Web Development Responsive Design">
+                    <img width="320px" height="260" class="dm-tablet-responsive" data-animation="dm-scroll" src="<?php echo $GLOBALS['urlPath']; ?>content/img/design-elements/website-responsive-tablet.webp" alt="Web Development Responsive Design">
+                    <img width="320px" height="260" class="dm-phone-responsive" data-animation="dm-scroll" src="<?php echo $GLOBALS['urlPath']; ?>content/img/design-elements/website-responsive-phone.webp"  alt="Web Development Responsive Design">
                 </section>
             </li>
             <li>

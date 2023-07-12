@@ -97,6 +97,10 @@ container, .container {
   position: relative;
 }
 
+.hide {
+  display: none;
+}
+
 .theme-dark {
   background-color: var( --dm-background-color-gray-darken );
 }

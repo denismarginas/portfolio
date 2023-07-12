@@ -7,30 +7,74 @@ $renderer_sections = new RendererSections();
 $renderer_structure->header();
 
 $post_data = [
-  "visibility" => "enable",
-  "post_type" => "portfolio",
-  "media_path" => "cafeagano",
-  "title" => "Cafea Gano",
-  "logo" => "logo/logo.png",
-  "logo_type" => "png",
-  "description" => "WordPress website created for an online shop specializing in natural supplements and coffee.",
-  "categories" => [
-    "Web Development Projects"
-  ],
-  "website_url" => "www.cafeagano.ro",
-  "website_platform" => "Wordpress",
-  "website_status" => "Done",
-  "employ" => "Pia Soft Product",
-  "date" => "2020",
-  "tags" => [
-              "web"
-  ],
-  "colors" => [
-    "post_color_primary" => "#6a4f32",
-    "post_color_secondary" => "#cbb85f",
-    "post_color_background" => "#312114",
-    "post_color_text_on_background" => "#FFFFFF"
-  ]
+    "display" => "enable",
+    "post_type" => "catalog",
+    "media_path" => "cafeagano",
+    "title" => "Cafea Gano",
+    "logo" => "logo/logo.png",
+    "logo_type" => "png",
+    "description" => "WordPress website created for an online shop specializing in natural supplements and coffee. The shop was made using the Woocommerce module.",
+    "categories" => [
+        "Web Development Projects"
+    ],
+    "web_url" => "www.cafeagano.ro",
+    "web_platform" => [
+                [
+                    "name" => "Wordpress",
+                    "svg" => "wordpress"
+                ]
+    ],
+    "web_languages" => [
+        [
+            "name" => "HTML",
+            "svg" => "html"
+        ],
+        [
+            "name" => "CSS",
+            "svg" => "css"
+        ],
+        [
+            "name" => "JS",
+            "svg" => "js"
+        ],
+        [
+            "name" => "SQL",
+            "svg" => "sql"
+        ],
+		[
+            "name" => "PHP",
+            "svg" => "php"
+        ],
+    ],
+    "web_plugins" => [
+        [
+            "name" => "Elementor Website Builder",
+            "svg" => "elementor"
+        ],
+        [
+            "name" => "Contact Form 7",
+            "svg" => "ctf7"
+        ],
+        [
+            "name" => "Woocommerce",
+            "svg" => "woocommerce"
+        ]
+    ],
+    "web_development_project" => "Done",
+    "employ" => "Pia Soft Product",
+    "date" => [
+        "date_start" => "03.2020",
+        "date_end" => "07.2020"
+    ],
+    "tags" => [
+        "web"
+    ],
+    "colors" => [
+        "post_color_primary" => "#6a4f32",
+        "post_color_secondary" => "#ffffff",
+        "post_color_background" => "#312114",
+        "post_color_text_on_background" => "#ffffff"
+    ]
 ];
 
 $post_content = "";

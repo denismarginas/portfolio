@@ -5,7 +5,33 @@
   > ul {
     @include reset-list();
     @include flex-row();
+    flex-wrap: wrap;
     align-items: center;
-    gap: var( --dm-spacing-secondary);
+    justify-content: flex-start;
+    gap: var( --dm-spacing-secondary );
+
+    > li {
+      > a {
+        > svg {
+          @include fix-height(40px);
+          width: auto;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-medium) {
+    > ul {
+      justify-content: space-around;
+      gap: var( --dm-spacing-primary );
+
+      > li {
+        > a {
+          > svg {
+            @include fix-height(30px);
+            width: auto;
+          }
+        }
+      }
+    }
   }
 }

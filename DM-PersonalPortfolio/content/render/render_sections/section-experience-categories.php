@@ -52,7 +52,7 @@ $experience_categories = [
                                 <?php SVGRenderer::renderSVG( $experience_category["svg"]); ?>
                             </div>
                             <span><?php echo $experience_category["name"]; ?></span>
-                            <img src="<?php echo $GLOBALS['urlPath']; ?>content/img/design-elements/overlay-texture-paper.png" alt="Background">
+                            <img src="<?php echo $GLOBALS['urlPath']; ?>content/img/design-elements/overlay-texture-paper.webp" alt="Background">
                         </a>
                     </div>
                 </li>

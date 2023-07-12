@@ -15,6 +15,7 @@
   position: relative;
   box-shadow: 6px 6px 4px rgba(34,34,34,0.3);
   transition: box-shadow 0.4s;
+  max-height: 450px;
 
   > img {
     @include cover-image();
@@ -37,7 +38,7 @@
     > a {
       > svg {
         width: 100%;
-        max-width: 50%;
+        max-width: 40%;
         height: auto;
         position: absolute;
         z-index: 1;

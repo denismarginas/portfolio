@@ -6,8 +6,8 @@ $renderer_sections = new RendererSections();
 $renderer_structure->header();
 
 $post_data = [
-    "visibility" => "enable",
-    "post_type" => "portfolio",
+    "display" => "enable",
+    "post_type" => "catalog",
     "media_path" => "amorino",
     "title" => "Amorino",
     "logo" => "logo/logo.png",
@@ -17,11 +17,45 @@ The website, specializing in selling dresses for girls, is built using Prestasho
     "categories" => [
                     "Web Development Projects"
                   ],
-    "website_url" => "www.amorino.ro",
-    "website_platform" => "Prestashop",
-    "website_status" => "Done",
+    "web_url" => "www.amorino.ro",
+    "web_platform" => [
+                [
+                    "name" => "Prestashop",
+                    "svg" => "prestashop"
+                ]
+    ],
+    "web_languages" => [
+        [
+            "name" => "HTML",
+            "svg" => "html"
+        ],
+        [
+            "name" => "CSS",
+            "svg" => "css"
+        ],
+        [
+            "name" => "JS",
+            "svg" => "js"
+        ],
+        [
+            "name" => "SQL",
+            "svg" => "sql"
+        ],
+		[
+            "name" => "PHP",
+            "svg" => "php"
+        ],
+        [
+            "name" => "TPL",
+            "svg" => "tpl"
+        ]
+    ],
+    "web_development_project" => "Done",
     "employ" => "Pia Soft Product",
-    "date" => "03.2020 - 10.2020",
+    "date" => [
+        "date_start" => "03.2020",
+        "date_end" => "10.2020"
+    ],
     "tags" => [
                 "web",
                 "media-web"

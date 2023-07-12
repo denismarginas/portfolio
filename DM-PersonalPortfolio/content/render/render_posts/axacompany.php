@@ -6,8 +6,8 @@ $renderer_sections = new RendererSections();
 $renderer_structure->header();
 
 $post_data = [
-    "visibility" => "enable",
-    "post_type" => "portfolio",
+    "display" => "enable",
+    "post_type" => "catalog",
     "media_path" => "axacompany",
     "title" => "AXA Company",
     "logo" => "logo/logo.png",
@@ -16,20 +16,60 @@ $post_data = [
     "categories" => [
                     "Web Development Projects"
                   ],
-    "website_url" => "www.axacompany.ro",
-    "website_platform" => "Wordpress",
-    "website_status" => "Done",
+    "web_url" => "axacompany.ro",
+    "web_platform" => [
+                [
+                    "name" => "Wordpress",
+                    "svg" => "wordpress"
+                ]
+    ],
+    "web_languages" => [
+        [
+            "name" => "HTML",
+            "svg" => "html"
+        ],
+        [
+            "name" => "CSS",
+            "svg" => "css"
+        ],
+        [
+            "name" => "JS",
+            "svg" => "js"
+        ],
+        [
+            "name" => "SQL",
+            "svg" => "sql"
+        ],
+		[
+            "name" => "PHP",
+            "svg" => "php"
+        ],
+    ],
+    "web_plugins" => [
+        [
+            "name" => "Elementor Website Builder",
+            "svg" => "elementor"
+        ],
+        [
+            "name" => "Contact Form 7",
+            "svg" => "ctf7"
+        ]
+    ],
+    "web_development_project" => "Done",
     "employ" => "Pia Soft Product",
-    "date" => "11.2021 - 12.2021",
+    "date" => [
+        "date_start" => "11.2021",
+        "date_end" => "12.2021"
+    ],
     "tags" => [
                 "web",
                 "media-web"
               ],
     "colors" => [
         "post_color_primary" => "#41556d",
-        "post_color_secondary" => "#FFFFFF",
+        "post_color_secondary" => "#ffffff",
         "post_color_background" => "#41556d",
-        "post_color_text_on_background" => "#FFFFFF"
+        "post_color_text_on_background" => "#ffffff"
     ]
 ];
 

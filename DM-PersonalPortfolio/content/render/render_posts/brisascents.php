@@ -7,30 +7,70 @@ $renderer_sections = new RendererSections();
 $renderer_structure->header();
 
 $post_data = [
-  "visibility" => "enable",
-  "post_type" => "portfolio",
-  "media_path" => "brisascents",
-  "title" => "Brisa Scents",
-  "logo" => "logo/logo.png",
-  "logo_type" => "png",
-  "description" => "I have continued this project from a stage of 20% - 30% done, a WordPress website for perfume and spray sales. User-friendly interface, diverse product collection. Secure transactions, detailed descriptions. Contact page for customer support.",
-  "categories" => [
-    "Web Development Projects"
-  ],
-  "website_url" => "www.brisa-scents.ro",
-  "website_platform" => "Wordpress",
-  "website_status" => "Done",
-  "employ" => "Pia Soft Product",
-  "date" => "10.2020 - 12.2020",
-  "tags" => [
-              "web"
-  ],
-  "colors" => [
-    "post_color_primary" => "#f5e39d",
-    "post_color_secondary" => "#222222",
-    "post_color_background" => "#FFFFFF",
-    "post_color_text_on_background" => "#FFFFFF"
-  ]
+    "display" => "enable",
+    "post_type" => "catalog",
+    "media_path" => "brisascents",
+    "title" => "Brisa Scents",
+    "logo" => "logo/logo.png",
+    "logo_type" => "png",
+    "description" => "I have continued this project from a stage of 20% - 30% done, a WordPress website for perfume and spray sales. User-friendly interface, diverse product collection. Secure transactions, detailed descriptions. Contact page for customer support.",
+    "categories" => [
+        "Web Development Projects"
+    ],
+    "web_url" => "www.brisa-scents.ro",
+    "web_platform" => [
+                [
+                    "name" => "Wordpress",
+                    "svg" => "wordpress"
+                ]
+    ],
+    "web_languages" => [
+        [
+            "name" => "HTML",
+            "svg" => "html"
+        ],
+        [
+            "name" => "CSS",
+            "svg" => "css"
+        ],
+        [
+            "name" => "JS",
+            "svg" => "js"
+        ],
+        [
+            "name" => "SQL",
+            "svg" => "sql"
+        ],
+		[
+            "name" => "PHP",
+            "svg" => "php"
+        ],
+    ],
+    "web_plugins" => [
+        [
+            "name" => "Woocommerce",
+            "svg" => "woocommerce"
+        ],
+        [
+            "name" => "Contact Form 7",
+            "svg" => "ctf7"
+        ]
+    ],
+    "web_development_project" => "Done",
+    "employ" => "Pia Soft Product",
+    "date" => [
+        "date_start" => "10.2020",
+        "date_end" => "12.2020"
+    ],
+    "tags" => [
+        "web"
+    ],
+    "colors" => [
+        "post_color_primary" => "#f5e39d",
+        "post_color_secondary" => "#222222",
+        "post_color_background" => "#FFFFFF",
+        "post_color_text_on_background" => "#FFFFFF"
+    ]
 ];
 
 $post_content = "";

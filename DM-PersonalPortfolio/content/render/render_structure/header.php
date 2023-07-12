@@ -5,8 +5,8 @@
 <header id="header">
     <section>
         <div class="dm-logo">
-            <a href="#" class="dm-logo-img">
-                <img data="dm-logo-front" src="<?php echo $GLOBALS['urlPath']; ?>content/img/logo/logo.png" alt="Denis Marginas Personal Icon">
+            <a href="home.html" class="dm-logo-img">
+                <img data="dm-logo-front" width="50" height="50" src="<?php echo $GLOBALS['urlPath']; ?>content/img/logo/logo.webp" alt="Denis Marginas Personal Icon">
             </a>
             <a href="home.html" class="dm-logo-text">
                 <span>Denis</span>
@@ -22,7 +22,7 @@
                     <a href="experience.html">Experience</a>
                 </li>
                 <li>
-                    <a href="portfolio.html">Portfolio</a>
+                    <a href="catalog.html">Catalog</a>
                 </li>
                 <li>
                     <a href="contact.html">Contact</a>

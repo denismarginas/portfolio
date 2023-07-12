@@ -6,8 +6,8 @@ $renderer_sections = new RendererSections();
 $renderer_structure->header();
 
 $post_data = [
-    "visibility" => "enable",
-    "post_type" => "portfolio",
+    "display" => "enable",
+    "post_type" => "catalog",
     "media_path" => "agromir",
     "title" => "Agromir",
     "logo" => "logo/logo.png",
@@ -17,13 +17,73 @@ $post_data = [
                     "Web Development Projects",
                     "Visual Media Projects"
                   ],
-    "website_url" => "www.agromir.ro",
-    "website_platform" => "Prestashop",
-    "website_status" => "Done",
+    "web_url" => "www.agromir.ro",
+    "web_platform" => [
+                [
+                    "name" => "Prestashop",
+                    "svg" => "prestashop"
+                ]
+    ],
+    "web_languages" => [
+        [
+            "name" => "HTML",
+            "svg" => "html"
+        ],
+        [
+            "name" => "CSS",
+            "svg" => "css"
+        ],
+        [
+            "name" => "JS",
+            "svg" => "js"
+        ],
+        [
+            "name" => "SQL",
+            "svg" => "sql"
+        ],
+		[
+            "name" => "PHP",
+            "svg" => "php"
+        ],
+        [
+            "name" => "TPL",
+            "svg" => "tpl"
+        ]
+    ],
+    "web_plugins" => [
+        [
+            "name" => "Creative Elements - Elementor Website Builder",
+            "svg" => "elementor"
+        ],
+        [
+            "name" => "ETS Contact Form 7",
+            "svg" => "ctf7"
+        ],
+        [
+            "name" => "Pretty URLs",
+            "svg" => "prettyurls"
+        ],
+        [
+            "name" => "Joli Search - advanced visual search",
+            "svg" => "jolisearch"
+        ],
+        [
+            "name" => "Facebook Pixel Products Feed",
+            "svg" => "fbpixelproductsfeed"
+        ],
+        [
+            "name" => "Google Merchant Center Feed",
+            "svg" => "googlemerchantcenterfeed"
+        ]
+    ],
+    "web_development_project" => "Done",
     "media_facebook_url" => "https://www.facebook.com/cauciucuriagricole",
     "media_instagram_url" => "https://www.instagram.com/agromir_insta/",
     "employ" => "Pia Soft Product",
-    "date" => "02.2020 - 11.2022",
+    "date" => [
+        "date_start" => "02.2020",
+        "date_end" => "11.2022"
+    ],
     "tags" => [
                 "web",
                 "media-web",
@@ -42,7 +102,14 @@ $post_content .= "<h2 id='webdevelopmentprojects' class='dm-post-title-category'
 $post_content .= renderGalleryWeb($post_data);
 $post_content .= "<h2 id='webdevelopmentmedia' class='dm-post-title-category' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.7s'>Web Media Content</h2>";
 $post_content .= renderGalleryWebMedia($post_data);
+
 $post_content .= "<h2 id='visualmediaprojects' class='dm-post-title-category' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.7s'>Visual Media Projects</h2>";
+$post_content .= "<div class='dm-post-details-grid'>";
+$post_content .= "<div class='dm-post-logo-details' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.7s'>".renderImage( $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$post_data["logo"])."</div>";
+$post_content .= "<div class='dm-post-title-description' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.7s'>";
+$post_content .= renderTextVisualMediaPost($post_data["post_type"],$post_data["media_path"], "tags");
+$post_content .=  "</div>";
+$post_content .= "</div>";
 $post_content .= renderGalleryMedia($post_data);
 $post_content .= renderVideoMedia($post_data);
 

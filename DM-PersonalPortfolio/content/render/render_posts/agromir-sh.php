@@ -6,8 +6,8 @@ $renderer_sections = new RendererSections();
 $renderer_structure->header();
 
 $post_data = [
-    "visibility" => "enable",
-    "post_type" => "portfolio",
+    "display" => "enable",
+    "post_type" => "catalog",
     "media_path" => "agromir-sh",
     "title" => "Agromir Second-Hand",
     "logo" => "logo/logo.png",
@@ -16,11 +16,71 @@ $post_data = [
     "categories" => [
                     "Web Development Projects"
                   ],
-    "website_url" => "www.anvelope-sh.ro",
-    "website_platform" => "Prestashop",
-    "website_status" => "Done",
+    "web_url" => "www.anvelope-sh.ro",
+    "web_platform" => [
+                [
+                    "name" => "Prestashop",
+                    "svg" => "prestashop"
+                ]
+    ],
+    "web_languages" => [
+        [
+            "name" => "HTML",
+            "svg" => "html"
+        ],
+        [
+            "name" => "CSS",
+            "svg" => "css"
+        ],
+        [
+            "name" => "JS",
+            "svg" => "js"
+        ],
+        [
+            "name" => "SQL",
+            "svg" => "sql"
+        ],
+		[
+            "name" => "PHP",
+            "svg" => "php"
+        ],
+        [
+            "name" => "TPL",
+            "svg" => "tpl"
+        ]
+    ],
+    "web_plugins" => [
+        [
+            "name" => "Creative Elements - Elementor Website Builder",
+            "svg" => "elementor"
+        ],
+        [
+            "name" => "ETS Contact Form 7",
+            "svg" => "ctf7"
+        ],
+        [
+            "name" => "Pretty URLs",
+            "svg" => "prettyurls"
+        ],
+        [
+            "name" => "Joli Search - advanced visual search",
+            "svg" => "jolisearch"
+        ],
+        [
+            "name" => "Facebook Pixel Products Feed",
+            "svg" => "fbpixelproductsfeed"
+        ],
+        [
+            "name" => "Google Merchant Center Feed",
+            "svg" => "googlemerchantcenterfeed"
+        ]
+    ],
+    "web_development_project" => "Done",
     "employ" => "Pia Soft Product",
-    "date" => "09.2020 - 11.2022",
+    "date" => [
+        "date_start" => "09.2020",
+        "date_end" => "11.2022"
+    ],
     "tags" => [
                 "web",
                 "media-web"

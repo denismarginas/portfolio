@@ -9,21 +9,21 @@
                     <h5>Contact</h5>
                     <ul>
                         <li>
-                            <a href="#">
+                            <a href="<?php echo $GLOBALS['urlPath']; ?>content/cv/cv-2/dm-cv-2-english-public-compressed.pdf" target="_blank">
                                 <?php SVGRenderer::renderSVG('chevron-right'); ?>
                                 <?php SVGRenderer::renderSVG('resume'); ?>
                                 <span>CV English</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<?php echo $GLOBALS['urlPath']; ?>content/cv/cv-2/dm-cv-2-romana-public-compressed.pdf" target="_blank">
                                 <?php SVGRenderer::renderSVG('chevron-right'); ?>
                                 <?php SVGRenderer::renderSVG('resume'); ?>
                                 <span>CV Romanian</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkMKYQyLa4H7yxU7RMUK97urwK5LMvbk-dFs9-wKpCRCO_Ng/viewform" target="_blank">
                                 <?php SVGRenderer::renderSVG('chevron-right'); ?>
                                 <?php SVGRenderer::renderSVG('form'); ?>
                                 <span>Contact Form</span>
@@ -31,23 +31,23 @@
                         </li>
                     </ul>
                 </div>
-                <div class="dm-footer-portfolio">
-                    <h5>Portfolio</h5>
+                <div class="dm-footer-catalog">
+                    <h5>Catalog</h5>
                     <ul>
                         <li>
-                            <a href="#">
+                            <a href="web-development-projects.html">
                                 <?php SVGRenderer::renderSVG('chevron-right'); ?>
                                 <span>Web Development Projects</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="visual-media-projects.html">
                                 <?php SVGRenderer::renderSVG('chevron-right'); ?>
                                 <span>Visual Media Projects</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="miscellaneous-projects.html">
                                 <?php SVGRenderer::renderSVG('chevron-right'); ?>
                                 <span>Miscellaneous Projects</span>
                             </a>
@@ -78,7 +78,8 @@
                     </div>
                 </div>
                 <div class="dm-footer-copyrights">
-                    <span>Last update of webiste: 09 June 2023</span>
+                    <span class="hide">Begining of the webiste: 04/06/2023</span>
+                    <span>Last update of webiste: <?php echo date("d/m/Y") ?></span>
                     <span>©All copyrights reserved by Denis Marginas</span>
                 </div>
             </section>

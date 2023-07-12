@@ -6,27 +6,33 @@ if (!empty($args)) {
 
 if (!isset($post_data)) {
     $post_data = [
-        "post_type" => "portfolio",
+        "post_type" => "catalog",
         "media_path" => "post",
         "title" => "Post Title",
         "logo" => "logo.svg",
         "logo_type" => "svg",
         "description" => "This is an example of text description for this post.",
         "category" => "Website / Media",
-        "website_url" => "www.website.com",
-        "website_platform" => "Wordpress / Prestashop",
-        "website_status" => "Undone / Done / In Progress",
+        "web_url" => "www.website.com",
+        "web_status" => "Undone / Done / In Progress",
         "media_facebook_url" => "https://www.facebook.com/",
         "media_instagram_url" => "https://www.instagram.com/",
-        "media_custom_url" => "www.media.com",
-        "media_custom_text" => "Media: ",
+        "media_custom" => [
+                    [
+                        "title" => "Media 1: ",
+                        "url" => "#media1"
+                    ],
+                    [
+                        "title" => "Media 2: ",
+                        "url" => "#media2"
+                    ]
+        ],
         "employ" => "Unspecified / In CompanyName",
-        "date" => "2023",
         "colors" => [
             "post_color_primary" => "#5d6977",
             "post_color_secondary" => "#1b2431",
-            "post_color_background" => "#FFFFFF",
-            "post_color_text_on_background" => "#FFFFFF"
+            "post_color_background" => "#ffffff",
+            "post_color_text_on_background" => "#ffffff"
         ]
     ];
 }
@@ -63,7 +69,7 @@ if (!isset($post_data)) {
                     <?php if ( $post_data["logo_type"] == "svg" ) : ?>
                         <?php SVGRenderer::renderSVG( $post_data["logo"] ); ?>
                     <?php elseif( ($post_data["logo_type"] == "png") || ($post_data["logo_type"] == "jpg") || $post_data["logo_type"] == "jpeg") : ?>
-                        <img src="<?php echo $GLOBALS['urlPath']; ?>content/img/<?php echo $post_data["post_type"];?>/<?php echo $post_data["media_path"];?>/<?php echo $post_data["logo"];?>" width="100" height="100" alt="<?php echo $post_data["title"];?> - Logo">
+                        <img src="<?php echo $GLOBALS['urlPath']; ?>content/img/<?php echo $post_data["post_type"];?>/<?php echo $post_data["media_path"];?>/<?php echo $post_data["logo"]; ?>" width="100" height="100" alt="<?php echo $post_data["title"];?> - Logo">
                     <?php endif; ?>
                 
                 <?php endif; ?>
@@ -78,35 +84,69 @@ if (!isset($post_data)) {
                     <p class="post-description"><?php echo $post_data["description"]; ?></p>
                 <?php endif; ?>
 
-                <?php if (isset($post_data["category"]) && !empty($post_data["category"])) : ?>
+                <?php if (isset($post_data["categories"]) && !empty($post_data["categories"])) : ?>
                     <div class="post-categories">
-                        <?php foreach ($post_data["category"] as $post_category) : ?>
-                            <a class="post-category" href="#<?php echo removeSpaceAndLowercase($post_category)?>">
-                                <?php echo $post_category; ?>
-                            </a>
+                        <?php foreach ( $post_data["categories"] as $post_category ) : ?>
+                            <?php if( $post_category == "Miscellaneous Projects" ) : ?>
+                                <span class="post-category">
+                                    <?php echo $post_category; ?>
+                                </span>
+                            <?php else: ?>
+                                <a class="post-category" href="#<?php echo removeSpaceAndLowercase($post_category)?>">
+                                    <?php echo $post_category; ?>
+                                </a>
+                            <?php endif; ?>
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
 
 
-                <?php if (isset($post_data["website_url"]) && !empty($post_data["website_url"])) : ?>
+                <?php if (isset($post_data["web_url"]) && !empty($post_data["web_url"])) : ?>
                     <p class="post-website">
                         <span>Website: </span>
-                        <a href="<?php echo addHttps($post_data["website_url"]); ?>" target="_blank"><?php echo removeHttps($post_data["website_url"]); ?></a>
+                        <a href="<?php echo addHttps($post_data["web_url"]); ?>" target="_blank"><?php echo removeHttps($post_data["web_url"]); ?></a>
                     </p>
                 <?php endif; ?>
 
-                <?php if (isset($post_data["website_platform"]) && !empty($post_data["website_platform"])) : ?>
+                <?php if (isset($post_data["web_platform"]) && !empty($post_data["web_platform"])) : ?>
                     <p class="post-website-platform">
                         <span>Platform:</span>
-                        <?php echo $post_data["website_platform"]; ?>
+                        <?php for ( $i = 0; $i<count($post_data["web_platform"]); $i++ ) :
+                            echo $post_data["web_platform"][$i]["name"];
+                            if( $i < count($post_data["web_platform"]) - 1 ) :
+                                echo ", ";
+                            endif;
+                        endfor; ?>
                     </p>
                 <?php endif; ?>
 
-                <?php if (isset($post_data["website_status"]) && !empty($post_data["website_status"])) : ?>
+                <?php if (isset($post_data["web_languages"]) && !empty($post_data["web_languages"])) : ?>
+                    <p class="post-website-languages">
+                        <span>Languages:</span>
+                        <?php for ( $i = 0; $i<count($post_data["web_languages"]); $i++ ) :
+                            echo $post_data["web_languages"][$i]["name"];
+                            if( $i < count($post_data["web_languages"]) - 1 ) :
+                                echo ", ";
+                            endif;
+                        endfor; ?>
+                    </p>
+                <?php endif; ?>
+                <?php if (isset($post_data["web_plugins"]) && !empty($post_data["web_plugins"])) : ?>
+                    <p class="post-website-modules">
+                        <span>Modules:</span>
+                        <?php for ( $i = 0; $i<count($post_data["web_plugins"]); $i++ ) :
+                            echo $post_data["web_plugins"][$i]["name"];
+                            if( $i < count($post_data["web_plugins"]) - 1 ) :
+                                echo ", ";
+                            endif;
+                        endfor; ?>
+                    </p>
+                <?php endif; ?>
+
+                <?php if (isset($post_data["web_development_project"]) && !empty($post_data["web_development_project"])) : ?>
                     <p class="post-website-status">
-                        <span>Status:</span>
-                        <?php echo $post_data["website_status"]; ?>
+                        <span>Website Development:</span>
+                        <?php echo $post_data["web_development_project"]; ?>
                     </p>
                 <?php endif; ?>
 
@@ -146,13 +186,18 @@ if (!isset($post_data)) {
                 </p>
               <?php endif; ?>
 
-                <?php if (isset($post_data["media_custom_url"]) && !empty($post_data["media_custom_url"])) : ?>
-                    <p class="post-media-custom">
-                        <span><?php dm_echo($post_data["media_custom_text"]); ?></span>
-                        <a href="<?php echo addHttps($post_data["media_custom_url"]); ?>" target="_blank">
-                            <?php echo removeHttps($post_data["media_custom_url"]); ?>
-                        </a>
-                    </p>
+                <?php if (isset($post_data["media_custom"]) && !empty($post_data["media_custom"])) : ?>
+                    <ul class="post-media-custom">
+                        <?php foreach ($post_data["media_custom"] as $media_custom) : ?>
+                            <li>
+                                <?php SVGRenderer::renderSVG('chevron-right'); ?>
+                                <span><?php dm_echo($media_custom["title"]); ?></span>
+                                <a href="<?php echo addHttps($media_custom["url"]); ?>" target="_blank">
+                                    <?php echo removeHttps($media_custom["url"]); ?>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
                 <?php endif; ?>
 
                 <?php if (isset($post_data["employ"]) && !empty($post_data["employ"])) : ?>
@@ -165,7 +210,9 @@ if (!isset($post_data)) {
                 <?php if (isset($post_data["date"]) && !empty($post_data["date"])) : ?>
                     <p class="post-data">
                         <span>Date:</span>
-                        <?php echo $post_data["date"]; ?>
+                        <?php echo $post_data["date"]["date_start"]; ?>
+                        <?php echo " - "; ?>
+                        <?php echo $post_data["date"]["date_end"]; ?>
                     </p>
                 <?php endif; ?>
 

@@ -82,6 +82,51 @@ function getDirectoriesInFolder($path) {
   return $directories;
 }
 
+function countFilesInFolder($folderPath) {
+    $fileCount = 0;
+
+    $files = scandir($folderPath);
+
+    foreach ($files as $file) {
+        if ($file === '.' || $file === '..') {
+            continue;
+        }
+
+        $filePath = $folderPath . '/' . $file;
+
+        if (is_file($filePath)) {
+            $fileCount++;
+        } elseif (is_dir($filePath)) {
+            $fileCount += countFilesInFolder($filePath);
+        }
+    }
+
+    return $fileCount;
+}
+
+function listDesign($nr) {
+    switch ($nr) {
+        case ($nr % 13 === 0):
+            return "items-divisible-by-13";
+        case ($nr % 7 === 0 && $nr % 3 !== 0):
+            return "items-divisible-by-7";
+        case ($nr % 6 === 0):
+            return "items-divisible-by-6";
+        case ($nr % 5 === 0):
+            return "items-divisible-by-5";
+        case ($nr % 4 === 0):
+            return "items-divisible-by-4";
+        case ($nr % 3 === 0 && $nr % 7 !== 0):
+            return "items-divisible-by-3";
+        case ($nr % 2 === 0):
+            return "items-divisible-by-2";
+        case 1:
+            return "items-exactly-1";
+        default:
+            return "items-default";
+    }
+}
+
 
 function renderImage($src, $popup = false) {
     $imageInfo = getimagesize($src);
@@ -216,7 +261,7 @@ function renderGalleryWebMedia($post_data) {
         $dirs = getDirectoriesInFolder($gallery_path );
 
         if( !empty($gallery) ) {
-            $gallery_media_web_content .= "<ul class='dm-web-media-gallery' data-motion='transition-fade-0' data-duration='0.8s'>";
+            $gallery_media_web_content .= "<ul class='dm-web-media-gallery' data-list-design='".listDesign(count($gallery))."' data-motion='transition-fade-0' data-duration='0.8s'>";
 
             foreach ($gallery as $item) {
                 $image_path = $gallery_path.$item;
@@ -230,7 +275,11 @@ function renderGalleryWebMedia($post_data) {
             $gallery = getImagesInFolder($gallery_path.$dir."/");
 
             if( !empty($gallery) ) {
-              $gallery_media_web_content .= "<ul class='dm-web-media-gallery' data-motion='transition-fade-0' data-duration='0.8s'>";
+              $gallery_media_web_content .= "<ul class='dm-web-media-gallery' data-list-design='".listDesign(count($gallery))."'  ";
+              if ( ($dir == "logo") || ($dir == "favicon") ) {
+                  $gallery_media_web_content .= "data-list-item='logo'";
+              }
+              $gallery_media_web_content .= " data-motion='transition-fade-0' data-duration='0.8s'>";
 
               foreach ($gallery as $item) {
                 $image_path = $gallery_path.$dir."/".$item;
@@ -248,21 +297,68 @@ function renderGalleryWebMedia($post_data) {
     return $gallery_media_web_content;
 }
 
+function renderGalleryWebContent($post_data) {
+    $gallery_web_content = "<div id='web' class='dm-gallery-web-content' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.5s'>";
+
+    if(isset($post_data)) {
+        $gallery_path_web = "web";
+        $gallery_path_web_content = "content-website";
+        $gallery_path_web_desktop = "desktop";
+        $gallery_path_web_phone = "phone";
+        $gallery_web_content_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$gallery_path_web."/".$gallery_path_web_content."/";
+
+        $dirs = getDirectoriesInFolder($gallery_web_content_path);
+        foreach ($dirs as $dir) {
+
+            $gallery_web_content_desktop = $gallery_web_content_path.$dir."/".$gallery_path_web_desktop."/";
+            $gallery_web_content_phone = $gallery_web_content_path.$dir."/".$gallery_path_web_phone."/";
+            if (is_dir($gallery_web_content_desktop)) {
+                $gallery_web = getImagesInFolder($gallery_web_content_desktop );
+            } else {
+                $gallery_web  = [];
+            }
+            if (is_dir($gallery_web_content_phone)) {
+                $gallery_phone = getImagesInFolder($gallery_web_content_phone );
+            } else {
+                $gallery_phone  = [];
+            }
+            $nr_items = count($gallery_web) + count($gallery_phone);
+            $gallery_web_content .= '<ul id="content-web" class="dm-web-gallery" data-list-design="'.listDesign($nr_items).'">';
+            if( !empty($gallery_web) ) {
+                foreach ($gallery_web as $image_web) {
+                    $image_path = $gallery_web_content_desktop.$image_web;
+                    $gallery_web_content .=  "<li class='dm-web-gallery-item gallery-item-web' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderImage($image_path, true)."<div style='background-image: url(\"".$image_path."\")'></div></li>";
+                }
+            }
+            if( !empty($gallery_phone) ) {
+                foreach ($gallery_phone as $image_web) {
+                    $image_path = $gallery_web_content_phone.$image_web;
+                    $gallery_web_content .=  "<li class='dm-web-gallery-item gallery-item-phone' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderImage($image_path, true)."<div style='background-image: url(\"".$image_path."\")'></div></li>";
+                }
+            }
+            $gallery_web_content .= '</ul>';
+        }
+    }
+    $gallery_web_content .= '</div>';
+
+    return $gallery_web_content;
+}
+
 function renderGalleryMedia($post_data) {
     $gallery_media_content = "<div id='photo' class='dm-gallery-media-content' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.5s'>";
 
     if(isset($post_data)) {
         $gallery_path_media = "media";
         $gallery_media_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$gallery_path_media."/";
-
         $directories = glob($gallery_media_path . '*', GLOB_ONLYDIR);
+
         foreach ($directories as $directory) {
             if (is_dir($directory)) {
                 $directoryName = basename($directory);
                 $gallery_items = getImagesInFolder($gallery_media_path.$directoryName );
 
                 if( !empty($gallery_items ) ) {
-                    $gallery_media_content .= "<ul class='dm-media-gallery'>";
+                    $gallery_media_content .= "<ul class='dm-media-gallery' data-list-design='".listDesign(count($gallery_items))."'>";
 
                     foreach ($gallery_items as $gallery_item) {
                         $image_path = $gallery_media_path.$directoryName."/".$gallery_item;
@@ -283,18 +379,35 @@ function renderVideoMedia($post_data) {
     $video_media_content = "<div id='video' class='dm-video-media-content' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.5s'>";
 
     if(isset($post_data)) {
-
         $video_media_path = $GLOBALS['urlPath']."content/vid/".$post_data["post_type"]."/".$post_data["media_path"]."/";
         $video_files = getVideosInFolder($video_media_path);
 
+        $directories = glob($video_media_path . '*', GLOB_ONLYDIR);
+        foreach ($directories as $directory) {
+            if (is_dir($directory)) {
+                $directoryName = basename($directory);
+                $video_items = getVideosInFolder($video_media_path.$directoryName );
+                if( !empty($video_items ) ) {
+
+                    $video_media_content .= "<ul class='dm-media-video' data-list-design='".listDesign(count($video_items))."'>";
+
+                    foreach ($video_items as $video_item) {
+                        $video_path = $video_media_path.$directoryName."/".$video_item;
+                        $video_media_content .=  "<li class='dm-media-video-item' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderVideo($video_path)."</li>";
+                    }
+                    $video_media_content .= "</ul>";
+                }
+            }
+        }
         if( !empty($video_files) ) {
-            $video_media_content .= "<ul class='dm-media-video'>";
+            $video_media_content .= "<ul class='dm-media-video' data-list-design='".listDesign(count($video_files))."'>";
 
             foreach ($video_files as $video_file) {
                 $video_path = $video_media_path.$video_file;
                 $video_media_content .=  "<li class='dm-media-video-item' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderVideo($video_path)."</li>";
 
             }
+
             $video_media_content .= "</ul>";
         }
 
@@ -327,6 +440,79 @@ function renderLogoPost($post_data) {
         $render_content .= renderImage($path_logo);
     }
     return $render_content;
+}
+function renderTextVisualMediaPost($post_type = null, $media_path = null, $tags = null) {
+    $media_string = "";
+    $img_and_video_text = "";
+
+    if (isset($media_path) and isset($post_type)) {
+        $img_path = $GLOBALS['urlPath']."content/img/".$post_type."/".$media_path."/media/";
+        $vid_path = $GLOBALS['urlPath']."content/vid/".$post_type."/".$media_path."/";
+
+        if (file_exists($img_path)) {
+            $nr_img = countFilesInFolder($img_path);
+        } else {
+            $nr_img = 0;
+        }
+
+        if (file_exists($vid_path)) {
+            $nr_vid = countFilesInFolder($vid_path);
+        } else {
+            $nr_vid = 0;
+        }
+
+        if (($nr_img > 0) || ($nr_vid > 0))  {
+            $media_string .= "of ";
+        }
+        if ($nr_img > 0) {
+            $media_string .= $nr_img;
+            if ($nr_img > 1) {
+                $media_string .= " photos";
+            } elseif ($nr_img == 1) {
+                $media_string .= " photo";
+            }
+        }
+        if (($nr_img > 0) && ($nr_vid > 0))  {
+            $media_string .= " and ";
+            $img_and_video_text = " From stunning imagery to engaging videos, each piece is meticulously created to elevate your brand's online presence.";
+        }
+        if ($nr_vid > 0) {
+            $media_string .= $nr_vid;
+            if ($nr_vid > 1) {
+                $media_string .= " videos";
+            } elseif ($nr_vid == 1) {
+            $media_string .= " video";
+            }
+        }
+        if (($nr_img == 0) && ($nr_vid == 0))  {
+            $media_string .= "content";
+        }
+        if (isset($tags)) {
+            $text = "Experience the artistry behind my meticulously crafted media content for this company. Discover a captivating collection ".$media_string." that showcase my expertise in delivering impactful visuals for social media promotion.".$img_and_video_text." Explore the power of my unique visual creations and unlock the potential to captivate your audience.";
+            $text_section = "<p>".$text."</p>";
+            $tags = "";
+            if ($nr_img > 0) {
+                $tags .= '<a class="post-tag" href="#photo">photo</a>';
+            }
+            if ($nr_vid > 0) {
+                $tags .= '<a class="post-tag" href="#video">video</a>';
+            }
+            if (($nr_img > 0) || ($nr_vid > 0)) {
+                $text_section .= '<div class="post-tags" >'.$tags.'</div>';
+            }
+            return $text_section;
+        }
+        else {
+            $text = "Experience the artistry behind my meticulously crafted media content for this company. Discover a captivating collection ".$media_string." that showcase my expertise in delivering impactful visuals for social media promotion.".$img_and_video_text." Explore the power of my unique visual creations and unlock the potential to captivate your audience.";
+            return $text;
+        }
+    } else {
+        $media_string = "photos and videos";
+        $img_and_video_text = "From stunning imagery to engaging videos, each piece is meticulously created to elevate your brand's online presence.";
+        $text = "Experience the artistry behind my meticulously crafted media content for this company. Discover a captivating collection ".$media_string." that showcase my expertise in delivering impactful visuals for social media promotion.".$img_and_video_text." Explore the power of my unique visual creations and unlock the potential to captivate your audience.";
+        return $text;
+    }
+
 }
 
 function removeSpaceAndLowercase($string) {
