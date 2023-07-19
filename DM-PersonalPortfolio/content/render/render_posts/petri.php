@@ -6,13 +6,13 @@ $renderer_sections = new RendererSections();
 $renderer_structure->header();
 
 $post_data = [
-    "display" => "aaa",
+    "display" => "enable",
     "post_type" => "catalog",
     "media_path" => "petri",
     "title" => "Petri",
     "logo" => "logo/logo.png",
     "logo_type" => "png",
-    "description" => "At this project I worked in a team to create a custom theme in Wordpress. My part at this project was to translate content from the Figma project to website elements. I have created blocks, pages with PHP, SCSS, and JSON using:  PhpStorm, GitHub, Prepros, XAMPP.",
+    "description" => "At this project I worked in a team to create a custom theme in Wordpress. My part at this project was to translate content from the Figma project to website elements. I have created blocks, pages with PHP, SCSS, and JSON using:  PhpStorm, GitHub, Prepros, XAMPP. During this project, it was my first time coding PHP using taxonomies, terms, and custom posts within the WordPress environment",
     "categories" => [
                     "Web Development Projects"
                   ],

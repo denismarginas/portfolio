@@ -50,6 +50,11 @@ $knowledge_lists = [
                             'title' => 'PHP'
                         ],
                         [
+                            'icon' => 'tpl',
+                            'url' => 'https://www.smarty.net/docs/en/what.is.smarty.tpl',
+                            'title' => 'TPL Smarty'
+                        ],
+                        [
                             'icon' => 'c++',
                             'url' => 'https://en.wikipedia.org/wiki/C%2B%2B',
                             'title' => 'C++'

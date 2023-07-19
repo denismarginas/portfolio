@@ -27,7 +27,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/xampp-php8.1/htdocs/personal-portfolio/DM-PersonalPortfolio/content/render/render_posts",
+    "last_opened_file_path": "C:/xampp-php8.1/htdocs/personal-portfolio/DM-PersonalPortfolio/themes/dm-theme/assets/scss/templates-design/templates-design-parts",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "watcher.settings",
     "vue.rearranger.settings.migration": "true"
@@ -35,11 +35,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render\render_posts" />
+      <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\themes\dm-theme\assets\scss\templates-design\templates-design-parts" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render\render_sections" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render\render_pages" />
-      <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\themes\dm-theme\assets\scss\templates-design\templates-design-parts" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render\render_elements" />
+      <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render\render_posts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render\render_elements" />
@@ -64,6 +64,7 @@
       <workItem from="1686671785109" duration="101522000" />
       <workItem from="1687949457450" duration="59258000" />
       <workItem from="1688562431970" duration="20955000" />
+      <workItem from="1689406821562" duration="38960000" />
     </task>
     <servers />
   </component>

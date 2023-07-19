@@ -30,7 +30,7 @@ $experience_categories = [
 ?>
 
 
-<section class="dm-experience-categories">
+<section class="dm-experience-categories grid-background-animation">
     <container>
         <ul>
             <?php foreach ($experience_categories as $experience_category) : ?>
