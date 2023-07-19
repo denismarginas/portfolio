@@ -47,6 +47,7 @@
                transition: box-shadow 0.3s;
                padding: var( --dm-spacing-tertiary );
                box-sizing: border-box;
+               aspect-ratio: 1/1;
 
                &:hover {
                  box-shadow: 10px 5px 5px rgba(var( --dm-color-gray-darken-rgb ), 0.6);
@@ -151,13 +152,19 @@
         > li.dm-employ {
           > ul {
             grid-template-columns: repeat(1, 1fr);
+
             > li.work-summary {
               padding: var(--dm-spacing-secondary);
 
               > .work-logo {
-                box-sizing: content-box;
+                box-sizing: border-box;
                 max-width: 70%;
                 max-height: 70%;
+
+                > img {
+                  max-width: 80%;
+                  max-height: 80%;
+                }
               }
             }
             > li.work-details {
@@ -189,7 +196,6 @@
               padding: var(--dm-spacing-primary);
 
               > .work-logo {
-                box-sizing: content-box;
                 padding: var(--dm-spacing-primary);
                 height: auto;
                 max-width: 80%;
@@ -198,7 +204,7 @@
                 > img {
                   width: auto;
                   max-width: 90%;
-                  height: auto%;
+                  height: auto;
                   max-height: 90%;
                 }
               }
