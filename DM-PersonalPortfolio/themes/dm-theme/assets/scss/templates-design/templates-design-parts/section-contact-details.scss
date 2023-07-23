@@ -12,7 +12,7 @@
       display: grid;
       align-items: center;
       grid-template-columns: 2fr 1fr;
-      gap: var(--dm-spacing-secondary);
+      gap: var(--dm-spacing-small);
       padding-bottom: var(--dm-spacing-large);
 
       > .dm-socials {
@@ -50,6 +50,7 @@
     > container {
       > ul {
         grid-template-columns: 1fr 1fr;
+        gap: var(--dm-spacing-secondary);
       }
     }
   }

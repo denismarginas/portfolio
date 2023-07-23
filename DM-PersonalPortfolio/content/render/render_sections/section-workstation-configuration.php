@@ -10,10 +10,10 @@
     </svg>
     <container>
         <ul>
-            <li>
+            <li data-motion="transition-fade-0 transition-slideInRight-0">
                 <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/pc-01.webp"); ?>
             </li>
-            <li>
+            <li data-motion="transition-fade-0 transition-slideInLeft-0">
                 <h2>PC #1 Configuration</h2>
                 <ul>
                     <li><?php SVGRenderer::renderSVG('chevron-right'); ?><a href="#computer-case">Computer Case AQIRYS Antares ARGB</a></li>
@@ -29,57 +29,57 @@
             </li>
         </ul>
         <div class="dm-workstation-components">
-            <div class="component" id="cpu">
+            <div class="component" id="cpu" data-motion="transition-fade-0 transition-slideInRight-0">
                 <div class="component-image">
                     <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/cpu_amd_ryzen_5_7600x_38mb_4.7_5.3ghz_boost.webp"); ?>
                     <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/cpu_amd_ryzen_5_7600x_38mb_4.7_5.3ghz_boost_box.webp"); ?>
                 </div>
                 <span>CPU AMD Ryzen™ 5 7600X 38MB 4.7/5.3GHz Boost</span>
             </div>
-            <div class="component" id="cpu-cooler">
+            <div class="component" id="cpu-cooler" data-motion="transition-fade-0 transition-slideInRight-0">
                 <div class="component-image">
                     <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/cooler_arctic_freezer_34_esports_duo_grey.webp"); ?>
                 </div>
                 <span>Cooler ARCTIC Freezer 34 eSports DUO Grey</span>
             </div>
-            <div class="component" id="gpu">
+            <div class="component" id="gpu" data-motion="transition-fade-0 transition-slideInRight-0">
                 <div class="component-image">
                     <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/gpu_gigabyte_geforce_rtx_3070_gaming_oc_lhr_8gb_gddr6_256_bit.webp"); ?>
                     <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/gpu_gigabyte_geforce_rtx_3070_gaming_oc_lhr_8gb_gddr6_256_bit_box.webp"); ?>
                 </div>
                 <span>GPU GIGABYTE GeForce RTX 3070 OC 8GB GDDR6 256-bit</span>
             </div>
-            <div class="component" id="ram">
+            <div class="component" id="ram" data-motion="transition-fade-0 transition-slideInRight-0">
                 <div class="component-image">
                     <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/ram_kingston_fury_beast_32gb_ddr5_5200mhz_cl40_dual_channel_kit.webp"); ?>
                 </div>
                 <span>RAM Kingston FURY Beast 32GB DDR5 5200MHz CL40 Dual Channel</span>
             </div>
-            <div class="component" id="motherboard">
+            <div class="component" id="motherboard" data-motion="transition-fade-0 transition-slideInRight-0">
                 <div class="component-image">
                     <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/motherboard_asus_tuf_gaming_b650_plus_socket_am5.webp"); ?>
                 </div>
                 <span>Motherboard ASUS TUF GAMING B650-PLUS AM5</span>
             </div>
-            <div class="component" id="computer-case">
+            <div class="component" id="computer-case" data-motion="transition-fade-0 transition-slideInRight-0">
                 <div class="component-image">
                     <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/computer_case_aqirys_antares_argb.webp"); ?>
                 </div>
                 <span>Computer Case AQIRYS Antares ARGB</span>
             </div>
-            <div class="component" id="ssd-sata">
+            <div class="component" id="ssd-sata" data-motion="transition-fade-0 transition-slideInRight-0">
                 <div class="component-image">
                     <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/ssd_gigabyte_480gb_sata_iii_25_inch.webp"); ?>
                 </div>
                 <span>SSD GIGABYTE 480GB SATA-III 2.5 inch</span>
             </div>
-            <div class="component" id="ssd-nv2">
+            <div class="component" id="ssd-nv2" data-motion="transition-fade-0 transition-slideInRight-0">
                 <div class="component-image">
                     <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/ssd_kingston_nv2_1tb_pci_express_40_x4_m2_2280.webp"); ?>
                 </div>
                 <span>SSD Kingston NV2 1TB PCI Express 4.0 x4 M.2 2280</span>
             </div>
-            <div class="component" id="psu">
+            <div class="component" id="psu" data-motion="transition-fade-0 transition-slideInRight-0">
                 <div class="component-image">
                     <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/psu_gigabyte_p850gm_80_plus_gold_850w.webp"); ?>
                 </div>

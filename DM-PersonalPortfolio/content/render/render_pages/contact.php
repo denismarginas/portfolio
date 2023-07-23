@@ -8,6 +8,7 @@ $renderer_structure->header();
 
 $renderer_sections->renderSection('contact-data');
 $renderer_sections->renderSection('resume-data');
+$renderer_sections->renderSection('experience-categories');
 $renderer_sections->renderSection('contact-details');
 
 // Function Footer

@@ -240,13 +240,62 @@
   @media only screen and (max-width: $screen-tablet-medium) {
     > container {
       > ul {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+
+        > .dm-post-item {
+          flex-direction: column;
+
+          > .dm-post-item-details {
+            width: 100%;
+            min-width: 100%;
+          }
+          > .dm-post-item-logo {
+            width: 100%;
+            min-width: 100%;
+            padding: var(--dm-spacing-primary);
+            box-sizing: border-box;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-large) {
+    > container {
+      > ul {
+        gap: var( --dm-spacing-primary );
+
+        > .dm-post-item {
+          padding: var( --dm-spacing-primary );
+
+          > .dm-post-item-details {
+              gap: 8px;
+
+            > .dm-post-item-description {
+              @include limit-line-text(1);
+            }
+            > .dm-post-item-title {
+              text-align: center;
+            }
+            > .dm-post-item-heading {
+              gap: 0 !important;
+
+              > .dm-post-item-title {
+                text-align: center;
+              }
+              > .dm-post-item-website {
+                display: none !important;
+              }
+            }
+          }
+        }
       }
     }
   }
   @media only screen and (max-width: $screen-phone-medium) {
     > container {
       > ul {
+        grid-template-columns: repeat(1, 1fr);
+
         > .dm-post-item {
           flex-direction: column;
 

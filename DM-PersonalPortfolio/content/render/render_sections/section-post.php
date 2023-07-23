@@ -202,8 +202,15 @@ if (!isset($post_data)) {
 
                 <?php if (isset($post_data["employ"]) && !empty($post_data["employ"])) : ?>
                     <p class="post-employ">
-                        <span>Worked at:</span>
-                        <?php echo $post_data["employ"]; ?>
+                        <?php if ($post_data["employ"] == "Freelancer") : ?>
+                            <span>Worked as:</span>
+                        <?php else : ?>
+                            <span>Worked at:</span>
+                        <?php endif; ?>
+                        <a href="employ.html#<?php echo strtolower(str_replace(" ", "-", $post_data["employ"])); ?>" target="_blank">
+                            <?php echo $post_data["employ"]; ?>
+                        </a>
+
                     </p>
                 <?php endif; ?>
 

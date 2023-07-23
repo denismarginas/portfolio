@@ -10,14 +10,14 @@
     </svg>
     <container>
         <ul>
-            <li>
+            <li data-motion="transition-fade-0 transition-slideInRight-0">
 
                 <?php
                 $renderer = new RendererElements();
                 $renderer->renderElement('slider-workstation');
                 ?>
             </li>
-            <li>
+            <li data-motion="transition-fade-0 transition-slideInLeft-0">
                 <h2>PC #1 Accessories</h2>
                 <ul>
                     <li><?php SVGRenderer::renderSVG('chevron-right'); ?><a href="#headset">Headset wireless HyperX Cloud Stinger Core 7.1</a></li>
@@ -30,37 +30,37 @@
             </li>
         </ul>
         <div class="dm-workstation-components">
-            <div class="component" id="headset">
+            <div class="component" id="headset" data-motion="transition-fade-0 transition-slideInRight-0">
                 <div class="component-image">
                     <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/headset_wireless_hyperx_cloud_stinger_core_71.webp"); ?>
                 </div>
                 <span>Headset wireless HyperX Cloud Stinger Core 7.1</span>
             </div>
-            <div class="component" id="mouse">
+            <div class="component" id="mouse" data-motion="transition-fade-0 transition-slideInRight-0">
                 <div class="component-image">
                     <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/mouse_logitech_g203_lightsync_rgb_8000_dpi.webp"); ?>
                 </div>
                 <span>Mouse LOGITECH G203 LIGHTSYNC RGB, 8.000 dpi</span>
             </div>
-            <div class="component" id="keyboard">
+            <div class="component" id="keyboard" data-motion="transition-fade-0 transition-slideInRight-0">
                 <div class="component-image">
                     <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/mechanical_keyboard_logitech_g512_gx_red_linear.webp"); ?>
                 </div>
                 <span>Mechanical Keyboard LOGITECH G512 GX Red Linear</span>
             </div>
-            <div class="component" id="mousepad">
+            <div class="component" id="mousepad" data-motion="transition-fade-0 transition-slideInRight-0">
                 <div class="component-image">
                     <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/mouse_pad_genesis_carbon_700_maxi_cordura.webp"); ?>
                 </div>
                 <span>Mouse Pad GENESIS Carbon 700 Maxi Cordura</span>
             </div>
-            <div class="component" id="speakers">
+            <div class="component" id="speakers" data-motion="transition-fade-0 transition-slideInRight-0">
                 <div class="component-image">
                     <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/speakers_trust_arys_compact_rgb_20_set.webp"); ?>
                 </div>
                 <span>Speakers Trust Arys Compact RGB 2.0 Set</span>
             </div>
-            <div class="component" id="monitor">
+            <div class="component" id="monitor" data-motion="transition-fade-0 transition-slideInRight-0">
                 <div class="component-image">
                     <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/monitor_ips_samsung_odyssey_g5_27_wqhd_165hz.webp"); ?>
                 </div>

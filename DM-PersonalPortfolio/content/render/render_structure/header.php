@@ -19,7 +19,7 @@
                     <a href="home.html">Home</a>
                 </li>
                 <li>
-                    <a href="experience.html">Experience</a>
+                    <a href="about.html">About</a>
                 </li>
                 <li>
                     <a href="catalog.html">Catalog</a>

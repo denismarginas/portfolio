@@ -8,11 +8,11 @@
     <container>
         <ul>
             <li>
-                <h1>WORKSTATION</h1>
-                <h2>PC #1 Setup</h2>
-                <p>Welcome to my personal workstation page! This is the hub of my productivity, where I tackle work projects and pursue personal endeavors. With regular updates and enhancements, I strive to maintain an efficient and inspiring work environment. The most recent update to my setup was in January 2023, and I'm excited to showcase the improvements I've made. Get ready to explore my workstation and discover the tools and setup that fuel my productivity!</p>
+                <h1 data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.6s">WORKSTATION</h1>
+                <h2 data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.8s">PC #1 Setup</h2>
+                <p data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">Welcome to my personal workstation page! This is the hub of my productivity, where I tackle work projects and pursue personal endeavors. With regular updates and enhancements, I strive to maintain an efficient and inspiring work environment. The most recent update to my setup was in January 2023, and I'm excited to showcase the improvements I've made. Get ready to explore my workstation and discover the tools and setup that fuel my productivity!</p>
             </li>
-            <li>
+            <li data-motion="transition-fade-0 transition-slideInLeft-0">
                 <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/pc-00.webp"); ?>
             </li>
         </ul>

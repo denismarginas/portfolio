@@ -16,6 +16,7 @@
     /* ---- Non-Colors ---- */
     --dm-color-black                        : #000000;
     --dm-color-white                        : #FFFFFF;
+    --dm-color-gray-lighten                 : #7e7e7e;
     --dm-color-gray                         : #222222;
     --dm-color-gray-darken                  : #141414;
 
@@ -28,7 +29,8 @@
     /* ---- Non-Colors RGB ---- */
     --dm-color-black-rgb                   : #{hexToRGB( #000000 )};
     --dm-color-white-rgb                   : #{hexToRGB( #FFFFFF )};
-    --dm-color-gray-rgb                    : #{hexToRGB( #4A4B44 )};
+    --dm-color-gray-lighten-rgb            : #{hexToRGB( #7e7e7e )};
+    --dm-color-gray-rgb                    : #{hexToRGB( #222222 )};
     --dm-color-gray-darken-rgb             : #{hexToRGB( #141414 )};
 
     /* ---- Post Colors ---- */

@@ -13,6 +13,7 @@ $renderer_sections->renderSection('web_development_experience');
 $renderer_sections->renderSection('web_development_description');
 
 
+
 // Function Footer
 $renderer_structure->footer();
 

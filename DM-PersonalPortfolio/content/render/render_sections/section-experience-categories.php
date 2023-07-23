@@ -19,8 +19,8 @@ $experience_categories = [
                                 "svg" => "employ"
                             ],
                             [
-                                "type" => "section",
-                                "section" => "#dm-experience-projects",
+                                "type" => "page",
+                                "page" => "experience.html",
                                 "name" => "Projects Experience",
                                 "svg" => "projects"
                             ]
@@ -30,7 +30,7 @@ $experience_categories = [
 ?>
 
 
-<section class="dm-experience-categories grid-background-animation">
+<section class="dm-experience-categories">
     <container>
         <ul>
             <?php foreach ($experience_categories as $experience_category) : ?>
