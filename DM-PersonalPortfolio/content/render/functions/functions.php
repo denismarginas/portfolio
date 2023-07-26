@@ -128,7 +128,7 @@ function listDesign($nr) {
 }
 
 
-function renderImage($src, $popup = false) {
+function renderImage($src, $popup = false, $class = false) {
     $imageInfo = getimagesize($src);
 
     $width = $imageInfo[0];
@@ -139,8 +139,11 @@ function renderImage($src, $popup = false) {
     if (isset($imagePathParts['filename'])) {
         $alt = 'Image: ' . $imagePathParts['filename'];
     }
-
-    $html = '<img src="' . $src . '" width="' . $width . '" height="' . $height . '" alt="' . $alt . '" loading="lazy"';
+    $add_class = "";
+    if (isset($class) and !empty($class)) {
+      $add_class = 'class="'.$class.'" ';
+    }
+    $html = '<img '.$add_class.'src="' . $src . '" width="' . $width . '" height="' . $height . '" alt="' . $alt . '" loading="lazy"';
     if ($popup) {
         $html .= ' data-popup="true"';
     }
@@ -149,9 +152,22 @@ function renderImage($src, $popup = false) {
     return $html;
 }
 
-function renderVideo($src) {
-    $html = '<div class="video-container paused" data-volume-level="high">
-                <div class="video-controls-container">
+function renderVideo($src, $thumbnail = NULL, $thumbnail_bg = NULL) {
+    $html = '<div class="video-container paused" data-volume-level="high">';
+
+    if(isset($thumbnail) && !empty($thumbnail)) {
+      $html .= '<div class="thumbnail"';
+
+      if(isset($thumbnail_bg) && !empty($thumbnail_bg)) {
+        $html .= 'style="background-image: url(\'' . $thumbnail_bg . '\')"';
+
+      }
+      $html .= '>';
+      $html .= renderImage($thumbnail);
+      $html .= '</div>';
+    }
+
+    $html   .= '<div class="video-controls-container">
                   <div class="timeline-container">
                     <div class="timeline">
                         <div class="thumb-indicator"></div>
@@ -368,8 +384,6 @@ function renderGalleryMedia($post_data) {
                 }
             }
         }
-
-
     }
     $gallery_media_content .= '</div>';
     return $gallery_media_content;
@@ -380,6 +394,8 @@ function renderVideoMedia($post_data) {
 
     if(isset($post_data)) {
         $video_media_path = $GLOBALS['urlPath']."content/vid/".$post_data["post_type"]."/".$post_data["media_path"]."/";
+        $logo_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$post_data["logo"];
+        $thumbnail_bg = $GLOBALS['urlPath']."content/img/thumbnails/advertisement-thumbnail.webp";
         $video_files = getVideosInFolder($video_media_path);
 
         $directories = glob($video_media_path . '*', GLOB_ONLYDIR);
@@ -393,7 +409,7 @@ function renderVideoMedia($post_data) {
 
                     foreach ($video_items as $video_item) {
                         $video_path = $video_media_path.$directoryName."/".$video_item;
-                        $video_media_content .=  "<li class='dm-media-video-item' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderVideo($video_path)."</li>";
+                        $video_media_content .=  "<li class='dm-media-video-item' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderVideo($video_path,$logo_path, $thumbnail_bg)."</li>";
                     }
                     $video_media_content .= "</ul>";
                 }
@@ -404,7 +420,7 @@ function renderVideoMedia($post_data) {
 
             foreach ($video_files as $video_file) {
                 $video_path = $video_media_path.$video_file;
-                $video_media_content .=  "<li class='dm-media-video-item' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderVideo($video_path)."</li>";
+                $video_media_content .=  "<li class='dm-media-video-item' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderVideo($video_path,$logo_path, $thumbnail_bg)."</li>";
 
             }
 

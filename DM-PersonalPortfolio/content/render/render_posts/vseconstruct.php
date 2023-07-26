@@ -16,6 +16,12 @@ $post_data = [
     "categories" => [
                     "Visual Media Projects"
                   ],
+    "media_platforms" => [
+        [
+            "name" => "Photopea",
+            "svg" => "photopea"
+        ]
+    ],
     "media_facebook_url" => "https://www.facebook.com/VSEConstruct",
     "employ" => "Pia Soft Product",
     "date" => [

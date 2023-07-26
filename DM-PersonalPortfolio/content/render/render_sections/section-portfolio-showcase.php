@@ -2,10 +2,8 @@
     <container>
         <ul>
             <li data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.4s" data-delay="0s">
-                <?php
-                $videoPath = MediaPath::getUrlPaths()['page'] . 'content/vid/personal-portfolio/personal-portfolio.mp4';
-                VideoRenderer::Video($videoPath);
-                ?>
+                <?php echo renderVideo($GLOBALS['urlPath'].'content/vid/personal-portfolio/personal-portfolio.mp4',
+                  $GLOBALS['urlPath']."content/img/thumbnails/personal-portfolio.webp" ); ?>
 
             </li>
             <li data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.5s" data-delay="0s">

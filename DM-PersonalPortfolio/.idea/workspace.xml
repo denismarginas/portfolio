@@ -27,17 +27,17 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/xampp-php8.1/htdocs/personal-portfolio/DM-PersonalPortfolio/themes/dm-theme/assets/scss/templates-design/templates-design-parts",
+    "last_opened_file_path": "C:/xampp-php8.1/htdocs/personal-portfolio/DM-PersonalPortfolio/content/render/render_pages",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "watcher.settings",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Sass",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render\render_pages" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\themes\dm-theme\assets\scss\templates-design\templates-design-parts" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render\render_sections" />
-      <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render\render_pages" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render\render_elements" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render\render_posts" />
     </key>
@@ -65,10 +65,27 @@
       <workItem from="1687949457450" duration="59258000" />
       <workItem from="1688562431970" duration="20955000" />
       <workItem from="1689406821562" duration="75948000" />
+      <workItem from="1690201883768" duration="3487000" />
+      <workItem from="1690216047234" duration="39837000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/content/render/classes/class-svg-render.php</url>
+          <line>560</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -20,7 +20,7 @@ $about_text = [
             <span data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s" data-delay="0.5s"></span>
         </div>
         <div>
-            <h2 data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.5s">About</h2>
+            <h2 data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.5s">About Me</h2>
             <?php $i = 1; foreach ($about_text as $about_text_item) : ?>
                 <p data-motion="transition-fade-0 transition-slideInLeft-0">
                     <?php echo $about_text_item; ?>

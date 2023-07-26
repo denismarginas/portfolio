@@ -115,6 +115,11 @@ $knowledge_lists = [
                             'title' => 'Photopea'
                         ],
                         [
+                          'icon' => 'xaraphoto',
+                          'url' => 'Xara Photo & Graphic Designer',
+                          'title' => 'Xara Photo'
+                        ],
+                        [
                             'icon' => 'blender',
                             'url' => 'https://www.blender.org/',
                             'title' => 'Blender'

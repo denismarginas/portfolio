@@ -4,7 +4,8 @@
 .dm-experience-categories {
   @include padding-x();
   overflow: hidden;
-
+  background-color: var( --dm-color-highlight-primary );
+  background: radial-gradient(var(--dm-color-highlight-secondary),var(--dm-color-highlight-primary));
 
   > container {
     z-index: 1;

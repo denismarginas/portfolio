@@ -17,6 +17,20 @@ $post_data = [
                     "Visual Media Projects",
                     "Miscellaneous Projects"
                   ],
+    "media_platforms" => [
+        [
+          "name" => "Photopea",
+          "svg" => "photopea"
+        ],
+        [
+          "name" => "Xara Photo & Graphic Designer",
+          "svg" => "xaraphoto"
+        ],
+        [
+          "name" => "Paint.net",
+          "svg" => "paintnet"
+        ],
+    ],
     "employ" => "Unspecified",
     "date" => [
         "date_start" => "06.2021",

@@ -47,6 +47,12 @@ $post_data = [
         ],
     ],
     "media_facebook_url" => "https://www.facebook.com/netex.ro",
+    "media_platforms" => [
+      [
+        "name" => "Photopea",
+        "svg" => "photopea"
+      ]
+    ],
     "employ" => "Netex Romania",
     "date" => [
         "date_start" => "12.2021",

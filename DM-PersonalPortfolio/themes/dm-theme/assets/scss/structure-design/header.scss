@@ -92,14 +92,15 @@
                 @include reset-list();
                 @include flex-row();
                 gap: var( --dm-spacing-secondary );
+                position: relative;
 
-                > li {
+                > li , > li > .dm-submenu > li {
                     > a {
                         @include dm-font-big();
                         --dm-text-big-color: var( --dm-color-white );
                         padding: calc( var( --dm-spacing-primary ) / 3 ) 0;
                     }
-                    :after {
+                    a:after {
                         content: '';
                         display: block;
                         height: 3px;
@@ -111,6 +112,52 @@
                     :hover:after {
                         width: 100%;
                         background: #fff;
+                    }
+                }
+                li > .dm-submenu {
+                    @include border-radius( var( --dm-border-radius-primary ) );
+                    @include reset-list();
+                    @include flex-column();
+                    justify-content: center;
+                    padding: 0;
+                    gap: var( --dm-spacing-primary );
+                    position: absolute;
+                    border: 2px solid var( --dm-color-primary );
+                    background-color: var( --dm-color-secondary );
+                    max-width: 0%;
+                    opacity: 0;
+                    display: none;
+                    margin-top: 4px;
+                    transition: opacity 0.5s, height 0.3s, max-width 0.8s, padding 0.2s;
+                    z-index: 5;
+
+
+                    &:hover {
+                        padding: var( --dm-spacing-primary );
+                        opacity: 1;
+                        height: auto;
+                        max-width: 100%;
+                        display: flex;
+                    }
+                    > li > a {
+                        @include dm-font-medium();
+                        --dm-text-medium-color: var( --dm-color-white );
+                        --dm-text-medium-font-weight: 500;
+
+                        &:after {
+                            height: 2px;
+                            margin-bottom: -2px;
+                        }
+                    }
+                }
+                > li:hover {
+                    > .dm-submenu {
+                        padding: var( --dm-spacing-primary );
+                        opacity: 1;
+                        height: auto;
+                        max-width: 100%;
+                        display: flex;
+                        transition: opacity 0.5s, max-height 0.3s, max-with 0.5s, padding 0.2s;
                     }
                 }
             }
@@ -232,6 +279,30 @@
                 > ul {
                     padding: var( --dm-spacing-medium ) 0;
                     flex-direction: column;
+
+                    > li {
+                        .dm-submenu {
+                            display: flex;
+                            padding: var( --dm-spacing-primary ) 0  ;
+                            opacity: 1;
+                            position: relative;
+                            max-width: 100%;
+                            height: auto;
+                            background-color: transparent;
+                            border: none;
+
+                            &:hover {
+                                height: auto;
+                                padding: var( --dm-spacing-primary ) 0  ;
+                            }
+                        }
+                        &:hover {
+                            .dm-submenu {
+                                height: auto;
+                                padding: var( --dm-spacing-primary ) 0  ;
+                            }
+                        }
+                    }
                 }
                 .dm-search {
                     margin-right: var( --dm-spacing-tertiary  );

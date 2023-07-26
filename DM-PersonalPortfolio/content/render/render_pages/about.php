@@ -8,6 +8,7 @@ $renderer_structure->header();
 
 
 $renderer_sections->renderSection('about', "standard");
+$renderer_sections->renderSection('experience-categories');
 $renderer_sections->renderSection('portfolio-showcase');
 
 // Function Footer

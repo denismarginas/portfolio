@@ -17,21 +17,48 @@
             <ul>
                 <li>
                     <a href="home.html">Home</a>
+                  <ul class="dm-submenu">
+                    <li>
+                      <a href="about.html">About Me</a>
+                    </li>
+                    <li>
+                      <a href="workstation.html">Personal Workstation</a>
+                    </li>
+                  </ul>
                 </li>
                 <li>
-                    <a href="about.html">About</a>
+                    <a href="experience.html">Experience</a>
+                    <ul class="dm-submenu">
+                      <li>
+                        <a href="employ.html">Employ Experience</a>
+                      </li>
+                      <li>
+                        <a href="summary-experience.html">Projects Experience</a>
+                      </li>
+                    </ul>
                 </li>
-                <li>
-                    <a href="catalog.html">Catalog</a>
-                </li>
+              <li>
+                <a href="catalog.html">Catalog</a>
+                <ul class="dm-submenu">
+                  <li>
+                    <a href="web-development-projects.html">Web Development</a>
+                  </li>
+                  <li>
+                    <a href="visual-media-projects.html">Visual Media</a>
+                  </li>
+                  <li>
+                    <a href="miscellaneous-projects.html">Miscellaneous</a>
+                  </li>
+                </ul>
+              </li>
                 <li>
                     <a href="contact.html">Contact</a>
                 </li>
             </ul>
             <div class="dm-menu-utility">
-                <span class="dm-search">
+                <a href="search.html" class="dm-search">
                     <?php SVGRenderer::renderSVG('search'); ?>
-                </span>
+                </a>
                 <label class="dm-toggletheme">
                     <input type="checkbox" id="toggleTheme">
                     <span>

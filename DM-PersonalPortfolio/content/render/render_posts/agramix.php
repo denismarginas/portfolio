@@ -87,6 +87,24 @@ $post_data = [
     "web_development_project" => "Done",
     "media_facebook_url" => "https://www.facebook.com/agramix.mm",
     "media_instagram_url" => "https://www.instagram.com/agramix.ro/",
+    "media_platforms" => [
+      [
+        "name" => "Photopea",
+        "svg" => "photopea"
+      ],
+      [
+        "name" => "Xara Photo & Graphic Designer",
+        "svg" => "xaraphoto"
+      ],
+      [
+        "name" => "Paint.net",
+        "svg" => "paintnet"
+      ],
+      [
+        "name" => "Sony Vegas",
+        "svg" => "sv"
+      ],
+    ],
     "employ" => "Pia Soft Product",
     "date" => [
         "date_start" => "07.2020",

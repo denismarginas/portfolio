@@ -26,6 +26,28 @@ $post_data = [
         ]
     ],
     "web_development_project" => "Done",
+    "media_platforms" => [
+        [
+          "name" => "Photopea",
+          "svg" => "photopea"
+        ],
+        [
+          "name" => "Xara Photo & Graphic Designer",
+          "svg" => "xaraphoto"
+        ],
+        [
+          "name" => "Paint.net",
+          "svg" => "paintnet"
+        ],
+        [
+          "name" => "Sony Vegas",
+          "svg" => "sv"
+        ],
+        [
+          "name" => "After Effects",
+          "svg" => "ae"
+        ],
+    ],
     "media_facebook_url" => "https://www.facebook.com/denismarginas09",
     "media_youtube_url" => "https://www.youtube.com/channel/UCZGb7hnkyawMgnSO9T-rnnQ",
     "media_custom" => [
@@ -81,7 +103,12 @@ $post_content .=  "</div>";
 $post_content .= "</div>";
 $post_content .= renderGalleryMedia($post_data);
 $post_content .= "<div id='video' class='dm-video-media-content' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.5s'>";
-$post_content .= renderVideo(MediaPath::getUrlPaths()['page'] . 'content/vid/personal-portfolio/personal-portfolio.mp4');
+$post_content .= renderVideo(MediaPath::getUrlPaths()['page'] . 'content/vid/personal-portfolio/personal-portfolio.mp4',
+                        $GLOBALS['urlPath']."content/img/thumbnails/personal-portfolio.webp"
+);
+$post_content .= renderVideo(MediaPath::getUrlPaths()['page'] . 'content/vid/personal-workstation/desktop-setup.mp4',
+  $GLOBALS['urlPath']."content/img/thumbnails/desktop-setup.webp"
+);
 $post_content .= "</div>";
 
 

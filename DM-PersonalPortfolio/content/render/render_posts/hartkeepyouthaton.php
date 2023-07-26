@@ -17,6 +17,20 @@ $post_data = [
                     "Visual Media Projects"
                   ],
     "media_facebook_url" => "https://www.facebook.com/atelieruldepalarii",
+    "media_platforms" => [
+      [
+        "name" => "Xara Photo & Graphic Designer",
+        "svg" => "xaraphoto"
+      ],
+      [
+        "name" => "Paint.net",
+        "svg" => "paintnet"
+      ],
+      [
+        "name" => "Sony Vegas",
+        "svg" => "sv"
+      ]
+    ],
     "employ" => "Pia Soft Product",
     "date" => [
         "date_start" => "02.2020",

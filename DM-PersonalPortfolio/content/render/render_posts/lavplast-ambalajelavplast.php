@@ -50,6 +50,16 @@ $post_data = [
         ]
     ],
     "web_development_project" => "Done",
+    "media_platforms" => [
+        [
+          "name" => "Xara Photo & Graphic Designer",
+          "svg" => "xaraphoto"
+        ],
+        [
+          "name" => "Paint.net",
+          "svg" => "paintnet"
+        ],
+    ],
     "employ" => "Pia Soft Product",
     "date" => [
         "date_start" => "06.2020",

@@ -319,7 +319,17 @@ document.addEventListener("DOMContentLoaded", function() {
         playPauseBtn.addEventListener("click", togglePlay);
         video.addEventListener("click", togglePlay);
         function togglePlay() {
-            video.paused ? video.play() : video.pause();
+            if (video.paused) {
+                video.play();
+                videoContainer.classList.remove("paused");
+                const thumbnailImg = videoContainer.querySelector(".thumbnail");
+                if (thumbnailImg) {
+                    thumbnailImg.style.display = "none";
+                }
+            } else {
+                video.pause();
+                videoContainer.classList.add("paused");
+            }
         }
         video.addEventListener("play", () => {
             videoContainer.classList.remove("paused");

@@ -24,6 +24,21 @@
         width: 100%;
         max-width: 100%;
 
+        > .thumbnail {
+          flex-direction: column;
+          background-color: var(--post_color_background);
+          background-position: center;
+          background-size: cover;
+
+          > img {
+            width: auto;
+            height: auto;
+            max-width: 40%;
+            max-height: 40%;
+            position: relative;
+            transition: max-width 0.3s, max-height 0.3s;
+          }
+        }
         > .video-controls-container {
           > .timeline-container {
             > .timeline {
@@ -35,6 +50,15 @@
               > .thumb-indicator {
                 background-color: var( --post_color_primary );
               }
+            }
+          }
+        }
+        &:hover {
+          > .thumbnail {
+            > img {
+              max-width: 45%;
+              max-height: 45%;
+              transition: max-width 0.3s, max-height 0.3s;
             }
           }
         }

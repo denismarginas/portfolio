@@ -17,6 +17,16 @@ $post_data = [
                     "Visual Media Projects",
                     "Miscellaneous Projects"
                   ],
+    "media_platforms" => [
+      [
+        "name" => "Xara Photo & Graphic Designer",
+        "svg" => "xaraphoto"
+      ],
+      [
+        "name" => "Paint.net",
+        "svg" => "paintnet"
+      ],
+    ],
     "employ" => "Freelancer",
     "date" => [
         "date_start" => "03.2020",

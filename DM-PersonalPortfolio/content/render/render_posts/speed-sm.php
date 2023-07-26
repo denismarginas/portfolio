@@ -17,6 +17,16 @@ $post_data = [
                     "Visual Media Projects"
                   ],
     "employ" => "Pia Soft Product",
+    "media_platforms" => [
+      [
+        "name" => "Xara Photo & Graphic Designer",
+        "svg" => "xaraphoto"
+      ],
+      [
+        "name" => "Paint.net",
+        "svg" => "paintnet"
+      ],
+    ],
     "media_facebook_url" => "https://www.facebook.com/livrariladomiciliuSatuMare",
     "date" => [
         "date_start" => "01.2020",

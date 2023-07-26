@@ -2,12 +2,6 @@
 $experience_categories = [
                             [
                                 "type" => "page",
-                                "page" => "about.html",
-                                "name" => "About Me",
-                                "svg" => "about-me"
-                            ],
-                            [
-                                "type" => "page",
                                 "page" => "workstation.html",
                                 "name" => "Personal Workstation",
                                 "svg" => "workstation"
@@ -21,8 +15,14 @@ $experience_categories = [
                             [
                                 "type" => "page",
                                 "page" => "experience.html",
-                                "name" => "Projects Experience",
+                                "name" => "Summary Experience",
                                 "svg" => "projects"
+                            ],
+                            [
+                              "type" => "page",
+                              "page" => "catalog.html",
+                              "name" => "Projects Experience",
+                              "svg" => "about-me"
                             ]
 
                          ];

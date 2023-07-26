@@ -13,7 +13,7 @@
       display: grid;
       align-items: center;
       grid-template-columns: 2fr 1fr;
-      gap: var( --dm-spacing-secondary );
+      gap: var( --dm-spacing-small );
 
       > li {
         @include flex-column();
@@ -54,6 +54,10 @@
             padding: 6px;
 
             > li {
+              @include flex-row();
+              align-items: center;
+              gap: 6px;
+
               > svg {
                 @include fix-size( 15px );
                 @include svg-color( var( --dm-color-primary ) );
@@ -100,6 +104,7 @@
     > container {
       > ul {
         grid-template-columns: repeat(1, 1fr);
+        gap: var( --dm-spacing-secondary );
       }
     }
     &:after {

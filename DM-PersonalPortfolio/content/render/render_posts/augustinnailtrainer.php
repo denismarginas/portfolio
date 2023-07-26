@@ -18,6 +18,12 @@ $post_data = [
                     "Miscellaneous Projects"
                   ],
     "media_facebook_url" => "https://www.facebook.com/augustin.andradaandreea",
+    "media_platforms" => [
+      [
+        "name" => "Photopea",
+        "svg" => "photopea"
+      ]
+    ],
     "employ" => "Freelancer",
     "date" => [
         "date_start" => "01.2023",

@@ -23,7 +23,8 @@
                 </ul>
             </li>
             <li data-motion="transition-fade-0 transition-slideInLeft-0">
-                <?php echo renderVideo($GLOBALS['urlPath']."content/vid/personal-workstation/desktop-setup.mp4"); ?>
+                <?php echo renderVideo($GLOBALS['urlPath']."content/vid/personal-workstation/desktop-setup.mp4",
+                  $GLOBALS['urlPath']."content/img/thumbnails/desktop-setup.webp" ); ?>
             </li>
         </ul>
     </container>

@@ -60,6 +60,12 @@ $post_data = [
         ]
     ],
     "web_development_project" => "Done",
+    "media_platforms" => [
+      [
+        "name" => "Photopea",
+        "svg" => "photopea"
+      ]
+    ],
     "employ" => "Pia Soft Product",
     "date" => [
         "date_start" => "01.2022",

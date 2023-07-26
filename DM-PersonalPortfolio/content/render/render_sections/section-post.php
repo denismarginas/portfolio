@@ -150,6 +150,33 @@ if (!isset($post_data)) {
                     </p>
                 <?php endif; ?>
 
+                <?php
+                $icons_list = [];
+                if (isset($post_data["web_platform"]) && is_array($post_data["web_platform"])) {
+                  $icons_list = array_merge($icons_list, $post_data["web_platform"]);
+                }
+                if (isset($post_data["web_languages"]) && is_array($post_data["web_languages"])) {
+                  $icons_list = array_merge($icons_list, $post_data["web_languages"]);
+                }
+                if (isset($post_data["web_plugins"]) && is_array($post_data["web_plugins"])) {
+                  $icons_list = array_merge($icons_list, $post_data["web_plugins"]);
+                }
+                ?>
+                <?php if (count($icons_list) > 0) : ?>
+                    <ul class="post-website-icons">
+                        <?php foreach ($icons_list as $icon) : ?>
+                          <?php if (isset($icon["svg"]) && SVGRenderer::hasIcon($icon["svg"])) : ?>
+                              <li>
+                                 <?php SVGRenderer::renderSVG($icon["svg"]); ?>
+                               </li>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php endif; ?>
+
+
+
+
                 <?php if (isset($post_data["media_facebook_url"]) && !empty($post_data["media_facebook_url"])) : ?>
                     <p class="post-media-facebook">
                         <a href="<?php echo addHttps($post_data["media_facebook_url"]); ?>" target="_blank">
@@ -199,6 +226,28 @@ if (!isset($post_data)) {
                         <?php endforeach; ?>
                     </ul>
                 <?php endif; ?>
+
+
+                <?php if (isset($post_data["media_platforms"]) && !empty($post_data["media_platforms"]) && ( count($post_data["media_platforms"]) > 0)) : ?>
+                    <p class="post-media-platforms">
+                      <span>Media Platforms:</span>
+                      <?php for ( $i = 0; $i<count($post_data["media_platforms"]); $i++ ) :
+                        echo $post_data["media_platforms"][$i]["name"];
+                        if( $i < count($post_data["media_platforms"]) - 1 ) :
+                          echo ", ";
+                        endif;
+                      endfor; ?>
+                    </p>
+                      <ul class="post-media-icons">
+                          <?php foreach ($post_data["media_platforms"] as $icon) : ?>
+                              <?php if (isset($icon["svg"]) && SVGRenderer::hasIcon($icon["svg"])) : ?>
+                                  <li>
+                                      <?php SVGRenderer::renderSVG($icon["svg"]); ?>
+                                  </li>
+                              <?php endif; ?>
+                          <?php endforeach; ?>
+                      </ul>
+                  <?php endif; ?>
 
                 <?php if (isset($post_data["employ"]) && !empty($post_data["employ"])) : ?>
                     <p class="post-employ">

@@ -17,6 +17,12 @@ $post_data = [
                     "Visual Media Projects",
                     "Miscellaneous Projects"
                   ],
+    "media_platforms" => [
+      [
+        "name" => "Photopea",
+        "svg" => "photopea"
+      ]
+    ],
     "employ" => "Freelancer",
     "date" => [
         "date_start" => "12.2022",

@@ -57,6 +57,28 @@ $post_data = [
         ]
     ],
     "web_development_project" => "Done",
+    "media_platforms" => [
+        [
+          "name" => "Photopea",
+          "svg" => "photopea"
+        ],
+        [
+          "name" => "Xara Photo & Graphic Designer",
+          "svg" => "xaraphoto"
+        ],
+        [
+          "name" => "Paint.net",
+          "svg" => "paintnet"
+        ],
+        [
+          "name" => "Sony Vegas",
+          "svg" => "sv"
+        ],
+        [
+          "name" => "After Effects",
+          "svg" => "ae"
+        ],
+    ],
     "media_facebook_url" => "www.facebook.com/piasoftproduct",
     "media_youtube_url" => "www.youtube.com/channel/UCtTxge0ZhOW3jVxsXzBaJJg",
     "media_instagram_url" => "www.instagram.com/piasoftproduct/",

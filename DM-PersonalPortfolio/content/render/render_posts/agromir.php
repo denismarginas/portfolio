@@ -77,6 +77,32 @@ $post_data = [
         ]
     ],
     "web_development_project" => "Done",
+    "media_platforms" => [
+      [
+        "name" => "Photopea",
+        "svg" => "photopea"
+      ],
+      [
+        "name" => "Xara Photo & Graphic Designer",
+        "svg" => "xaraphoto"
+      ],
+      [
+        "name" => "Paint.net",
+        "svg" => "paintnet"
+      ],
+      [
+        "name" => "Sony Vegas",
+        "svg" => "sv"
+      ],
+      [
+        "name" => "After Effects",
+        "svg" => "ae"
+      ],
+      [
+        "name" => "Blender",
+        "svg" => "blender"
+      ],
+    ],
     "media_facebook_url" => "https://www.facebook.com/cauciucuriagricole",
     "media_instagram_url" => "https://www.instagram.com/agromir_insta/",
     "employ" => "Pia Soft Product",

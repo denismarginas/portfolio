@@ -17,6 +17,28 @@ $post_data = [
                     "Visual Media Projects"
                   ],
     "media_facebook_url" => "https://www.facebook.com/curseocazionalebusvip",
+    "media_platforms" => [
+      [
+        "name" => "Photopea",
+        "svg" => "photopea"
+      ],
+      [
+        "name" => "Xara Photo & Graphic Designer",
+        "svg" => "xaraphoto"
+      ],
+      [
+        "name" => "Paint.net",
+        "svg" => "paintnet"
+      ],
+      [
+        "name" => "Sony Vegas",
+        "svg" => "sv"
+      ],
+      [
+        "name" => "After Effects",
+        "svg" => "ae"
+      ],
+    ],
     "employ" => "Pia Soft Product",
     "date" => [
         "date_start" => "01.2020",

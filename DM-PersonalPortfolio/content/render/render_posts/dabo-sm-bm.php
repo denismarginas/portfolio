@@ -16,6 +16,20 @@ $post_data = [
     "categories" => [
                     "Visual Media Projects"
                   ],
+    "media_platforms" => [
+      [
+        "name" => "Xara Photo & Graphic Designer",
+        "svg" => "xaraphoto"
+      ],
+      [
+        "name" => "Paint.net",
+        "svg" => "paintnet"
+      ],
+      [
+        "name" => "Sony Vegas",
+        "svg" => "sv"
+      ]
+    ],
     "employ" => "Pia Soft Product",
     "date" => [
         "date_start" => "03.2020",

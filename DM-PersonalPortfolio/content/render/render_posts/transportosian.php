@@ -16,6 +16,16 @@ $post_data = [
     "categories" => [
                     "Visual Media Projects"
                   ],
+  "media_platforms" => [
+    [
+      "name" => "Photopea",
+      "svg" => "photopea"
+    ],
+    [
+      "name" => "Sony Vegas",
+      "svg" => "sv"
+    ]
+  ],
     "employ" => "Pia Soft Product",
     "date" => [
         "date_start" => "06.2021",

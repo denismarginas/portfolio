@@ -81,11 +81,29 @@
               background: radial-gradient( rgba(var(--dm-color-white-rgb) , 0.45), rgba(var(--dm-color-gray-lighten-rgb), 0.45) );
             }
           }
-          @for $i from 1 through 8 {
-            &[data-listing="#{$i}"] {
-              $value: 100 / $i;
-              width: calc(#{$value}% - var( --dm-spacing-secondary ));
-            }
+          &[data-listing="1"] {
+            width: calc(100% - var(--dm-spacing-secondary));
+          }
+          &[data-listing="2"] {
+            width: calc(50% - var(--dm-spacing-secondary));
+          }
+          &[data-listing="3"] {
+            width: calc(33.333% - var(--dm-spacing-secondary));
+          }
+          &[data-listing="4"] {
+            width: calc(25% - var(--dm-spacing-secondary));
+          }
+          &[data-listing="5"] {
+            width: calc(20% - var(--dm-spacing-secondary));
+          }
+          &[data-listing="6"] {
+            width: calc(16.666% - var(--dm-spacing-secondary));
+          }
+          &[data-listing="7"] {
+            width: calc(14.285% - var(--dm-spacing-secondary));
+          }
+          &[data-listing="8"] {
+            width: calc(12.5% - var(--dm-spacing-secondary));
           }
         }
       }

@@ -83,7 +83,22 @@
               color: var( --post_color_primary );
             }
         }
-        > .post-website-platform, > .post-website-languages, > .post-website-modules {
+        > .post-website-icons, > .post-media-icons  {
+          @include reset-list();
+          @include flex-row();
+          flex-wrap: wrap;
+          gap: 6px;
+          padding: calc(var( --dm-spacing-primary ) / 2) 0 ;
+
+          > li {
+            > svg {
+              @include fix-height(20px);
+              width: auto;
+              max-width: 100%;
+            }
+          }
+        }
+        > .post-website-platform, > .post-website-languages, > .post-website-modules, > .post-media-platforms {
           @include dm-font-medium();
 
           > span {
@@ -332,7 +347,7 @@ body, body.theme-light {
           > * {
             --dm-text-default-color: var( --dm-color-gray );
           }
-          > .post-website-platform, > .post-website-languages, > .post-website-modules {
+          > .post-website-platform, > .post-website-languages, > .post-website-modules, > .post-media-platforms {
             --dm-text-medium-color: var( --dm-color-gray );
           }
           > .post-media-facebook,
@@ -407,7 +422,7 @@ body.theme-dark {
           > * {
             --dm-text-default-color: var( --dm-color-white );
           }
-          > .post-website-platform, > .post-website-languages, > .post-website-modules {
+          > .post-website-platform, > .post-website-languages, > .post-website-modules, > .post-media-platforms {
             --dm-text-medium-color: var( --dm-color-white );
           }
           > .post-media-facebook,

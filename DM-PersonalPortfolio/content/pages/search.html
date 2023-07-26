@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="description" content="This is a simple static compact portfolio website.">
+    <title>Denis Marginas - Portfolio</title>
+    <link rel="stylesheet" href="../../themes/dm-theme/assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="../../content/img/favicon/favicon.ico">
+    <script src="../../themes/dm-theme/assets/js/theme_script.js"></script>
+</head><body id="body">
+<header id="header">
+    <section>
+        <div class="dm-logo">
+            <a href="home.html" class="dm-logo-img">
+                <img data="dm-logo-front" width="50" height="50" src="../../content/img/logo/logo.webp" alt="Denis Marginas Personal Icon">
+            </a>
+            <a href="home.html" class="dm-logo-text">
+                <span>Denis</span>
+                <span>Marginas</span>
+            </a>
+        </div>
+        <div class="dm-menu">
+            <ul>
+                <li>
+                    <a href="home.html">Home</a>
+                  <ul class="dm-submenu">
+                    <li>
+                      <a href="about.html">About Me</a>
+                    </li>
+                    <li>
+                      <a href="workstation.html">Personal Workstation</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                    <a href="experience.html">Experience</a>
+                    <ul class="dm-submenu">
+                      <li>
+                        <a href="employ.html">Employ Experience</a>
+                      </li>
+                      <li>
+                        <a href="summary-experience.html">Projects Experience</a>
+                      </li>
+                    </ul>
+                </li>
+              <li>
+                <a href="catalog.html">Catalog</a>
+                <ul class="dm-submenu">
+                  <li>
+                    <a href="web-development-projects.html">Web Development</a>
+                  </li>
+                  <li>
+                    <a href="visual-media-projects.html">Visual Media</a>
+                  </li>
+                  <li>
+                    <a href="miscellaneous-projects.html">Miscellaneous</a>
+                  </li>
+                </ul>
+              </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+            <div class="dm-menu-utility">
+                <a href="search.html" class="dm-search">
+                    <svg data-svg-type="fill" width="20" height="20" viewBox="0 0 256 256">
+                                               <path d="M155.518 23.8866C175.902 23.8866 195.063 31.8249 209.476 46.2373C223.888 60.6498 231.827 79.8112 231.827 100.195C231.827 120.579 223.888 139.74 209.476 154.153C195.063 168.565 175.902 176.503 155.518 176.503C135.134 176.503 115.973 168.565 101.561 154.153C87.1481 139.74 79.2099 120.579 79.2099 100.195C79.2099 79.8112 87.1481 60.6498 101.561 46.2373C115.973 31.8249 135.137 23.8866 155.518 23.8866ZM155.518 1.4066C130.237 1.4066 104.955 11.0505 85.6644 30.3412C47.086 68.9197 47.086 131.47 85.6644 170.049C104.955 189.339 130.237 198.983 155.518 198.983C180.8 198.983 206.081 189.339 225.372 170.049C263.951 131.47 263.951 68.9197 225.372 30.3412C206.084 11.0505 180.8 1.4066 155.518 1.4066Z"/>
+                                               <path d="M12.6466 254.307C9.76915 254.307 6.89452 253.208 4.6971 251.013C0.307882 246.624 0.307882 239.506 4.6971 235.12L85.3132 154.501C89.7052 150.109 96.8201 150.109 101.209 154.501C105.599 158.89 105.599 166.008 101.209 170.394L20.5961 251.013C18.3987 253.208 15.524 254.307 12.6466 254.307Z"/>
+                                               <path d="M135.705 125.592C135.705 122.846 133.479 120.621 130.734 120.621H114.863C112.118 120.621 109.892 122.846 109.892 125.592V146.818C117.476 153.394 126.246 158.191 135.705 160.981V125.592Z"/>
+                                               <path d="M169.164 162.529V105.003C169.164 102.258 166.938 100.032 164.193 100.032H148.322C145.576 100.032 143.351 102.258 143.351 105.003V162.762C147.35 163.465 151.435 163.844 155.58 163.844C160.194 163.841 164.738 163.395 169.164 162.529Z"/>
+                                               <path d="M197.651 71.7212H181.78C179.035 71.7212 176.81 73.9467 176.81 76.6921V160.559C186.31 157.544 195.097 152.503 202.622 145.638V76.6921C202.622 73.9467 200.397 71.7212 197.651 71.7212Z"/>
+                                             </svg>                </a>
+                <label class="dm-toggletheme">
+                    <input type="checkbox" id="toggleTheme">
+                    <span>
+                        <svg data-svg-type="fill" width="30" height="30" viewBox="0 0 30 30">
+                                               <path d="M15 22.1C11 22.1 7.79999 18.9 7.79999 15C7.79999 11 11 7.79999 15 7.79999C18.9 7.79999 22.1 11 22.1 15C22.1 18.9 18.9 22.1 15 22.1Z"/>
+                                               <path d="M9.09999 22C9.09999 22.1333 9.06665 22.2333 8.99999 22.3L5.99999 25.3C5.93332 25.3667 5.83332 25.4 5.69999 25.4C5.56665 25.4 5.46665 25.3333 5.39999 25.2L4.69999 24.6C4.63332 24.4667 4.59999 24.3667 4.59999 24.3C4.53332 24.1667 4.53332 24.0667 4.59999 24L7.69999 20.9C7.76665 20.8333 7.83332 20.8333 7.89999 20.9C8.03332 20.9 8.13332 20.9333 8.19999 21L8.89999 21.7C9.03332 21.7667 9.09999 21.8667 9.09999 22Z"/>
+                                               <path d="M20.9 8.00001C20.9 7.86667 20.9334 7.76667 21 7.70001L24 4.70001C24.0667 4.63334 24.1667 4.60001 24.3 4.60001C24.4334 4.60001 24.5334 4.66667 24.6 4.80001L25.3 5.40001C25.3667 5.53334 25.4 5.63334 25.4 5.70001C25.4667 5.83334 25.4667 5.93334 25.4 6.00001L22.3 9.10001C22.2334 9.16667 22.1667 9.16667 22.1 9.10001C21.9667 9.10001 21.8667 9.06667 21.8 9.00001L21.1 8.30001C20.9667 8.23334 20.9 8.13334 20.9 8.00001Z"/>
+                                               <path d="M20.9 22C20.9 22.1333 20.9334 22.2333 21 22.3L24 25.3C24.0667 25.3667 24.1667 25.4 24.3 25.4C24.4334 25.4 24.5334 25.3333 24.6 25.2L25.3 24.6C25.3667 24.4667 25.4 24.3667 25.4 24.3C25.4667 24.1667 25.4667 24.0667 25.4 24L22.3 20.9C22.2334 20.8333 22.1667 20.8333 22.1 20.9C21.9667 20.9 21.8667 20.9333 21.8 21L21.1 21.7C20.9667 21.7667 20.9 21.8667 20.9 22Z"/>
+                                               <path d="M9.09999 8.00001C9.09999 7.86667 9.06665 7.76667 8.99999 7.70001L5.99999 4.70001C5.93332 4.63334 5.83332 4.60001 5.69999 4.60001C5.56665 4.60001 5.46665 4.66667 5.39999 4.80001L4.69999 5.40001C4.63332 5.53334 4.59999 5.63334 4.59999 5.70001C4.53332 5.83334 4.53332 5.93334 4.59999 6.00001L7.69999 9.10001C7.76665 9.16667 7.83332 9.16667 7.89999 9.10001C8.03332 9.10001 8.13332 9.06667 8.19999 9.00001L8.89999 8.30001C9.03332 8.23334 9.09999 8.13334 9.09999 8.00001Z"/>
+                                               <path d="M15.8 6.10001C15.8667 6.03335 15.9 5.96668 15.9 5.90001V1.50001C15.9 1.43335 15.8667 1.36668 15.8 1.30001C15.7333 1.23335 15.6333 1.20001 15.5 1.20001H14.5C14.3667 1.20001 14.2667 1.23335 14.2 1.30001C14.0667 1.36668 14 1.43335 14 1.50001V5.90001C14 5.96668 14.0667 6.03335 14.2 6.10001C14.2667 6.16668 14.3667 6.20001 14.5 6.20001H15.5C15.6333 6.20001 15.7333 6.16668 15.8 6.10001Z"/>
+                                               <path d="M15.8 23.9C15.8667 23.9667 15.9 24.0333 15.9 24.1V28.5C15.9 28.5667 15.8667 28.6333 15.8 28.7C15.7333 28.7667 15.6333 28.8 15.5 28.8H14.5C14.3667 28.8 14.2667 28.7667 14.2 28.7C14.0667 28.6333 14 28.5667 14 28.5V24.1C14 24.0333 14.0667 23.9667 14.2 23.9C14.2667 23.8333 14.3667 23.8 14.5 23.8H15.5C15.6333 23.8 15.7333 23.8333 15.8 23.9Z"/>
+                                               <path d="M6.10001 15.8C6.03335 15.8667 5.96668 15.9 5.90001 15.9H1.50001C1.43335 15.9 1.36668 15.8667 1.30001 15.8C1.23335 15.7333 1.20001 15.6333 1.20001 15.5V14.5C1.20001 14.3667 1.23335 14.2667 1.30001 14.2C1.36668 14.0667 1.43335 14 1.50001 14H5.90001C5.96668 14 6.03335 14.0667 6.10001 14.2C6.16668 14.2667 6.20001 14.3667 6.20001 14.5V15.5C6.20001 15.6333 6.16668 15.7333 6.10001 15.8Z"/>
+                                               <path d="M23.9 15.8C23.9667 15.8667 24.0333 15.9 24.1 15.9H28.5C28.5667 15.9 28.6333 15.8667 28.7 15.8C28.7667 15.7333 28.8 15.6333 28.8 15.5V14.5C28.8 14.3667 28.7667 14.2667 28.7 14.2C28.6333 14.0667 28.5667 14 28.5 14H24.1C24.0333 14 23.9667 14.0667 23.9 14.2C23.8333 14.2667 23.8 14.3667 23.8 14.5V15.5C23.8 15.6333 23.8333 15.7333 23.9 15.8Z"/>
+                                              </svg>                    </span>
+                </label>
+            </div>
+        </div>
+        <span class="dm-navbar-toggle">
+            <svg data-svg-type="fill" width="21" height="17" viewBox="0 0 21 17" >
+                                              <path d="M0 0.75C0 0.335786 0.335786 0 0.75 0H10.5H20.25C20.6642 0 21 0.335786 21 0.75V0.75C21 1.16421 20.6642 1.5 20.25 1.5H0.75C0.335786 1.5 0 1.16421 0 0.75V0.75Z"/>
+                                              <path d="M0 8.25C0 7.83579 0.335786 7.5 0.75 7.5H10.5H20.25C20.6642 7.5 21 7.83579 21 8.25V8.25C21 8.66421 20.6642 9 20.25 9H0.75C0.335786 9 0 8.66421 0 8.25V8.25Z"/>
+                                              <path d="M0 15.75C0 15.3358 0.335786 15 0.75 15H10.5H20.25C20.6642 15 21 15.3358 21 15.75V15.75C21 16.1642 20.6642 16.5 20.25 16.5H0.75C0.335786 16.5 0 16.1642 0 15.75V15.75Z"/>
+                                            </svg>          </span>
+    </section>
+</header>
+
+<div id="page-content">
+
+</div>            <section class="dm-debug">
+        <span>
+            <a class="btn-render" href="#" data-href="../../content/render/render.php">Render</a>
+            <a class="btn-log" href="#">Log</a>
+        </span>
+        <div class="data-log" style="display: none !important;">
+            <span class="log-close">x</span>
+            <p class="log-header">Log Data:</p>
+            <ul>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-about.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-categories.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-contact-data.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-contact-details.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-debug.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-employ-list.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-experience-categories.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-experience-knowledge.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-portfolio-showcase.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-post-items-media.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-post-items-miscellaneous.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-post-items-web.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-post-items.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-post.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-resume-data.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-web-development-description.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-web-development-experience.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-workstation-accessories.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-workstation-configuration.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-workstation-header.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-workstation-video.html
+</li>
+                                    <li>Rendered render_sections/section-about.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-about.html
+</li>
+                                    <li>Rendered render_sections/section-categories.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-categories.html
+</li>
+                                    <li>Rendered render_sections/section-contact-data.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-contact-data.html
+</li>
+                                    <li>Rendered render_sections/section-contact-details.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-contact-details.html
+</li>
+                                    <li>Rendered render_sections/section-debug.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-debug.html
+</li>
+                                    <li>Rendered render_sections/section-employ-list.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-employ-list.html
+</li>
+                                    <li>Rendered render_sections/section-experience-categories.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-experience-categories.html
+</li>
+                                    <li>Rendered render_sections/section-experience-knowledge.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-experience-knowledge.html
+</li>
+                                    <li>Rendered render_sections/section-portfolio-showcase.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-portfolio-showcase.html
+</li>
+                                    <li>Rendered render_sections/section-post-items-media.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-post-items-media.html
+</li>
+                                    <li>Rendered render_sections/section-post-items-miscellaneous.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-post-items-miscellaneous.html
+</li>
+                                    <li>Rendered render_sections/section-post-items-web.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-post-items-web.html
+</li>
+                                    <li>Rendered render_sections/section-post-items.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-post-items.html
+</li>
+                                    <li>Rendered render_sections/section-post.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-post.html
+</li>
+                                    <li>Rendered render_sections/section-resume-data.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-resume-data.html
+</li>
+                                    <li>Rendered render_sections/section-web-development-description.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-web-development-description.html
+</li>
+                                    <li>Rendered render_sections/section-web-development-experience.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-web-development-experience.html
+</li>
+                                    <li>Rendered render_sections/section-workstation-accessories.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-workstation-accessories.html
+</li>
+                                    <li>Rendered render_sections/section-workstation-configuration.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-workstation-configuration.html
+</li>
+                                    <li>Rendered render_sections/section-workstation-header.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-workstation-header.html
+</li>
+                                    <li>Rendered render_sections/section-workstation-video.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../../themes/dm-theme/templates-html/section-workstation-video.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/aatoysfurnitures.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/about.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/acvaticbebeclub.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/agramix.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/agromir-sh.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/agromir.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/amorino.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/augustinnailtrainer.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/axacompany.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/boneamed.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/brbhome.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/brisascents.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/busvip.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/cadredidactice.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/cafeagano.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/carcondia.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/casadarius-presentation.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/casadarius-shop.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/catalog.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/ceramicevo.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/contact.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/copiatoarealbaiulia.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/covoarealex.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/dabo-sm-bm.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/denismarginas.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/dsautocenter.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/employ.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/experience.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/freymobdesign.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/gamadametal.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/hartkeepyouthaton.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/home.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/ilnicelectric.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/lavplast-ambalajelavplast.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/lavplast-lavmag.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/marasafety.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/masiniinratebaiamare.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/medicalortovit.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/mewi.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/miscellaneous-projects.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/mobilasimexplus.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/mycreativedesign.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/netexromania.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/petri.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/piasoftproduct.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/prismanord.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/promotiimars.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/purstyle.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/reifendirekt.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/resurseeducationale.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/revelnail-romania.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/revistaeducatie.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/roundselfie.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/royalcompass.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/search.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/spalatorieautomatabaiamare.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/specialevents.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/speed-sm.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/strikerproduction.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/summary-experience.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/superbrain.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/tinib.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/transportosian.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/visual-media-projects.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/vreaualpin.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/vseconstruct.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/web-development-projects.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/woodworkart.html
+</li>
+                                    <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/workstation.html
+</li>
+                                    <li>Rendered render_pages/about.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/about.html
+</li>
+                                    <li>Rendered render_pages/catalog.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/catalog.html
+</li>
+                                    <li>Rendered render_pages/contact.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/contact.html
+</li>
+                                    <li>Rendered render_pages/employ.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/employ.html
+</li>
+                                    <li>Rendered render_pages/experience.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/experience.html
+</li>
+                                    <li>Rendered render_pages/home.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/home.html
+</li>
+                                    <li>Rendered render_pages/miscellaneous-projects.php to C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/miscellaneous-projects.html
+</li>
+                            </ul>
+        </div>
+    </section>
+
+
+
+
+
+        <footer id="footer">
+            <section>
+                <div class="dm-footer-contact">
+                    <h5>Contact</h5>
+                    <ul>
+                        <li>
+                            <a href="../../content/cv/cv-2/dm-cv-2-english-public-compressed.pdf" target="_blank">
+                                <svg data-svg-type="fill" viewBox="0 0 320 512">
+                                               <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                                             </svg>                                <svg data-svg-type="fill" width="384" height="486" viewBox="0 0 384 486">
+                                               <path fill-rule="evenodd" clip-rule="evenodd" d="M191.5 0.199991C193.7 0.0999908 199.1 0.699991 203.5 1.49999C208.7 2.39999 214.5 4.39999 220 7.09999C226.6 10.4 230.3 13.1 236.6 19.4C242.6 25.4 245.7 29.5 252.5 43.1L384 43V427H0V43H131.5L135.4 35.2C138.3 29.6 141.6 25.3 147.4 19.4C153.9 12.9 157.2 10.5 164 7.19999C168.7 4.99999 175 2.69999 178 2.09999C181 1.49999 184.4 0.799991 185.5 0.599991C186.6 0.399991 189.3 0.199991 191.5 0.199991ZM177.7 48.8C176.1 50.3 174 53.2 172.9 55.3C171.8 57.5 171 61.1 171 64C171 66.8 171.7 70.7 172.6 72.8C173.4 74.8 175.1 77.6 176.3 78.8C177.5 80.1 180.3 82.1 182.5 83.3C185.1 84.7 188.4 85.4 192 85.4C196 85.4 198.7 84.8 202 83C204.4 81.6 207.8 78.5 209.5 76.2C211.9 72.7 212.6 70.5 212.9 65.7C213.2 60.9 212.8 58.6 211.2 55.5C210.1 53.3 207.9 50.3 206.3 48.8C204.8 47.3 201.8 45.4 199.7 44.6C197.7 43.7 194.1 43 191.7 43C189.4 43.1 185.9 43.8 184 44.6C182.1 45.4 179.2 47.3 177.7 48.8ZM171 155C168.5 156.3 164.2 159.6 161.5 162.4C158.7 165.2 155.2 170.1 153.7 173.2C152.2 176.4 150.5 181.8 149.9 185.2C149.1 189.8 149.1 193.3 149.9 198.5C150.6 202.3 152.4 208.2 154 211.5C155.6 214.8 159 219.7 161.7 222.4C164.3 225.1 169.2 228.6 172.5 230.1C175.8 231.7 181.7 233.6 185.5 234.2C190.9 235.1 194 235.1 199.2 234.2C203 233.5 208.5 231.8 211.6 230.2C214.7 228.7 219.5 225.2 222.2 222.5C224.9 219.7 228.5 214.8 230 211.5C231.6 208.2 233.4 202.6 234 199C234.8 194.3 234.8 190.6 234.1 185.7C233.5 182 231.9 176.6 230.5 173.7C229.1 170.9 225.9 166.1 223.3 163.1C219.9 159.3 216.3 156.7 211 154.1C204.2 150.8 202.8 150.5 193.5 150.3C187.3 150.1 182 150.5 179.5 151.3C177.3 152.1 173.5 153.7 171 155ZM160.5 259.6C156.1 260.5 149.3 262.4 145.5 263.7C141.7 265.1 135.6 267.7 132 269.6C128.4 271.4 122.8 275.4 119.5 278.3C116.2 281.3 112.2 286.1 110.5 289.1C107.7 294.2 107.5 295.2 107.3 307.3L107 320H277C276.5 295.2 276.3 294.2 273.5 289.1C271.8 286.2 268 281.4 265 278.6C261.9 275.8 256.3 271.8 252.5 269.8C248.6 267.8 241.4 264.8 236.5 263.2C231.6 261.5 223.2 259.5 218 258.6C212.8 257.7 203.1 256.8 196.5 256.6C189.9 256.3 180.9 256.5 176.5 257C172.1 257.5 164.9 258.7 160.5 259.6Z" fill="white"/>
+                                             </svg>                                <span>CV English</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../content/cv/cv-2/dm-cv-2-romana-public-compressed.pdf" target="_blank">
+                                <svg data-svg-type="fill" viewBox="0 0 320 512">
+                                               <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                                             </svg>                                <svg data-svg-type="fill" width="384" height="486" viewBox="0 0 384 486">
+                                               <path fill-rule="evenodd" clip-rule="evenodd" d="M191.5 0.199991C193.7 0.0999908 199.1 0.699991 203.5 1.49999C208.7 2.39999 214.5 4.39999 220 7.09999C226.6 10.4 230.3 13.1 236.6 19.4C242.6 25.4 245.7 29.5 252.5 43.1L384 43V427H0V43H131.5L135.4 35.2C138.3 29.6 141.6 25.3 147.4 19.4C153.9 12.9 157.2 10.5 164 7.19999C168.7 4.99999 175 2.69999 178 2.09999C181 1.49999 184.4 0.799991 185.5 0.599991C186.6 0.399991 189.3 0.199991 191.5 0.199991ZM177.7 48.8C176.1 50.3 174 53.2 172.9 55.3C171.8 57.5 171 61.1 171 64C171 66.8 171.7 70.7 172.6 72.8C173.4 74.8 175.1 77.6 176.3 78.8C177.5 80.1 180.3 82.1 182.5 83.3C185.1 84.7 188.4 85.4 192 85.4C196 85.4 198.7 84.8 202 83C204.4 81.6 207.8 78.5 209.5 76.2C211.9 72.7 212.6 70.5 212.9 65.7C213.2 60.9 212.8 58.6 211.2 55.5C210.1 53.3 207.9 50.3 206.3 48.8C204.8 47.3 201.8 45.4 199.7 44.6C197.7 43.7 194.1 43 191.7 43C189.4 43.1 185.9 43.8 184 44.6C182.1 45.4 179.2 47.3 177.7 48.8ZM171 155C168.5 156.3 164.2 159.6 161.5 162.4C158.7 165.2 155.2 170.1 153.7 173.2C152.2 176.4 150.5 181.8 149.9 185.2C149.1 189.8 149.1 193.3 149.9 198.5C150.6 202.3 152.4 208.2 154 211.5C155.6 214.8 159 219.7 161.7 222.4C164.3 225.1 169.2 228.6 172.5 230.1C175.8 231.7 181.7 233.6 185.5 234.2C190.9 235.1 194 235.1 199.2 234.2C203 233.5 208.5 231.8 211.6 230.2C214.7 228.7 219.5 225.2 222.2 222.5C224.9 219.7 228.5 214.8 230 211.5C231.6 208.2 233.4 202.6 234 199C234.8 194.3 234.8 190.6 234.1 185.7C233.5 182 231.9 176.6 230.5 173.7C229.1 170.9 225.9 166.1 223.3 163.1C219.9 159.3 216.3 156.7 211 154.1C204.2 150.8 202.8 150.5 193.5 150.3C187.3 150.1 182 150.5 179.5 151.3C177.3 152.1 173.5 153.7 171 155ZM160.5 259.6C156.1 260.5 149.3 262.4 145.5 263.7C141.7 265.1 135.6 267.7 132 269.6C128.4 271.4 122.8 275.4 119.5 278.3C116.2 281.3 112.2 286.1 110.5 289.1C107.7 294.2 107.5 295.2 107.3 307.3L107 320H277C276.5 295.2 276.3 294.2 273.5 289.1C271.8 286.2 268 281.4 265 278.6C261.9 275.8 256.3 271.8 252.5 269.8C248.6 267.8 241.4 264.8 236.5 263.2C231.6 261.5 223.2 259.5 218 258.6C212.8 257.7 203.1 256.8 196.5 256.6C189.9 256.3 180.9 256.5 176.5 257C172.1 257.5 164.9 258.7 160.5 259.6Z" fill="white"/>
+                                             </svg>                                <span>CV Romanian</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkMKYQyLa4H7yxU7RMUK97urwK5LMvbk-dFs9-wKpCRCO_Ng/viewform" target="_blank">
+                                <svg data-svg-type="fill" viewBox="0 0 320 512">
+                                               <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                                             </svg>                                <svg data-svg-type="fill" width="84" height="84" viewBox="0 0 84 84">
+                                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1L1 0H83L84 1V83H83V84H1V83H0V1ZM34 28H70V16H34V28ZM12 24H28V20H12V24ZM34 52H70V40H34V52ZM12 48H28V44H12V48ZM34 72H42V64H34V72ZM48 70H72V66H48V70ZM0 83L1 84H0V83ZM84 84V83L83 84H84Z" fill="white"/>
+                                              </svg>                                <span>Contact Form</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dm-footer-catalog">
+                    <h5>Catalog</h5>
+                    <ul>
+                        <li>
+                            <a href="web-development-projects.html">
+                                <svg data-svg-type="fill" viewBox="0 0 320 512">
+                                               <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                                             </svg>                                <span>Web Development Projects</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="visual-media-projects.html">
+                                <svg data-svg-type="fill" viewBox="0 0 320 512">
+                                               <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                                             </svg>                                <span>Visual Media Projects</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="miscellaneous-projects.html">
+                                <svg data-svg-type="fill" viewBox="0 0 320 512">
+                                               <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                                             </svg>                                <span>Miscellaneous Projects</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dm-socials-footer">
+                    <h5>Socials</h5>
+                    <div class="dm-socials-list" data-socials="circle-light-2">
+                        <a href="https://www.youtube.com/channel/UCZGb7hnkyawMgnSO9T-rnnQ" target="_blank">
+                            <svg data-svg-type="fill" width="44" height="32" viewBox="0 0 44 32">
+                                               <path d="M41.8984 5.5C41.5 3.30078 39.6016 1.69922 37.3984 1.19922C34.1016 0.5 28 0 21.3984 0C14.8008 0 8.60156 0.5 5.30078 1.19922C3.10156 1.69922 1.19922 3.19922 0.800781 5.5C0.398438 8 0 11.5 0 16C0 20.5 0.398438 24 0.898438 26.5C1.30078 28.6992 3.19922 30.3008 5.39844 30.8008C8.89844 31.5 14.8984 32 21.5 32C28.1016 32 34.1016 31.5 37.6016 30.8008C39.8008 30.3008 41.6992 28.8008 42.1016 26.5C42.5 24 43 20.3984 43.1016 16C42.8984 11.5 42.3984 8 41.8984 5.5ZM16 23V9L28.1992 16L16 23Z" fill="#FF3D00"/>
+                                             </svg>                        </a>
+                        <a href="https://www.facebook.com/denismarginas09" target="_blank">
+                            <svg data-svg-type="fill" width="22" height="42" viewBox="0 0 22 42">
+                                              <path d="M16 -1.10493e-06C10.477 -1.10493e-06 6 4.477 6 10V15H0V23H6V42H14V23H21L22 15H14V11C14 8.791 15.791 7 18 7H22V0.321999C20.091 0.124999 17.921 -0.00400111 16 -1.10493e-06Z" fill="#0573E7"/>
+                                             </svg>                        </a>
+                        <a href="https://www.linkedin.com/in/denismarginas09/" target="_blank">
+                            <svg data-svg-type="fill" width="40" height="38" viewBox="0 0 40 38">
+                                               <path d="M4.421 9H4.473C7.263 9 9 7 9 4.5C8.948 1.945 7.263 0 4.526 0C1.789 0 0 1.945 0 4.5C0 7 1.736 9 4.421 9ZM0 12H9V38H0V12ZM40 21.5C40 16.253 35.747 12 30.5 12C27.447 12 24.738 13.446 23 15.684V12H14V38H23V23C23 20.791 24.791 19 27 19C29.209 19 31 20.791 31 23V38H40C40 38 40 22.955 40 21.5Z" fill="#0288D1"/>
+                                             </svg>                        </a>
+                        <a href="https://twitter.com/DenisMarginas" target="_blank">
+                            <svg data-svg-type="fill" width="37" height="29" viewBox="0 0 37 29">
+                                               <path d="M37 3.429C35.677 4.015 34.254 4.406 32.753 4.591C34.279 3.685 35.453 2.24 36.004 0.533C34.576 1.37 32.994 1.985 31.311 2.309C29.967 0.884 28.05 0 25.926 0C21.846 0 18.539 3.278 18.539 7.32C18.539 7.892 18.606 8.449 18.732 8.99C12.594 8.682 7.15001 5.764 3.50801 1.336C2.86801 2.418 2.50801 3.685 2.50801 5.022C2.50801 7.563 3.80901 9.8 5.79301 11.118C4.58201 11.081 3.44201 10.744 2.44401 10.204C2.44401 10.226 2.44401 10.259 2.44401 10.29C2.44401 13.841 4.99101 16.798 8.36701 17.471C7.75001 17.64 7.09801 17.734 6.42601 17.734C5.94901 17.734 5.48401 17.68 5.03401 17.599C5.97401 20.501 8.70101 22.622 11.932 22.685C9.40401 24.645 6.22001 25.819 2.75801 25.819C2.16001 25.819 1.57501 25.785 0.997009 25.715C4.26801 27.786 8.15201 29 12.321 29C25.906 29 33.338 17.844 33.338 8.166C33.338 7.849 33.328 7.533 33.313 7.221C34.763 6.197 36.013 4.905 37 3.429Z" fill="#03A9F4"/>
+                                             </svg>                        </a>
+                        <a href="https://sites.google.com/view/denis-marginas" target="_blank">
+                            <svg data-svg-type="fill" width="45" height="47" viewBox="0 0 45 47">
+                                               <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.950012H45V46.05H0V0.950012ZM5.55 15.05H39.4V9.40001H5.55V15.05ZM5.55 35.65H28.05V20.65H5.55V35.65ZM33.6 35.75H39.4V20.7H33.6V35.75Z" fill="#3949AB"/>
+                                             </svg>                        </a>
+                        <a href="https://github.com/denismarginas" target="_blank">
+                            <svg data-svg-type="fill" width="40" height="39" viewBox="0 0 40 39">
+                                               <path d="M17.8 0.200015C8.60002 1.20002 1.20002 8.60002 0.200018 17.6C-0.799982 27 4.60002 35.4 12.8 38.6C13.4 38.8 14 38.4 14 37.6V34.4C14 34.4 13.2 34.6 12.2 34.6C9.40002 34.6 8.20002 32.2 8.00002 30.8C7.80002 30 7.40002 29.4 6.80002 28.8C6.20002 28.6 6.00002 28.6 6.00002 28.4C6.00002 28 6.60002 28 6.80002 28C8.00002 28 9.00002 29.4 9.40002 30C10.4 31.6 11.6 32 12.2 32C13 32 13.6 31.8 14 31.6C14.2 30.2 14.8 28.8 16 28C11.4 27 8.00002 24.4 8.00002 20C8.00002 17.8 9.00002 15.6 10.4 14C10.2 13.6 10 12.6 10 11.2C10 10.4 10 9.20002 10.6 8.00002C10.6 8.00002 13.4 8.00002 16.2 10.6C17.2 10.2 18.6 10 20 10C21.4 10 22.8 10.2 24 10.6C26.6 8.00002 29.6 8.00002 29.6 8.00002C30 9.20002 30 10.4 30 11.2C30 12.8 29.8 13.6 29.6 14C31 15.6 32 17.6 32 20C32 24.4 28.6 27 24 28C25.2 29 26 30.8 26 32.6V37.8C26 38.4 26.6 39 27.4 38.8C34.8 35.8 40 28.6 40 20.2C40 8.20002 29.8 -1.19998 17.8 0.200015Z" fill="white"/>
+                                             </svg>                        </a>
+                    </div>
+                </div>
+                <div class="dm-footer-copyrights">
+                    <span class="hide">Begining of the webiste: 04/06/2023</span>
+                    <span>Last update of webiste: 26/07/2023</span>
+                    <span>©All copyrights reserved by Denis Marginas</span>
+                </div>
+            </section>
+        </footer>
+    </body>
+</html>

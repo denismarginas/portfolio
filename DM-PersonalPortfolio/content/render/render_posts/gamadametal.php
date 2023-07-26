@@ -17,6 +17,12 @@ $post_data = [
                     "Visual Media Projects"
                   ],
     "media_facebook_url" => "https://www.facebook.com/gamadametalsrl",
+    "media_platforms" => [
+      [
+        "name" => "Photopea",
+        "svg" => "photopea"
+      ]
+    ],
     "employ" => "Pia Soft Product",
     "date" => [
         "date_start" => "11.2021",

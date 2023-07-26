@@ -51,6 +51,16 @@ $post_data = [
         ]
     ],
     "web_development_project" => "Done",
+    "media_platforms" => [
+      [
+        "name" => "Xara Photo & Graphic Designer",
+        "svg" => "xaraphoto"
+      ],
+      [
+        "name" => "Paint.net",
+        "svg" => "paintnet"
+      ],
+    ],
     "media_facebook_url" => "https://www.facebook.com/producator.mobila.lemn.masiv",
     "employ" => "Pia Soft Product",
     "date" => [
