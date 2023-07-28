@@ -264,16 +264,24 @@
             word-break: break-all;
           }
           > select {
+            max-width: 150px;
+
             > option {
               @include dm-font-medium();
+              --dm-text-medium-color: var( --dm-color-white );
               padding: 4px 8px;
               border: 1px solid var( --dm-color-white );
               background-color: var( --dm-color-primary );
               outline: none;
               word-break: break-all;
 
-              &:hover {
-                background-color: var( --dm-color-secondary );
+              &::selection, &:checked {
+                background-color: var( --dm-color-white );
+                --dm-text-medium-color: var( --dm-color-primary );
+              }
+              &:hover, &:focus {
+                background-color: var( --dm-color-white );
+                --dm-text-medium-color: var( --dm-color-secondary );
               }
             }
           }
@@ -296,6 +304,23 @@
       }
     }
   }
+  @media only screen and (max-width: $screen-desktop-medium) {
+    > container {
+      > #post-list-sort-and-search {
+        > ul {
+          grid-template-columns: repeat(1, 1fr);
+          gap: var( --dm-spacing-primary );
+
+          > li {
+            > select {
+              max-width: unset;
+              width: calc((100%/3) - ( var( --dm-spacing-primary ) /1.5 ) );
+            }
+          }
+        }
+      }
+    }
+  }
   @media only screen and (max-width: $screen-desktop-small) {
     > container {
       > ul {
@@ -309,6 +334,7 @@
           > li {
             > select {
               width: calc((100%/3) - ( var( --dm-spacing-primary ) /1.5 ) );
+              max-width: unset;
 
               &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7) {
                 width: 100%;

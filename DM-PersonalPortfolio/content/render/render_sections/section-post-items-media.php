@@ -22,13 +22,13 @@
                                style="background-color: <?php echo $post_data["colors"]["post_color_background"]; ?>;">
                                 <?php echo renderLogoPost($post_data); ?>
                                 <?php
-                                $web_image_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/media/";
-                                if(file_exists($web_image_path)) :
-                                    $dirs = getDirectoriesInFolder($web_image_path);
+                                $media_image_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/media/";
+                                if(file_exists($media_image_path)) :
+                                    $dirs = getDirectoriesInFolder($media_image_path);
                                     $get_web_image = [];
                                     $dir_image_path ="";
                                     foreach ($dirs as $dir) :
-                                        $get_web_image = getImagesInFolder($web_image_path.$dir."/");
+                                        $get_web_image = getImagesInFolder($media_image_path.$dir."/");
                                         if ( count($get_web_image) > 0) :
                                             $dir_image_path = $dir."/";
                                             break;
@@ -36,7 +36,7 @@
                                     endforeach;
                                     if(!empty( count($get_web_image) > 0 )) :
                                         $web_image = $get_web_image[0];
-                                        echo renderImage($web_image_path.$dir_image_path.$web_image);
+                                        echo renderImage($media_image_path.$dir_image_path.$web_image);
                                     endif;
                                 endif;
                                 ?>

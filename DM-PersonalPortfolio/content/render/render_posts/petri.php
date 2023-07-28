@@ -41,10 +41,6 @@ $post_data = [
             "svg" => "js"
         ],
         [
-            "name" => "jQuery",
-            "svg" => "jquery"
-        ],
-        [
             "name" => "SQL",
             "svg" => "sql"
         ],
