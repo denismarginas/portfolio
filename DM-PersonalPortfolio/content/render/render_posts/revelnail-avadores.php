@@ -8,8 +8,8 @@ $renderer_structure->header();
 $post_data = [
     "display" => "enable",
     "post_type" => "catalog",
-    "media_path" => "revelnail-romania",
-    "title" => "Revel Nail - Romania",
+    "media_path" => "revelnail-avadores",
+    "title" => "Revel Nail - Avadores",
     "logo" => "logo/logo.png",
     "logo_type" => "png",
     "description" => "The online shop for powders, liquids and other nail accessories is made in Prestashop 1.6. On this website, the products are supplied by Revel Nail and sold by Avadores under the name Revel Nail Romania on the Romanian market. It has a shortcut module that has been modified by TPL to display a Facebook login button. Payment can be made with the card through the MobilPay module, which has also been modified by TPL and PHP to deactivate the payment method of this module for some products.",

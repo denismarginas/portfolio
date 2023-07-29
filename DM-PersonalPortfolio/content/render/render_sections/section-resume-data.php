@@ -48,7 +48,7 @@ $cv_text = [
                             <div>
                                 <?php if(isset($cv_item['image'])) : ?>
                                     <span>
-                                        <img width="100" height="141" src="<?php echo $GLOBALS['urlPath'] . $cv_item['image']; ?>" alt="CV Image">
+                                        <img width="100" height="141" src="<?php echo $GLOBALS['urlPath'] . $cv_item['image']; ?>" loading="lazy" data-popup="true" alt="CV Image">
                                         <?php SVGRenderer::renderSVG('resume'); ?>
                                     </span>
                                 <?php endif; ?>

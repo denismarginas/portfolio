@@ -1,0 +1,33 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-summary-experience {
+  > container {
+    .dm-experience-header {
+      @include padding-x();
+      overflow: hidden;
+      background-color: var( --dm-color-primary );
+    }
+    .dm-experience-section {
+      @include padding-x();
+      overflow: hidden;
+
+      > ul {
+        @include reset-list();
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: var( --dm-spacing-small );
+      }
+    }
+  }
+}
+
+body, body.theme-light {
+  .dm-summary-experience {
+
+  }
+}
+body.theme-dark {
+  .dm-summary-experience {
+  }
+}

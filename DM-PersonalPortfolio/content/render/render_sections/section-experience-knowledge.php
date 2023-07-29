@@ -22,7 +22,7 @@ $experience_list = [
 <section class="dm-about dm-experience-knowledge grid-background-animation">
   <container>
     <div data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
-      <img data-motion="transition-fade-0" data-duration="1s" data-delay="0.4s" src="<?php echo $GLOBALS['urlPath']; ?>content/img/personal-images/dm-personal-image-2.webp" width="357px" height="570px" alt="DM - Personal Image">
+      <img data-motion="transition-fade-0" data-duration="1s" data-delay="0.4s" src="<?php echo $GLOBALS['urlPath']; ?>content/img/personal-images/dm-personal-image-0.webp" width="357px" height="570px" alt="DM - Personal Image">
       <?php SVGRenderer::renderSVG('background-shape-1'); ?>
     </div>
     <div>
@@ -43,20 +43,22 @@ $experience_list = [
         $renderer = new RendererElements();
         $renderer->renderElement('knowledge-list-icons');
       ?>
-      <div class="buttons">
-        <a data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.4s" href="summary-experience.html" data-button="primary">
-          <?php SVGRenderer::renderSVG('projects'); ?>
-          <span>Projects Experience</span>
-        </a>
-        <a data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.4s" href="catalog.html" data-button="primary">
-          <?php SVGRenderer::renderSVG('about-me'); ?>
-          <span>Projects Catalog</span>
-        </a>
-        <a data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.4s" href="employ.html" data-button="primary">
-          <?php SVGRenderer::renderSVG('employ'); ?>
-          <span>Employ Experience</span>
-        </a>
-      </div>
+        <?php if( isset($layout) && ( $layout == "standard" )) : ?>
+            <div class="buttons">
+                <a data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.4s" href="summary-experience.html" data-button="primary">
+                    <?php SVGRenderer::renderSVG('projects'); ?>
+                    <span>Projects Experience</span>
+                </a>
+                <a data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.4s" href="catalog.html" data-button="primary">
+                    <?php SVGRenderer::renderSVG('about-me'); ?>
+                    <span>Projects Catalog</span>
+                </a>
+                <a data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.4s" href="employ.html" data-button="primary">
+                    <?php SVGRenderer::renderSVG('employ'); ?>
+                    <span>Employ Experience</span>
+                </a>
+            </div>
+        <?php endif; ?>
     </div>
   </container>
 </section>

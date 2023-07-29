@@ -144,6 +144,11 @@ $knowledge_lists = [
                             'url' => 'https://about.gitlab.com/',
                             'title' => 'Git Lab'
                         ],
+                          [
+                            'icon' => 'chatgpt',
+                            'url' => 'https://chat.openai.com/',
+                            'title' => 'Chat GPT'
+                          ],
 
                    ];
 

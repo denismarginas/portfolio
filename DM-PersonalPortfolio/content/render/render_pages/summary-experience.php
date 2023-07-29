@@ -7,8 +7,8 @@ $renderer_structure->header();
 
 
 
-
-
+$renderer_sections->renderSection('experience-knowledge', "compress");
+$renderer_sections->renderSection('summary-experience');
 
 // Function Footer
 $renderer_structure->footer();

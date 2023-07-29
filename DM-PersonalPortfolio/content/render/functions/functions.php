@@ -24,13 +24,17 @@ function getImagesInFolder($path) {
     $imageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
     $images = [];
 
-    $files = scandir($path);
+    if (is_dir($path)) {
+        $files = scandir($path);
 
-    foreach ($files as $file) {
-        $extension = pathinfo($file, PATHINFO_EXTENSION);
-        if (in_array(strtolower($extension), $imageExtensions)) {
-            $images[] = $file;
+        foreach ($files as $file) {
+            $extension = pathinfo($file, PATHINFO_EXTENSION);
+            if (in_array(strtolower($extension), $imageExtensions)) {
+                $images[] = $file;
+            }
         }
+    } else {
+        return $images;
     }
 
     return $images;
@@ -40,69 +44,89 @@ function getVideosInFolder($path) {
     $videoExtensions = ['webm', 'mp4', 'avi'];
     $videos = [];
 
-    $files = scandir($path);
+    if (is_dir($path)) {
+        $files = scandir($path);
 
-    foreach ($files as $file) {
-        $extension = pathinfo($file, PATHINFO_EXTENSION);
-        if (in_array(strtolower($extension), $videoExtensions)) {
-            $videos[] = $file;
+        foreach ($files as $file) {
+            $extension = pathinfo($file, PATHINFO_EXTENSION);
+            if (in_array(strtolower($extension), $videoExtensions)) {
+                $videos[] = $file;
+            }
         }
+    } else {
+        return $videos;
     }
 
     return $videos;
 }
 
+
 function getFilesInFolder($path) {
     $files = [];
-    $items = scandir($path);
+    if (is_dir($path)) {
+        $items = scandir($path);
 
-    foreach ($items as $item) {
-        $item_path = $path . $item;
+        foreach ($items as $item) {
+            $item_path = $path . $item;
 
-        if (is_file($item_path)) {
-            $files[] = $item;
+            if (is_file($item_path)) {
+                $files[] = $item;
+            }
         }
+    } else {
+        return $files;
     }
 
     return $files;
 }
 
+
 function getDirectoriesInFolder($path) {
-  $directories = [];
-  $items = scandir($path);
+    $directories = [];
+    if (is_dir($path)) {
+        $items = scandir($path);
 
-  foreach ($items as $item) {
-    $item_path = $path . $item;
+        foreach ($items as $item) {
+            $item_path = $path . $item;
 
-    if (is_dir($item_path) && $item !== '.' && $item !== '..') {
-      $directories[] = $item;
+            if (is_dir($item_path) && $item !== '.' && $item !== '..') {
+                $directories[] = $item;
+            }
+        }
+    } else {
+        return $directories;
     }
-  }
 
-  return $directories;
+    return $directories;
 }
+
 
 function countFilesInFolder($folderPath) {
     $fileCount = 0;
 
-    $files = scandir($folderPath);
+    if (is_dir($folderPath)) {
+        $files = scandir($folderPath);
 
-    foreach ($files as $file) {
-        if ($file === '.' || $file === '..') {
-            continue;
+        foreach ($files as $file) {
+            if ($file === '.' || $file === '..') {
+                continue;
+            }
+
+            $filePath = $folderPath . '/' . $file;
+
+            if (is_file($filePath)) {
+                $fileCount++;
+            } elseif (is_dir($filePath)) {
+                $fileCount += countFilesInFolder($filePath);
+            }
         }
-
-        $filePath = $folderPath . '/' . $file;
-
-        if (is_file($filePath)) {
-            $fileCount++;
-        } elseif (is_dir($filePath)) {
-            $fileCount += countFilesInFolder($filePath);
-        }
+    } else {
+        return $fileCount;
     }
 
     return $fileCount;
 }
+
 
 function listDesign($nr) {
     switch ($nr) {
