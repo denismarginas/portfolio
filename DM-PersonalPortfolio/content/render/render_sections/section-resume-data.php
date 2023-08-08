@@ -2,28 +2,32 @@
 $cv_list = [
             [
                 "name" => "Resume #2 English",
-                "image" => "content/cv/cv-2/dm-cv-2-english-public-thumbnail.webp",
+                "thumbnail" => "content/cv/cv-2/dm-cv-2-english-public-thumbnail.webp",
+                "image" => "content/cv/cv-2/dm-cv-2-english-public-compressed.webp",
                 "pdf" => "content/cv/cv-2/dm-cv-2-english-public-compressed.pdf",
                 "date" => "Jun 3, 2023",
                 "description" => "CV - Model 2"
             ],
             [
                 "name" => "Resume #2 Romanian",
-                "image" => "content/cv/cv-2/dm-cv-2-romana-public-thumbnail.webp",
+                "thumbnail" => "content/cv/cv-2/dm-cv-2-romana-public-thumbnail.webp",
+                "image" => "content/cv/cv-2/dm-cv-2-romana-public-compressed.webp",
                 "pdf" => "content/cv/cv-2/dm-cv-2-romana-public-compressed.pdf",
                 "date" => "Jun 3, 2023",
                 "description" => "CV - Model 2"
             ],
             [
                 "name" => "Resume #1 English",
-                "image" => "content/cv/cv-1/dm-cv-1-english-public-thumbnail.webp",
+                "thumbnail" => "content/cv/cv-1/dm-cv-1-english-public-thumbnail.webp",
+                "image" => "content/cv/cv-1/dm-cv-1-english-public-compressed.webp",
                 "pdf" => "content/cv/cv-1/dm-cv-1-english-public-compressed.pdf",
                 "date" => "Jun 3, 2023",
                 "description" => "CV - Model 1"
             ],
             [
                 "name" => "Resume #1 Romanian",
-                "image" => "content/cv/cv-1/dm-cv-1-romana-public-thumbnail.webp",
+                "thumbnail" => "content/cv/cv-1/dm-cv-1-romana-public-thumbnail.webp",
+                "image" => "content/cv/cv-1/dm-cv-1-romana-public-compressed.webp",
                 "pdf" => "content/cv/cv-1/dm-cv-1-romana-public-compressed.pdf",
                 "date" => "Jun 3, 2023",
                 "description" => "CV - Model 1"
@@ -46,9 +50,14 @@ $cv_text = [
                     <?php $i = 1; foreach ($cv_list as $cv_item) : ?>
                         <li class="resume-card" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.<?php echo 1 + $i; ?>s">
                             <div>
-                                <?php if(isset($cv_item['image'])) : ?>
+                                <?php if(isset($cv_item['thumbnail'])) : ?>
                                     <span>
-                                        <img width="100" height="141" src="<?php echo $GLOBALS['urlPath'] . $cv_item['image']; ?>" loading="lazy" data-popup="true" alt="CV Image">
+                                        <?php if(isset($cv_item['image'])) : ?>
+                                            <div class="cv-image-view">
+                                                <?php echo renderImage($GLOBALS['urlPath'].$cv_item['image'], 1); ?>
+                                            </div>
+                                        <?php endif; ?>
+                                        <img width="100" height="141" src="<?php echo $GLOBALS['urlPath'] . $cv_item['thumbnail']; ?>" loading="lazy" alt="CV Image">
                                         <?php SVGRenderer::renderSVG('resume'); ?>
                                     </span>
                                 <?php endif; ?>

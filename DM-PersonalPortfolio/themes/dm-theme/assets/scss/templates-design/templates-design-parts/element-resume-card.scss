@@ -64,6 +64,23 @@
           transition: bottom 0.3s, right 0.3s;
         }
       }
+      .cv-image-view {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        > img {
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+        }
+      }
     }
     > div {
       @include flex-column();

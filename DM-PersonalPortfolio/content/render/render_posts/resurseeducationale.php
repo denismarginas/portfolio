@@ -16,7 +16,7 @@ $post_data = [
     "categories" => [
                     "Web Development Projects"
                   ],
-    "web_url" => "www.revistaeducatie.ro",
+    "web_url" => "www.resurseprofesori.ro",
     "web_platform" => [
                 [
                     "name" => "Wordpress",
