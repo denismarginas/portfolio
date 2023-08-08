@@ -1,9 +1,17 @@
 <?php
+
+$seo = [
+    "title" => "Denis Marginas - Catalog",
+    "description" => "Showcase of projects I have created or I was involved, featuring designs and functionality of media content and websites.",
+    "keywords" => "denis marginas",
+    "slug" => "catalog"
+];
+
 $renderer_structure = new RendererStructure();
 $renderer_sections = new RendererSections();
 
 // Function Header
-$renderer_structure->header();
+$renderer_structure->header($seo);
 
 $categories = ["Web Development Projects", "Visual Media Projects", "Miscellaneous Projects"];
 

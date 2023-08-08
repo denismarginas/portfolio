@@ -1,9 +1,17 @@
 <?php
+
+$seo = [
+    "title" => "Denis Marginas - Visual Media Projects",
+    "description" => "Category: Visual Media Projects. Collection of visually captivating projects showcasing my expertise in graphic design, photo editing, and video production.",
+    "keywords" => "denis marginas visual media projects",
+    "slug" => "visual-media-projects"
+];
+
 $renderer_structure = new RendererStructure();
 $renderer_sections = new RendererSections();
 
 // Function Header
-$renderer_structure->header();
+$renderer_structure->header($seo);
 
 $categories = ["Web Development Projects", "Visual Media Projects", "Miscellaneous Projects"];
 

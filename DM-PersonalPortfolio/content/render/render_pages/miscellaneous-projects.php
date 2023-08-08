@@ -1,9 +1,17 @@
 <?php
+
+$seo = [
+    "title" => "Denis Marginas - Miscellaneous Projects",
+    "description" => "Category: Miscellaneous Projects. Assortment of non-profit initiatives and personal passion projects, reflecting my diverse range of creative endeavors.",
+    "keywords" => "denis marginas miscellaneous projects",
+    "slug" => "miscellaneous-projects"
+];
+
 $renderer_structure = new RendererStructure();
 $renderer_sections = new RendererSections();
 
 // Function Header
-$renderer_structure->header();
+$renderer_structure->header($seo);
 
 $categories = ["Web Development Projects", "Visual Media Projects", "Miscellaneous Projects"];
 

@@ -1,7 +1,7 @@
 <?php
 
 class RendererStructure {
-    public function header() {
+    public function header($seo = []) {
         include 'render_structure/header.php';
         include 'render_structure/body-start.php';
     }

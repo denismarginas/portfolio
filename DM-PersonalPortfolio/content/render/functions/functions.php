@@ -556,7 +556,6 @@ function renderTextVisualMediaPost($post_type = null, $media_path = null, $tags 
 }
 
 function removeSpaceAndLowercase($string) {
-    // Remove spaces between characters
     $string = str_replace(' ', '', $string);
 
     // Convert to lowercase
@@ -590,5 +589,85 @@ function getFirstCharacters($string, $n) {
     return substr($string, 0, $n);
 }
 
+// SEO FUNCTIONS START
+function seo_fields_implicit() {
+    $google_site_verification = "Not set.";
+    $url_domain = get_url();
+    $seo_fields_implicit_structure = [
+        'charset' => '<meta charset="UTF-8">',
+        'viewport' => '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
+        'title' => '<title>Densi Marginas - Portfolio</title>',
+        'description' => '<meta name="description" content="My personal portfolio where are my work projects."/>',
+        'keywords' => '<meta name="keywords" content="denismarginas"/>',
+        'slug' => '<meta name="slug" content=""/>',
+        'google-site-verification' => '<meta name="google-site-verification" content="'.$google_site_verification.'">',
+        'robots' => '<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">',
+        'canonical' => '<link rel="canonical" href="'.$url_domain.'">',
+        'profile' => '<link rel="profile" href="https://gmpg.org/xfn/11">'
 
+    ];
+    return $seo_fields_implicit_structure;
+}
+
+function seo_add_in_tag($seo_data) {
+    $seo_structure = [
+        'title' => '<title>%s</title>',
+        'description' => '<meta name="description" content="%s"/>',
+        'keywords' => '<meta name="keywords" content="%s"/>',
+        'slug' => '<meta name="slug" content="%s"/>'
+    ];
+
+    $seo_new_structure = [];
+
+    foreach ($seo_data as $seo_field => $value) {
+        if (array_key_exists($seo_field, $seo_structure)) {
+            $format = $seo_structure[$seo_field];
+            $tag = sprintf($format, $value);
+            $seo_new_structure[$seo_field] = $tag;
+        }
+    }
+
+    return $seo_new_structure;
+}
+
+function seo_add_in_content($seo_data, $existing_content_html) {
+    $new_seo_fields_content = seo_add_in_tag($seo_data);
+
+    if (isset($new_seo_fields_content["title"])) {
+        $pattern_title = "/<title>.*<\/title>/i"; // Case-insensitive regex pattern
+        $replacement_title = $new_seo_fields_content["title"];
+        $existing_content_html = preg_replace($pattern_title, $replacement_title, $existing_content_html);
+    }
+    if (isset($new_seo_fields_content["description"])) {
+        $pattern_description = "/<meta name=\"description\" content=\".*?\"\/>/i";
+        $replacement_description = $new_seo_fields_content["description"];
+        $existing_content_html = preg_replace($pattern_description, $replacement_description, $existing_content_html);
+    }
+    if (isset($new_seo_fields_content["keywords"])) {
+        $pattern_keywords = "/<meta name=\"keywords\" content=\".*?\"\/>/i";
+        $replacement_keywords = $new_seo_fields_content["keywords"];
+        $existing_content_html = preg_replace($pattern_keywords, $replacement_keywords, $existing_content_html);
+    }
+    if (isset($new_seo_fields_content["slug"])) {
+        $pattern_slug = "/<meta name=\"slug\" content=\".*?\"\/>/i";
+        $replacement_slug = $new_seo_fields_content["slug"];
+        $existing_content_html = preg_replace($pattern_slug, $replacement_slug, $existing_content_html);
+    }
+
+
+    return $existing_content_html;
+}
+
+function get_url() {
+    if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+        $url = "https://";
+    else
+        $url = "http://";
+    $url.= $_SERVER['HTTP_HOST'];
+    $url.= $_SERVER['REQUEST_URI'];
+
+    $url = "http://dm-host.go.ro/personal-portfolio/DM-PersonalPortfolio/";
+    return $url;
+}
+// SEO FUNCTION END
 ?>

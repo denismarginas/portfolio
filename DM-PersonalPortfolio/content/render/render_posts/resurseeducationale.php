@@ -1,9 +1,5 @@
 <?php
-$renderer_structure = new RendererStructure();
-$renderer_sections = new RendererSections();
 
-// Function Header
-$renderer_structure->header();
 
 $post_data = [
     "display" => "enable",
@@ -96,6 +92,20 @@ $post_data = [
         "post_color_text_on_background" => "#FFFFFF"
     ]
 ];
+
+$seo = [
+    "title" => "Denis Marginas - " . $post_data["title"],
+    "description" => $post_data["description"],
+    "keywords" => $post_data["media_path"],
+    "slug" => $post_data["media_path"]
+];
+
+
+$renderer_structure = new RendererStructure();
+$renderer_sections = new RendererSections();
+
+// Function Header
+$renderer_structure->header($seo);
 
 $post_content = "";
 $post_content .= "<h2 id='webdevelopmentprojects' class='dm-post-title-category' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.7s'>Web Development Projects</h2>";

@@ -6,28 +6,36 @@ require_once __DIR__ . '/classes/class-video-render.php';
 require_once __DIR__ . '/functions/functions.php';
 require_once __DIR__ . '/config/config-debug.php';
 
-$sectionPath = __DIR__ . '/../../themes/dm-theme/templates-html/';
-$sectionFiles = glob($sectionPath . '*.html');
-foreach ($sectionFiles as $sectionFile) {
-    unlink($sectionFile);
-    $log[] = "Deleted $sectionFile" . PHP_EOL;
-}
-$sectionFiles = glob('render_sections/*.php');
 
-foreach ($sectionFiles as $sectionFile) {
-    $urlPath = URLPath::getUrlPaths()['template'];
-    $GLOBALS['urlPath'] = $urlPath;
-    $sectionHtmlFileName = basename($sectionFile, '.php') . '.html';
-    ob_start();
-    $renderer_structure = new RendererStructure();
-    $renderer_structure->header();
-    include $sectionFile;
-    $renderer_structure->footer();
-    $sectionOutput = ob_get_clean();
-    $sectionFilePath = $sectionPath . $sectionHtmlFileName;
-    file_put_contents($sectionFilePath, $sectionOutput);
-    $log[] = "Rendered $sectionFile to $sectionFilePath" . PHP_EOL;
+
+
+$htaccessFilePath = __DIR__ . '/../../.htaccess';
+
+if (file_exists($htaccessFilePath)) {
+    unlink($htaccessFilePath);
+    $log[] = "Deleted existing .htaccess file" . PHP_EOL;
 }
+
+// Generate .htaccess file content
+$htaccessContent = "
+
+RewriteEngine On
+
+# Redirect to trailing slash if not present
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|jpeg|gif)$ [NC]
+RewriteRule ^(.*[^/])$ /$1/ [L,R=301]
+
+# Rewrite pretty URLs for pages
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/?$ $1.html [L]
+
+";
+
+// Write .htaccess content to file
+file_put_contents($htaccessFilePath, $htaccessContent);
+$log[] = "Generated .htaccess file" . PHP_EOL;
 
 $pagePath = __DIR__ . '/../pages/';
 $pageFiles = glob($pagePath . '*.html');

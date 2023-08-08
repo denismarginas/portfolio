@@ -1,6 +1,13 @@
 <!doctype html>
 <html lang="en">
-<?php @include("head.php"); ?>
+<?php
+if (isset($seo) && is_array($seo)) {
+    $seoParam = $seo;
+    include "head.php";
+} else {
+    include "head.php";
+}
+?>
 <body id="body">
 <header id="header">
     <section>

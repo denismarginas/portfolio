@@ -1,9 +1,22 @@
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="description" content="This is a simple static compact portfolio website.">
-    <title>Denis Marginas - Portfolio</title>
+    <?php
+    $seo_fields = "";
+
+    foreach ($seo_fields_implicit = seo_fields_implicit() as $seo_field_implicit) :
+        $seo_fields .= $seo_field_implicit;
+    endforeach;
+
+    if (isset($seo)) :
+        $seo_fields = seo_add_in_content($seo, $seo_fields);
+        //$seo_fields = implode(" ",seo_add_in_tag($seo));
+    endif;
+    echo $seo_fields;
+
+    ?>
+
+
     <link rel="stylesheet" href="<?php echo $GLOBALS['urlPath']; ?>themes/dm-theme/assets/css/style.css">
     <link rel="icon" type="image/x-icon" href="<?php echo $GLOBALS['urlPath']; ?>content/img/favicon/favicon.ico">
     <script src="<?php echo $GLOBALS['urlPath']; ?>themes/dm-theme/assets/js/theme_script.js"></script>
 </head>
+
