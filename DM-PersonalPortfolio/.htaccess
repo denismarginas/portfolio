@@ -10,9 +10,5 @@ RewriteRule ^(.*[^/])$ /$1/ [L,R=301]
 # Rewrite pretty URLs for pages
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^/]+)/?$ content/pages/$1.html [L]
-
-# Rewrite CSS files to content/pages/
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)\.css$ content/pages/$1.css [L]
+RewriteRule ^([^/]+)/?$ $1.html [L]
 
