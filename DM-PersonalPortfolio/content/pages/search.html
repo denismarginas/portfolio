@@ -99,32 +99,36 @@
 
 <div id="page-content">
 
-<section class="dm-search grid-background-animation">
+
+<script src="../../themes/dm-theme/assets/js/content-data-index.js"></script>
+<script src="../../themes/dm-theme/assets/js/content-data-search.js"></script>
+
+<section class="dm-search-section grid-background-animation">
     <container>
-        <h1>Search</h1>
-        <form id="search" class="dm-search=bar">
-            <input id="post-keywords" class="post-search" placeholder="Search keywords...">
-            <button id="search-post" type="submit" class="post-search-submit">Search</button>
-        </form>
-        <ul id="search-list">
+        <div class="dm-search-header">
+            <h1>Search</h1>
+            <form id="search" class="dm-search-bar">
+                <div class="search-input">
+                    <input id="post-keywords" class="post-search" placeholder="Search keywords...">
+                    <button id="search-post" type="submit" class="post-search-submit">Search</button>
+                </div>
+                <div id="searched-string-section" class="searched-string-section">
+                    <span class="searched-string">keyword</span>
+                    <span class="searched-delete">
+                        <svg data-svg-type="stroke" width="14" height="14" viewBox="0 0 14 14" >
+                                            <path d="M13 1L1 13M1 1L13 13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>                    </span>
+                </div>
+            </form>
+        </div>
+        <ul id="search-list" class="dm-search-list">
             <li class="search-item">
-                <div class="search-item-image">
-                    <img src="../../content/img/categories/category-photo-visual-media.webp">
-                </div>
+                <a class="search-item-image" href="#">
+                    <img src="../../content/img/placeholder/page-placeholder.svg">
+                </a>
                 <div class="search-item-data">
-                    <h4>Title Page</h4>
-                    <p>This is a short description of meta page.</p>
-                    <button>Open Page</button>
-                </div>
-            </li>
-            <li class="search-item">
-                <div class="search-item-image">
-                    <img src="../../content/img/categories/category-photo-visual-media.webp">
-                </div>
-                <div class="search-item-data">
-                    <h4>Title Page</h4>
-                    <p>This is a short description of meta page.</p>
-                    <button>Open Page</button>
+                    <a class="title" href="#">Title Page</a>
+                    <p class="description">This is a short description of meta page.</p>
                 </div>
             </li>
         </ul>
@@ -139,8 +143,6 @@
             <span class="log-close">x</span>
             <p class="log-header">Log Data:</p>
             <ul>
-                                    <li>Deleted existing .htaccess file
-</li>
                                     <li>Generated .htaccess file
 </li>
                                     <li>Deleted C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render/../pages/aatoysfurnitures.html
@@ -394,7 +396,7 @@
                 </div>
                 <div class="dm-footer-copyrights">
                     <span class="hide">Begining of the webiste: 04/06/2023</span>
-                    <span>Last update of webiste: 09/08/2023</span>
+                    <span>Last update of webiste: 10/08/2023</span>
                     <span>©All copyrights reserved by Denis Marginas</span>
                 </div>
             </section>

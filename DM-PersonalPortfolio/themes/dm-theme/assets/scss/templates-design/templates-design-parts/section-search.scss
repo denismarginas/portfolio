@@ -1,0 +1,150 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-search-section
+{
+  @include padding-x();
+  margin-bottom: var( --dm-spacing-secondary );
+
+  > container {
+    display: grid;
+    gap: var( --dm-spacing-secondary );
+
+    > .dm-search-header {
+      @include flex-column();
+      @include reset-list();
+      @include border-radius( var( --dm-border-radius-primary ) );
+      background-color: var( --dm-color-primary );
+      padding: var( --dm-spacing-secondary );
+
+      > h1 {
+        @include dm-font-heading1();
+        --dm-text-heading1-color: var( --dm-color-white );
+      }
+      > .dm-search-bar {
+        @include flex-column();
+        gap: var( --dm-spacing-primary );
+
+        > .search-input {
+          @include flex-row();
+          gap: var( --dm-spacing-primary );
+
+          > input {
+            @include limit-line-text(1);
+            @include border-radius( var( --dm-border-radius-primary ) );
+            @include dm-font-medium();
+            padding: 4px 8px;
+            border: 2px solid var( --dm-color-white );
+            background-color: var( --dm-color-white );
+            outline: none;
+            word-break: break-all;
+            width: 100%;
+          }
+          > .post-search-submit {
+            @include dm-button();
+            @include dm-font-medium();
+            --dm-text-medium-color: var( --dm-color-white );
+            border: 2px solid var( --dm-color-white );
+            background-color: var( --dm-color-primary );
+            border-radius:  var( --dm-border-radius-primary ) !important;
+
+            &:hover {
+              background-color: var( --dm-color-secondary);
+            }
+          }
+        }
+        > .searched-string-section {
+          @include flex-row();
+          align-items: center;
+          gap: var( --dm-spacing-primary );
+
+          > .searched-string {
+            @include dm-font-medium();
+            --dm-text-medium-color: var( --dm-color-white );
+          }
+          > .searched-delete {
+            @include flex-center();
+            border-radius: 50%;
+            padding: 1px;
+            overflow: hidden;
+            position: relative;
+
+            > svg {
+              @include svg-color(var( --dm-color-white ));
+              @include fix-size(12px);
+              @include border-radius( var( --dm-border-radius-secondary ) );
+              border-color: #ffffff00;
+              border-style: solid;
+              border-width: 2px;
+              padding: 3px;
+              cursor: pointer;
+              transform: rotate(0deg);
+              transition: transform 0.3s, border-color 0.3s;
+
+              &:hover {
+                border-color: var( --dm-color-white );
+                transform: rotate(90deg);
+                transition: transform 0.3s, border-color 0.3s;
+              }
+            }
+          }
+        }
+      }
+    }
+    > .dm-search-list {
+      @include reset-list();
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--dm-spacing-secondary);
+
+      > .search-item {
+        @include flex-column();
+        @include border-radius(var(--dm-border-radius-primary));
+        background-color: rgba(var(--dm-color-gray-lighten-rgb), 0.2);
+        padding: var(--dm-spacing-secondary);
+        gap: var( --dm-spacing-primary );
+
+        > .search-item-image {
+          @include flex-center();
+          overflow: hidden;
+          position: relative;
+          background-color: var(--dm-color-gray-lighten-rgb);
+          aspect-ratio: 16/9;
+
+          > img {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            max-width: 200%;
+            max-height: 200%;
+            transition: min-width 0.3s, min-height 0.3s;
+          }
+        }
+        > .search-item-data {
+          @include flex-column();
+          gap: calc(var( --dm-spacing-primary ) / 3);
+
+          > .title {
+            @include limit-line-text(1);
+            @include dm-font-big();
+            --dm-text-big-font-weight: 600;
+          }
+          > .description {
+            @include limit-line-text(2);
+            @include dm-font-medium();
+          }
+        }
+        &:hover {
+          > .search-item-image {
+            > img {
+              min-width: 103%;
+              min-height: 103%;
+              transition: min-width 0.3s, min-height 0.3s;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -75,9 +75,9 @@
     --dm-transition-svg-stroke : stroke 0.2s ease;
 
     /* ---- Fonts ---- */
-    --dm-font-family           : inherit;
     --dm-font-family-primary   : "Roboto", sans-serif;
     --dm-font-family-secondary : "Gerth", sans-serif;
+    --dm-font-family           : var(--dm-font-family-primary);
 
 
     /* ---- Text Elements ---- */

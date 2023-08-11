@@ -1,8 +1,8 @@
-@import "templates-design-parts/keyframes.scss";
-@import "templates-design-parts/transistions.scss";
+@import "templates-design-parts/action-keyframes";
+@import "templates-design-parts/action-transistions";
 
-@import "templates-design-parts/svg-list.scss";
-@import "templates-design-parts/socials-list.scss";
+@import "templates-design-parts/section-svg-list";
+@import "templates-design-parts/element-socials-list";
 
 @import "templates-design-parts/animation-shine.scss";
 @import "templates-design-parts/animation-ocean.scss";
@@ -42,7 +42,9 @@
 @import "templates-design-parts/section-portfolio-showcase.scss";
 @import "templates-design-parts/section-web-development-experience.scss";
 @import "templates-design-parts/section-web-development-description.scss";
-@import "templates-design-parts/workstation-header.scss";
-@import "templates-design-parts/workstation-configuration.scss";
+@import "templates-design-parts/section-workstation-header";
+@import "templates-design-parts/section-workstation-configuration";
+@import "templates-design-parts/section-search.scss";
+
 
 

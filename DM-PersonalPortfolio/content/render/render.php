@@ -34,7 +34,7 @@ RewriteRule ^([^/]+)/?$ $1.html [L]
 ";
 
 // Write .htaccess content to file
-file_put_contents($htaccessFilePath, $htaccessContent);
+//file_put_contents($htaccessFilePath, $htaccessContent);
 $log[] = "Generated .htaccess file" . PHP_EOL;
 
 $pagePath = __DIR__ . '/../pages/';
@@ -85,4 +85,6 @@ foreach ($log as $log_item) {
     echo "<p>".$log_item."</p>";
 }
 
+// Save Index of Pages
+require_once __DIR__ . '/render_index/index-html-pages.php';
 ?>
