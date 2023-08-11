@@ -97,9 +97,9 @@
         var postListSortAndSearchElement = document.getElementById("post-list-sort-and-search");
 
         if (postListSortAndSearchElement) {
-            console.log("Update the sort elements.");
+            //console.log("Update the sort elements.");
         } else {
-            console.log("Element with id 'post-list-sort-and-search' does not exist.");
+            //console.log("Element with id 'post-list-sort-and-search' does not exist.");
         }
 
         handleSelect("post-category", post_category);

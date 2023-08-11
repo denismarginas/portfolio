@@ -1,7 +1,7 @@
 <?php
 
 $seo = [
-    "title" => "Denis Marginas - Search",
+    "title" => "Search | Denis Marginas",
     "description" => "Search items in the website.",
     "keywords" => "denis marginas",
     "slug" => "search"

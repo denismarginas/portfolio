@@ -419,7 +419,7 @@ function renderVideoMedia($post_data) {
     if(isset($post_data)) {
         $video_media_path = $GLOBALS['urlPath']."content/vid/".$post_data["post_type"]."/".$post_data["media_path"]."/";
         $logo_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$post_data["logo"];
-        $thumbnail_bg = $GLOBALS['urlPath']."content/img/thumbnails/advertisement-thumbnail.webp";
+        $thumbnail_bg = $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp";
         $video_files = getVideosInFolder($video_media_path);
 
         $directories = glob($video_media_path . '*', GLOB_ONLYDIR);

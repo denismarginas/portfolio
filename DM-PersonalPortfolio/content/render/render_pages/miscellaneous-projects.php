@@ -1,7 +1,7 @@
 <?php
 
 $seo = [
-    "title" => "Denis Marginas - Miscellaneous Projects",
+    "title" => "Miscellaneous Projects | Denis Marginas",
     "description" => "Category: Miscellaneous Projects. Assortment of non-profit initiatives and personal passion projects, reflecting my diverse range of creative endeavors.",
     "keywords" => "denis marginas miscellaneous projects",
     "slug" => "miscellaneous-projects"

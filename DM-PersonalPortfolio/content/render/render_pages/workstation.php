@@ -1,7 +1,7 @@
 <?php
 
 $seo = [
-    "title" => "Denis Marginas - Personal Workstation",
+    "title" => "Personal Workstation | Denis Marginas",
     "description" => "Welcome to my personal workstation page! This is the hub of my productivity, where I tackle work projects and pursue personal endeavors.",
     "keywords" => "denis marginas workstation",
     "slug" => "workstation"

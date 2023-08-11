@@ -1,7 +1,7 @@
 <?php
 
 $seo = [
-    "title" => "Denis Marginas - Contact",
+    "title" => "Contact | Denis Marginas",
     "description" => "You can reach me by phone on WhatsApp or through my personal email address. Contact details are provided in the section below.",
     "keywords" => "denis marginas contact",
     "slug" => "contact"

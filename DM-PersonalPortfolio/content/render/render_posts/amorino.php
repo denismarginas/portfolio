@@ -75,7 +75,7 @@ The website, specializing in selling dresses for girls, is built using Prestasho
 ];
 
 $seo = [
-    "title" => "Denis Marginas - " . $post_data["title"],
+    "title" => $post_data["title"]." | Denis Marginas",
     "description" => $post_data["description"],
     "keywords" => $post_data["media_path"],
     "slug" => $post_data["media_path"]

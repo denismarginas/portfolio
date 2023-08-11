@@ -1,7 +1,7 @@
 <?php
 
 $seo = [
-    "title" => "Denis Marginas - Work Experience",
+    "title" => "Work Experience | Denis Marginas",
     "description" => "Experience a captivating journey through my professional work from 2019 to 2023 in this short video. From a captivating intro to web development, photo editing, and video editing, witness my diverse expertise in just under two minutes.",
     "keywords" => "denis marginas work experience",
     "slug" => "experience"

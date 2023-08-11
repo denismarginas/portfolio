@@ -66,7 +66,7 @@ A website has been created using WordPress to provide subscriptions for teaching
 ];
 
 $seo = [
-    "title" => "Denis Marginas - " . $post_data["title"],
+    "title" => $post_data["title"]." | Denis Marginas",
     "description" => $post_data["description"],
     "keywords" => $post_data["media_path"],
     "slug" => $post_data["media_path"]

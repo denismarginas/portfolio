@@ -47,7 +47,7 @@ $experience_list = [
             <div class="buttons">
                 <a data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.4s" href="summary-experience.html" data-button="primary">
                     <?php SVGRenderer::renderSVG('projects'); ?>
-                    <span>Projects Experience</span>
+                    <span>Summary Experience</span>
                 </a>
                 <a data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.4s" href="catalog.html" data-button="primary">
                     <?php SVGRenderer::renderSVG('about-me'); ?>

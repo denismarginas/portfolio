@@ -40,7 +40,7 @@ if (isset($seo) && is_array($seo)) {
                         <a href="employ.html">Employ Experience</a>
                       </li>
                       <li>
-                        <a href="summary-experience.html">Projects Experience</a>
+                        <a href="summary-experience.html">Summary Experience</a>
                       </li>
                     </ul>
                 </li>

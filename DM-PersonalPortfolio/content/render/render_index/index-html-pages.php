@@ -33,10 +33,26 @@ foreach ($htmlFiles as $file) {
         // Remove newline characters and extra spaces
         $content = trim(preg_replace('/\s+/', ' ', $content));
 
+        // Extract the default image
+        $defaultImg = '';
+        $pageContentElement = $dom->getElementById('page-content');
+        if ($pageContentElement) {
+            $images = $pageContentElement->getElementsByTagName('img');
+            foreach ($images as $image) {
+                $src = $image->getAttribute('src');
+                if (preg_match('/\.(webp|jpg)$/i', $src)) {
+                    $defaultImg = $src;
+                    break;
+                }
+            }
+        }
+
         $pageData[] = [
+            'page'=> $file,
             'meta-title' => $title,
             'meta-description' => $metaDescription,
-            'content' => $content
+            'content' => $content,
+            'default-img' => $defaultImg
         ];
     }
 }
