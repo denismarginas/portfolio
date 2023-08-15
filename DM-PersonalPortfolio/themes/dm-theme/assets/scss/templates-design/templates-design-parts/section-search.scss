@@ -5,6 +5,8 @@
   @include padding-x();
   margin-bottom: var( --dm-spacing-secondary );
   min-height: 80vh;
+  position: relative;
+  overflow: hidden;
 
   > container {
     display: grid;

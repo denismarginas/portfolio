@@ -5,7 +5,7 @@
 
 <section class="dm-search-section grid-background-animation">
     <container>
-        <div class="dm-search-header">
+        <div class="dm-search-header" data-motion="transition-fade-0 transition-slideInLeft-0">
             <h1>Search</h1>
             <form id="search" class="dm-search-bar">
                 <div class="search-input">
@@ -20,7 +20,7 @@
                 </div>
             </form>
         </div>
-        <ul id="search-list" class="dm-search-list">
+        <ul id="search-list" class="dm-search-list" data-motion="transition-fade-0 transition-slideInLeft-0">
 
         </ul>
     </container>

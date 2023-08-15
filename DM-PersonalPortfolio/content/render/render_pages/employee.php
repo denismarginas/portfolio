@@ -2,10 +2,10 @@
 
 
 $seo = [
-    "title" => "Employ Experience | Denis Marginas",
+    "title" => "Employee Experience | Denis Marginas",
     "description" => "Explore my professional journey through my employ experience, where I showcase a chronological record of my employment history. Discover insights into my roles, responsibilities, and significant contributions at various companies, along with dates and key attributes.",
-    "keywords" => "denis marginas employ",
-    "slug" => "employ"
+    "keywords" => "denis marginas employee",
+    "slug" => "employee"
 ];
 
 $renderer_structure = new RendererStructure();

@@ -268,8 +268,8 @@
             <select id="post-date-end" name="Until Date:">
                 <option value="default">date</option>
             </select>
-            <select id="post-employ" name="Employ:">
-                <option value="default">employ</option>
+            <select id="post-employ" name="Employee:">
+                <option value="default">employee</option>
             </select>
             <select id="post-web-platform" name="Web Platform">
                 <option value="default">web-platform</option>

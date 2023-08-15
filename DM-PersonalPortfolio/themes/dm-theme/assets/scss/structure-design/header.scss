@@ -86,7 +86,7 @@
             &.navbar-active {
                 left: 0 !important;
                 z-index: 100;
-                overflow: initial;
+                overflow: auto;
             }
             > ul {
                 @include reset-list();
@@ -306,6 +306,9 @@
                 }
                 .dm-search {
                     margin-right: var( --dm-spacing-tertiary  );
+                }
+                .dm-menu-utility {
+                    padding-bottom: var( --dm-spacing-secondary );
                 }
             }
         }

@@ -41,23 +41,23 @@
 // slideInTop
 [data-motion~="transition-slideInTop-0"],
 [data-motion="transition-slideInTop-0"] {
-  transform: translateY(+100vw);
+  transform: translateY(+100vh);
   transition: all 1s;
 }
 [data-motion~="transition-slideInTop-1"],
 [data-motion="transition-slideInTop-1"] {
-  transform: translateY(0vw);
+  transform: translateY(0vh);
   transition: all 1s;
 }
 // slideInBottom
 [data-motion~="transition-slideInBottom-0"],
 [data-motion="transition-slideInBottom-0"] {
-  transform: translateY(+100vw);
+  transform: translateY(+100vh);
   transition: all 1s;
 }
 [data-motion~="transition-slideInBottom-1"],
 [data-motion="transition-slideInBottom-1"] {
-  transform: translateY(0vw);
+  transform: translateY(0vh);
   transition: all 1s;
 }
 
