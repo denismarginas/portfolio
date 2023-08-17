@@ -1,5 +1,10 @@
-<?php $posts = extractDataPosts( __DIR__ . "/../render_posts/" ); ?>
-<?php $search_and_sort_bar = true; ?>
+<?php
+$posts = extractDataPosts( __DIR__ . "/../render_posts/" );
+//usort($posts, "dateStartSortDesc");
+$search_and_sort_bar = true;
+
+?>
+
 
 
 

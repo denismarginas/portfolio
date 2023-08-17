@@ -152,7 +152,7 @@ function listDesign($nr) {
 }
 
 
-function renderImage($src, $popup = false, $class = false) {
+function renderImage($src, $popup = false, $class = false, $lazyLoad = true) {
     $imageInfo = getimagesize($src);
 
     $width = $imageInfo[0];
@@ -167,7 +167,10 @@ function renderImage($src, $popup = false, $class = false) {
     if (isset($class) and !empty($class)) {
       $add_class = 'class="'.$class.'" ';
     }
-    $html = '<img '.$add_class.'src="' . $src . '" width="' . $width . '" height="' . $height . '" alt="' . $alt . '" loading="lazy"';
+    $html = '<img '.$add_class.'src="' . $src . '" width="' . $width . '" height="' . $height . '" alt="' . $alt.'"';
+    if ($lazyLoad) {
+        $html .= ' loading="lazy"';
+    }
     if ($popup) {
         $html .= ' data-popup="true"';
     }
@@ -473,11 +476,11 @@ function renderWallpaperPost($post_data) {
     }
     return $wallpaper_content;
 }
-function renderLogoPost($post_data) {
+function renderLogoPost($post_data, $popup = false, $class = false, $lazyLoad = true) {
     $render_content = "";
     if( ($post_data["logo_type"] == "png") || ($post_data["logo_type"] == "jpg") || ($post_data["logo_type"] == "jpeg") || ($post_data["logo_type"] == "webp")) {
         $path_logo = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$post_data["logo"];
-        $render_content .= renderImage($path_logo);
+        $render_content .= renderImage($path_logo, $popup, $class, $lazyLoad);
     }
     return $render_content;
 }
@@ -670,4 +673,33 @@ function get_url() {
     return $url;
 }
 // SEO FUNCTION END
+
+// POSTS START
+function dateStartSortDesc($a, $b) {
+    $dateA = $a[1]["date"]["date_start"];
+    $dateB = $b[1]["date"]["date_start"];
+
+    // Split the date strings into components
+    list($monthA, $yearA) = explode(".", $dateA);
+    list($monthB, $yearB) = explode(".", $dateB);
+
+    // Convert components to integers for comparison
+    $monthA = intval($monthA);
+    $yearA = intval($yearA);
+    $monthB = intval($monthB);
+    $yearB = intval($yearB);
+
+    // Compare years first
+    if ($yearA !== $yearB) {
+        return $yearB - $yearA; // Compare in reverse order
+    }
+
+    // If years are equal, compare months
+    return $monthB - $monthA; // Compare in reverse order
+}
+
+
+
+// POSTS END
+
 ?>

@@ -1,0 +1,17 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+
+.dm-carousel-posts-list{
+  position: relative;
+  overflow: hidden;
+
+  > container {
+    @include flex-column();
+    gap: var(--dm-spacing-tertiary);
+
+    @media only screen and (max-width: $screen-tablet-medium) {
+      gap: var(--dm-spacing-secondary);
+    }
+  }
+}

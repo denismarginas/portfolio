@@ -35,7 +35,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/xampp-php8.1/htdocs/personal-portfolio/DM-PersonalPortfolio/themes/dm-theme/assets/js",
+    "last_opened_file_path": "C:/xampp-php8.1/htdocs/personal-portfolio/DM-PersonalPortfolio/themes/dm-theme/assets/scss/templates-design/templates-design-parts",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "watcher.settings",
     "vue.rearranger.settings.migration": "true"
@@ -43,15 +43,16 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\themes\dm-theme\assets\js" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\themes\dm-theme\assets\scss\templates-design\templates-design-parts" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render\render_sections" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render\render_elements" />
-      <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render\render_pages" />
+      <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\themes\dm-theme\assets\js" />
+      <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render\render_index" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render" />
+      <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render\render_sections" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render\render_elements" />
+      <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -77,6 +78,7 @@
       <workItem from="1690216047234" duration="40379000" />
       <workItem from="1690536970788" duration="24578000" />
       <workItem from="1691122960876" duration="48874000" />
+      <workItem from="1692180701465" duration="15086000" />
     </task>
     <servers />
   </component>

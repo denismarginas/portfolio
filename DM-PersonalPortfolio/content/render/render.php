@@ -87,4 +87,5 @@ foreach ($log as $log_item) {
 
 // Save Index of Pages
 require_once __DIR__ . '/render_index/index-html-pages.php';
+require_once __DIR__ . '/render_index/index-php-posts.php';
 ?>

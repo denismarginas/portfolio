@@ -1,0 +1,101 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+
+.carousel-list {
+  @include reset-list();
+  @include flex-row();
+  align-items: center;
+  gap: var(--dm-spacing-tertiary);
+
+  &.right-slider {
+    animation: 24s carouselSlideInfiniteRight infinite linear;
+  }
+  &.left-slider {
+    animation: 18s carouselSlideInfiniteLeft infinite linear;
+  }
+  &.web-slider {
+    min-width: 820vw;
+
+    @media only screen and (max-width: $screen-tablet-medium) {
+      min-width: calc(1640vw + var(--dm-spacing-primary));
+      gap: var(--dm-spacing-secondary);
+      animation-duration: 32s;
+
+      > .carousel-item {
+        width: 40vw;
+      }
+    }
+  }
+  &.media-slider {
+    min-width: 420vw;
+
+    @media only screen and (max-width: $screen-tablet-medium) {
+      min-width: calc(840vw + var(--dm-spacing-primary));
+      gap: var(--dm-spacing-secondary);
+      animation-duration: 28s;
+
+      > .carousel-item {
+        width: 40vw;
+      }
+    }
+  }
+  > .carousel-item {
+    width: 20vw;
+    height: auto;
+
+    > .dm-post-item-logo {
+      @include flex-center();
+      padding: var(--dm-spacing-secondary);
+      border-radius: var(--dm-border-radius-primary);
+      background-color: rgba(var(--dm-color-gray-rgb),0.1);
+      aspect-ratio: 1/1;
+
+      > img {
+        &:nth-child(1) {
+          width: auto;
+          max-width: 80%;
+          height: auto;
+          max-height: 70%;
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes carouselSlideInfiniteRight {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(calc(-100% / 2 + (var(--dm-spacing-secondary) * -1)) );
+  }
+}
+
+@keyframes carouselSlideInfiniteLeft {
+  from {
+    transform: translate(calc(-100% / 2 + (var(--dm-spacing-secondary) * -1)) );
+  }
+  to {
+    transform: translate(0%);
+  }
+}
+body, body.theme-light {
+  .carousel-list {
+    > .carousel-item {
+      > .dm-post-item-logo {
+        border: 1px solid rgba(var(--dm-color-gray-lighten-rgb),0.4);
+      }
+    }
+  }
+}
+body.theme-dark {
+  .carousel-list {
+    > .carousel-item {
+      > .dm-post-item-logo {
+        border: 1px solid rgba(var(--dm-color-white-rgb),0.4);
+      }
+    }
+  }
+}
