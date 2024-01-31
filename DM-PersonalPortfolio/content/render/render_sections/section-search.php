@@ -1,7 +1,7 @@
 
 
-<script src="../../themes/dm-theme/assets/js/content-data-index.js"></script>
-<script src="../../themes/dm-theme/assets/js/content-data-search.js"></script>
+<script src="<?php echo $GLOBALS['urlPath'];?>themes/dm-theme/assets/js/content-data-index.js"></script>
+<script src="<?php echo $GLOBALS['urlPath'];?>themes/dm-theme/assets/js/content-data-search.js"></script>
 
 <section class="dm-search-section grid-background-animation">
     <container>

@@ -2,6 +2,7 @@
 $employs = [
                 [
                     "name" => "Pia Soft Product",
+                    "display" => "true",
                     "img" => "content/img/catalog/piasoftproduct/logo/logo.png",
                     "img_bg" => "dark",
                     "url_web" => "https://www.piasoftproduct.com",
@@ -42,6 +43,7 @@ $employs = [
                 ],
                 [
                     "name" => "Netex Romania",
+                    "display" => "true",
                     "img" => "content/img/catalog/netexromania/logo/logo.png",
                     "img_bg" => "light",
                     "url_web" => "https://www.netex.ro",
@@ -73,6 +75,7 @@ $employs = [
                 ],
                 [
                     "name" => "Enlivy",
+                    "display" => "true",
                     "img" => "content/img/catalog/enlivy/logo/logo.png",
                     "img_bg" => "dark",
                     "url_web" => "https://enlivy.ro",
@@ -98,7 +101,61 @@ $employs = [
                         "Utilized Trello for task management and Slack, along with Zoom, for efficient team communication",
                         "Utilized Prepros 7 to compile the SCSS code for streamlined development"
                     ]
-                ]
+                    ],
+                    [
+                        "name" => "Yes Agency",
+                        "display" => "true",
+                        "img" => "content/img/catalog/yesagency/logo/logo.png",
+                        "img_bg" => "light",
+                        "url_web" => "https://yesagency.ro/",
+                        "url_facebook" => "https://www.facebook.com/yesagency.ro",
+                        "url_linkedin" => "https://www.linkedin.com/company/yesagency/",
+                        "date_start" => "31.07.2023",
+                        "date_end" => "04.08.2023",
+                        "work-time-type" => [
+                            [
+                                "name" => "full-time",
+                                "hours" => "8h",
+                                "date_start" => "31.07.2023",
+                                "date_end" => "04.08.2023"
+                            ]
+                        ],
+                        "work-location-type" => [
+                            "On-site"
+                        ],
+                        "function"  => ["Full-Stack Web Developer"],
+                        "work_attributes" => [
+                            "Developing a new website for this company in Wordpress creating a custom theme and Elementor and PHP",
+                            "Creating a custom design for this company website, with animations JS/CSS"
+                        ]
+                        ],
+                        [
+                            "name" => "Mentor Marketing Experts",
+                            "display" => "true",
+                            "img" => "content/img/catalog/mentormarketingexperts/logo/logo.png",
+                            "img_bg" => "light",
+                            "url_web" => "https://mentor-marketing.com/",
+                            "url_linkedin" => "https://www.linkedin.com/company/mentor-marketing-experts/",
+                            "date_start" => "26.01.2024",
+                            "date_end" => "In progress",
+                            "work-time-type" => [
+                                [
+                                    "name" => "full-time",
+                                    "hours" => "8h",
+                                    "date_start" => "26.01.2024",
+                                    "date_end" => "In progress"
+                                ]
+                            ],
+                            "work-location-type" => [
+                                "Remote"
+                            ],
+                            "function"  => ["Web page designer"],
+                            "work_attributes" => [
+                                "Developing websites in Wordpress using Elementor and other addons/plugins for Elementor",
+                                "Translated designs from a Figma project into functional web pages using Elementor",
+                                "Utilized Trello for task management, along with Zoom and Google Meets, for efficient team communication"
+                            ]
+                        ]
           ];
 
 ?>
@@ -107,14 +164,24 @@ $employs = [
 <section class="dm-employs grid-background-animation">
     <container>
         <ul>
-            <?php if( count($employs) > 0 ) : ?>
+        <?php 
+            $employs_list = [];
+
+            foreach ($employs as $employ) {
+                if ($employ["display"] == "true") {
+                    $employs_list[] = $employ;
+                }
+            }
+            ?>
+
+            <?php if( count($employs_list) > 0 ) : ?>
                 <li class="dm-employ-list" data-motion="transition-fade-0 data-duration="0.6s">
                     <?php
                         $total_years = 0;
                         $total_months = 0;
                     ?>
-                    <?php foreach ($employs as $employ) : ?>
-                        <ul data-listing="<?php echo count($employs); ?>">
+                    <?php foreach ($employs_list as $employ) : ?>
+                        <ul data-listing="<?php echo count($employs_list); ?>">
                             <li
                                 <?php if( $employ["img_bg"] == "dark" ) :
                                     echo "data-layout='dark' data-animation='shine'";
@@ -176,7 +243,7 @@ $employs = [
                 </li>
             <?php endif; ?>
 
-            <?php $j = 1; foreach ($employs as $employ) : ?>
+            <?php $j = 1; foreach ($employs_list as $employ) : ?>
                 <li class="dm-employ" id="<?php echo strtolower(str_replace(" ", "-", $employ["name"])); ?>" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.6s" data-delay="<?php echo $j*0.15; ?>s">
                     <ul>
                         <li class="work-summary"

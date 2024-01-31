@@ -1,0 +1,157 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-blog-header {
+  @include padding-x();
+  overflow: hidden;
+
+  > container {
+    @include flex-row();
+    @include flex-center();
+    gap: var( --dm-spacing-large);
+    position: relative;
+    z-index: 1;
+
+    > .dm-blog-user {
+      > .dm-blog-user-wallpaper {
+        @include border-radius( var(--dm-border-radius-secondary) );
+        border-color: var( --dm-color-white);
+        border-width: 12px;
+        border-style: solid;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        height: 600px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 3px 3px 7px #222;
+        margin-bottom: -180px;
+
+        > img {
+          min-width: 100%;
+          width: 100%;
+          height: auto;
+        }
+      }
+      > .dm-blog-user-data {
+        @include padding-x();
+
+        > .dm-blog-user-logo {
+          @include fix-size(360px);
+          @include border-radius(360px);
+          @include flex-center;
+          border-color: var( --dm-color-white);
+          border-width: 12px;
+          border-style: solid;
+          overflow: hidden;
+          position: relative;
+          box-shadow: 3px 3px 7px #222;
+          margin-bottom: var( --dm-spacing-secondary);
+
+          > img {
+            width: 110%;
+            height: auto;
+          }
+        }
+        > .dm-blog-user-name {
+           @include dm-font-heading1();
+          --dm-text-heading1-color: var( --dm-color-white );
+          margin-bottom: var( --dm-spacing-primary);
+        }
+        > .dm-blog-user-description {
+          @include dm-font-big();
+          --dm-text-big-color: var( --dm-color-white );
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-desktop-large) {
+    > container {
+      > .dm-blog-user {
+        > .dm-blog-user-wallpaper {
+          height: 520px;
+          margin-bottom: -130px;
+        }
+        > .dm-blog-user-data {
+          > .dm-blog-user-logo {
+            @include fix-size(260px);
+            @include border-radius(260px);
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-desktop-medium) {
+    > container {
+      > .dm-blog-user {
+        > .dm-blog-user-wallpaper {
+          height: 420px;
+          border-width: 8px;
+          margin-bottom: -90px;
+        }
+        > .dm-blog-user-data {
+          > .dm-blog-user-logo {
+            @include fix-size(180px);
+            @include border-radius(180px);
+            border-width: 8px;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-desktop-small) {
+    > container {
+      > .dm-blog-user {
+        > .dm-blog-user-wallpaper {
+          height: 320px;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-large) {
+    > container {
+      > .dm-blog-user {
+        > .dm-blog-user-wallpaper {
+          height: 270px;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-medium) {
+    > container {
+      > .dm-blog-user {
+        > .dm-blog-user-wallpaper {
+          height: auto;
+          border-width: 4px;
+          margin-bottom: -60px;
+
+          > img {
+            display: block;
+            min-width: 110%;
+            width: 110%;
+          }
+        }
+        > .dm-blog-user-data {
+          @include flex-center();
+          flex-direction: column;
+          text-align: center;
+
+          > .dm-blog-user-logo {
+            @include fix-size(120px);
+            @include border-radius(120px);
+            border-width: 4px;
+            margin-bottom: var( --dm-spacing-primary);
+          }
+          > .dm-blog-user-name {
+            @include dm-font-heading4();
+            --dm-text-heading4-color: var( --dm-color-white );
+          }
+          > .dm-blog-user-description {
+            @include dm-font-small();
+            --dm-text-small-color: var( --dm-color-white );
+          }
+        }
+      }
+    }
+  }
+}

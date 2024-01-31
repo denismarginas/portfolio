@@ -37,10 +37,10 @@ if (isset($seo) && is_array($seo)) {
                     <a href="experience.html">Experience</a>
                     <ul class="dm-submenu">
                       <li>
-                        <a href="employee.html">Employee Experience</a>
+                        <a href="employee.html">Experience as an employee</a>
                       </li>
                       <li>
-                        <a href="summary-experience.html">Summary Experience</a>
+                        <a href="summary-experience.html">Summary of the experience gained</a>
                       </li>
                     </ul>
                 </li>

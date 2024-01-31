@@ -1,6 +1,6 @@
 
-<script src="../../themes/dm-theme/assets/js/content-posts-data-index.js"></script>
-<script src="../../themes/dm-theme/assets/js/content-posts-data-search.js"></script>
+<script src="<?php echo $GLOBALS['urlPath'];?>themes/dm-theme/assets/js/content-posts-data-index.js"></script>
+<script src="<?php echo $GLOBALS['urlPath'];?>themes/dm-theme/assets/js/content-posts-data-search.js"></script>
 
 <form id="post-list-sort-and-search">
     <ul>
