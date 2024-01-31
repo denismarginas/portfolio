@@ -75,19 +75,6 @@ $post_data = [
     ]
 ];
 
-$seo = [
-    "title" => $post_data["title"]." | Denis Marginas",
-    "description" => $post_data["description"],
-    "keywords" => $post_data["media_path"],
-    "slug" => $post_data["media_path"]
-];
-
-
-$renderer_structure = new RendererStructure();
-$renderer_sections = new RendererSections();
-
-// Function Header
-$renderer_structure->header($seo);
 
 $seo = [
     "title" => $post_data["title"]." | Denis Marginas",
