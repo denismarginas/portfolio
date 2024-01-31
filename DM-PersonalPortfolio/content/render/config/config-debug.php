@@ -1,6 +1,6 @@
 <?php
 
-define("DEBUG", true);
+define("DEBUG", false);
 
 define("LOG", true);
 if (defined('LOG') && LOG === true) {
