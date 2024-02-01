@@ -89,12 +89,47 @@ body, body.theme-light {
       }
     }
   }
+  .dm-carousel-posts-list {
+    background-color: var( --dm-color-white );
+
+    > container {
+      overflow: hidden;
+  
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0; right: 0;
+        top: 0; bottom: 0;
+        background-image:
+        linear-gradient(to right, var( --dm-color-white ), rgba(0,128,128,0) 150px),
+        linear-gradient(to left , var( --dm-color-white ), rgba(0,128,128,0) 150px);
+      }
+    }
+  }
 }
 body.theme-dark {
   .carousel-list {
     > .carousel-item {
       > .dm-post-item-logo {
         border: 1px solid rgba(var(--dm-color-white-rgb),0.4);
+      }
+    }
+  }
+  .dm-carousel-posts-list {
+    background-color: var(--dm-background-color-gray-darken);
+
+    > container {
+      overflow: hidden;
+  
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0; right: 0;
+        top: 0; bottom: 0;
+        background-image:
+        linear-gradient(to right, var(--dm-background-color-gray-darken), rgba(0,128,128,0) 120px),
+        linear-gradient(to left , var(--dm-background-color-gray-darken), rgba(0,128,128,0) 120px);
+
       }
     }
   }
