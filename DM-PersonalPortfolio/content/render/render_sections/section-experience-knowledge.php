@@ -53,7 +53,7 @@ $experience_list = [
                     <?php SVGRenderer::renderSVG('about-me'); ?>
                     <span>Projects Catalog</span>
                 </a>
-                <a data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.4s" href="employ.html" data-button="primary">
+                <a data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.4s" href="employee.html" data-button="primary">
                     <?php SVGRenderer::renderSVG('employ'); ?>
                     <span>Employ Experience</span>
                 </a>

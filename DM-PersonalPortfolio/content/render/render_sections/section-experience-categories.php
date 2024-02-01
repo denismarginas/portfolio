@@ -8,7 +8,7 @@ $experience_categories = [
                             ],
                             [
                                 "type" => "page",
-                                "page" => "employ.html",
+                                "page" => "employee.html",
                                 "name" => "Employ Experience",
                                 "svg" => "employ"
                             ],
