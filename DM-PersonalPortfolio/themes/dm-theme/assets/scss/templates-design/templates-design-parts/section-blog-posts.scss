@@ -69,6 +69,7 @@
 
           > .dm-blog-post-content-text, > .dm-blog-post-content-text > *, > .dm-blog-post-section-text, > .dm-blog-post-section-text > *  {
             @include dm-font-medium();
+            word-break: break-all;
           }
           .see-more {
             max-height: 60px;
@@ -93,6 +94,7 @@
           }
           > .dm-blog-post-section-text {
             @include dm-font-medium();
+            word-break: break-all;
           }
           > .dm-blog-post-section-buttons {
             @include flex-row;
