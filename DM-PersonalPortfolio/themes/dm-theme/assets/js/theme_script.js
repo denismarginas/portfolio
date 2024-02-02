@@ -404,10 +404,33 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     showSlides(slideIndex);
 
+    // **************
+    // Blog - See More
+
+    var elements1 = document.querySelectorAll('.dm-blog-post-description-show');
+    var elements2 = document.querySelectorAll('.dm-blog-post-section-description-show');
+
+    elements1.forEach(function (element) {
+        element.addEventListener('click', function () {
+            element.previousElementSibling.classList.remove('see-more');
+            element.remove();
+        });
+    });
+
+    elements2.forEach(function (element) {
+        element.addEventListener('click', function () {
+            element.previousElementSibling.classList.remove('see-more');
+            element.remove();
+        });
+    });
+
+
+
 
 
 
 });
+
 
 //Contact Form
 function contact_form_exec() {
