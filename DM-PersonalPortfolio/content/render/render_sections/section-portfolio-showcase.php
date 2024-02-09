@@ -1,4 +1,4 @@
-<section class="dm-portfolio-showcase">
+<section class="dm-portfolio-showcase grid-background-animation">
     <container>
         <ul>
             <li data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.4s" data-delay="0s">

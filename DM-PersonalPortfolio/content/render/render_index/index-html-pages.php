@@ -68,14 +68,15 @@ function extractContent(&$content, $node) {
 }
 
 // Convert the page data array to JavaScript format
-$jsContent = 'var content_data = ' . json_encode($pageData, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE) . ';';
+$jsonContent = json_encode($pageData, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
-$targetDirectory = __DIR__ . '/../../../themes/dm-theme/assets/js/';
-$filePath = $targetDirectory . 'content-data-index.js';
+$targetDirectory = __DIR__ . '/../../../content/json/index/';
+$fileExtension = '.json';
+$filePath = $targetDirectory . 'index-data-pages' . $fileExtension;
 
 if (!is_dir($targetDirectory)) {
     mkdir($targetDirectory, 0755, true);
 }
 
-file_put_contents($filePath, $jsContent);
+file_put_contents($filePath, $jsonContent);
 ?>

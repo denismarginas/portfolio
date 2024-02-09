@@ -192,6 +192,8 @@ function renderVideo($src, $thumbnail = NULL, $thumbnail_bg = NULL) {
       $html .= '>';
       $html .= renderImage($thumbnail);
       $html .= '</div>';
+      $html .= '<div class="show-play">'.SVGRenderer::getSVG('play').'</div>';
+      $html .= '<div class="show-pause">'.SVGRenderer::getSVG('pause').'</div>';
     }
 
     $html   .= '<div class="video-controls-container">
@@ -702,4 +704,39 @@ function dateStartSortDesc($a, $b) {
 
 // POSTS END
 
+// JSON GET DATA FUNCTION START
+function getDataJson($jsonFileName, $jsonFilePathFolder = null, $extractRowNumber = null) {
+    if ($jsonFileName !== null) {
+
+        $jsonFolderPath = '/../../../content/json/';
+
+        if (pathinfo($jsonFileName, PATHINFO_EXTENSION) !== 'json') {
+            $jsonFileName .= '.json';
+        }
+
+        if ($jsonFilePathFolder !== null) {
+            $jsonFolderPath .= rtrim($jsonFilePathFolder, '/') . '/';
+        }
+
+        $jsonFilePath = __DIR__ . $jsonFolderPath . $jsonFileName;
+
+        // Check if the file exists
+        if (!file_exists($jsonFilePath)) {
+            throw new RuntimeException("File not found: $jsonFilePath");
+        }
+
+        $jsonContent = json_decode(file_get_contents($jsonFilePath), true);
+
+        if ($extractRowNumber !== null && is_numeric($extractRowNumber) && array_key_exists($extractRowNumber, $jsonContent)) {
+            $jsonBlogData = $jsonContent[$extractRowNumber];
+        } else {
+            $jsonBlogData = $jsonContent;
+        }
+
+        return $jsonBlogData;
+    } else {
+        return null;
+    }
+}
+// JSON GET DATA FUNCTION END
 ?>

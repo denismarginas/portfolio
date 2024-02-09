@@ -184,6 +184,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const volumeSlider = videoContainer.querySelector(".volume-slider");
         const timelineContainer = videoContainer.querySelector(".timeline-container");
         const video = videoContainer.querySelector("video");
+        const controlsContainer = videoContainer.querySelector('.video-controls-container');
+        const showPlay = videoContainer.querySelector('.show-play');
+        const showPause = videoContainer.querySelector('.show-pause');
         document.addEventListener("keydown", e => {
             const tagName = document.activeElement.tagName.toLowerCase()
             if (tagName === "input") return
@@ -191,87 +194,100 @@ document.addEventListener("DOMContentLoaded", function() {
                 case " ":
                     if (tagName === "button") return
                 case "k":
-                    togglePlay()
-                    break
+                    togglePlay();
+                    break;
                 case "f":
-                    toggleFullScreenMode()
-                    break
+                    toggleFullScreenMode();
+                    break;
                 case "t":
-                    toggleTheaterMode()
-                    break
+                    toggleTheaterMode();
+                    break;
                 case "i":
-                    toggleMiniPlayerMode()
-                    break
+                    toggleMiniPlayerMode();
+                    break;
                 case "m":
-                    toggleMute()
+                    toggleMute();
                     break
                 case "arrowleft":
                 case "j":
-                    skip(-5)
-                    break
+                    skip(-5);
+                    break;
                 case "arrowright":
                 case "l":
-                    skip(5)
-                    break
+                    skip(5);
+                    break;
                 case "c":
                     toggleCaptions()
-                    break
+                    break;
             }
         })
-        timelineContainer.addEventListener("mousemove", handleTimelineUpdate)
-        timelineContainer.addEventListener("mousedown", toggleScrubbing)
+        showPause.style.display = 'none';
+        let isFirstPlay = true;
+
+        video.addEventListener("play", () => {
+            if (isFirstPlay) {
+                controlsContainer.style.display = 'block';
+                showPlay.style.display = 'none';
+                showPause.style.display = 'flex';
+                isFirstPlay = false;
+            }
+        });
+
+
+        timelineContainer.addEventListener("mousemove", handleTimelineUpdate);
+        timelineContainer.addEventListener("mousedown", toggleScrubbing);
         document.addEventListener("mouseup", e => {
-            if (isScrubbing) toggleScrubbing(e)
+            if (isScrubbing) toggleScrubbing(e);
         })
         document.addEventListener("mousemove", e => {
-            if (isScrubbing) handleTimelineUpdate(e)
+            if (isScrubbing) handleTimelineUpdate(e);
         })
-        let isScrubbing = false
-        let wasPaused
+        let isScrubbing = false;
+        let wasPaused;
         function toggleScrubbing(e) {
-            const rect = timelineContainer.getBoundingClientRect()
-            const percent = Math.min(Math.max(0, e.x - rect.x), rect.width) / rect.width
+            const rect = timelineContainer.getBoundingClientRect();
+            const percent = Math.min(Math.max(0, e.x - rect.x), rect.width) / rect.width;
             isScrubbing = (e.buttons & 1) === 1
-            videoContainer.classList.toggle("scrubbing", isScrubbing)
+            videoContainer.classList.toggle("scrubbing", isScrubbing);
             if (isScrubbing) {
-                wasPaused = video.paused
-                video.pause()
+                wasPaused = video.paused;
+                video.pause();
             } else {
-                video.currentTime = percent * video.duration
-                if (!wasPaused) video.play()
+                video.currentTime = percent * video.duration;
+                if (!wasPaused) video.play();
             }
-            handleTimelineUpdate(e)
+            handleTimelineUpdate(e);
         }
         function handleTimelineUpdate(e) {
-            const rect = timelineContainer.getBoundingClientRect()
-            const percent = Math.min(Math.max(0, e.x - rect.x), rect.width) / rect.width
+            const rect = timelineContainer.getBoundingClientRect();
+            const percent = Math.min(Math.max(0, e.x - rect.x), rect.width) / rect.width;
             const previewImgNumber = Math.max(
                 1,
                 Math.floor((percent * video.duration) / 10)
-            )
+            );
         }
-        speedBtn.addEventListener("click", changePlaybackSpeed)
+        speedBtn.addEventListener("click", changePlaybackSpeed);
         function changePlaybackSpeed() {
-            let newPlaybackRate = video.playbackRate + 0.25
-            if (newPlaybackRate > 2) newPlaybackRate = 0.25
-            video.playbackRate = newPlaybackRate
-            speedBtn.textContent = `${newPlaybackRate}x`
+            let newPlaybackRate = video.playbackRate + 0.25;
+            if (newPlaybackRate > 2) newPlaybackRate = 0.25;
+            video.playbackRate = newPlaybackRate;
+            speedBtn.textContent = `${newPlaybackRate}x`;
         }
         video.addEventListener("loadeddata", () => {
-            totalTimeElem.textContent = formatDuration(video.duration)
+            totalTimeElem.textContent = formatDuration(video.duration);
         })
         video.addEventListener("timeupdate", () => {
             currentTimeElem.textContent = formatDuration(video.currentTime)
-            const percent = video.currentTime / video.duration
-            timelineContainer.style.setProperty("--progress-position", percent)
+            const percent = video.currentTime / video.duration;
+            timelineContainer.style.setProperty("--progress-position", percent);
         })
         const leadingZeroFormatter = new Intl.NumberFormat(undefined, {
             minimumIntegerDigits: 2,
         })
         function formatDuration(time) {
-            const seconds = Math.floor(time % 60)
-            const minutes = Math.floor(time / 60) % 60
-            const hours = Math.floor(time / 3600)
+            const seconds = Math.floor(time % 60);
+            const minutes = Math.floor(time / 60) % 60;
+            const hours = Math.floor(time / 3600);
             if (hours === 0) {
                 return `${minutes}:${leadingZeroFormatter.format(seconds)}`
             } else {
@@ -281,36 +297,36 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
         function skip(duration) {
-            video.currentTime += duration
+            video.currentTime += duration;
         }
-        muteBtn.addEventListener("click", toggleMute)
+        muteBtn.addEventListener("click", toggleMute);
         volumeSlider.addEventListener("input", e => {
-            video.volume = e.target.value
-            video.muted = e.target.value === 0
+            video.volume = e.target.value;
+            video.muted = e.target.value === 0;
         })
         function toggleMute() {
-            video.muted = !video.muted
+            video.muted = !video.muted;
         }
         video.addEventListener("volumechange", () => {
-            volumeSlider.value = video.volume
-            let volumeLevel
+            volumeSlider.value = video.volume;
+            let volumeLevel;
             if (video.muted || video.volume === 0) {
                 volumeSlider.value = 0
-                volumeLevel = "muted"
+                volumeLevel = "muted";
             } else if (video.volume >= 0.5) {
-                volumeLevel = "high"
+                volumeLevel = "high";
             } else {
-                volumeLevel = "low"
+                volumeLevel = "low";
             }
 
-            videoContainer.dataset.volumeLevel = volumeLevel
+            videoContainer.dataset.volumeLevel = volumeLevel;
         })
-        fullScreenBtn.addEventListener("click", toggleFullScreenMode)
+        fullScreenBtn.addEventListener("click", toggleFullScreenMode);
         function toggleFullScreenMode() {
             if (document.fullscreenElement == null) {
-                videoContainer.requestFullscreen()
+                videoContainer.requestFullscreen();
             } else {
-                document.exitFullscreen()
+                document.exitFullscreen();
             }
         }
         document.addEventListener("fullscreenchange", () => {

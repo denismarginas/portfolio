@@ -1,8 +1,6 @@
 <?php
 
-$jsonFilePath = __DIR__ . '/../../../themes/dm-theme/assets/json/content-blog-index.json';
-$jsonData = file_get_contents($jsonFilePath);
-$jsonBlogData = json_decode($jsonData, true)[0];
+$jsonBlogData = getDataJson('data-blog-activity', 'data', 0);
 
 ?>
 

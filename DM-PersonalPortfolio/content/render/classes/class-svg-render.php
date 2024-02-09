@@ -694,6 +694,12 @@ class SVGRenderer {
                                             <path id="Layer" class="s0" d="m13.3 24.7q-0.6 0-0.8 0v4.7c0.2 0.1 0.4 0.1 0.6 0.1 1.5 0 2.5-0.8 2.5-2.6 0-1.5-0.9-2.2-2.3-2.2z"/>
                                             <path id="Layer" fill-rule="evenodd" class="s0" d="m32.9 10.1v25.6c0 2.3-1.9 4.2-4.3 4.2h-22.1c-2.4 0-4.3-1.9-4.3-4.2v-1.9h-0.4c-1 0-1.7-0.8-1.7-1.7v-10.4c0-1 0.7-1.7 1.7-1.7h0.4v-15.8c0-2.3 1.9-4.2 4.3-4.2h16.2zm-28.3 20.6h1.6v-2.6q0.3 0.1 0.6 0.1c1 0 1.8-0.3 2.4-0.8 0.4-0.4 0.6-1 0.6-1.7 0-0.7-0.3-1.3-0.7-1.7q-0.8-0.6-2.3-0.6c-1 0-1.7 0.1-2.2 0.2zm25.7 5l-0.1-24.6h-5.5c-1.6 0-3-1.3-3-2.9v-5.6h-15.2c-0.9 0-1.7 0.8-1.7 1.7v15.7h20.7c0.9 0 1.7 0.8 1.7 1.7v10.4c0 0.9-0.8 1.7-1.7 1.7h-20.7v1.9c0 0.9 0.8 1.7 1.7 1.7h22.1c1 0 1.7-0.8 1.7-1.7zm-17.5-4.9c1.4 0 2.5-0.3 3.3-1 0.7-0.5 1.2-1.5 1.2-2.9 0-1.3-0.4-2.1-1.2-2.7-0.7-0.5-1.6-0.8-3-0.8-0.8 0-1.6 0.1-2.2 0.2v7.1c0.4 0 1 0.1 1.9 0.1zm7.3-4.3v-1.7h2.8v-1.3h-4.5v7.2h1.7v-2.9h2.6v-1.3z"/>
                                         </svg>',
+                            'play'  => '<svg viewBox="0 0 100 100" width="100" height="100" fill="none">
+                                            <path fill-rule="evenodd" style="fill: #eaebed;stroke: #b5b5b5;stroke-miterlimit:100;stroke-width: 0;" d="m50 100c-27.7 0-50-22.4-50-50 0-27.7 22.3-50 50-50 27.6 0 50 22.3 50 50 0 27.6-22.4 50-50 50zm31.3-50l-50-25-0.1 50z"/>
+                                        </svg>',
+                           'pause'  => '<svg viewBox="0 0 100 100" width="100" height="100" fill="none">
+                                            <path fill-rule="evenodd" style="fill: #eaebed;stroke: #b5b5b5;stroke-miterlimit:100;stroke-width: 0;" d="m50 100c-27.7 0-50-22.4-50-50 0-27.7 22.3-50 50-50 27.6 0 50 22.3 50 50 0 27.6-22.4 50-50 50zm-18.8-37.4c0.1 1.7 1.4 3 3 3h6.5c1.7 0 3.1-1.3 3.1-3v-25.2c0-1.7-1.4-3-3.1-3h-6.5c-1.6 0-2.9 1.3-2.9 3zm24.9 0c0.1 1.6 1.4 3 3 3h6.5c1.7 0 3.1-1.4 3.1-3v-25.3c0-1.6-1.4-3-3.1-3h-6.5c-1.6 0-2.9 1.4-2.9 3z"/>
+                                        </svg>',
                              'close' => '<svg data-svg-type="stroke" width="14" height="14" viewBox="0 0 14 14" >
                                             <path d="M13 1L1 13M1 1L13 13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>'
@@ -709,6 +715,14 @@ class SVGRenderer {
             echo self::$icons[$name];
         } else {
             echo "<span>SVG icon not found: " . $name . "</span>";
+        }
+    }
+
+    public static function getSVG($name) {
+        if (self::hasIcon($name)) {
+            return self::$icons[$name];
+        } else {
+            return "<span>SVG icon not found: " . $name . "</span>";
         }
     }
 }

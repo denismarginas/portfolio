@@ -1,6 +1,6 @@
 
 
-<script src="<?php echo $GLOBALS['urlPath'];?>themes/dm-theme/assets/js/content-data-index.js"></script>
+<script src="<?php echo $GLOBALS['urlPath'];?>content/json/index/index-data-pages.json"></script>
 <script src="<?php echo $GLOBALS['urlPath'];?>themes/dm-theme/assets/js/content-data-search.js"></script>
 
 <section class="dm-search-section grid-background-animation">

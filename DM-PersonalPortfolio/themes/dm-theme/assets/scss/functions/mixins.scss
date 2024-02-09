@@ -12,6 +12,12 @@
   padding-bottom: $var;
   max-width: 1600px;
 
+  @media only screen and ( max-width: $screen-tablet-medium ) {
+
+    padding-top: calc( $var  / 2 + var( --dm-spacing-secondary ) );
+    padding-bottom: calc(  $var  / 2 + var( --dm-spacing-secondary ) );
+  }
+
   @media only screen and ( max-width: $screen-tablet-small ) {
 
     padding-top: calc( $var  / 2 );

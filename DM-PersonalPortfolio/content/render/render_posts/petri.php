@@ -29,8 +29,8 @@ $post_data = [
             "svg" => "css"
         ],
         [
-            "name" => "SCSS",
-            "svg" => "scss"
+            "name" => "SASS",
+            "svg" => "sass"
         ],
         [
             "name" => "JS",
@@ -43,7 +43,7 @@ $post_data = [
 		[
             "name" => "PHP",
             "svg" => "php"
-        ],
+        ]
     ],
     "web_plugins" => [
         [
