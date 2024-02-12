@@ -59,18 +59,30 @@ foreach ($pageFiles as $pageFile) {
 
 
 $postPath = $pagePath;
-$postFiles = glob('render_posts/*.php');
+$postFiles = glob('render_posts/{*.php,*/**.php}', GLOB_BRACE);
+$log = [];
 
 foreach ($postFiles as $postFile) {
-    $urlPath = URLPath::getUrlPaths()['post'];
-    $GLOBALS['urlPath'] = $urlPath;
-    $postHtmlFileName = basename($postFile, '.php') . '.html';
-    ob_start();
-    include $postFile;
-    $postOutput = ob_get_clean();
-    $postFilePath = $postPath . $postHtmlFileName;
-    file_put_contents($postFilePath, $postOutput);
-    $log[] =  "Rendered $postFile to $postFilePath" . PHP_EOL;
+    try {
+        if (!file_exists($postFile)) {
+            throw new Exception("File $postFile not found.");
+        }
+
+        $urlPath = URLPath::getUrlPaths()['post'];
+        $GLOBALS['urlPath'] = $urlPath;
+
+        $postHtmlFileName = basename($postFile, '.php') . '.html';
+        ob_start();
+        include $postFile;
+        $postOutput = ob_get_clean();
+
+        $postFilePath = $postPath . $postHtmlFileName;
+        file_put_contents($postFilePath, $postOutput);
+
+        $log[] = "Rendered $postFile to $postFilePath" . PHP_EOL;
+    } catch (Exception $e) {
+        $log[] = "Error: " . $e->getMessage() . PHP_EOL;
+    }
 }
 
 
@@ -87,5 +99,5 @@ foreach ($log as $log_item) {
 
 // Save Index of Pages
 require_once __DIR__ . '/render_index/index-html-pages.php';
-require_once __DIR__ . '/render_index/index-php-posts.php';
+require_once __DIR__ . '/render_index/index-php-posts-projects.php';
 ?>

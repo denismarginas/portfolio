@@ -1,0 +1,820 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-jobs {
+  @include padding-x();
+  overflow: hidden;
+
+
+  > container {
+    > ul {
+      @include reset-list();
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+      gap: var( --dm-spacing-small );
+
+      > li.dm-job-list {
+        @include flex-center();
+        @include border-radius( var( --dm-border-radius-secondary ));
+        position: relative;
+        overflow: hidden;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background: radial-gradient(var(--dm-color-primary), var(--dm-color-secondary));
+        background-color: var(--dm-color-primary);
+        gap: var( --dm-spacing-secondary );
+        padding: var( --dm-spacing-secondary );
+
+        > ul {
+          @include border-radius(15px);
+          @include reset-list();
+          overflow: hidden;
+          z-index: 1;
+          border: 1px solid rgba(var( --dm-color-white-rgb ), 0.2);
+
+          > li {
+            @include flex-center();
+            flex-direction: column;
+
+            > .work-logo {
+              @include flex-center();
+              padding: var( --dm-spacing-tertiary );
+              max-height: 150px;
+              width: 100%;
+              aspect-ratio: 4/3;
+              position: relative;
+              overflow: hidden;
+              max-width: 300px;
+
+              > img {
+                width: auto;
+                height: auto;
+                max-width: 70%;
+                max-height: 70%;
+              }
+            }
+            > .company-name {
+              @include flex-column();
+              justify-content: center;
+              align-items: center;
+              padding: var( --dm-spacing-primary );
+              width: 100%;
+              box-sizing: border-box;
+              z-index: 2;
+
+               > span {
+                 @include limit-line-text(1);
+                 @include dm-font-medium();
+                 --dm-text-medium-font-weight: 600;
+                 --dm-text-medium-color: var( --dm-color-secondary );
+                 text-transform: uppercase;
+                 text-align: center;
+               }
+            }
+            &[data-layout="dark"] {
+              background-color: rgba(var(--dm-color-gray-darken-rgb),0.9);
+              background: radial-gradient( rgba(var(--dm-color-gray-darken-rgb), 0.45), rgba(var(--dm-color-gray-rgb), 0.45) );
+            }
+            &[data-layout="light"] {
+              background-color: rgba(var(--dm-color-white-rgb),0.9);
+              background: radial-gradient( rgba(var(--dm-color-white-rgb) , 0.45), rgba(var(--dm-color-gray-lighten-rgb), 0.45) );
+            }
+          }
+          &[data-listing="1"] {
+            width: calc(100% - var(--dm-spacing-secondary));
+          }
+          &[data-listing="2"] {
+            width: calc(50% - var(--dm-spacing-secondary));
+          }
+          &[data-listing="3"] {
+            width: calc(33.333% - var(--dm-spacing-secondary));
+          }
+          &[data-listing="4"] {
+            width: calc(25% - var(--dm-spacing-secondary));
+          }
+          &[data-listing="5"] {
+            width: calc(20% - var(--dm-spacing-secondary));
+          }
+          &[data-listing="6"] {
+            width: calc(16.666% - var(--dm-spacing-secondary));
+          }
+          &[data-listing="7"] {
+            width: calc(14.285% - var(--dm-spacing-secondary));
+          }
+          &[data-listing="8"] {
+            width: calc(12.5% - var(--dm-spacing-secondary));
+          }
+        }
+      }
+      > li.dm-job {
+        @include border-radius( var( --dm-border-radius-secondary ));
+        position: relative;
+        overflow: hidden;
+
+        > ul {
+          @include reset-list();
+          display: grid;
+          grid-template-columns: 1fr 1.5fr;
+          align-items: center;
+
+           > li.work-summary {
+             @include flex-center();
+             flex-direction: column;
+             gap: var( --dm-spacing-primary );
+             padding: var( --dm-spacing-tertiary );
+             background-color: rgba(var(--dm-color-gray-rgb),0.1);
+             background: radial-gradient(var(--dm-color-primary),var(--dm-color-secondary));
+             min-height: 400px;
+             height: 100%;
+             box-sizing: border-box;
+             position: relative;
+
+             > .work-logo {
+               @include flex-center();
+               @include border-radius( 50% );
+               margin-bottom: var( --dm-spacing-secondary );
+               width: 80%;
+               max-width: 200px;
+               height: 80%;
+               max-height: 200px;
+               box-shadow: 4px 2px 5px rgba(var( --dm-color-gray-darken-rgb ), 0.4);
+               transition: box-shadow 0.3s;
+               padding: var( --dm-spacing-tertiary );
+               aspect-ratio: 1/1;
+
+               &:hover {
+                 box-shadow: 10px 5px 5px rgba(var( --dm-color-gray-darken-rgb ), 0.6);
+                 transition: box-shadow 0.3s;
+               }
+               > img {
+                 width: auto;
+                 height: auto;
+                 max-width: 80%;
+                 max-height: 80%;
+               }
+             }
+             > .company-name {
+               @include dm-font-heading4();
+               --dm-text-heading4-font-weight: 800;
+               --dm-text-heading4-font-family: var( --dm-font-family-secondary );
+               --dm-text-heading4-color: var( --dm-color-white );
+               text-align: center;
+
+             }
+             > .work-dates {
+               @include reset-list();
+               @include flex-row();
+               text-align: center;
+               word-break: break-word;
+
+               > li {
+                 @include dm-font-medium();
+                 --dm-text-medium-color: var( --dm-color-white );
+
+                 &:nth-child(1):after {
+                   @include dm-font-medium();
+                   --dm-text-medium-color: var( --dm-color-white );
+                   content: "-";
+                   padding: 0 10px;
+                 }
+               }
+
+             }
+             &[data-layout="light"] {
+                > .work-logo {
+                  background-color: rgba(var(--dm-color-white-rgb), 0.9);
+                }
+             }
+             &[data-layout="dark"] {
+               > .work-logo {
+                 background-color: rgba(var(--dm-color-gray-darken-rgb),0.9);
+               }
+             }
+           }
+          > li.work-details {
+            @include flex-column;
+            justify-content: center;
+            gap: var( --dm-spacing-tertiary );
+            padding: var( --dm-spacing-tertiary );
+            background-color: rgba(var(--dm-color-gray-rgb),0.1);
+            min-height: 400px;
+            height: 100%;
+            box-sizing: border-box;
+
+            > .work-function {
+              @include flex-row();
+              flex-wrap: wrap;
+              gap: var( --dm-spacing-primary );
+
+              > span {
+                @include dm-font-large();
+                --dm-text-large-font-weight: 800;
+
+                &:nth-child(1) {
+                  @include flex-column();
+                  width: 100%;
+                  @include dm-font-big();
+                  --dm-text-big-font-weight: 800;
+                }
+
+                &.function {
+                  padding: 6px 12px;
+                  border-radius: 6px;
+                  --dm-text-large-line-height: 44px;
+                  text-transform: capitalize;
+                }
+              }
+            }
+            > .work-attributes {
+              @include reset-list();
+              @include flex-column();
+              gap: 4px;
+
+              > .work-attribute {
+                @include flex-row();
+
+                > svg {
+                  @include fix-size(12px);
+                  margin-right: 5px;
+                  padding: 3px;
+                }
+                > span {
+                  @include dm-font-medium();
+                }
+              }
+            }
+            > .work-data {
+              @include reset-list();
+              display: grid;
+              grid-template-columns: 1fr 1fr 0.5fr;
+              gap: var( --dm-spacing-secondary );
+
+              > li {
+                > .work-time {
+                  @include reset-list();
+                  @include flex-row();
+                  flex-wrap: wrap;
+                  gap: var( --dm-spacing-primary );
+
+                  > li {
+                    @include flex-row();
+                    align-items: center;
+                    gap: var( --dm-spacing-primary );
+
+                    &:nth-child(1) {
+                      width: 100%;
+                    }
+                    > p {
+                      @include dm-font-big();
+                      --dm-text-big-font-weight: 800;
+                      text-transform: capitalize;
+                    }
+                    > span {
+                      &.time-text {
+                        @include dm-font-medium();
+                        --dm-text-medium-font-weight: 600;
+                        text-transform: uppercase;
+                      }
+                      &.nr-circle {
+                        @include border-radius(50%);
+                        @include dm-font-large();
+                        --dm-text-large-font-weight: 600;
+                        --dm-text-large-color: var( --dm-color-white );
+                        text-transform: uppercase;
+                        padding: 6px 16px;
+                      }
+                      &.years-nr {
+                        background-color: var( --dm-color-primary );
+                      }
+                      &.months-nr {
+                        background-color: var( --dm-color-gray-lighten );
+                      }
+                    }
+                  }
+                }
+                > .work-time-type {
+                  @include reset-list();
+                  @include flex-row();
+                  flex-wrap: wrap;
+                  gap: 16px;
+
+                  > li {
+                    @include border-radius( 6px );
+                    background-color: rgba(var(--dm-color-gray-rgb),0.1);
+                    padding: 6px;
+
+                    > .work-name,  {
+                      @include border-radius( 6px );
+                      @include dm-font-small();
+                      --dm-text-small-font-weight: 600;
+                      --dm-text-small-color: var( --dm-color-white );
+                      background-color: var( --dm-color-primary );
+                      padding: 6px 8px;
+                      text-transform: uppercase;
+                      margin-right: 8px;
+                    }
+                    > .work-hours {
+                      @include border-radius( 6px );
+                      @include dm-font-small();
+                      --dm-text-small-font-weight: 600;
+                      --dm-text-small-color: var( --dm-color-white );
+                      background-color: var( --dm-color-gray-lighten );
+                      padding: 6px 8px;
+                      text-transform: capitalize;
+                    }
+                    > .work-dates {
+                      @include reset-list();
+                      @include flex-row();
+                      flex-wrap: wrap;
+                      gap: 6px;
+                      max-width: 300px;
+                      margin-top: 6px;
+
+                      > li {
+                        @include dm-font-small();
+                      }
+                    }
+                  }
+                }
+                > .work-location-type {
+                  @include reset-list();
+                  @include flex-column();
+                  gap: 6px;
+                  max-width: 300px;
+                  justify-content: center;
+                  align-items: end;
+
+                  > li {
+                    @include border-radius( 6px );
+                    @include dm-font-extra-small();
+                    --dm-text-extra-small-font-weight: 600;
+                    --dm-text-extra-small-color: var( --dm-color-white );
+                    background-color: var( --dm-color-primary );
+                    padding: 6px 8px;
+                    text-transform: uppercase;
+
+                  }
+                }
+              }
+            }
+            > .work-socials {
+              @include reset-list();
+              @include flex-row();
+              flex-wrap: wrap;
+              gap: var( --dm-spacing-primary );
+
+              > li {
+                > a {
+                  @include flex-center();
+                  background-color: var(--dm-color-primary);
+                  padding: 6px;
+                  border-radius: 4px;
+
+                  > svg {
+                    @include fix-size(20px);
+                    @include svg-color(var( --dm-color-white ));
+                  }
+                  &:hover {
+                    background-color: var(--dm-color-secondary);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      > li.dm-note {
+        @include flex-center();
+
+        > p {
+          @include dm-font-medium();
+          @include border-radius( var( --dm-border-radius-primary ) );
+          border: 1px solid var( --dm-color-highlight-primary );
+          padding: var( --dm-spacing-secondary );
+
+          width: 350px;
+          max-width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-desktop-large) {
+    > container {
+      > ul {
+        > li.dm-job {
+          > ul {
+            > li.work-details {
+              > .work-data {
+                grid-template-columns: 1.2fr 1.5fr 0.3fr;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-desktop-medium) {
+    > container {
+      > ul {
+        > li.dm-job {
+          > ul {
+            > li.work-details {
+              > .work-data {
+                grid-template-columns: 1.2fr 1.5fr 0.35fr;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-desktop-small) {
+    > container {
+      > ul {
+        > li.dm-job-list {
+          > ul {
+            &[data-listing] {
+              width: 100% !important;
+              max-width: 45%;
+            }
+          }
+        }
+        > li.dm-job {
+          > ul {
+            > li.work-details {
+              > .work-data {
+                grid-template-columns: 1.2fr 1.5fr 0.2fr;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-large) {
+    > container {
+      > ul {
+        > li.dm-job-list {
+          > ul {
+            &[data-listing] {
+              width: 100% !important;
+              max-width: 100%;
+            }
+            > li {
+
+              > .work-logo {
+                padding: var( --dm-spacing-primary );
+                max-height: 70px;
+                width: 160px;
+                max-width: 100%;
+              }
+              > .company-name {
+                height: 100%;
+              }
+            }
+          }
+        }
+        > li.dm-job {
+          > ul {
+            grid-template-columns: repeat(1, 1fr);
+
+            > li.work-summary {
+              padding: var(--dm-spacing-secondary);
+
+              > .work-logo {
+                padding: var(--dm-spacing-secondary);
+                max-width: 200px;
+                max-height: 70%;
+
+                > img {
+                  max-width: 60%;
+                  max-height: 60%;
+                }
+              }
+            }
+            > li.work-details {
+              gap: var( --dm-spacing-secondary );
+              padding: var(--dm-spacing-secondary);
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-medium) {
+    > container {
+      > ul {
+        > li.dm-job {
+          > ul {
+            > li.work-details {
+              .work-data {
+                grid-template-columns: repeat(1, 1fr);
+
+                > li {
+                  > .work-location-type {
+                    flex-direction: row;
+                    align-items: start;
+                    justify-content: start;
+                  }
+                }
+              }
+            }
+          }
+        }
+        > li.dm-note {
+          > p {
+            @include dm-font-small();
+            width: 80%;
+            max-width:80%;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-small) {
+    > container {
+      > ul {
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-large) {
+    > container {
+      > ul {
+        > li.dm-job-list {
+          gap: var(--dm-spacing-primary);
+
+          > ul {
+            max-width: 100%;
+          }
+        }
+        > li.dm-job {
+          > ul {
+            > li.work-details {
+              > .work-function > span {
+                @include dm-font-big();
+                --dm-text-big-font-weight: 600;
+              }
+              > .work-data {
+                > li {
+                  > .work-time {
+                    padding-top: var( --dm-spacing-primary ) 0 ;
+
+                    > li {
+                      gap: calc( var( --dm-spacing-primary ) / 2 );
+
+                      > p {
+                        @include dm-font-medium();
+                        --dm-text-medium-font-weight: 600;
+                      }
+                      > span {
+                        &.time-text {
+                          @include dm-font-small();
+                          --dm-text-small-font-weight: 600;
+                        }
+                        &.nr-circle {
+                          @include dm-font-medium();
+                          --dm-text-medium-color: var( --dm-color-white );
+                          --dm-text-medium-font-weight: 600;
+                          padding: 6px 12px
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              > .work-socials {
+                padding-top: var( --dm-spacing-primary ) 0 ;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-medium) {
+    > container {
+      > ul {
+        > li.dm-job-list {
+          gap: var(--dm-spacing-primary);
+
+          > ul {
+            max-width: 100%;
+
+            > li {
+              @include flex-column();
+            }
+          }
+        }
+        > li.dm-job {
+          > ul {
+            > li.work-summary {
+              padding: var(--dm-spacing-primary);
+
+              > .work-logo {
+                padding: var(--dm-spacing-primary);
+                height: auto;
+                max-width: 80%;
+                max-height: 80%;
+
+                > img {
+                  width: auto;
+                  max-width: 70%;
+                  height: auto;
+                  max-height: 70%;
+                }
+              }
+            }
+            > li.work-details {
+              gap: var( --dm-spacing-primary );
+              padding: var(--dm-spacing-primary);
+            }
+          }
+        }
+        > li.dm-note {
+          > p {
+            padding: var( --dm-spacing-primary );
+          }
+        }
+      }
+    }
+  }
+}
+
+body, body.theme-light {
+  .dm-jobs {
+    > container {
+      > ul {
+        > li.dm-job-list {
+          > ul {
+            > li {
+              > .company-name {
+                background-color: var( --dm-color-white );
+                background: linear-gradient(90deg, rgba(var( --dm-color-white-rgb ),1) 0%, rgba(var( --dm-color-white-rgb ),1) 100%);
+
+                > span {
+                  --dm-text-medium-color: var( --dm-color-gray );
+                }
+              }
+            }
+          }
+        }
+        > li.dm-job {
+          border: 1px solid rgba(var( --dm-color-gray-rgb ), 0.2);
+
+          > ul {
+            > li.work-details {
+              background-color: rgba(var(--dm-color-white-rgb),0.5);
+
+              > .work-function > span {
+                --dm-text-large-color: var( --dm-color-gray-darken );
+                --dm-text-big-color: var( --dm-color-gray-darken );
+
+                &.function {
+                  background-color: rgba(var(--dm-color-primary-rgb), 0.2);
+                }
+              }
+              > .work-attributes > .work-attribute > span {
+                --dm-text-medium-color: var( --dm-color-gray );
+              }
+              > .work-attributes > .work-attribute > svg {
+                @include svg-color( var( --dm-color-primary ));
+                background-color: rgba(var(--dm-color-gray-rgb), 0.2);
+                border-radius: 4px;
+              }
+              > .work-data {
+                > li {
+                  > .work-time > li {
+                    > p {
+                      --dm-text-big-color: var( --dm-color-gray );
+                      --dm-text-medium-color: var( --dm-color-gray );
+                    }
+                    > .time-text {
+                      --dm-text-medium-color: var( --dm-color-gray );
+                      --dm-text-small-color: var( --dm-color-gray );
+                    }
+                  }
+                  > .work-time-type {
+                    > li {
+                      background-color: rgba(var(--dm-color-gray-rgb),0.1);
+
+                      > .work-dates {
+                        > li {
+                          --dm-text-small-color: var( --dm-color-gray );
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        > li.dm-note {
+          > p {
+            background-color: rgba( var( --dm-color-white-rgb), 0.7 );
+            --dm-text-medium-color: var( --dm-color-gray );
+            --dm-text-small-color: var( --dm-color-gray );
+          }
+        }
+      }
+    }
+  }
+}
+body.theme-dark {
+  .dm-jobs {
+    > container {
+      > ul {
+        > li.dm-job-list {
+          > ul {
+            > li {
+              > .company-name {
+                background-color: var( --dm-color-gray-darken );
+                background: linear-gradient(90deg, rgba(var( --dm-color-gray-darken-rgb ),1) 0%, rgba(var( --dm-color-gray-rgb ),1) 100%);
+
+                > span {
+                  --dm-text-medium-color: var( --dm-color-white );
+                }
+              }
+            }
+          }
+        }
+        > li.dm-job {
+          border: 1px solid rgba(var( --dm-color-white-rgb ), 0.2);
+
+          > ul {
+            > li.work-details {
+              background-color: rgba(var(--dm-color-gray-darken-rgb),0.5);
+
+              > .work-function > span {
+                --dm-text-large-color: var( --dm-color-white );
+                --dm-text-big-color: var( --dm-color-white );
+
+                &.function {
+                  background-color: rgba(var(--dm-color-primary-rgb), 0.6);
+                }
+              }
+              > .work-attributes > .work-attribute > span {
+                --dm-text-medium-color: var( --dm-color-white );
+              }
+              > .work-attributes > .work-attribute > svg {
+                @include svg-color( var( --dm-color-white ));
+                background-color: var(--dm-color-primary);
+                border-radius: 2px;
+              }
+              > .work-socials {
+                > li {
+                  > a {
+                    background-color: var(--dm-color-primary);
+
+                    > svg {
+                      @include svg-color(var( --dm-color-white ));
+                    }
+                    &:hover {
+                      background-color: var(--dm-color-white);
+                      > svg {
+                        @include svg-color(var( --dm-color-primary ));
+                      }
+                    }
+                  }
+                }
+              }
+              > .work-data {
+                > li {
+                  > .work-time > li {
+                    > p {
+                      --dm-text-big-color: var( --dm-color-white );
+                      --dm-text-medium-color: var( --dm-color-white );
+                    }
+                    > .time-text {
+                      --dm-text-medium-color: var( --dm-color-white );
+                      --dm-text-small-color: var( --dm-color-white );
+                    }
+                  }
+                  > .work-time-type {
+                    > li {
+                      background-color: rgba(var(--dm-color-gray-lighten-rgb),0.1);
+
+                      > .work-dates {
+                        > li {
+                          --dm-text-small-color: var( --dm-color-white );
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        > li.dm-note {
+          > p {
+            background-color: rgba( var( --dm-color-gray-rgb), 0.7 );
+            --dm-text-medium-color: var( --dm-color-white );
+            --dm-text-small-color: var( --dm-color-white );
+          }
+        }
+      }
+    }
+  }
+}

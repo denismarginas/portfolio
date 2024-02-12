@@ -187,6 +187,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const controlsContainer = videoContainer.querySelector('.video-controls-container');
         const showPlay = videoContainer.querySelector('.show-play');
         const showPause = videoContainer.querySelector('.show-pause');
+
         document.addEventListener("keydown", e => {
             const tagName = document.activeElement.tagName.toLowerCase()
             if (tagName === "input") return
@@ -244,6 +245,7 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         let isScrubbing = false;
         let wasPaused;
+
         function toggleScrubbing(e) {
             const rect = timelineContainer.getBoundingClientRect();
             const percent = Math.min(Math.max(0, e.x - rect.x), rect.width) / rect.width;
@@ -258,6 +260,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             handleTimelineUpdate(e);
         }
+
         function handleTimelineUpdate(e) {
             const rect = timelineContainer.getBoundingClientRect();
             const percent = Math.min(Math.max(0, e.x - rect.x), rect.width) / rect.width;
@@ -267,6 +270,7 @@ document.addEventListener("DOMContentLoaded", function() {
             );
         }
         speedBtn.addEventListener("click", changePlaybackSpeed);
+
         function changePlaybackSpeed() {
             let newPlaybackRate = video.playbackRate + 0.25;
             if (newPlaybackRate > 2) newPlaybackRate = 0.25;
@@ -332,8 +336,12 @@ document.addEventListener("DOMContentLoaded", function() {
         document.addEventListener("fullscreenchange", () => {
             videoContainer.classList.toggle("full-screen", document.fullscreenElement)
         })
+
         playPauseBtn.addEventListener("click", togglePlay);
+
         video.addEventListener("click", togglePlay);
+        video.addEventListener("touchend", () => {togglePlay();});
+
         function togglePlay() {
             if (video.paused) {
                 video.play();

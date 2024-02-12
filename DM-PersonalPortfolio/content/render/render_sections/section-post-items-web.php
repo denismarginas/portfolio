@@ -1,4 +1,4 @@
-<?php $posts = extractDataPosts( __DIR__ . "/../render_posts/" ); ?>
+<?php $posts = extractDataPosts( __DIR__ . "/../render_posts/projects/" ); ?>
 
 
 

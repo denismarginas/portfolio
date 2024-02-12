@@ -81,7 +81,9 @@ if (!isset($post_data)) {
                 <?php endif; ?>
 
                 <?php if (isset($post_data["description"]) && !empty($post_data["description"])) : ?>
-                    <p class="post-description"><?php echo $post_data["description"]; ?></p>
+                    <p class="post-description">
+                        <?php echo executePhpInString($post_data["description"]); ?>
+                    </p>
                 <?php endif; ?>
 
                 <?php if (isset($post_data["categories"]) && !empty($post_data["categories"])) : ?>
@@ -262,7 +264,7 @@ if (!isset($post_data)) {
 
                             <span>Worked at:</span>
 
-                            <a href="employ.html#<?php echo strtolower(str_replace(" ", "-", $post_data["employ"])); ?>" target="_blank">
+                            <a href="employee-experience.html#<?php echo strtolower(str_replace(" ", "-", $post_data["employ"])); ?>" target="_blank">
                                 <?php echo $post_data["employ"]; ?>
                             </a>
 

@@ -116,7 +116,6 @@
           width: 100%;
           max-width: 100%;
           margin: var( --dm-spacing-secondary ) var( --dm-spacing-primary );
-          background-color: var( --dm-color-gray );
           border: 0px solid;
         }
       }
@@ -186,6 +185,9 @@ body, body.theme-light {
           }
          } 
         }
+        > hr {
+          background-color: var( --dm-color-secondary );
+        }
       }
     }
   }
@@ -216,6 +218,9 @@ body.theme-dark {
             }
           }
          } 
+        }
+        > hr {
+          background-color: var( --dm-color-primary );
         }
       }
     }

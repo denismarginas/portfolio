@@ -78,8 +78,11 @@
                     </div>
                 </div>
                 <div class="dm-footer-copyrights">
+                    <?php /*
                     <span class="hide">Begining of the webiste: 04/06/2023</span>
-                    <span>Last update of webiste: <?php echo date("d/m/Y") ?></span>
+                    <span class="hide">Last update of webiste: <?php echo date("d/m/Y") ?></span>
+                    */ ?>
+                    <span>2023 - 2024</span>
                     <span>©All copyrights reserved by Denis Marginas</span>
                 </div>
             </section>

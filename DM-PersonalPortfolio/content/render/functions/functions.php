@@ -192,8 +192,8 @@ function renderVideo($src, $thumbnail = NULL, $thumbnail_bg = NULL) {
       $html .= '>';
       $html .= renderImage($thumbnail);
       $html .= '</div>';
-      $html .= '<div class="show-play">'.SVGRenderer::getSVG('play').'</div>';
-      $html .= '<div class="show-pause">'.SVGRenderer::getSVG('pause').'</div>';
+      $html .= '<div class="show-play" style="display:flex;">'.SVGRenderer::getSVG('play').'</div>';
+      $html .= '<div class="show-pause" style="display:none;">'.SVGRenderer::getSVG('pause').'</div>';
     }
 
     $html   .= '<div class="video-controls-container">
@@ -562,11 +562,7 @@ function renderTextVisualMediaPost($post_type = null, $media_path = null, $tags 
 
 function removeSpaceAndLowercase($string) {
     $string = str_replace(' ', '', $string);
-
-    // Convert to lowercase
-    $string = strtolower($string);
-
-    return $string;
+    return strtolower($string);
 }
 function extractDataPosts($post_path) {
     $php_files = getFilesInFolder($post_path);
@@ -576,15 +572,37 @@ function extractDataPosts($post_path) {
         foreach ($php_files as $file) {
             $file_path = $post_path . $file;
             $file_content = file_get_contents($file_path);
-            preg_match('/\$post_data\s*=\s*\[(.*?)\];/s', $file_content, $matches);
-            if (!empty($matches)) {
-                $post_data = eval("return [{$matches[1]}];");
+
+            if (strpos($file_content, 'getCurrentPostProjectData') !== false) {
+
+                $filename = $file;
+
+                if (strpos($file, '.') !== false) {
+                    list($name, $extension) = explode('.', $file, 2);
+                    $filename = $name;
+                }
+
+                $post_data = getCurrentPostProjectData($filename);
+                $post_dataString = json_encode($post_data);
+                $post_dataString = executePhpInString($post_dataString);
+                $post_data = json_decode($post_dataString, true);
+
                 if($post_data["visibility"] = "enable") {
                     $posts[] =  [ $file, $post_data ];
                 }
+
             } else {
-                //$error =  "Unable to extract \$post_data from the file: $file<br><br>";
-                //$posts[] =  [ $file, $error ];
+                preg_match('/\$post_data\s*=\s*\[(.*?)\];/s', $file_content, $matches);
+
+                if (!empty($matches)) {
+                    $post_data = eval("return [{$matches[1]}];");
+                    if($post_data["visibility"] = "enable") {
+                        $posts[] =  [ $file, $post_data ];
+                    }
+                } else {
+                    $error =  "Unable to extract post data from the file:". $file;
+                    //$posts[] =  [ $file, $error ];
+                }
             }
         }
     }
@@ -699,9 +717,6 @@ function dateStartSortDesc($a, $b) {
     // If years are equal, compare months
     return $monthB - $monthA; // Compare in reverse order
 }
-
-
-
 // POSTS END
 
 // JSON GET DATA FUNCTION START
@@ -739,4 +754,63 @@ function getDataJson($jsonFileName, $jsonFilePathFolder = null, $extractRowNumbe
     }
 }
 // JSON GET DATA FUNCTION END
+
+// GET CURRENT POST PROJECT DATA START
+function getCurrentPostProjectData($fileName) {
+    if ($fileName !== null) {
+        $jsonFile = 'data-posts-projects.json';
+        $posts = getDataJson($jsonFile, 'data');
+        if ($posts !== null) {
+            $matchingPost = null;
+
+            $fileNameLowercase = strtolower($fileName);
+
+            foreach ($posts as $post) {
+                if (strtolower($post['file']) == $fileNameLowercase) {
+                    $matchingPost = $post;
+                    break;
+                }
+            }
+
+            if ($matchingPost !== null) {
+                if (isset($matchingPost["post_data"]) && $matchingPost["post_data"] !== null) {
+                    return $matchingPost["post_data"];
+                }
+                else {
+                    echo "There is no data for this file: $fileName";
+                    return null;
+                }
+            } else {
+                echo "No matching post found for file: $fileName";
+                return null;
+            }
+        }
+    } else {
+        return null;
+    }
+}
+// GET CURRENT POST PROJECT DATA END
+
+
+// GET SEO FROM CURRENT POST PROJECT DATA START
+function getSeoFromCurrentPostProjectData($postData) {
+    $seo = [
+        "title" => $postData["title"]." | Denis Marginas",
+        "description" => $postData["description"],
+        "keywords" => $postData["media_path"],
+        "slug" => $postData["media_path"]
+    ];
+    return $seo;
+}
+// GET SEO FROM CURRENT POST PROJECT DATA END
+
+// EXECUTE PHP IN STRING START
+function executePhpInString($string) {
+    ob_start();
+    eval('?>' . $string . '<?php ');
+    $output = ob_get_contents();
+    ob_end_clean();
+    return $output;
+}
+// EXECUTE PHP IN STRING END
 ?>

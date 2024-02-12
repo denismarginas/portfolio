@@ -4,6 +4,8 @@ body {
     font-family: var( --dm-font-family-primary );
     background-color: var( --dm-background-color-white );
     padding: 0;
+    min-width: 240px;
+    min-height: 240px;
 }
 
 ul,

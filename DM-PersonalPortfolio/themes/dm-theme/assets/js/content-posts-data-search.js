@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     var jsonPostsData;
 
-    fetch("../../content/json/index/index-data-posts.json")
+    fetch("../../content/json/index/index-data-posts-projects.json")
         .then(response => response.json())
         .then(data => {
             jsonPostsData = data;
