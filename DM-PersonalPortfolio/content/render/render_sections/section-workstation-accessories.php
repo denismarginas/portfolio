@@ -1,6 +1,10 @@
+<?php
+$jsonWorkstationData = getDataJson('data-workstation', 'data');
+$path = $jsonWorkstationData["setups"]["setup 1"]["path-img"];
+$products = $jsonWorkstationData["setups"]["setup 1"]["accessories"];
+?>
 
-
-<section class="dm-workstation-configuration grid-background-animation"
+<section class="dm-workstation-accessories dm-workstation-products grid-background-animation"
         <?php if( !empty($layout) ) : ?>
          data-layout="<?php echo $layout; ?>"
         <?php endif; ?>
@@ -20,52 +24,27 @@
             <li data-motion="transition-fade-0 transition-slideInLeft-0">
                 <h2>PC #1 Accessories</h2>
                 <ul>
-                    <li><?php SVGRenderer::renderSVG('chevron-right'); ?><a href="#headset">Headset wireless HyperX Cloud Stinger Core 7.1</a></li>
-                    <li><?php SVGRenderer::renderSVG('chevron-right'); ?><a href="#mouse">Mouse LOGITECH G203 LIGHTSYNC RGB, 8.000 dpi</a></li>
-                    <li><?php SVGRenderer::renderSVG('chevron-right'); ?><a href="#keyboard">Mechanical Keyboard LOGITECH G512 GX Red Linear</a></li>
-                    <li><?php SVGRenderer::renderSVG('chevron-right'); ?><a href="#mousepad">Mouse Pad GENESIS Carbon 700 Maxi Cordura</a></li>
-                    <li><?php SVGRenderer::renderSVG('chevron-right'); ?><a href="#speakers">Speakers Trust Arys Compact RGB 2.0 Set</a></li>
-                    <li><?php SVGRenderer::renderSVG('chevron-right'); ?><a href="#monitor">Monitor IPS SAMSUNG Odyssey G5, 27", WQHD, 165Hz</a></li>
+                    <?php foreach ($products as $key => $product) : ?>
+                        <li><?php SVGRenderer::renderSVG('chevron-right'); ?>
+                            <a href="#<?php echo $key; ?>">
+                                <?php echo $product["name"]; ?>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
                 </ul>
             </li>
         </ul>
-        <div class="dm-workstation-components">
-            <div class="component" id="headset" data-motion="transition-fade-0 transition-slideInRight-0">
-                <div class="component-image">
-                    <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/headset_wireless_hyperx_cloud_stinger_core_71.webp"); ?>
+        <div class="products">
+
+            <?php foreach ($products as $key => $product): ?>
+                <div class="product" id="<?php echo $key; ?>" data-motion="transition-fade-0 transition-slideInRight-0">
+                    <div class="product-image">
+                        <?php echo renderImage($GLOBALS['urlPath']."content/img/".$path."/".$product["img-src"]); ?>
+                    </div>
+                    <span><?php echo $product["name"]; ?></span>
                 </div>
-                <span>Headset wireless HyperX Cloud Stinger Core 7.1</span>
-            </div>
-            <div class="component" id="mouse" data-motion="transition-fade-0 transition-slideInRight-0">
-                <div class="component-image">
-                    <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/mouse_logitech_g203_lightsync_rgb_8000_dpi.webp"); ?>
-                </div>
-                <span>Mouse LOGITECH G203 LIGHTSYNC RGB, 8.000 dpi</span>
-            </div>
-            <div class="component" id="keyboard" data-motion="transition-fade-0 transition-slideInRight-0">
-                <div class="component-image">
-                    <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/mechanical_keyboard_logitech_g512_gx_red_linear.webp"); ?>
-                </div>
-                <span>Mechanical Keyboard LOGITECH G512 GX Red Linear</span>
-            </div>
-            <div class="component" id="mousepad" data-motion="transition-fade-0 transition-slideInRight-0">
-                <div class="component-image">
-                    <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/mouse_pad_genesis_carbon_700_maxi_cordura.webp"); ?>
-                </div>
-                <span>Mouse Pad GENESIS Carbon 700 Maxi Cordura</span>
-            </div>
-            <div class="component" id="speakers" data-motion="transition-fade-0 transition-slideInRight-0">
-                <div class="component-image">
-                    <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/speakers_trust_arys_compact_rgb_20_set.webp"); ?>
-                </div>
-                <span>Speakers Trust Arys Compact RGB 2.0 Set</span>
-            </div>
-            <div class="component" id="monitor" data-motion="transition-fade-0 transition-slideInRight-0">
-                <div class="component-image">
-                    <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/monitor_ips_samsung_odyssey_g5_27_wqhd_165hz.webp"); ?>
-                </div>
-                <span>Monitor IPS SAMSUNG Odyssey G5, 27", WQHD, 165Hz</span>
-            </div>
+            <?php endforeach; ?>
+
         </div>
     </container>
 

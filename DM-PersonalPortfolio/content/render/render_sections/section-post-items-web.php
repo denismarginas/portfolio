@@ -1,4 +1,6 @@
-<?php $posts = extractDataPosts( __DIR__ . "/../render_posts/projects/" ); ?>
+<?php
+$posts = getDataJson('index-data-posts-projects', 'index');
+?>
 
 
 
@@ -7,8 +9,8 @@
         <ul>
             <?php foreach ($posts as $post) : ?>
                 <?php
-                $post_path = pathinfo($post[0], PATHINFO_FILENAME).".html";
-                $post_data = $post[1];
+                $post_path = pathinfo($post["file"], PATHINFO_FILENAME).".html";
+                $post_data = $post["post_data"];
                 ?>
                 <?php if(  isset($post_data["display"] ) && ( $post_data["display"] == "enable") ) : ?>
                     <?php if( (in_array("Web Development Projects", $post_data["categories"])) && ( !in_array("Miscellaneous Projects", $post_data["categories"])) ) : ?>
@@ -20,7 +22,7 @@
                             endif; ?>
                             <a class="dm-post-item-logo" href="<?php echo $post_path; ?>#webdevelopmentprojects" <?php echo $shine_animation; ?>
                                style="background-color: <?php echo $post_data["colors"]["post_color_background"]; ?>;">
-                                <?php echo renderLogoPost($post_data); ?>
+                                <?php echo  renderLogoPost($post_data); ?>
                                 <?php
                                 $web_image_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/web/home/";
                                 if(file_exists($web_image_path)) :

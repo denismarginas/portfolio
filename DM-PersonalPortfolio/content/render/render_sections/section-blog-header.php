@@ -1,6 +1,6 @@
 <?php
 
-$jsonBlogData = getDataJson('data-blog-activity', 'data', 0);
+$jsonBlogData = getDataJson('data-blog-activity', 'data');
 
 ?>
 <section class="dm-blog-header blurred-lines-animation">
@@ -21,21 +21,22 @@ $jsonBlogData = getDataJson('data-blog-activity', 'data', 0);
                     endif; ?>
 
                 </div>
+                <div class="dm-blog-user-details">
+                    <h1 class="dm-blog-user-name">
 
-                <h1 class="dm-blog-user-name">
+                        <?php if(isset($jsonBlogData["blog-username"])) :
+                            echo $jsonBlogData["blog-username"];
+                        endif; ?>
 
-                    <?php if(isset($jsonBlogData["blog-username"])) :
-                        echo $jsonBlogData["blog-username"];
-                    endif; ?>
+                    </h1>
+                    <p class="dm-blog-user-description">
 
-                </h1>
-                <p class="dm-blog-user-description">
+                        <?php if(isset($jsonBlogData["blog-description"])) :
+                            echo $jsonBlogData["blog-description"];
+                        endif; ?>
 
-                    <?php if(isset($jsonBlogData["blog-description"])) :
-                        echo $jsonBlogData["blog-description"];
-                    endif; ?>
-
-                </p>
+                    </p>
+                </div>
             </div>
         </div>
     </container>

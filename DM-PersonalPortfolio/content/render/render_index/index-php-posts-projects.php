@@ -1,5 +1,11 @@
 <?php
-$posts = extractDataPosts( __DIR__ . "/../render_posts/projects/" );
+$urlPath = URLPath::getUrlPaths()['post'];
+$GLOBALS['urlPath'] = $urlPath;
+
+$posts = extractDataPosts( __DIR__ . "/../render_posts/projects/" , "data-posts-projects");
+usort($posts, "dateStartPostSortDesc");
+usort($posts, "personalTypePostProjectSortAsc");
+
 $jsonPostsData = json_encode($posts, JSON_HEX_APOS);
 $targetDirectory = __DIR__ . '/../../../content/json/index/';
 $fileExtension ='.json';

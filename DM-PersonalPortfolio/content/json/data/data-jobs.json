@@ -2,7 +2,7 @@
   {
     "name": "Pia Soft Product",
     "display": "true",
-    "img": "content/img/catalog/piasoftproduct/logo/logo.png",
+    "img": "content/img/projects/piasoftproduct/logo/logo.png",
     "img_bg": "dark",
     "url_web": "https://www.piasoftproduct.com",
     "url_facebook": "https://www.facebook.com/pia.pop.31/photos",
@@ -43,7 +43,7 @@
   {
     "name": "Netex Romania",
     "display": "true",
-    "img": "content/img/catalog/netexromania/logo/logo.png",
+    "img": "content/img/projects/netexromania/logo/logo.png",
     "img_bg": "light",
     "url_web": "https://www.netex.ro",
     "url_facebook": "https://www.facebook.com/netex.ro",
@@ -77,7 +77,7 @@
   {
     "name": "Enlivy",
     "display": "true",
-    "img": "content/img/catalog/enlivy/logo/logo.png",
+    "img": "content/img/projects/enlivy/logo/logo.png",
     "img_bg": "dark",
     "url_web": "https://enlivy.ro",
     "url_facebook": "https://www.facebook.com/enlivy",
@@ -108,7 +108,7 @@
   {
     "name": "Yes Agency",
     "display": "false",
-    "img": "content/img/catalog/yesagency/logo/logo.png",
+    "img": "content/img/projects/yesagency/logo/logo.png",
     "img_bg": "light",
     "url_web": "https://yesagency.ro/",
     "url_facebook": "https://www.facebook.com/yesagency.ro",
@@ -137,7 +137,7 @@
   {
     "name": "Mentor Marketing Experts",
     "display": "true",
-    "img": "content/img/catalog/mentormarketingexperts/logo/logo.png",
+    "img": "content/img/projects/mentormarketingexperts/logo/logo.png",
     "img_bg": "light",
     "url_web": "https://mentor-marketing.com/",
     "url_linkedin": "https://www.linkedin.com/company/mentor-marketing-experts/",

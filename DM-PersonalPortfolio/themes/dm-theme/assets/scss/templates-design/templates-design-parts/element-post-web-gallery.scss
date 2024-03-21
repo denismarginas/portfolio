@@ -5,7 +5,6 @@
   @include border-radius( var( --dm-border-radius-primary ));
   @include flex-column();
   gap: var( --dm-spacing-secondary );
-  background-color: rgba( var( --dm-color-gray-rgb ) , 0.1);
   padding: var( --dm-spacing-secondary );
   position: relative;
   overflow: hidden;
@@ -100,7 +99,6 @@
     }
   }
   @media only screen and (max-width: $screen-phone-medium) {
-    gap: var( --dm-spacing-primary );
 
     > .dm-web-gallery {
       grid-template-columns: repeat(1, 1fr);
@@ -108,5 +106,16 @@
   }
 }
 
+body, body.theme-light {
+  .dm-gallery-web-content {
+    background-color: rgba(var(--dm-color-gray-rgb), 0.1);
+  }
+}
+
+body.theme-dark {
+  .dm-gallery-web-content {
+    background-color: rgba(var(--dm-color-gray-lighten-rgb), 0.1);
+  }
+}
 
 

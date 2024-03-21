@@ -20,7 +20,7 @@ $experience_categories = [
                             ],
                             [
                               "type" => "page",
-                              "page" => "catalog.html",
+                              "page" => "projects.html",
                               "name" => "Projects Experience",
                               "svg" => "about-me"
                             ]

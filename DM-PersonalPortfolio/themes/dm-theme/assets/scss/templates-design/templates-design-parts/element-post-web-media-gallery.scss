@@ -1,5 +1,6 @@
 @import "../../functions/mixins.scss";
 @import "../../functions/functions.scss";
+
 .dm-gallery-web-content {
   > .dm-web-media-gallery {
     @include reset-list();
@@ -30,6 +31,11 @@
       > li {
         max-height: 80px;
       }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-large) {
+    > .dm-web-media-gallery {
+      gap: var( --dm-spacing-primary );
     }
   }
 }

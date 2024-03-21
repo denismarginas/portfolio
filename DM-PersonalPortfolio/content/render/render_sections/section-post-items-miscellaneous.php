@@ -1,14 +1,14 @@
-<?php $posts = extractDataPosts( __DIR__ . "/../render_posts/projects/" ); ?>
-
-
+<?php
+$posts = getDataJson('index-data-posts-projects', 'index');
+?>
 
 <section class="dm-posts-list grid-background-animation">
     <container>
         <ul>
             <?php foreach ($posts as $post) : ?>
                 <?php
-                $post_path = pathinfo($post[0], PATHINFO_FILENAME).".html";
-                $post_data = $post[1];
+                $post_path = pathinfo($post["file"], PATHINFO_FILENAME).".html";
+                $post_data = $post["post_data"];
                 ?>
                 <?php if( isset($post_data["display"] ) && ( $post_data["display"] == "enable") ) : ?>
                     <?php if( in_array("Miscellaneous Projects", $post_data["categories"]) ) : ?>
@@ -20,7 +20,7 @@
                             endif; ?>
                             <a class="dm-post-item-logo" href="<?php echo $post_path; ?>" <?php echo $shine_animation; ?>
                                style="background-color: <?php echo $post_data["colors"]["post_color_background"]; ?>;">
-                                <?php echo renderLogoPost($post_data); ?>
+                                <?php echo  renderLogoPost($post_data); ?>
                             </a>
                             <div class="dm-post-item-details">
                                 <ul class="dm-post-item-categories">

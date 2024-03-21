@@ -1,4 +1,4 @@
-
+<?php $jsonWorkstationData = getDataJson('data-workstation', 'data'); ?>
 
 <section class="dm-workstation-header"
         <?php if( !empty($layout) ) : ?>
@@ -8,12 +8,23 @@
     <container>
         <ul>
             <li>
-                <h1 data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.6s">WORKSTATION</h1>
-                <h2 data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.8s">PC #1 Setup</h2>
-                <p data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">Welcome to my personal workstation page! This is the hub of my productivity, where I tackle work projects and pursue personal endeavors. With regular updates and enhancements, I strive to maintain an efficient and inspiring work environment. The most recent update to my setup was in January 2023, and I'm excited to showcase the improvements I've made. Get ready to explore my workstation and discover the tools and setup that fuel my productivity!</p>
+                <h1 data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.6s">
+                    <?php echo strtoupper($jsonWorkstationData["title"]); ?>
+                </h1>
+                <h2 data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.8s">
+                    <?php echo $jsonWorkstationData["setups"]["setup 1"]["title"]; ?> Setup
+                </h2>
+                <p data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
+                    <?php echo $jsonWorkstationData["setups"]["setup 1"]["short-description"]; ?>
+                </p>
             </li>
             <li data-motion="transition-fade-0 transition-slideInLeft-0">
-                <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/pc-00.webp"); ?>
+                <?php
+                $path = $jsonWorkstationData["setups"]["setup 1"]["path-img"];
+                $img = $jsonWorkstationData["setups"]["setup 1"]["images"]["workstation"][0];
+                $imgWorkstation = $path."/".$img;
+                echo renderImage($GLOBALS['urlPath']."content/img/".$imgWorkstation);
+                ?>
             </li>
         </ul>
     </container>

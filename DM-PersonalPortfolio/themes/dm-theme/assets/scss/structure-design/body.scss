@@ -5,7 +5,10 @@ body {
     background-color: var( --dm-background-color-white );
     padding: 0;
     min-width: 240px;
-    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
 }
 
 ul,

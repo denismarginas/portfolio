@@ -1,0 +1,44 @@
+{
+    "menu-name": "Header Menu",
+    "menu-list": [
+        {
+            "name": "Home",
+            "slug": "home",
+            "submenu": [
+                {
+                    "name": "About Me",
+                    "slug": "about"
+                },
+                {
+                    "name": "Personal Workstation",
+                    "slug": "workstation"
+                }
+            ]
+        },
+        {
+            "name": "Experience",
+            "slug": "experience",
+            "submenu": [
+                {
+                    "name": "Experience as an employee",
+                    "slug": "employee-experience"
+                },
+                {
+                    "name": "Summary of the experience gained",
+                    "slug": "summary-experience"
+                }
+            ]
+        },
+        {
+            "name": "Projects",
+            "slug": "projects",
+            "submenu": [
+
+            ]
+        },
+        {
+            "name": "Contact",
+            "slug": "contact"
+        }
+    ]
+}

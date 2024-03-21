@@ -1,6 +1,6 @@
 <?php
 
-$jsonBlogData = getDataJson('data-blog-activity', 'data', 0);
+$jsonBlogData = getDataJson('data-blog-activity', 'data');
 
 ?>
 

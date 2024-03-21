@@ -1,19 +1,21 @@
+<?php
+$jsonWorkstationData = getDataJson('data-workstation', 'data');
+$path = $jsonWorkstationData["setups"]["setup 1"]["path-img"];
+$gallery = $jsonWorkstationData["setups"]["setup 1"]["images"]["full-setup"];
+?>
+
+
 <div class="slideshow">
     <div class="slideshow-container">
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
-            <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/pc_setup_1.webp", true);?>
-        </div>
 
-        <div class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
-            <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/pc_setup_2.webp", true);?>
-        </div>
+        <?php $totalImages = count($gallery); ?>
 
-        <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
-            <?php echo renderImage($GLOBALS['urlPath']."content/img/workstation/pc_setup_3.webp", true);?>
-        </div>
+        <?php foreach ($gallery as $key => $img) : ?>
+            <div class="mySlides fade">
+                <div class="numbertext"><?php echo ($key + 1) . " / " . $totalImages; ?></div>
+                <?php echo renderImage($GLOBALS['urlPath']."content/img/".$path."/".$img, true);?>
+            </div>
+        <?php endforeach; ?>
 
         <a class="prev" onclick="plusSlides(-1)">❮</a>
         <a class="next" onclick="plusSlides(1)">❯</a>

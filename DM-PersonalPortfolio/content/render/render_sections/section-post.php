@@ -1,4 +1,8 @@
 <?php
+if(!isset($jsonGlobalData)) {
+    $jsonGlobalData = getDataJson('data-global-settings', 'data');
+}
+
 if (!empty($args)) {
     $post_data = $args[0];
     $post_content = $args[1];
@@ -27,11 +31,11 @@ if (!isset($post_data)) {
                         "url" => "#media2"
                     ]
         ],
-        "employ" => "Unspecified / In CompanyName",
+        "employer" => "Unspecified / In CompanyName",
         "colors" => [
             "post_color_primary" => "#5d6977",
             "post_color_secondary" => "#1b2431",
-            "post_color_background" => "#ffffff",
+            "post_color_background" => "#1b2431",
             "post_color_text_on_background" => "#ffffff"
         ]
     ];
@@ -53,7 +57,10 @@ if (!isset($post_data)) {
 <section class="dm-post grid-background-animation">
 
     <?php
-    //echo renderWallpaperPost($post_data);
+    //echo renderWallpaperPost($post_data, "wallpaper");
+    if(isset($post_current_data) and !empty($post_current_data)) {
+        $post_content .= "<p> post_current_data: " . print_r($post_current_data, true) . "</p>";
+    }
     ?>
 
     <container>
@@ -102,7 +109,6 @@ if (!isset($post_data)) {
                     </div>
                 <?php endif; ?>
 
-
                 <?php if (isset($post_data["web_url"]) && !empty($post_data["web_url"])) : ?>
                     <p class="post-website">
                         <span>Website: </span>
@@ -145,10 +151,10 @@ if (!isset($post_data)) {
                     </p>
                 <?php endif; ?>
 
-                <?php if (isset($post_data["web_development_project"]) && !empty($post_data["web_development_project"])) : ?>
+                <?php if (isset($post_data["web_project_status"]) && !empty($post_data["web_project_status"])) : ?>
                     <p class="post-website-status">
                         <span>Website Development:</span>
-                        <?php echo $post_data["web_development_project"]; ?>
+                        <?php echo $post_data["web_project_status"]; ?>
                     </p>
                 <?php endif; ?>
 
@@ -220,7 +226,7 @@ if (!isset($post_data)) {
                         <?php foreach ($post_data["media_custom"] as $media_custom) : ?>
                             <li>
                                 <?php SVGRenderer::renderSVG('chevron-right'); ?>
-                                <span><?php dm_echo($media_custom["title"]); ?></span>
+                                <span><?php checkEcho($media_custom["title"]); ?></span>
                                 <a href="<?php echo addHttps($media_custom["url"]); ?>" target="_blank">
                                     <?php echo removeHttps($media_custom["url"]); ?>
                                 </a>
@@ -251,21 +257,31 @@ if (!isset($post_data)) {
                       </ul>
                   <?php endif; ?>
 
-                <?php if (isset($post_data["employ"]) && !empty($post_data["employ"])) : ?>
+                <?php if (isset($post_data["project_types"]) && !empty($post_data["project_types"])) : ?>
+                    <div class="post-categories">
+                        <?php foreach ( $post_data["project_types"] as $post_type ) : ?>
+                                <span class="post-tag">
+                                    <?php echo $post_type; ?>
+                                </span>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+
+                <?php if (isset($post_data["employer"]) && !empty($post_data["employer"])) : ?>
                     <p class="post-employ">
-                        <?php if ($post_data["employ"] == "Freelancer") : ?>
+                        <?php if ($post_data["employer"] == "Freelancer") : ?>
 
                             <span>Worked as:</span>
 
-                            <a href="denismarginas.html" target="_blank">
-                                <?php echo $post_data["employ"]; ?>
+                            <a href="denismarginas.<?php echo $jsonGlobalData["page-slug-extension"]; ?>" target="_blank">
+                                <?php echo $post_data["employer"]; ?>
                             </a>
                         <?php else : ?>
 
                             <span>Worked at:</span>
 
-                            <a href="employee-experience.html#<?php echo strtolower(str_replace(" ", "-", $post_data["employ"])); ?>" target="_blank">
-                                <?php echo $post_data["employ"]; ?>
+                            <a href="employee-experience.<?php echo $jsonGlobalData["page-slug-extension"]; ?>#<?php echo strtolower(str_replace(" ", "-", $post_data["employer"])); ?>" target="_blank">
+                                <?php echo $post_data["employer"]; ?>
                             </a>
 
                         <?php endif; ?>

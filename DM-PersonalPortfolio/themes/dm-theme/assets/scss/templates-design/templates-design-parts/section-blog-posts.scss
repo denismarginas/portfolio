@@ -124,7 +124,7 @@
                 --dm-text-small-font-weight: 600;
                 --dm-text-small-line-height: 200%;
               }
-              &:hover{
+              &:hover {
                 > span {
                   --dm-text-small-color: var( --dm-color-primary );
                 }
@@ -216,6 +216,20 @@ body.theme-dark {
           > .dm-blog-post-content {
             > .dm-blog-post-content-text, > .dm-blog-post-section-text, > .dm-blog-post-content-text > *, > .dm-blog-post-section-text > * {
               --dm-text-medium-color:  var( --dm-color-white );
+            }
+            > .dm-blog-post-section-buttons {
+              > a {
+                &:hover {
+                  border-color: var( --dm-color-white);
+
+                  > span {
+                    --dm-text-small-color: var( --dm-color-white);
+                  }
+                  > svg {
+                    @include svg-color(var( --dm-color-white ));
+                  }
+                }
+              }
             }
           }
         }

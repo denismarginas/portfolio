@@ -1,69 +1,80 @@
 <!doctype html>
 <html lang="en">
+
 <?php
-if (isset($seo) && is_array($seo)) {
-    $seoParam = $seo;
-    include "head.php";
-} else {
-    include "head.php";
-}
+$seoParam = isset($seo) && is_array($seo) ? $seo : null;
+include "head.php";
+$jsonMenuData = getDataJson('data-menu', 'data');
+$jsonGlobalData = getDataJson('data-global-settings', 'data');
+$jsonCategoriesData = getDataJson('data-categories', 'data');
 ?>
+
 <body id="body">
 <header id="header">
     <section>
         <div class="dm-logo">
-            <a href="home.html" class="dm-logo-img">
-                <img data="dm-logo-front" width="50" height="50" src="<?php echo $GLOBALS['urlPath']; ?>content/img/logo/logo.webp" alt="Denis Marginas Personal Icon">
+            <a href="<?php echo $jsonGlobalData["front-page"]["slug"].$jsonGlobalData["page-slug-extension"]; ?>" class="dm-logo-img">
+                <img data="dm-logo-front" width="50" height="50" src="<?php echo $GLOBALS['urlPath']; ?>content/img/logo/logo.webp" alt="<?php echo $jsonGlobalData["site-identity"]; ?> Personal Icon">
             </a>
-            <a href="home.html" class="dm-logo-text">
-                <span>Denis</span>
-                <span>Marginas</span>
+            <a href="<?php echo $jsonGlobalData["front-page"]["slug"].$jsonGlobalData["page-slug-extension"]; ?>" class="dm-logo-text">
+                <span><?php echo $jsonGlobalData["logo"]["primary-title"]; ?></span>
+                <span><?php echo $jsonGlobalData["logo"]["secondary-title"]; ?></span>
             </a>
         </div>
         <div class="dm-menu">
             <ul>
-                <li>
-                    <a href="home.html">Home</a>
-                  <ul class="dm-submenu">
-                    <li>
-                      <a href="about.html">About Me</a>
-                    </li>
-                    <li>
-                      <a href="workstation.html">Personal Workstation</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                    <a href="experience.html">Experience</a>
-                    <ul class="dm-submenu">
-                      <li>
-                        <a href="employee-experience.html">Experience as an employee</a>
-                      </li>
-                      <li>
-                        <a href="summary-experience.html">Summary of the experience gained</a>
-                      </li>
-                    </ul>
-                </li>
-              <li>
-                <a href="catalog.html">Catalog</a>
-                <ul class="dm-submenu">
-                  <li>
-                    <a href="web-development-projects.html">Web Development</a>
-                  </li>
-                  <li>
-                    <a href="visual-media-projects.html">Visual Media</a>
-                  </li>
-                  <li>
-                    <a href="miscellaneous-projects.html">Miscellaneous</a>
-                  </li>
-                </ul>
-              </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
+                <?php foreach ($jsonMenuData["menu-list"] as $menuItem) : ?>
+
+                    <?php if( $menuItem["name"] == $jsonCategoriesData["title"]) : ?>
+
+                        <li>
+                            <a href="<?php echo $jsonCategoriesData["slug"] . $jsonGlobalData["page-slug-extension"]; ?>">
+                                <?php echo $jsonCategoriesData["title"]; ?>
+                            </a>
+
+                            <?php if (isset($jsonCategoriesData["categories"]) && is_array($jsonCategoriesData["categories"])) : ?>
+                                <ul class="dm-submenu">
+                                    <?php foreach ($jsonCategoriesData["categories"] as $submenuItem) : ?>
+                                        <li>
+                                            <a href="<?php echo $submenuItem["slug"] . $jsonGlobalData["page-slug-extension"]; ?>">
+                                                <?php //echo $submenuItem["name"]; ?>
+                                                <?php echo str_replace($jsonCategoriesData["title"], '', $submenuItem["name"]); ?>
+                                            </a>
+                                        </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            <?php endif; ?>
+
+                        </li>
+
+                    <?php else: ?>
+
+                        <li>
+                            <a href="<?php echo $menuItem["slug"] . $jsonGlobalData["page-slug-extension"]; ?>">
+                                <?php echo $menuItem["name"]; ?>
+                            </a>
+
+                            <?php if (isset($menuItem["submenu"]) && is_array($menuItem["submenu"])) : ?>
+                                <ul class="dm-submenu">
+                                    <?php foreach ($menuItem["submenu"] as $submenuItem) : ?>
+                                        <li>
+                                            <a href="<?php echo $submenuItem["slug"] . $jsonGlobalData["page-slug-extension"]; ?>">
+                                                <?php echo $submenuItem["name"]; ?>
+                                            </a>
+                                        </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            <?php endif; ?>
+
+                        </li>
+
+                    <?php endif; ?>
+
+                <?php endforeach; ?>
+
             </ul>
             <div class="dm-menu-utility">
-                <a href="search.html" class="dm-search">
+                <a href="<?php echo $jsonGlobalData["search-page"]["slug"].$jsonGlobalData["page-slug-extension"]; ?>" class="dm-search">
                     <?php SVGRenderer::renderSVG('search'); ?>
                 </a>
                 <label class="dm-toggletheme">

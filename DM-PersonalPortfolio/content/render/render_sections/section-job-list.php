@@ -24,10 +24,6 @@ $jobs = getDataJson('data-jobs','data');
 
             <?php if( count($jobs_list) > 0 ) : ?>
                 <li class="dm-job-list" data-motion="transition-fade-0 data-duration="0.6s">
-                    <?php
-                        $total_years = 0;
-                        $total_months = 0;
-                    ?>
                     <?php foreach ($jobs_list as $job) : ?>
                         <ul data-listing="<?php echo count($jobs_list); ?>">
                             <li
@@ -47,36 +43,10 @@ $jobs = getDataJson('data-jobs','data');
                                 </a>
                             </li>
                         </ul>
-                        <?php if (strtotime($job["date_start"]) !== false) :
-                            $startDate = DateTime::createFromFormat('d.m.Y', $job["date_start"]);
-                            if (strtotime($job["date_end"]) !== false) :
-                                $endDate = DateTime::createFromFormat('d.m.Y', $job["date_end"]);
-                                continue;
-                            elseif (strtotime($job["date_end"]) == "In progress" or strtotime($job["date_end"]) == "Working")  :
-                                $currentDate = new DateTime();
-                                $currentDateFormatted = $currentDate->format('d.m.Y');
-                                $endDate = $currentDateFormatted;
-                                continue;
-                            else :
-                                break;
-                            endif;
 
-                            $interval = $startDate->diff($endDate);
-                            $years = $interval->y;
-                            $months = $interval->m;
-                            $days = $interval->d;
-                            if ($days > 28) :
-                                $months++;
-                            endif;
-                            if( $months > 0 or $years > 0 ):
-                                $total_years = $total_years + $years;
-                                $total_months = $total_months + $months;
-                            endif;
-                         endif; ?>
                     <?php endforeach; ?>
 
-                <?php if( ( $total_years > 0) or ( $total_months >  0)) :
-                endif; ?>
+
                 <!-- Ocean Animation Start -->
 
                 <div class="ocean" data-motion="transition-fade-0" data-duration="4s" data-delay="0s">
@@ -272,9 +242,18 @@ $jobs = getDataJson('data-jobs','data');
 
             <?php if(!$show_all_jobs): ?>
                 <li class="dm-note" data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="1.2s" data-delay="0.6s">
-                    <p>Note: Please be aware that this is not an completed list, and there may be additional professional experiences not mentioned here. If you have specific inquiries about my work history or would like more details, feel free to reach out.</p>
+                    <p id="freelancer" style="display:none !important;"></p>
+                    <p id="unspecified">Note: Please be aware that this is not an completed list, and there may be additional professional experiences not mentioned here. If you have specific inquiries about my work history or would like more details, feel free to reach out.</p>
                 </li>
             <?php  endif; ?>
+
+            <li>
+                <?php
+                $renderer = new RendererElements();
+                $renderer->renderElement('jobs-graph');
+                ?>
+            </li>
+
         </ul>
     </container>
 </section>

@@ -14,15 +14,27 @@ foreach ($htmlFiles as $file) {
         $dom = new DOMDocument();
         @$dom->loadHTML($htmlContent);
 
-        $title = $dom->getElementsByTagName('title')->item(0)->nodeValue;
-
+        $title = '';
         $metaDescription = '';
+
+        // Extract title
+        $titleElement = $dom->getElementsByTagName('title')->item(0);
+        if ($titleElement) {
+            $title = $titleElement->nodeValue;
+        }
+
+        // Extract meta description
         $metaTags = $dom->getElementsByTagName('meta');
         foreach ($metaTags as $metaTag) {
             if ($metaTag->getAttribute('name') === 'description') {
                 $metaDescription = $metaTag->getAttribute('content');
                 break;
             }
+        }
+
+        // If both title and meta description are empty, log the message
+        if (empty($title) && empty($metaDescription)) {
+            $log[] = "Page doesn't have meta fields: $file"; // Append message to the log array
         }
 
         // Extract main content without HTML tags and with elements having class "dm-debug" ignored
@@ -40,7 +52,7 @@ foreach ($htmlFiles as $file) {
             $images = $pageContentElement->getElementsByTagName('img');
             foreach ($images as $image) {
                 $src = $image->getAttribute('src');
-                if (preg_match('/\.(webp|jpg)$/i', $src)) {
+                if (preg_match('/\.(webp|jpg|png)$/i', $src)) {
                     $defaultImg = $src;
                     break;
                 }
@@ -56,6 +68,7 @@ foreach ($htmlFiles as $file) {
         ];
     }
 }
+
 
 function extractContent(&$content, $node) {
     if ($node->nodeType === XML_TEXT_NODE) {

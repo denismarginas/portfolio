@@ -141,10 +141,10 @@
         <container>
         <ul grid="3">
                 <li>
-                    <?php echo renderVideo($GLOBALS['urlPath']."content/vid/catalog/casadarius-shop/videos_1/casadarius_3.mp4",$GLOBALS['urlPath']."content/img/catalog/casadarius-presentation/logo/logo.png", $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp"); ?>
+                    <?php echo renderVideo($GLOBALS['urlPath']."content/vid/projects/casadarius-shop/videos_1/casadarius_3.mp4",$GLOBALS['urlPath']."content/img/projects/casadarius-presentation/logo/logo.png", $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp"); ?>
                 </li>
                 <li>
-                    <?php echo renderVideo($GLOBALS['urlPath']."content/vid/catalog/agromir/videos_1/agromir_7.webm",$GLOBALS['urlPath']."content/img/catalog/agromir/logo/logo.png", $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp"); ?>
+                    <?php echo renderVideo($GLOBALS['urlPath']."content/vid/projects/agromir/videos_1/agromir_7.webm",$GLOBALS['urlPath']."content/img/projects/agromir/logo/logo.png", $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp"); ?>
                 </li>
                 <li>
                     <?php echo renderImage($GLOBALS['urlPath']."content/img/summary-experience/video-editing-agromir-1.webp", true);?>
@@ -152,7 +152,7 @@
         </ul>
         <ul grid="3">
                 <li>
-                    <?php echo renderVideo($GLOBALS['urlPath']."content/vid/catalog/busvip/videos_2/busvip_3.mp4",$GLOBALS['urlPath']."content/img/catalog/busvip/logo/logo.png", $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp"); ?>
+                    <?php echo renderVideo($GLOBALS['urlPath']."content/vid/projects/busvip/videos_2/busvip_3.mp4",$GLOBALS['urlPath']."content/img/projects/busvip/logo/logo.png", $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp"); ?>
                 </li>
                 <li>
                     <?php echo renderImage($GLOBALS['urlPath']."content/img/summary-experience/video-editing-busvip-1.webp", true);?>
@@ -163,7 +163,7 @@
         </ul>
         <ul grid="3">
                 <li>
-                    <?php echo renderVideo($GLOBALS['urlPath']."content/vid/catalog/busvip/videos_3/busvip_2.mp4",$GLOBALS['urlPath']."content/img/catalog/busvip/logo/logo.png", $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp"); ?>               
+                    <?php echo renderVideo($GLOBALS['urlPath']."content/vid/projects/busvip/videos_3/busvip_2.mp4",$GLOBALS['urlPath']."content/img/projects/busvip/logo/logo.png", $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp"); ?>               
                  </li>
                 <li>
                     <?php echo renderImage($GLOBALS['urlPath']."content/img/summary-experience/video-editing-busvip-3.webp", true);?>
@@ -174,24 +174,24 @@
         </ul>
         <ul grid="3">
                 <li>
-                    <?php echo renderVideo($GLOBALS['urlPath']."content/vid/catalog/dsautocenter/dsautocenter_1.mp4",$GLOBALS['urlPath']."content/img/catalog/dsautocenter/logo/logo.png", $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp"); ?>               
+                    <?php echo renderVideo($GLOBALS['urlPath']."content/vid/projects/dsautocenter/dsautocenter_1.mp4",$GLOBALS['urlPath']."content/img/projects/dsautocenter/logo/logo.png", $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp"); ?>               
                 </li>
                 <li>
-                    <?php echo renderVideo($GLOBALS['urlPath']."content/vid/catalog/revelnail-avadores/videos_2/avadores_4.mp4",$GLOBALS['urlPath']."content/img/catalog/revelnail-avadores/logo/logo.png", $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp"); ?>                
+                    <?php echo renderVideo($GLOBALS['urlPath']."content/vid/projects/revelnail-avadores/videos_2/avadores_4.mp4",$GLOBALS['urlPath']."content/img/projects/revelnail-avadores/logo/logo.png", $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp"); ?>                
                 </li>
                 <li>
-                    <?php echo renderVideo($GLOBALS['urlPath']."content/vid/catalog/agromir/videos_3/agromir_4.webm",$GLOBALS['urlPath']."content/img/catalog/agromir/logo/logo.png", $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp"); ?>
+                    <?php echo renderVideo($GLOBALS['urlPath']."content/vid/projects/agromir/videos_3/agromir_4.webm",$GLOBALS['urlPath']."content/img/projects/agromir/logo/logo.png", $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp"); ?>
                 </li>
         </ul>
         <ul grid="3">
                 <li>
-                    <?php echo renderVideo($GLOBALS['urlPath']."content/vid/catalog/strikerproduction/csgo/NoMercy_CSGO.webm",$GLOBALS['urlPath']."content/img/catalog/strikerproduction/logo/logo.png", $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp"); ?>               
+                    <?php echo renderVideo($GLOBALS['urlPath']."content/vid/projects/strikerproduction/csgo/NoMercy_CSGO.webm",$GLOBALS['urlPath']."content/img/projects/strikerproduction/logo/logo.png", $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp"); ?>               
                 </li>
                 <li>
-                    <?php echo renderVideo($GLOBALS['urlPath']."content/vid/catalog/strikerproduction/pubg/SleeplessNight_PUBG.webm",$GLOBALS['urlPath']."content/img/catalog/strikerproduction/logo/logo.png", $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp"); ?>                
+                    <?php echo renderVideo($GLOBALS['urlPath']."content/vid/projects/strikerproduction/pubg/SleeplessNight_PUBG.webm",$GLOBALS['urlPath']."content/img/projects/strikerproduction/logo/logo.png", $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp"); ?>                
                 </li>
                 <li>
-                    <?php echo renderVideo($GLOBALS['urlPath']."content/vid/catalog/strikerproduction/rust/CoverYourEyes_Rust.webm",$GLOBALS['urlPath']."content/img/catalog/strikerproduction/logo/logo.png", $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp"); ?>
+                    <?php echo renderVideo($GLOBALS['urlPath']."content/vid/projects/strikerproduction/rust/CoverYourEyes_Rust.webm",$GLOBALS['urlPath']."content/img/projects/strikerproduction/logo/logo.png", $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp"); ?>
                 </li>
         </ul>
         </container>
@@ -294,7 +294,7 @@
                     <p>Simple animation made in Blender with free 3d tire objects for a video advertisement.</p>
                 </li>
                 <li>
-                    <?php echo renderVideo($GLOBALS['urlPath']."content/vid/catalog/agromir/videos_2/agromir_5.webm",$GLOBALS['urlPath']."content/img/catalog/agromir/logo/logo.png", $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp"); ?>
+                    <?php echo renderVideo($GLOBALS['urlPath']."content/vid/projects/agromir/videos_2/agromir_5.webm",$GLOBALS['urlPath']."content/img/projects/agromir/logo/logo.png", $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp"); ?>
                 </li>
             </ul>
             <ul grid="3">

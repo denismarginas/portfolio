@@ -1,4 +1,8 @@
-
+<?php
+$jsonWorkstationData = getDataJson('data-workstation', 'data');
+$path = $jsonWorkstationData["setups"]["setup 1"]["path-vid"];
+$videoData = $jsonWorkstationData["setups"]["setup 1"]["videos"]["full-setup"];
+?>
 
 <section class="dm-workstation-header"
         <?php if( !empty($layout) ) : ?>
@@ -11,20 +15,13 @@
     <container>
         <ul class="video-ul" >
             <li data-motion="transition-fade-0 transition-slideInRight-0">
-                <h2>Desktop Setup | IRL</h2>
+                <h2><?php echo $videoData["title"]; ?></h2>
                 <p></p>
-                <span>Video Timeline:</span>
-                <ul>
-                    <li>00:00 - 00:03 - Intro</li>
-                    <li>00:03 - 00:16 - Setup Info</li>
-                    <li>00:16 - 01:30 - Showcase Peripherals and Accessories</li>
-                    <li>01:30 - 01:52 - Showcase PC Components</li>
-                    <li>02:29 - 02:42 - Otro</li>
-                </ul>
+                <?php echo $videoData["description"]; ?>
             </li>
             <li data-motion="transition-fade-0 transition-slideInLeft-0">
-                <?php echo renderVideo($GLOBALS['urlPath']."content/vid/personal-workstation/desktop-setup.mp4",
-                  $GLOBALS['urlPath']."content/img/thumbnails/desktop-setup.webp" ); ?>
+                <?php echo renderVideo($GLOBALS['urlPath']."content/vid/".$path."/".$videoData["src"],
+                  $GLOBALS['urlPath']."content/img/thumbnails/".$videoData["thumbnail"] ); ?>
             </li>
         </ul>
     </container>

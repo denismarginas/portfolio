@@ -22,7 +22,8 @@
       background-color: rgba( var(--dm-color-gray-rgb) , 0.1 );
 
       &::placeholder {
-        opacity: 0.5;
+        @include dm-font-default();
+        opacity: 0.8;
       }
       &:focus {
         outline: none;
@@ -68,6 +69,7 @@ body, body.theme-light {
     }
   }
 }
+
 body.theme-dark {
   .dm-contact-form {
     > h3 {

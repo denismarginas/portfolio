@@ -19,6 +19,7 @@
 
     > .dm-media-video-item {
       @include flex-center();
+      overflow: hidden;
 
       > .video-container {
         width: 100%;
@@ -70,7 +71,26 @@
       grid-template-columns: repeat(1, 1fr);
     }
   }
+  @media only screen and (max-width: $screen-phone-large) {
+    gap: var( --dm-spacing-primary );
+
+    > .dm-media-video {
+      gap: var( --dm-spacing-primary );
+    }
+  }
 }
+body, body.theme-light {
+  .dm-video-media-content {
+    background-color: rgba(var(--dm-color-gray-rgb), 0.1);
+  }
+}
+
+body.theme-dark {
+  .dm-video-media-content {
+    background-color: rgba(var(--dm-color-gray-lighten-rgb), 0.1);
+  }
+}
+
 
 
 

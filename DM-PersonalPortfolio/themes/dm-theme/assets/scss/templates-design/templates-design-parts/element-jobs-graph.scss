@@ -1,0 +1,109 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-jobs-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 16px 30px;
+    background-color: var( --dm-color-white );
+    border-radius: 14px;
+    box-shadow: 2px 2px 8px rgba(var(--dm-color-gray-darken-rgb), 0.3);
+
+  .work-timeline, .jobs-timeline {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    position: relative;
+
+    .year {
+      position: relative;
+      display: flex;
+      align-items: end;
+      border-left: 1px solid var( --dm-color-black );
+      min-height: 20px;
+      width: 100%;
+
+      > span {
+        @include dm-font-small();
+        --dm-text-small-font-weight: 600;
+        --dm-text-small-color: var( --dm-color-gray-darken );
+        display: none;
+        position: absolute;
+        bottom: 29px;
+      }
+      .month {
+        display: flex;
+        border-left: 0px solid var( --dm-color-gray-lighten );
+        min-height: 10px;
+        width: 100%;
+
+        > span {
+          display: none;
+        }
+        &:first-of-type {
+          border-left: 1px solid transparent;
+        }
+      }
+    }
+
+    &:first-of-type {
+      border-left: 1px solid transparent;
+    }
+  }
+
+  > .work-timeline {
+    border-bottom: 1px solid var( --dm-color-black );
+    z-index: 1;
+  }
+  > .jobs-timeline {
+    margin-top: -21px;
+    margin-bottom: 20px;
+    z-index: 0;
+
+    > .year {
+      border-left: 0px solid transparent;
+
+      &:first-of-type {
+        > span {
+          display: block;
+          left: -2px;
+        }
+      }
+      &:last-of-type {
+        > span {
+          display: block;
+          left: -24px;
+        }
+      }
+      > .month {
+
+        &.worked {
+          background-color: #6fad6f;
+          border-left: 1px solid #6fad6f;
+        }
+      }
+    }
+  }
+  > p {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    gap:3px;
+    width: 100%;
+
+    > span {
+      @include dm-font-small();
+      --dm-text-small-font-weight: 600;
+      --dm-text-small-color: var( --dm-color-gray-darken );
+    }
+  }
+}
+body, body.theme-light {
+
+}
+body.theme-dark {
+
+}

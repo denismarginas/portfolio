@@ -59,6 +59,18 @@
   }
 }
 
+body, body.theme-light {
+  .dm-gallery-media-content {
+    background-color: rgba(var(--dm-color-gray-rgb), 0.1);
+  }
+}
+
+body.theme-dark {
+  .dm-gallery-media-content {
+    background-color: rgba(var(--dm-color-gray-lighten-rgb), 0.1);
+  }
+}
+
 
 
 

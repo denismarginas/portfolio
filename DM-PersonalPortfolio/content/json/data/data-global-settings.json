@@ -1,0 +1,18 @@
+{
+    "site-identity": "Denis Marginas",
+    "logo": {
+        "img": "logo.webp",
+        "path": "logo",
+        "primary-title": "Denis",
+        "secondary-title": "Marginas"
+    },
+    "front-page": {
+        "name": "Home",
+        "slug": "home"
+    },
+    "search-page": {
+        "name": "Search",
+        "slug": "search"
+    },
+    "page-slug-extension": ".html"
+}

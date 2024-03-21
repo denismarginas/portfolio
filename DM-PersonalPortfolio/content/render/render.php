@@ -1,19 +1,27 @@
 <?php
+$log = [];
+$log[] = "Loading rendering files...";
 
-require_once __DIR__ . '/classes/classes-general.php';
-require_once __DIR__ . '/classes/class-svg-render.php';
-require_once __DIR__ . '/classes/class-video-render.php';
-require_once __DIR__ . '/functions/functions.php';
-require_once __DIR__ . '/config/config-debug.php';
+$directories = [
+    __DIR__ . '/classes/*.php',
+    __DIR__ . '/functions/*.php',
+    __DIR__ . '/config/*.php',
+    __DIR__ . '/render_bulk/*.php',
+    __DIR__ . '/render_index/*.php',
+];
 
-
-
+foreach ($directories as $directory) {
+    foreach (glob($directory) as $filename) {
+        require_once $filename;
+    }
+}
+$log[] = "Loaded rendering files.";
 
 $htaccessFilePath = __DIR__ . '/../../.htaccess';
 
 if (file_exists($htaccessFilePath)) {
     unlink($htaccessFilePath);
-    $log[] = "Deleted existing .htaccess file" . PHP_EOL;
+    //$log[] = "Deleted existing .htaccess file" . PHP_EOL;
 }
 
 // Generate .htaccess file content
@@ -37,67 +45,57 @@ RewriteRule ^([^/]+)/?$ $1.html [L]
 //file_put_contents($htaccessFilePath, $htaccessContent);
 $log[] = "Generated .htaccess file" . PHP_EOL;
 
-$pagePath = __DIR__ . '/../pages/';
-$pageFiles = glob($pagePath . '*.html');
-foreach ($pageFiles as $pageFile) {
-    unlink($pageFile);
-    $log[] = "Deleted $pageFile" . PHP_EOL;
-}
-$pageFiles = glob('render_pages/*.php');
-
-foreach ($pageFiles as $pageFile) {
-    $urlPath = URLPath::getUrlPaths()['page'];
-    $GLOBALS['urlPath'] = $urlPath;
-    $pageHtmlFileName = basename($pageFile, '.php') . '.html';
-    ob_start();
-    include $pageFile;
-    $pageOutput = ob_get_clean();
-    $pageFilePath = $pagePath . $pageHtmlFileName;
-    file_put_contents($pageFilePath, $pageOutput);
-    $log[] =  "Rendered $pageFile to $pageFilePath" . PHP_EOL;
-}
 
 
-$postPath = $pagePath;
-$postFiles = glob('render_posts/{*.php,*/**.php}', GLOB_BRACE);
-$log = [];
 
-foreach ($postFiles as $postFile) {
-    try {
-        if (!file_exists($postFile)) {
-            throw new Exception("File $postFile not found.");
+$log[] ="<div style='color : var( --dm-color-status-primary);'>----- Json Check ------</div>";
+
+$jsonPath = __DIR__ . '/../json/data/';
+$jsonFiles = glob($jsonPath . '*.json');
+
+foreach ($jsonFiles as $jsonFile) {
+    if(count($jsonFiles) > 0) {
+        $postJsonFileName = basename($jsonFile, '.json');
+        $jsonFileData = getDataJson($postJsonFileName, 'data');
+        if($jsonFileData == null) {
+            $color_json = "var( --dm-color-status-tertiary )";
         }
-
-        $urlPath = URLPath::getUrlPaths()['post'];
-        $GLOBALS['urlPath'] = $urlPath;
-
-        $postHtmlFileName = basename($postFile, '.php') . '.html';
-        ob_start();
-        include $postFile;
-        $postOutput = ob_get_clean();
-
-        $postFilePath = $postPath . $postHtmlFileName;
-        file_put_contents($postFilePath, $postOutput);
-
-        $log[] = "Rendered $postFile to $postFilePath" . PHP_EOL;
-    } catch (Exception $e) {
-        $log[] = "Error: " . $e->getMessage() . PHP_EOL;
+        else {
+            $color_json = "var( --dm-color-status-secondary )";
+        }
+        $log[] = " <div style='color : ".$color_json.";'> ".$postJsonFileName.":  [ ".substr(json_encode($jsonFileData), 0, 200)."... ] </div>";
+    }
+    else {
+        $log[] = "No json files found in ". $jsonPath;
     }
 }
+
+
+
 
 
 // -- RENDER VIEW --
 
 // Show debug
+
+$seo = [
+    "title" => "Render | Denis Marginas",
+    "description" => "Rendering all content.",
+    "keywords" => "render",
+    "slug" => "render"
+];
+
 @include("render_structure/head.php");
+
+
 $renderer_sections = new RendererSections();
 $renderer_sections->renderSection('debug');
-
+echo "<section class='dm-debug'>";
+echo "<div class='data-log' style='display: block;position: relative; height: 100%;'><ul>";
 foreach ($log as $log_item) {
-    echo "<p>".$log_item."</p>";
+    echo "<li>".$log_item."</li>";
 }
+echo "</ul></div>";
+echo "</section>";
 
-// Save Index of Pages
-require_once __DIR__ . '/render_index/index-html-pages.php';
-require_once __DIR__ . '/render_index/index-php-posts-projects.php';
 ?>

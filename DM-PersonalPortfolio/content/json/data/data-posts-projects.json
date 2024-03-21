@@ -5,10 +5,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "aatoysfurnitures",
             "title": "A&A Toys & Furniture",
             "logo": "logo/logo.png",
+            "logo-path": "aatoysfurnitures",
             "logo_type": "png",
             "description": "This is one of the first websites I have created in my career. When I started working on it, the website was already 25% complete. I took over from the previous developer and familiarized myself with the intricacies of WordPress and the Elementor Plugin environment along the way.",
             "categories": [
@@ -49,8 +50,23 @@
                     "svg": "cf7"
                 }
             ],
-            "web_development_project": "Done",
-            "employ": "Pia Soft Product",
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Teamwork",
+                "Individual"
+            ],
+            "project_companies": [
+                "A&A Toys & Furniture"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "10.2019",
                 "date_end": "12.2019"
@@ -64,7 +80,11 @@
                 "post_color_background": "#5e606c",
                 "post_color_text_on_background": "#FFFFFF"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "acvaticbebeclub",
@@ -72,10 +92,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "acvaticbebeclub",
             "title": "Acvatic Bebe Club",
             "logo": "logo/logo.png",
+            "logo-path": "acvaticbebeclub",
             "logo_type": "png",
             "description": "A website has been created using WordPress to provide subscriptions for teaching babies and children how to swim. The site features a blog with articles, and nearly all the content on the website is available in two languages: English and Romanian. My work on this project involved editing pages and translating content from Romanian to English using the translated text provided by the client.",
             "categories": [
@@ -116,8 +137,22 @@
                     "svg": "cf7"
                 }
             ],
-            "web_development_project": "Done",
-            "employ": "Pia Soft Product",
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content"
+            ],
+            "project_collaboration": [
+                "Teamwork",
+                "Individual"
+            ],
+            "project_companies": [
+                "Acvatic Bebe Club"
+            ],
+            "project_contractor": [
+                "Digital Advisors"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "05.2021",
                 "date_end": "07.2021"
@@ -131,7 +166,11 @@
                 "post_color_background": "#FFFFFF",
                 "post_color_text_on_background": "#15b1e6"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "agramix",
@@ -139,10 +178,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "agramix",
             "title": "Agramix",
             "logo": "logo/logo.png",
+            "logo-path": "agramix",
             "logo_type": "png",
             "description": "The online shop for tools, machine parts, agricultural and industrial equipment is made in Prestashop 1.7. The theme on which the site was built has been changed a lot in appearance through HTML, CSS, JS. For products that cannot be ordered, 2 buttons have been created: one to call for the product and another to send an email to request information about the product. The contact form was created by editing TPL, HTML, CSS, and an iframe with a WordPress page with the Contact Form 7 module. The products on the site were imported through a CSV file from the previous site (Wordpress). This site is permanently connected to the eMAG marketplace through a module, in other words it has a feed through API.",
             "categories": [
@@ -216,7 +256,25 @@
                     "svg": "fbpixelproductsfeed"
                 }
             ],
-            "web_development_project": "Done",
+            "web_project_status": "Done",
+            "project_types": [
+                "online shop",
+                "web content",
+                "web design",
+                "media image",
+                "media video",
+                "web maintenance",
+                "seo optimization"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Agramix"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
             "media_facebook_url": "https://www.facebook.com/agramix.mm",
             "media_instagram_url": "https://www.instagram.com/agramix.ro/",
             "media_platforms": [
@@ -237,7 +295,7 @@
                     "svg": "sv"
                 }
             ],
-            "employ": "Pia Soft Product",
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "07.2020",
                 "date_end": "12.2021"
@@ -254,7 +312,12 @@
                 "post_color_background": "#ae0000",
                 "post_color_text_on_background": "#FFFFFF"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>",
+            "<?php echo renderSectionMediaProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "agromir",
@@ -262,10 +325,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "agromir",
             "title": "Agromir",
             "logo": "logo/logo.png",
+            "logo-path": "agromir",
             "logo_type": "png",
             "description": "The online shop for tools, industrial equipment tires, tractor tires is made in Prestashop 1.7. The products cannot be added to the cart, but there are 3 buttons to contact by phone for the product and 1 button to contact by email. The contact form was created by editing TPL, HTML, CSS, and an iframe with a WordPress page with the Contact Form 7 module. The site has implemented modules from Prestashop Addons such as JoliSearch, Amazing gallery and other modules purchased or adapted free of charge for the site. A button is displayed to contact via Whatsapp for products through a module that has been modified via JS to display various texts at a certain time.",
             "categories": [
@@ -331,7 +395,25 @@
                     "svg": "googlemerchantcenterfeed"
                 }
             ],
-            "web_development_project": "Done",
+            "web_project_status": "Done",
+            "project_types": [
+                "online shop",
+                "web content",
+                "web design",
+                "media image",
+                "media video",
+                "web maintenance",
+                "seo optimization"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Agromir"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
             "media_platforms": [
                 {
                     "name": "Photopea",
@@ -360,7 +442,7 @@
             ],
             "media_facebook_url": "https://www.facebook.com/cauciucuriagricole",
             "media_instagram_url": "https://www.instagram.com/agromir_insta/",
-            "employ": "Pia Soft Product",
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "02.2020",
                 "date_end": "11.2022"
@@ -377,7 +459,12 @@
                 "post_color_background": "#183243",
                 "post_color_text_on_background": "#FFFFFF"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>",
+            "<?php echo renderSectionMediaProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "agromir-sh",
@@ -385,10 +472,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "agromir-sh",
             "title": "Agromir Second-Hand",
             "logo": "logo/logo.png",
+            "logo-path": "agromir-sh",
             "logo_type": "png",
             "description": "The online shop for tools, industrial equipment tires, tractor tires is made in Prestashop 1.7. The products cannot be added to the cart, but there is 1 button to contact by phone for the product and 1 button to contact by email. The form was created by editing TPL, HTML, CSS and the Wordpress platform with the Contact Form 7 module and a JS script. The site has implemented modules from Prestashop Addons such as JoliSearch, Amazing gallery and other modules purchased or adapted free of charge for the site.",
             "categories": [
@@ -453,8 +541,23 @@
                     "svg": "googlemerchantcenterfeed"
                 }
             ],
-            "web_development_project": "Done",
-            "employ": "Pia Soft Product",
+            "web_project_status": "Done",
+            "project_types": [
+                "online shop",
+                "web content",
+                "web design",
+                "web maintenance"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Agromir"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "09.2020",
                 "date_end": "11.2022"
@@ -469,7 +572,11 @@
                 "post_color_background": "#212121",
                 "post_color_text_on_background": "#FFFFFF"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "amorino",
@@ -477,10 +584,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "amorino",
             "title": "Amorino",
             "logo": "logo/logo.png",
+            "logo-path": "amorino",
             "logo_type": "png",
             "description": "The website, specializing in selling dresses for girls, is built using Prestashop 1.7. Customers have the option to make payments using their cards through the PayU module. To create the contact form, I customized TPL, HTML, and CSS elements, and integrated an iframe with a WordPress page, utilizing the Contact Form 7 module.",
             "categories": [
@@ -519,7 +627,23 @@
                     "svg": "tpl"
                 }
             ],
-            "web_development_project": "Done",
+            "web_project_status": "Done",
+            "project_types": [
+                "online shop",
+                "web content",
+                "web design",
+                "web maintenance",
+                "seo optimization"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Amorino"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
             "media_platforms": [
                 {
                     "name": "Xara Photo & Graphic Designer",
@@ -530,7 +654,7 @@
                     "svg": "paintnet"
                 }
             ],
-            "employ": "Pia Soft Product",
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "03.2020",
                 "date_end": "10.2020"
@@ -545,7 +669,11 @@
                 "post_color_background": "#ffb8ce",
                 "post_color_text_on_background": "#FFFFFF"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "augustinnailtrainer",
@@ -553,10 +681,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "augustinnailtrainer",
             "title": "Augustin Nail Trainer",
             "logo": "logo/logo.png",
+            "logo-path": "augustinnailtrainer",
             "logo_type": "png",
             "description": "<?php echo renderTextVisualMediaPost('catalog','augustinnailtrainer'); ?>",
             "categories": [
@@ -570,7 +699,19 @@
                     "svg": "photopea"
                 }
             ],
-            "employ": "Freelancer",
+            "project_types": [
+                "media image"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Augustin Nail Trainer"
+            ],
+            "project_contractor": [
+                "Freelancer"
+            ],
+            "employer": "Freelancer",
             "date": {
                 "date_start": "01.2023",
                 "date_end": "02.2023"
@@ -584,7 +725,11 @@
                 "post_color_background": "#ffffff",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionMediaProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "axacompany",
@@ -592,10 +737,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "axacompany",
             "title": "AXA Company",
             "logo": "logo/logo.png",
+            "logo-path": "axacompany",
             "logo_type": "png",
             "description": "AXA Company proudly presents a minimalistic website created with WordPress, offering a clean and captivating showcase for the business. The website's simplicity and user-friendly design allow visitors to easily explore and engage with our content.",
             "categories": [
@@ -640,14 +786,28 @@
                     "svg": "ctf7"
                 }
             ],
-            "web_development_project": "Done",
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "AXA Company"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
             "media_platforms": [
                 {
                     "name": "Photopea",
                     "svg": "photopea"
                 }
             ],
-            "employ": "Pia Soft Product",
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "11.2021",
                 "date_end": "12.2021"
@@ -662,7 +822,11 @@
                 "post_color_background": "#41556d",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "boneamed",
@@ -670,10 +834,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "boneamed",
             "title": "Bonea Med",
             "logo": "logo/logo.png",
+            "logo-path": "boneamed",
             "logo_type": "png",
             "description": "This project involved creating a clinic website with appointment booking functionality. I used the Booked module in a WordPress website. Clients can book appointments with specific doctors, and doctors can access, edit, and add appointments.",
             "categories": [
@@ -722,14 +887,28 @@
                     "svg": "booked"
                 }
             ],
-            "web_development_project": "Done",
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Bonea Med"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
             "media_platforms": [
                 {
                     "name": "Photopea",
                     "svg": "photopea"
                 }
             ],
-            "employ": "Pia Soft Product",
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "06.2021",
                 "date_end": "06.2022"
@@ -744,7 +923,11 @@
                 "post_color_background": "#ffffff",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "brbhome",
@@ -752,10 +935,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "brbhome",
             "title": "BRB Home",
             "logo": "logo/logo.png",
+            "logo-path": "brbhome",
             "logo_type": "png",
             "description": "This was one of the first websites I created using WordPress. The purpose of the project was to develop a presentation website aimed at promoting furniture services and enabling customers to easily get in touch with the company.",
             "categories": [
@@ -800,8 +984,22 @@
                     "svg": "ctf7"
                 }
             ],
-            "web_development_project": "Done",
-            "employ": "Pia Soft Product",
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "BRB Home"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "11.2019",
                 "date_end": "12.2019"
@@ -816,7 +1014,11 @@
                 "post_color_background": "#FFFFFF",
                 "post_color_text_on_background": "#FFFFFF"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "brisascents",
@@ -824,10 +1026,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "brisascents",
             "title": "Brisa Scents",
             "logo": "logo/logo.png",
+            "logo-path": "brisascents",
             "logo_type": "png",
             "description": "I have continued this project from a stage of 20% - 30% done, a WordPress website for perfume and spray sales. User-friendly interface, diverse product collection. Secure transactions, detailed descriptions. Contact page for customer support.",
             "categories": [
@@ -872,8 +1075,21 @@
                     "svg": "ctf7"
                 }
             ],
-            "web_development_project": "Done",
-            "employ": "Pia Soft Product",
+            "web_project_status": "Done",
+            "project_types": [
+                "online shop",
+                "web content"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Brisa Scents"
+            ],
+            "project_contractor": [
+                "Digital Advisors"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "10.2020",
                 "date_end": "12.2020"
@@ -887,7 +1103,11 @@
                 "post_color_background": "#FFFFFF",
                 "post_color_text_on_background": "#FFFFFF"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "busvip",
@@ -895,10 +1115,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "busvip",
             "title": "Bus-Vip",
             "logo": "logo/logo.png",
+            "logo-path": "busvip",
             "logo_type": "png",
             "description": "<?php echo renderTextVisualMediaPost('catalog','busvip'); ?>",
             "categories": [
@@ -927,7 +1148,19 @@
                     "svg": "ae"
                 }
             ],
-            "employ": "Pia Soft Product",
+            "project_types": [
+                "media image"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Bus-Vip"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "01.2020",
                 "date_end": "11.2022"
@@ -942,7 +1175,11 @@
                 "post_color_background": "#0529a3",
                 "post_color_text_on_background": "#FFFFFF"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionMediaProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "cadredidactice",
@@ -950,10 +1187,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "cadredidactice",
             "title": "Centrul de Resurse Educationale",
             "logo": "logo/logo.png",
+            "logo-path": "cadredidactice",
             "logo_type": "png",
             "description": "Centrul de Resurse Educationale proudly presents a minimalistic website created with WordPress, offering a clean and captivating showcase for the business. The purpose of this application is for users to be able to send pdf documents (magazines and books) to be uploaded to the site in the respective section, or they can choose to sign up for projects (such as contests) dedicated to teachers with different dates, including pdf files. The files that are sent to the site are saved in the hosting. The website's simplicity and user-friendly design allow visitors to easily explore and engage with our content.",
             "categories": [
@@ -998,8 +1236,23 @@
                     "svg": "ctf7"
                 }
             ],
-            "web_development_project": "Done",
-            "employ": "Pia Soft Product",
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design",
+                "web maintenance"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Centrul De Resurse Si Inovatie In Educatie"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "03.2020",
                 "date_end": "11.2022"
@@ -1014,7 +1267,11 @@
                 "post_color_background": "#203d5b",
                 "post_color_text_on_background": "#FFFFFF"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "cafeagano",
@@ -1022,10 +1279,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "cafeagano",
             "title": "Cafea Gano",
             "logo": "logo/logo.png",
+            "logo-path": "cafeagano",
             "logo_type": "png",
             "description": "WordPress website created for an online shop specializing in natural supplements and coffee. The shop was made using the Woocommerce module.",
             "categories": [
@@ -1074,8 +1332,23 @@
                     "svg": "woocommerce"
                 }
             ],
-            "web_development_project": "Done",
-            "employ": "Pia Soft Product",
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design",
+                "web maintenance"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Cafea Gano"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "03.2020",
                 "date_end": "07.2020"
@@ -1089,7 +1362,11 @@
                 "post_color_background": "#312114",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "carconcordia",
@@ -1097,10 +1374,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "carconcordia",
-            "title": "Concordia",
+            "title": "Concordia CAR",
             "logo": "logo/logo.png",
+            "logo-path": "carconcordia",
             "logo_type": "png",
             "description": "Concordia proudly presents a website created with WordPress, offering a clean and captivating showcase for the business. The website's simplicity and user-friendly design allow visitors to easily explore and engage with our content.",
             "categories": [
@@ -1150,7 +1428,21 @@
                 }
             ],
             "website_status": "Done",
-            "employ": "Pia Soft Product",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Carconcordia"
+            ],
+            "project_contractor": [
+                "Digital Advisors"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "06.2021",
                 "date_end": "06.2021"
@@ -1164,7 +1456,11 @@
                 "post_color_background": "#ffffff",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "casadarius-presentation",
@@ -1172,10 +1468,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "casadarius-presentation",
             "title": "Casa Darius",
             "logo": "logo/logo.png",
+            "logo-path": "casadarius-presentation",
             "logo_type": "png",
             "description": "Casa Darius proudly presents a website created with WordPress, offering a clean and captivating showcase for the business. The website's simplicity and user-friendly design allow visitors to easily explore and engage with our content.",
             "categories": [
@@ -1220,8 +1517,23 @@
                     "svg": "ctf7"
                 }
             ],
-            "web_development_project": "Done",
-            "employ": "Pia Soft Product",
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design",
+                "web maintenance"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Casa Darius"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "01.2020",
                 "date_end": "07.2020"
@@ -1236,7 +1548,11 @@
                 "post_color_background": "#bd3434",
                 "post_color_text_on_background": "#FFFFFF"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "casadarius-shop",
@@ -1244,10 +1560,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "casadarius-shop",
             "title": "Casa Darius",
             "logo": "logo/logo.png",
+            "logo-path": "casadarius-shop",
             "logo_type": "png",
             "description": "The online shop for furniture is made in Prestashop 1.7 with integrated payment method, via MobilPay. The products cannot be added to the cart, but there are buttons to contact via phone for the specific store location. It have more than 30 new products with around 8-10 edited photos, products added in an empty room with pot decorations. ",
             "categories": [
@@ -1313,7 +1630,23 @@
                     "svg": "fbpixelproductsfeed"
                 }
             ],
-            "web_development_project": "Done",
+            "web_project_status": "Done",
+            "project_types": [
+                "online shop",
+                "web content",
+                "web design",
+                "web maintenance",
+                "seo optimization"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Casa Darius"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
             "media_platforms": [
                 {
                     "name": "Photopea",
@@ -1356,7 +1689,7 @@
                     "url": "https://www.instagram.com/casadariusludus/"
                 }
             ],
-            "employ": "Pia Soft Product",
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "07.2020",
                 "date_end": "11.2022"
@@ -1373,7 +1706,12 @@
                 "post_color_background": "#ccb06a",
                 "post_color_text_on_background": "#FFFFFF"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>",
+            "<?php echo renderSectionMediaProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "cekan",
@@ -1381,10 +1719,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "cekan",
-            "title": "Cekan",
+            "title": "Cekan - Case Study",
             "logo": "logo/logo.png",
+            "logo-path": "cekan",
             "logo_type": "png",
             "description": "Translated Figma web design for the Case Study section on the cekan.ca website, ensuring 99% accuracy in replicating the responsive look across various screen sizes. Utilized HTML and SCSS to implement the page design, using Prepro to compile SCSS into CSS. Managed the code using PhpStorm. Completed the project in 4 days, dedicating 2-4 hours of work each day.",
             "categories": [
@@ -1416,11 +1755,23 @@
                     "svg": "js"
                 }
             ],
-            "web_development_project": "Undone",
-            "employ": "Freelancer",
+            "web_project_status": "Done",
+            "project_types": [
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Cekan"
+            ],
+            "project_contractor": [
+                "Enlivy"
+            ],
+            "employer": "Freelancer",
             "date": {
-                "date_start": "25.01.2024",
-                "date_end": "30.02.2024"
+                "date_start": "01.2024",
+                "date_end": "02.2024"
             },
             "tags": [
                 "web",
@@ -1432,7 +1783,11 @@
                 "post_color_background": "#31bcd1",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "ceramicevo",
@@ -1440,10 +1795,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "ceramicevo",
             "title": "Ceramic & Stone Evolutione",
             "logo": "logo/logo.png",
+            "logo-path": "ceramicevo",
             "logo_type": "png",
             "description": "Evolutione proudly presents a minimalistic online shop created with Prestashop 1.6, offering a clean and captivating showcase for the business. The customers can't buy the products, but with the intended buttons on the product page, they can contact the supplier via phone or with the product ask form. The website's simplicity and user-friendly design allow visitors to easily explore and engage with our content.",
             "categories": [
@@ -1482,8 +1838,21 @@
                     "svg": "tpl"
                 }
             ],
-            "web_development_project": "Done",
-            "employ": "Pia Soft Product",
+            "web_project_status": "Done",
+            "project_types": [
+                "online shop",
+                "web content"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Ceramic & Stone Evolutione"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "05.2020",
                 "date_end": "07.2020"
@@ -1498,7 +1867,11 @@
                 "post_color_background": "#ffae01",
                 "post_color_text_on_background": "#FFFFFF"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "copiatoarealbaiulia",
@@ -1506,10 +1879,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "copiatoarealbaiulia",
             "title": "Copiatoare Alba Iulia",
             "logo": "logo/logo.png",
+            "logo-path": "copiatoarealbaiulia",
             "logo_type": "png",
             "description": "Copiatoare Alba Iulia proudly presents a minimalistic website created with WordPress, offering a clean and captivating showcase for the business. The website's simplicity and user-friendly design allow visitors to easily explore and engage with our content.",
             "categories": [
@@ -1554,7 +1928,21 @@
                     "svg": "ctf7"
                 }
             ],
-            "web_development_project": "Done",
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Copiatoare Alba Iulia"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
             "media_platforms": [
                 {
                     "name": "Xara Photo & Graphic Designer",
@@ -1565,7 +1953,7 @@
                     "svg": "paintnet"
                 }
             ],
-            "employ": "Pia Soft Product",
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "11.2019",
                 "date_end": "12.2019"
@@ -1580,7 +1968,11 @@
                 "post_color_background": "#3b3d42",
                 "post_color_text_on_background": "#FFFFFF"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "covoarealex",
@@ -1588,10 +1980,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "covoarealex",
             "title": "Covoare Alex",
             "logo": "logo/logo.png",
+            "logo-path": "covoarealex",
             "logo_type": "png",
             "description": "The online shop for different types and models of carpets, is made in Prestashop 1.7 with integrated payment method, via MobilPay. The website's simplicity and user-friendly design allow visitors to easily explore and engage with our content.",
             "categories": [
@@ -1644,14 +2037,29 @@
                     "svg": "fbpixelproductsfeed"
                 }
             ],
-            "web_development_project": "Done",
+            "web_project_status": "Done",
+            "project_types": [
+                "online shop",
+                "web content",
+                "web design",
+                "web maintenance"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Covoare Alex"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
             "media_platforms": [
                 {
                     "name": "Photopea",
                     "svg": "photopea"
                 }
             ],
-            "employ": "Pia Soft Product",
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "04.2021",
                 "date_end": "11.2021"
@@ -1666,7 +2074,11 @@
                 "post_color_background": "#404040",
                 "post_color_text_on_background": "#FFFFFF"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "dabo-sm-bm",
@@ -1674,10 +2086,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "dabo-sm-bm",
             "title": "Dabo - SM & BM",
             "logo": "logo/logo.png",
+            "logo-path": "dabo-sm-bm",
             "logo_type": "png",
             "description": "Here is my media content for the promotion of Dabo Satu Mare & Dabo Baia Mare during the pandemic, which took place in 2020. <?php echo renderTextVisualMediaPost('catalog','dabo-sm-bm'); ?>",
             "categories": [
@@ -1697,7 +2110,19 @@
                     "svg": "sv"
                 }
             ],
-            "employ": "Pia Soft Product",
+            "project_types": [
+                "media image"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Dabo Satu Mare"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "03.2020",
                 "date_end": "05.2020"
@@ -1712,7 +2137,11 @@
                 "post_color_background": "#ffffff",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionMediaProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "denismarginas",
@@ -1720,10 +2149,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "denismarginas",
             "title": "Denis Marginas",
             "logo": "logo/logo.png",
+            "logo-path": "denismarginas",
             "logo_type": "png",
             "description": "Simple portfolio website is made with Google Site. <?php echo renderTextVisualMediaPost('catalog','denismarginas'); ?>",
             "categories": [
@@ -1738,7 +2168,18 @@
                     "svg": "googlesite"
                 }
             ],
-            "web_development_project": "Done",
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design",
+                "media image",
+                "media video",
+                "personal"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
             "media_platforms": [
                 {
                     "name": "Photopea",
@@ -1787,7 +2228,7 @@
             ],
             "date": {
                 "date_start": "06.2020",
-                "date_end": "07.2023"
+                "date_end": "<?php echo sprintf('%02d', date('m')) . '.' . date('Y'); ?>"
             },
             "tags": [
                 "web",
@@ -1800,7 +2241,12 @@
                 "post_color_background": "#5d6977",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>",
+            "<?php echo renderSectionMediaProject($post_current_data, ['videos' => [['video-path' => 'personal-portfolio/personal-portfolio.mp4', 'video-thumbnail-path' => 'thumbnails/personal-portfolio.webp'], ['video-path' => 'personal-workstation/desktop-setup.mp4', 'video-thumbnail-path' => 'thumbnails/desktop-setup.webp']]]); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "dsautocenter",
@@ -1808,10 +2254,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "dsautocenter",
             "title": "DS Auto Center",
             "logo": "logo/logo.png",
+            "logo-path": "dsautocenter",
             "logo_type": "png",
             "description": "<?php echo renderTextVisualMediaPost('catalog','dsautocenter'); ?>",
             "categories": [
@@ -1827,7 +2274,20 @@
                     "svg": "sv"
                 }
             ],
-            "employ": "Pia Soft Product",
+            "project_types": [
+                "media image",
+                "media video"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "DS Auto Center"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "03.2020",
                 "date_end": "03.2020"
@@ -1849,7 +2309,11 @@
                 "post_color_background": "#2f3647",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionMediaProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "freymobdesign",
@@ -1857,10 +2321,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "freymobdesign",
             "title": "FreyMob Design",
             "logo": "logo/logo.png",
+            "logo-path": "freymobdesign",
             "logo_type": "png",
             "description": "The online shop for furniture is made in Prestashop 1.6. The site has 3 languages, and 2 currencies. The products on this application cannot be bought, but 2 buttons are provided on the product page: one to contact the distributor with a phone and the other to display the offer request form. Payment for purchases can be made only by cash on delivery, and confirmation of delivery is made by the merchant",
             "categories": [
@@ -1905,8 +2370,23 @@
                     "svg": "fbpixelproductsfeed"
                 }
             ],
-            "web_development_project": "Done",
-            "employ": "Pia Soft Product",
+            "web_project_status": "Done",
+            "project_types": [
+                "online shop",
+                "web content",
+                "web design",
+                "web maintenance"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "FreyMob Design"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "10.2020",
                 "date_end": "03.2021"
@@ -1920,7 +2400,11 @@
                 "post_color_background": "#ffffff",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "gamadametal",
@@ -1928,10 +2412,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "gamadametal",
             "title": "Gamada Metal",
             "logo": "logo/logo.png",
+            "logo-path": "gamadametal",
             "logo_type": "png",
             "description": "<?php echo renderTextVisualMediaPost('catalog','gamadametal'); ?>",
             "categories": [
@@ -1944,7 +2429,19 @@
                     "svg": "photopea"
                 }
             ],
-            "employ": "Pia Soft Product",
+            "project_types": [
+                "media image"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Gamada Metal"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "11.2021",
                 "date_end": "12.2021"
@@ -1958,7 +2455,11 @@
                 "post_color_background": "#ffffff",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionMediaProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "hartkeepyouthaton",
@@ -1966,10 +2467,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "hartkeepyouthaton",
             "title": "HART - Keep your hat on",
             "logo": "logo/logo.png",
+            "logo-path": "hartkeepyouthaton",
             "logo_type": "png",
             "description": "<?php echo renderTextVisualMediaPost('catalog','hartkeepyouthaton'); ?>",
             "categories": [
@@ -1990,7 +2492,19 @@
                     "svg": "sv"
                 }
             ],
-            "employ": "Pia Soft Product",
+            "project_types": [
+                "media image"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "HART - Keep your hat on"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "02.2020",
                 "date_end": "02.2020"
@@ -2004,7 +2518,11 @@
                 "post_color_background": "#ffffff",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionMediaProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "ilnicelectric",
@@ -2012,10 +2530,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "ilnicelectric",
             "title": "Ilnic Electric",
             "logo": "logo/logo.png",
+            "logo-path": "ilnicelectric",
             "logo_type": "png",
             "description": "Ilnic Electric proudly presents a minimalistic website created with WordPress, offering a clean and captivating showcase for the business. The website's simplicity and user-friendly design allow visitors to easily explore and engage with our content.",
             "categories": [
@@ -2064,14 +2583,28 @@
                     "svg": "sliderrevolution"
                 }
             ],
-            "web_development_project": "Done",
+            "web_project_status": "Done",
             "media_platforms": [
                 {
                     "name": "Photopea",
                     "svg": "photopea"
                 }
             ],
-            "employ": "Pia Soft Product",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Ilnic Electric"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "01.2022",
                 "date_end": "02.2022"
@@ -2086,7 +2619,11 @@
                 "post_color_background": "#00183e",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "lavplast-ambalajelavplast",
@@ -2094,10 +2631,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "ambalajelavplast",
             "title": "Ambalaje Lavplast",
             "logo": "logo/logo.png",
+            "logo-path": "ambalajelavplast",
             "logo_type": "png",
             "description": "The online shop, built on Prestashop 1.7, offers a wide range of products. Customers can conveniently make payments using their cards through the MobilPay module. To create the contact form, I edited TPL, HTML, and CSS, and integrated an iframe with a WordPress page utilizing the Contact Form 7 module.",
             "categories": [
@@ -2136,7 +2674,7 @@
                     "svg": "tpl"
                 }
             ],
-            "web_development_project": "Done",
+            "web_project_status": "Done",
             "media_platforms": [
                 {
                     "name": "Xara Photo & Graphic Designer",
@@ -2147,7 +2685,21 @@
                     "svg": "paintnet"
                 }
             ],
-            "employ": "Pia Soft Product",
+            "project_types": [
+                "online shop",
+                "web content",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Lavplast"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "06.2020",
                 "date_end": "07.2020"
@@ -2162,7 +2714,11 @@
                 "post_color_background": "#2a5778",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "lavplast-lavmag",
@@ -2170,10 +2726,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "lavmag",
             "title": "Lavmag",
             "logo": "logo/logo.png",
+            "logo-path": "lavmag",
             "logo_type": "png",
             "description": "The online shop for a wide range of products is built using Prestashop 1.7. All products are regularly updated and uploaded through a feed sourced from another store. To accomplish this, I developed custom PHP scripts from scratch to handle various feed actions. These scripts efficiently open the CSV feed, create categories, brands, and products, as well as upload and update product data, including prices. Notably, the prices of the products are adjusted with a higher percentage compared to the values received from the feed. During the latest update, this store successfully managed over 4000 products. Customers can conveniently make payments using their cards through the MobilPay module. To create the contact form, I edited TPL, HTML, and CSS, and integrated an iframe with a WordPress page utilizing the Contact Form 7 module.",
             "categories": [
@@ -2226,7 +2783,7 @@
                     "svg": "fbpixelproductsfeed"
                 }
             ],
-            "web_development_project": "Done",
+            "web_project_status": "Done",
             "media_platforms": [
                 {
                     "name": "Xara Photo & Graphic Designer",
@@ -2237,7 +2794,22 @@
                     "svg": "paintnet"
                 }
             ],
-            "employ": "Pia Soft Product",
+            "project_types": [
+                "online shop",
+                "web content",
+                "web design",
+                "web maintenance"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Lavplast"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "07.2020",
                 "date_end": "09.2020"
@@ -2252,7 +2824,11 @@
                 "post_color_background": "#8c0f14",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "marasafety",
@@ -2260,10 +2836,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "marasafety",
             "title": "Mara Safety",
             "logo": "logo/logo.png",
+            "logo-path": "marasafety",
             "logo_type": "png",
             "description": "This is one of the first websites I have created in my career. When I started working on it, the website was already 30% complete. Mara Safety proudly presents a minimalistic online shop created with Prestashop 1.6, offering a clean and captivating showcase for the business.",
             "categories": [
@@ -2302,8 +2879,22 @@
                     "svg": "tpl"
                 }
             ],
-            "web_development_project": "Done",
-            "employ": "Pia Soft Product",
+            "web_project_status": "Done",
+            "project_types": [
+                "online shop",
+                "web content"
+            ],
+            "project_collaboration": [
+                "Individual",
+                "Teamwork"
+            ],
+            "project_companies": [
+                "Mara Safety"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "10.2019",
                 "date_end": "12.2019"
@@ -2318,7 +2909,11 @@
                 "post_color_background": "#ffffff",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "masiniinratebaiamare",
@@ -2326,10 +2921,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "masiniinratebaiamare",
             "title": "Masini in Rate Baia Mare",
             "logo": "logo/logo.png",
+            "logo-path": "masiniinratebaiamare",
             "logo_type": "png",
             "description": "Masini in Rate Baia Mare proudly presents a minimalistic online shop created with WordPress, offering a clean and captivating showcase for the business. The products cannot be bought directly, but on the product page there is a button to send a message to the seller. The website's simplicity and user-friendly design allow visitors to easily explore and engage with our content.",
             "categories": [
@@ -2382,8 +2978,22 @@
                     "svg": "sliderrevolution"
                 }
             ],
-            "web_development_project": "Done",
-            "employ": "Pia Soft Product",
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Masini in Rate Baia Mare"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "06.2020",
                 "date_end": "07.2020"
@@ -2398,7 +3008,11 @@
                 "post_color_background": "#ffffff",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "medicalortovit",
@@ -2406,10 +3020,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "medicalortovit",
-            "title": "Medical Ortovit",
+            "title": "Medical Ortovit - Products",
             "logo": "logo/logo.png",
+            "logo-path": "medicalortovit",
             "logo_type": "png",
             "description": "When I started working on it, the website was already 60% complete. Website make in WordPress for blog and the sale of medical products and services. The work I made in this project, was the products section (www.ortovit.eu/produse/), I have created over 200 pages, all connected to each other with a friendly interface and an image suggestive of the section.",
             "categories": [
@@ -2454,8 +3069,21 @@
                     "svg": "wpbakery"
                 }
             ],
-            "web_development_project": "Done",
-            "employ": "Pia Soft Product",
+            "web_project_status": "Done",
+            "project_types": [
+                "web content",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Medical Ortovit"
+            ],
+            "project_contractor": [
+                "Digital Advisors"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "07.2021",
                 "date_end": "09.2021"
@@ -2469,7 +3097,11 @@
                 "post_color_background": "#003452",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "mewi",
@@ -2477,10 +3109,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "mewi",
             "title": "Mewi",
             "logo": "logo/logo.png",
+            "logo-path": "mewi",
             "logo_type": "png",
             "description": "At this Wordpress site, I had to do maintenance, troubleshooting, code changes, plugin updates, and creating HTML & CSS content for the site's Newsletter. Also I made some redesign for few pages with Elementor plugin and changed the theme CSS at some elements. I worked on optimization, where I resize the images from the first page at 2500px with Topaz Gigapixel AI and I have changed on website with a compressed versions.",
             "categories": [
@@ -2525,7 +3158,22 @@
                     "svg": "wpbakery"
                 }
             ],
-            "employ": "Netex Romania",
+            "web_project_status": "Undone",
+            "project_types": [
+                "web content",
+                "web design",
+                "web maintenance"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Mewi"
+            ],
+            "project_contractor": [
+                "Netex Romania"
+            ],
+            "employer": "Netex Romania",
             "date": {
                 "date_start": "01.2022",
                 "date_end": "03.2023"
@@ -2540,7 +3188,14 @@
                 "post_color_background": "#018a46",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>",
+            "<?php echo renderParagraphBlockProject('I added a search bar to the menu with the Advanced Search and Mega Menu modules. The results of the search are showing live with ajax through the Advanced Search module, which has been modified in its files so that it doesn`t display the type of the item found and some elements were translated in Romanian.'); ?>",
+            "<?php echo renderImageBlockProject($post_current_data,'web/maintenance-website/search/', 'web-search.webp'); ?>",
+            "<?php echo renderParagraphBlockProject('In the section below are HTML and CSS newsletter templates. These were made by receiving images, a DOCX document with the text and links it should contain. Images were uploaded to the site host via FileZilla and cPanel to work globally.'); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "mobilasimexplus",
@@ -2548,10 +3203,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "mobilasimexplus",
-            "title": "Mobila Simex Pluse",
+            "title": "Mobila Simex Plus",
             "logo": "logo/logo.png",
+            "logo-path": "mobilasimexplus",
             "logo_type": "png",
             "description": "Mobila Simex Plus proudly presents a minimalistic online shop created with Prestashop 1.7, offering a clean and captivating showcase for the business. The products can be bought in sets or separately. Payment for purchases can be made only by cash on delivery, and confirmation of delivery is made by the merchant.",
             "categories": [
@@ -2591,7 +3247,7 @@
                     "svg": "tpl"
                 }
             ],
-            "web_development_project": "Done",
+            "web_project_status": "Done",
             "media_platforms": [
                 {
                     "name": "Xara Photo & Graphic Designer",
@@ -2603,7 +3259,20 @@
                 }
             ],
             "media_facebook_url": "https://www.facebook.com/producator.mobila.lemn.masiv",
-            "employ": "Pia Soft Product",
+            "project_types": [
+                "online shop",
+                "web content"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Mobila Simex Plus"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "11.2019",
                 "date_end": "02.2020"
@@ -2618,7 +3287,12 @@
                 "post_color_background": "#a07a53",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>",
+            "<?php echo renderSectionMediaProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "mycreativedesign",
@@ -2626,10 +3300,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "mycreativedesign",
             "title": "My Creative Design",
             "logo": "logo/logo.png",
+            "logo-path": "mycreativedesign",
             "logo_type": "png",
             "description": "<?php echo renderTextVisualMediaPost('catalog','mycreativedesign'); ?>",
             "categories": [
@@ -2645,7 +3320,19 @@
                     "svg": "paintnet"
                 }
             ],
-            "employ": "Pia Soft Product",
+            "project_types": [
+                "media image"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "My Creative Design"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "12.2019",
                 "date_end": "12.2019"
@@ -2660,7 +3347,11 @@
                 "post_color_background": "#ffffff",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionMediaProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "netexromania",
@@ -2668,10 +3359,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "netexromania",
             "title": "Netex Romania",
             "logo": "logo/logo.png",
+            "logo-path": "netexromania",
             "logo_type": "png",
             "description": "At this site, I had to do maintenance, fixing back-end bugs, PHP files from theme files, troubleshooting, code changes, plugin updates, and banners. Here was my second job, working at this company and even at it's website. I was hired on 2021 December, and most of my part was to work at few websites, maintenance most of the time, and most important project was the redesing of the ReifenDirekt websites.",
             "categories": [
@@ -2714,7 +3406,20 @@
                     "svg": "photopea"
                 }
             ],
-            "employ": "Netex Romania",
+            "project_types": [
+                "web maintenance"
+            ],
+            "project_collaboration": [
+                "Individual",
+                "Teamwork"
+            ],
+            "project_companies": [
+                "Netex Romania"
+            ],
+            "project_contractor": [
+                "Netex Romania"
+            ],
+            "employer": "Netex Romania",
             "date": {
                 "date_start": "12.2021",
                 "date_end": "04.2023"
@@ -2729,7 +3434,12 @@
                 "post_color_background": "#ffffff",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>",
+            "<?php echo renderSectionMediaProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "petri",
@@ -2737,10 +3447,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "petri",
             "title": "Petri",
             "logo": "logo/logo.png",
+            "logo-path": "petri",
             "logo_type": "png",
             "description": "At this project I worked in a team to create a custom theme in Wordpress. My part at this project was to translate content from the Figma project to website elements. I have created blocks, pages with PHP, SCSS, and JSON using:  PhpStorm, GitHub, Prepros, XAMPP. During this project, it was my first time coding PHP using taxonomies, terms, and custom posts within the WordPress environment",
             "categories": [
@@ -2785,8 +3496,21 @@
                     "svg": "gutenberg"
                 }
             ],
-            "web_development_project": "Undone",
-            "employ": "Enlivy",
+            "web_project_status": "Undone",
+            "project_types": [
+                "presentation website",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Teamwork"
+            ],
+            "project_companies": [
+                "Petri"
+            ],
+            "project_contractor": [
+                "Enlivy"
+            ],
+            "employer": "Enlivy",
             "date": {
                 "date_start": "05.2023",
                 "date_end": "06.2023"
@@ -2800,7 +3524,11 @@
                 "post_color_background": "#ffffff",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "piasoftproduct",
@@ -2808,12 +3536,13 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "piasoftproduct",
             "title": "Pia Soft Product",
             "logo": "logo/logo.png",
+            "logo-path": "piasoftproduct",
             "logo_type": "png",
-            "description": "This is a company's presentation site, and is made in Wordpress with modules such as Elementor and Contact Form 7. Also the redesign logo was made by me to. The photo elements was edited in Photopea. At this website I didn't make all the pages, and all the SEO optimization. Here I work with colleague on this websites and on many more. I was hired first time at this small company in 2019 October, we were 2 workers at the beginning only, but the only part where we work together was just on SEO optimization and on the error checking at websites. After approximate 1 year and half from the point I worked there, only me remained as an employee. In total I worked 3 years and 1 month at this company over 30 websites in Wordpress and Prestashop, and over 2000 foto-video media for promotions.",
+            "description": "This is a company's presentation site, and is made in Wordpress with modules such as Elementor and Contact Form 7. Also the redesign logo was made by me to. The photo elements was edited in Photopea. At this website I didn't make all the pages, and all the SEO optimization. Here I work with colleague on this websites and on many more. I was hired first time at this small company in 2019 October, we were 2 workers at the beginning only, but the only part where we work together was just on SEO optimization and on the error checking at websites. After approximate 1 year and half from the point I worked there, only me remained as an employeree. In total I worked 3 years and 1 month at this company over 30 websites in Wordpress and Prestashop, and over 2000 foto-video media for promotions.",
             "categories": [
                 "Web Development Projects",
                 "Visual Media Projects"
@@ -2857,7 +3586,24 @@
                     "svg": "ctf7"
                 }
             ],
-            "web_development_project": "Done",
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design",
+                "web maintenance",
+                "seo optimization"
+            ],
+            "project_collaboration": [
+                "Individual",
+                "Teamwork"
+            ],
+            "project_companies": [
+                "Pia Soft Product"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
             "media_platforms": [
                 {
                     "name": "Photopea",
@@ -2883,7 +3629,7 @@
             "media_facebook_url": "www.facebook.com/piasoftproduct",
             "media_youtube_url": "www.youtube.com/channel/UCtTxge0ZhOW3jVxsXzBaJJg",
             "media_instagram_url": "www.instagram.com/piasoftproduct/",
-            "employ": "Pia Soft Product",
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "10.2019",
                 "date_end": "11.2022"
@@ -2900,7 +3646,12 @@
                 "post_color_background": "#212121",
                 "post_color_text_on_background": "#FFFFFF"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>",
+            "<?php echo renderSectionMediaProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "prismanord",
@@ -2908,13 +3659,15 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "prismanord",
             "title": "Prisma Nord",
             "logo": "logo/logo.png",
+            "logo-path": "prismanord",
             "logo_type": "png",
-            "description": "<?php echo renderTextVisualMediaPost('catalog','prismanord'); ?>",
+            "description": "The online shop with over 150 products is built on Prestashop 1.7. To add products to the cart, a price and a quantity with a non-zero value must be provided. However, there are two buttons available for alternative contact options: one for phone contact and another for submitting a form. The form was customized using TPL, HTML, CSS, and JS, with integration of the Contact Form 7 module. <?php echo renderTextVisualMediaPost('catalog','prismanord'); ?> The content from 'Visual Media Projects' section was made in 03.2020. The content from 'Web Development Projects' section was made in 10.2023 - 02.2024.",
             "categories": [
+                "Web Development Projects",
                 "Visual Media Projects",
                 "Miscellaneous Projects"
             ],
@@ -2928,12 +3681,77 @@
                     "svg": "paintnet"
                 }
             ],
-            "employ": "Freelancer",
+            "web_url": "acoperisul-prisma.ro",
+            "web_platform": [
+                {
+                    "name": "Prestashop",
+                    "svg": "prestashop"
+                }
+            ],
+            "web_languages": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "TPL",
+                    "svg": "tpl"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Creative Elements - Elementor Website Builder",
+                    "svg": "elementor"
+                },
+                {
+                    "name": "ETS Contact Form 7",
+                    "svg": "ctf7"
+                },
+                {
+                    "name": "Pretty URLs",
+                    "svg": "prettyurls"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "online shop",
+                "web content",
+                "web design",
+                "media image"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Prisma Nord Product"
+            ],
+            "project_contractor": [
+                "Freelancer"
+            ],
+            "employer": "Freelancer",
             "date": {
                 "date_start": "03.2020",
-                "date_end": "03.2020"
+                "date_end": "02.2024"
             },
             "tags": [
+                "web",
+                "media-web",
                 "photo"
             ],
             "media_facebook_url": "https://www.facebook.com/profile.php?id=100054479439548",
@@ -2946,10 +3764,15 @@
             "colors": {
                 "post_color_primary": "#eb1e24",
                 "post_color_secondary": "#ffffff",
-                "post_color_background": "#ffffff",
+                "post_color_background": "#212121",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>",
+            "<?php echo renderSectionMediaProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "promotiimars",
@@ -2957,10 +3780,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "promotiimars",
             "title": "Promotii Mars",
             "logo": "logo/logo.png",
+            "logo-path": "promotiimars",
             "logo_type": "png",
             "description": "Website make in WordPress for contests and promotions. Most of the contests are created in a custom PHP form. The design of the form and its functionalities are created based on PSD images with the contest. Few pages from menu have JS and CSS animation for user interaction with items. Main plugins used for creating the forms for competitions in this website are Elementor and PHP Everywhere. Over 20 of different forms I had created here with different design and in some cases with different functions.",
             "categories": [
@@ -3005,8 +3829,23 @@
                     "svg": "elementor"
                 }
             ],
-            "web_development_project": "Done",
-            "employ": "Pia Soft Product",
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design",
+                "web maintenance"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "TNDC"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "03.2020",
                 "date_end": "11.2022"
@@ -3021,7 +3860,11 @@
                 "post_color_background": "#0100a0",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "purstyle",
@@ -3029,10 +3872,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "purstyle",
             "title": "Pur Style",
             "logo": "logo/logo.png",
+            "logo-path": "purstyle",
             "logo_type": "png",
             "description": "At this project I had to make some page reworks, fixing errors adding new features like booking and contact form. The new pages I had made with these plugins: Elementor, Contact Form 7 and Booked. Also the content that I have created and changed was made for 2 languages: English and German.",
             "categories": [
@@ -3085,7 +3929,20 @@
                     "svg": "booked"
                 }
             ],
-            "employ": "Netex Romania",
+            "project_types": [
+                "web content",
+                "web maintenance"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Pur Style"
+            ],
+            "project_contractor": [
+                "Netex Romania"
+            ],
+            "employer": "Netex Romania",
             "date": {
                 "date_start": "11.2022",
                 "date_end": "03.2023"
@@ -3099,7 +3956,11 @@
                 "post_color_background": "#262425",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "reifendirekt",
@@ -3107,10 +3968,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "reifendirekt",
             "title": "Reifen Direkt",
             "logo": "logo/logo.png",
+            "logo-path": "reifendirekt",
             "logo_type": "png",
             "description": "For this project, I had to make HTML static pages. I got previews for a redesign of pages in zeplin format and with them, I make the pages in HTML format. Here I use Node.js, SCSS, JavaScript, jQuery, Bootstrap 5. Also, some pages required the interaction and functionalities that were implemented with jQuery. I had meets with back-end team, where we were discussing the necessary changes to the temples that I had to make at few cases.",
             "categories": [
@@ -3149,8 +4011,21 @@
                     "svg": "jquery"
                 }
             ],
-            "web_development_project": "Done",
-            "employ": "Netex Romania",
+            "web_project_status": "Done",
+            "project_types": [
+                "web content",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Reifen Direkt"
+            ],
+            "project_contractor": [
+                "Netex Romania"
+            ],
+            "employer": "Netex Romania",
             "date": {
                 "date_start": "12.2021",
                 "date_end": "07.2022"
@@ -3165,7 +4040,12 @@
                 "post_color_background": "#ffffff",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>",
+            "<?php echo renderVideoMedia($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "resurseeducationale",
@@ -3173,10 +4053,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "resurseeducationale",
             "title": "Resurse Educationale",
             "logo": "logo/logo.png",
+            "logo-path": "resurseeducationale",
             "logo_type": "png",
             "description": "Website for school projects, contests, courses and shop was made in WordPress. It have a custom PHP code integrated with 2 modules that which allows uploading files depending on the number of uploads or depending on the subscription. The files accepted by the administrator will be displayed on the site. The number of uploads and subscriptions can be purchased with payment by card. Payment can be made with the card through the EuPlatesc module..",
             "categories": [
@@ -3245,8 +4126,23 @@
                     "svg": "euplatesc"
                 }
             ],
-            "web_development_project": "Done",
-            "employ": "Pia Soft Product",
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design",
+                "web maintenance"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Centrul De Resurse Si Inovatie In Educatie"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "09.2020",
                 "date_end": "11.2020"
@@ -3261,7 +4157,11 @@
                 "post_color_background": "#2d3e50",
                 "post_color_text_on_background": "#FFFFFF"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "revelnail-avadores",
@@ -3269,10 +4169,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "revelnail-avadores",
             "title": "Revel Nail - Avadores",
             "logo": "logo/logo.png",
+            "logo-path": "revelnail-avadores",
             "logo_type": "png",
             "description": "The online shop for powders, liquids and other nail accessories is made in Prestashop 1.6. On this website, the products are supplied by Revel Nail and sold by Avadores under the name Revel Nail Romania on the Romanian market. It has a shortcut module that has been modified by TPL to display a Facebook login button. Payment can be made with the card through the MobilPay module, which has also been modified by TPL and PHP to deactivate the payment method of this module for some products.",
             "categories": [
@@ -3334,7 +4235,7 @@
                     "svg": "googlemerchantcenterfeed"
                 }
             ],
-            "web_development_project": "Done",
+            "web_project_status": "Done",
             "media_platforms": [
                 {
                     "name": "Photopea",
@@ -3359,7 +4260,25 @@
             ],
             "media_facebook_url": "https://www.facebook.com/revelromania",
             "media_instagram_url": "https://www.instagram.com/revelnailromania1/",
-            "employ": "Pia Soft Product",
+            "project_types": [
+                "online shop",
+                "web content",
+                "web design",
+                "media image",
+                "media video",
+                "web maintenance",
+                "seo optimization"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Avadores"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "11.2019",
                 "date_end": "11.2022"
@@ -3377,7 +4296,12 @@
                 "post_color_background": "#f121a5",
                 "post_color_text_on_background": "#FFFFFF"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>",
+            "<?php echo renderSectionMediaProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "revistaeducatie",
@@ -3385,10 +4309,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "revistaeducatie",
             "title": "Centrul de Excelenta",
             "logo": "logo/logo.png",
+            "logo-path": "revistaeducatie",
             "logo_type": "png",
             "description": "Centrul de Excelenta proudly presents a minimalistic website created with WordPress, offering a clean and captivating showcase for the business. The purpose of this application is for users to be able to send pdf documents (magazines and books) to be uploaded to the site in the respective section, or they can choose to sign up for projects (such as contests) dedicated to teachers with different dates, including pdf files. The files that are sent to the site are saved in the hosting. The website's simplicity and user-friendly design allow visitors to easily explore and engage with our content.",
             "categories": [
@@ -3433,8 +4358,23 @@
                     "svg": "ctf7"
                 }
             ],
-            "web_development_project": "Done",
-            "employ": "Pia Soft Product",
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design",
+                "web maintenance"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Centrul De Resurse Si Inovatie In Educatie"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "11.2019",
                 "date_end": "11.2022"
@@ -3450,7 +4390,11 @@
                 "post_color_background": "#462124",
                 "post_color_text_on_background": "#FFFFFF"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "roundselfie",
@@ -3458,10 +4402,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "roundselfie",
             "title": "Round Selfie",
             "logo": "logo/logo.png",
+            "logo-path": "roundselfie",
             "logo_type": "png",
             "description": "<?php echo renderTextVisualMediaPost('catalog','roundselfie'); ?>",
             "categories": [
@@ -3474,7 +4419,19 @@
                     "svg": "photopea"
                 }
             ],
-            "employ": "Freelancer",
+            "project_types": [
+                "media image"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Round Selfie"
+            ],
+            "project_contractor": [
+                "Freelancer"
+            ],
+            "employer": "Freelancer",
             "date": {
                 "date_start": "12.2022",
                 "date_end": "12.2022"
@@ -3489,7 +4446,11 @@
                 "post_color_background": "#2c4f4e",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionMediaProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "royalcompass",
@@ -3497,10 +4458,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "royalcompass",
             "title": "Royal Compass",
             "logo": "logo/logo.png",
+            "logo-path": "royalcompass",
             "logo_type": "png",
             "description": "At this project I had to make a website for a company that promote sports in nature. This website was not completely finished in terms of the aspects of texts and images on the pages.",
             "categories": [
@@ -3541,8 +4503,22 @@
                     "svg": "elementor"
                 }
             ],
-            "web_development_project": "Undone",
-            "employ": "Netex Romania",
+            "web_project_status": "Undone",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Royal Compass"
+            ],
+            "project_contractor": [
+                "Netex Romania"
+            ],
+            "employer": "Netex Romania",
             "date": {
                 "date_start": "11.2022",
                 "date_end": "04.2023"
@@ -3556,7 +4532,11 @@
                 "post_color_background": "#ffffff",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "spalatorieautomatabaiamare",
@@ -3564,10 +4544,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "spalatorieautomatabaiamare",
             "title": "Spalatorie Automata Baia Mare",
             "logo": "logo/logo.png",
+            "logo-path": "spalatorieautomatabaiamare",
             "logo_type": "png",
             "description": "<?php echo renderTextVisualMediaPost('catalog','spalatorieautomatabaiamare'); ?>",
             "categories": [
@@ -3579,7 +4560,19 @@
                     "svg": "photopea"
                 }
             ],
-            "employ": "Pia Soft Product",
+            "project_types": [
+                "media image"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Spalatorie Automata Baia Mare"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "06.2022",
                 "date_end": "08.2022"
@@ -3594,7 +4587,11 @@
                 "post_color_background": "#1e3656",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionMediaProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "specialevents",
@@ -3602,10 +4599,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "specialevents",
             "title": "Special Events",
             "logo": "logo/logo.png",
+            "logo-path": "specialevents",
             "logo_type": "png",
             "description": "<?php echo renderTextVisualMediaPost('catalog','specialevents'); ?>",
             "categories": [
@@ -3626,7 +4624,17 @@
                     "svg": "paintnet"
                 }
             ],
-            "employ": "Unspecified",
+            "project_types": [
+                "media image"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [],
+            "project_contractor": [
+                "Freelancer"
+            ],
+            "employer": "Unspecified",
             "date": {
                 "date_start": "06.2021",
                 "date_end": "11.2022"
@@ -3640,7 +4648,11 @@
                 "post_color_background": "#ffffff",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionMediaProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "speed-sm",
@@ -3648,16 +4660,29 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "speed-sm",
             "title": "Speed - Satu Mare",
             "logo": "logo/logo.png",
+            "logo-path": "speed-sm",
             "logo_type": "png",
             "description": "<?php echo renderTextVisualMediaPost('catalog','speed-sm'); ?>",
             "categories": [
                 "Visual Media Projects"
             ],
-            "employ": "Pia Soft Product",
+            "project_types": [
+                "media image"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Speed - Satu Mare"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "media_platforms": [
                 {
                     "name": "Xara Photo & Graphic Designer",
@@ -3674,8 +4699,7 @@
                 "date_end": "03.2020"
             },
             "tags": [
-                "photo",
-                "video"
+                "photo"
             ],
             "colors": {
                 "post_color_primary": "#f08119",
@@ -3683,7 +4707,11 @@
                 "post_color_background": "#f08119",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionMediaProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "strikerproduction",
@@ -3691,10 +4719,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "strikerproduction",
             "title": "Striker Production",
             "logo": "logo/logo.png",
+            "logo-path": "strikerproduction",
             "logo_type": "png",
             "description": "Main activity of the Striker Production is the video editing at different video games and real life footage. In addition to creating my own video-photo content, I organize video editing contests with sponsors and I collaborate with clients on various projects. Simple portfolio website is made with Google Site. <?php echo renderTextVisualMediaPost('catalog','strikerproduction'); ?>",
             "categories": [
@@ -3709,7 +4738,7 @@
                     "svg": "googlesite"
                 }
             ],
-            "web_development_project": "Done",
+            "web_project_status": "Done",
             "media_platforms": [
                 {
                     "name": "Photopea",
@@ -3757,6 +4786,17 @@
                     "url": "https://steamcommunity.com/groups/strikelounge"
                 }
             ],
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design",
+                "media image",
+                "media video",
+                "personal"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
             "date": {
                 "date_start": "09.2016",
                 "date_end": "12.2022"
@@ -3773,7 +4813,12 @@
                 "post_color_background": "#5d6977",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>",
+            "<?php echo renderSectionMediaProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "superbrain",
@@ -3781,10 +4826,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "superbrain",
             "title": "Super Brain",
             "logo": "logo/logo.png",
+            "logo-path": "superbrain",
             "logo_type": "png",
             "description": "Website made in WordPress for company presentation and contact. The website was made in few days, 3-5 days. At this project I worked with Elementor plugin for editing the theme pages and for creating new elements, also the theme on which was created this website, was changed more then 50%. All the images was rezise with Topaz Gigapixel and edited with Photopea.",
             "categories": [
@@ -3833,8 +4879,22 @@
                     "svg": "sliderrevolution"
                 }
             ],
-            "web_development_project": "Done",
-            "employ": "Pia Soft Product",
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Super Brain"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "11.2022",
                 "date_end": "11.2022"
@@ -3849,7 +4909,11 @@
                 "post_color_background": "#131521",
                 "post_color_text_on_background": "#1cd146"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "tinib",
@@ -3857,10 +4921,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "tinib",
             "title": "Tinib",
             "logo": "logo/logo.png",
+            "logo-path": "tinib",
             "logo_type": "png",
             "description": "Website make in WordPress for services like thermal power plants, pumps, air conditioning, ventilation systems. At this website I had to create manually over 200 products with specific HTML description.",
             "categories": [
@@ -3909,8 +4974,21 @@
                     "svg": "ctf7"
                 }
             ],
-            "web_development_project": "Done",
-            "employ": "Pia Soft Product",
+            "web_project_status": "Done",
+            "project_types": [
+                "online shop",
+                "web content"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Tinib"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "05.2021",
                 "date_end": "07.2021"
@@ -3924,18 +5002,23 @@
                 "post_color_background": "#ffffff",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
-        "file": "tndc",
+        "file": "promotionalcampaignstndc",
         "type": "post",
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
-            "media_path": "tndc",
-            "title": "Tndc",
+            "post_type": "projects",
+            "media_path": "promotionalcampaignstndc",
+            "title": "Promotional campaigns - Tndc",
             "logo": "logo/logo.png",
+            "logo-path": "promotionalcampaignstndc",
             "logo_type": "png",
             "description": "In collaboration with TNDC, I developed two website pages, each dedicated to a promotional campaign for Snickers and Orbit (promotiiorbit.ro and promotiiorbit.ro/choco). These pages feature custom PHP form scripts enabling users to register in a database by submitting participant data and an image of the product invoice. The PHP form is time-restricted, allowing customers to participate only during the promotion period. After the promotion concludes, the form is automatically disabled, and I manually update the pages with the winners. For design, I utilized Elementor as the page builder, complemented by custom CSS, HTML, and JS codes to enhance the overall user experience.",
             "categories": [
@@ -3979,13 +5062,27 @@
                 {
                     "name": "Elementor Website Builder",
                     "svg": "elementor"
+                },
+                {
+                    "name": "PHP Everywhere",
+                    "svg": "phpeverywhere"
                 }
             ],
-            "web_development_project": "Done",
-            "employ": "Freelancer",
+            "web_project_status": "Done",
+            "project_types": [
+                "web content"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [],
+            "project_contractor": [
+                "Tndc"
+            ],
+            "employer": "Freelancer",
             "date": {
-                "date_start": "18.08.2023",
-                "date_end": "17.09.2023"
+                "date_start": "08.2023",
+                "date_end": "09.2023"
             },
             "tags": [
                 "web",
@@ -3997,7 +5094,11 @@
                 "post_color_background": "#ffffff",
                 "post_color_text_on_background": "#231f20"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "transportosian",
@@ -4005,10 +5106,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "transportosian",
             "title": "Transport Osian",
             "logo": "logo/logo.png",
+            "logo-path": "transportosian",
             "logo_type": "png",
             "description": "<?php echo renderTextVisualMediaPost('catalog','transportosian'); ?>",
             "categories": [
@@ -4024,7 +5126,19 @@
                     "svg": "sv"
                 }
             ],
-            "employ": "Pia Soft Product",
+            "project_types": [
+                "media image"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Transport Osian"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "06.2021",
                 "date_end": "07.2021"
@@ -4040,7 +5154,11 @@
                 "post_color_background": "#ffffff",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionMediaProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "vreaualpin",
@@ -4048,12 +5166,13 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "vreaualpin",
             "title": "Vreau Alpin",
             "logo": "logo/logo.png",
+            "logo-path": "vreaualpin",
             "logo_type": "png",
-            "description": "I made several significant changes to this site as web design enhancements, content editor, and the addition of new functionalities. These updates included creating a redirect from the secondary site alpin57lux.com to the online store, implementing filters for approximately 100 products, modifying the CSS/HTML of the theme to improve element display, and resolving various errors on the site, such as fixing the popup-close functionality. Additionally, I added an employment form, implemented a zoom-in feature for the product slider, and addressed numerous other improvements and fixes.",
+            "description": "I made several significant changes to this site as web design enhancements, content editor, and the addition of new functionalities. These updates included creating a redirect from the secondary site alpin57lux.com to the online store, implementing filters for approximately 100 products, modifying the CSS/HTML of the theme to improve element display, and resolving various errors on the site, such as fixing the popup-close functionality. Additionally, I added an employerment form, implemented a zoom-in feature for the product slider, and addressed numerous other improvements and fixes.",
             "categories": [
                 "Web Development Projects",
                 "Miscellaneous Projects"
@@ -4097,8 +5216,21 @@
                     "svg": "ctf7"
                 }
             ],
-            "web_development_project": "Done",
-            "employ": "Freelancer",
+            "web_project_status": "Done",
+            "project_types": [
+                "web content",
+                "web maintenance"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Vreau Alpin"
+            ],
+            "project_contractor": [
+                "Freelancer"
+            ],
+            "employer": "Freelancer",
             "date": {
                 "date_start": "05.2023",
                 "date_end": "07.2023"
@@ -4112,7 +5244,11 @@
                 "post_color_background": "#ffffff",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "vseconstruct",
@@ -4120,10 +5256,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "vseconstruct",
             "title": "VSE Construct",
             "logo": "logo/logo.png",
+            "logo-path": "vseconstruct",
             "logo_type": "png",
             "description": "<?php echo renderTextVisualMediaPost('catalog','vseconstruct'); ?>",
             "categories": [
@@ -4136,14 +5273,25 @@
                 }
             ],
             "media_facebook_url": "https://www.facebook.com/VSEConstruct",
-            "employ": "Pia Soft Product",
+            "project_types": [
+                "media image"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "VSE Construct"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "04.2022",
                 "date_end": "11.2022"
             },
             "tags": [
-                "photo",
-                "video"
+                "photo"
             ],
             "colors": {
                 "post_color_primary": "#1db783",
@@ -4151,7 +5299,11 @@
                 "post_color_background": "#1db783",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionMediaProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     },
     {
         "file": "woodworkart",
@@ -4159,10 +5311,11 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "post_type": "catalog",
+            "post_type": "projects",
             "media_path": "woodworkart",
             "title": "Wood Work Art",
             "logo": "logo/logo.png",
+            "logo-path": "woodworkart",
             "logo_type": "png",
             "description": "Website make in WordPress for a company that provide authentic solid wood furniture, in modern or vintage style, hand carved or with CNC, of a high quality that guaranteed to offer you in any space an elegance, refinement and unique character. The site is made in 3 languages.",
             "categories": [
@@ -4207,8 +5360,23 @@
                     "svg": "ctf7"
                 }
             ],
-            "web_development_project": "Done",
-            "employ": "Pia Soft Product",
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design",
+                "seo optimization"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_companies": [
+                "Wood Work Art"
+            ],
+            "project_contractor": [
+                "Pia Soft Product"
+            ],
+            "employer": "Pia Soft Product",
             "date": {
                 "date_start": "10.2019",
                 "date_end": "11.2019"
@@ -4222,6 +5390,10 @@
                 "post_color_background": "#3b3d42",
                 "post_color_text_on_background": "#ffffff"
             }
-        }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     }
 ]

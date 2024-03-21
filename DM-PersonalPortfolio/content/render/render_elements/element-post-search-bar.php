@@ -1,6 +1,4 @@
-
-<script src="<?php echo $GLOBALS['urlPath'];?>content/json/index/index-data-posts-projects.json"></script>
-<script src="<?php echo $GLOBALS['urlPath'];?>themes/dm-theme/assets/js/content-posts-data-search.js"></script>
+<script src="<?php echo $GLOBALS['urlPath'];?>themes/dm-theme/assets/js/content-posts-projects-data-search.js"></script>
 
 <form id="post-list-sort-and-search">
     <ul>

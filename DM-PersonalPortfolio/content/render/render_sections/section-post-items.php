@@ -1,6 +1,11 @@
 <?php
-$posts = extractDataPosts( __DIR__ . "/../render_posts/projects/" );
-//usort($posts, "dateStartSortDesc");
+
+$posts = getDataJson('index-data-posts-projects', 'index');
+
+if(!isset($jsonGlobalData)) {
+    $jsonGlobalData = getDataJson('data-global-settings', 'data');
+}
+
 $search_and_sort_bar = true;
 
 ?>
@@ -18,8 +23,8 @@ $search_and_sort_bar = true;
         <ul id="post-list">
             <?php foreach ($posts as $post) : ?>
                 <?php
-                $post_path = pathinfo($post[0], PATHINFO_FILENAME).".html";
-                $post_data = $post[1];
+                $post_path = pathinfo($post["file"], PATHINFO_FILENAME).$jsonGlobalData["page-slug-extension"];
+                $post_data = $post["post_data"];
                 ?>
                 <?php if( isset($post_data["display"] ) && ( $post_data["display"] == "enable") ) : ?>
                     <li class="dm-post-item dm-post-item-media" data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.4s" >
@@ -30,7 +35,7 @@ $search_and_sort_bar = true;
                         endif; ?>
                         <a class="dm-post-item-logo" href="<?php echo $post_path; ?>" <?php echo $shine_animation; ?>
                            style="background-color: <?php echo $post_data["colors"]["post_color_background"]; ?>;">
-                            <?php echo renderLogoPost($post_data); ?>
+                            <?php echo  renderLogoPost($post_data); ?>
                             <?php
                             $web_image_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/web/home/";
                             $media_image_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/media/";

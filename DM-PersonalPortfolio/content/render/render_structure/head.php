@@ -2,13 +2,13 @@
     <?php
     $seo_fields = "";
 
-    foreach ($seo_fields_implicit = seo_fields_implicit() as $seo_field_implicit) :
+    foreach ($seoImplicitFields = seoImplicitFields() as $seo_field_implicit) :
         $seo_fields .= $seo_field_implicit;
     endforeach;
 
     if (isset($seo)) :
-        $seo_fields = seo_add_in_content($seo, $seo_fields);
-        //$seo_fields = implode(" ",seo_add_in_tag($seo));
+        $seo_fields = seoAddInContent($seo, $seo_fields);
+        //$seo_fields = implode(" ",seoAddInTag($seo));
     endif;
     echo $seo_fields;
 
