@@ -13,35 +13,27 @@
                     <p>Single Form Page made with PHP, HTML, CSS, JavaScript and SQL. The PHP code works in this way: You get the data from form and at the submit button it will create a database if it doesn't exist, will verify the data, all check boxes must be checked, the input fields must be non empty, one radio box must be checked, the code from invoice with the phone number must be unique and used only once in the database (in this example), the data submit must be within the set data range (begin date - end date) and the file upload must be an image in JPG, PNG or GIF format with maximum size of 40 Mb. If the conditions are met, the image file will be compressed and saved in a folder with the name of SQL table name in 'wp-content',  the data will be saved in a SQL table from data base with a URL for image, and in the final, the page will reload and instead of the form content will show a specific banner for success status.</p>
                 </li>
                 <li>
-                    <div class="slideshow">
-                        <div class="slideshow-container">
-                            <div class="mySlides fade">
-                                <div class="numbertext">1 / 4</div>
+                    <div class="slider" data-navigation="arrows dots">
+                        <div class="slider-container">
+                            <div class="slider-element">
+                                <div class="number-text">1 / 4</div>
                                 <?php echo renderImage($GLOBALS['urlPath']."content/img/summary-experience/promotions-contact-form-web-1.webp", true);?>
                             </div>
 
-                            <div class="mySlides fade">
-                                <div class="numbertext">2 / 4</div>
+                            <div class="slider-element">
+                                <div class="number-text">2 / 4</div>
                                 <?php echo renderImage($GLOBALS['urlPath']."content/img/summary-experience/promotions-contact-form-web-2.webp", true);?>
                             </div>
 
-                            <div class="mySlides fade">
-                                <div class="numbertext">3 / 4</div>
+                            <div class="slider-element">
+                                <div class="number-text">3 / 4</div>
                                 <?php echo renderImage($GLOBALS['urlPath']."content/img/summary-experience/promotions-contact-form-web-3.webp", true);?>
                             </div>
 
-                            <div class="mySlides fade">
-                                <div class="numbertext">4 / 4</div>
+                            <div class="slider-element">
+                                <div class="number-text">4 / 4</div>
                                 <?php echo renderImage($GLOBALS['urlPath']."content/img/summary-experience/promotions-contact-form-web-4.webp", true);?>
                             </div>
-                            <a class="prev" onclick="plusSlides(-1)">❮</a>
-                            <a class="next" onclick="plusSlides(1)">❯</a>
-                        </div>
-                        <div style="text-align:center">
-                            <span class="dot" onclick="currentSlide(1)"></span>
-                            <span class="dot" onclick="currentSlide(2)"></span>
-                            <span class="dot" onclick="currentSlide(3)"></span>
-                            <span class="dot" onclick="currentSlide(4)"></span>
                         </div>
                     </div>
                 </li>

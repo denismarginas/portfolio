@@ -131,5 +131,15 @@
             "keywords": "denis marginas blog activity",
             "slug": "blog-activity"
         }
+    },
+    {
+        "file": "education-experience",
+        "type": "page",
+        "seo": {
+            "title": "Education Experience | Denis Marginas",
+            "description": "Discover my educational journey from high school to university, including courses and diplomas attained along the way.",
+            "keywords": "denis marginas education experience",
+            "slug": "education-experience"
+        }
     }
 ]

@@ -312,3 +312,13 @@ video {
   }
 }
 
+body:not([java-script="true"]) {
+  .video-container {
+    > .thumbnail {
+      display: none !important;
+    }
+    > .show-play, >.show-pause {
+      display: none !important;
+    }
+  }
+}

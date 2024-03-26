@@ -1,7 +1,17 @@
 <?php
+
 if(!isset($jsonGlobalData)) {
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
 }
+
+if(!isset($jsonCategoriesData)) {
+    $jsonCategoriesData = getDataJson('data-categories', 'data');
+}
+
+if(!isset($jsonJobs)) {
+    $jsonJobsData = getDataJson('data-jobs', 'data');
+}
+
 
 if (!empty($args)) {
     $post_data = $args[0];
@@ -71,12 +81,12 @@ if (!isset($post_data)) {
         </div>
         <aside class="post-data">
             <div class="post-logo" data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.4s">
-                <?php if (isset($post_data["logo_type"]) && !empty($post_data["logo_type"])) : ?>
+                <?php if (isset($post_data["logo_type"]) && !empty($post_data["logo_type"]) && isset($post_data["logo"]) && isset($post_data["logo_path"])) : ?>
                 
                     <?php if ( $post_data["logo_type"] == "svg" ) : ?>
                         <?php SVGRenderer::renderSVG( $post_data["logo"] ); ?>
                     <?php elseif( ($post_data["logo_type"] == "png") || ($post_data["logo_type"] == "jpg") || $post_data["logo_type"] == "jpeg") : ?>
-                        <img src="<?php echo $GLOBALS['urlPath']; ?>content/img/<?php echo $post_data["post_type"];?>/<?php echo $post_data["media_path"];?>/<?php echo $post_data["logo"]; ?>" width="100" height="100" alt="<?php echo $post_data["title"];?> - Logo">
+                        <img src="<?php echo $GLOBALS['urlPath']; ?>content/img/<?php echo $post_data["post_type"];?>/<?php echo $post_data["logo_path"];?>/<?php echo $post_data["logo"]; ?>" width="100" height="100" alt="<?php echo $post_data["title"];?> - Logo">
                     <?php endif; ?>
                 
                 <?php endif; ?>
@@ -101,7 +111,16 @@ if (!isset($post_data)) {
                                     <?php echo $post_category; ?>
                                 </span>
                             <?php else: ?>
-                                <a class="post-category" href="#<?php echo removeSpaceAndLowercase($post_category)?>">
+                                <?php
+                                $post_category_slug = changeSpaceWithHyphenAndLowercase($post_category);
+                                foreach ($jsonCategoriesData["categories"] as $category) :
+                                if ($category["name"] === $post_category) :
+                                    $post_category_slug = $category["slug"];
+                                    break;
+                                endif;
+                                endforeach; ?>
+                                <a class="post-category" href="<?php echo $post_category_slug.$jsonGlobalData["page-slug-extension"]; ?>">
+
                                     <?php echo $post_category; ?>
                                 </a>
                             <?php endif; ?>
@@ -111,7 +130,12 @@ if (!isset($post_data)) {
 
                 <?php if (isset($post_data["web_url"]) && !empty($post_data["web_url"])) : ?>
                     <p class="post-website">
-                        <span>Website: </span>
+
+                        <span>
+                            <?php SVGRenderer::renderSVG('web'); ?>
+                            <span>Website: </span>
+                        </span>
+
                         <a href="<?php echo addHttps($post_data["web_url"]); ?>" target="_blank"><?php echo removeHttps($post_data["web_url"]); ?></a>
                     </p>
                 <?php endif; ?>
@@ -151,13 +175,6 @@ if (!isset($post_data)) {
                     </p>
                 <?php endif; ?>
 
-                <?php if (isset($post_data["web_project_status"]) && !empty($post_data["web_project_status"])) : ?>
-                    <p class="post-website-status">
-                        <span>Website Development:</span>
-                        <?php echo $post_data["web_project_status"]; ?>
-                    </p>
-                <?php endif; ?>
-
                 <?php
                 $icons_list = [];
                 if (isset($post_data["web_platform"]) && is_array($post_data["web_platform"])) {
@@ -171,6 +188,7 @@ if (!isset($post_data)) {
                 }
                 ?>
                 <?php if (count($icons_list) > 0) : ?>
+
                     <ul class="post-website-icons">
                         <?php foreach ($icons_list as $icon) : ?>
                           <?php if (isset($icon["svg"]) && SVGRenderer::hasIcon($icon["svg"])) : ?>
@@ -180,10 +198,15 @@ if (!isset($post_data)) {
                             <?php endif; ?>
                         <?php endforeach; ?>
                     </ul>
+
                 <?php endif; ?>
 
-
-
+                <?php if (isset($post_data["web_project_status"]) && !empty($post_data["web_project_status"])) : ?>
+                    <div class="post-website-status <?php echo strtolower($post_data["web_project_status"]); ?>">
+                        <span>Website Development:</span>
+                        <?php echo $post_data["web_project_status"]; ?>
+                    </div>
+                <?php endif; ?>
 
                 <?php if (isset($post_data["media_facebook_url"]) && !empty($post_data["media_facebook_url"])) : ?>
                     <p class="post-media-facebook">
@@ -268,7 +291,7 @@ if (!isset($post_data)) {
                 <?php endif; ?>
 
                 <?php if (isset($post_data["employer"]) && !empty($post_data["employer"])) : ?>
-                    <p class="post-employ">
+                    <div class="post-employ">
                         <?php if ($post_data["employer"] == "Freelancer") : ?>
 
                             <span>Worked as:</span>
@@ -280,12 +303,27 @@ if (!isset($post_data)) {
 
                             <span>Worked at:</span>
 
-                            <a href="employee-experience.<?php echo $jsonGlobalData["page-slug-extension"]; ?>#<?php echo strtolower(str_replace(" ", "-", $post_data["employer"])); ?>" target="_blank">
+                            <a href="employee-experience<?php echo $jsonGlobalData["page-slug-extension"]; ?>#<?php echo strtolower(str_replace(" ", "-", $post_data["employer"])); ?>" target="_blank">
                                 <?php echo $post_data["employer"]; ?>
                             </a>
 
+                        <?php
+                        if (isset($jsonJobsData)) :
+                            foreach ($jsonJobsData as $job) :
+                                if (strtolower($job["name"]) == strtolower($post_data["employer"]) && isset($job["img"]) && isset($job["display"]) && $job["display"] == "true") :
+                                    ?>
+                                    <div class="work-logo <?php echo isset($job["img_bg"]) ? $job["img_bg"] : ''; ?>" >
+                                        <?php echo renderImage($GLOBALS['urlPath'].$job["img"], false, false, true); ?>
+                                    </div>
+                                <?php
+                                endif;
+                            endforeach;
+                        endif;
+                        ?>
+
+
                         <?php endif; ?>
-                    </p>
+                    </div>
                 <?php endif; ?>
 
                 <?php if (isset($post_data["date"]) && !empty($post_data["date"])) : ?>

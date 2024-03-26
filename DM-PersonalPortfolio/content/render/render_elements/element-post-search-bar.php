@@ -1,6 +1,6 @@
 <script src="<?php echo $GLOBALS['urlPath'];?>themes/dm-theme/assets/js/content-posts-projects-data-search.js"></script>
 
-<form id="post-list-sort-and-search">
+<form id="post-list-sort-and-search" data-motion="transition-fade-0" data-duration="0.7s">
     <ul>
         <li>
             <select id="post-category" name="Category:">

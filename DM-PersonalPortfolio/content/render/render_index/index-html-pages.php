@@ -1,5 +1,13 @@
 <?php
+
+if(!isset($jsonGlobalData)) {
+    $jsonGlobalData = getDataJson('data-global-settings', 'data');
+}
+
+
 $pagesDirectory = __DIR__ . '/../../pages/';
+$thumbnailDirectory = __DIR__ . '/../../img/thumbnails-pages/';
+
 
 // Create an array to store page data
 $pageData = [];
@@ -10,7 +18,7 @@ $htmlFiles = scandir($pagesDirectory);
 foreach ($htmlFiles as $file) {
     if ($file !== '.' && $file !== '..' && pathinfo($file, PATHINFO_EXTENSION) === 'html') {
         $htmlContent = file_get_contents($pagesDirectory . $file);
-        // Create a DOMDocument instance and load the HTML content
+
         $dom = new DOMDocument();
         @$dom->loadHTML($htmlContent);
 
@@ -23,7 +31,6 @@ foreach ($htmlFiles as $file) {
             $title = $titleElement->nodeValue;
         }
 
-        // Extract meta description
         $metaTags = $dom->getElementsByTagName('meta');
         foreach ($metaTags as $metaTag) {
             if ($metaTag->getAttribute('name') === 'description') {
@@ -32,12 +39,11 @@ foreach ($htmlFiles as $file) {
             }
         }
 
-        // If both title and meta description are empty, log the message
+
         if (empty($title) && empty($metaDescription)) {
             $log[] = "Page doesn't have meta fields: $file"; // Append message to the log array
         }
 
-        // Extract main content without HTML tags and with elements having class "dm-debug" ignored
         $content = '';
         $bodyElement = $dom->getElementsByTagName('body')->item(0);
         extractContent($content, $bodyElement); // Call the function directly
@@ -45,7 +51,7 @@ foreach ($htmlFiles as $file) {
         // Remove newline characters and extra spaces
         $content = trim(preg_replace('/\s+/', ' ', $content));
 
-        // Extract the default image
+
         $defaultImg = '';
         $pageContentElement = $dom->getElementById('page-content');
         if ($pageContentElement) {
@@ -58,7 +64,7 @@ foreach ($htmlFiles as $file) {
                 }
             }
         }
-
+        $title = removeStringFromTitle($title, " | ".$jsonGlobalData["site-identity"]);
         $pageData[] = [
             'page'=> $file,
             'meta-title' => $title,
@@ -66,6 +72,7 @@ foreach ($htmlFiles as $file) {
             'content' => $content,
             'default-img' => $defaultImg
         ];
+
     }
 }
 
@@ -78,6 +85,12 @@ function extractContent(&$content, $node) {
             extractContent($content, $childNode);
         }
     }
+}
+
+
+
+function removeStringFromTitle($title, $string) {
+    return str_replace($string, '', $title);
 }
 
 // Convert the page data array to JavaScript format

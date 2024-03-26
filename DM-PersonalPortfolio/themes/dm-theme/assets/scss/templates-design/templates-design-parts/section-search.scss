@@ -18,6 +18,7 @@
       @include border-radius( var( --dm-border-radius-primary ) );
       background-color: var( --dm-color-primary );
       padding: var( --dm-spacing-secondary );
+      gap: var( --dm-spacing-primary );
 
       > h1 {
         @include dm-font-heading1();
@@ -128,6 +129,7 @@
             transition: opacity 0.5s, max-width 0.3s, max-height 0.3s;
             aspect-ratio: 16/9;
             background-color: rgba(var(--dm-color-white-rgb), 1);
+            background-image: radial-gradient(var(--dm-color-primary), var(--dm-color-secondary));
 
             > img {
               width: auto;
@@ -154,8 +156,8 @@
         &:hover {
           > .search-item-image {
             > img {
-              max-width: 110%;
-              max-height: 110%;
+              max-width: 100%;
+              max-height: 100%;
               transition: max-width 0.3s, max-height 0.3s;
             }
             > .preview-image {
@@ -177,6 +179,29 @@
         gap: var( --dm-spacing-primary );
       }
     }
+  }
+  @media only screen and (max-width: $screen-phone-medium) {
+    > container {
+      > .dm-search-header {
+        > h1 {
+          @include dm-font-heading3();
+          --dm-text-heading3-color: var( --dm-color-white );
+        }
+        > .dm-search-bar {
+          > .search-input {
+            display: flex;
+            flex-direction: column;
+
+            >.input-search, >.search-submit {
+              width: 100%;
+              max-width: 90%;
+              min-width: 50px;
+            }
+          }
+        }
+      }
+    }
+
   }
 }
 body, body.theme-light {

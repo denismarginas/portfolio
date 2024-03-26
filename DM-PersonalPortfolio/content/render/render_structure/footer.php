@@ -5,7 +5,7 @@
 
         <footer id="footer">
             <section>
-                <div class="dm-footer-contact">
+                <div class="dm-footer-contact" data-motion="transition-fade-0" data-duration="0.5s">
                     <h5>Contact</h5>
                     <ul>
                         <li>
@@ -31,7 +31,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="dm-footer-catalog">
+                <div class="dm-footer-catalog" data-motion="transition-fade-0" data-duration="0.5s">
                     <h5>Catalog</h5>
                     <ul>
                         <li>
@@ -54,7 +54,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="dm-socials-footer">
+                <div class="dm-socials-footer" data-motion="transition-fade-0" data-duration="0.5s">
                     <h5>Socials</h5>
                     <div class="dm-socials-list" data-socials="circle-light-2">
                         <a href="https://www.youtube.com/channel/UCZGb7hnkyawMgnSO9T-rnnQ" target="_blank">
@@ -77,7 +77,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="dm-footer-copyrights">
+                <div class="dm-footer-copyrights" data-motion="transition-fade-0" data-duration="0.5s">
                     <span>Begining of the webiste: 04.06.2023</span>
                     <span>Last update of webiste: <?php echo date("d.m.Y") ?></span>
                     <span>©All copyrights reserved by Denis Marginas</span>

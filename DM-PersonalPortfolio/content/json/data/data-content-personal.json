@@ -1,0 +1,246 @@
+{
+	"about": {
+		"title": "About",
+		"text": [
+			"My name is Denis Ionuț Mărginaș, I'm 25-year-old, and I've been working as a full-stack web developer and photo-video editor since 2019. Before entering the web development field, I worked as a freelance video editor, specializing in editing videos for video games. After completing my university studies in Mathematics and Informatics, I shifted my focus to web development and began pursuing a career in that field.",
+			"In 2019, I joined Pia Soft Product as a web developer and video-photo editor. During my time there, I worked on various tasks, including creating presentation websites and online shops using platforms like WordPress and Prestashop. I also handled SEO optimization, website and host maintenance, customer communication, and designing banners, logos, and video advertisements. Working independently on my tasks, I took the initiative to learn from scratch, except for my prior experience in video editing. Additionally, I developed web applications using PHP, TPL, SQL, JavaScript, jQuery, HTML, CSS, and more.",
+			"Towards the end of 2021, I transitioned to working full time at Netex Romania, where I was hired as a front-end developer. My responsibilities involved maintaining multiple WordPress websites and working on web design projects. The web design aspect was particularly challenging as I received templates and page sections in formats, similar to Figma projects, and had to recreate them as static web pages using HTML, SASS, Node.js, Bootstrap, JavaScript, and jQuery. Initially, I worked independently on my part of the project, but later collaborated with a colleague who joined to assist with the same project. During this time, I gained valuable experience with the GitLab platform, learned Git commands, and improved my teamwork skills."
+		],
+		"buttons": [
+			{
+				"button_text": "More Details",
+				"button_page_redirect": "About"
+			}
+		]
+	},
+	"portfolio-video": {
+		"video-data": {
+			"title": "Portfolio Showcase",
+			"short-description": "Experience a captivating journey through my professional work from 2019 to 2023 in this short video. From a captivating intro to web development, photo editing, and video editing, witness my diverse expertise in just under two minutes.",
+			"youtube-button-text": "Watch on YouTube",
+			"youtube-button-link": "https://www.youtube.com/watch?v=ilz2avyGG_U",
+			"youtube-button-icon-svg": "youtube",
+			"timeline": {
+				"text": "Video Timeline:",
+				"list": [
+					"00:00 - 00:04 - Intro",
+					"00:04 - 00:55 - Web Development",
+					"00:55 - 01:14 - Photo Editing",
+					"01:14 - 01:52 - Video Editing",
+					"01:52 - 01:56 - Otro"
+				]
+			}
+		}
+	},
+	"cards-categories": [
+		{
+			"type": "page",
+			"page": "Workstation",
+			"name": "Personal Workstation",
+			"svg": "workstation"
+		},
+		{
+			"type": "page",
+			"page": "Employee Experience",
+			"name": "Employee Experience",
+			"svg": "employ"
+		},
+		{
+			"type": "page",
+			"page": "Summary Experience",
+			"name": "Summary Experience",
+			"svg": "projects"
+		},
+		{
+			"type": "page",
+			"page": "Projects",
+			"name": "Projects Experience",
+			"svg": "about-me"
+		}
+	],
+	"experience": {
+		"title": "Experience",
+		"knowledge-lists-text": {
+			"text": "I have knowledge and skills in these categories:",
+			"list-items": [
+				"● Web Platforms: WordPress, Prestashop, Google Site",
+				"● Page builders: Elementor, WpBakery, Gutenberg",
+				"● Operating systems: Windows, Linux",
+				"● Languages: PHP, TPL, SQL, JS, HTML, CSS, SASS/SCSS, Python, C/C++",
+				"● Libraries: jQuery 3, Bootstrap 5, Font Awesome 4, MaterialDesignWebfront",
+				"● Web development programs: cPanel, HeidiSQL, phpMyAdmin, XAMPP, GitLab, GitHub, Visual Studio Code, PhpStorm, PyCharm, Node.js, Prepros, Figma",
+				"● Photo editing programs: Photopea, Photoshop, Paint.net, Xara Photo, Topaz Gigapixel",
+				"● Video editing programs: Adobe After Effects, Sony Vegas Pro, Topaz Enhance, BCC, RSMB, Sapphire, Ignite Pro, Optical Flares, Plexus, Particular, Element 3d, 3D Camera Tracking",
+				"● 3D Programs: Blender",
+				"● Streaming programs: OBS, Google Meet, Zoom",
+				"● Other programs: Microsoft Excel, Microsoft Word, Microsoft PowerPoint, Google Sheet, Google Docs, Google Slides"
+			]
+		},
+		"buttons": [
+			{
+				"button_text": "Summary Experience",
+				"button_page_redirect": "Summary Experience"
+			},
+			{
+				"button_text": "Employee Experience",
+				"button_page_redirect": "Employee Experience"
+			},
+			{
+				"button_text": "Projects Catalog",
+				"button_page_redirect": "Projects"
+			}
+		],
+		"knowledge-lists-items": [
+			{
+				"icon": "wordpress",
+				"url": "https://wordpress.org/",
+				"title": "Wordpress"
+			},
+			{
+				"icon": "prestashop",
+				"url": "https://prestashop.com/",
+				"title": "Prestashop"
+			},
+			{
+				"icon": "html",
+				"url": "https://en.wikipedia.org/wiki/HTML",
+				"title": "HTML"
+			},
+			{
+				"icon": "css",
+				"url": "https://en.wikipedia.org/wiki/CSS",
+				"title": "CSSS"
+			},
+			{
+				"icon": "js",
+				"url": "https://en.wikipedia.org/wiki/JavaScript",
+				"title": "Java Script"
+			},
+			{
+				"icon": "bootstrap",
+				"url": "https://getbootstrap.com/",
+				"title": "Bootstrap"
+			},
+			{
+				"icon": "jquery",
+				"url": "https://jquery.com/",
+				"title": "jQuery"
+			},
+			{
+				"icon": "nodejs",
+				"url": "https://nodejs.org/en",
+				"title": "Node JS"
+			},
+			{
+				"icon": "sass",
+				"url": "https://sass-lang.com/",
+				"title": "SASS"
+			},
+			{
+				"icon": "php",
+				"url": "https://www.php.net/",
+				"title": "PHP"
+			},
+			{
+				"icon": "tpl",
+				"url": "https://www.smarty.net/docs/en/what.is.smarty.tpl",
+				"title": "TPL Smarty"
+			},
+			{
+				"icon": "c++",
+				"url": "https://en.wikipedia.org/wiki/C%2B%2B",
+				"title": "C++"
+			},
+			{
+				"icon": "c",
+				"url": "https://en.wikipedia.org/wiki/C_(programming_language)",
+				"title": "C"
+			},
+			{
+				"icon": "python",
+				"url": "https://www.python.org/",
+				"title": "Python"
+			},
+			{
+				"icon": "sql",
+				"url": "https://en.wikipedia.org/wiki/SQL",
+				"title": "SQL"
+			},
+			{
+				"icon": "xampp",
+				"url": "https://www.apachefriends.org/",
+				"title": "XAMPP"
+			},
+			{
+				"icon": "phpmyadmin",
+				"url": "https://www.phpmyadmin.net/",
+				"title": "PHP My Admin"
+			},
+			{
+				"icon": "vscode",
+				"url": "https://code.visualstudio.com/",
+				"title": "Visual Studio Code"
+			},
+			{
+				"icon": "phpstorm",
+				"url": "https://www.jetbrains.com/phpstorm/",
+				"title": "PhpStorm"
+			},
+			{
+				"icon": "pycharm",
+				"url": "https://www.jetbrains.com/pycharm/",
+				"title": "PyCharm"
+			},
+			{
+				"icon": "sv",
+				"url": "https://www.vegascreativesoftware.com/us/vegas-pro/",
+				"title": "Sony Vegas"
+			},
+			{
+				"icon": "ae",
+				"url": "https://www.adobe.com/products/aftereffects.html",
+				"title": "Adobe After Effects"
+			},
+			{
+				"icon": "photopea",
+				"url": "https://www.photopea.com/",
+				"title": "Photopea"
+			},
+			{
+				"icon": "xaraphoto",
+				"url": "Xara Photo & Graphic Designer",
+				"title": "Xara Photo"
+			},
+			{
+				"icon": "blender",
+				"url": "https://www.blender.org/",
+				"title": "Blender"
+			},
+			{
+				"icon": "office",
+				"url": "https://www.office.com/",
+				"title": "Office"
+			},
+			{
+				"icon": "googledrive",
+				"url": "https://www.google.com/drive/",
+				"title": "Google Drive"
+			},
+			{
+				"icon": "github_colors",
+				"url": "https://github.com/",
+				"title": "Git Hub"
+			},
+			{
+				"icon": "gitlab",
+				"url": "https://about.gitlab.com/",
+				"title": "Git Lab"
+			},
+			{
+				"icon": "chatgpt",
+				"url": "https://chat.openai.com/",
+				"title": "Chat GPT"
+			}
+		]
+	}
+}

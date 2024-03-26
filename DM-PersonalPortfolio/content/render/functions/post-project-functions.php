@@ -414,7 +414,7 @@ function renderWallpaperPost($post_data, $wallpaper_dir = "wallpaper") {
 function renderLogoPost($post_data, $popup = false, $class = false, $lazyLoad = true) {
     $render_content = "";
     if( ($post_data["logo_type"] == "png") || ($post_data["logo_type"] == "jpg") || ($post_data["logo_type"] == "jpeg") || ($post_data["logo_type"] == "webp")) {
-        $path_logo = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$post_data["logo"];
+        $path_logo = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["logo_path"]."/".$post_data["logo"];
         $render_content .= renderImage($path_logo, $popup, $class, $lazyLoad);
     }
     return $render_content;

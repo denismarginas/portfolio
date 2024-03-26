@@ -237,4 +237,23 @@ body.theme-dark {
     }
   }
 }
+body:not([java-script="true"]) {
+  .dm-blog-posts {
+    > container {
+      > .dm-blog-posts-section {
+        > .dm-blog-post {
+          > .dm-blog-post-content {
+            > .dm-blog-post-content-text {
+              display: block !important;
+              max-height: unset;
+            }
+            > .dm-blog-post-description-show {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 

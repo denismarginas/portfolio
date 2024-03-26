@@ -108,13 +108,15 @@
 
 body, body.theme-light {
   .dm-gallery-web-content {
-    background-color: rgba(var(--dm-color-gray-rgb), 0.1);
+    border: 1px solid rgba(var(--dm-color-gray-rgb), 0.2);
+    background-color: rgba(var( --dm-color-white-rgb), 0.3 );
   }
 }
 
 body.theme-dark {
   .dm-gallery-web-content {
     background-color: rgba(var(--dm-color-gray-lighten-rgb), 0.1);
+    border: 1px solid rgba(var(--dm-color-white-rgb), 0.2);
   }
 }
 

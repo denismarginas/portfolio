@@ -197,7 +197,7 @@
     left: 0;
     right: 0;
   }
-  .slideshow {
+  .slider {
     @include border-radius(var(--dm-border-radius-secondary));
     padding: var(--dm-spacing-secondary) var(--dm-spacing-primary) ;
     background: radial-gradient(#2866c8,#273f65);

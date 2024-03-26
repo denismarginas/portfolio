@@ -7,10 +7,10 @@ $jsonBlogData = getDataJson('data-blog-activity', 'data');
 <section class="dm-blog-posts grid-background-animation">
     <container>
         <div class="dm-blog-posts-section">
-
+            <?php $post_nr = 1; ?>
             <?php foreach ($jsonBlogData["blog-posts"] as $post) : ?>
 
-            <div class="dm-blog-post">
+            <div class="dm-blog-post"  id="<?php echo $post_nr; ?>">
                 <div class="dm-blog-post-user-data">
                     <div class="dm-blog-post-user-logo">
 
@@ -94,22 +94,40 @@ $jsonBlogData = getDataJson('data-blog-activity', 'data');
                         endforeach;
                     endif; ?>
 
-                    <?php if(isset($post["media"])) :
-                        foreach ($post["media"] as $media) : ?>
-                            <div class="dm-blog-post-content-media">
-                                <?php if($media["type"] == "photo") :
-                                    echo renderImage($GLOBALS['urlPath'].$media["path"], true);
-                                elseif( $media["type"] == "video" && isset($media["thumbnail"]) ) :
-                                    echo renderVideo($GLOBALS['urlPath'].$media["path"],$GLOBALS['urlPath'].$media["thumbnail"]);
-                                elseif( $media["type"] == "video" ) :
-                                    echo renderVideo($GLOBALS['urlPath'].$media["path"]);
-                                endif; ?>
-                            </div>
-                        <?php endforeach;
-                    endif; ?>
+                    <?php if(isset($post["media"])) : ?>
+                        <div class="dm-blog-post-content-media">
+
+                            <?php
+                            $count_images = 0;
+                            $images = [];
+                            foreach ($post["media"] as $media) :
+                                if($media["type"] == "photo") :
+                                    $count_images ++;
+                                    $images[] = renderImage($GLOBALS['urlPath'].$media["path"], true);
+                                endif;
+                            endforeach;
+                            if ($count_images >= 2) :
+                                echo renderSlider($images, true, false);
+                            endif;
+                            ?>
+
+                            <?php foreach ($post["media"] as $media) : ?>
+                                    <?php if(($count_images < 2) && $media["type"] == "photo") :
+                                        echo renderImage($GLOBALS['urlPath'].$media["path"], true);
+                                    elseif( $media["type"] == "video" && isset($media["thumbnail"]) ) :
+                                        echo renderVideo($GLOBALS['urlPath'].$media["path"],$GLOBALS['urlPath'].$media["thumbnail"]);
+                                    elseif( $media["type"] == "video" ) :
+                                        echo renderVideo($GLOBALS['urlPath'].$media["path"]);
+                                    endif; ?>
+                            <?php endforeach; ?>
+
+                        </div>
+                    <?php endif; ?>
 
                 </div>
             </div>
+
+            <?php $post_nr++; ?>
 
         <?php endforeach; ?>
 

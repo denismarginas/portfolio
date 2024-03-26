@@ -324,6 +324,11 @@
     }
     @media only screen and (max-width: $screen-phone-medium) {
         > section {
+            .dm-navbar-toggle {
+                &.active {
+                    right: var(--dm-spacing-primary);
+                }
+            }
             .dm-logo {
                 .dm-logo-text {
                     gap: 2px;

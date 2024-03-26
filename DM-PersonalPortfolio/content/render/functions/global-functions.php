@@ -248,11 +248,37 @@ function renderVideo($src, $thumbnail = NULL, $thumbnail_bg = NULL) {
               </div>';
     return $html;
 }
+
+function renderSlider($items_content, $show_arrows = true, $show_dots = true, $show_numbers = false) {
+    $navigation = ($show_arrows ? 'arrows' : '') . ($show_dots ? ' dots' : '');
+
+    $html = '
+        <div class="slider" data-navigation="' . $navigation . '">
+            <div class="slider-container">';
+
+    foreach ($items_content as $key => $item_content) {
+        $number_text = ($show_numbers ? '<div class="number-text">' . ($key + 1) . ' / ' . count($items_content) . '</div>' : '');
+        $html .= '
+                <div class="slider-element">' . $number_text . $item_content . '</div>';
+    }
+
+    $html .= '
+            </div>
+        </div>';
+
+    return $html;
+}
+
+
 function removeSpaceAndLowercase($string) {
     $string = str_replace(' ', '', $string);
     return strtolower($string);
 }
 
+function changeSpaceWithHyphenAndLowercase($string) {
+    $string = str_replace(' ', '-', $string);
+    return strtolower($string);
+}
 
 function getFirstCharacters($string, $n) {
     return substr($string, 0, $n);
