@@ -18,8 +18,8 @@ $renderer_structure->header($seo);
 
 $renderer_sections->renderSection('about', "compress");
 $renderer_sections->renderSection('categories');
-$renderer_sections->renderSection('web_development_experience');
-$renderer_sections->renderSection('web_development_description');
+$renderer_sections->renderSection('work-experience');
+$renderer_sections->renderSection('web-development-description');
 
 
 

@@ -1,6 +1,3 @@
-<!doctype html>
-<html lang="en">
-
 <?php
 $seoParam = isset($seo) && is_array($seo) ? $seo : null;
 include "head.php";
@@ -9,12 +6,32 @@ $jsonGlobalData = getDataJson('data-global-settings', 'data');
 $jsonCategoriesData = getDataJson('data-categories', 'data');
 ?>
 
+
+<!doctype html>
+<?php
+    $defaultLangText =$jsonGlobalData["language"]["default"];
+    $languagesList = $jsonGlobalData["language"]["list"];
+    foreach ($languagesList as $language) :
+        if( $language["text"] == $defaultLangText ) :
+            $langISO = $language["iso"] ;
+        endif;
+    endforeach;
+?>
+
+<?php if(isset($langISO)) : ?>
+    <html lang="<?php echo $langISO; ?>">
+<?php else: ?>
+    <html>
+<?php endif; ?>
+
+
+
 <body id="body">
 <header id="header">
     <section>
         <div class="dm-logo">
             <a href="<?php echo $jsonGlobalData["front-page"]["slug"].$jsonGlobalData["page-slug-extension"]; ?>" class="dm-logo-img">
-                <img data="dm-logo-front" width="50" height="50" src="<?php echo $GLOBALS['urlPath']; ?>content/img/logo/logo.webp" alt="<?php echo $jsonGlobalData["site-identity"]; ?> Personal Icon">
+                <img data="dm-logo-front" width="50" height="50" src="<?php echo $GLOBALS['urlPath']."content/img".$jsonGlobalData["logo"]["path"].$jsonGlobalData["logo"]["img"]; ?>" alt="<?php echo $jsonGlobalData["site-identity"]; ?> Personal Icon">
             </a>
             <a href="<?php echo $jsonGlobalData["front-page"]["slug"].$jsonGlobalData["page-slug-extension"]; ?>" class="dm-logo-text">
                 <span><?php echo $jsonGlobalData["logo"]["primary-title"]; ?></span>
@@ -87,7 +104,7 @@ $jsonCategoriesData = getDataJson('data-categories', 'data');
         </div>
         <span class="dm-navbar-toggle">
             <?php SVGRenderer::renderSVG('menu'); ?>
-          </span>
+        </span>
     </section>
 </header>
 

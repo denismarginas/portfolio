@@ -1,63 +1,49 @@
 <?php
-$experience_categories = [
-                            [
-                                "type" => "page",
-                                "page" => "workstation.html",
-                                "name" => "Personal Workstation",
-                                "svg" => "workstation"
-                            ],
-                            [
-                                "type" => "page",
-                                "page" => "employee-experience.html",
-                                "name" => "Employee Experience",
-                                "svg" => "employ"
-                            ],
-                            [
-                                "type" => "page",
-                                "page" => "experience.html",
-                                "name" => "Summary Experience",
-                                "svg" => "projects"
-                            ],
-                            [
-                              "type" => "page",
-                              "page" => "projects.html",
-                              "name" => "Projects Experience",
-                              "svg" => "about-me"
-                            ]
 
-                         ];
+if(!isset($jsonGlobalData)) {
+    $jsonGlobalData = getDataJson('data-global-settings', 'data');
+}
+if(!isset($jsonContactCardsCategories)) {
+    $jsonContactCardsCategories = getDataJson('data-content-personal', 'data')["cards-categories"];
+}
 
 ?>
 
 
 <section class="dm-experience-categories">
     <container>
-        <ul>
-            <?php foreach ($experience_categories as $experience_category) : ?>
+        <?php if(isset($jsonContactCardsCategories)) : ?>
+            <ul>
+                <?php $experience_categories = $jsonContactCardsCategories?>
+                <?php foreach ($experience_categories as $experience_category) : ?>
 
-                <li class="dm-experience-category">
-                    <div>
-                        <?php
-                        $experience_category_href = "#";
-                        if( $experience_category["type"] == "page" ) :
-                            $experience_category_href = $experience_category["page"];
-                        else :
-                            $experience_category_href = $experience_category["section"];
-                        endif;
-                        $experience_category["name"];
+                    <li class="dm-experience-category">
+                        <div>
+                            <?php
+                            $experience_category_href = "#";
+                            if( $experience_category["type"] == "page" ) :
+                                $experience_category_href = $experience_category["page"];
+                            else :
+                                $experience_category_href = $experience_category["section"];
+                            endif;
+                            $experience_category["name"];
+                            ?>
 
-                         ?>
-                        <a href="<?php echo $experience_category_href; ?>">
-                            <div>
-                                <?php SVGRenderer::renderSVG( $experience_category["svg"]); ?>
-                            </div>
-                            <span><?php echo $experience_category["name"]; ?></span>
-                            <img src="<?php echo $GLOBALS['urlPath']; ?>content/img/design-elements/overlay-texture-paper.webp" alt="Background">
-                        </a>
-                    </div>
-                </li>
+                            <a href="<?php echo $experience_category_href; ?>">
+                                <div>
+                                    <?php SVGRenderer::renderSVG( $experience_category["svg"]); ?>
+                                </div>
+                                <span>
+                                    <?php echo $experience_category["name"]; ?>
+                                </span>
+                                <?php echo renderImage($GLOBALS['urlPath']."content/img".$experience_category["background-img-path"].$experience_category["background-img"]);?>
+                            </a>
 
-            <?php endforeach; ?>
-        </ul>
+                        </div>
+                    </li>
+
+                <?php endforeach; ?>
+            </ul>
+        <?php endif; ?>
     </container>
 </section>

@@ -26,7 +26,7 @@ $search_and_sort_bar = true;
                 $post_path = pathinfo($post["file"], PATHINFO_FILENAME).$jsonGlobalData["page-slug-extension"];
                 $post_data = $post["post_data"];
                 ?>
-                <?php if( isset($post_data["display"] ) && ( $post_data["display"] == "enable") ) : ?>
+                <?php if( isset($post_data["display"] ) && $post_data["display"] == "enable" && isset($post_data["exclude_from_search"] ) != "true" ) : ?>
                     <li class="dm-post-item dm-post-item-media" data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.4s" >
                         <?php if( strtoupper($post_data["colors"]["post_color_background"]) == "#FFFFFF") :
                             $shine_animation = 'data-animation="shine-gray"';

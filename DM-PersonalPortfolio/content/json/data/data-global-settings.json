@@ -2,7 +2,7 @@
     "site-identity": "Denis Marginas",
     "logo": {
         "img": "logo.webp",
-        "path": "logo",
+        "path": "/logo/",
         "primary-title": "Denis",
         "secondary-title": "Marginas"
     },
@@ -14,5 +14,19 @@
         "name": "Search",
         "slug": "search"
     },
-    "page-slug-extension": ".html"
+    "search-fields": {
+        "title": "Search",
+        "button-text": "Search",
+        "button-placeholder": "Search keywords.."
+    },
+    "page-slug-extension": ".html",
+    "language": {
+        "default": "Enlgish",
+        "list": [
+            {
+                "text": "Enlgish",
+                "iso": "en"
+            }
+        ] 
+    }
 }

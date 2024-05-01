@@ -1,5 +1,77 @@
 [
     {
+        "file": "cursuristudenti-bachelor-s-thesis",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "exclude_from_search": "true",
+            "post_type": "projects",
+            "media_path": "cursuristudenti-lucrarelicenta",
+            "title": "Student Courses - Bachelor's thesis",
+            "logo": "logo/logo.png",
+            "logo_path": "cursuristudenti-lucrarelicenta",
+            "logo_type": "png",
+            "description": "This is my Bachelor's thesis named 'Cursuri Studenti - Lucrare Licenta' where I aim was to develop a website catering specifically to students who require access to various courses or specific course materials in text format for reports or projects. The website primarily facilitates the uploading of course content in image format, which is then converted and stored in text format on the site. Additionally, users have the option to edit their personal data, customize their accounts with a logo, and, as administrators, manage both user accounts and course materials. <br></br> Technologies used: Hypertext Markup Language (HTML), Zurb Foundation, JavaScript, Cascading Style Sheets (CSS), Hypertext Preprocessor (PHP), XAMPP, Tesseract OCR, HeidiSQL",
+            "categories": [
+                "Web Development Projects",
+                "Miscellaneous Projects"
+            ],
+            "web_languages": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "Pyhon",
+                    "svg": "python"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "Bachelor's thesis",
+                "personal"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "date": {
+                "date_start": "05.2019",
+                "date_end": "07.2019"
+            },
+            "tags": [
+                "web"
+            ],
+            "colors": {
+                "post_color_primary": "#e7e7e7", 
+                "post_color_secondary": "#282828",
+                "post_color_background": "#ffffff",
+                "post_color_text_on_background": "#ffffff"
+            }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>",
+            "<?php echo renderSliderWithImagesOfProject($post_current_data, 'presentation-slides') ?>"
+        ],
+        "layout": "wrapper-layout"
+    },
+    {
         "file": "aatoysfurnitures",
         "type": "post",
         "category": "projects",
@@ -5457,8 +5529,8 @@
                     "svg": "unlimited-elements"
                 },
                 {
-                    "name": "Dynamic Content for Elementor",
-                    "svg": "dynamic-elemntor"
+                    "name": "Dynamic Conditions",
+                    "svg": "dynamic-conditions"
                 },
                 {
                     "name": "Advanced Custom Fields",
@@ -5493,6 +5565,319 @@
                 "post_color_primary": "#2c2e43",
                 "post_color_secondary": "#ffffff",
                 "post_color_background": "#2c2e43",
+                "post_color_text_on_background": "#ffffff"
+            }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
+    },
+    {
+        "file": "philadelphiarugcleaning",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "philadelphiarugcleaning",
+            "title": "Philadelphia Rug Cleaning",
+            "logo": "logo/logo.png",
+            "logo_path": "philadelphiarugcleaning",
+            "logo_type": "png",
+            "description": "This project involves the design and content creation for a website. Utilizing Figma for design the content with Elementor, alongside other plugins enhancing Elementor's capabilities, I crafted the website's visual and textual elements.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "philadelphiarugcleaning.com",
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_languages": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "jQuery",
+                    "svg": "jquery"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                },
+                {
+                    "name": "Unlimited Elements for Elementor Premium",
+                    "svg": "unlimited-elements"
+                },
+                {
+                    "name": "Dynamic Conditions",
+                    "svg": "dynamic-conditions"
+                },
+                {
+                    "name": "Advanced Custom Fields",
+                    "svg": "acf"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual",
+                "Teamwork"
+            ],
+            "project_companies": [
+                "Mentor Marketing Experts"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "02.2024",
+                "date_end": "02.2024"
+            },
+            "tags": [
+                "web", "content-web"
+            ],
+            "colors": {
+                "post_color_primary": "#67d0d9",
+                "post_color_secondary": "#181818",
+                "post_color_background": "#ffffff",
+                "post_color_text_on_background": "#181818"
+            }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
+    },
+    {
+        "file": "logistic-brain",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "logistic-brain",
+            "title": "Logistic Brain",
+            "logo": "logo/logo.png",
+            "logo_path": "logistic-brain",
+            "logo_type": "png",
+            "description": "This project involves the design and content creation for a website. Utilizing Figma for design the content with Elementor, alongside other plugins enhancing Elementor's capabilities, I crafted the website's visual and textual elements. This website was a significant challenge, given its futuristic design and the necessity for many elements to function in a specific manner. To achieve this, numerous functionalities were implemented using plugins, Elementor loops, custom codes, and custom CSS scripts. On the landing page, a slider is integrated with custom CSS and remote buttons, each linked to a specific slide within the slider.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "logistic-brain.co.il",
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_languages": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "jQuery",
+                    "svg": "jquery"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                },
+                {
+                    "name": "Unlimited Elements for Elementor Premium",
+                    "svg": "unlimited-elements"
+                },
+                {
+                    "name": "Dynamic Conditions",
+                    "svg": "dynamic-conditions"
+                },
+                {
+                    "name": "Advanced Custom Fields",
+                    "svg": "acf"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual",
+                "Teamwork"
+            ],
+            "project_companies": [
+                "Mentor Marketing Experts"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "02.2024",
+                "date_end": "03.2024"
+            },
+            "tags": [
+                "web", "content-web"
+            ],
+            "colors": {
+                "post_color_primary": "#f05929",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#262161",
+                "post_color_text_on_background": "#f05929"
+            }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
+    },
+    {
+        "file": "merkaz-nadlan",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "merkaz-nadlan",
+            "title": "Merkaz Ha-Ir - City Center",
+            "logo": "logo/logo.png",
+            "logo_path": "merkaz-nadlan",
+            "logo_type": "png",
+            "description": "This project involves the design and content creation for a website. Utilizing Figma for design the content with Elementor, alongside other plugins enhancing Elementor's capabilities, I crafted the website's visual and textual elements. The landing page features a dynamic slider presentation designed for large screens, reminiscent of PowerPoint. Custom navigation buttons and jQuery enhancements ensure smooth transitions between slides. Plus, seamlessly scroll through the content using your mouse. This website was a significant challenge, given its futuristic design and the necessity for many elements to function in a specific manner. To achieve this, numerous functionalities were implemented using plugins, Elementor loops, custom codes, and a plethora of custom CSS scripts.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "merkaz-nadlan.co.il",
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_languages": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "jQuery",
+                    "svg": "jquery"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                },
+                {
+                    "name": "Unlimited Elements for Elementor Premium",
+                    "svg": "unlimited-elements"
+                },
+                {
+                    "name": "Dynamic Conditions",
+                    "svg": "dynamic-conditions"
+                },
+                {
+                    "name": "Dynamic Elementor",
+                    "svg": "dynamic-elemntor"
+                },
+                {
+                    "name": "Advanced Custom Fields",
+                    "svg": "acf"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual",
+                "Teamwork"
+            ],
+            "project_companies": [
+                "Mentor Marketing Experts"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "02.2024",
+                "date_end": "03.2024"
+            },
+            "tags": [
+                "web", "content-web"
+            ],
+            "colors": {
+                "post_color_primary": "#15816d",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#15816d",
                 "post_color_text_on_background": "#ffffff"
             }
         },

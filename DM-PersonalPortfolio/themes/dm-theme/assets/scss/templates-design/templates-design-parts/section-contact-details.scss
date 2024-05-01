@@ -78,6 +78,10 @@ body, body.theme-light {
               }
               > span {
                 --dm-text-medium-color: var( --dm-color-primary );
+
+                &:last-of-type {
+                  --dm-text-medium-color: var( --dm-color-gray-darken );
+                }
               }
               &:hover {
                 --dm-text-medium-color: var( --dm-color-primary );

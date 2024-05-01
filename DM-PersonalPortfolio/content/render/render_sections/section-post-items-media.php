@@ -1,5 +1,10 @@
 <?php
+
+if(!isset($jsonGlobalData)) {
+    $jsonGlobalData = getDataJson('data-global-settings', 'data');
+}
 $posts = getDataJson('index-data-posts-projects', 'index');
+
 ?>
 
 <section class="dm-posts-list grid-background-animation">
@@ -7,10 +12,10 @@ $posts = getDataJson('index-data-posts-projects', 'index');
         <ul>
             <?php foreach ($posts as $post) : ?>
                 <?php
-                $post_path = pathinfo($post["file"], PATHINFO_FILENAME).".html";
+                $post_path = pathinfo($post["file"], PATHINFO_FILENAME).$jsonGlobalData["page-slug-extension"];
                 $post_data = $post["post_data"];
                 ?>
-                <?php if( isset($post_data["display"] ) && ( $post_data["display"] == "enable") ) : ?>
+                <?php if(isset($post_data["display"] ) && $post_data["display"] == "enable" && isset($post_data["exclude_from_search"] ) != "true" ) : ?>
                     <?php if( (in_array("Visual Media Projects", $post_data["categories"])) && ( !in_array("Miscellaneous Projects", $post_data["categories"])) ) : ?>
                         <li class="dm-post-item dm-post-item-media" data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.4s" >
                             <?php if( strtoupper($post_data["colors"]["post_color_background"]) == "#FFFFFF") :

@@ -296,7 +296,7 @@ if (!isset($post_data)) {
 
                             <span>Worked as:</span>
 
-                            <a href="denismarginas.<?php echo $jsonGlobalData["page-slug-extension"]; ?>" target="_blank">
+                            <a href="denismarginas<?php echo $jsonGlobalData["page-slug-extension"]; ?>" target="_blank">
                                 <?php echo $post_data["employer"]; ?>
                             </a>
                         <?php else : ?>

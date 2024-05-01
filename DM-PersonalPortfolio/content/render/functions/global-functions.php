@@ -152,7 +152,7 @@ function listDesign($nr) {
 }
 
 
-function renderImage($src, $popup = false, $class = false, $lazyLoad = true) {
+function renderImage($src, $popup = false, $class = false, $lazyLoad = true, $additionalAttributes = array()) {
     $imageInfo = getimagesize($src);
 
     $width = $imageInfo[0];
@@ -165,9 +165,14 @@ function renderImage($src, $popup = false, $class = false, $lazyLoad = true) {
     }
     $add_class = "";
     if (isset($class) and !empty($class)) {
-      $add_class = 'class="'.$class.'" ';
+        $add_class = 'class="'.$class.'" ';
     }
     $html = '<img '.$add_class.'src="' . $src . '" width="' . $width . '" height="' . $height . '" alt="' . $alt.'"';
+
+    foreach ($additionalAttributes as $attr => $value) {
+        $html .= ' ' . $attr . '="' . $value . '"';
+    }
+
     if ($lazyLoad) {
         $html .= ' loading="lazy"';
     }
@@ -178,6 +183,7 @@ function renderImage($src, $popup = false, $class = false, $lazyLoad = true) {
 
     return $html;
 }
+
 
 function renderVideo($src, $thumbnail = NULL, $thumbnail_bg = NULL) {
     $html = '<div class="video-container paused" data-volume-level="high">';

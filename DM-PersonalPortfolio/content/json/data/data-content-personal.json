@@ -1,6 +1,6 @@
 {
 	"about": {
-		"title": "About",
+		"title": "About Me",
 		"text": [
 			"My name is Denis Ionuț Mărginaș, I'm 25-year-old, and I've been working as a full-stack web developer and photo-video editor since 2019. Before entering the web development field, I worked as a freelance video editor, specializing in editing videos for video games. After completing my university studies in Mathematics and Informatics, I shifted my focus to web development and began pursuing a career in that field.",
 			"In 2019, I joined Pia Soft Product as a web developer and video-photo editor. During my time there, I worked on various tasks, including creating presentation websites and online shops using platforms like WordPress and Prestashop. I also handled SEO optimization, website and host maintenance, customer communication, and designing banners, logos, and video advertisements. Working independently on my tasks, I took the initiative to learn from scratch, except for my prior experience in video editing. Additionally, I developed web applications using PHP, TPL, SQL, JavaScript, jQuery, HTML, CSS, and more.",
@@ -9,59 +9,276 @@
 		"buttons": [
 			{
 				"button_text": "More Details",
-				"button_page_redirect": "About"
+				"button_page_redirect": "About",
+				"button_page_redirect_slug": "about"
 			}
-		]
+		],
+		"img": "dm-personal-image-1.webp",
+		"img-path": "/personal-images/"
 	},
-	"portfolio-video": {
-		"video-data": {
-			"title": "Portfolio Showcase",
-			"short-description": "Experience a captivating journey through my professional work from 2019 to 2023 in this short video. From a captivating intro to web development, photo editing, and video editing, witness my diverse expertise in just under two minutes.",
-			"youtube-button-text": "Watch on YouTube",
-			"youtube-button-link": "https://www.youtube.com/watch?v=ilz2avyGG_U",
-			"youtube-button-icon-svg": "youtube",
-			"timeline": {
-				"text": "Video Timeline:",
-				"list": [
-					"00:00 - 00:04 - Intro",
-					"00:04 - 00:55 - Web Development",
-					"00:55 - 01:14 - Photo Editing",
-					"01:14 - 01:52 - Video Editing",
-					"01:52 - 01:56 - Otro"
-				]
+	"portfolio-video-archive": [
+		{
+			"video": "personal-portfolio.mp4",
+			"video-path": "/personal-portfolio/",
+			"video-thumbnail": "personal-portfolio.webp",
+			"video-thumbnail-path": "/thumbnails/",
+			"video-data": {
+				"title": "Portfolio Showcase",
+				"short-description": "Experience a captivating journey through my professional work from 2019 to 2023 in this short video. From a captivating intro to web development, photo editing, and video editing, witness my diverse expertise in just under two minutes.",
+				"youtube-button-text": "Watch on YouTube",
+				"youtube-button-link": "https://www.youtube.com/watch?v=ilz2avyGG_U",
+				"youtube-button-icon-svg": "socials-youtube",
+				"timeline": {
+					"text": "Video Timeline:",
+					"list": [
+						"00:00 - 00:04 - Intro",
+						"00:04 - 00:55 - Web Development",
+						"00:55 - 01:14 - Photo Editing",
+						"01:14 - 01:52 - Video Editing",
+						"01:52 - 01:56 - Otro"
+					]
+				}
+				
 			}
 		}
-	},
+	],
 	"cards-categories": [
 		{
 			"type": "page",
 			"page": "Workstation",
 			"name": "Personal Workstation",
-			"svg": "workstation"
+			"svg": "workstation",
+			"background-img": "overlay-texture-paper.webp",
+			"background-img-path": "/design-elements/"
 		},
 		{
 			"type": "page",
 			"page": "Employee Experience",
 			"name": "Employee Experience",
-			"svg": "employ"
+			"svg": "employ",
+			"background-img": "overlay-texture-paper.webp",
+			"background-img-path": "/design-elements/"
 		},
 		{
 			"type": "page",
 			"page": "Summary Experience",
 			"name": "Summary Experience",
-			"svg": "projects"
+			"svg": "projects",
+			"background-img": "overlay-texture-paper.webp",
+			"background-img-path": "/design-elements/"
 		},
 		{
 			"type": "page",
 			"page": "Projects",
 			"name": "Projects Experience",
-			"svg": "about-me"
+			"svg": "about-me",
+			"background-img": "overlay-texture-paper.webp",
+			"background-img-path": "/design-elements/"
 		}
 	],
+	"contact": {
+		"data": {
+			"title": "Contact Data",
+			"text": [
+				"You can reach me by phone on WhatsApp or through my personal email address.",
+				"Contact details are provided in the section below."
+			],
+			"contacts": [
+				{
+					"label": "Email:",
+					"value": "denismarginas09@gmail.com",
+					"link": "mailto:denismarginas09@gmail.com"
+				},
+				{
+					"label": "Address:",
+					"value": "Romania, Baia Mare",
+					"warning-text": "For security reasons, the address is not displayed. However, you can request the contact address by sending an email to the provided email address."
+				},
+				{
+					"label": "Phone",
+					"value": "+4074*******",
+					"warning-text": "For security reasons, the phone number is not displayed. However, you can request the contact phone number by sending a mail to the provided email address."
+				}
+			],
+			"img": "dm-personal-image-0.webp",
+			"img-path": "/personal-images/"
+		},
+		"resume": {
+			"text-list": [
+				"I am a skilled professional with expertise in web development and programming. With a strong foundation in various web platforms and programming languages, I possess the ability to create dynamic and user-friendly websites. My proficiency extends to page builders and web development programs, enabling me to design and customize web pages effectively.",
+				"I have experience working with a range of software and tools, including photo editing and video editing programs. My knowledge extends to streaming programs and other widely used applications, such as Microsoft Office and Google Suite.",
+				"With a strong technical aptitude and adaptability, I am confident in my ability to contribute to innovative projects and deliver exceptional results. I am eager to leverage my skills and experiences to make a meaningful impact."
+			],
+			"img": "dm-desktop-working.webp",
+			"img-path": "/personal-images/",
+			"download-button-text": "Download",
+			"cv-list": [
+				{
+					"name": "Resume #2 English",
+					"thumbnail": "content/cv/cv-2/dm-cv-2-english-public-thumbnail.webp",
+					"image": "content/cv/cv-2/dm-cv-2-english-public-compressed.webp",
+					"pdf": "content/cv/cv-2/dm-cv-2-english-public-compressed.pdf",
+					"date": "Jun 3, 2023",
+					"description": "CV - Model 2"
+				},
+				{
+					"name": "Resume #2 Romanian",
+					"thumbnail": "content/cv/cv-2/dm-cv-2-romana-public-thumbnail.webp",
+					"image": "content/cv/cv-2/dm-cv-2-romana-public-compressed.webp",
+					"pdf": "content/cv/cv-2/dm-cv-2-romana-public-compressed.pdf",
+					"date": "Jun 3, 2023",
+					"description": "CV - Model 2"
+				},
+				{
+					"name": "Resume #1 English",
+					"thumbnail": "content/cv/cv-1/dm-cv-1-english-public-thumbnail.webp",
+					"image": "content/cv/cv-1/dm-cv-1-english-public-compressed.webp",
+					"pdf": "content/cv/cv-1/dm-cv-1-english-public-compressed.pdf",
+					"date": "Jun 3, 2023",
+					"description": "CV - Model 1"
+				},
+				{
+					"name": "Resume #1 Romanian",
+					"thumbnail": "content/cv/cv-1/dm-cv-1-romana-public-thumbnail.webp",
+					"image": "content/cv/cv-1/dm-cv-1-romana-public-compressed.webp",
+					"pdf": "content/cv/cv-1/dm-cv-1-romana-public-compressed.pdf",
+					"date": "Jun 3, 2023",
+					"description": "CV - Model 1"
+				}
+			]
+		},
+		"form": {
+			"title": "Contact Form",
+			"fields": [
+				{
+					"name": "name",
+					"type": "text",
+					"placeholder": "Name"
+				},
+				{
+					"name": "email",
+					"type": "text",
+					"placeholder": "Email"
+				},
+				{
+					"name": "phone",
+					"type": "text",
+					"placeholder": "Phone Number"
+				},
+				{
+					"name": "message",
+					"type": "textarea",
+					"placeholder": "Message"
+				},
+				{
+					"name": "dm-form-button",
+					"type": "submit",
+					"value": "Submit"
+				}
+			]
+		},
+		"menu": {
+			"title": "Contact",
+			"list": [
+				{
+					"text": "CV English",
+					"icon-svg": "resume",
+					"link": "content/cv/cv-2/dm-cv-2-english-public-compressed.pdf"
+				},
+				{
+					"text": "CV Romanian",
+					"icon-svg": "resume",
+					"link": "content/cv/cv-2/dm-cv-2-romana-public-compressed.pdf"
+				},
+				{
+					"text": "Contact Form",
+					"icon-svg": "form",
+					"link": "https://docs.google.com/forms/d/e/1FAIpQLSdkMKYQyLa4H7yxU7RMUK97urwK5LMvbk-dFs9-wKpCRCO_Ng/viewform"
+				}
+			]
+		}
+	},
+	"socials": {
+		"title": "Socials",
+		"visual-list": [
+			{
+				"title": "YouTube",
+				"link": "https://www.youtube.com/channel/UCZGb7hnkyawMgnSO9T-rnnQ",
+				"icon-svg": "youtube"
+			},
+			{
+				"title": "Facebook",
+				"link": "https://www.facebook.com/denismarginas09",
+				"icon-svg": "facebook"
+			},
+			{
+				"title": "Linkedin",
+				"link": "https://www.linkedin.com/in/denismarginas09/",
+				"icon-svg": "linkedin"
+			},
+			{
+				"title": "Twitter",
+				"link": "https://twitter.com/DenisMarginas",
+				"icon-svg": "twitter"
+			},
+			{
+				"title": "Google Site",
+				"link": "https://sites.google.com/view/denis-marginas",
+				"icon-svg": "google-site"
+			},
+			{
+				"title": "Github",
+				"link": "https://github.com/denismarginas",
+				"icon-svg": "github"
+			}
+		],
+		"text-list": [
+			{
+				"title": "Google Site:",
+				"text": "sites.google.com/view/denis-marginas",
+				"link": "https://sites.google.com/view/denis-marginas/portfolio"
+			},
+			{
+				"title": "Google Form:",
+				"text": "forms.gle/vTHeLVkc1TwXCxBJA",
+				"link": "https://forms.gle/vTHeLVkc1TwXCxBJA"
+			},
+			{
+				"title": "Facebook Page:",
+				"text": "facebook.com/denismarginas09",
+				"link": "https://www.facebook.com/denismarginas09"
+			},
+			{
+				"title": "Linkedin:",
+				"text": "linkedin.com/in/denismarginas09",
+				"link": "https://www.linkedin.com/in/denismarginas09/"
+			},
+			{
+				"title": "Github:",
+				"text": "github.com/denismarginas",
+				"link": "https://github.com/denismarginas"
+			},
+			{
+				"title": "CV English:",
+				"text": "drive.google.com/file/d/1-RYU6uYovCR_LT48nD7CZ1sa6xQ8QJh_/view",
+				"link": "https://drive.google.com/file/d/1-RYU6uYovCR_LT48nD7CZ1sa6xQ8QJh_/view"
+			},
+			{
+				"title": "CV Romanian:",
+				"text": "drive.google.com/file/d/1_gPqX2MgLJD7bYCgZ977GHX25pVC_ihz/view",
+				"link": "https://drive.google.com/file/d/1_gPqX2MgLJD7bYCgZ977GHX25pVC_ihz/view"
+			}
+		]
+		
+	},
 	"experience": {
 		"title": "Experience",
+		"img": "dm-personal-image-0.webp",
+		"img-path": "/personal-images/",
 		"knowledge-lists-text": {
-			"text": "I have knowledge and skills in these categories:",
+			"text-items": [
+				"I have knowledge and skills in these categories:"
+			],
 			"list-items": [
 				"● Web Platforms: WordPress, Prestashop, Google Site",
 				"● Page builders: Elementor, WpBakery, Gutenberg",
@@ -79,16 +296,20 @@
 		"buttons": [
 			{
 				"button_text": "Summary Experience",
-				"button_page_redirect": "Summary Experience"
+				"button_page_redirect_slug": "summary-experience",
+				"button-icon-svg": "projects"
 			},
 			{
 				"button_text": "Employee Experience",
-				"button_page_redirect": "Employee Experience"
+				"button_page_redirect_slug": "employee-experience",
+				"button-icon-svg": "employ"
 			},
 			{
 				"button_text": "Projects Catalog",
-				"button_page_redirect": "Projects"
+				"button_page_redirect_slug": "projects",
+				"button-icon-svg": "about-me"
 			}
+
 		],
 		"knowledge-lists-items": [
 			{
@@ -242,5 +463,20 @@
 				"title": "Chat GPT"
 			}
 		]
+	},
+	"project-info": {
+		"dates": {
+			"start-date": {
+				"text": "Begining of the webiste:",
+				"date": "04.06.2023"
+			},
+			"end-date": {
+				"text": "Last update of webiste:",
+				"date": "curent-date"
+			}
+		},
+		"copyright": {
+			"text": "©All copyrights reserved by Denis Marginas"
+		}
 	}
 }

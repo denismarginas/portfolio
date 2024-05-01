@@ -29,7 +29,7 @@ function extractDataPosts($post_path, $json_posts = null) {
                 $post_dataString = executePhpInString($post_dataString);
                 $post_data = json_decode($post_dataString, true);
 
-                if($post_data["visibility"] = "enable") {
+                if($post_data["visibility"] = "enable" && isset($post_data["exclude_from_search"] ) != "true" ) {
                     $posts[] =  [ $file, $post_data ];
                 }
 
@@ -61,7 +61,7 @@ function extractDataPosts($post_path, $json_posts = null) {
                 $post_data = json_decode($post_data_string, true);
 
 
-                if($post_data["visibility"] = "enable") {
+                if($post_data["visibility"] = "enable"  && isset($post_data["exclude_from_search"] ) != "true") {
                     $posts[] =  [ "file" => $post_file, "post_data" => $post_data ];
                 }
             }
@@ -566,9 +566,31 @@ function renderParagraphBlockProject($text = null) {
 function renderImageBlockProject($post_data ,$image_path = null, $image_file_name = null) {
     $html_content = '';
 
-    $html_content .= "<div class='dm-post-image' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.7s'>";
+    $html_content .= "<div class='dm-post-image' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.7s' data-delay='0.2s'>";
     $html_content .= renderImage( $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$image_path.$image_file_name, true);
     $html_content .=  "</div>";
+
+    return $html_content;
+}
+function renderSliderWithImagesOfProject($post_data, $img_array_path_dir) {
+    $html_content = '<div data-motion="transition-fade-0" data-duration="1.2s">';
+
+    if( $img_array_path_dir != null) {
+
+        $slides_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$img_array_path_dir."/";
+
+        $images = scandir($slides_path);
+        $images_rendered_array = [];
+        foreach ( $images as $image_file ) {
+            if ($image_file == '.' || $image_file == '..') {
+                continue;
+            }
+            $images_rendered_array[] = renderImage($slides_path.$image_file, true);
+        }
+        $html_content .=  renderSlider($images_rendered_array, true, false, true);
+        $html_content .= '</div>';
+    }
+
 
     return $html_content;
 }
