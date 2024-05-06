@@ -1,4 +1,6 @@
 <?php
+echo "<!DOCTYPE html>";
+
 $seoParam = isset($seo) && is_array($seo) ? $seo : null;
 include "head.php";
 $jsonMenuData = getDataJson('data-menu', 'data');
@@ -7,7 +9,8 @@ $jsonCategoriesData = getDataJson('data-categories', 'data');
 ?>
 
 
-<!doctype html>
+
+
 <?php
     $defaultLangText =$jsonGlobalData["language"]["default"];
     $languagesList = $jsonGlobalData["language"]["list"];
@@ -17,6 +20,8 @@ $jsonCategoriesData = getDataJson('data-categories', 'data');
         endif;
     endforeach;
 ?>
+
+
 
 <?php if(isset($langISO)) : ?>
     <html lang="<?php echo $langISO; ?>">
@@ -107,4 +112,5 @@ $jsonCategoriesData = getDataJson('data-categories', 'data');
         </span>
     </section>
 </header>
+
 

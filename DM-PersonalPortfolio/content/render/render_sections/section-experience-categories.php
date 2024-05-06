@@ -17,7 +17,7 @@ if(!isset($jsonContactCardsCategories)) {
                 <?php $experience_categories = $jsonContactCardsCategories?>
                 <?php foreach ($experience_categories as $experience_category) : ?>
 
-                    <li class="dm-experience-category">
+                    <li class="dm-experience-category" data-motion="transition-fade-0" data-duration="0.4s">
                         <div>
                             <?php
                             $experience_category_href = "#";
@@ -29,7 +29,7 @@ if(!isset($jsonContactCardsCategories)) {
                             $experience_category["name"];
                             ?>
 
-                            <a href="<?php echo $experience_category_href; ?>">
+                            <a href="<?php echo $experience_category_href; ?>" data-motion="transition-fade-0" data-duration="0.6s">
                                 <div>
                                     <?php SVGRenderer::renderSVG( $experience_category["svg"]); ?>
                                 </div>

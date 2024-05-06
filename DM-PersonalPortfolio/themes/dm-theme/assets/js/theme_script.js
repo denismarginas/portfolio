@@ -17,6 +17,23 @@ document.addEventListener("DOMContentLoaded", function() {
             navbarToggleSection.classList.toggle("navbar-active");
         });
     }
+    // Custom Cursor
+    /*
+    const cursor = document.querySelector('.cursor');
+
+    document.addEventListener('mousemove', e => {
+        cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+    })
+
+    document.addEventListener('click', () => {
+        cursor.classList.add("expand");
+
+        setTimeout(() => {
+            cursor.classList.remove("expand");
+        }, 800)
+    })
+
+     */
 
     // Image Absolute Scroll Animation Bottom
     function scrollAnimation(element, minBottom, maxBottom) {
@@ -353,7 +370,7 @@ document.addEventListener("DOMContentLoaded", function() {
         playPauseBtn.addEventListener("click", togglePlay);
 
         video.addEventListener("click", togglePlay);
-        video.addEventListener("touchend", () => {togglePlay();});
+        //video.addEventListener("touchend", () => {togglePlay();});
 
         function togglePlay() {
             if (video.paused) {

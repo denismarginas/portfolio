@@ -202,9 +202,12 @@ if (!isset($post_data)) {
                 <?php endif; ?>
 
                 <?php if (isset($post_data["web_project_status"]) && !empty($post_data["web_project_status"])) : ?>
-                    <div class="post-website-status <?php echo strtolower($post_data["web_project_status"]); ?>">
-                        <span>Website Development:</span>
-                        <?php echo $post_data["web_project_status"]; ?>
+                    <div class="post-website-status">
+                        <span class="label">Web Project Status:</span>
+                        <span class="status <?php echo strtolower($post_data["web_project_status"]); ?>">
+                            <?php echo $post_data["web_project_status"]; ?>
+                        </span>
+
                     </div>
                 <?php endif; ?>
 

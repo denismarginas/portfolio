@@ -125,12 +125,11 @@
                     border: 2px solid var( --dm-color-primary );
                     background-color: var( --dm-color-secondary );
                     max-width: 0%;
+                    height: auto;
                     opacity: 0;
-                    display: none;
                     margin-top: 4px;
-                    transition: opacity 0.5s, height 0.3s, max-width 0.8s, padding 0.2s;
+                    transition: opacity 0.3s, height 0.3s, max-width 0.8s, padding 0.4s;
                     z-index: 5;
-
 
                     &:hover {
                         padding: var( --dm-spacing-primary );
@@ -138,9 +137,11 @@
                         height: auto;
                         max-width: 100%;
                         display: flex;
+
                     }
                     > li > a {
                         @include dm-font-medium();
+                        @include limit-line-text(1);
                         --dm-text-medium-color: var( --dm-color-white );
                         --dm-text-medium-font-weight: 500;
 
@@ -157,7 +158,7 @@
                         height: auto;
                         max-width: 100%;
                         display: flex;
-                        transition: opacity 0.5s, max-height 0.3s, max-with 0.5s, padding 0.2s;
+                        transition: opacity 0.3s, max-height 0.3s, max-with 0.5s, padding 0.4s;
                     }
                 }
             }
@@ -290,6 +291,12 @@
                             height: auto;
                             background-color: transparent;
                             border: none;
+
+                            > li {
+                                > a {
+                                    display: block;
+                                }
+                            }
 
                             &:hover {
                                 height: auto;

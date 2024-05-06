@@ -77,7 +77,16 @@ table th,
 table td {
     @include dm-font-default();
 }
-  
+
+body[java-script=true] > * {
+  ::selection {
+    background-color: var(--dm-color-gray-darken) !important;
+    color: var(--dm-color-white) !important;
+    -webkit-text-fill-color: var(--dm-color-white) !important;
+  }
+}
+
+
 svg {
     &[data-svg-type="fill"] {
       > path {

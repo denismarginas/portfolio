@@ -23,11 +23,12 @@
           --dm-text-heading5-color: var( --dm-color-white );
           --dm-text-heading5-font-weight: 600;
           text-transform: uppercase;
-          padding: var( --dm-spacing-secondary );
+          padding: var( --dm-spacing-primary ) var( --dm-spacing-secondary );
           font-style: italic;
 
         }
       > div {
+        @include flex-center();
         padding: var( --dm-spacing-secondary );
         background-color: var( --dm-color-gray );
         position: relative;
@@ -43,7 +44,7 @@
           height: 200%;
           background-color: var( --dm-color-gray );
           top: 0;
-          right: -40%;
+          right: -45%;
         }
         > svg {
           @include svg-color( var( --dm-color-white ) );

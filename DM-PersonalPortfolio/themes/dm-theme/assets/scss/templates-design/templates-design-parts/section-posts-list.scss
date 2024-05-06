@@ -17,9 +17,8 @@
       > .dm-post-item {
         @include border-radius( var( --dm-border-radius-primary ));
         @include flex-row();
-        gap: calc( var( --dm-spacing-primary ) );
+        gap: calc( var( --dm-spacing-secondary ) );
         padding: var( --dm-spacing-secondary );
-        background-color: rgba( var( --dm-color-gray-rgb ) , 0.1);
         word-break: break-word;
         position: relative;
         overflow: hidden;
@@ -64,9 +63,9 @@
             word-break: break-all;
           }
           > .dm-post-item-categories {
+            display: none !important;
             @include reset-list();
             @include flex-row();
-            //flex-wrap: wrap;
             word-break: break-word;
             gap: calc( var( --dm-spacing-primary ) / 2 );
 
@@ -279,9 +278,9 @@
                 background-color: var( --dm-color-white );
                 --dm-text-medium-color: var( --dm-color-primary );
               }
-              &:hover, &:focus {
-                background-color: var( --dm-color-white );
-                --dm-text-medium-color: var( --dm-color-secondary );
+              &:hover, &:focus, &:active {
+                background-color: var( --dm-color-secondary );
+                --dm-text-medium-color: var( --dm-color-white );
               }
             }
           }
@@ -354,6 +353,7 @@
         grid-template-columns: repeat(2, 1fr);
 
         > .dm-post-item {
+          gap: var( --dm-spacing-primary );
           flex-direction: column;
 
           > .dm-post-item-details {
@@ -383,6 +383,9 @@
 
             > .dm-post-item-description {
               @include limit-line-text(1);
+            }
+            > .dm-post-item-categories {
+              @include flex-center();
             }
             > .dm-post-item-title {
               text-align: center;
@@ -444,6 +447,9 @@ body, body.theme-light {
     > container {
       > ul {
         > .dm-post-item {
+          border: 1px solid rgba(var(--dm-color-gray-rgb), 0.2);
+          background-color: rgba(var( --dm-color-white-rgb), 0.5 );
+
           > .dm-post-item-details {
             > .dm-post-item-title {
               --dm-text-default-color: var( --dm-color-gray );
@@ -491,7 +497,8 @@ body.theme-dark {
     > container {
       > ul {
         > .dm-post-item {
-          background-color: rgba( var( --dm-color-primary-rgb ) , 0.2);
+          border: 1px solid rgba(var(--dm-color-white-rgb), 0.2);
+          background-color: rgba(var(--dm-color-gray-lighten-rgb), 0.2);
 
           > .dm-post-item-details {
             > .dm-post-item-title {

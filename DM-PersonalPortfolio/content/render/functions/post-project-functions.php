@@ -513,7 +513,7 @@ function renderSectionWebProject($post_data) {
 
     if (isset($post_data) && !empty($post_data)) {
         if (in_array('web', $post_data["tags"])) {
-            $html_content .= renderTitle('Web Development Projects');
+            $html_content .= renderTitle('Web Development');
             $html_content .= renderGalleryWeb($post_data);
         }
         if (in_array('content-web', $post_data["tags"])) {
@@ -534,7 +534,7 @@ function renderSectionMediaProject($post_data, $params = []) {
 
     if (isset($post_data) && !empty($post_data)) {
         if (in_array('photo', $post_data["tags"]) or in_array('video', $post_data["tags"])) {
-            $html_content .= renderTitle('Visual Media Projects');
+            $html_content .= renderTitle('Visual Media');
         }
         if (in_array('Visual Media Projects', $post_data["categories"]) and in_array('Web Development Projects', $post_data["categories"])) {
             $html_content .= renderDetailsVisualMediaPost($post_data);

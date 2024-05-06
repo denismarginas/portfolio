@@ -32,7 +32,7 @@ $latestEndDateDisplay = ($latestEndDate !== null) ? $latestEndDate->format('m.Y'
 ?>
 
 
-<div class="dm-jobs-grid">
+<div class="dm-jobs-grid" data-motion="transition-fade-0">
 
     <div class="work-timeline">
         <?php
@@ -171,7 +171,7 @@ $latestEndDateDisplay = ($latestEndDate !== null) ? $latestEndDate->format('m.Y'
     if ($total_experience_years > 0 || $total_experience_months > 0) :
         ?>
         <p>
-            <span>Total Experience: </span>
+            <span>Total Work Experience: </span>
             <span><?php echo $total_experience_years; ?></span>
             <span>years, </span>
             <span><?php echo $total_experience_months; ?></span>
@@ -184,7 +184,7 @@ $latestEndDateDisplay = ($latestEndDate !== null) ? $latestEndDate->format('m.Y'
     if ($total_timeline_years > 0 || $total_timeline_months > 0) :
         ?>
         <p>
-            <span>Total Timeline: </span>
+            <span>Total Work Timeline: </span>
             <span><?php echo $total_timeline_years; ?></span>
             <span>years, </span>
             <span><?php echo $total_timeline_months; ?></span>
