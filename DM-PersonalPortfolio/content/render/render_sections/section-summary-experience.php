@@ -1,9 +1,25 @@
 
 
+<section class="dm-catalog-categories">
+    <container>
+        <div>
+            <h2 data-motion="transition-fade-0 data-duration="0.6s" data-delay="0.1s">Summary Work Experience</h2>
+            <h6 data-motion="transition-fade-0" data-duration="0.4s" data-delay="0.2s" style="color: var( --dm-color-white ); text-align: center; font-weight: 500;">2019 - 2022</h6>
+        </div>
+    </container>
+    <!-- Ocean Animation Start -->
 
+    <div class="ocean" data-motion="transition-fade-0" data-duration="4s" data-delay="0s" style="--duration: 4s; --delay: 0s;">
+        <div class="wave" style="margin-top: 65px;"></div>
+        <div class="wave" style="margin-top: 70px;"></div>
+        <div class="wave" style="margin-top: 80px;"></div>
+    </div>
+
+    <!-- Ocean Animation End -->
+</section>
 <section class="dm-summary-experience grid-background-animation">
     <div class="dm-experience-header" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
-        <h2>Web Development Projects</h2>
+        <h2>1. Web Development Projects</h2>
     </div>
     <div class="dm-experience-section" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
         <container>
@@ -127,7 +143,7 @@
         </container>
     </div>
     <div class="dm-experience-header" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
-        <h2>Video Editing Projects</h2>
+        <h2>2. Video Editing Projects</h2>
     </div>
     <div class="dm-experience-section" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
         <container>
@@ -189,7 +205,7 @@
         </container>
     </div>
     <div class="dm-experience-header" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
-        <h2>Photo Editing Projects</h2>
+        <h2>3. Photo Editing Projects</h2>
     </div>
     <div class="dm-experience-section" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
         <container>
@@ -276,7 +292,7 @@
         </container>
     </div>
     <div class="dm-experience-header" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
-        <h2>3D EDITING</h2>
+        <h2>4. 3D EDITING</h2>
     </div>
     <div class="dm-experience-section" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
         <container>

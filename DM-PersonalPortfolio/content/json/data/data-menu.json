@@ -24,7 +24,11 @@
                     "slug": "employee-experience"
                 },
                 {
-                    "name": "Summary of the experience gained",
+                    "name": "Educational experience path",
+                    "slug": "education-experience"
+                },
+                {
+                    "name": "Summary experience gained",
                     "slug": "summary-experience"
                 }
             ]

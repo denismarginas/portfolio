@@ -201,6 +201,18 @@ if (!isset($post_data)) {
 
                 <?php endif; ?>
 
+                <?php if (isset($post_data["project_collaboration"]) && !empty($post_data["project_collaboration"])) : ?>
+                    <p class="post-custom-field-text">
+                        <span>Project Collaboration:</span>
+                        <?php for ( $i = 0; $i<count($post_data["project_collaboration"]); $i++ ) :
+                            echo $post_data["project_collaboration"][$i];
+                            if( $i < count($post_data["project_collaboration"]) - 1 ) :
+                                echo ", ";
+                            endif;
+                        endfor; ?>
+                    </p>
+                <?php endif; ?>
+
                 <?php if (isset($post_data["web_project_status"]) && !empty($post_data["web_project_status"])) : ?>
                     <div class="post-website-status">
                         <span class="label">Web Project Status:</span>

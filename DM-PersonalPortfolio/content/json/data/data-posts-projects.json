@@ -48,6 +48,7 @@
                 "Bachelor's thesis",
                 "personal"
             ],
+            "project_school": "Technical University of Cluj-Napoca UTCNBM",
             "project_collaboration": [
                 "Individual"
             ],
@@ -141,7 +142,7 @@
             "employer": "Pia Soft Product",
             "date": {
                 "date_start": "10.2019",
-                "date_end": "12.2019"
+                "date_end": "11.2019"
             },
             "tags": [
                 "web"
@@ -2565,7 +2566,7 @@
                 }
             ],
             "project_types": [
-                "media video"
+                "media photo"
             ],
             "project_collaboration": [
                 "Individual"
@@ -2582,7 +2583,7 @@
                 "date_end": "02.2020"
             },
             "tags": [
-                "video"
+                "photo"
             ],
             "colors": {
                 "post_color_primary": "#f1d199",
@@ -2592,7 +2593,8 @@
             }
         },
         "post_content": [
-            "<?php echo renderSectionMediaProject($post_current_data); ?>"
+            "<?php echo renderSectionMediaProject($post_current_data); ?>",
+            "<?php echo renderVideoMedia($post_current_data); ?>"
         ],
         "layout": "wrapper-layout"
     },
@@ -3911,7 +3913,7 @@
                 "web maintenance"
             ],
             "project_collaboration": [
-                "Individual"
+                "Individual", "Teamwork"
             ],
             "project_companies": [
                 "TNDC"
@@ -5452,8 +5454,8 @@
             ],
             "employer": "Pia Soft Product",
             "date": {
-                "date_start": "10.2019",
-                "date_end": "11.2019"
+                "date_start": "11.2019",
+                "date_end": "12.2019"
             },
             "tags": [
                 "web"

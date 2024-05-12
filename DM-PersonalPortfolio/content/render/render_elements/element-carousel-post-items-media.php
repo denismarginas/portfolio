@@ -1,51 +1,51 @@
 <?php
-$posts = getDataJson('index-data-posts-projects', 'index');
+
+if(!isset($jsonGlobalData)) {
+    $jsonGlobalData = getDataJson('data-global-settings', 'data');
+}
+if(!isset($posts)) {
+    $posts = getDataJson('index-data-posts-projects', 'index');
+}
+
+usort($posts, "dateStartPostSortDesc");
+usort($posts, "personalTypePostProjectSortAsc");
 
 $nr_item = 1;
-$max_items = 10;
+$max_items = 12;
 ?>
 
 
-<?php if(count($posts) >= 1) : ?>
+<?php if(count($posts) >= 1 && !empty($posts)) : ?>
 
-    <ul class="carousel-list left-slider media-slider" style="min-width: calc((<?php echo $max_items ?> * var(--dm-spacing-tertiary)) + (<?php echo $max_items ?> * 200px ) );">
-        <?php
-        for ($render_count = 0; $render_count < 2; $render_count++) {
+    <div class="scroller" data-direction="right" data-speed="slow">
+        <ul class="carousel-list scroller__inner">
+            <?php
             foreach ($posts as $post) :
-                $post_path = pathinfo($post["file"], PATHINFO_FILENAME) . ".html";
+                $post_path = pathinfo($post["file"], PATHINFO_FILENAME) . $jsonGlobalData["page-slug-extension"];
                 $post_data = $post["post_data"];
 
                 if (
                     isset($post["post_data"]["categories"]) &&
-                    !in_array("Web Development Projects", $post["post_data"]["categories"]) &&
+                    //!in_array("Web Development Projects", $post["post_data"]["categories"]) &&
                     in_array("Visual Media Projects", $post["post_data"]["categories"]) &&
                     !in_array("Miscellaneous Projects", $post["post_data"]["categories"]) &&
-                    $max_items > $nr_item
+                    $max_items >= $nr_item
                 ) :
                     ?>
 
                     <li class="carousel-item">
-                        <?php if (strtoupper($post_data["colors"]["post_color_background"]) == "#FFFFFF") :
-                            $shine_animation = 'data-animation="shine-gray"';
-                        else :
-                            $shine_animation = 'data-animation="shine"';
-                        endif; ?>
 
-                        <a class="dm-post-item-logo" href="<?php echo $post_path; ?>" <?php echo $shine_animation; ?>
+                        <a class="dm-post-item-logo" href="<?php echo $post_path; ?>"
                            style="background-color: <?php echo $post_data["colors"]["post_color_background"]; ?>;">
                             <?php echo  renderLogoPost($post_data, false, false, false); ?>
 
                         </a>
                     </li>
-
                     <?php $nr_item += 1;
                 endif;
-            endforeach;
-
-            $nr_item = 1;
-        }
-        ?>
-    </ul>
+            endforeach; ?>
+        </ul>
+    </div>
 
 <?php endif; ?>
 

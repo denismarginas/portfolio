@@ -148,7 +148,7 @@ function getCurrentPostProjectData($fileName, $json_posts) {
 
 
 function getSeoFromCurrentPostProjectData($postData) {
-    If ($postData != null) {
+    if ($postData != null) {
         $seo = [
             "title" => $postData["title"]." | Denis Marginas",
             "description" => $postData["description"],
@@ -161,12 +161,14 @@ function getSeoFromCurrentPostProjectData($postData) {
 
 
 function renderTitle($title = null) {
-    $htmlTemplate = "<h2 id='webdevelopmentprojects' class='dm-post-title-category' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.7s'>%s</h2>";
+    $htmlTemplate = "<h2 id='%s' class='dm-post-title-category' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.7s'>%s</h2>";
 
     if ($title !== null) {
-        return sprintf($htmlTemplate, $title);
+        $id = removeSpaceAndLowercase($title); // Call the function to remove spaces and convert to lowercase
+        return sprintf($htmlTemplate, $id, $title);
     } else {
-        return sprintf($htmlTemplate, "Title");
+        $id = removeSpaceAndLowercase("Title"); // Call the function with a default value
+        return sprintf($htmlTemplate, $id, "Title");
     }
 }
 

@@ -133,6 +133,8 @@
             width: 100%;
             max-width: 100%;
             border-top-right-radius: var( --dm-spacing-primary );
+            box-shadow: inset 2px 6px 10px rgba(var(--dm-color-black-rgb), 0.7);
+
 
             &:hover {
               color: var( --dm-color-white );
@@ -155,10 +157,11 @@
             }
           }
         }
-        > .post-website-platform, > .post-website-languages, > .post-website-modules, > .post-media-platforms {
+        > .post-website-platform, > .post-website-languages, > .post-website-modules, > .post-media-platforms, > .post-custom-field-text {
           @include dm-font-medium();
 
           > span {
+            @include dm-font-medium();
             font-weight: 600;
           }
         }
@@ -475,7 +478,7 @@ body, body.theme-light {
           > * {
             --dm-text-default-color: var( --dm-color-gray );
           }
-          > .post-website-platform, > .post-website-languages, > .post-website-modules, > .post-media-platforms {
+          > .post-website-platform, > .post-website-languages, > .post-website-modules, > .post-media-platforms, > .post-custom-field-text  {
             --dm-text-medium-color: var( --dm-color-gray );
           }
           > .post-media-facebook,
@@ -566,7 +569,7 @@ body.theme-dark {
           > * {
             --dm-text-default-color: var( --dm-color-white );
           }
-          > .post-website-platform, > .post-website-languages, > .post-website-modules, > .post-media-platforms {
+          > .post-website-platform, > .post-website-languages, > .post-website-modules, > .post-media-platforms, > .post-custom-field-text  {
             --dm-text-medium-color: var( --dm-color-white );
           }
           > .post-media-facebook,

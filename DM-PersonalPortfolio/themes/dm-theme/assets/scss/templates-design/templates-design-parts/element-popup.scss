@@ -17,7 +17,7 @@
     height: 100%;
     padding: var( --dm-spacing-secondary );
     position: relative;
-    overflow: auto;
+    overflow: hidden;
 
     > img {
       width: auto;

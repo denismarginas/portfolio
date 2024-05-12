@@ -23,7 +23,7 @@ $posts = getDataJson('index-data-posts-projects', 'index');
                             else :
                                 $shine_animation = 'data-animation="shine"';
                             endif; ?>
-                            <a class="dm-post-item-logo" href="<?php echo $post_path; ?>#visualmediaprojects" <?php echo $shine_animation; ?>
+                            <a class="dm-post-item-logo" href="<?php echo $post_path; ?>#visualmedia" <?php echo $shine_animation; ?>
                                style="background-color: <?php echo $post_data["colors"]["post_color_background"]; ?>;">
                                 <?php echo  renderLogoPost($post_data); ?>
                                 <?php

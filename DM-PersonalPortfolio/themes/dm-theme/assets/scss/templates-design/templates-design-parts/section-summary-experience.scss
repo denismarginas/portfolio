@@ -139,6 +139,12 @@
       }
     }
     @media only screen and (max-width: $screen-tablet-medium) {
+      > .dm-experience-header {
+        > h2 {
+          @include dm-font-heading4();
+          --dm-text-heading4-color: var( --dm-color-white );
+        }
+      }
       > .dm-experience-section {
         > container {
           > ul {
@@ -148,6 +154,12 @@
       }
     }
     @media only screen and (max-width: $screen-phone-medium) {
+      > .dm-experience-header {
+        > h2 {
+          @include dm-font-heading6();
+          --dm-text-heading6-color: var( --dm-color-white );
+        }
+      }
       > .dm-experience-section {
         > container {
           > ul {

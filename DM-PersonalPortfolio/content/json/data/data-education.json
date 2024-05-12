@@ -1,6 +1,6 @@
 [
   {
-    "name": "High School 'Emil Racoviță'",
+    "name": "High School Emil Racoviță",
     "display": "true",
     "type": "High School",
     "img_bg": "dark",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "name": "Technical University of Cluj-Napoca | Baia Mare - UTCNBM",
+    "name": "Technical University of Cluj-Napoca UTCNBM",
     "display": "true",
     "type": "University",
     "img_bg": "dark",

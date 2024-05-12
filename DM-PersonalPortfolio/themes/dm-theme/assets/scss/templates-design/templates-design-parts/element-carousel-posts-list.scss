@@ -5,41 +5,20 @@
 .carousel-list {
   @include reset-list();
   @include flex-row();
+  @include flex-center();
+  flex-wrap: wrap;
   align-items: center;
   gap: var(--dm-spacing-tertiary);
 
-  &.right-slider {
-    animation: 10s carouselSlideInfiniteRight infinite linear;
-  }
-  &.left-slider {
-    animation: 10s carouselSlideInfiniteLeft infinite linear;
-  }
-  &.web-slider {
-    animation-duration: 24s;
-    animation-duration: 24s;
-
-
-    @media only screen and (max-width: $screen-tablet-medium) {
-      animation-duration: 32s;
-    }
-  }
-  &.media-slider {
-    animation-duration: 18s;
-    animation-duration: 4s;
-
-    @media only screen and (max-width: $screen-tablet-medium) {
-      animation-duration: 28s;
-    }
-  }
   > .carousel-item {
-
     > .dm-post-item-logo {
+      --carousel-item-size: 200px;
       @include flex-center();
+      @include fix-width( var( --carousel-item-size ) );
       padding: var(--dm-spacing-secondary);
       border-radius: var(--dm-border-radius-primary);
       background-color: rgba(var(--dm-color-gray-rgb),0.1);
-      height: 200px;
-      min-width: 200px;
+      height: 120px;
 
       > img {
         &:nth-child(1) {
@@ -52,56 +31,31 @@
     }
   }
   @media only screen and (max-width: $screen-tablet-medium) {
-    gap: var(--dm-spacing-secondary);
+    gap: var( --dm-spacing-secondary );
 
     > .carousel-item {
       > .dm-post-item-logo {
-        height: 100px;
+        height: 80px;
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-large) {
+    gap: var( --dm-spacing-secondary );
+
+    > .carousel-item {
+      > .dm-post-item-logo {
+        @include fix-width(100px);
+        height: 60px;
       }
     }
   }
 }
 
-
-@keyframes carouselSlideInfiniteRight {
-  from {
-    transform: translate(0%);
-  }
-  to {
-    transform: translate(calc(-100% / 2 + (var(--dm-spacing-secondary) * -1)) );
-  }
-}
-
-@keyframes carouselSlideInfiniteLeft {
-  from {
-    transform: translate(calc(-100% / 2 + (var(--dm-spacing-secondary) * -1)) );
-  }
-  to {
-    transform: translate(0%);
-  }
-}
 body, body.theme-light {
   .carousel-list {
     > .carousel-item {
       > .dm-post-item-logo {
         border: 1px solid rgba(var(--dm-color-gray-lighten-rgb),0.4);
-      }
-    }
-  }
-  .dm-carousel-posts-list {
-    background-color: var( --dm-color-white );
-
-    > container {
-      overflow: hidden;
-  
-      &:after {
-        content: '';
-        position: absolute;
-        left: 0; right: 0;
-        top: 0; bottom: 0;
-        background-image:
-        linear-gradient(to right, var( --dm-color-white ), rgba(0,128,128,0) 150px),
-        linear-gradient(to left , var( --dm-color-white ), rgba(0,128,128,0) 150px);
       }
     }
   }
@@ -114,22 +68,5 @@ body.theme-dark {
       }
     }
   }
-  .dm-carousel-posts-list {
-    background-color: var(--dm-background-color-gray-darken);
-
-    > container {
-      overflow: hidden;
-  
-      &:after {
-        content: '';
-        position: absolute;
-        left: 0; right: 0;
-        top: 0; bottom: 0;
-        background-image:
-        linear-gradient(to right, var(--dm-background-color-gray-darken), rgba(0,128,128,0) 120px),
-        linear-gradient(to left , var(--dm-background-color-gray-darken), rgba(0,128,128,0) 120px);
-
-      }
-    }
-  }
 }
+

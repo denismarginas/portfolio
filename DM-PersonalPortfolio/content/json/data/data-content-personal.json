@@ -45,7 +45,7 @@
 	"cards-categories": [
 		{
 			"type": "page",
-			"page": "Workstation",
+			"page": "workstation",
 			"name": "Personal Workstation",
 			"svg": "workstation",
 			"background-img": "overlay-texture-paper.webp",
@@ -53,7 +53,7 @@
 		},
 		{
 			"type": "page",
-			"page": "Employee Experience",
+			"page": "employee-experience",
 			"name": "Employee Experience",
 			"svg": "employ",
 			"background-img": "overlay-texture-paper.webp",
@@ -61,7 +61,7 @@
 		},
 		{
 			"type": "page",
-			"page": "Summary Experience",
+			"page": "summary-experience.",
 			"name": "Summary Experience",
 			"svg": "projects",
 			"background-img": "overlay-texture-paper.webp",
@@ -69,7 +69,7 @@
 		},
 		{
 			"type": "page",
-			"page": "Projects",
+			"page": "projects",
 			"name": "Projects Experience",
 			"svg": "about-me",
 			"background-img": "overlay-texture-paper.webp",
