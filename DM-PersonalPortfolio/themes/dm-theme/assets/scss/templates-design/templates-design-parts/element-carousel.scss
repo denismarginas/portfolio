@@ -34,13 +34,13 @@
   .scroller__inner {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: var( --dm-spacing-secondary );
   }
 }
 
 @keyframes scroll {
   to {
-    transform: translate(calc(-50% - 0.5rem));
+    transform: translate(calc(-50% - (var( --dm-spacing-secondary ) / 2)));
   }
 }
 

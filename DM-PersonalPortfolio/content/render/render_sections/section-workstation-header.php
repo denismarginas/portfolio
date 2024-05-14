@@ -18,13 +18,15 @@
                     <?php echo $jsonWorkstationData["setups"]["setup 1"]["short-description"]; ?>
                 </p>
             </li>
-            <li data-motion="transition-fade-0 transition-slideInLeft-0">
-                <?php
-                $path = $jsonWorkstationData["setups"]["setup 1"]["path-img"];
-                $img = $jsonWorkstationData["setups"]["setup 1"]["images"]["workstation"][0];
-                $imgWorkstation = $path."/".$img;
-                echo renderImage($GLOBALS['urlPath']."content/img/".$imgWorkstation);
-                ?>
+            <li data-motion="transition-fade-0 transition-slideInLeft-0" >
+                <div class="workstation-img <?php echo $jsonWorkstationData["setups"]["setup 1"]["id"]; ?>">
+                    <?php
+                    $path = $jsonWorkstationData["setups"]["setup 1"]["path-img"];
+                    $img = $jsonWorkstationData["setups"]["setup 1"]["images"]["workstation"][0];
+                    $imgWorkstation = $path."/".$img;
+                    echo renderImage($GLOBALS['urlPath']."content/img/".$imgWorkstation, false);
+                    ?>
+                </div>
             </li>
         </ul>
     </container>

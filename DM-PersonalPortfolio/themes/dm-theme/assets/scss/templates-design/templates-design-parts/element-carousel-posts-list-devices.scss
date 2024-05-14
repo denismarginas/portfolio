@@ -13,6 +13,7 @@
   > .carousel-item {
     > .dm-post {
       position: relative;
+      display: flex;
       padding: 0px;
 
       > .device-layout-laptop {
@@ -28,10 +29,10 @@
           overflow: hidden;
           background-color: var( --dm-color-white );
           position: absolute;
-          top: 13%;
+          top: 12.5%;
           bottom: 28%;
           left: 13%;
-          right: 13%;
+          right: 12.5%;
 
           > .web-desktop-image {
             width: 112%;

@@ -5,6 +5,7 @@
 	{
 		"setup 1":
 		{
+			"id": "pc-1",
 			"title": "PC #1",
 			"short-description": "Welcome to my personal workstation page! This is the hub of my productivity, where I tackle work projects and pursue personal endeavors. With regular updates and enhancements, I strive to maintain an efficient and inspiring work environment. The most recent update to my setup was in January 2023, and I'm excited to showcase the improvements I've made. Get ready to explore my workstation and discover the tools and setup that fuel my productivity!",
 			"path-img": "workstation",
@@ -162,7 +163,7 @@
 					"src": "desktop-setup.mp4",
 					"thumbnail": "desktop-setup.webp",
 					"title": "Desktop Setup | IRL",
-					"description": "<span>Setup #1 Workstation</span></br><span>Date: Apr 25, 2023</span></br><span>Video Timeline:</span><ul><li>00:00 - 00:03 - Intro</li><li>00:03 - 00:16 - Setup Info</li><li>00:16 - 01:30 - Showcase Peripherals and Accessories</li><li>01:30 - 01:52 - Showcase PC Components</li><li>02:29 - 02:42 - Otro</li></ul>",
+					"description": "<span>Setup #1 Workstation</span></br><span>Date: Apr 25, 2023</span></br></br><span>Video Timeline:</span><ul><li>00:00 - 00:03 - Intro</li><li>00:03 - 00:16 - Setup Info</li><li>00:16 - 01:30 - Showcase Peripherals and Accessories</li><li>01:30 - 01:52 - Showcase PC Components</li><li>02:29 - 02:42 - Otro</li></ul>",
 					"date": "Apr 25, 2023"
 				}
 			}

@@ -2,6 +2,8 @@
 @import "../../functions/functions.scss";
 
 .dm-video-media-content {
+  --color-range-primary: var( --post_color_primary );
+
   @include border-radius( var( --dm-border-radius-primary ));
   @include flex-column();
   background-color: rgba( var( --dm-color-gray-rgb ) , 0.1);

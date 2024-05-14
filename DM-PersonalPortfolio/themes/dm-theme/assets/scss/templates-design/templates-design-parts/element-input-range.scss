@@ -1,0 +1,29 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+
+body[java-script="true"] {
+    --color-range-primary: var( --dm-color-primary );
+
+    input[type="range"].progress {
+        background: linear-gradient(to right, var(--color-range-primary) 0%, var(--color-range-primary) 50%, transparent 50%, transparent 100%);
+        border: solid 1px var(--dm-color-white);
+        border-radius: 8px;
+        height: 5px;
+        outline: none;
+        transition: background 450ms ease-in;
+        -webkit-appearance: none;
+
+        &::-webkit-slider-thumb {
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            -webkit-appearance: none;
+            cursor: ew-resize;
+            background: var(--dm-color-white);
+        }
+    }
+}
+
+

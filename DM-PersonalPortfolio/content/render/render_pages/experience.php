@@ -16,9 +16,8 @@ $renderer_structure->header($seo);
 
 $renderer_sections->renderSection('experience-knowledge', "standard");
 $renderer_sections->renderSection('categories');
-$renderer_sections->renderSection('carousel-post-items');
 $renderer_sections->renderSection('portfolio-showcase');
-
+$renderer_sections->renderSection('web-development-description');
 
 
 // Function Footer

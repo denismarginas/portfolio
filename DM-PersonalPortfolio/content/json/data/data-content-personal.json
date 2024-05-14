@@ -48,7 +48,7 @@
 			"page": "workstation",
 			"name": "Personal Workstation",
 			"svg": "workstation",
-			"background-img": "overlay-texture-paper.webp",
+			"background-img": "overlay-texture-textile.webp",
 			"background-img-path": "/design-elements/"
 		},
 		{
@@ -56,7 +56,7 @@
 			"page": "employee-experience",
 			"name": "Employee Experience",
 			"svg": "employ",
-			"background-img": "overlay-texture-paper.webp",
+			"background-img": "overlay-texture-textile.webp",
 			"background-img-path": "/design-elements/"
 		},
 		{
@@ -64,7 +64,7 @@
 			"page": "summary-experience.",
 			"name": "Summary Experience",
 			"svg": "projects",
-			"background-img": "overlay-texture-paper.webp",
+			"background-img": "overlay-texture-textile.webp",
 			"background-img-path": "/design-elements/"
 		},
 		{
@@ -72,7 +72,7 @@
 			"page": "projects",
 			"name": "Projects Experience",
 			"svg": "about-me",
-			"background-img": "overlay-texture-paper.webp",
+			"background-img": "overlay-texture-textile.webp",
 			"background-img-path": "/design-elements/"
 		}
 	],

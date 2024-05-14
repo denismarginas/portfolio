@@ -12,8 +12,8 @@
          url('../fonts/Roboto/robotoregular.ttf') format('truetype'), /* Safari, Android, iOS */
          url('../fonts/Roboto/robotoregular.svg#Roboto') format('svg'); /* Legacy iOS */
 }
-/* Gerth Regular */
 
+/* Gerth Regular */
 @font-face {
     font-family: 'Gerth';
     font-style: normal;
@@ -25,4 +25,13 @@
          url('../fonts/Gerth/gerthregular.woff2') format('woff2'), /* Super Modern Browsers */
          url('../fonts/Gerth/gerthregular.woff') format('woff'), /* Modern Browsers */
          url('../fonts/Gerth/gerthregular.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+/* Matricode Regular */
+@font-face {
+    font-family: 'Matricode';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Matricode/matricode.ttf'); /* IE9 Compat Modes */
+    font-display: swap;
 }

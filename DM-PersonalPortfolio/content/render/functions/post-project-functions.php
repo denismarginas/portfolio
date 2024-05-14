@@ -174,9 +174,14 @@ function renderTitle($title = null) {
 
 
 function renderGalleryWeb($post_data) {
-    $gallery_web_content = "<div id='web' class='dm-gallery-web-content' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.5s'>";
+
+    $gallery_web_content = "<div id='web' class='dm-gallery-web-content' data-motion='transition-fade-0' data-duration='0.5s'>";
 
     if(isset($post_data)) {
+
+        $bg_item_phone = $GLOBALS['urlPath']."content/img/design-elements"."/"."overlay-responsive-layout-phone.webp";
+        $bg_item_desktop = $GLOBALS['urlPath']."content/img/design-elements"."/"."overlay-responsive-layout-desktop.webp";
+
         $gallery_path_web = "web";
         $gallery_path_web_banner = "home";
         $gallery_path_web_desktop = "desktop";
@@ -200,14 +205,14 @@ function renderGalleryWeb($post_data) {
             $gallery_web_content .= '<ul class="dm-web-gallery">';
             foreach ($gallery_web as $image_web) {
                 $image_path = $gallery_web_desktop.$image_web;
-                $gallery_web_content .=  "<li class='dm-web-gallery-item gallery-item-web' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderImage($image_path, true)."<div style='background-image: url(\"".$image_path."\")'></div></li>";
+                $gallery_web_content .=  "<li class='dm-web-gallery-item gallery-item-web' data-motion='transition-fade-0' data-duration='0.3s'>".renderImage($image_path, true)."<div style='background-image: url(\"".$bg_item_desktop."\")'></div></li>";
             }
             $gallery_web_phone = $gallery_web_path.$gallery_path_web_phone."/";
             $gallery_phone = getImagesInFolder($gallery_web_phone );
             if( !empty($gallery_phone) ) {
                 foreach ($gallery_phone as $image_web) {
                     $image_path = $gallery_web_phone.$image_web;
-                    $gallery_web_content .=  "<li class='dm-web-gallery-item gallery-item-phone' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderImage($image_path, true)."<div style='background-image: url(\"".$image_path."\")'></div></li>";
+                    $gallery_web_content .=  "<li class='dm-web-gallery-item gallery-item-phone' data-motion='transition-fade-0' data-duration='0.3s'>".renderImage($image_path, true)."<div style='background-image: url(\"".$bg_item_phone."\")'></div></li>";
                 }
             }
             $gallery_web_content .= '</ul>';
@@ -219,7 +224,7 @@ function renderGalleryWeb($post_data) {
 }
 
 function renderGalleryWebMedia($post_data) {
-    $gallery_media_web_content = "<div id='media-web' class='dm-gallery-web-content' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.5s'>";
+    $gallery_media_web_content = "<div id='media-web' class='dm-gallery-web-content' data-motion='transition-fade-0' data-duration='0.5s'>";
 
     if(isset($post_data)) {
         $gallery_path_web_dir = "web";
@@ -266,7 +271,10 @@ function renderGalleryWebMedia($post_data) {
 }
 
 function renderGalleryWebContent($post_data) {
-    $gallery_web_content = "<div id='web' class='dm-gallery-web-content' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.5s'>";
+    $bg_item_phone = $GLOBALS['urlPath']."content/img/design-elements"."/"."overlay-responsive-layout-phone.webp";
+    $bg_item_desktop = $GLOBALS['urlPath']."content/img/design-elements"."/"."overlay-responsive-layout-desktop.webp";
+
+    $gallery_web_content = "<div id='web-content' class='dm-gallery-web-content' data-motion='transition-fade-0' data-duration='0.5s'>";
 
     if(isset($post_data)) {
         $gallery_path_web = "web";
@@ -295,13 +303,13 @@ function renderGalleryWebContent($post_data) {
             if( !empty($gallery_web) ) {
                 foreach ($gallery_web as $image_web) {
                     $image_path = $gallery_web_content_desktop.$image_web;
-                    $gallery_web_content .=  "<li class='dm-web-gallery-item gallery-item-web' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderImage($image_path, true)."<div style='background-image: url(\"".$image_path."\")'></div></li>";
+                    $gallery_web_content .=  "<li class='dm-web-gallery-item gallery-item-web' data-motion='transition-fade-0' data-duration='0.3s'>".renderImage($image_path, true)."<div style='background-image: url(\"".$bg_item_desktop."\")'></div></li>";
                 }
             }
             if( !empty($gallery_phone) ) {
                 foreach ($gallery_phone as $image_web) {
                     $image_path = $gallery_web_content_phone.$image_web;
-                    $gallery_web_content .=  "<li class='dm-web-gallery-item gallery-item-phone' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderImage($image_path, true)."<div style='background-image: url(\"".$image_path."\")'></div></li>";
+                    $gallery_web_content .=  "<li class='dm-web-gallery-item gallery-item-phone' data-motion='transition-fade-0' data-duration='0.3s'>".renderImage($image_path, true)."<div style='background-image: url(\"".$bg_item_phone."\")'></div></li>";
                 }
             }
             $gallery_web_content .= '</ul>';
@@ -313,7 +321,7 @@ function renderGalleryWebContent($post_data) {
 }
 
 function renderGalleryMedia($post_data) {
-    $gallery_media_content = "<div id='photo' class='dm-gallery-media-content' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.5s'>";
+    $gallery_media_content = "<div id='photo' class='dm-gallery-media-content' data-motion='transition-fade-0' data-duration='0.5s'>";
 
     if(isset($post_data)) {
         $gallery_path_media = "media";
@@ -342,7 +350,7 @@ function renderGalleryMedia($post_data) {
 }
 
 function renderVideoMedia($post_data) {
-    $video_media_content = "<div id='video' class='dm-video-media-content' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.5s'>";
+    $video_media_content = "<div id='video' class='dm-video-media-content' data-motion='transition-fade-0' data-duration='0.5s'>";
 
     if(isset($post_data)) {
         $video_media_path = $GLOBALS['urlPath']."content/vid/".$post_data["post_type"]."/".$post_data["media_path"]."/";
@@ -385,7 +393,7 @@ function renderVideoMedia($post_data) {
     return $video_media_content;
 }
 function renderVideoMediaStrict( $videos = []) {
-    $html_content = "<div id='video' class='dm-video-media-content' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.5s'>";
+    $html_content = "<div id='video' class='dm-video-media-content' data-motion='transition-fade-0' data-duration='0.5s'>";
     if($videos != null) {
         foreach ($videos as $video) {
             $html_content .= renderVideo(MediaPath::getUrlPaths()['page'] . 'content/vid/'.$video["video-path"],

@@ -3,17 +3,7 @@
     "menu-list": [
         {
             "name": "Home",
-            "slug": "home",
-            "submenu": [
-                {
-                    "name": "About Me",
-                    "slug": "about"
-                },
-                {
-                    "name": "Personal Workstation",
-                    "slug": "workstation"
-                }
-            ]
+            "slug": "home"
         },
         {
             "name": "Experience",
@@ -26,10 +16,6 @@
                 {
                     "name": "Educational experience path",
                     "slug": "education-experience"
-                },
-                {
-                    "name": "Summary experience gained",
-                    "slug": "summary-experience"
                 }
             ]
         },

@@ -5,17 +5,17 @@
   @include padding-x();
   overflow: hidden;
   position: relative;
-  background: radial-gradient(#2866c8, #273f65);
-  background-color: #2866c8;
+  background: radial-gradient(var( --workstation-primary-color ), var( --workstation-secondary-color ));
+  background-color: var( --workstation-primary-color );
 
   .dm-background-wave {
-    @include svg-color(#2866c8);
+    @include svg-color(var( --workstation-primary-color ));
     margin-left: calc( -1 * var( --dm-spacing-secondary ) );
     margin-right: calc( -1 * var( --dm-spacing-secondary ) );
 
   }
   > .dm-background-wave-01 {
-    @include svg-color(#2866c8);
+    @include svg-color(var( --workstation-primary-color ));
     margin-left: calc( -1 * var( --dm-spacing-secondary ) );
     margin-right: calc( -1 * var( --dm-spacing-secondary ) );
     margin-bottom: calc( -1 * var( --dm-spacing-secondary ) );
@@ -24,7 +24,7 @@
     display: block;
   }
   > .dm-background-wave-02 {
-    @include svg-color(#273f65);
+    @include svg-color(var( --workstation-secondary-color ));
     margin-left: calc( -1 * var( --dm-spacing-secondary ) );
     margin-right: calc( -1 * var( --dm-spacing-secondary ) );
     margin-bottom: calc( -1 * var( --dm-spacing-secondary ) );
@@ -48,17 +48,24 @@
 
         > li {
           > .video-container {
+            --dm-color-primary: var( --workstation-primary-color );
+            --color-range-primary: var( --workstation-primary-color );
             width: 100%;
           }
         }
       }
       > li {
-        > img {
-          width: auto;
-          max-width: 100%;
-          height: 350px;
+        &:nth-child(2){
+          display: flex;
+          flex-direction: row-reverse;
         }
-
+        > .workstation-img {
+          > img {
+            width: auto;
+            max-width: 100%;
+            height: 350px;
+          }
+        }
         > h1 {
           @include dm-font-heading1();
           --dm-text-heading1-font-size: 100px;
@@ -70,7 +77,8 @@
         > h2 {
           @include dm-font-heading1();
           --dm-text-heading1-font-size: 58px;
-          --dm-text-heading1-font-family: var(--dm-font-family-secondary);
+          --dm-text-heading1-font-family: var( --dm-font-family-secondary );
+          --dm-text-heading1-font-family: var( --workstation-title-font );
           --dm-text-heading1-color: var(--dm-color-white);
         }
         > p {
@@ -98,12 +106,14 @@
     > container {
       > ul {
         > li {
-          > img {
-            width: auto;
-            max-width: 100%;
-            height: 100%;
-            min-height: 650px;
-            max-height: 650px;
+          > .workstation-img {
+            > img {
+              width: auto;
+              max-width: 100%;
+              height: 100%;
+              min-height: 650px;
+              max-height: 650px;
+            }
           }
         }
       }
@@ -112,14 +122,16 @@
       margin-top: calc( -1 * var( --dm-spacing-large ) );
     }
   }
-  @media only screen and (min-width: $screen-desktop-large) {
+  @media only screen and (min-width: $screen-desktop-medium) {
     > container {
       > ul {
         > li {
-          > img {
-            width: auto;
-            max-width: 100%;
-            height: 450px;
+          > .workstation-img {
+            > img {
+              width: auto;
+              max-width: 100%;
+              height: 500px;
+            }
           }
         }
       }
@@ -160,8 +172,10 @@
           > p {
             padding: var(--dm-spacing-primary) 0;
           }
-          > img {
-            height: 250px;
+          > .workstation-img {
+            > img {
+              height: 250px;
+            }
           }
         }
         &.video-ul {
@@ -180,16 +194,22 @@
         > li {
           text-align: center;
 
+          &:nth-child(2){
+            display: flex;
+            flex-direction: column;
+          }
           > h1 {
             --dm-text-heading1-font-size: 40px;
           }
           > h2 {
             --dm-text-heading1-font-size: 20px;
           }
-          > img {
-            padding: 0 var( --dm-spacing-primary );
-            max-width: 100%;
-            height: 340px;
+          > .workstation-img {
+            > img {
+              padding: 0 var( --dm-spacing-primary );
+              max-width: 100%;
+              height: 340px;
+            }
           }
         }
       }
@@ -214,8 +234,10 @@
           > p {
             padding: 0;
           }
-          > img {
-            height: 200px;
+          > .workstation-img {
+            > img {
+              height: 200px;
+            }
           }
         }
       }

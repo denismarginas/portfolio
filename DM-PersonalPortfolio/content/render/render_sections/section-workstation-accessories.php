@@ -22,7 +22,7 @@ $products = $jsonWorkstationData["setups"]["setup 1"]["accessories"];
                 ?>
             </li>
             <li data-motion="transition-fade-0 transition-slideInLeft-0">
-                <h2>PC #1 Accessories</h2>
+                <h2><?php echo $jsonWorkstationData["setups"]["setup 1"]["title"]; ?>   Accessories</h2>
                 <ul>
                     <?php foreach ($products as $key => $product) : ?>
                         <li><?php SVGRenderer::renderSVG('chevron-right'); ?>

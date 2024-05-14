@@ -25,7 +25,7 @@
 [data-list-design="items-divisible-by-3"] {
   grid-template-columns: repeat(3, 1fr) !important;
 
-  @media only screen and (max-width: $screen-phone-medium) {
+  @media only screen and (max-width: $screen-tablet-medium) {
     grid-template-columns: repeat(2, 1fr) !important;
 
     li {
@@ -48,7 +48,7 @@
 [data-list-design="items-divisible-by-4"] {
   grid-template-columns: repeat(4, 1fr) !important;
 
-  @media only screen and (max-width: $screen-phone-large) {
+  @media only screen and (max-width: $screen-tablet-large) {
     grid-template-columns: repeat(12, 1fr) !important;
     li {
       &:nth-child(4n - 0),
@@ -61,8 +61,9 @@
       }
     }
   }
-  @media only screen and (max-width: $screen-phone-medium) {
+  @media only screen and (max-width: $screen-tablet-small) {
     grid-template-columns: repeat(2, 1fr) !important;
+
     li {
       &:nth-child(n) {
         grid-column: span 2 !important;
@@ -99,7 +100,7 @@
       }
     }
   }
-  @media only screen and (max-width: $screen-phone-medium) {
+  @media only screen and (max-width: $screen-tablet-small) {
     grid-template-columns: repeat(2, 1fr) !important;
 
     li {
@@ -123,12 +124,12 @@
 
 }
 [data-list-design="items-divisible-by-6"] {
-  grid-template-columns: repeat(6, 1fr) !important;
+  grid-template-columns: repeat(4, 1fr) !important;
 
   @media only screen and (max-width: $screen-desktop-medium) {
     grid-template-columns: repeat(3, 1fr) !important;
   }
-  @media only screen and (max-width: $screen-phone-medium) {
+  @media only screen and (max-width: $screen-tablet-medium) {
     grid-template-columns: repeat(2, 1fr) !important;
   }
   @media only screen and (max-width: $screen-phone-small) {
@@ -172,7 +173,7 @@
       }
     }
   }
-  @media only screen and (max-width: $screen-phone-medium) {
+  @media only screen and (max-width: $screen-tablet-medium) {
     grid-template-columns: repeat(2, 1fr) !important;
 
     li {
@@ -217,7 +218,7 @@
       grid-column: span 4 !important;
     }
   }
-  @media only screen and (max-width: $screen-tablet-small) {
+  @media only screen and (max-width: $screen-tablet-large) {
     grid-template-columns: repeat(3, 1fr) !important;
 
     li {
@@ -229,7 +230,7 @@
       }
     }
   }
-  @media only screen and (max-width: $screen-phone-medium) {
+  @media only screen and (max-width: $screen-tablet-small) {
     grid-template-columns: repeat(2, 1fr) !important;
 
     li {

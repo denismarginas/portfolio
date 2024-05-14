@@ -36,6 +36,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
      */
 
+    // Progress - Input Range
+    const progressInputs = document.querySelectorAll('.progress');
+
+    progressInputs.forEach(progress => {
+        progress.addEventListener('input', function() {
+            const value = this.value * 100; // Adjust the value to be between 0 and 100
+            this.style.background = `linear-gradient(to right, var(--color-range-primary) 0%, var(--color-range-primary) ${value}%, transparent ${value}%, transparent 100%)`;
+        });
+    });
+
     // Carousel
     const scrollers = document.querySelectorAll(".scroller");
 
@@ -399,7 +409,9 @@ document.addEventListener("DOMContentLoaded", function() {
         playPauseBtn.addEventListener("click", togglePlay);
 
         video.addEventListener("click", togglePlay);
-        //video.addEventListener("touchend", () => {togglePlay();});
+
+        showPlay.addEventListener("click", togglePlay);
+        showPause.addEventListener("click", togglePlay);
 
         function togglePlay() {
             if (video.paused) {
