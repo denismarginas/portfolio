@@ -37,6 +37,18 @@ document.addEventListener("DOMContentLoaded", function() {
     });
    */
 
+    // Scroll Gap Fix
+    function scrollToTarget(targetId) {
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            const headerHeight = 90; // Adjust this value to match the height of your fixed header
+            const offsetTop = targetElement.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({
+                top: offsetTop - headerHeight,
+                behavior: 'smooth'
+            });
+        }
+    }
     // Progress - Input Range
     const progressInputs = document.querySelectorAll('.progress');
 

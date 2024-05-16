@@ -5,7 +5,6 @@
   @include padding-x();
   overflow: hidden;
 
-
   > container {
     > ul {
       @include reset-list();

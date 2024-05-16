@@ -95,10 +95,16 @@ svg {
 }
 
 #page-content {
+  --header-height: 90px;
   display: flex;
   flex-direction: column;
-  padding-top: 90px;
+  padding-top: var( --header-height );
+  scroll-margin-top: var( --header-height );
+    * {
+        scroll-margin-top: var( --header-height );
+    }
 }
+
 container, .container {
   @include container( var( --dm-spacing-large ) );
   @include flex-column();
@@ -108,7 +114,6 @@ container, .container {
 .hide {
   display: none;
 }
-
 
 .theme-dark {
   background-color: var( --dm-background-color-gray-darken );
