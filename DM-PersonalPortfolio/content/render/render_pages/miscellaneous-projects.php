@@ -19,7 +19,7 @@ $categories = ["Web Development Projects", "Visual Media Projects", "Miscellaneo
 echo '<section class="dm-catalog-categories">
     <container>
         <div>
-            <h2 data-motion="transition-fade-0" data-duration="0.7s" data-delay="0.1s">Miscellaneous Projects</h2>
+            <h2 data-motion="transition-fade-0" data-delay="0.1s">Miscellaneous Projects</h2>
         </div>
     </container>
     <!-- Ocean Animation Start -->

@@ -48,7 +48,7 @@ if(!isset($jsonDataResume)) {
                                         <?php endif; ?>
 
                                         <?php if(isset($cv_item['pdf'])) : ?>
-                                            <button data-button="success" class="downloadButton" data-url="<?php echo $GLOBALS['urlPath'] . $cv_item['pdf']; ?>">
+                                            <button data-button="primary" class="downloadButton" data-url="<?php echo $GLOBALS['urlPath'] . $cv_item['pdf']; ?>">
                                                 <?php echo$jsonDataResume["download-button-text"]; ?>
                                             </button>
                                         <?php endif; ?>

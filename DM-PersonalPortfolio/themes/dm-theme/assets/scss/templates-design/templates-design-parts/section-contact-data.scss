@@ -197,13 +197,13 @@ body, body.theme-light {
               }
               > span {
                 > b {
-                  --dm-text-medium-color: var( --dm-color-primary );
+                  --dm-text-medium-color: var( --dm-color-secondary );
                 }
                 > a:hover {
                   --dm-text-medium-color: var( --dm-color-primary );
                 }
                 > span:hover{
-                  background-color: var( --dm-color-highlight-primary );
+                  background-color: rgba( var( --dm-color-highlight-primary-rgb ), 0.4 );
                   --dm-text-medium-color: var( --dm-color-gray-darken );
                 }
               }

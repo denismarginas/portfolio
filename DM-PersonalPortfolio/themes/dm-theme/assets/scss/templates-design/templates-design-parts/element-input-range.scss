@@ -3,7 +3,7 @@
 
 
 body[java-script="true"] {
-    --color-range-primary: var( --dm-color-primary );
+    --color-range-primary: var( --dm-video-color-primary );
 
     input[type="range"].progress {
         background: linear-gradient(to right, var(--color-range-primary) 0%, var(--color-range-primary) 50%, transparent 50%, transparent 100%);

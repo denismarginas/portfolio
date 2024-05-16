@@ -3,7 +3,7 @@
 <section class="dm-catalog-categories">
     <container>
         <div>
-            <h2 data-motion="transition-fade-0 data-duration="0.6s" data-delay="0.1s">Summary Work Experience</h2>
+            <h2 data-motion="transition-fade-0" data-delay="0.1s">Summary Work Experience</h2>
             <h6 data-motion="transition-fade-0" data-duration="0.4s" data-delay="0.2s" style="color: var( --dm-color-white ); text-align: center; font-weight: 500;">2019 - 2022</h6>
         </div>
     </container>

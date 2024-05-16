@@ -17,7 +17,6 @@
 
       > .dm-socials {
         @include border-radius( var( --dm-border-radius-primary ) );
-        background-color: rgba(var(--dm-color-primary-rgb),0.2);
         padding: var( --dm-spacing-secondary );
         display: grid;
         gap: var(--dm-spacing-secondary);
@@ -68,6 +67,7 @@ body, body.theme-light {
     > container {
       > ul {
         > .dm-socials  {
+          background-color: rgba(var( --dm-color-gray-rgb ),0.1);
           > h4 {
             --dm-text-heading3-color: var( --dm-color-gray-darken );
           }
@@ -98,6 +98,7 @@ body.theme-dark {
     > container {
       > ul {
         > .dm-socials  {
+          background-color: rgba(var( --dm-color-gray-lighten-rgb ),0.1);
           > h4 {
             --dm-text-heading3-color: var( --dm-color-white);
           }

@@ -3,32 +3,36 @@
 
 :root {
     /* ---- Colors ---- */
-    --dm-color-primary                      : #5d6977;
-    --dm-color-secondary                    : #1b2431;
-    --dm-link-color                         : var( --dm-color-primary );
-    --dm-color-highlight-primary            : #FFD057;
-    --dm-color-highlight-secondary          : #FFF2D1;
+    --dm-color-primary                      : #16b857;
+    --dm-color-secondary                    : #124827;
+    --dm-color-highlight-primary            : #ceb551;
+    --dm-color-highlight-secondary          : #b38b13;
+
     --dm-color-status-primary               : #399017;
     --dm-color-status-secondary             : #eaaa07;
     --dm-color-status-tertiary              : #b23620;
+    --dm-link-color-primary                 : var( --dm-color-highlight-primary );
+    --dm-link-color-primary-secondary       : var( --dm-color-highlight-secondary );
+    --dm-video-color-primary                : var(--dm-color-highlight-primary);
+    --dm-video-color-secondary              : var( --dm-color-secondary );
 
 
     /* ---- Non-Colors ---- */
     --dm-color-black                        : #000000;
-    --dm-color-white                        : #FFFFFF;
+    --dm-color-white                        : #ffffff;
     --dm-color-gray-lighten                 : #7e7e7e;
     --dm-color-gray                         : #222222;
     --dm-color-gray-darken                  : #141414;
 
     /* ---- Colors RGB---- */
-    --dm-color-primary-rgb                  : #{hexToRGB( #5d6977 )};
-    --dm-color-secondary-rgb                : #{hexToRGB( #1b2431 )};
-    --dm-color-highlight-primary-rgb        : #{hexToRGB( #FFD057 )};
-    --dm-color-highlight-secondary-rgb      : #{hexToRGB( #FFF2D1 )};
+    --dm-color-primary-rgb                  : #{hexToRGB( #16b857 )};
+    --dm-color-secondary-rgb                : #{hexToRGB( #124827 )};
+    --dm-color-highlight-primary-rgb        : #{hexToRGB( #ceb551 )};
+    --dm-color-highlight-secondary-rgb      : #{hexToRGB( #b38b13 )};
 
     /* ---- Non-Colors RGB ---- */
     --dm-color-black-rgb                   : #{hexToRGB( #000000 )};
-    --dm-color-white-rgb                   : #{hexToRGB( #FFFFFF )};
+    --dm-color-white-rgb                   : #{hexToRGB( #ffffff )};
     --dm-color-gray-lighten-rgb            : #{hexToRGB( #7e7e7e )};
     --dm-color-gray-rgb                    : #{hexToRGB( #222222 )};
     --dm-color-gray-darken-rgb             : #{hexToRGB( #141414 )};

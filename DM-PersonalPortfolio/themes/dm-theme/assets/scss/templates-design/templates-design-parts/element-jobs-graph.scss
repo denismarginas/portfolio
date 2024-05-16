@@ -80,8 +80,9 @@
       > .month {
 
         &.worked {
-          background-color: #6fad6f;
-          border-left: 1px solid #6fad6f;
+          background-color: var( --dm-color-status-primary );
+          border-left: 1px solid var( --dm-color-status-primary );
+          opacity: 0.6;
         }
       }
     }

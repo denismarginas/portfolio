@@ -10,7 +10,7 @@
     align-items: center;
     grid-template-columns: 1fr 2fr;
     gap: var( --dm-spacing-primary );
-    background-color: rgba( var( --dm-color-primary-rgb ) , 0.2);
+    background-color: rgba( var( --dm-color-secondary-rgb ) , 0.2);
     padding: var( --dm-spacing-tertiary );
     transition: background-color 0.5s;
 
@@ -205,6 +205,13 @@ body.theme-dark {
         }
         > span {
           --dm-text-small-color: var( --dm-color-white );
+        }
+        > button {
+          &:hover {
+            color: var( --dm-color-white ) !important;
+            background-color: transparent !important;
+            border: 2px solid var( --dm-color-white );
+          }
         }
       }
     }

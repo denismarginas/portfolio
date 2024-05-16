@@ -242,7 +242,7 @@ body, body.theme-light {
           --dm-text-default-color: var( --dm-color-gray );
         }
         > svg {
-          @include svg-color( var( --dm-background-color-secondary ) );
+          @include svg-color( var( --dm-background-color-gray-lighten ) );
         }
       }
     }

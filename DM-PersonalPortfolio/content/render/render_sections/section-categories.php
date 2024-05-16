@@ -10,7 +10,7 @@ if(!isset($jsonGlobalData)) {
 <section class="dm-catalog-categories">
     <container>
         <div>
-            <h2 data-motion="transition-fade-0" data-duration="0.7s" data-delay="0.1s">
+            <h2 data-motion="transition-fade-0">
                 <?php echo $categoriesData["title"]; ?>
             </h2>
             <?php if( isset($categoriesData["categories"]) && !empty($categoriesData["categories"])) : ?>
