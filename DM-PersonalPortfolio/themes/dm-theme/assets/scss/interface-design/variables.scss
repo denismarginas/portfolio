@@ -3,10 +3,10 @@
 
 :root {
     /* ---- Colors ---- */
-    --dm-color-primary                      : #16b857;
-    --dm-color-secondary                    : #124827;
-    --dm-color-highlight-primary            : #ceb551;
-    --dm-color-highlight-secondary          : #b38b13;
+    --dm-color-primary                      : #3f4d71;
+    --dm-color-secondary                    : #242c41;
+    --dm-color-highlight-primary            : #47cbe3;
+    --dm-color-highlight-secondary          : #55758d;
 
     --dm-color-status-primary               : #399017;
     --dm-color-status-secondary             : #eaaa07;
@@ -25,10 +25,10 @@
     --dm-color-gray-darken                  : #141414;
 
     /* ---- Colors RGB---- */
-    --dm-color-primary-rgb                  : #{hexToRGB( #16b857 )};
-    --dm-color-secondary-rgb                : #{hexToRGB( #124827 )};
-    --dm-color-highlight-primary-rgb        : #{hexToRGB( #ceb551 )};
-    --dm-color-highlight-secondary-rgb      : #{hexToRGB( #b38b13 )};
+    --dm-color-primary-rgb                  : #{hexToRGB( #3f4d71 )};
+    --dm-color-secondary-rgb                : #{hexToRGB( #242c41 )};
+    --dm-color-highlight-primary-rgb        : #{hexToRGB( #47cbe3 )};
+    --dm-color-highlight-secondary-rgb      : #{hexToRGB( #55758d )};
 
     /* ---- Non-Colors RGB ---- */
     --dm-color-black-rgb                   : #{hexToRGB( #000000 )};
