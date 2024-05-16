@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     addJavaScriptAttribute();
     transitions();
 
-    // Navbar Function
+    // Navbar Functionality
     var navbarToggle = document.querySelector(".dm-navbar-toggle");
     var navbarToggleSection = document.querySelector(".dm-menu");
 
@@ -18,23 +18,24 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Custom Cursor
     /*
+    // - Have a conflict with 'Navbar Functionality' toggle.
+    // Custom Cursor Functionality
+    document.body.innerHTML += '<div class="cursor"></div>';
     const cursor = document.querySelector('.cursor');
 
     document.addEventListener('mousemove', e => {
         cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
-    })
+    });
 
     document.addEventListener('click', () => {
         cursor.classList.add("expand");
 
         setTimeout(() => {
             cursor.classList.remove("expand");
-        }, 800)
-    })
-
-     */
+        }, 800);
+    });
+   */
 
     // Progress - Input Range
     const progressInputs = document.querySelectorAll('.progress');
@@ -101,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
 
+    // Transitions Animations
     function transitions() {
         setTimeout(() => {
             // Transitions - Motion Animations

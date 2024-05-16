@@ -275,6 +275,31 @@ function renderSlider($items_content, $show_arrows = true, $show_dots = true, $s
     return $html;
 }
 
+function extractYearFromDateString($dateString) {
+        $formats = [
+          'd.m.Y',
+          'm.Y',
+          'Y',
+          'd/m/Y',
+          'm/Y',
+          'd-m-Y',
+          'm-Y',
+          'd m Y',
+          'm Y'
+        ];
+
+        foreach ($formats as $format) {
+
+            $dateTime = DateTime::createFromFormat($format, $dateString);
+
+            if ($dateTime) {
+                return $dateTime->format('Y');
+            }
+        }
+        return "Unable to extract year from the date string.";
+}
+
+
 
 function removeSpaceAndLowercase($string) {
     $string = str_replace(' ', '', $string);
@@ -405,6 +430,34 @@ function getDataJson($jsonFileName, $jsonFilePathFolder = null, $extractRowNumbe
     } else {
         return null;
     }
+}
+function getDataHero($filename) {
+
+    if(!isset($jsonGlobalSeo)) {
+        $jsonGlobalSeo = getDataJson('data-seo', 'data');
+    }
+
+    $hero_title = "Title";
+    $hero_bg_img_path = "placeholder";
+    $hero_bg_img = "img-placeholder.webp";
+
+    if(isset($filename)) {
+        foreach ($jsonGlobalSeo as $item) {
+            if (isset($item['file']) && $filename == $item['file'] && isset($item['hero'])) {
+                $heroData = $item['hero'];
+
+                $hero_title = $heroData['title'];
+                $hero_bg_img_path = $heroData['bg_img_path'];
+                $hero_bg_img = $heroData['bg_img'];
+            }
+        }
+    }
+
+    return [
+      'hero_title' => $hero_title,
+      'hero_bg_img_path' => $hero_bg_img_path,
+      'hero_bg_img' => $hero_bg_img
+    ];
 }
 
 function executePhpInString($string, $params = []) {

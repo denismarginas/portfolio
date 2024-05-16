@@ -1,0 +1,96 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-hero-block {
+  @include flex-center();
+  background-color: var( --dm-background-color-secondary );
+  background-image: linear-gradient( var( --dm-color-secondary ) 20%,
+  var( --dm-color-primary ) 200%);
+  overflow: hidden;
+  position: relative;
+  min-height: 400px;
+  padding: var( --dm-spacing-secondary ) var( --dm-spacing-tertiary );
+
+  &[data-layout="compress-inside"] {
+    min-height: 200px;
+    border-radius: var(--dm-border-radius-secondary);
+  }
+  &[data-layout="compress"] {
+    min-height: 180px;
+  }
+  &[data-layout="standard"] {
+    min-height: 600px;
+  }
+
+  > h2 {
+    @include dm-font-heading1();
+    --dm-text-heading1-color: var( --dm-color-white );
+    --dm-text-heading1-font-family: var( --dm-font-family-secondary );
+    --dm-text-heading1-font-family: 'Space Nation';
+    --dm-text-heading1-font-weight: 500;
+    --dm-text-heading1-font-size: 50px;
+    --dm-text-heading1-line-height: 64px;
+    text-shadow: 3px 3px 10px rgba(var(--dm-color-black-rgb), 0.5);
+    text-align: center;
+    z-index: 1;
+  }
+  > .dm-hero-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.3;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 1;
+      background-image: linear-gradient( rgba(var( --dm-color-secondary-rgb ), 0.5) 20%,
+        rgba(var( --dm-color-primary-rgb ), 0) 200%);
+    }
+  }
+  @media only screen and (max-width: $screen-desktop-medium) {
+    > h2 {
+      --dm-text-heading1-font-size: 40px;
+      --dm-text-heading1-line-height: 52px;
+    }
+    &[data-layout="standard"] {
+      min-height: 500px;
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-large) {
+    > h2 {
+      --dm-text-heading1-font-size: 32px;
+      --dm-text-heading1-line-height: 42px;
+    }
+    &[data-layout="standard"] {
+      min-height: 450px;
+    }
+  }
+  @media only screen and (max-width: $screen-phone-large) {
+    > h2 {
+      --dm-text-heading1-font-size: 26px;
+      --dm-text-heading1-line-height: 32px;
+    }
+    &[data-layout="standard"] {
+      min-height: 400px;
+    }
+  }
+  @media only screen and (max-width: $screen-phone-medium) {
+    > h2 {
+      --dm-text-heading1-font-size: 20px;
+      --dm-text-heading1-line-height: 28px;
+    }
+    &[data-layout="standard"] {
+      min-height: 350px;
+    }
+  }
+}

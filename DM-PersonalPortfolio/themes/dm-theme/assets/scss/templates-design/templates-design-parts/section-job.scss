@@ -456,6 +456,9 @@
     > container {
       > ul {
         > li.dm-job-list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+
           > ul {
             &[data-listing] {
               width: 100% !important;
@@ -546,6 +549,15 @@
 
           > ul {
             max-width: 100%;
+
+            > li {
+              > .company-name {
+                > span {
+                  @include dm-font-small();
+                  --dm-text-small-font-weight: 600;
+                }
+              }
+            }
           }
         }
         > li.dm-job {
@@ -597,6 +609,7 @@
       > ul {
         > li.dm-job-list {
           gap: var(--dm-spacing-primary);
+          grid-template-columns: repeat(1, 1fr);
 
           > ul {
             max-width: 100%;
@@ -654,6 +667,7 @@ body, body.theme-light {
 
                 > span {
                   --dm-text-medium-color: var( --dm-color-gray );
+                  --dm-text-small-color: var( --dm-color-gray );
                 }
               }
             }
@@ -734,6 +748,7 @@ body.theme-dark {
 
                 > span {
                   --dm-text-medium-color: var( --dm-color-white );
+                  --dm-text-small-color: var( --dm-color-white );
                 }
               }
             }

@@ -138,7 +138,9 @@ $device_layout_img_path = $GLOBALS['urlPath'] . "content/img/" ."design-elements
                                     <?php if (isset($post_data["date"]["date_end"]) && !empty($post_data["date"]["date_end"])) : ?>
                                         <p class="dm-post-item-date">
                                             <?php SVGRenderer::renderSVG('clock'); ?>
-                                            <span>Last update: <?php echo $post_data["date"]["date_end"]?></span>
+                                            <span>
+                                                <?php echo extractYearFromDateString($post_data["date"]["date_end"]); ?>
+                                            </span>
                                         </p>
                                     <?php endif; ?>
                                 </div>

@@ -40,26 +40,6 @@
         }
     },
     {
-        "file": "employee-experience",
-        "type": "page",
-        "seo": {
-            "title": "Employee Experience | Denis Marginas",
-            "description": "Explore my professional journey through my employ experience, where I showcase a chronological record of my employment history. Discover insights into my roles, responsibilities, and significant contributions at various companies, along with dates and key attributes.",
-            "keywords": "denis marginas employee experience",
-            "slug": "employee-experience"
-        }
-    },
-    {
-        "file": "search",
-        "type": "page",
-        "seo": {
-            "title": "Search | Denis Marginas",
-            "description": "Search items in the website.",
-            "keywords": "denis marginas search",
-            "slug": "search"
-        }
-    },
-    {
         "file": "experience",
         "type": "page",
         "seo": {
@@ -77,6 +57,46 @@
             "description": "Experience a captivating journey through my professional work from 2019 to 2023 in this short resume of projects.",
             "keywords": "denis marginas summary experience",
             "slug": "summary-experience"
+        }
+    },
+    {
+        "file": "employee-experience",
+        "type": "page",
+        "seo": {
+            "title": "Employee Experience | Denis Marginas",
+            "description": "Explore my professional journey through my employ experience, where I showcase a chronological record of my employment history. Discover insights into my roles, responsibilities, and significant contributions at various companies, along with dates and key attributes.",
+            "keywords": "denis marginas employee experience",
+            "slug": "employee-experience"
+        },
+        "hero": {
+            "title": "Experience as an employee",
+            "bg_img_path": "backgrounds",
+            "bg_img": "bg-employee.webp"
+        }
+    },
+    {
+        "file": "education-experience",
+        "type": "page",
+        "seo": {
+            "title": "Education Experience | Denis Marginas",
+            "description": "Discover my educational journey from high school to university, including courses and diplomas attained along the way.",
+            "keywords": "denis marginas education experience",
+            "slug": "education-experience"
+        },
+        "hero": {
+            "title": "Educational experience path",
+            "bg_img_path": "backgrounds",
+            "bg_img": "bg-education.webp"
+        }
+    },
+    {
+        "file": "search",
+        "type": "page",
+        "seo": {
+            "title": "Search | Denis Marginas",
+            "description": "Search items in the website.",
+            "keywords": "denis marginas search",
+            "slug": "search"
         }
     },
     {
@@ -130,16 +150,6 @@
             "description": "Dive into the world of a full-stack web developer and skilled photo-video editor. Explore the intersection of web development and visual storytelling on Denis Ionut Marginas's insightful blog",
             "keywords": "denis marginas blog activity",
             "slug": "blog-activity"
-        }
-    },
-    {
-        "file": "education-experience",
-        "type": "page",
-        "seo": {
-            "title": "Education Experience | Denis Marginas",
-            "description": "Discover my educational journey from high school to university, including courses and diplomas attained along the way.",
-            "keywords": "denis marginas education experience",
-            "slug": "education-experience"
         }
     }
 ]

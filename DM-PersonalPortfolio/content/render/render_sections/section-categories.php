@@ -61,8 +61,8 @@ if(!isset($jsonGlobalData)) {
 
         </div>
     </container>
-    <!-- Ocean Animation Start -->
 
+    <!-- Ocean Animation Start -->
     <div class="ocean" data-motion="transition-fade-0" data-duration="4s" data-delay="0s">
         <div class="wave"></div>
         <div class="wave"></div>
@@ -70,6 +70,6 @@ if(!isset($jsonGlobalData)) {
         <div class="wave"></div>
         <div class="wave"></div>
     </div>
-
     <!-- Ocean Animation End -->
+
 </section>

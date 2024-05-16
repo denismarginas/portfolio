@@ -4,7 +4,18 @@ $jsonBlogData = getDataJson('data-blog-activity', 'data');
 
 ?>
 
-<section class="dm-blog-posts grid-background-animation">
+<section class="dm-blog-posts grid-background-animation"
+  <?php
+  if (isset($jsonBlogData["blog-colors"])
+    && isset($jsonBlogData["blog-colors"]["blog-color-primary"])
+    && isset($jsonBlogData["blog-colors"]["blog-color-secondary"])) :
+      echo ' style="'.
+        '--blog-color-primary: '.$jsonBlogData["blog-colors"]["blog-color-primary"].';'.
+        '--blog-color-secondary: '.$jsonBlogData["blog-colors"]["blog-color-secondary"].';'.
+        '" ';
+  endif;
+  ?>
+   >
     <container>
         <div class="dm-blog-posts-section">
             <?php $post_nr = 1; ?>

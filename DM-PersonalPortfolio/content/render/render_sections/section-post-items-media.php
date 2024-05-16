@@ -63,9 +63,9 @@ $posts = getDataJson('index-data-posts-projects', 'index');
                                     <?php if (isset($post_data["date"]) && !empty($post_data["date"])) : ?>
                                         <p class="dm-post-item-date">
                                             <?php SVGRenderer::renderSVG('clock'); ?>
-                                            <span><?php echo $post_data["date"]["date_start"]?></span>
-                                            <span> - </span>
-                                            <span><?php echo $post_data["date"]["date_end"]?></span>
+                                            <span>
+                                                <?php echo extractYearFromDateString($post_data["date"]["date_end"]); ?>
+                                            </span>
                                         </p>
                                     <?php endif; ?>
                                 </div>

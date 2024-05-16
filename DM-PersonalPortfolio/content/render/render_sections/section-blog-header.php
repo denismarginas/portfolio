@@ -3,7 +3,18 @@
 $jsonBlogData = getDataJson('data-blog-activity', 'data');
 
 ?>
-<section class="dm-blog-header blurred-lines-animation">
+<section class="blurred-lines-animation dm-blog-header"
+    <?php
+        if (isset($jsonBlogData["blog-colors"])
+          && isset($jsonBlogData["blog-colors"]["blog-color-primary"])
+          && isset($jsonBlogData["blog-colors"]["blog-color-secondary"])) :
+            echo ' style="'.
+              '--blog-color-primary: '.$jsonBlogData["blog-colors"]["blog-color-primary"].';'.
+              '--blog-color-secondary: '.$jsonBlogData["blog-colors"]["blog-color-secondary"].';'.
+              '" ';
+        endif;
+    ?>
+    >
     <container>
         <div class="dm-blog-user">
             <div class="dm-blog-user-wallpaper">
@@ -40,5 +51,14 @@ $jsonBlogData = getDataJson('data-blog-activity', 'data');
             </div>
         </div>
     </container>
+    <div class="light x1"></div>
+    <div class="light x2"></div>
+    <div class="light x3"></div>
+    <div class="light x4"></div>
+    <div class="light x5"></div>
+    <div class="light x6"></div>
+    <div class="light x7"></div>
+    <div class="light x8"></div>
+    <div class="light x9"></div>
 </section>
 

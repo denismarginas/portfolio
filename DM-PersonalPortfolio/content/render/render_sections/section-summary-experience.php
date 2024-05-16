@@ -18,10 +18,10 @@
     <!-- Ocean Animation End -->
 </section>
 <section class="dm-summary-experience grid-background-animation">
-    <div class="dm-experience-header" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
+    <div class="dm-experience-header" data-motion="transition-fade-0" data-duration="1s">
         <h2>1. Web Development Projects</h2>
     </div>
-    <div class="dm-experience-section" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
+    <div class="dm-experience-section" data-motion="transition-fade-0" data-duration="1s">
         <container>
             <ul grid="2/1">
                 <li>
@@ -124,7 +124,7 @@
                     <p>With this PHP script you can export all products with name, url, images, price, stock, description, summary, ean13. It is not optimized for products with combinations. Can be use as a feed with a cron job.</p>
                 </li>
                 <li>
-                    <?php echo renderImage($GLOBALS['urlPath']."content/img/summary-experience/prestsahop-feed-export-1.webp", true);?>
+                    <?php echo renderImage($GLOBALS['urlPath']."content/img/summary-experience/prestashop-feed-export-1.webp", true);?>
                 </li>
             </ul >
             <hr>
@@ -142,10 +142,10 @@
             
         </container>
     </div>
-    <div class="dm-experience-header" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
+    <div class="dm-experience-header" data-motion="transition-fade-0" data-duration="1s">
         <h2>2. Video Editing Projects</h2>
     </div>
-    <div class="dm-experience-section" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
+    <div class="dm-experience-section" data-motion="transition-fade-0" data-duration="1s">
         <container>
         <ul grid="3">
                 <li>
@@ -204,10 +204,10 @@
         </ul>
         </container>
     </div>
-    <div class="dm-experience-header" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
+    <div class="dm-experience-header" data-motion="transition-fade-0" data-duration="1s">
         <h2>3. Photo Editing Projects</h2>
     </div>
-    <div class="dm-experience-section" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
+    <div class="dm-experience-section" data-motion="transition-fade-0" data-duration="1s">
         <container>
         <ul grid="3">
                 <li>
@@ -291,10 +291,10 @@
         </ul>
         </container>
     </div>
-    <div class="dm-experience-header" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
+    <div class="dm-experience-header" data-motion="transition-fade-0" data-duration="1s">
         <h2>4. 3D EDITING</h2>
     </div>
-    <div class="dm-experience-section" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
+    <div class="dm-experience-section" data-motion="transition-fade-0" data-duration="1s">
         <container>
         <ul grid="2/1">
                 <li>

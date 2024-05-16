@@ -260,6 +260,13 @@
           > span {
             font-weight: 600;
           }
+          > a {
+            &:hover {
+              color: var( --post_color_primary );
+              background: var( --post_color_secondary ) ;
+              text-decoration: underline;
+            }
+          }
            > .work-logo {
              @include border-radius( var( --dm-border-radius-secondary ) );
              @include flex-center();

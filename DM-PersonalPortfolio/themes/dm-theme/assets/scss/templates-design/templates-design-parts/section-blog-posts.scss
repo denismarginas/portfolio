@@ -2,6 +2,8 @@
 @import "../../functions/functions.scss";
 
 .dm-blog-posts {
+  --blog-color-primary: var( --dm-color-primary );
+  --blog-color-secondary: var( --dm-color-secondary );
   @include padding-x();
   overflow: hidden;
 
@@ -105,10 +107,12 @@
               @include flex-row;
               @include limit-line-text(1);
               gap: 4px;
-              background-color: var( --dm-color-primary );
+              background-color: var( --blog-color-primary );
               padding: calc( var( --dm-spacing-primary ) / 3 ) calc( var( --dm-spacing-primary )  );
               justify-content: center;
               align-items: center;
+              background-color: var( --blog-color-primary ) !important;
+              border: 2px solid var( --blog-color-primary );
 
               > svg {
                 @include fix-height(12px);
@@ -125,11 +129,12 @@
                 --dm-text-small-line-height: 200%;
               }
               &:hover {
+                background-color: transparent !important;
                 > span {
-                  --dm-text-small-color: var( --dm-color-primary );
+                  --dm-text-small-color: var( --blog-color-primary );
                 }
                 > svg {
-                  @include svg-color(var( --dm-color-primary ));
+                  @include svg-color(var( --blog-color-primary ));
 
                 }
               }
@@ -141,6 +146,9 @@
               height: auto;
             }
             > .video-container {
+              --dm-color-primary: var( --blog-color-primary );
+              --dm-color-secondary: var( --blog-color-secondary );
+              --color-range-primary: var( --blog-color-primary );
               width: 100%;
             }
           }

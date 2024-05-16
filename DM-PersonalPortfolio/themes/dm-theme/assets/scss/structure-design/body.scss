@@ -78,13 +78,7 @@ table td {
     @include dm-font-default();
 }
 
-body[java-script=true] > * {
-  ::selection {
-    background-color: var(--dm-color-gray-darken) !important;
-    color: var(--dm-color-white) !important;
-    -webkit-text-fill-color: var(--dm-color-white) !important;
-  }
-}
+
 
 
 svg {
@@ -115,9 +109,28 @@ container, .container {
   display: none;
 }
 
+
 .theme-dark {
   background-color: var( --dm-background-color-gray-darken );
+
+    &[java-script=true] > * {
+        ::selection {
+            background-color: var(--dm-color-white) !important;
+            color: var(--dm-color-gray-darken)  !important;
+            -webkit-text-fill-color: var(--dm-color-gray-darken)  !important;
+            text-shadow: unset !important;
+        }
+    }
 }
-.theme-light {
+body, .theme-light {
   background-color: var( --dm-background-color-white );
+
+    &[java-script=true] > * {
+        ::selection {
+            background-color: var(--dm-color-gray-darken) !important;
+            color: var(--dm-color-white) !important;
+            -webkit-text-fill-color: var(--dm-color-white) !important;
+            text-shadow: unset !important;
+        }
+    }
 }

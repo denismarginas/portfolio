@@ -2,8 +2,12 @@
 @import "../../functions/functions.scss";
 
 .dm-blog-header {
+  --blog-color-primary: var( --dm-color-primary );
+  --blog-color-secondary: var( --dm-color-secondary );
+
   @include padding-x();
   overflow: hidden;
+  background: radial-gradient(var(--blog-color-primary), var(--blog-color-secondary));
 
   > container {
     @include flex-row();
@@ -81,7 +85,8 @@
             left: 0%;
             width: 100%;
             height: 100%;
-            background-image: linear-gradient( rgba(var(--dm-color-primary-rgb), 0.7) 40%, rgba(var(--dm-color-black-rgb), 1) 70%);
+            background-image: linear-gradient( var( --blog-color-primary ) 40%, var( --dm-color-black ) 70%);
+            opacity: 0.5;
           }
 
           > .dm-blog-user-name {

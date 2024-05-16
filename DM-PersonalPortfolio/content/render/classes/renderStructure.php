@@ -18,6 +18,9 @@ class RendererSections {
         if (file_exists($filePath)) {
             if ($layout !== null) {
             }
+            if (is_array($args)) {
+                extract($args);
+            }
             include $filePath;
         } else {
             echo 'Section not found';
@@ -25,10 +28,14 @@ class RendererSections {
     }
 }
 class RendererElements {
-    public function renderElement($elementName, $layout = null) {
+    public function renderElement($elementName, $layout = null, $args = null) {
         $filePath = 'render_elements/element-' . strtolower(str_replace('_', '-', $elementName)) . '.php';
         if (file_exists($filePath)) {
             if ($layout !== null) {
+
+            }
+            if (is_array($args)) {
+                extract($args);
             }
             include $filePath;
         } else {
@@ -36,6 +43,7 @@ class RendererElements {
         }
     }
 }
+
 
 
 class URLPath {

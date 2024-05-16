@@ -86,7 +86,7 @@
             &.navbar-active {
                 left: 0 !important;
                 z-index: 100;
-                overflow: auto;
+                overflow: hidden;
             }
             > ul {
                 @include reset-list();
@@ -316,6 +316,22 @@
                 }
                 .dm-menu-utility {
                     padding-bottom: var( --dm-spacing-secondary );
+                }
+                &.navbar-active {
+                    align-items: flex-start;
+
+                    > ul {
+                        padding: var(--dm-spacing-medium) var( --dm-spacing-secondary );
+                    }
+                    .dm-menu-utility {
+                        gap: var( --dm-spacing-secondary );
+                        padding: var( --dm-spacing-primary ) var( --dm-spacing-secondary );
+                        flex-wrap: wrap;
+
+                        > .dm-search {
+                            margin-right: 0;
+                        }
+                    }
                 }
             }
         }

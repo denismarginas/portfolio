@@ -29,22 +29,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp-php8.1/htdocs/personal-portfolio/DM-PersonalPortfolio/themes/dm-theme/assets/scss/templates-design/templates-design-parts&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;watcher.settings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/xampp-php8.1/htdocs/personal-portfolio/DM-PersonalPortfolio/content/render/render_sections",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "watcher.settings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\themes\dm-theme\assets\scss\templates-design\templates-design-parts" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render\render_sections" />
+      <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\themes\dm-theme\assets\scss\templates-design\templates-design-parts" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render\render_elements" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\themes\dm-theme\assets\js" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\DM-PersonalPortfolio\content\render\render_index" />
@@ -96,7 +96,8 @@
       <workItem from="1702972929440" duration="2127000" />
       <workItem from="1704271993536" duration="2939000" />
       <workItem from="1706111619379" duration="615000" />
-      <workItem from="1715583632590" duration="22687000" />
+      <workItem from="1715583632590" duration="38391000" />
+      <workItem from="1715758856645" duration="19030000" />
     </task>
     <servers />
   </component>
