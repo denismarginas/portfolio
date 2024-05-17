@@ -54,10 +54,10 @@
             }
             &:hover {
               > svg {
-                @include svg-color( var( --dm-color-primary ) );
+                @include svg-color( var( --dm-link-color-primary ) );
               }
               > span {
-                --dm-text-default-color: var( --dm-color-primary );
+                --dm-text-default-color: var( --dm-link-color-primary );
               }
             }
           }

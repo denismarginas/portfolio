@@ -14,7 +14,7 @@
     height: 0;
 
     &:checked + span {
-      background-color: rgba(var( --dm-color-white-rgb ) , 0.4 );
+      background-color: rgba(var( --dm-color-white-rgb ) , 0.8 );
     }
 
     &:focus + span {

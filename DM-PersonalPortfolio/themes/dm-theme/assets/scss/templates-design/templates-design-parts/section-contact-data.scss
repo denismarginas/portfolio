@@ -75,7 +75,7 @@
               position: absolute;
               top: 50px;
               padding: var( --dm-spacing-primary );
-              border: 1px solid var( --dm-color-highlight-primary );
+              border: 1px solid var( --dm-color-status-secondary );
               width: 100%;
               max-width: 300px;
               z-index: 5;
@@ -87,8 +87,8 @@
                 position: absolute;
                 top: -11px;
                 left: 45%;
-                border-top: var( --dm-color-highlight-primary ) solid 1px;
-                border-left: var( --dm-color-highlight-primary ) solid 1px;
+                border-top: var( --dm-color-status-secondary ) solid 1px;
+                border-left: var( --dm-color-status-secondary ) solid 1px;
                 transform: rotate(45deg);
 
               }
@@ -200,10 +200,10 @@ body, body.theme-light {
                   --dm-text-medium-color: var( --dm-color-secondary );
                 }
                 > a:hover {
-                  --dm-text-medium-color: var( --dm-color-primary );
+                  --dm-text-medium-color: var( --dm-link-color-primary );
                 }
                 > span:hover{
-                  background-color: rgba( var( --dm-color-highlight-primary-rgb ), 0.4 );
+                  background-color: var( --dm-background-color-status-secondary );
                   --dm-text-medium-color: var( --dm-color-gray-darken );
                 }
               }
@@ -245,10 +245,10 @@ body.theme-dark {
                   --dm-text-medium-color: var( --dm-color-white );
                 }
                 > a:hover {
-                  --dm-text-medium-color: var( --dm-color-primary );
+                  --dm-text-medium-color: var( --dm-link-color-primary );
                 }
                 > span:hover{
-                  --dm-text-medium-color: var( --dm-color-highlight-primary );
+                  --dm-text-medium-color: var( --dm-color-status-secondary );
                   background-color: rgba( var( --dm-color-white-rgb ), 0.1);
                 }
               }

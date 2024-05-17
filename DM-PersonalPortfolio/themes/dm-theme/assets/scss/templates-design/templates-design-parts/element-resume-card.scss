@@ -10,7 +10,7 @@
     align-items: center;
     grid-template-columns: 1fr 2fr;
     gap: var( --dm-spacing-primary );
-    background-color: rgba( var( --dm-color-secondary-rgb ) , 0.2);
+    background-color: rgba( var( --dm-color-secondary-rgb ) , 0.15);
     padding: var( --dm-spacing-tertiary );
     transition: background-color 0.5s;
 
@@ -103,7 +103,7 @@
       }
     }
     &:hover {
-        background-color: rgba( var( --dm-color-primary-rgb ) , 0.3);
+        background-color: rgba( var( --dm-color-primary-rgb ) , 0.1);
         transition: background-color 0.5s;
     }
   }

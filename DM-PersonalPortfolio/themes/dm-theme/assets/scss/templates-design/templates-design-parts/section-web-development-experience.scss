@@ -157,7 +157,8 @@ body, body.theme-light {
         > li:first-of-type {
           > h2 {
             > span:last-of-type {
-              background-color: rgba( var( --dm-color-gray-rgb ), 0.1 );
+              background-color: rgba( var( --dm-color-highlight-primary-rgb ), 1 );
+              --dm-text-heading2-color: var(--dm-color-secondary );
             }
           }
           > p {
@@ -175,7 +176,8 @@ body.theme-dark {
         > li:first-of-type {
           > h2 {
             > span:last-of-type {
-              background-color: rgba( var( --dm-color-white-rgb ), 0.9 );
+              background-color: rgba( var( --dm-color-white-rgb ), 1 );
+              --dm-text-heading2-color: var(--dm-color-secondary );
             }
           }
           > p {

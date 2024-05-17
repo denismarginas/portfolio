@@ -83,7 +83,7 @@ body, body.theme-light {
                   --dm-text-medium-color: var( --dm-color-gray-darken );
                 }
               }
-              &:hover {
+              &:hover, &:hover span, &:hover b {
                 --dm-text-medium-color: var( --dm-color-primary );
               }
             }
@@ -108,7 +108,7 @@ body.theme-dark {
                 --dm-text-medium-color: var( --dm-color-white );
               }
               &:hover, &:hover span, &:hover b {
-                --dm-text-medium-color: var( --dm-color-primary );
+                --dm-text-medium-color: var( --dm-color-highlight-primary );
               }
             }
           }

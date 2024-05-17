@@ -99,10 +99,6 @@ svg {
   display: flex;
   flex-direction: column;
   padding-top: var( --header-height );
-  scroll-margin-top: var( --header-height );
-    * {
-        scroll-margin-top: var( --header-height );
-    }
 }
 
 container, .container {
@@ -116,7 +112,8 @@ container, .container {
 }
 
 .theme-dark {
-  background-color: var( --dm-background-color-gray-darken );
+    --dm-link-color-primary: var( --dm-color-highlight-primary );
+    background-color: var( --dm-background-color-gray-darken );
 
     &[java-script=true] > * {
         ::selection {
@@ -128,6 +125,7 @@ container, .container {
     }
 }
 body, .theme-light {
+  --dm-link-color-primary: var( --dm-color-primary );
   background-color: var( --dm-background-color-white );
 
     &[java-script=true] > * {

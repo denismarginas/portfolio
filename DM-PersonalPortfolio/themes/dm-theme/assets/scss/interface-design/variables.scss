@@ -7,13 +7,14 @@
     --dm-color-secondary                    : #242c41;
     --dm-color-highlight-primary            : #47cbe3;
     --dm-color-highlight-secondary          : #55758d;
+    --dm-color-highlight-tertiary           : #d3cd73;
 
     --dm-color-status-primary               : #399017;
     --dm-color-status-secondary             : #eaaa07;
     --dm-color-status-tertiary              : #b23620;
     --dm-link-color-primary                 : var( --dm-color-highlight-primary );
-    --dm-link-color-primary-secondary       : var( --dm-color-highlight-secondary );
-    --dm-video-color-primary                : var(--dm-color-highlight-primary);
+    --dm-link-color-secondary               : var( --dm-color-highlight-secondary );
+    --dm-video-color-primary                : var( --dm-color-highlight-secondary );
     --dm-video-color-secondary              : var( --dm-color-secondary );
 
 
@@ -29,6 +30,7 @@
     --dm-color-secondary-rgb                : #{hexToRGB( #242c41 )};
     --dm-color-highlight-primary-rgb        : #{hexToRGB( #47cbe3 )};
     --dm-color-highlight-secondary-rgb      : #{hexToRGB( #55758d )};
+    --dm-color-highlight-tertiary-rgb       : #{hexToRGB( #d3cd73 )};
 
     /* ---- Non-Colors RGB ---- */
     --dm-color-black-rgb                   : #{hexToRGB( #000000 )};

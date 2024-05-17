@@ -146,6 +146,8 @@
               height: auto;
             }
             > .video-container {
+              --dm-video-color-primary: var( --blog-color-primary );
+              --dm-video-color-secondary: var( --blog-color-secondary );
               --dm-color-primary: var( --blog-color-primary );
               --dm-color-secondary: var( --blog-color-secondary );
               --color-range-primary: var( --blog-color-primary );

@@ -42,12 +42,13 @@
       gap: var(--dm-spacing-large);
       padding: 0 var(--dm-spacing-tertiary);
 
-      &.video-ul {
+      &.video-workstation {
         gap: var(--dm-spacing-secondary);
         grid-template-columns: 1fr 1fr;
 
         > li {
           > .video-container {
+            --dm-video-color-primary: var( --workstation-primary-color );
             --dm-color-primary: var( --workstation-primary-color );
             --color-range-primary: var( --workstation-primary-color );
             width: 100%;
@@ -178,7 +179,7 @@
             }
           }
         }
-        &.video-ul {
+        &.video-workstation {
           grid-template-columns: repeat(1, 1fr);
         }
       }

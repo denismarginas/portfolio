@@ -16,7 +16,7 @@
     }
     &:hover {
       > svg {
-        @include svg-color( var( --dm-color-primary ) );
+        @include svg-color( var( --dm-link-color-primary ) );
       }
     }
   }
@@ -30,7 +30,7 @@
 
       }
       &:hover {
-        background-color: var( --dm-color-secondary );
+        background-color: var( --dm-link-color-primary );
       }
     }
   }
@@ -45,7 +45,7 @@
         @include svg-color( var( --dm-color-white ) );
       }
       &:hover {
-        background-color: var( --dm-color-secondary );
+        background-color: var( --dm-link-color-primary );
       }
     }
   }
@@ -60,7 +60,7 @@
         @include svg-color( var( --dm-color-white ) );
       }
       &:hover {
-        background-color: var( --dm-color-secondary );
+        background-color: var( --dm-link-color-primary );
       }
     }
   }
@@ -104,7 +104,11 @@
         @include svg-color( var( --dm-color-primary ) );
       }
       &:hover {
-        background-color: rgba(var( --dm-color-white-rgb ) , 0.8 );
+        background-color: rgba(var( --dm-color-highlight-primary-rgb ) , 1);
+
+        > svg {
+          @include svg-color( var( --dm-color-gray ) );
+        }
       }
     }
   }
@@ -170,7 +174,7 @@ body, body.theme-light {
         }
         &:hover {
           > svg {
-            @include svg-color( var( --dm-color-primary ) );
+            @include svg-color( var( --dm-link-color-primary ) );
           }
         }
       }
@@ -191,7 +195,7 @@ body.theme-dark {
         }
         &:hover {
           > svg {
-            @include svg-color( var( --dm-color-primary ) );
+            @include svg-color( var( --dm-link-color-secondary ) );
           }
         }
       }

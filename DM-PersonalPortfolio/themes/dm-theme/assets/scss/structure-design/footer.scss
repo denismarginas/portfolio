@@ -36,10 +36,10 @@
 
             &:hover {
               > span {
-                --dm-text-small-color: var( --dm-color-primary );
+                --dm-text-small-color: var( --dm-color-highlight-primary );
               }
               > svg {
-                @include svg-color( var( --dm-color-primary ) );
+                @include svg-color( var( --dm-color-highlight-primary ) );
               }
             }
             > span {
