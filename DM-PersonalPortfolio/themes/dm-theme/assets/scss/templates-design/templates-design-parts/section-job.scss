@@ -29,7 +29,7 @@
           @include reset-list();
           overflow: hidden;
           z-index: 1;
-          border: 1px solid rgba(var( --dm-color-white-rgb ), 0.2);
+          border: 1px solid rgba(var( --dm-color-white-rgb ), 0.3);
 
           > li {
             @include flex-center();

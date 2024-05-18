@@ -13,6 +13,9 @@ if(!isset($hero_bg_img_path)) {
 if(!isset($hero_bg_img)) {
     $hero_bg_img = "img-placeholder.webp";
 }
+if(!isset($layout)) {
+    $layout = "standard";
+}
 
 ?>
 
@@ -34,20 +37,22 @@ if(!isset($hero_bg_img)) {
         <?php echo $hero_title; ?>
     </h2>
 
-    <!-- Circle Animation Start -->
-    <ul class="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-    <!-- Circle Animation End -->
+    <?php if($layout == "compress") : ?>
+        <!-- Circle Animation Start -->
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <!-- Circle Animation End -->
+    <?php endif; ?>
 
 </div>
 

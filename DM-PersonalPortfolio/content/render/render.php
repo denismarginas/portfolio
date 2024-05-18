@@ -2,10 +2,12 @@
 $log = [];
 $log[] = "Loading rendering files...";
 
+// render_index - should be used twice before and after content and pages render.
 $directories = [
     __DIR__ . '/classes/*.php',
     __DIR__ . '/functions/*.php',
     __DIR__ . '/config/*.php',
+    __DIR__ . '/render_index/*.php',
     __DIR__ . '/render_bulk/*.php',
     __DIR__ . '/render_index/*.php',
 ];

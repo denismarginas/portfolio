@@ -5559,8 +5559,8 @@
             ],
             "employer": "Mentor Marketing Experts",
             "date": {
-                "date_start": "02.2024",
-                "date_end": "02.2024"
+                "date_start": "01.2024",
+                "date_end": "01.2024"
             },
             "tags": [
                 "web", "content-web"
@@ -5634,10 +5634,6 @@
                 {
                     "name": "Unlimited Elements for Elementor Premium",
                     "svg": "unlimited-elements"
-                },
-                {
-                    "name": "Dynamic Conditions",
-                    "svg": "dynamic-conditions"
                 },
                 {
                     "name": "Advanced Custom Fields",
@@ -5883,6 +5879,791 @@
                 "post_color_secondary": "#ffffff",
                 "post_color_background": "#15816d",
                 "post_color_text_on_background": "#ffffff"
+            }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-troni",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "troni",
+            "title": "Troni - LP",
+            "logo": "logo/logo.png",
+            "logo_path": "troni",
+            "logo_type": "png",
+            "description": "A landing page was created to capture interest and drive conversions, utilizing Figma for design and Elementor for content creation. This project involves the design and content creation for a website. Utilizing Figma for design the content with Elementor, alongside other plugins enhancing Elementor's capabilities, I crafted the website's visual and textual elements.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "troni.io", 
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_languages": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "jQuery",
+                    "svg": "jquery"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                },
+                {
+                    "name": "Unlimited Elements for Elementor Premium",
+                    "svg": "unlimited-elements"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "landing page",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual",
+                "Teamwork"
+            ],
+            "project_companies": [
+                "Mentor Marketing Experts"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "03.2024",
+                "date_end": "03.2024"
+            },
+            "tags": [
+                "web"
+            ],
+            "colors": {
+                "post_color_primary": "#001f46",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#001f46",
+                "post_color_text_on_background": "#ffffff"
+            }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-mscardetailing",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "mscardetailing",
+            "title": "MS Car Detailing",
+            "logo": "logo/logo.png",
+            "logo_path": "mscardetailing",
+            "logo_type": "png",
+            "description": "This project involves the design and content creation for a website. Utilizing Figma for design the content with Elementor, alongside other plugins enhancing Elementor's capabilities, I crafted the website's visual and textual elements.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "cardetailing.co.il",
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_languages": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "jQuery",
+                    "svg": "jquery"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                },
+                {
+                    "name": "Unlimited Elements for Elementor Premium",
+                    "svg": "unlimited-elements"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual",
+                "Teamwork"
+            ],
+            "project_companies": [
+                "Mentor Marketing Experts"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "03.2024",
+                "date_end": "04.2024"
+            },
+            "tags": [
+                "web", "content-web"
+            ],
+            "colors": {
+                "post_color_primary": "#f7c108",
+                "post_color_secondary": "#000000",
+                "post_color_background": "#101010",
+                "post_color_text_on_background": "#ffffff"
+            }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-gla",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "gla",
+            "title": "GLA Israel",
+            "logo": "logo/logo.png",
+            "logo_path": "gla",
+            "logo_type": "png",
+            "description": "Project wich involves designing and developing a website. Utilizing Figma for design the content with Elementor, alongside other plugins enhancing Elementor's capabilities, I crafted the website's visual and textual elements.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "gla.co.il",
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_languages": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "jQuery",
+                    "svg": "jquery"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                },
+                {
+                    "name": "Unlimited Elements for Elementor Premium",
+                    "svg": "unlimited-elements"
+                },
+                {
+                    "name": "Dynamic Conditions",
+                    "svg": "dynamic-conditions"
+                },
+                {
+                    "name": "Advanced Custom Fields",
+                    "svg": "acf"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual",
+                "Teamwork"
+            ],
+            "project_companies": [
+                "Mentor Marketing Experts"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "04.2024",
+                "date_end": "04.2024"
+            },
+            "tags": [
+                "web", "content-web"
+            ],
+            "colors": {
+                "post_color_primary": "#8cc379",
+                "post_color_secondary": "#222325",
+                "post_color_background": "#222325",
+                "post_color_text_on_background": "#ffffff"
+            }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-earldom",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "earldom",
+            "title": "Earldom",
+            "logo": "logo/logo.png",
+            "logo_path": "earldom",
+            "logo_type": "png",
+            "description": "Tasked with designing and developing a website, including content, functionalities, and futuristic design. Utilizing Figma for design the content with Elementor, alongside other plugins enhancing Elementor's capabilities, I crafted the website's visual and textual elements. The landing page features a dynamic slider presentation designed for large screens, reminiscent of PowerPoint. Custom navigation buttons and jQuery enhancements ensure smooth transitions between slides. Plus, seamlessly scroll through the content using your mouse. This website was a significant challenge, given its futuristic design and the necessity for many elements to function in a specific manner. To achieve this, numerous functionalities were implemented using plugins, Elementor loops, custom codes, and a plethora of custom CSS scripts.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "earldom.co.il",
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_languages": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "jQuery",
+                    "svg": "jquery"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                },
+                {
+                    "name": "Unlimited Elements for Elementor Premium",
+                    "svg": "unlimited-elements"
+                },
+                {
+                    "name": "Dynamic Conditions",
+                    "svg": "dynamic-conditions"
+                },
+                {
+                    "name": "Advanced Custom Fields",
+                    "svg": "acf"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual",
+                "Teamwork"
+            ],
+            "project_companies": [
+                "Mentor Marketing Experts"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "03.2024",
+                "date_end": "04.2024"
+            },
+            "tags": [
+                "web", "content-web"
+            ],
+            "colors": {
+                "post_color_primary": "#cbac78",
+                "post_color_secondary": "#262626",
+                "post_color_background": "#ffffff",
+                "post_color_text_on_background": "#262626"
+            }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-sosdeepcleaning",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "sosdeepcleaning",
+            "title": "SOS Deep Cleaning",
+            "logo": "logo/logo.png",
+            "logo_path": "sosdeepcleaning",
+            "logo_type": "png",
+            "description": "Project wich involves remaking a Wordpress website, was finished in 3-4 days. Utilizing a previous website as a reference for designing the content with Elementor, alongside other plugins enhancing Elementor's capabilities, I crafted the website's visual and textual elements.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "sosdeepcleaning.com",
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_languages": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "jQuery",
+                    "svg": "jquery"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                },
+                {
+                    "name": "Unlimited Elements for Elementor Premium",
+                    "svg": "unlimited-elements"
+                },
+                {
+                    "name": "Advanced Custom Fields",
+                    "svg": "acf"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual",
+                "Teamwork"
+            ],
+            "project_companies": [
+                "Mentor Marketing Experts"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "04.2024",
+                "date_end": "04.2024"
+            },
+            "tags": [
+                "web", "content-web"
+            ],
+            "colors": {
+                "post_color_primary": "#fd484e",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#ffffff",
+                "post_color_text_on_background": "#1c1c1c"
+            }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-familyfirst",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "familyfirst",
+            "title": "Family First",
+            "logo": "logo/logo.png",
+            "logo_path": "familyfirst",
+            "logo_type": "png",
+            "description": "An online shop where customers can purchase subscriptions to various types of kids' camps (like summer camps and English camps). To make this possible, users must create an account and add their children to their account to access the products. Once the user has added at least one child, they can access product pages for the camps to register their children. They will need to select a child from their list of children. This selection process was made possible with custom PHP and jQuery code, along with the WooCommerce Product Add-Ons Ultimate plugin. Additionally, complex voucher conditions were created using plugins, which apply automatically but only under certain conditions related to the number of camp subscription weeks and the user's list of children. Project wich involves designing and developing a website. Utilizing Figma for design the content with Elementor, alongside other plugins enhancing Elementor's capabilities, I crafted the website's visual and textual elements.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "family-first.co.il",
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_languages": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "jQuery",
+                    "svg": "jquery"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                },
+                {
+                    "name": "Unlimited Elements for Elementor Premium",
+                    "svg": "unlimited-elements"
+                },
+                {
+                    "name": "Dynamic Elementor",
+                    "svg": "dynamic-elemntor"
+                },
+                {
+                    "name": "Dynamic Conditions",
+                    "svg": "dynamic-conditions"
+                },
+                {
+                    "name": "Advanced Custom Fields",
+                    "svg": "acf"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "online shop",
+                "web content",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual",
+                "Teamwork"
+            ],
+            "project_companies": [
+                "Mentor Marketing Experts"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "03.2024",
+                "date_end": "05.2024"
+            },
+            "tags": [
+                "web", "content-web"
+            ],
+            "colors": {
+                "post_color_primary": "#00bcf1",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#ffffff",
+                "post_color_text_on_background": "#004397"
+            }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-symbol-buildcon",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "symbol-buildcon",
+            "title": "Symbol Buildcon - LP",
+            "logo": "logo/logo.png",
+            "logo_path": "symbol-buildcon",
+            "logo_type": "png",
+            "description": "A landing page was created to capture interest and drive conversions, utilizing PSD template for design and Elementor for content creation. This project involves the design and content creation for a website. Utilizing Figma for design the content with Elementor, alongside other plugins enhancing Elementor's capabilities, I crafted the website's visual and textual elements.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "symbol.vc/buildcon/", 
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_languages": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "jQuery",
+                    "svg": "jquery"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "landing page",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual",
+                "Teamwork"
+            ],
+            "project_companies": [
+                "Mentor Marketing Experts"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "05.2024",
+                "date_end": "05.2024"
+            },
+            "tags": [
+                "web"
+            ],
+            "colors": {
+                "post_color_primary": "#6d3c6b",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#6d3c6b",
+                "post_color_text_on_background": "#ffffff"
+            }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-ryllo",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "ryllo",
+            "title": "Ryllo - LP",
+            "logo": "logo/logo.png",
+            "logo_path": "ryllo",
+            "logo_type": "png",
+            "description": "A landing page was created to capture interest and drive conversions, utilizing PSD template for design and Elementor for content creation. This project involves the design and content creation for a website. Utilizing Figma for design the content with Elementor, alongside other plugins enhancing Elementor's capabilities, I crafted the website's visual and textual elements.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "ryllo.io", 
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_languages": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "jQuery",
+                    "svg": "jquery"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                },
+                {
+                    "name": "Unlimited Elements for Elementor Premium",
+                    "svg": "unlimited-elements"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "landing page",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual",
+                "Teamwork"
+            ],
+            "project_companies": [
+                "Mentor Marketing Experts"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "05.2024",
+                "date_end": "05.2024"
+            },
+            "tags": [
+                "web"
+            ],
+            "colors": {
+                "post_color_primary": "#232b3f",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#ffffff",
+                "post_color_text_on_background": "#232b3f"
             }
         },
         "post_content": [

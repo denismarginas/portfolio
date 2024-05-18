@@ -102,10 +102,10 @@
           position: absolute;
           top: 60%;
           bottom: -30%;
-          left: -30%;
-          right: -30%;
+          left: -150%;
+          right: -150%;
           opacity: 1;
-          filter: blur(25px);
+          filter: blur(20px);
         }
         &:before {
           content: '';
