@@ -15,8 +15,8 @@
     ?>
 
 
-    <link rel="stylesheet" href="<?php echo $GLOBALS['urlPath']; ?>themes/dm-theme/assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo $GLOBALS['urlPath']; ?>themes/dm-theme/assets/css/style.min.css">
     <link rel="icon" type="image/x-icon" href="<?php echo $GLOBALS['urlPath']; ?>content/img/favicon/favicon.ico">
-    <script src="<?php echo $GLOBALS['urlPath']; ?>themes/dm-theme/assets/js/theme_script.js"></script>
+    <script src="<?php echo $GLOBALS['urlPath']; ?>themes/dm-theme/assets/js/theme_script.min.js"></script>
 </head>
 

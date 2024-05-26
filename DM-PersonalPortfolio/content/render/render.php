@@ -19,8 +19,12 @@ foreach ($directories as $directory) {
 }
 $log[] = "Loaded rendering files.";
 
-$htaccessFilePath = __DIR__ . '/../../.htaccess';
 
+
+// -- RENDER VIEW START --
+// - htaccess DISABLED
+$htaccessFilePath = __DIR__ . '/../../.htaccess';
+/*
 if (file_exists($htaccessFilePath)) {
     unlink($htaccessFilePath);
     //$log[] = "Deleted existing .htaccess file" . PHP_EOL;
@@ -44,9 +48,10 @@ RewriteRule ^([^/]+)/?$ $1.html [L]
 ";
 
 // Write .htaccess content to file
-//file_put_contents($htaccessFilePath, $htaccessContent);
+file_put_contents($htaccessFilePath, $htaccessContent);
 $log[] = "Generated .htaccess file" . PHP_EOL;
-
+*/
+// -- RENDER VIEW END --
 
 
 
@@ -76,7 +81,7 @@ foreach ($jsonFiles as $jsonFile) {
 
 
 
-// -- RENDER VIEW --
+// -- RENDER VIEW START --
 
 // Show debug
 
@@ -100,4 +105,5 @@ foreach ($log as $log_item) {
 echo "</ul></div>";
 echo "</section>";
 
+// -- RENDER VIEW END --
 ?>

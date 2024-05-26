@@ -3,6 +3,7 @@
 
 .dm-hero-block {
   @include flex-center();
+  flex-direction: column;
   background-color: var( --dm-background-color-secondary );
   background-image: linear-gradient( var( --dm-color-secondary ) 20%,
   var( --dm-color-primary ) 200%);
@@ -10,13 +11,29 @@
   position: relative;
   min-height: 400px;
   padding: var( --dm-spacing-secondary ) var( --dm-spacing-tertiary );
+  gap: var( --dm-spacing-secondary );
 
   &[data-layout="compress-inside"] {
     min-height: 200px;
     border-radius: var(--dm-border-radius-secondary);
   }
   &[data-layout="compress"] {
+    min-height: 170px;
+  }
+  &[data-layout="compress-squares"] {
     min-height: 180px;
+  }
+  &[data-layout="compress-waves"] {
+    min-height: 300px;
+
+    > .dm-hero-bg {
+      &:after {
+        background-image: linear-gradient(
+                        rgba(var(--dm-color-secondary-rgb), 0.8) 20%,
+                        rgba(var(--dm-color-primary-rgb), 0.6) 200%
+        );
+      }
+    }
   }
   &[data-layout="standard"] {
     min-height: 600px;
@@ -34,6 +51,11 @@
     text-align: center;
     z-index: 1;
   }
+  > p {
+    @include dm-font-default();
+    --dm-text-default-color: var( --dm-color-white );
+    z-index: 1;
+  }
   > .dm-hero-bg {
     background-size: cover;
     background-position: center;
@@ -44,6 +66,7 @@
     left: 0;
     right: 0;
     opacity: 0.3;
+    z-index: 0;
 
     &:after {
       content: "";

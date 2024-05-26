@@ -45,10 +45,10 @@
             position: absolute;
             top: 60%;
             bottom: -20%;
-            left: -10%;
-            right: -10%;
+            left: -20%;
+            right: -20%;
             opacity: 1;
-            filter: blur(25px);
+            filter: blur(18px);
           }
           &:before {
             content: '';
@@ -106,10 +106,10 @@
             position: absolute;
             top: 60%;
             bottom: -30%;
-            left: -30%;
-            right: -30%;
+            left: -130%;
+            right: -130%;
             opacity: 1;
-            filter: blur(25px);
+            filter: blur(18px);
           }
           &:before {
             content: '';

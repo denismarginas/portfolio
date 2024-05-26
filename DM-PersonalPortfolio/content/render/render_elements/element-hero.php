@@ -33,11 +33,20 @@ if(!isset($layout)) {
         </div>
     <?php endif; ?>
 
-    <h2 data-motion="transition-fade-0 transition-blur-0 transition-slideInBottom-0" data-duration="0.5s" data-delay="0.2s">
-        <?php echo $hero_title; ?>
-    </h2>
+    <?php if(isset($hero_title) and !empty($hero_title)): ?>
+        <h2 data-motion="transition-fade-0 transition-blur-0 transition-slideInBottom-0" data-duration="0.5s" data-delay="0.2s">
+            <?php echo $hero_title; ?>
+        </h2>
+    <?php endif;?>
 
-    <?php if($layout == "compress") : ?>
+    <?php if(isset($hero_description) and !empty($hero_description)): ?>
+        <p data-motion="transition-fade-0 transition-blur-0 transition-slideInBottom-0" data-duration="0.6s" data-delay="0.25s">
+            <?php echo $hero_description; ?>
+        </p>
+    <?php endif;?>
+
+
+    <?php if($layout == "compress-squares") : ?>
         <!-- Circle Animation Start -->
         <ul class="circles">
             <li></li>
@@ -52,6 +61,18 @@ if(!isset($layout)) {
             <li></li>
         </ul>
         <!-- Circle Animation End -->
+    <?php endif; ?>
+
+    <?php if($layout == "compress-waves") : ?>
+        <!-- Ocean Animation Start -->
+
+        <div class="ocean" data-motion="transition-fade-0" data-duration="4s" data-delay="0s">
+            <div class="wave" style="margin-top: 65px;"></div>
+            <div class="wave" style="margin-top: 70px;"></div>
+            <div class="wave" style="margin-top: 80px;"></div>
+        </div>
+
+        <!-- Ocean Animation End -->
     <?php endif; ?>
 
 </div>

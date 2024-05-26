@@ -9,7 +9,7 @@
       display: grid;
       align-items: center;
       grid-template-columns: 1fr 1.2fr;
-      gap: var( --dm-spacing-tertiary );
+      gap: var( --dm-spacing-medium );
 
       > li {
         &:first-of-type {
@@ -70,6 +70,7 @@
     > container {
       > ul {
         grid-template-columns: 1fr 1.5fr;
+        gap: var( --dm-spacing-tertiary );
 
         > li {
           &:last-of-type {
@@ -105,11 +106,13 @@
     > container {
       > ul {
         grid-template-columns: repeat(1, 1fr);
+        gap: var( --dm-spacing-secondary );
 
         > li {
           &:first-of-type {
             > ul {
               grid-template-columns: repeat(1, 1fr);
+              gap: var( --dm-spacing-primary );
             }
           }
         }

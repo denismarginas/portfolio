@@ -6,12 +6,23 @@ if(!isset($jsonGlobalData)) {
 if(!isset($posts)) {
     $posts = getDataJson('index-data-posts-projects', 'index');
 }
+if(!isset($carousel_direction)) {
+    $carousel_direction = "right";
+}
+if(!isset($carousel_speed)) {
+    $carousel_speed = "slow";
+}
+if(!isset($offset_items)) {
+    $offset_items = 0;
+}
+if(!isset($max_items)) {
+    $max_items = 8;
+}
 
 usort($posts, "dateStartPostSortDesc");
 usort($posts, "personalTypePostProjectSortAsc");
 
-$nr_item = 1;
-$max_items = 8;
+
 
 $device_layout_laptop_img = "device-layout-laptop.webp";
 $device_layout_phone_img = "device-layout-phone.webp";
@@ -23,9 +34,12 @@ $device_layout_img_path = $GLOBALS['urlPath'] . "content/img/" ."design-elements
 
 
 <?php if(count($posts) >= 1 && !empty($posts)) : ?>
-    <div class="scroller" data-direction="left" data-speed="slow">
+    <div class="scroller" data-direction="<?php echo $carousel_direction ?>" data-speed="<?php echo $carousel_speed ?>" data-motion="transition-fade-0">
         <ul class="carousel-list-devices scroller__inner">
-            <?php foreach ($posts as $post) :
+            <?php
+            $nr_item = 1;
+
+            foreach ($posts as $post) :
                 $have_web_desktop_image = false;
                 $have_web_phone_image = false;
 
@@ -65,7 +79,8 @@ $device_layout_img_path = $GLOBALS['urlPath'] . "content/img/" ."design-elements
                     !in_array("Visual Media Projects", $post["post_data"]["categories"]) &&
                     !in_array("Miscellaneous Projects", $post["post_data"]["categories"]) &&
                     $have_web_desktop_image != false &&
-                    $max_items > $nr_item
+                    $max_items > $nr_item &&
+                    $nr_item > $offset_items
                 ) :
                     ?>
 

@@ -12,21 +12,28 @@ $educations = getDataJson('data-education','data');
             $educations_list = [];
             $show_all_educations = true;
 
-            foreach ($educations as $education) {
-                if ($education["display"] == "true") {
+            foreach ($educations as $education) :
+                if ($education["display"] == "true") :
                     $educations_list[] = $education;
-                }
-                else {
+                else :
                     $show_all_educations = false;
-                }
-            }
+                endif;
+            endforeach;
             ?>
 
             <?php if( count($educations_list) > 0 ) : ?>
                 <li class="dm-job-list" data-motion="transition-fade-0 data-duration="0.6s">
                     <?php foreach ($educations_list as $education) : ?>
-                        <ul data-listing="<?php echo count($educations_list); ?>" <?php echo isset($education["img_bg_color"]) ? 'style="background-color:'.$education["img_bg_color"].';border-width: 0px;"' : ''; ?>>
-                            <li>
+                        <ul data-listing="<?php echo count($educations_list); ?>"
+                            <?php echo isset($education["img_bg_color"]) ? 'style="background-color:'.$education["img_bg_color"].';border-width: 0px;"' : ''; ?>
+                        >
+                            <li
+                                <?php if( $education["img_bg"] == "dark" ) :
+                                    echo "data-layout='dark' data-animation='shine'";
+                                elseif( $education["img_bg"] == "light" ) :
+                                    echo "data-layout='light' data-animation='shine-gray'";
+                                endif; ?>
+                            >
                                 <a href="#<?php echo strtolower(str_replace(" ", "-", $education["name"])); ?>" class="work-logo" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.3s">
                                     <?php echo renderImage($GLOBALS['urlPath'].$education["img"]); ?>
                                 </a>
@@ -60,12 +67,15 @@ $educations = getDataJson('data-education','data');
                 <li class="dm-job" id="<?php echo strtolower(str_replace(" ", "-", $education["name"])); ?>" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.6s" data-delay="<?php echo $j*0.10; ?>s">
                     <ul>
                         <li class="work-summary"
+
                             <?php if( $education["img_bg"] == "dark" ) :
                                     echo "data-layout='dark'";
                             elseif( $education["img_bg"] == "light" ) :
                                     echo "data-layout='light'";
                             endif; ?>
+
                             data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1.1s">
+
                             <div class="work-logo" <?php echo isset($education["img_bg_color"]) ? 'style="background-color:'.$education["img_bg_color"].'"' : ''; ?> data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1.3s">
                                 <?php echo renderImage($GLOBALS['urlPath'].$education["img"]); ?>
                             </div>
@@ -73,11 +83,17 @@ $educations = getDataJson('data-education','data');
                                 <?php echo $education["name"]; ?>
                             </h2>
                             <ul class="work-dates" data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="1s">
-                                <li><?php echo $education["date_start"]; ?></li>
-                                <li><?php echo $education["date_end"]; ?></li>
+                                <li>
+                                    <?php echo $education["date_start"]; ?>
+                                </li>
+                                <li>
+                                    <?php echo $education["date_end"]; ?>
+                                </li>
                             </ul>
+
                         </li>
                         <li class="work-details" data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.7s">
+
                             <h3 class="work-function">
                                 <span data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="1s">Profession:</span>
                                 <?php foreach ($education["profession"] as $profession) : ?>
@@ -86,6 +102,7 @@ $educations = getDataJson('data-education','data');
                                     </span>
                                 <?php endforeach; ?>
                             </h3>
+
                             <ul class="work-attributes">
                                 <?php $i = 1; foreach ($education["attributes"]["list"] as $attributes) : ?>
                                     <li class="work-attribute" data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="<?php echo $i*0.2; ?>s" data-delay="<?php echo $i*0.12; ?>s">
@@ -96,6 +113,7 @@ $educations = getDataJson('data-education','data');
                                     </li>
                                 <?php $i++; endforeach; ?>
                             </ul>
+
                             <ul class="work-data">
                                 <?php if (strtotime($education["date_start"]) !== false && strtotime($education["date_end"]) !== false) :
                                     $startDate = DateTime::createFromFormat('d.m.Y', $education["date_start"]);
@@ -247,7 +265,6 @@ $educations = getDataJson('data-education','data');
                     <p id="unspecified">Note: Please be aware that this is not an completed list, and there may be additional education experiences not mentioned here.</p>
                 </li>
             <?php  endif; ?>
-
 
         </ul>
     </container>

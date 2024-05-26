@@ -13,7 +13,9 @@ $renderer_sections = new RendererSections();
 // Function Header
 $renderer_structure->header($seo);
 
+
 $renderer_sections->renderSection('summary-experience');
+
 
 // Function Footer
 $renderer_structure->footer();

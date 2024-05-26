@@ -30,16 +30,6 @@
         }
     },
     {
-        "file": "catalog",
-        "type": "page",
-        "seo": {
-            "title": "Catalog | Denis Marginas",
-            "description": "Showcase of projects I have created or I was involved, featuring designs and functionality of media content and websites.",
-            "keywords": "denis marginas catalog",
-            "slug": "catalog"
-        }
-    },
-    {
         "file": "experience",
         "type": "page",
         "seo": {
@@ -57,6 +47,12 @@
             "description": "Experience a captivating journey through my professional work from 2019 to 2023 in this short resume of projects.",
             "keywords": "denis marginas summary experience",
             "slug": "summary-experience"
+        },
+        "hero": {
+            "title": "Summary Work Experience",
+            "description": "2019 - 2022",
+            "bg_img_path": "thumbnails",
+            "bg_img": "workpreview-summary-thumbnail.webp"
         }
     },
     {
@@ -110,6 +106,21 @@
         }
     },
     {
+        "file": "projects",
+        "type": "page",
+        "seo": {
+            "title": "Projects | Denis Marginas",
+            "description": "Showcase of projects I have created or I was involved, featuring designs and functionality of media content and websites.",
+            "keywords": "denis marginas projects",
+            "slug": "projects"
+        },
+        "hero": {
+            "title": "Projects",
+            "bg_img_path": "backgrounds",
+            "bg_img": "bg-projects.webp"
+        }
+    },
+    {
         "file": "web-development-projects",
         "type": "page",
         "category": "projects",
@@ -118,6 +129,11 @@
             "description": "Category: Web Development Projects. Showcase of websites and online shops I have created, featuring engaging designs and seamless functionality.",
             "keywords": "denis marginas web development projects",
             "slug": "web-development-projects"
+        },
+        "hero": {
+            "title": "Web Development Projects",
+            "bg_img_path": "categories",
+            "bg_img": "category-photo-web-development-photo.webp"
         }
     },
     {
@@ -129,6 +145,11 @@
             "description": "Category: Visual Media Projects. Collection of visually captivating projects showcasing my expertise in graphic design, photo editing, and video production.",
             "keywords": "denis marginas visual media projects",
             "slug": "visual-media-projects"
+        },
+        "hero": {
+            "title": "Visual Media Projects",
+            "bg_img_path": "categories",
+            "bg_img": "category-photo-visual-media.webp"
         }
     },
     {
@@ -140,6 +161,11 @@
             "description": "Category: Miscellaneous Projects. Assortment of non-profit initiatives and personal passion projects, reflecting my diverse range of creative endeavors.",
             "keywords": "denis marginas miscellaneous projects",
             "slug": "miscellaneous-projects"
+        },
+        "hero": {
+            "title": "Miscellaneous Projects",
+            "bg_img_path": "categories",
+            "bg_img": "category-photo-miscellaneous.webp"
         }
     },
     {

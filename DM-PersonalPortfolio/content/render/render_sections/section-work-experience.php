@@ -1,4 +1,4 @@
-<section class="dm-web-development-experience grid-background-animation">
+<section class="dm-work-experience grid-background-animation">
     <container>
         <ul>
             <li>

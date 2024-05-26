@@ -6,20 +6,32 @@ if(!isset($jsonGlobalData)) {
 if(!isset($posts)) {
     $posts = getDataJson('index-data-posts-projects', 'index');
 }
-
+if(!isset($carousel_direction)) {
+    $carousel_direction = "right";
+}
+if(!isset($carousel_speed)) {
+    $carousel_speed = "slow";
+}
+if(!isset($offset_items)) {
+    $offset_items = 0;
+}
+if(!isset($max_items)) {
+    $max_items = 12;
+}
 usort($posts, "dateStartPostSortDesc");
 usort($posts, "personalTypePostProjectSortAsc");
 
-$nr_item = 1;
-$max_items = 12;
+
 ?>
 
 
 <?php if(count($posts) >= 1 && !empty($posts)) : ?>
 
-    <div class="scroller" data-direction="right" data-speed="slow">
+    <div class="scroller" data-direction="<?php echo $carousel_direction ?>" data-speed="<?php echo $carousel_speed ?>" data-motion="transition-fade-0">
         <ul class="carousel-list scroller__inner">
             <?php
+            $nr_item = 1;
+
             foreach ($posts as $post) :
                 $post_path = pathinfo($post["file"], PATHINFO_FILENAME) . $jsonGlobalData["page-slug-extension"];
                 $post_data = $post["post_data"];
@@ -29,7 +41,8 @@ $max_items = 12;
                     //!in_array("Web Development Projects", $post["post_data"]["categories"]) &&
                     in_array("Visual Media Projects", $post["post_data"]["categories"]) &&
                     !in_array("Miscellaneous Projects", $post["post_data"]["categories"]) &&
-                    $max_items >= $nr_item
+                    $max_items >= $nr_item &&
+                    $nr_item > $offset_items
                 ) :
                     ?>
 

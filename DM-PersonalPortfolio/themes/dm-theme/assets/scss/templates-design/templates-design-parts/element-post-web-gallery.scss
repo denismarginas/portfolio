@@ -35,7 +35,6 @@
       @include flex-center();
       @include border-radius( var( --dm-border-radius-primary ));
       flex-direction: column;
-      /* justify-content: start; */
       overflow: hidden;
       position: relative;
       background-color: var( --post_color_primary );
@@ -45,10 +44,11 @@
         z-index: 1;
         width: 100%;
         height: auto;
-        /* max-height: 100%; */
-        /* object-fit: cover; */
-        /* object-position: top; */
+        max-height: 100%;
+        object-fit: cover;
+        object-position: top;
         transition: width 0.4s, max-width 0.4s;
+        filter: blur(0.5px);
       }
       > div {
         position: absolute;
@@ -61,11 +61,6 @@
         transition: width 0.3s, height 0.3s;
       }
       &:hover {
-        > img {
-          width: 105%;
-          max-width: 105%;
-          transition: width 0.4s, max-width 0.4s;
-        }
         > div {
           height: 140%;
           width: 140%;
@@ -77,6 +72,7 @@
           width: auto;
           max-height: 90%;
           height: 100%;
+          filter: unset;
         }
       }
     }

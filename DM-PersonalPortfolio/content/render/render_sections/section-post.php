@@ -152,12 +152,12 @@ if (!isset($post_data)) {
                     </p>
                 <?php endif; ?>
 
-                <?php if (isset($post_data["web_languages"]) && !empty($post_data["web_languages"])) : ?>
-                    <p class="post-website-languages">
-                        <span>Languages:</span>
-                        <?php for ( $i = 0; $i<count($post_data["web_languages"]); $i++ ) :
-                            echo $post_data["web_languages"][$i]["name"];
-                            if( $i < count($post_data["web_languages"]) - 1 ) :
+                <?php if (isset($post_data["web_technology"]) && !empty($post_data["web_technology"])) : ?>
+                    <p class="post-website-technology">
+                        <span>Technology: </span>
+                        <?php for ( $i = 0; $i<count($post_data["web_technology"]); $i++ ) :
+                            echo $post_data["web_technology"][$i]["name"];
+                            if( $i < count($post_data["web_technology"]) - 1 ) :
                                 echo ", ";
                             endif;
                         endfor; ?>
@@ -180,8 +180,8 @@ if (!isset($post_data)) {
                 if (isset($post_data["web_platform"]) && is_array($post_data["web_platform"])) {
                   $icons_list = array_merge($icons_list, $post_data["web_platform"]);
                 }
-                if (isset($post_data["web_languages"]) && is_array($post_data["web_languages"])) {
-                  $icons_list = array_merge($icons_list, $post_data["web_languages"]);
+                if (isset($post_data["web_technology"]) && is_array($post_data["web_technology"])) {
+                  $icons_list = array_merge($icons_list, $post_data["web_technology"]);
                 }
                 if (isset($post_data["web_plugins"]) && is_array($post_data["web_plugins"])) {
                   $icons_list = array_merge($icons_list, $post_data["web_plugins"]);

@@ -266,7 +266,7 @@
             }
             .dm-menu {
                 position: fixed;
-                width: 400px;
+                width: 280px;
                 height: 100vh;
                 top: 0;
                 left: -450px;
@@ -337,14 +337,6 @@
         }
 
     }
-    @media only screen and (max-width: $screen-phone-large) {
-        > section {
-            .dm-menu {
-                width: 100%;
-                left: -110%;
-            }
-        }
-    }
     @media only screen and (max-width: $screen-phone-medium) {
         > section {
             .dm-navbar-toggle {
@@ -369,6 +361,8 @@
                 }
             }
             .dm-menu {
+                width: 100%;
+                left: -110%;
                 .dm-menu-utility {
                     gap: calc( var( --dm-spacing-primary ) / 3 );
                 }

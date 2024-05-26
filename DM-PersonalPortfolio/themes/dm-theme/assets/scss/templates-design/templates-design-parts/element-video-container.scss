@@ -207,6 +207,7 @@ video {
 
   &:hover {
     .volume-slider {
+      cursor: pointer;
       width: 100px;
       transform: scaleX(1);
     }

@@ -16,7 +16,7 @@
       @include flex-column();
       @include reset-list();
       @include border-radius( var( --dm-border-radius-primary ) );
-      background-color: var( --dm-color-primary );
+      background-color: var( --dm-color-secondary );
       padding: var( --dm-spacing-secondary );
       gap: var( --dm-spacing-primary );
 

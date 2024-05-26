@@ -86,34 +86,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-
-    // Image Absolute Scroll Animation Bottom
-    function scrollAnimation(element, minBottom, maxBottom) {
-        var scrollPosition = window.scrollY || window.pageYOffset;
-        var elementRect = element.getBoundingClientRect();
-        var viewportHeight = window.innerHeight;
-        var minScroll = elementRect.top - (elementRect.height - viewportHeight) + minBottom;
-        //var maxScroll = elementRect.top + maxBottom;
-        var bottomValue = Math.max(Math.min(scrollPosition - minScroll, maxBottom), minBottom);
-        element.style.bottom = bottomValue + "px";
-    }
-    window.onload = function() {
-        var scrollElements = document.querySelectorAll('[data-animation="dm-scroll"]');
-        if (scrollElements.length > 0) {
-            window.addEventListener("scroll", function() {
-                scrollElements.forEach(function(element) {
-                    if (element.classList.contains('dm-tablet-responsive')) {
-                        scrollAnimation(element, -10, 13);
-                    } else if (element.classList.contains('dm-phone-responsive')) {
-                        scrollAnimation(element, -20, 10);
-                    } else {
-                        scrollAnimation(element, -300, 0);
-                    }
-                });
-            });
-        }
-    };
-
     // Transitions Animations
     function transitions() {
         setTimeout(() => {
@@ -646,7 +618,7 @@ function contact_form_exec() {
     if (!statusMessageSpan) {
         statusMessageSpan = document.createElement('span');
         statusMessageSpan.id = 'dm-send-status';
-        statusMessageSpan.innerHTML = 'The form is inactive. Use the <a target="_blank" href="https://forms.gle/vTHeLVkc1TwXCxBJA"><b>Google Form:</b> forms.gle/vTHeLVkc1TwXCxBJA</a>';
+        statusMessageSpan.innerHTML = 'The form is inactive. Use the Google Form instead.';
         buttonDiv.appendChild(statusMessageSpan);
     }
     return false;

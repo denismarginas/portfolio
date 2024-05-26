@@ -1,7 +1,7 @@
 @import "../../functions/mixins.scss";
 @import "../../functions/functions.scss";
 
-.dm-web-development-experience {
+.dm-work-experience {
   @include padding-x();
   overflow: hidden;
 
@@ -30,7 +30,7 @@
               padding: var( --dm-spacing-primary ) var( --dm-spacing-tertiary );
 
               &:first-of-type {
-                background-color: var( --dm-color-primary );
+                background-color: rgba( var( --dm-color-primary-rgb ), 0.9 );
                 --dm-text-heading1-color: var( --dm-color-white );
               }
             }
@@ -151,14 +151,14 @@
 }
 
 body, body.theme-light {
-  .dm-web-development-experience {
+  .dm-work-experience {
     > container {
       > ul {
         > li:first-of-type {
           > h2 {
             > span:last-of-type {
-              background-color: rgba( var( --dm-color-highlight-primary-rgb ), 1 );
-              --dm-text-heading2-color: var(--dm-color-secondary );
+              background-color: rgba( var( --dm-color-gray-darken-rgb ), 0.9 );
+              color: var( --dm-color-white );
             }
           }
           > p {
@@ -169,15 +169,16 @@ body, body.theme-light {
     }
   }
 }
+
 body.theme-dark {
-  .dm-web-development-experience {
+  .dm-work-experience {
     > container {
       > ul {
         > li:first-of-type {
           > h2 {
             > span:last-of-type {
               background-color: rgba( var( --dm-color-white-rgb ), 1 );
-              --dm-text-heading2-color: var(--dm-color-secondary );
+              color: var(--dm-color-secondary );
             }
           }
           > p {

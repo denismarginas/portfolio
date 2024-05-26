@@ -440,6 +440,7 @@ function getDataHero($filename) {
     $hero_title = "Title";
     $hero_bg_img_path = "placeholder";
     $hero_bg_img = "img-placeholder.webp";
+    $hero_description = "";
 
     if(isset($filename)) {
         foreach ($jsonGlobalSeo as $item) {
@@ -449,6 +450,9 @@ function getDataHero($filename) {
                 $hero_title = $heroData['title'];
                 $hero_bg_img_path = $heroData['bg_img_path'];
                 $hero_bg_img = $heroData['bg_img'];
+                if(isset($heroData['description'])) {
+                    $hero_description = $heroData['description'];
+                }
             }
         }
     }
@@ -456,7 +460,8 @@ function getDataHero($filename) {
     return [
       'hero_title' => $hero_title,
       'hero_bg_img_path' => $hero_bg_img_path,
-      'hero_bg_img' => $hero_bg_img
+      'hero_bg_img' => $hero_bg_img,
+      'hero_description' => $hero_description
     ];
 }
 
