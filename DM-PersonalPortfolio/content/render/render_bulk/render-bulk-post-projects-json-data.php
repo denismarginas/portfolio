@@ -7,7 +7,6 @@ $postJsonPath = "data-posts-projects";
 $urlPath = URLPath::getUrlPaths()['post'];
 $GLOBALS['urlPath'] = $urlPath;
 
-
 $posts = getDataJson($postJsonPath, 'data');
 
 if(count($posts) > 0) {
@@ -16,10 +15,7 @@ if(count($posts) > 0) {
 
         try {
             $postHtmlFileName = $post["file"] . '.html';
-
-
             $postHtmlContent = render_post_template_content($post);
-
             $postFilePath = $postPath . $postHtmlFileName;
             file_put_contents($postFilePath, $postHtmlContent);
 
@@ -77,9 +73,5 @@ function render_post_template_content($post) {
 
     return $content;
 }
-
-
-
-
 
 ?>

@@ -60,7 +60,6 @@ function getVideosInFolder($path) {
     return $videos;
 }
 
-
 function getFilesInFolder($path) {
     $files = [];
     if (is_dir($path)) {
@@ -80,7 +79,6 @@ function getFilesInFolder($path) {
     return $files;
 }
 
-
 function getDirectoriesInFolder($path) {
     $directories = [];
     if (is_dir($path)) {
@@ -99,7 +97,6 @@ function getDirectoriesInFolder($path) {
 
     return $directories;
 }
-
 
 function countFilesInFolder($folderPath) {
     $fileCount = 0;
@@ -151,7 +148,6 @@ function listDesign($nr) {
     }
 }
 
-
 function renderImage($src, $popup = false, $class = false, $lazyLoad = true, $additionalAttributes = array()) {
     $imageInfo = getimagesize($src);
 
@@ -183,7 +179,6 @@ function renderImage($src, $popup = false, $class = false, $lazyLoad = true, $ad
 
     return $html;
 }
-
 
 function renderVideo($src, $thumbnail = NULL, $thumbnail_bg = NULL) {
     $html = '<div class="video-container paused" data-volume-level="high">';
@@ -299,8 +294,6 @@ function extractYearFromDateString($dateString) {
         return "Unable to extract year from the date string.";
 }
 
-
-
 function removeSpaceAndLowercase($string) {
     $string = str_replace(' ', '', $string);
     return strtolower($string);
@@ -314,7 +307,6 @@ function changeSpaceWithHyphenAndLowercase($string) {
 function getFirstCharacters($string, $n) {
     return substr($string, 0, $n);
 }
-
 
 function seoImplicitFields() {
     $google_site_verification = "Not set.";
@@ -396,8 +388,6 @@ function getURL() {
     return $url;
 }
 
-
-
 function getDataJson($jsonFileName, $jsonFilePathFolder = null, $extractRowNumber = null) {
     if ($jsonFileName !== null) {
 
@@ -431,6 +421,7 @@ function getDataJson($jsonFileName, $jsonFilePathFolder = null, $extractRowNumbe
         return null;
     }
 }
+
 function getDataHero($filename) {
 
     if(!isset($jsonGlobalSeo)) {
@@ -477,5 +468,27 @@ function executePhpInString($string, $params = []) {
     return $output;
 }
 
+function calculateDaysWorkedInMonth($currentDate, $jobs) {
+    $daysWorked = 0;
 
+    foreach ($jobs as $job) {
+        if ($job["display"] != "true") {
+            continue;
+        }
+
+        $jobStartDate = DateTime::createFromFormat('d.m.Y', $job['date_start']);
+        $jobEndDate = ($job['date_end'] === 'In progress') ? new DateTime() : DateTime::createFromFormat('d.m.Y', $job['date_end']);
+
+        // Check if there is an overlap between the job and the current month
+        if (
+            $currentDate >= $jobStartDate &&
+            $currentDate <= min($jobEndDate, clone $currentDate->modify('last day of this month'))
+        ) {
+            $interval = $jobStartDate->diff(min($jobEndDate, clone $currentDate->modify('last day of this month')));
+            $daysWorked += $interval->days + 1; // Include the end day
+        }
+    }
+
+    return $daysWorked;
+}
 ?>

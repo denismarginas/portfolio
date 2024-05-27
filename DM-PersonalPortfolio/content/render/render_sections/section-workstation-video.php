@@ -1,7 +1,12 @@
 <?php
-$jsonWorkstationData = getDataJson('data-workstation', 'data');
+
+if(!isset($jsonWorkstationData)) :
+    $jsonWorkstationData = getDataJson('data-workstation', 'data');
+endif;
+
 $path = $jsonWorkstationData["setups"]["setup 1"]["path-vid"];
 $videoData = $jsonWorkstationData["setups"]["setup 1"]["videos"]["full-setup"];
+
 ?>
 
 <section class="dm-workstation-header"

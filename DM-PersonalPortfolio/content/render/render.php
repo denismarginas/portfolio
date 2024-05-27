@@ -83,7 +83,6 @@ foreach ($jsonFiles as $jsonFile) {
 
 // -- RENDER VIEW START --
 
-// Show debug
 
 $seo = [
     "title" => "Render | Denis Marginas",
@@ -94,7 +93,7 @@ $seo = [
 
 @include("render_structure/head.php");
 
-
+// Show debug
 $renderer_sections = new RendererSections();
 $renderer_sections->renderSection('debug');
 echo "<section class='dm-debug'>";

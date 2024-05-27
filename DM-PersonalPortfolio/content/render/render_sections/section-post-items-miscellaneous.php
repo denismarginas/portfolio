@@ -1,9 +1,12 @@
 <?php
 
-if(!isset($jsonGlobalData)) {
+if(!isset($jsonGlobalData)) :
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
-}
-$posts = getDataJson('index-data-posts-projects', 'index');
+endif;
+
+if(!isset($posts)) :
+    $posts = getDataJson('index-data-posts-projects', 'index');
+endif;
 
 ?>
 
@@ -11,30 +14,41 @@ $posts = getDataJson('index-data-posts-projects', 'index');
     <container>
         <ul>
             <?php foreach ($posts as $post) : ?>
+
                 <?php
                 $post_path = pathinfo($post["file"], PATHINFO_FILENAME).$jsonGlobalData["page-slug-extension"];
                 $post_data = $post["post_data"];
                 ?>
+
                 <?php if(isset($post_data["display"] ) && $post_data["display"] == "enable" && isset($post_data["exclude_from_search"] ) != "true" ) : ?>
+
                     <?php if( in_array("Miscellaneous Projects", $post_data["categories"]) ) : ?>
+
                         <li class="dm-post-item" data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.4s" >
+
                             <?php if( strtoupper($post_data["colors"]["post_color_background"]) == "#FFFFFF") :
                                 $shine_animation = 'data-animation="shine-gray"';
                             else :
                                 $shine_animation = 'data-animation="shine"';
                             endif; ?>
+
                             <a class="dm-post-item-logo" href="<?php echo $post_path; ?>" <?php echo $shine_animation; ?>
                                style="background-color: <?php echo $post_data["colors"]["post_color_background"]; ?>;">
                                 <?php echo  renderLogoPost($post_data); ?>
                             </a>
+
                             <div class="dm-post-item-details">
                                 <ul class="dm-post-item-categories">
                                     <?php foreach ($post_data["categories"] as $post_category) : ?>
+
                                         <?php if( $post_category == "Miscellaneous Projects" ) : ?>
                                             <li>
-                                                <span><?php echo $post_category;?></span>
+                                                <span>
+                                                    <?php echo $post_category;?>
+                                                    /span>
                                             </li>
                                         <?php endif; ?>
+
                                     <?php endforeach; ?>
                                 </ul>
                                 <a class="dm-post-item-title" href="<?php echo $post_path; ?>">
@@ -44,7 +58,9 @@ $posts = getDataJson('index-data-posts-projects', 'index');
                                     <?php echo getFirstCharacters($post_data["description"], 130); ?>
                                 </p>
                             </div>
+
                         </li>
+
                     <?php endif; ?>
                 <?php endif;?>
             <?php endforeach; ?>

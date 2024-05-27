@@ -16,6 +16,7 @@ $renderer_structure->header($seo);
 
 $renderer_sections->renderSection('search');
 
+
 // Function Footer
 $renderer_structure->footer();
 

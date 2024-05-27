@@ -1,30 +1,34 @@
 <?php
-$jobs = getDataJson('data-jobs', 'data');
+
+if(!isset($jobs)) :
+    $jobs = getDataJson('data-jobs', 'data');
+endif;
+
 
 // Initialize variables
 $earliestStartDate = null;
 $latestEndDate = null;
 
 // Loop through jobs to find earliest start date and latest end date
-foreach ($jobs as $job) {
+foreach ($jobs as $job) :
     // Skip jobs with "display" set to false
-    if ($job["display"] != "true") {
+    if ($job["display"] != "true") :
         continue;
-    }
+    endif;
 
     $startDate = DateTime::createFromFormat('d.m.Y', $job['date_start']);
     $endDate = ($job['date_end'] === 'In progress') ? new DateTime() : DateTime::createFromFormat('d.m.Y', $job['date_end']);
 
     // Check for earliest start date
-    if ($earliestStartDate === null || $startDate < $earliestStartDate) {
+    if ($earliestStartDate === null || $startDate < $earliestStartDate) :
         $earliestStartDate = $startDate;
-    }
+    endif;
 
     // Check for latest end date
-    if ($latestEndDate === null || $endDate > $latestEndDate) {
+    if ($latestEndDate === null || $endDate > $latestEndDate) :
         $latestEndDate = $endDate;
-    }
-}
+    endif;
+endforeach;
 
 // Format dates for display
 $earliestStartDateDisplay = ($earliestStartDate !== null) ? $earliestStartDate->format('m.Y') : 'N/A';
@@ -37,83 +41,59 @@ $latestEndDateDisplay = ($latestEndDate !== null) ? $latestEndDate->format('m.Y'
     <div class="work-timeline">
         <?php
 
-        if ($earliestStartDate !== null && $latestEndDate !== null) {
+        if ($earliestStartDate !== null && $latestEndDate !== null) :
             $startYear = (int)$earliestStartDate->format('Y');
             $endYear = (int)$latestEndDate->format('Y');
 
 
-            for ($currentYear = $startYear; $currentYear <= $endYear; $currentYear++) {
+            for ($currentYear = $startYear; $currentYear <= $endYear; $currentYear++) :
                 echo '<div class="year">';
                 echo '<span>' . $currentYear . '</span>';
 
                 // Loop through each month in the current year
-                for ($month = 1; $month <= 12; $month++) {
+                for ($month = 1; $month <= 12; $month++) :
                     $currentDate = new DateTime("$currentYear-$month-01");
 
                     echo '<div class="month">';
                     echo '<span>' . $currentDate->format('M.Y') . '</span>';
                     echo '</div>';
-                }
+                endfor;
 
                 echo '</div>';
-            }
-        }
+            endfor;
+        endif;
         ?>
     </div>
 
     <div class="jobs-timeline">
         <?php
 
-        if ($earliestStartDate !== null && $latestEndDate !== null) {
+        if ($earliestStartDate !== null && $latestEndDate !== null) :
             $startYear = (int)$earliestStartDate->format('Y');
             $endYear = (int)$latestEndDate->format('Y');
 
-            for ($currentYear = $startYear; $currentYear <= $endYear; $currentYear++) {
+            for ($currentYear = $startYear; $currentYear <= $endYear; $currentYear++) :
                 echo '<div class="year">';
                 echo '<span>' . $currentYear . '</span>';
 
                 // Loop through each month in the current year
-                for ($month = 1; $month <= 12; $month++) {
+                for ($month = 1; $month <= 12; $month++) :
                     $currentDate = new DateTime("$currentYear-$month-01");
                     $daysWorkedInMonth = calculateDaysWorkedInMonth($currentDate, $jobs);
 
-                    if ($daysWorkedInMonth >= 28) {
+                    if ($daysWorkedInMonth >= 28) :
                         echo '<div class="month worked">';
-                    } else {
+                    else :
                         echo '<div class="month">';
-                    }
+                    endif;
 
                     echo '<span>' . $currentDate->format('M.Y') . '</span>';
                     echo '</div>';
-                }
+                endfor;
 
                 echo '</div>';
-            }
-        }
-
-        function calculateDaysWorkedInMonth($currentDate, $jobs) {
-            $daysWorked = 0;
-
-            foreach ($jobs as $job) {
-                if ($job["display"] != "true") {
-                    continue;
-                }
-
-                $jobStartDate = DateTime::createFromFormat('d.m.Y', $job['date_start']);
-                $jobEndDate = ($job['date_end'] === 'In progress') ? new DateTime() : DateTime::createFromFormat('d.m.Y', $job['date_end']);
-
-                // Check if there is an overlap between the job and the current month
-                if (
-                    $currentDate >= $jobStartDate &&
-                    $currentDate <= min($jobEndDate, clone $currentDate->modify('last day of this month'))
-                ) {
-                    $interval = $jobStartDate->diff(min($jobEndDate, clone $currentDate->modify('last day of this month')));
-                    $daysWorked += $interval->days + 1; // Include the end day
-                }
-            }
-
-            return $daysWorked;
-        }
+            endfor;
+        endif;
         ?>
     </div>
 
@@ -124,11 +104,11 @@ $latestEndDateDisplay = ($latestEndDate !== null) ? $latestEndDate->format('m.Y'
 
     $job_periods = array();
 
-    foreach ($jobs as $job) {
+    foreach ($jobs as $job) :
         // Skip jobs where "display" is not equal to "true"
-        if ($job["display"] != "true") {
+        if ($job["display"] != "true") :
             continue;
-        }
+        endif;
 
         $startDate = DateTime::createFromFormat('d.m.Y', $job["date_start"]);
         $endDate = ($job["date_end"] === "In progress" || $job["date_end"] === "Working")
@@ -144,24 +124,24 @@ $latestEndDateDisplay = ($latestEndDate !== null) ? $latestEndDate->format('m.Y'
 
         // Store the job period
         $job_periods[] = array('start' => $startDate, 'end' => $endDate);
-    }
+    endforeach;
 
     // Correct total timeline by handling overlapping periods
-    foreach ($job_periods as $key => $period) {
+    foreach ($job_periods as $key => $period) :
         $total_timeline_interval = $period['start']->diff($period['end']);
         $total_timeline_days += $total_timeline_interval->days;
 
         // Check for overlapping periods
-        for ($i = $key + 1; $i < count($job_periods); $i++) {
+        for ($i = $key + 1; $i < count($job_periods); $i++) :
             $overlap_start = max($period['start'], $job_periods[$i]['start']);
             $overlap_end = min($period['end'], $job_periods[$i]['end']);
 
-            if ($overlap_start < $overlap_end) {
+            if ($overlap_start < $overlap_end) :
                 $overlap_interval = $overlap_start->diff($overlap_end);
                 $total_timeline_days -= $overlap_interval->days;
-            }
-        }
-    }
+            endif;
+        endfor;
+    endforeach;
 
     // Convert total timeline days to months and years
     $total_timeline_years = floor($total_timeline_days / 365);
@@ -191,6 +171,5 @@ $latestEndDateDisplay = ($latestEndDate !== null) ? $latestEndDate->format('m.Y'
             <span> months</span>
         </p>
     <?php endif; ?>
-
 
 </div>

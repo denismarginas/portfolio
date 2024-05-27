@@ -1,11 +1,14 @@
 <?php
 
-$jsonBlogData = getDataJson('data-blog-activity', 'data');
+if(!isset($jsonBlogData)) :
+    $jsonBlogData = getDataJson('data-blog-activity', 'data');
+endif;
 
 ?>
 
 <section class="dm-blog-posts grid-background-animation"
   <?php
+
   if (isset($jsonBlogData["blog-colors"])
     && isset($jsonBlogData["blog-colors"]["blog-color-primary"])
     && isset($jsonBlogData["blog-colors"]["blog-color-secondary"])) :
@@ -14,6 +17,7 @@ $jsonBlogData = getDataJson('data-blog-activity', 'data');
         '--blog-color-secondary: '.$jsonBlogData["blog-colors"]["blog-color-secondary"].';'.
         '" ';
   endif;
+
   ?>
    >
     <container>
@@ -58,7 +62,6 @@ $jsonBlogData = getDataJson('data-blog-activity', 'data');
                             <?php endif; ?>
 
                         <?php endif; ?>
-
 
                     <?php if(isset($post["sections"])) :
                         foreach ($post["sections"] as $section) : ?>

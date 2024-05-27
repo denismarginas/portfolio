@@ -1,9 +1,12 @@
 <?php
 
-if(!isset($jsonGlobalData)) {
+if(!isset($jsonGlobalData)) :
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
-}
-$posts = getDataJson('index-data-posts-projects', 'index');
+endif;
+
+if(!isset($posts)) :
+    $posts = getDataJson('index-data-posts-projects', 'index');
+endif;
 
 ?>
 
@@ -11,27 +14,37 @@ $posts = getDataJson('index-data-posts-projects', 'index');
     <container>
         <ul>
             <?php foreach ($posts as $post) : ?>
+
                 <?php
                 $post_path = pathinfo($post["file"], PATHINFO_FILENAME).$jsonGlobalData["page-slug-extension"];
                 $post_data = $post["post_data"];
                 ?>
+
                 <?php if(isset($post_data["display"] ) && $post_data["display"] == "enable" && isset($post_data["exclude_from_search"] ) != "true" ) : ?>
+
                     <?php if( (in_array("Visual Media Projects", $post_data["categories"])) && ( !in_array("Miscellaneous Projects", $post_data["categories"])) ) : ?>
+
                         <li class="dm-post-item dm-post-item-media" data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.4s" >
+
                             <?php if( strtoupper($post_data["colors"]["post_color_background"]) == "#FFFFFF") :
                                 $shine_animation = 'data-animation="shine-gray"';
                             else :
                                 $shine_animation = 'data-animation="shine"';
                             endif; ?>
+
                             <a class="dm-post-item-logo" href="<?php echo $post_path; ?>#visualmedia" <?php echo $shine_animation; ?>
                                style="background-color: <?php echo $post_data["colors"]["post_color_background"]; ?>;">
+
                                 <?php echo  renderLogoPost($post_data); ?>
+
                                 <?php
                                 $media_image_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/media/";
+
                                 if(file_exists($media_image_path)) :
                                     $dirs = getDirectoriesInFolder($media_image_path);
                                     $get_web_image = [];
                                     $dir_image_path ="";
+
                                     foreach ($dirs as $dir) :
                                         $get_web_image = getImagesInFolder($media_image_path.$dir."/");
                                         if ( count($get_web_image) > 0) :
@@ -39,10 +52,12 @@ $posts = getDataJson('index-data-posts-projects', 'index');
                                             break;
                                         endif;
                                     endforeach;
+
                                     if(!empty( count($get_web_image) > 0 )) :
                                         $web_image = $get_web_image[0];
                                         echo renderImage($media_image_path.$dir_image_path.$web_image);
                                     endif;
+
                                 endif;
                                 ?>
                             </a>
@@ -74,6 +89,7 @@ $posts = getDataJson('index-data-posts-projects', 'index');
                                 </p>
                             </div>
                         </li>
+
                     <?php endif; ?>
                 <?php endif;?>
             <?php endforeach; ?>

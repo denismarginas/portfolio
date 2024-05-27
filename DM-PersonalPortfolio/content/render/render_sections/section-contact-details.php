@@ -1,16 +1,18 @@
 <?php
 
-if(!isset($jsonGlobalData)) {
+if(!isset($jsonGlobalData)) :
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
-}
-if(!isset($jsonContactForm)) {
-    $jsonContactForm = getDataJson('data-content-personal', 'data')["contact"]["form"];
-}
-if(!isset($jsonContactSocials)) {
-    $jsonContactSocials = getDataJson('data-content-personal', 'data')["socials"];
-}
-?>
+endif;
 
+if(!isset($jsonContactForm)) :
+    $jsonContactForm = getDataJson('data-content-personal', 'data')["contact"]["form"];
+endif;
+
+if(!isset($jsonContactSocials)) :
+    $jsonContactSocials = getDataJson('data-content-personal', 'data')["socials"];
+endif;
+
+?>
 
 <section class="dm-contact-details grid-background-animation">
     <container>
@@ -22,7 +24,6 @@ if(!isset($jsonContactSocials)) {
                         <h3>
                             <?php echo $jsonContactForm["title"]; ?>
                         </h3>
-
 
                         <?php if(isset($jsonContactForm["fields"])) : ?>
                             <form id="#dm-form" target="_self" onsubmit="return contact_form_exec();" action="" autocomplete="off" crossorigin="anonymous">
@@ -38,7 +39,9 @@ if(!isset($jsonContactSocials)) {
 
                                     <?php elseif($contact_form_field["type"] == "send" || $contact_form_field["type"] == "submit") : ?>
                                         <div>
-                                            <button id="<?php echo $contact_form_field["name"]; ?>" data-button="primary" data-sitekey="" data-callback='onSubmit' data-action='submit' type="submit"><?php echo $contact_form_field["value"]; ?></button>
+                                            <button id="<?php echo $contact_form_field["name"]; ?>" data-button="primary" data-sitekey="" data-callback='onSubmit' data-action='submit' type="submit">
+                                                <?php echo $contact_form_field["value"]; ?>
+                                            </button>
                                         </div>
                                     <?php endif; ?>
 
@@ -51,6 +54,7 @@ if(!isset($jsonContactSocials)) {
             <?php endif; ?>
 
             <?php if(isset($jsonContactSocials)) : ?>
+
             <li class="dm-socials" data-motion="transition-fade-0 transition-slideInLeft-0">
                 <h4>
                     <?php echo $jsonContactSocials["title"]; ?>
@@ -73,8 +77,12 @@ if(!isset($jsonContactSocials)) {
                         <?php $i = 1; foreach ($socials_text_list as $social_text_item) : ?>
                             <a target="_blank" href="<?php echo $social_text_item["link"]; ?>" data-motion="transition-fade-0 transition-slideInLeft-0" data-delay="<?php echo 0.02 + (0.1 * $i); ?>s">
                                 <span>●</span>
-                                <b><?php echo $social_text_item["title"]; ?></b>
-                                <span><?php echo $social_text_item["text"]; ?></span>
+                                <b>
+                                    <?php echo $social_text_item["title"]; ?>
+                                </b>
+                                <span>
+                                    <?php echo $social_text_item["text"]; ?>
+                                </span>
                             </a>
                         <?php $i++; endforeach; ?>
                     </div>

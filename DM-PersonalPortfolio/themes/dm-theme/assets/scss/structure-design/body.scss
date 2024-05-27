@@ -30,7 +30,7 @@ b,
 span,
 ul[class],
 ol[class],
-li,
+li, 
 figure,
 figcaption,
 blockquote,
@@ -78,9 +78,6 @@ table td {
     @include dm-font-default();
 }
 
-
-
-
 svg {
     &[data-svg-type="fill"] {
       > path {
@@ -124,6 +121,7 @@ container, .container {
         }
     }
 }
+
 body, .theme-light {
   --dm-link-color-primary: var( --dm-color-primary );
   background-color: var( --dm-background-color-white );

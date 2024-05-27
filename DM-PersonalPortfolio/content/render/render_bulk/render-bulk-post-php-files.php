@@ -30,8 +30,7 @@ if(count($postFiles) > 0) {
             $log[] = "Error: " . $e->getMessage() . PHP_EOL;
         }
     }
-}
-else {
+} else {
     $log[] = "No php files found in ". $postPath;
 }
 

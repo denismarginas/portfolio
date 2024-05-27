@@ -110,12 +110,13 @@
         "type": "page",
         "seo": {
             "title": "Projects | Denis Marginas",
-            "description": "Showcase of projects I have created or I was involved, featuring designs and functionality of media content and websites.",
+            "description": "Showcase of projects I have created or I was involved, featuring designs and functionality of websites and media content.",
             "keywords": "denis marginas projects",
             "slug": "projects"
         },
         "hero": {
             "title": "Projects",
+            "description": "Showcase of projects I have created or I was involved, featuring designs and functionality of websites and media content.",
             "bg_img_path": "backgrounds",
             "bg_img": "bg-projects.webp"
         }
@@ -132,6 +133,7 @@
         },
         "hero": {
             "title": "Web Development Projects",
+            "description": "A showcase of my work includes websites, online shops, web applications, and web designs that I have created. Each project features engaging designs and seamless functionality, reflecting my commitment to delivering high-quality digital experiences. This collection highlights my diverse skills and creativity in the field of web development.",
             "bg_img_path": "categories",
             "bg_img": "category-photo-web-development-photo.webp"
         }
@@ -148,6 +150,7 @@
         },
         "hero": {
             "title": "Visual Media Projects",
+            "description": "A collection of visually captivating projects that showcase my expertise in graphic design, photo editing, and video production. Each project reflects my ability to create compelling visuals and highlights my diverse skills in the visual arts.",
             "bg_img_path": "categories",
             "bg_img": "category-photo-visual-media.webp"
         }
@@ -158,12 +161,13 @@
         "category": "projects",
         "seo": {
             "title": "Miscellaneous Projects | Denis Marginas",
-            "description": "Category: Miscellaneous Projects. Assortment of non-profit initiatives and personal passion projects, reflecting my diverse range of creative endeavors.",
+            "description": "Category: Miscellaneous Projects. A mix of non-profit initiatives, personal passion projects, and freelancing work, reflecting my diverse creative endeavors.",
             "keywords": "denis marginas miscellaneous projects",
             "slug": "miscellaneous-projects"
         },
         "hero": {
             "title": "Miscellaneous Projects",
+            "description": "A blend of non-profit initiatives, personal passion projects, and freelance work, showcasing my varied creative pursuits.",
             "bg_img_path": "categories",
             "bg_img": "category-photo-miscellaneous.webp"
         }

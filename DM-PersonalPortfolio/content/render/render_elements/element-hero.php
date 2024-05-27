@@ -1,21 +1,24 @@
 <?php
 
-if(!isset($jsonGlobalData)) {
+if(!isset($jsonGlobalData)) :
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
-}
+endif;
 
-if(!isset($hero_title)) {
+if(!isset($hero_title)) :
     $hero_title = "Title";
-}
-if(!isset($hero_bg_img_path)) {
+endif;
+
+if(!isset($hero_bg_img_path)) :
     $hero_bg_img_path = "placeholder";
-}
-if(!isset($hero_bg_img)) {
+endif;
+
+if(!isset($hero_bg_img)) :
     $hero_bg_img = "img-placeholder.webp";
-}
-if(!isset($layout)) {
+endif;
+
+if(!isset($layout)) :
     $layout = "standard";
-}
+endif;
 
 ?>
 

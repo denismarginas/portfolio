@@ -6,10 +6,8 @@ include "head.php";
 $jsonMenuData = getDataJson('data-menu', 'data');
 $jsonGlobalData = getDataJson('data-global-settings', 'data');
 $jsonCategoriesData = getDataJson('data-categories', 'data');
+
 ?>
-
-
-
 
 <?php
     $defaultLangText =$jsonGlobalData["language"]["default"];
@@ -20,8 +18,6 @@ $jsonCategoriesData = getDataJson('data-categories', 'data');
         endif;
     endforeach;
 ?>
-
-
 
 <?php if(isset($langISO)) : ?>
     <html lang="<?php echo $langISO; ?>">
@@ -36,11 +32,17 @@ $jsonCategoriesData = getDataJson('data-categories', 'data');
     <section>
         <div class="dm-logo">
             <a href="<?php echo $jsonGlobalData["front-page"]["slug"].$jsonGlobalData["page-slug-extension"]; ?>" class="dm-logo-img">
-                <img data="dm-logo-front" width="50" height="50" src="<?php echo $GLOBALS['urlPath']."content/img".$jsonGlobalData["logo"]["path"].$jsonGlobalData["logo"]["img"]; ?>" alt="<?php echo $jsonGlobalData["site-identity"]; ?> Personal Icon">
+                <img data="dm-logo-front" width="50" height="50"
+                     src="<?php echo $GLOBALS['urlPath']."content/img".$jsonGlobalData["logo"]["path"].$jsonGlobalData["logo"]["img"]; ?>"
+                     alt="<?php echo $jsonGlobalData["site-identity"]; ?> Personal Icon">
             </a>
             <a href="<?php echo $jsonGlobalData["front-page"]["slug"].$jsonGlobalData["page-slug-extension"]; ?>" class="dm-logo-text">
-                <span><?php echo $jsonGlobalData["logo"]["primary-title"]; ?></span>
-                <span><?php echo $jsonGlobalData["logo"]["secondary-title"]; ?></span>
+                <span>
+                    <?php echo $jsonGlobalData["logo"]["primary-title"]; ?>
+                </span>
+                <span>
+                    <?php echo $jsonGlobalData["logo"]["secondary-title"]; ?>
+                </span>
             </a>
         </div>
         <div class="dm-menu">

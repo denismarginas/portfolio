@@ -1,15 +1,14 @@
 <?php
 
-if(!isset($jsonGlobalData)) {
+if(!isset($jsonGlobalData)) :
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
-}
-if(!isset($jsonContactData)) {
+endif;
+
+if(!isset($jsonContactData)) :
     $jsonContactData = getDataJson('data-content-personal', 'data')["contact"]["data"];
-}
+endif;
 
 ?>
-
-
 
 <section class="dm-contact-data grid-background-animation">
     <container>
@@ -46,7 +45,9 @@ if(!isset($jsonContactData)) {
                         <?php $i = 1; foreach ($contacts_list as $contact_item) : ?>
 
                             <li data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="<?php echo 0.6 + (0.1 * $i); ?>s">
+
                                 <?php SVGRenderer::renderSVG('chevron-right'); ?>
+
                                 <span>
                                 <b><?php echo $contact_item["label"]; ?></b>
 
@@ -60,7 +61,9 @@ if(!isset($jsonContactData)) {
                             </span>
                                 <?php if(isset($contact_item["warning-text"])) : ?>
                                     <div class="dm-warning-data">
-                                        <p><?php echo $contact_item["warning-text"]; ?></p>
+                                        <p>
+                                            <?php echo $contact_item["warning-text"]; ?>
+                                        </p>
                                     </div>
                                 <?php endif; ?>
                             </li>

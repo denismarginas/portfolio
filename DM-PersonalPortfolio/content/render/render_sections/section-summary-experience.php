@@ -4,12 +4,14 @@
     --dm-video-color-secondary: #232323 !important;
     --dm-video-color-primary: #ffffff !important;
     --color-range-primary: #ffffff !important;">
+
     <?php
 
     $renderer = new RendererElements();
     $renderer->renderElement('hero', "compress-squares", getDataHero( "summary-experience"));
 
     ?>
+
     <div class="dm-experience-header" data-motion="transition-fade-0" data-duration="1s">
         <h2>1. Web Development Projects</h2>
     </div>
@@ -22,13 +24,16 @@
                 </li>
                 <li>
                     <?php
+
                     $slider_items = [
                              renderImage($GLOBALS['urlPath']."content/img/summary-experience/promotions-contact-form-web-1.webp", true),
                              renderImage($GLOBALS['urlPath']."content/img/summary-experience/promotions-contact-form-web-2.webp", true),
                              renderImage($GLOBALS['urlPath']."content/img/summary-experience/promotions-contact-form-web-3.webp", true),
                              renderImage($GLOBALS['urlPath']."content/img/summary-experience/promotions-contact-form-web-4.webp", true)
                     ];
+
                     echo renderSlider($slider_items, true, true, true);
+
                     ?>
                 </li>
             </ul >

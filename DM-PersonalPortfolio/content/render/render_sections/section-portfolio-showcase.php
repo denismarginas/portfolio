@@ -1,14 +1,14 @@
 <?php
 
-if(!isset($jsonGlobalData)) {
+if(!isset($jsonGlobalData)) :
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
-}
-if(!isset($jsonPortfolio)) {
+endif;
+
+if(!isset($jsonPortfolio)) :
     $jsonPortfolio = getDataJson('data-content-personal', 'data')["portfolio-video-archive"];
-}
+endif;
 
 ?>
-
 
 <section class="dm-portfolio-showcase grid-background-animation">
     <container>

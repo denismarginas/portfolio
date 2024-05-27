@@ -1,7 +1,12 @@
 <?php
-$jsonWorkstationData = getDataJson('data-workstation', 'data');
+
+if(!isset($jsonWorkstationData)) :
+    $jsonWorkstationData = getDataJson('data-workstation', 'data');
+endif;
+
 $path = $jsonWorkstationData["setups"]["setup 1"]["path-img"];
 $products = $jsonWorkstationData["setups"]["setup 1"]["accessories"];
+
 ?>
 
 <section class="dm-workstation-accessories dm-workstation-products grid-background-animation"
@@ -20,16 +25,26 @@ $products = $jsonWorkstationData["setups"]["setup 1"]["accessories"];
                 $renderer = new RendererElements();
                 $renderer->renderElement('slider-workstation');
                 ?>
+
             </li>
+
             <li data-motion="transition-fade-0 transition-slideInLeft-0">
-                <h2><?php echo $jsonWorkstationData["setups"]["setup 1"]["title"]; ?>   Accessories</h2>
+
+                <h2>
+                    <?php echo $jsonWorkstationData["setups"]["setup 1"]["title"]; ?> Accessories
+                </h2>
+
                 <ul>
                     <?php foreach ($products as $key => $product) : ?>
-                        <li><?php SVGRenderer::renderSVG('chevron-right'); ?>
+
+                        <li>
+                            <?php SVGRenderer::renderSVG('chevron-right'); ?>
+
                             <a href="#<?php echo $key; ?>">
                                 <?php echo $product["name"]; ?>
                             </a>
                         </li>
+
                     <?php endforeach; ?>
                 </ul>
             </li>

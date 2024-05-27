@@ -7,7 +7,6 @@ $seo = [
     "slug" => "blog"
 ];
 
-
 $renderer_structure = new RendererStructure();
 $renderer_sections = new RendererSections();
 
@@ -15,10 +14,8 @@ $renderer_sections = new RendererSections();
 $renderer_structure->header($seo);
 
 
-
 $renderer_sections->renderSection('blog-header');
 $renderer_sections->renderSection('blog-posts');
-
 
 
 // Function Footer

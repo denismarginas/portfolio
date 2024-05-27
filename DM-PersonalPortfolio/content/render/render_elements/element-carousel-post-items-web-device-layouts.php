@@ -1,37 +1,38 @@
 <?php
 
-if(!isset($jsonGlobalData)) {
+if(!isset($jsonGlobalData)) :
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
-}
-if(!isset($posts)) {
+endif;
+
+if(!isset($posts)) :
     $posts = getDataJson('index-data-posts-projects', 'index');
-}
-if(!isset($carousel_direction)) {
+endif;
+
+if(!isset($carousel_direction)) :
     $carousel_direction = "right";
-}
-if(!isset($carousel_speed)) {
+endif;
+
+if(!isset($carousel_speed)) :
     $carousel_speed = "slow";
-}
-if(!isset($offset_items)) {
+endif;
+
+if(!isset($offset_items)) :
     $offset_items = 0;
-}
-if(!isset($max_items)) {
+endif;
+
+if(!isset($max_items)) :
     $max_items = 8;
-}
+endif;
 
 usort($posts, "dateStartPostSortDesc");
 usort($posts, "personalTypePostProjectSortAsc");
-
-
 
 $device_layout_laptop_img = "device-layout-laptop.webp";
 $device_layout_phone_img = "device-layout-phone.webp";
 
 $device_layout_img_path = $GLOBALS['urlPath'] . "content/img/" ."design-elements" ."/";
 
-
 ?>
-
 
 <?php if(count($posts) >= 1 && !empty($posts)) : ?>
     <div class="scroller" data-direction="<?php echo $carousel_direction ?>" data-speed="<?php echo $carousel_speed ?>" data-motion="transition-fade-0">

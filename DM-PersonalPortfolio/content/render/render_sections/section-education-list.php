@@ -1,9 +1,10 @@
 <?php
 
-$educations = getDataJson('data-education','data');
+if(!isset($educations)) :
+    $educations = getDataJson('data-education','data');
+endif;
 
 ?>
-
 
 <section class="dm-jobs grid-background-animation">
     <container>
@@ -255,7 +256,7 @@ $educations = getDataJson('data-education','data');
                             $j = 5;
                         else:
                             $j++;
-                endif;?>
+                endif; ?>
 
             <?php endforeach; ?>
 
@@ -264,7 +265,7 @@ $educations = getDataJson('data-education','data');
                     <p id="freelancer" style="display:none !important;"></p>
                     <p id="unspecified">Note: Please be aware that this is not an completed list, and there may be additional education experiences not mentioned here.</p>
                 </li>
-            <?php  endif; ?>
+            <?php endif; ?>
 
         </ul>
     </container>

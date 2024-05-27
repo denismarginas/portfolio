@@ -1,24 +1,23 @@
 <?php
 
-if(!isset($jsonGlobalData)) {
+if(!isset($jsonGlobalData)) :
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
-}
+endif;
 
-if(!isset($jsonCategoriesData)) {
+if(!isset($jsonCategoriesData)) :
     $jsonCategoriesData = getDataJson('data-categories', 'data');
-}
+endif;
 
-if(!isset($jsonJobs)) {
+if(!isset($jsonJobs)) :
     $jsonJobsData = getDataJson('data-jobs', 'data');
-}
+endif;
 
-
-if (!empty($args)) {
+if (!empty($args)) :
     $post_data = $args[0];
     $post_content = $args[1];
-}
+endif;
 
-if (!isset($post_data)) {
+if (!isset($post_data)) :
     $post_data = [
         "post_type" => "catalog",
         "media_path" => "post",
@@ -49,7 +48,7 @@ if (!isset($post_data)) {
             "post_color_text_on_background" => "#ffffff"
         ]
     ];
-}
+endif;
 ?>
 
 <?php if (isset($post_data["colors"]) && !empty($post_data["colors"])) : ?>
@@ -63,22 +62,23 @@ if (!isset($post_data)) {
     </style>
 <?php endif; ?>
 
-
 <section class="dm-post grid-background-animation">
 
     <?php
-    //echo renderWallpaperPost($post_data, "wallpaper");
+
     if(isset($post_current_data) and !empty($post_current_data)) {
         $post_content .= "<p> post_current_data: " . print_r($post_current_data, true) . "</p>";
     }
     ?>
 
     <container>
+
         <div class="post-content">
             <?php if (isset($post_content)) :
                 echo $post_content;
              endif; ?>
         </div>
+
         <aside class="post-data">
             <div class="post-logo" data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.4s">
                 <?php if (isset($post_data["logo_type"]) && !empty($post_data["logo_type"]) && isset($post_data["logo"]) && isset($post_data["logo_path"])) : ?>
@@ -136,7 +136,9 @@ if (!isset($post_data)) {
                             <span>Website: </span>
                         </span>
 
-                        <a href="<?php echo addHttps($post_data["web_url"]); ?>" target="_blank"><?php echo removeHttps($post_data["web_url"]); ?></a>
+                        <a href="<?php echo addHttps($post_data["web_url"]); ?>" target="_blank">
+                            <?php echo removeHttps($post_data["web_url"]); ?>
+                        </a>
                     </p>
                 <?php endif; ?>
 

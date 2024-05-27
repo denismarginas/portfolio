@@ -109,7 +109,6 @@ function personalTypePostProjectSortAsc($a, $b) {
     }
 }
 
-
 function getCurrentPostProjectData($fileName, $json_posts) {
     if ($fileName !== null) {
         $jsonFile = $json_posts;
@@ -145,8 +144,6 @@ function getCurrentPostProjectData($fileName, $json_posts) {
     }
 }
 
-
-
 function getSeoFromCurrentPostProjectData($postData) {
     if ($postData != null) {
         $seo = [
@@ -159,7 +156,6 @@ function getSeoFromCurrentPostProjectData($postData) {
     }
 }
 
-
 function renderTitle($title = null) {
     $htmlTemplate = "<h2 id='%s' class='dm-post-title-category' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.7s'>%s</h2>";
 
@@ -171,7 +167,6 @@ function renderTitle($title = null) {
         return sprintf($htmlTemplate, $id, "Title");
     }
 }
-
 
 function renderGalleryWeb($post_data) {
 
@@ -392,6 +387,7 @@ function renderVideoMedia($post_data) {
     $video_media_content .= '</div>';
     return $video_media_content;
 }
+
 function renderVideoMediaStrict( $videos = []) {
     $html_content = "<div id='video' class='dm-video-media-content' data-motion='transition-fade-0' data-duration='0.5s'>";
     if($videos != null) {
@@ -518,6 +514,7 @@ function renderDetailsVisualMediaPost($post_data) {
 
     return $html_content;
 }
+
 function renderSectionWebProject($post_data) {
     $html_content = '';
 
@@ -538,6 +535,7 @@ function renderSectionWebProject($post_data) {
 
     return $html_content;
 }
+
 function renderSectionMediaProject($post_data, $params = []) {
 
     $html_content = '';
@@ -564,6 +562,7 @@ function renderSectionMediaProject($post_data, $params = []) {
     }
     return $html_content;
 }
+
 function renderParagraphBlockProject($text = null) {
     $html_content = '';
 
@@ -573,6 +572,7 @@ function renderParagraphBlockProject($text = null) {
 
     return $html_content;
 }
+
 function renderImageBlockProject($post_data ,$image_path = null, $image_file_name = null) {
     $html_content = '';
 
@@ -582,6 +582,7 @@ function renderImageBlockProject($post_data ,$image_path = null, $image_file_nam
 
     return $html_content;
 }
+
 function renderSliderWithImagesOfProject($post_data, $img_array_path_dir) {
     $html_content = '<div data-motion="transition-fade-0" data-duration="1.2s">';
 

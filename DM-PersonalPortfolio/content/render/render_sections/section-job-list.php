@@ -1,15 +1,14 @@
 <?php
 
-if(!isset($jsonGlobalData)) {
+if(!isset($jsonGlobalData)) :
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
-}
+endif;
 
-if(!isset($jobs)) {
+if(!isset($jobs)) :
     $jobs = getDataJson('data-jobs','data');
-}
+endif;
 
 ?>
-
 
 <section class="dm-jobs grid-background-animation">
     <container>
@@ -52,9 +51,7 @@ if(!isset($jobs)) {
 
                     <?php endforeach; ?>
 
-
                 <!-- Ocean Animation Start -->
-
                 <div class="ocean" data-motion="transition-fade-0" data-duration="4s" data-delay="0s">
                     <div class="wave"></div>
                     <div class="wave"></div>
@@ -62,8 +59,8 @@ if(!isset($jobs)) {
                     <div class="wave"></div>
                     <div class="wave"></div>
                 </div>
-
                 <!-- Ocean Animation End -->
+
                 </li>
             <?php endif; ?>
 
@@ -242,7 +239,7 @@ if(!isset($jobs)) {
                             $j = 5;
                         else:
                             $j++;
-                endif;?>
+                endif; ?>
 
             <?php endforeach; ?>
 

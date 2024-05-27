@@ -1,4 +1,5 @@
 <?php
+
 $urlPath = URLPath::getUrlPaths()['post'];
 $GLOBALS['urlPath'] = $urlPath;
 
@@ -17,6 +18,5 @@ if (!is_dir($targetDirectory)) {
 }
 
 file_put_contents($filePath, $jsonPostsData);
-
 
 ?>

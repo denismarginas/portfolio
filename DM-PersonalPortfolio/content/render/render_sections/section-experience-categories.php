@@ -1,14 +1,14 @@
 <?php
 
-if(!isset($jsonGlobalData)) {
+if(!isset($jsonGlobalData)) :
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
-}
-if(!isset($jsonContactCardsCategories)) {
+endif;
+
+if(!isset($jsonContactCardsCategories)) :
     $jsonContactCardsCategories = getDataJson('data-content-personal', 'data')["cards-categories"];
-}
+endif;
 
 ?>
-
 
 <section class="dm-experience-categories">
     <container>

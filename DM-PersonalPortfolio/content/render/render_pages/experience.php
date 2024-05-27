@@ -7,12 +7,12 @@ $seo = [
     "slug" => "experience"
 ];
 
-
 $renderer_structure = new RendererStructure();
 $renderer_sections = new RendererSections();
 
 // Function Header
 $renderer_structure->header($seo);
+
 
 $renderer_sections->renderSection('experience-knowledge', "standard");
 $renderer_sections->renderSection('categories');

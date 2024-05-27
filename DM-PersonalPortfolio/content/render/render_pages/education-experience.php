@@ -1,6 +1,5 @@
 <?php
 
-
 $seo = [
     "title" => "Education Experience | Denis Marginas",
     "description" => "Discover my educational journey from high school to university, including courses and diplomas attained along the way.",
@@ -14,10 +13,10 @@ $renderer_sections = new RendererSections();
 // Function Header
 $renderer_structure->header($seo);
 
+
 $renderer_sections->renderSection('hero', "compress-squares",
   ["filename" => pathinfo(basename(__FILE__), PATHINFO_FILENAME)]
 );
-
 $renderer_sections->renderSection('education-list');
 
 

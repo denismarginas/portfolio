@@ -1,7 +1,6 @@
 <?php
 require __DIR__ . "/../functions/global-functions.php";
 
-
 class SVGRenderer {
     private static $icons;
 
@@ -32,4 +31,5 @@ class SVGRenderer {
         }
     }
 }
+
 ?>

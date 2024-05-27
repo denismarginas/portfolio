@@ -1,5 +1,6 @@
 <head>
     <?php
+
     $seo_fields = "";
 
     foreach ($seoImplicitFields = seoImplicitFields() as $seo_field_implicit) :
@@ -13,7 +14,6 @@
     echo $seo_fields;
 
     ?>
-
 
     <link rel="stylesheet" href="<?php echo $GLOBALS['urlPath']; ?>themes/dm-theme/assets/css/style.min.css">
     <link rel="icon" type="image/x-icon" href="<?php echo $GLOBALS['urlPath']; ?>content/img/favicon/favicon.ico">

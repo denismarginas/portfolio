@@ -1,6 +1,8 @@
 <?php
 
-$jsonBlogData = getDataJson('data-blog-activity', 'data');
+if(!isset($jsonBlogData)) :
+    $jsonBlogData = getDataJson('data-blog-activity', 'data');
+endif;
 
 ?>
 <section class="blurred-lines-animation dm-blog-header"

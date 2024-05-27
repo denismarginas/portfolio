@@ -87,8 +87,6 @@ function extractContent(&$content, $node) {
     }
 }
 
-
-
 function removeStringFromTitle($title, $string) {
     return str_replace($string, '', $title);
 }
@@ -105,4 +103,5 @@ if (!is_dir($targetDirectory)) {
 }
 
 file_put_contents($filePath, $jsonContent);
+
 ?>

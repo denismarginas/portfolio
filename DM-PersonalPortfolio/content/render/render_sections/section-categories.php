@@ -1,9 +1,12 @@
 <?php
-$categoriesData = getDataJson('data-categories', 'data');
 
-if(!isset($jsonGlobalData)) {
+if(!isset($categoriesData)) :
+    $categoriesData = getDataJson('data-categories', 'data');
+endif;
+
+if(!isset($jsonGlobalData)) :
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
-}
+endif;
 
 ?>
 

@@ -50,11 +50,16 @@
     text-shadow: 3px 3px 10px rgba(var(--dm-color-black-rgb), 0.5);
     text-align: center;
     z-index: 1;
+    width: 900px;
+    max-width: 100%;
   }
   > p {
     @include dm-font-default();
     --dm-text-default-color: var( --dm-color-white );
+    text-align: center;
     z-index: 1;
+    width: 900px;
+    max-width: 100%;
   }
   > .dm-hero-bg {
     background-size: cover;
@@ -80,6 +85,7 @@
         rgba(var( --dm-color-primary-rgb ), 0) 200%);
     }
   }
+
   @media only screen and (max-width: $screen-desktop-medium) {
     > h2 {
       --dm-text-heading1-font-size: 40px;
@@ -89,6 +95,7 @@
       min-height: 500px;
     }
   }
+
   @media only screen and (max-width: $screen-tablet-large) {
     > h2 {
       --dm-text-heading1-font-size: 32px;
@@ -98,6 +105,7 @@
       min-height: 450px;
     }
   }
+
   @media only screen and (max-width: $screen-phone-large) {
     > h2 {
       --dm-text-heading1-font-size: 26px;
@@ -107,10 +115,15 @@
       min-height: 400px;
     }
   }
+
   @media only screen and (max-width: $screen-phone-medium) {
     > h2 {
       --dm-text-heading1-font-size: 20px;
       --dm-text-heading1-line-height: 28px;
+    }
+    > p {
+      @include dm-font-medium();
+      --dm-text-medium-color: var( --dm-color-white );
     }
     &[data-layout="standard"] {
       min-height: 350px;

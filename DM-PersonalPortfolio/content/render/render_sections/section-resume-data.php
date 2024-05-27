@@ -1,17 +1,19 @@
-
 <?php
 
-if(!isset($jsonGlobalData)) {
+if(!isset($jsonGlobalData)) :
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
-}
-if(!isset($jsonDataResume)) {
+endif;
+
+if(!isset($jsonDataResume)) :
     $jsonDataResume = getDataJson('data-content-personal', 'data')["contact"]["resume"];
-}
+endif;
 
 ?>
 
 <section class="dm-resume-data">
+
     <?php if(isset($jsonDataResume) && !empty($jsonDataResume)) : ?>
+
         <container>
             <ul>
                 <li>
@@ -67,12 +69,15 @@ if(!isset($jsonDataResume)) {
                         <?php $text_list = $jsonDataResume["text-list"]; ?>
 
                         <?php $i = 1; foreach ($text_list as $text_item) : ?>
-                            <p data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.<?php echo 1 + $i; ?>s"><?php echo $text_item; ?></p>
+                            <p data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.<?php echo 1 + $i; ?>s">
+                                <?php echo $text_item; ?>
+                            </p>
                         <?php $i++; endforeach; ?>
                     </div>
                 </li>
             </ul>
         </container>
+
     <?php endif; ?>
 
 </section>

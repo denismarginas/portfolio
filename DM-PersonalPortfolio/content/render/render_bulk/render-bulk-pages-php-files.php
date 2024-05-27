@@ -10,6 +10,7 @@ foreach ($pageFiles as $pageFile) {
     unlink($pageFile);
     //$log[] = "Deleted $pageFile" . PHP_EOL;
 }
+
 $log[] ="Deleted all html files.";
 $pageFiles = glob('render_pages/*.php');
 
@@ -34,8 +35,7 @@ if(count($pageFiles) > 0) {
             $log[] = "Error: " . $e->getMessage() . PHP_EOL;
         }
     }
-}
-else {
+} else {
     $log[] = "No php files found in ". $pagePath;
 }
 

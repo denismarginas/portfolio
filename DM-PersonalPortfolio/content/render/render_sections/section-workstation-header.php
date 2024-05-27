@@ -1,4 +1,10 @@
-<?php $jsonWorkstationData = getDataJson('data-workstation', 'data'); ?>
+<?php
+
+if(!isset($jsonWorkstationData)) :
+    $jsonWorkstationData = getDataJson('data-workstation', 'data');
+endif;
+
+?>
 
 <section class="dm-workstation-header"
         <?php if( !empty($layout) ) : ?>
@@ -24,6 +30,7 @@
                     $path = $jsonWorkstationData["setups"]["setup 1"]["path-img"];
                     $img = $jsonWorkstationData["setups"]["setup 1"]["images"]["workstation"][0];
                     $imgWorkstation = $path."/".$img;
+
                     echo renderImage($GLOBALS['urlPath']."content/img/".$imgWorkstation, false);
                     ?>
                 </div>

@@ -1,11 +1,12 @@
 <?php
 
-if(!isset($jsonGlobalData)) {
+if(!isset($jsonGlobalData)) :
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
-}
-if(!isset($jsonDataKnowledgeItems)) {
+endif;
+
+if(!isset($jsonDataKnowledgeItems)) :
     $jsonDataKnowledgeItems = getDataJson('data-content-personal', 'data')["experience"]["knowledge-lists-items"];
-}
+endif;
 
 ?>
 
@@ -14,6 +15,7 @@ if(!isset($jsonDataKnowledgeItems)) {
     <?php if(isset($jsonDataKnowledgeItems) && !empty($jsonDataKnowledgeItems)) : ?>
         <ul>
             <?php $i = 1; foreach ($jsonDataKnowledgeItems as $knowledge_item) : ?>
+
                 <li data-motion="transition-fade-0 transition-slideInRight-0" data-duration="<?php echo 0.04 * $i; ?>s">
 
                     <?php if(!isset($knowledge_item['url'])) : ?>
@@ -27,7 +29,7 @@ if(!isset($jsonDataKnowledgeItems)) {
                     </a>
                 </li>
 
-                <?php $i++; endforeach; ?>
+            <?php $i++; endforeach; ?>
         </ul>
     <?php endif; ?>
 

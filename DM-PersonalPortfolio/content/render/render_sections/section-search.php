@@ -1,12 +1,12 @@
 <?php
 
-if(!isset($jsonGlobalData)) {
+if(!isset($jsonGlobalData)) :
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
-}
+endif;
 
-if(!isset($jsonIndexPages)) {
+if(!isset($jsonIndexPages)) :
     $jsonIndexPages = getDataJson('index-data-pages', 'index');
-}
+endif;
 
 ?>
 
@@ -44,9 +44,11 @@ if(!isset($jsonIndexPages)) {
                         </div>
                     </a>
                     <div class="search-item-data">
+
                         <a class="title" href="<?php echo $item["page"]; ?>">
                             <?php echo $item["meta-title"]; ?>
                         </a>
+
                         <p class="description">
                             <?php echo $item["meta-description"]; ?>
                         </p>

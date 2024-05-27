@@ -1,11 +1,12 @@
 <?php
 
-if(!isset($posts)) {
+if(!isset($posts)) :
     $posts = extractDataPosts( __DIR__ . "/../render_posts/projects/" , "data-posts-projects");
-}
-if(!isset($layout)) {
+endif;
+
+if(!isset($layout)) :
     $layout = "standard";
-}
+endif;
 
 ?>
 

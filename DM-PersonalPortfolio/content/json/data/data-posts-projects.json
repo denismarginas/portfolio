@@ -760,7 +760,7 @@
             "logo": "logo/logo.png",
             "logo_path": "augustinnailtrainer",
             "logo_type": "png",
-            "description": "<?php echo renderTextVisualMediaPost('catalog','augustinnailtrainer'); ?>",
+            "description": "<?php echo renderTextVisualMediaPost('projects','augustinnailtrainer'); ?>",
             "categories": [
                 "Visual Media Projects",
                 "Miscellaneous Projects"
@@ -1194,7 +1194,7 @@
             "logo": "logo/logo.png",
             "logo_path": "busvip",
             "logo_type": "png",
-            "description": "<?php echo renderTextVisualMediaPost('catalog','busvip'); ?>",
+            "description": "<?php echo renderTextVisualMediaPost('projects','busvip'); ?>",
             "categories": [
                 "Visual Media Projects"
             ],
@@ -2165,7 +2165,7 @@
             "logo": "logo/logo.png",
             "logo_path": "dabo-sm-bm",
             "logo_type": "png",
-            "description": "Here is my media content for the promotion of Dabo Satu Mare & Dabo Baia Mare during the pandemic, which took place in 2020. <?php echo renderTextVisualMediaPost('catalog','dabo-sm-bm'); ?>",
+            "description": "Here is my media content for the promotion of Dabo Satu Mare & Dabo Baia Mare during the pandemic, which took place in 2020. <?php echo renderTextVisualMediaPost('projects','dabo-sm-bm'); ?>",
             "categories": [
                 "Visual Media Projects"
             ],
@@ -2228,7 +2228,7 @@
             "logo": "logo/logo.png",
             "logo_path": "denismarginas",
             "logo_type": "png",
-            "description": "Simple portfolio website is made with Google Site. <?php echo renderTextVisualMediaPost('catalog','denismarginas'); ?>",
+            "description": "Simple portfolio website is made with Google Site. <?php echo renderTextVisualMediaPost('projects','denismarginas'); ?>",
             "categories": [
                 "Web Development Projects",
                 "Visual Media Projects",
@@ -2333,7 +2333,7 @@
             "logo": "logo/logo.png",
             "logo_path": "dsautocenter",
             "logo_type": "png",
-            "description": "<?php echo renderTextVisualMediaPost('catalog','dsautocenter'); ?>",
+            "description": "<?php echo renderTextVisualMediaPost('projects','dsautocenter'); ?>",
             "categories": [
                 "Visual Media Projects"
             ],
@@ -2491,7 +2491,7 @@
             "logo": "logo/logo.png",
             "logo_path": "gamadametal",
             "logo_type": "png",
-            "description": "<?php echo renderTextVisualMediaPost('catalog','gamadametal'); ?>",
+            "description": "<?php echo renderTextVisualMediaPost('projects','gamadametal'); ?>",
             "categories": [
                 "Visual Media Projects"
             ],
@@ -2546,7 +2546,7 @@
             "logo": "logo/logo.png",
             "logo_path": "hartkeepyouthaton",
             "logo_type": "png",
-            "description": "<?php echo renderTextVisualMediaPost('catalog','hartkeepyouthaton'); ?>",
+            "description": "<?php echo renderTextVisualMediaPost('projects','hartkeepyouthaton'); ?>",
             "categories": [
                 "Visual Media Projects"
             ],
@@ -3380,7 +3380,7 @@
             "logo": "logo/logo.png",
             "logo_path": "mycreativedesign",
             "logo_type": "png",
-            "description": "<?php echo renderTextVisualMediaPost('catalog','mycreativedesign'); ?>",
+            "description": "<?php echo renderTextVisualMediaPost('projects','mycreativedesign'); ?>",
             "categories": [
                 "Visual Media Projects"
             ],
@@ -3741,7 +3741,7 @@
             "logo": "logo/logo.png",
             "logo_path": "prismanord",
             "logo_type": "png",
-            "description": "The online shop with over 150 products is built on Prestashop 1.7. To add products to the cart, a price and a quantity with a non-zero value must be provided. However, there are two buttons available for alternative contact options: one for phone contact and another for submitting a form. The form was customized using TPL, HTML, CSS, and JS, with integration of the Contact Form 7 module. <?php echo renderTextVisualMediaPost('catalog','prismanord'); ?> The content from 'Visual Media Projects' section was made in 03.2020. The content from 'Web Development Projects' section was made in 10.2023 - 02.2024.",
+            "description": "The online shop with over 150 products is built on Prestashop 1.7. To add products to the cart, a price and a quantity with a non-zero value must be provided. However, there are two buttons available for alternative contact options: one for phone contact and another for submitting a form. The form was customized using TPL, HTML, CSS, and JS, with integration of the Contact Form 7 module. <?php echo renderTextVisualMediaPost('projects','prismanord'); ?> The content from 'Visual Media Projects' section was made in 03.2020. The content from 'Web Development Projects' section was made in 10.2023 - 02.2024.",
             "categories": [
                 "Web Development Projects",
                 "Visual Media Projects",
@@ -4485,7 +4485,7 @@
             "logo": "logo/logo.png",
             "logo_path": "roundselfie",
             "logo_type": "png",
-            "description": "<?php echo renderTextVisualMediaPost('catalog','roundselfie'); ?>",
+            "description": "<?php echo renderTextVisualMediaPost('projects','roundselfie'); ?>",
             "categories": [
                 "Visual Media Projects",
                 "Miscellaneous Projects"
@@ -4627,7 +4627,7 @@
             "logo": "logo/logo.png",
             "logo_path": "spalatorieautomatabaiamare",
             "logo_type": "png",
-            "description": "<?php echo renderTextVisualMediaPost('catalog','spalatorieautomatabaiamare'); ?>",
+            "description": "<?php echo renderTextVisualMediaPost('projects','spalatorieautomatabaiamare'); ?>",
             "categories": [
                 "Visual Media Projects"
             ],
@@ -4682,7 +4682,7 @@
             "logo": "logo/logo.png",
             "logo_path": "specialevents",
             "logo_type": "png",
-            "description": "<?php echo renderTextVisualMediaPost('catalog','specialevents'); ?>",
+            "description": "Discover a captivating collection content that showcase my expertise in delivering impactful visuals content for special eveniments (weddings, baptisms, invitations to events).",
             "categories": [
                 "Visual Media Projects",
                 "Miscellaneous Projects"
@@ -4743,7 +4743,7 @@
             "logo": "logo/logo.png",
             "logo_path": "speed-sm",
             "logo_type": "png",
-            "description": "<?php echo renderTextVisualMediaPost('catalog','speed-sm'); ?>",
+            "description": "<?php echo renderTextVisualMediaPost('projects','speed-sm'); ?>",
             "categories": [
                 "Visual Media Projects"
             ],
@@ -4802,7 +4802,7 @@
             "logo": "logo/logo.png",
             "logo_path": "strikerproduction",
             "logo_type": "png",
-            "description": "Main activity of the Striker Production is the video editing at different video games and real life footage. In addition to creating my own video-photo content, I organize video editing contests with sponsors and I collaborate with clients on various projects. Simple portfolio website is made with Google Site. <?php echo renderTextVisualMediaPost('catalog','strikerproduction'); ?>",
+            "description": "Main activity of the Striker Production is the video editing at different video games and real life footage. In addition to creating my own video-photo content, I organize video editing contests with sponsors and I collaborate with clients on various projects. Simple portfolio website is made with Google Site. <?php echo renderTextVisualMediaPost('projects','strikerproduction'); ?>",
             "categories": [
                 "Web Development Projects",
                 "Visual Media Projects",
@@ -5190,7 +5190,7 @@
             "logo": "logo/logo.png",
             "logo_path": "transportosian",
             "logo_type": "png",
-            "description": "<?php echo renderTextVisualMediaPost('catalog','transportosian'); ?>",
+            "description": "<?php echo renderTextVisualMediaPost('projects','transportosian'); ?>",
             "categories": [
                 "Visual Media Projects"
             ],
@@ -5340,7 +5340,7 @@
             "logo": "logo/logo.png",
             "logo_path": "vseconstruct",
             "logo_type": "png",
-            "description": "<?php echo renderTextVisualMediaPost('catalog','vseconstruct'); ?>",
+            "description": "<?php echo renderTextVisualMediaPost('projects','vseconstruct'); ?>",
             "categories": [
                 "Visual Media Projects"
             ],
