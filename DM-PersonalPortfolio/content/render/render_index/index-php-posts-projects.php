@@ -12,7 +12,6 @@ $targetDirectory = __DIR__ . '/../../../content/json/index/';
 $fileExtension ='.json';
 $filePath = $targetDirectory . 'index-data-posts-projects'.$fileExtension;
 
-
 if (!is_dir($targetDirectory)) {
     mkdir($targetDirectory, 0755, true);
 }

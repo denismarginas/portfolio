@@ -4,10 +4,8 @@ if(!isset($jsonGlobalData)) {
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
 }
 
-
 $pagesDirectory = __DIR__ . '/../../pages/';
 $thumbnailDirectory = __DIR__ . '/../../img/thumbnails-pages/';
-
 
 // Create an array to store page data
 $pageData = [];
@@ -75,7 +73,6 @@ foreach ($htmlFiles as $file) {
 
     }
 }
-
 
 function extractContent(&$content, $node) {
     if ($node->nodeType === XML_TEXT_NODE) {
