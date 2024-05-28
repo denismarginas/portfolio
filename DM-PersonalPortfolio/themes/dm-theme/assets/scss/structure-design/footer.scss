@@ -4,7 +4,7 @@
 #footer {
   background-color: var( --dm-background-color-gray-darken );
   background-image: linear-gradient(to bottom,
-    var(--dm-background-color-secondary ) 0%,
+    var(--dm-background-color-secondary ) -60%,
     var(--dm-background-color-gray-darken) 25%);
   padding: var( --dm-spacing-large ) 0;
   @include padding-x();
