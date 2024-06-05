@@ -7,7 +7,7 @@
 
     $log[] = $jsonGlobalData["theme-active"]["html-render-path"];
 
-    $frontPage = "home.html";
+    $frontPage = "home";
 
     if(isset($jsonGlobalData["front-page"]["slug"]) &&
         $jsonGlobalData["page-slug-extension"]
