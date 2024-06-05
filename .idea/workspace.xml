@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2259709f-b699-4482-a363-da52decd52d5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/json/index/index-data-pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/index/index-data-pages.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render_index/index-html-pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_index/index-html-pages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-categories.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-search.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-search.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/search.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +50,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717499364030</updated>
-      <workItem from="1717499365952" duration="17192000" />
+      <workItem from="1717499365952" duration="17810000" />
     </task>
     <servers />
   </component>
