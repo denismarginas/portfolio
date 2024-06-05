@@ -27,7 +27,7 @@ $log[] = generateRedirectHTML();
 
 // -- Adding Redirect if is needed END --
 
-/*
+
 // -- RENDER VIEW START --
 $htaccessFilePath = __DIR__ . '/../../.htaccess';
 
@@ -43,8 +43,9 @@ RewriteEngine On
 
 # Redirect to trailing slash if not present
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|jpeg|gif)$ [NC]
-RewriteRule ^(.*[^/])$ /$1/ [L,R=301]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ /$1/ [L,R=301]
 
 # Rewrite pretty URLs for pages
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -56,7 +57,7 @@ RewriteRule ^([^/]+)/?$ $1.html [L]
 // Write .htaccess content to file
 file_put_contents($htaccessFilePath, $htaccessContent);
 $log[] = "Generated .htaccess file" . PHP_EOL;
-*/
+
 // -- RENDER VIEW END --
 
 $log[] ="<div style='color : var( --dm-color-status-primary);'>----- Json Check ------</div>";

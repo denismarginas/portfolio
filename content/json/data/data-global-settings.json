@@ -19,7 +19,7 @@
         "button-text": "Search",
         "button-placeholder": "Search keywords.."
     },
-    "page-slug-extension": ".html",
+    "page-slug-extension": "",
     "language": {
         "default": "Enlgish",
         "list": [
