@@ -1,0 +1,4 @@
+License
+
+Terms and conditions of use:
+You can use the project for personal purposes, non-profit, with the condition of keeping this file in the project. All rights reserved by "Denis Marginas".

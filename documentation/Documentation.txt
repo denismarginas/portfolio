@@ -1,0 +1,14 @@
+// Update Content
+To apply any modifications, please rerender the content using 'themes/"the-active-theme-dir"/render/render.php'.
+
+// Editing Content
+Editing code with Visual Studio Code / PhpStorm.
+To Render the PHP pages, sections and the elements you should have XAMPP with PHP 8.0+.
+
+// Update Style SCSS Content 
+Prepros is using for compilation of scss files. In order to modify the CSS you have you have to save all SCSS files in order of usage. To use the Prepros with the project you have the import the theme file project in it, the folder with data of theme.
+
+Prepros: https://prepros.io/downloads
+Visual Studio Code: https://code.visualstudio.com/download
+PhpStorm: https://www.jetbrains.com/phpstorm/
+XAMPP: https://www.apachefriends.org/download_success.html
