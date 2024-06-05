@@ -39,15 +39,17 @@ $theme_path = $GLOBALS['urlPath'].$jsonGlobalData["themes-path"]."/".$jsonGlobal
         <ul id="search-list" class="dm-search-list">
             <?php foreach ($jsonIndexPages as $item) : ?>
                 <li data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.4s" class="search-item">
-                    <a class="search-item-image" href="<?php echo $item["page"]; ?>">
+
+                    <a class="search-item-image" href="<?php echo pathinfo($item["page"], PATHINFO_FILENAME).$jsonGlobalData["page-slug-extension"]; ?>">
                         <img src="<?php echo $GLOBALS['urlPath']; ?>content/img/placeholder/page-placeholder.svg" lazy-load="true">
                         <div class="preview-image">
                             <img src="<?php $item["default-img"]; ?>" lazy-load="true">
                         </div>
                     </a>
+
                     <div class="search-item-data">
 
-                        <a class="title" href="<?php echo $item["page"]; ?>">
+                        <a class="title" href="<?php echo pathinfo($item["page"], PATHINFO_FILENAME).$jsonGlobalData["page-slug-extension"]; ?>">
                             <?php echo $item["meta-title"]; ?>
                         </a>
 
@@ -55,6 +57,7 @@ $theme_path = $GLOBALS['urlPath'].$jsonGlobalData["themes-path"]."/".$jsonGlobal
                             <?php echo $item["meta-description"]; ?>
                         </p>
                     </div>
+                    
                 </li>
             <?php endforeach; ?>
         </ul>

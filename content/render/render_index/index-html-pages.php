@@ -27,6 +27,7 @@ foreach ($htmlFiles as $file) {
 
         // Extract title
         $titleElement = $dom->getElementsByTagName('title')->item(0);
+
         if ($titleElement) {
             $title = $titleElement->nodeValue;
         }
@@ -66,7 +67,7 @@ foreach ($htmlFiles as $file) {
         }
         $title = removeStringFromTitle($title, " | ".$jsonGlobalData["site-identity"]);
         $pageData[] = [
-            'page'=> $file,
+            'page'=> pathinfo($file, PATHINFO_FILENAME).$jsonGlobalData["page-slug-extension"],
             'meta-title' => $title,
             'meta-description' => $metaDescription,
             'content' => $content,
