@@ -367,16 +367,16 @@ function renderVideoMedia($post_data) {
     $video_media_content = "<div id='video' class='dm-video-media-content' data-motion='transition-fade-0' data-duration='0.5s'>";
 
     if(isset($post_data)) {
-        $video_media_path = $src_current.$GLOBALS['urlPath']."content/vid/".$post_data["post_type"]."/".$post_data["media_path"]."/";
+        $video_media_path = $GLOBALS['urlPath']."content/vid/".$post_data["post_type"]."/".$post_data["media_path"]."/";
         $logo_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$post_data["logo"];
         $thumbnail_bg = $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp";
-        $video_files = getVideosInFolder($video_media_path);
+        $video_files = getVideosInFolder($src_current.$video_media_path);
 
-        $directories = glob($video_media_path . '*', GLOB_ONLYDIR);
+        $directories = glob($src_current.$video_media_path . '*', GLOB_ONLYDIR);
         foreach ($directories as $directory) {
             if (is_dir($directory)) {
                 $directoryName = basename($directory);
-                $video_items = getVideosInFolder($video_media_path.$directoryName );
+                $video_items = getVideosInFolder($src_current.$video_media_path.$directoryName );
                 if( !empty($video_items ) ) {
 
                     $video_media_content .= "<ul class='dm-media-video' data-list-design='".listDesign(count($video_items))."'>";

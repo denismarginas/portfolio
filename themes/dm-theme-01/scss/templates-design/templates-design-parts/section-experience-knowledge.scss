@@ -12,8 +12,7 @@
         > img {
           width: auto;
           max-width: 100%;
-          height: auto;
-          max-height: 700px;
+          height: 600px;
           clip-path: none;
         }
         > svg {
@@ -80,6 +79,30 @@
       }
     }
   }
+  @media only screen and (max-width: $screen-desktop-small) {
+    > container {
+      > div {
+        &:first-of-type {
+          > img {
+            height: 470px;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-large) {
+    > container {
+      align-items: start;
+
+      > div {
+        &:first-of-type {
+          > img {
+            height: 350px;
+          }
+        }
+      }
+    }
+  }
   @media only screen and (max-width: $screen-tablet-medium) {
     > container {
       flex-direction: column;
@@ -90,7 +113,7 @@
           width: 100%;
 
           > img {
-            max-height: 300px;
+            height: 300px;
           }
           > svg {
             width: 200px;

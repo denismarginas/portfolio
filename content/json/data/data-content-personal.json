@@ -13,6 +13,7 @@
 				"button_page_redirect_slug": "about"
 			}
 		],
+
 		"img": "dm-personal-image-1.webp",
 		"img-path": "/personal-images/"
 	},
@@ -62,8 +63,16 @@
 		},
 		{
 			"type": "page",
-			"page": "summary-experience.",
-			"name": "Summary Experience",
+			"page": "education-experience",
+			"name": "Education Experience",
+			"svg": "resume",
+			"background-img": "overlay-texture-textile.webp",
+			"background-img-path": "/design-elements/"
+		},
+		{
+			"type": "page",
+			"page": "blog-activity",
+			"name": "Blog Activity",
 			"svg": "projects",
 			"background-img": "overlay-texture-textile.webp",
 			"background-img-path": "/design-elements/"

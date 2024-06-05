@@ -15,8 +15,7 @@ $renderer_structure->header($seo);
 
 
 $renderer_sections->renderSection('about', "standard");
-//$renderer_sections->renderSection('experience-categories');
-//$renderer_sections->renderSection('portfolio-showcase');
+
 
 
 // Function Footer

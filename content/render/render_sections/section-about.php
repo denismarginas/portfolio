@@ -40,11 +40,12 @@ endif;
                     </a>
                     <?php break;?>
                 <?php endif; ?>
+
             <?php $i++; endforeach; ?>
 
             <?php if( $layout == "standard" ) :
-                //$renderer = new RendererElements();
-                //$renderer->renderElement('knowledge-list-icons');
+                $renderer = new RendererElements();
+                $renderer->renderElement('experience-categories');
             endif; ?>
         </div>
     </container>

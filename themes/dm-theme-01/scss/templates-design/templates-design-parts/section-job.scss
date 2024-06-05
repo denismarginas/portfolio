@@ -434,8 +434,8 @@
         > li.dm-job-list {
           > ul {
             &[data-listing] {
-              width: 100% !important;
-              max-width: 45%;
+              width: 40%;
+              max-width: 40%;
             }
           }
         }
@@ -457,8 +457,8 @@
         > li.dm-job-list {
           > ul {
             &[data-listing] {
-              width: 45%;
-              max-width: 45%;
+              width: 42%;
+              max-width: 42%;
             }
             > li {
 

@@ -4,6 +4,7 @@
 .dm-experience-category {
   width: 100%;
   container-type: inline-size;
+  overflow: hidden;
 
   > div {
     background-color: var( --dm-color-primary );

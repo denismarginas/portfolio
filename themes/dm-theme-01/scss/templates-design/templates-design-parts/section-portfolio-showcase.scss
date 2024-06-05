@@ -5,6 +5,7 @@
   @include padding-x();
   overflow: hidden;
   position: relative;
+  min-height: 786px;
 
 
   > container {
@@ -99,6 +100,13 @@
     left: -40vw;
     top: 0;
     transform: rotate(328deg);
+  }
+  @media only screen and (max-width: $screen-desktop-small) {
+    > container {
+      > ul {
+        grid-template-columns: 1.8fr 1fr;
+      }
+    }
   }
   @media only screen and (max-width: $screen-tablet-large) {
     > container {
