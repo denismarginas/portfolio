@@ -21,10 +21,10 @@ foreach ($directories as $directory) {
 $log[] = "Loaded rendering files.";
 
 // -- Adding Redirect if is needed START --
-
+/*
 generateRedirectHTML();
 $log[] = generateRedirectHTML();
-
+*/
 // -- Adding Redirect if is needed END --
 
 

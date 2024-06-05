@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2259709f-b699-4482-a363-da52decd52d5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/content/render/render_pages/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/functions/generate-redirect.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/functions/generate-redirect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/render.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,12 +32,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/xampp-php8.1/htdocs/personal-portfolio/content/render/functions",
+    "last_opened_file_path": "C:/xampp-php8.1/htdocs/personal-portfolio/content/render/render_pages",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\content\render\render_pages" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\content\render\functions" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\content\render\classes" />
     </key>
@@ -49,11 +51,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717499364030</updated>
-      <workItem from="1717499365952" duration="16137000" />
+      <workItem from="1717499365952" duration="16451000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
