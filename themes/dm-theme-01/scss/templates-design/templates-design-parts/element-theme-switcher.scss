@@ -1,10 +1,9 @@
 @import "../../functions/mixins.scss";
 @import "../../functions/functions.scss";
 
-/* The switch - the box around the slider */
 .dm-toggletheme {
   position: relative;
-  display: inline-block;
+  display: none;
   width: 58px;
   height: 25px;
 
@@ -92,3 +91,8 @@
   }
 }
 
+body[java-script="true"] {
+  .dm-toggletheme {
+    display: inline-block;
+  }
+}

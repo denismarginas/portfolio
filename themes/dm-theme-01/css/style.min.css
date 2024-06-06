@@ -5878,10 +5878,9 @@ body.theme-dark .dm-person-circle-card > span > div .circle-background {
   --dm-text-heading6-color: var( --dm-color-black );
 }
 
-/* The switch - the box around the slider */
 .dm-toggletheme {
   position: relative;
-  display: inline-block;
+  display: none;
   width: 58px;
   height: 25px;
 }
@@ -5993,6 +5992,10 @@ body.theme-dark .dm-person-circle-card > span > div .circle-background {
 }
 .dm-toggletheme > span > svg[data-svg-type=stroke] > path {
   stroke: var(--dm-color-gray);
+}
+
+body[java-script=true] .dm-toggletheme {
+  display: inline-block;
 }
 
 /* ---- Responsive Screens ---- */
@@ -6408,6 +6411,7 @@ video {
 }
 
 .timeline-container {
+  padding: 4px 0px;
   height: 7px;
   margin-inline: 0.5rem;
   cursor: pointer;

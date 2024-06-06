@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2259709f-b699-4482-a363-da52decd52d5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/content/render/render_elements/element-experience-categories.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-activity.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-activity.html" afterDir="false" />
@@ -12,16 +11,13 @@
       <change beforePath="$PROJECT_DIR$/content/json/data/data-seo.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-seo.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/json/index/index-data-pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/index/index-data-pages.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/render/functions/post-project-functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/functions/post-project-functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render_pages/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_pages/about.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render_pages/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_pages/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-about.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-about.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-education-list.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-education-list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-experience-categories.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-job-list.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-job-list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-categories.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-web-development-description.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-web-development-description.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-work-experience.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-work-experience.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-workstation-accessories.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-workstation-accessories.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/education-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/education-experience.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employee-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/employee-experience.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/experience.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/googlecda692b34efb83de.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miscellaneous-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/miscellaneous-projects.html" afterDir="false" />
@@ -101,12 +97,9 @@
       <change beforePath="$PROJECT_DIR$/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/summary-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/summary-experience.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-category-experience-card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-category-experience-card.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-about.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-about.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-experience-categories.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-experience-categories.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-experience-knowledge.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-experience-knowledge.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-job.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-job.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-portfolio-showcase.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-portfolio-showcase.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/js/theme_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/js/theme_script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-theme-switcher.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-theme-switcher.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-video-container.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-video-container.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/visual-media-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/visual-media-projects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-development-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-development-projects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/workstation.html" beforeDir="false" afterPath="$PROJECT_DIR$/workstation.html" afterDir="false" />
@@ -156,7 +149,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717499364030</updated>
-      <workItem from="1717499365952" duration="24206000" />
+      <workItem from="1717499365952" duration="32419000" />
     </task>
     <servers />
   </component>

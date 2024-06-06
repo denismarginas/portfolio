@@ -13,13 +13,13 @@ endif;
 <section class="dm-catalog-categories">
     <container>
         <div>
-            <h2 data-motion="transition-fade-0">
+            <h2 data-motion="transition-fade-0 transition-slideInTop-0">
                 <?php echo $categoriesData["title"]; ?>
             </h2>
             <?php if( isset($categoriesData["categories"]) && !empty($categoriesData["categories"])) : ?>
                 <ul>
                     <?php foreach ($categoriesData["categories"] as $category) : ?>
-                        <li data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.5s" data-delay="0.2s">
+                        <li data-motion="transition-fade-0 transition-slideInTop-0" data-duration="0.5s" data-delay="0.2s">
                             <div class="category-card">
 
                                 <?php if( isset($categoriesData["overlay-img"]) && isset($categoriesData["overlay-img-path"]) ) :

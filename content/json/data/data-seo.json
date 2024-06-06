@@ -126,6 +126,7 @@
         },
         "hero": {
             "title": "Projects",
+            "description": "List of projects I have created or I was involved in, featuring designs and functionality of websites and photo-video media content.",
             "bg_img_path": "backgrounds",
             "bg_img": "bg-projects.webp"
         }

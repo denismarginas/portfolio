@@ -383,7 +383,7 @@ function renderVideoMedia($post_data) {
 
                     foreach ($video_items as $video_item) {
                         $video_path = $video_media_path.$directoryName."/".$video_item;
-                        $video_media_content .=  "<li class='dm-media-video-item' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderVideo($video_path,$logo_path, $thumbnail_bg)."</li>";
+                        $video_media_content .=  "<li class='dm-media-video-item' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderVideo($video_path, $logo_path, $thumbnail_bg)."</li>";
                     }
                     $video_media_content .= "</ul>";
                 }
@@ -394,7 +394,7 @@ function renderVideoMedia($post_data) {
 
             foreach ($video_files as $video_file) {
                 $video_path = $video_media_path.$video_file;
-                $video_media_content .=  "<li class='dm-media-video-item' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderVideo($video_path,$logo_path, $thumbnail_bg)."</li>";
+                $video_media_content .=  "<li class='dm-media-video-item' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderVideo($video_path, $logo_path, $thumbnail_bg)."</li>";
 
             }
 

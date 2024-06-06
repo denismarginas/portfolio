@@ -1,37 +1,89 @@
+<?php
+
+if(!isset($jsonGlobalData)) :
+    $jsonGlobalData = getDataJson('data-global-settings', 'data');
+endif;
+
+if(!isset($jsonDataWebDevExperience)) :
+    $jsonDataWebDevExperience = getDataJson('data-content-personal', 'data')["work-experience"]["web-development-section"];
+endif;
+
+?>
+
 <section class="dm-web-development-description">
     <container>
-        <ul>
-            <li>
-                <div class="dm-description-item">
-                    <h3 data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.3s" data-delay="0s">DESIGN</h3>
-                    <p data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.3s" data-delay="0.3s">
-                        I can create a responsive website using HTML and CSS/SCSS to ensure that all your pages look and fit perfectly on every device. Additionally, you have the freedom to choose any theme or design that you would like to implement according to your preferences.</p>
-                </div>
-                <div class="dm-description-item">
-                    <h3 data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.3s" data-delay="0.2s">SEO</h3>
-                    <p data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.3s" data-delay="0.5s">
-                        Boost your website's search engine traffic with my SEO expertise. I'll optimize all pages with keyword-specific meta titles and descriptions, and generate a sitemap for improved visibility.</p>
-                </div>
-            </li>
-            <li>
-                <section class="dm-web-responsive" data-motion="transition-fade-0">
-                    <img width="320px" height="260" class="dm-laptop-responsive" src="<?php echo $GLOBALS['urlPath']; ?>content/img/design-elements/website-responsive-laptop.webp" alt="Web Development Responsive Design">
-                    <img width="320px" height="260" class="dm-tablet-responsive" data-animation="dm-scroll" src="<?php echo $GLOBALS['urlPath']; ?>content/img/design-elements/website-responsive-tablet.webp" alt="Web Development Responsive Design">
-                    <img width="320px" height="260" class="dm-phone-responsive" data-animation="dm-scroll" src="<?php echo $GLOBALS['urlPath']; ?>content/img/design-elements/website-responsive-phone.webp"  alt="Web Development Responsive Design">
-                </section>
-            </li>
-            <li>
-                <div class="dm-description-item">
-                    <h3 data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.3s" data-delay="0.2s">DEVELOPMENT</h3>
-                    <p data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.3s" data-delay="0.5s">
-                        I specialize in implementing modules, developing web applications, and creating functions for platforms such as Prestashop and WordPress. My expertise covers a range of languages including PHP, TPL, HTML, CSS, JavaScript, and MySQL.</p>
-                </div>
-                <div class="dm-description-item">
-                    <h3 data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.3s" data-delay="0s">SUPPORT</h3>
-                    <p data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.3s" data-delay="0.3s">I offer comprehensive solutions and assistance for all your project needs, helping you achieve the desired results. For further information, please use the contact form available on the website's contact page.</p>
-                </div>
-            </li>
-        </ul>
+        <?php if( isset($jsonDataWebDevExperience) and !empty($jsonDataWebDevExperience)) : ?>
+
+            <ul>
+                <?php
+
+                $text_list = $jsonDataWebDevExperience["text-list"];
+                $img_path = $jsonDataWebDevExperience["img-path"];
+                $img_laptop = $jsonDataWebDevExperience["img-list"]["img-laptop"];
+                $img_tablet = $jsonDataWebDevExperience["img-list"]["img-tablet"];
+                $img_phone = $jsonDataWebDevExperience["img-list"]["img-phone"];
+
+                if( isset($text_list)) :
+
+                    $middle = (int) (count($text_list) / 2);
+
+                    foreach ($text_list as $key => $item) : ?>
+
+                        <?php if( $key == $middle ): ?>
+                            <li>
+                                <section class="dm-web-responsive" data-motion="transition-fade-0">
+                                    <?php
+
+                                    if (isset($img_path) && isset($img_laptop) ) :
+                                        $img_laptop = $GLOBALS['urlPath']."content/img/".$img_path."/".$img_laptop;
+                                        echo renderImage($img_laptop, false,"dm-laptop-responsive");
+                                    endif;
+
+                                    if (isset($img_path) && isset($img_tablet) ) :
+                                        $img_tablet = $GLOBALS['urlPath']."content/img/".$img_path."/".$img_tablet;
+                                        echo renderImage($img_tablet, false,"dm-tablet-responsive");
+                                    endif;
+
+                                    if (isset($img_path) && isset($img_phone) ) :
+                                        $img_phone = $GLOBALS['urlPath']."content/img/".$img_path."/".$img_phone;
+                                        echo renderImage($img_phone, false,"dm-phone-responsive");
+                                    endif;
+
+                                    ?>
+                                </section>
+                            </li>
+                        <?php endif; ?>
+
+                        <?php if(( $key == 0 ) || ( $key == $middle )): ?>
+                            <li>
+                        <?php endif; ?>
+
+                        <div class="dm-description-item">
+
+                            <?php if( isset($item["title"]) ): ?>
+                                <h3 data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.3s" data-delay="<?php echo $key*0.05; ?>s">
+                                    <?php echo $item["title"]; ?>
+                                </h3>
+                            <?php endif; ?>
+
+                            <?php if( isset($item["description"]) ): ?>
+                                <p data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.3s" data-delay="<?php echo $key*0.1; ?>s">
+                                    <?php echo $item["description"]; ?>
+                                </p>
+                            <?php endif; ?>
+
+                        </div>
+
+                        <?php if(( $key == $middle ) || ( $key == count($text_list) - 1 )): ?>
+                            </li">
+                        <?php endif; ?>
+
+                    <?php endforeach;
+                endif; ?>
+            </ul>
+
+        <?php endif; ?>
+
     </container>
     <?php
 

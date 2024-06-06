@@ -47,6 +47,14 @@
 	"cards-categories": [
 		{
 			"type": "page",
+			"page": "blog-activity",
+			"name": "Blog Activity",
+			"svg": "projects",
+			"background-img": "overlay-texture-textile.webp",
+			"background-img-path": "/design-elements/"
+		},
+		{
+			"type": "page",
 			"page": "workstation",
 			"name": "Personal Workstation",
 			"svg": "workstation",
@@ -66,14 +74,6 @@
 			"page": "education-experience",
 			"name": "Education Experience",
 			"svg": "resume",
-			"background-img": "overlay-texture-textile.webp",
-			"background-img-path": "/design-elements/"
-		},
-		{
-			"type": "page",
-			"page": "blog-activity",
-			"name": "Blog Activity",
-			"svg": "projects",
 			"background-img": "overlay-texture-textile.webp",
 			"background-img-path": "/design-elements/"
 		},
@@ -473,6 +473,51 @@
 				"title": "Chat GPT"
 			}
 		]
+	},
+	"work-experience": {
+		"title": "WORK",
+		"subtitle": "EXPERIENCE",
+		"description": "Since 2019, I have actively immersed myself in numerous web projects, collaborating with diverse companies to create a wide range of online solutions. Throughout this period, my expertise has encompassed the development of presentation sites, online stores, web applications, SEO optimization, as well as web design.",
+		"img-path": "design-elements",
+		"img-preview": "portfolio-experience-image.webp",
+		"buttons": [
+			{
+				"button_text": "More Details",
+				"button_page_redirect": "Experience",
+				"button_page_redirect_slug": "experience"
+			}
+		],
+		"web-development-section": {
+			"text-list": [
+				{
+					"title": "DESIGN",
+					"description": "I can create a responsive website using HTML and CSS/SCSS to ensure that all your pages look and fit perfectly on every device. Additionally, you have the freedom to choose any theme or design that you would like to implement according to your preferences."
+	
+				},
+				{
+					"title": "SEO",
+					"description": "Boost your website's search engine traffic with my SEO expertise. I'll optimize all pages with keyword-specific meta titles and descriptions, and generate a sitemap for improved visibility."
+	
+				},
+				{
+					"title": "DEVELOPMENT",
+					"description": "I specialize in implementing modules, developing web applications, and creating functions for platforms such as Prestashop and WordPress. My expertise covers a range of languages including PHP, TPL, HTML, CSS, JavaScript, and MySQL."
+	
+				},
+				{
+					"title": "SUPPORT",
+					"description": "I offer comprehensive solutions and assistance for all your project needs, helping you achieve the desired results. For further information, please use the contact form available on the website's contact page."
+	
+				}
+			],
+			"img-path": "design-elements",
+			"img-list": {
+				"img-laptop": "website-responsive-laptop.webp",
+				"img-tablet": "website-responsive-tablet.webp",
+				"img-phone": "website-responsive-phone.webp"
+			}
+
+		}
 	},
 	"project-info": {
 		"dates": {

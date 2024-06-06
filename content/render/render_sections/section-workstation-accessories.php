@@ -17,6 +17,7 @@ $products = $jsonWorkstationData["setups"]["setup 1"]["accessories"];
     <svg class="dm-background-wave" data-svg-type="fill" viewBox="0 0 1440 190">
         <path fill-opacity="1" d="M0,160L60,138.7C120,117,240,75,360,69.3C480,64,600,96,720,117.3C840,139,960,149,1080,154.7C1200,160,1320,160,1380,160L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
     </svg>
+
     <container>
         <ul>
             <li data-motion="transition-fade-0 transition-slideInRight-0">
@@ -53,10 +54,15 @@ $products = $jsonWorkstationData["setups"]["setup 1"]["accessories"];
 
             <?php foreach ($products as $key => $product): ?>
                 <div class="product" id="<?php echo $key; ?>" data-motion="transition-fade-0 transition-slideInRight-0">
+
                     <div class="product-image">
                         <?php echo renderImage($GLOBALS['urlPath']."content/img/".$path."/".$product["img-src"]); ?>
                     </div>
-                    <span><?php echo $product["name"]; ?></span>
+
+                    <span>
+                        <?php echo $product["name"]; ?>
+                    </span>
+
                 </div>
             <?php endforeach; ?>
 
