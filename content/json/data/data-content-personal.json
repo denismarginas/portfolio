@@ -533,5 +533,46 @@
 		"copyright": {
 			"text": "©All copyrights reserved by Denis Marginas"
 		}
+	},
+	"hobby": {
+		"title": "List of hobbies",
+		"img-path": "hobby",
+		"list": [
+			{
+				"name": "Video Games",
+				"icon-svg": "hobby-video-games",
+				"img": "hobby-video-games.webp"
+			},
+			{
+				"name": "Cycling",
+				"icon-svg": "hobby-cycling",
+				"img": "hobby-cycling.webp"
+			},
+			{
+				"name": "Table Tennis",
+				"icon-svg": "hobby-ping-pong",
+				"img": "hobby-ping-pong.webp"
+			},
+			{
+				"name": "Photo Editing",
+				"icon-svg": "hobby-photo-editing",
+				"img": "hobby-photo-editing.webp"
+			},
+			{
+				"name": "Video Editing",
+				"icon-svg": "hobby-video-editing",
+				"img": "hobby-video-editing.webp"
+			},
+			{
+				"name": "Web Design",
+				"icon-svg": "hobby-web-design",
+				"img": "hobby-web-design.webp"
+			},
+			{
+				"name": "Computer Hardware",
+				"icon-svg": "hobby-computer-hardware",
+				"img": "hobby-computer-hardware.webp"
+			}
+		]
 	}
 }

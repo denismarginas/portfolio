@@ -15,7 +15,7 @@ $renderer_structure->header($seo);
 
 
 $renderer_sections->renderSection('about', "standard");
-
+$renderer_sections->renderSection('hobby-list');
 
 
 // Function Footer

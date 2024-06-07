@@ -136,7 +136,7 @@
           top: 45px;
           right: 0%;
           left: 0%;
-          filter: drop-shadow(5px 5px 6px #222);
+          filter: drop-shadow(5px 5px 6px var( --dm-color-gray ));
           border: 0px solid rgba(var( --dm-color-white-rgb ), 0);
           border-radius: 0%;
           background-color: rgba( var( --dm-color-primary-rgb ), 0 );
