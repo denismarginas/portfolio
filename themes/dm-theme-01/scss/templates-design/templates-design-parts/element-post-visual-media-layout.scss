@@ -1,0 +1,109 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+
+
+.dm-post-item-media {
+  > .dm-post-view {
+    position: relative;
+    box-sizing: border-box;
+    width: 300px;
+    max-width: 100%;
+    background-color: var( --dm-color-white );
+    padding: 8px 8px 18px 8px;
+    box-shadow: 3px 3px 6px rgba(var( --dm-color-gray-darken-rgb ), 0.4);
+
+    .photo {
+      overflow: hidden;
+      position: relative;
+      border: 1px solid rgba(var( --dm-color-gray-lighten-rgb ), 0.4);
+      height: 150px;
+      z-index: 1;
+
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.8;
+      }
+
+      .logo {
+        @include flex-center();
+        z-index: 1;
+        box-sizing: border-box;
+        position: absolute;
+        bottom: 0%;
+        top: 20%;
+        left: 10%;
+        right: 10%;
+        width: 100px;
+        height: 100px;
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 50%;
+        padding: 18px;
+        opacity: 1;
+        box-shadow: 3px 3px 6px rgba(var( --dm-color-gray-darken-rgb ), 0.4);
+
+        > img {
+          width: 80px;
+          height: auto;
+          max-width: 100%;
+        }
+      }
+      .bg-overlay-color {
+        position: absolute;
+        z-index: 0;
+        bottom: -10%;
+        top: 50%;
+        left: -80%;
+        right: 0;
+        width: 200%;
+        height: 100%;
+        transform: rotate(29deg);
+        box-shadow: 3px -3px 8px rgba(var(--dm-color-gray-darken-rgb), 0.3);
+      }
+    }
+    > .texture {
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.6;
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-medium) {
+    > .dm-post-view {
+      > .photo {
+        > .logo {
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-large) {
+    > .dm-post-view {
+      padding: 8px 8px 28px 8px;
+
+      > .photo {
+        height: 120px;
+      }
+    }
+    > .dm-post-item-details {
+      > .dm-post-item-heading {
+        > .dm-post-item-date {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+
+
+

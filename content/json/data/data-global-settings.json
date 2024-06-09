@@ -33,6 +33,83 @@
     "theme-active": {
         "dir-name": "dm-theme-01",
         "url-path": "",
-        "html-render-path": ""
+        "html-render-path": "",
+        "header": {
+            "block-1": "logo",
+            "block-2": "menu"
+        },
+        "footer": {
+            "block-1": {
+                "class": "dm-footer-contact",
+                "title": "CV English",
+                "list": [
+                    {
+                        "text": "CV English",
+                        "url": "content/cv/cv-2/dm-cv-2-english-public-compressed.pdf",
+                        "icon": "resume"
+                    },
+                    {
+                        "text": "CV Romanian",
+                        "url": "content/cv/cv-2/dm-cv-2-romana-public-compressed.pdf",
+                        "icon": "resume"
+                    },
+                    {
+                        "text": "Contact Form",
+                        "url": "https://docs.google.com/forms/d/e/1FAIpQLSdkMKYQyLa4H7yxU7RMUK97urwK5LMvbk-dFs9-wKpCRCO_Ng/viewform",
+                        "icon": "form"
+                    }
+                ]
+            },
+            "block-2": {
+                "class": "dm-footer-catalog",
+                "title": "Categories",
+                "list": "projects"
+            },
+            "block-3": {
+                "class": "dm-socials-footer",
+                "title": "Socials",
+                "list": [
+                    {
+                        "text": "Web Development Projects",
+                        "url": "https://www.youtube.com/channel/UCZGb7hnkyawMgnSO9T-rnnQ",
+                        "icon": "socials-youtube"
+                    },
+                    {
+                        "text": "Visual Media Projects",
+                        "url": "https://www.facebook.com/denismarginas09",
+                        "icon": "socials-facebook"
+                    },
+                    {
+                        "text": "https://www.linkedin.com/in/denismarginas09/",
+                        "url": "miscellaneous-projects",
+                        "icon": "socials-linkedin"
+                    },
+                    {
+                        "text": "https://twitter.com/DenisMarginas",
+                        "url": "miscellaneous-projects",
+                        "icon": "socials-twitter"
+                    },
+                    {
+                        "text": "https://sites.google.com/view/denis-marginas",
+                        "url": "miscellaneous-projects",
+                        "icon": "socials-google-site"
+                    },
+                    {
+                        "text": "https://github.com/denismarginas",
+                        "url": "miscellaneous-projects",
+                        "icon": "socials-github"
+                    }
+                ]
+            },
+            "block-4": {
+                "class": "dm-footer-copyrights",
+                "title": "Copyrights",
+                "list": [
+                    "Beginning of the website: 04.06.2023",
+                    "Last update of website: <?php echo date('d.m.Y') ?>",
+                    "©All copyrights reserved by Denis Marginas"
+                ]
+            }
+        }
     }
 }

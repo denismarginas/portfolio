@@ -446,12 +446,13 @@ function renderLogoPost($post_data, $popup = false, $class = false, $lazyLoad = 
 }
 
 function renderTextVisualMediaPost($post_type = null, $media_path = null, $tags = null) {
+    $src_current = __DIR__ . "/../../../";
     $media_string = "";
     $img_and_video_text = "";
 
     if (isset($media_path) and isset($post_type)) {
-        $img_path = $GLOBALS['urlPath']."content/img/".$post_type."/".$media_path."/media/";
-        $vid_path = $GLOBALS['urlPath']."content/vid/".$post_type."/".$media_path."/";
+        $img_path = $src_current.$GLOBALS['urlPath']."content/img/".$post_type."/".$media_path."/media/";
+        $vid_path =$src_current.$GLOBALS['urlPath']."content/vid/".$post_type."/".$media_path."/";
 
         if (file_exists($img_path)) {
             $nr_img = countFilesInFolder($img_path);

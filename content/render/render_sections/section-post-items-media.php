@@ -8,6 +8,8 @@ if(!isset($posts)) :
     $posts = getDataJson('index-data-posts-projects', 'index');
 endif;
 
+$src_current = __DIR__ . "/../../../";
+
 ?>
 
 <section class="dm-posts-list grid-background-animation">
@@ -32,35 +34,70 @@ endif;
                                 $shine_animation = 'data-animation="shine"';
                             endif; ?>
 
-                            <a class="dm-post-item-logo" href="<?php echo $post_path; ?>#visualmedia" <?php echo $shine_animation; ?>
-                               style="background-color: <?php echo $post_data["colors"]["post_color_background"]; ?>;">
+                            <?php
+                            $media_image_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/media/";
+                            $media_texture_image = $GLOBALS['urlPath']."content/img/design-elements/overlay-texture-paper.webp";
 
-                                <?php echo  renderLogoPost($post_data); ?>
+                            if(file_exists($src_current.$media_image_path)) :
+                                $dirs = getDirectoriesInFolder($src_current.$media_image_path);
+                                $get_web_image = [];
+                                $dir_image_path ="";
 
-                                <?php
-                                $media_image_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/media/";
-
-                                if(file_exists($media_image_path)) :
-                                    $dirs = getDirectoriesInFolder($media_image_path);
-                                    $get_web_image = [];
-                                    $dir_image_path ="";
-
-                                    foreach ($dirs as $dir) :
-                                        $get_web_image = getImagesInFolder($media_image_path.$dir."/");
-                                        if ( count($get_web_image) > 0) :
-                                            $dir_image_path = $dir."/";
-                                            break;
-                                        endif;
-                                    endforeach;
-
-                                    if(!empty( count($get_web_image) > 0 )) :
-                                        $web_image = $get_web_image[0];
-                                        echo renderImage($media_image_path.$dir_image_path.$web_image);
+                                foreach ($dirs as $dir) :
+                                    $get_web_image = getImagesInFolder($src_current.$media_image_path.$dir."/");
+                                    if ( count($get_web_image) > 0) :
+                                        $dir_image_path = $dir."/";
+                                        break;
                                     endif;
+                                endforeach;
 
+                                if(!empty( count($get_web_image) > 0 )) :
+                                    $web_image = $get_web_image[0];
+                                    $first_img = $media_image_path.$dir_image_path.$web_image;
                                 endif;
-                                ?>
-                            </a>
+
+                            endif;
+                            ?>
+
+                            <?php if(isset($first_img)) : ?>
+
+                                <a class="dm-post-view" href="<?php echo $post_path; ?>#visualmedia">
+                                    <div class="photo"
+                                         style="background-color: <?php echo $post_data["colors"]["post_color_background"]; ?>;">
+                                        <?php echo renderImage($first_img); ?>
+
+                                        <div class="logo"
+                                             style="background-color: <?php echo $post_data["colors"]["post_color_background"]; ?>;">
+                                            <?php echo  renderLogoPost($post_data); ?>
+                                        </div>
+
+                                        <div class="bg-overlay-color"
+                                             style="background-color: <?php echo $post_data["colors"]["post_color_background"]; ?>;">
+                                        </div>
+
+                                    </div>
+
+                                    <?php if (isset($media_texture_image)) :
+                                        echo renderImage($media_texture_image, false, "texture");
+                                    endif; ?>
+
+                                </a>
+
+                            <?php else: ?>
+
+                                <a class="dm-post-item-logo" href="<?php echo $post_path; ?>#visualmedia" <?php echo $shine_animation; ?>
+                                   style="background-color: <?php echo $post_data["colors"]["post_color_background"]; ?>;">
+
+                                    <?php echo  renderLogoPost($post_data); ?>
+
+                                    <?php if (isset($first_img)) :
+                                        echo renderImage($first_img);
+                                    endif; ?>
+
+                                </a>
+
+                            <?php endif; ?>
+
                             <div class="dm-post-item-details">
                                 <ul class="dm-post-item-categories">
                                     <?php foreach ($post_data["categories"] as $post_category) : ?>
@@ -72,7 +109,7 @@ endif;
                                     <?php endforeach; ?>
                                 </ul>
                                 <div class="dm-post-item-heading">
-                                    <a class="dm-post-item-title" href="<?php echo $post_path; ?>#visualmediaprojects">
+                                    <a class="dm-post-item-title" href="<?php echo $post_path; ?>#visualmedia">
                                         <?php echo $post_data["title"]; ?>
                                     </a>
                                     <?php if (isset($post_data["date"]) && !empty($post_data["date"])) : ?>

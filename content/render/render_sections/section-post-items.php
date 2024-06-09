@@ -8,6 +8,8 @@ if(!isset($posts)) :
     $posts = getDataJson('index-data-posts-projects', 'index');
 endif;
 
+$src_current = __DIR__ . "/../../../";
+
 $search_and_sort_bar = true;
 
 ?>
@@ -46,21 +48,21 @@ $search_and_sort_bar = true;
                             $web_image_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/web/home/";
                             $media_image_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/media/";
 
-                            if(file_exists($web_image_path)) :
-                                $get_web_image = getImagesInFolder($web_image_path);
+                            if(file_exists($src_current.$web_image_path)) :
+                                $get_web_image = getImagesInFolder($src_current.$web_image_path);
 
                                 if(!empty( count($get_web_image) > 0 )) :
                                     $web_image = $get_web_image[0];
                                     echo renderImage($web_image_path.$web_image);
                                 endif;
 
-                            elseif (file_exists($media_image_path)) :
-                                $dirs = getDirectoriesInFolder($media_image_path);
+                            elseif (file_exists($src_current.$media_image_path)) :
+                                $dirs = getDirectoriesInFolder($src_current.$media_image_path);
                                 $get_web_image = [];
                                 $dir_image_path ="";
 
                                 foreach ($dirs as $dir) :
-                                    $get_web_image = getImagesInFolder($media_image_path.$dir."/");
+                                    $get_web_image = getImagesInFolder($src_current.$media_image_path.$dir."/");
                                     if ( count($get_web_image) > 0) :
                                         $dir_image_path = $dir."/";
                                         break;

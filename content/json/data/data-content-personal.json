@@ -572,6 +572,11 @@
 				"name": "Computer Hardware",
 				"icon-svg": "hobby-computer-hardware",
 				"img": "hobby-computer-hardware.webp"
+			},
+			{
+				"name": "Recording Cinematics",
+				"icon-svg": "hobby-recording-cinematics",
+				"img": "hobby-recording-cinematics.webp"
 			}
 		]
 	}

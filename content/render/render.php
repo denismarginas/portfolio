@@ -55,7 +55,7 @@ RewriteRule ^([^/]+)/?$ $1.html [L]
 ";
 
 // Write .htaccess content to file
-file_put_contents($htaccessFilePath, $htaccessContent);
+//file_put_contents($htaccessFilePath, $htaccessContent);
 $log[] = "Generated .htaccess file" . PHP_EOL;
 
 // -- RENDER VIEW END --

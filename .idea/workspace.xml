@@ -2,16 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2259709f-b699-4482-a363-da52decd52d5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/content/render/render_sections/section-hobby-list.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-hobby-list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-post-visual-media-layout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-activity.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-activity.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/json/data/data-content-personal.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-content-personal.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/json/data/data-icons.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-icons.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/img/projects/agramix/media/banners-1-1/media-1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/img/projects/agramix/media/banners-1-1/media-20.webp" beforeDir="false" afterPath="$PROJECT_DIR$/content/img/projects/agramix/media/banners-1-1/media-20.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/img/projects/agromir/media/banners_gallery_1/banner_1-1_1.webp" beforeDir="false" afterPath="$PROJECT_DIR$/content/img/projects/agromir/media/banners_gallery_1/banner_1-1_1.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/img/projects/agromir/media/banners_gallery_1/banner_1-1_20.webp" beforeDir="false" afterPath="$PROJECT_DIR$/content/img/projects/agromir/media/banners_gallery_1/banner_1-1_20.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/img/projects/busvip/media/banners-1-1/banner-1-1-01.webp" beforeDir="false" afterPath="$PROJECT_DIR$/content/img/projects/busvip/media/banners-1-1/banner-1-1-01.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/img/projects/busvip/media/banners-1-1/banner-1-1-66.webp" beforeDir="false" afterPath="$PROJECT_DIR$/content/img/projects/busvip/media/banners-1-1/banner-1-1-66.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/img/projects/casadarius-shop/media/banner-1-1/banner-1-1-01.webp" beforeDir="false" afterPath="$PROJECT_DIR$/content/img/projects/casadarius-shop/media/banner-1-1/banner-1-1-01.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/img/projects/casadarius-shop/media/banner-1-1/banner-1-1-26.webp" beforeDir="false" afterPath="$PROJECT_DIR$/content/img/projects/casadarius-shop/media/banner-1-1/banner-1-1-26.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/img/projects/revelnail-avadores/media/banners_1-1/banner-1-1-01.webp" beforeDir="false" afterPath="$PROJECT_DIR$/content/img/projects/revelnail-avadores/media/banners_1-1/banner-1-1-01.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/img/projects/revelnail-avadores/media/banners_1-1/banner-1-1-25.webp" beforeDir="false" afterPath="$PROJECT_DIR$/content/img/projects/revelnail-avadores/media/banners_1-1/banner-1-1-25.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/img/projects/vseconstruct/media/banners-1-1/banner-1-1-01.webp" beforeDir="false" afterPath="$PROJECT_DIR$/content/img/projects/vseconstruct/media/banners-1-1/banner-1-1-01.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/img/projects/vseconstruct/media/banners-1-1/banner-1-1-35.webp" beforeDir="false" afterPath="$PROJECT_DIR$/content/img/projects/vseconstruct/media/banners-1-1/banner-1-1-35.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/json/data/data-global-settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-global-settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/json/data/data-posts-projects.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-posts-projects.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/json/index/index-data-pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/index/index-data-pages.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render_pages/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_pages/about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/json/index/index-data-posts-projects.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/index/index-data-posts-projects.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/functions/post-project-functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/functions/post-project-functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/render.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-post-items-media.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-post-items-media.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-post-items-miscellaneous.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-post-items-miscellaneous.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-post-items-web.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-post-items-web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-post-items.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-post-items.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/render_structure/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_structure/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/render_structure/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_structure/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/education-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/education-experience.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employee-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/employee-experience.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/experience.html" afterDir="false" />
@@ -94,9 +114,7 @@
       <change beforePath="$PROJECT_DIR$/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/summary-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/summary-experience.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/prepros.config" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/prepros.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/structure-design/body.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/structure-design/body.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-category-card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-category-card.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-post-devices.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-post-web-devices-layout.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/visual-media-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/visual-media-projects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-development-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-development-projects.html" afterDir="false" />
@@ -122,20 +140,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/xampp-php8.1/htdocs/personal-portfolio/themes/dm-theme-01/scss/templates-design/templates-design-parts",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp-php8.1/htdocs/personal-portfolio/themes/dm-theme-01/scss/templates-design/templates-design-parts&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\themes\dm-theme-01\scss\templates-design\templates-design-parts" />
-      <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\content\render\render_sections" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\content\render\render_elements" />
+      <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\content\render\render_sections" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\content\render\render_pages" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\content\render\functions" />
     </key>
@@ -148,7 +166,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717499364030</updated>
-      <workItem from="1717499365952" duration="42593000" />
+      <workItem from="1717499365952" duration="44236000" />
+      <workItem from="1717843632590" duration="16162000" />
     </task>
     <servers />
   </component>

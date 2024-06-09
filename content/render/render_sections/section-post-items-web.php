@@ -20,6 +20,8 @@ if(!isset($device_layout_img_path)) :
     $device_layout_img_path = $GLOBALS['urlPath'] . "content/img/" ."design-elements" ."/";
 endif;
 
+$src_current = __DIR__ . "/../../../";
+
 ?>
 
 <section class="dm-posts-list dm-posts-list-web grid-background-animation">
@@ -89,7 +91,7 @@ endif;
                             ) :
                                 ?>
 
-                                <a class="dm-post-view" href="<?php echo $post_path; ?>"
+                                <a class="dm-post-view" href="<?php echo $post_path; ?>#webdevelopment"
                                    style="--primary-color-post: <?php echo $post_data["colors"]["post_color_primary"]; ?>;">
                                     <div class="device-layout-laptop">
                                         <div class="screen" <?php echo $render_bg_color; ?> >
@@ -98,7 +100,9 @@ endif;
                                             <?php if(isset($render_bg_color) && !empty($render_bg_color)) : ?>
                                                 <div class="shadow-color" <?php echo $render_bg_color; ?>></div>
                                             <?php endif; ?>
+
                                         </div>
+
                                         <?php echo renderImage($device_layout_img_path . $device_layout_laptop_img, false, "laptop"); ?>
                                     </div>
                                     <?php if( $have_web_phone_image ): ?>
@@ -120,7 +124,7 @@ endif;
                                 </a>
 
                         <?php else: ?>
-                                <a class="dm-post-item-logo" href="<?php echo $post_path; ?>#web" <?php echo $shine_animation; ?>
+                                <a class="dm-post-item-logo" href="<?php echo $post_path; ?>#webdevelopment" <?php echo $shine_animation; ?>
                                    style="background-color: <?php echo $post_data["colors"]["post_color_background"]; ?>;">
 
                                     <?php echo  renderLogoPost($post_data); ?>
@@ -128,9 +132,9 @@ endif;
                                     <?php
                                     $web_image_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/web/home/";
 
-                                    if(file_exists($web_image_path)) :
+                                    if(file_exists($src_current.$web_image_path)) :
 
-                                        $get_web_image = getImagesInFolder($web_image_path);
+                                        $get_web_image = getImagesInFolder($src_current.$web_image_path);
 
                                         if(!empty( count($get_web_image) > 0 )) :
                                             $web_image = $get_web_image[0];
@@ -154,7 +158,7 @@ endif;
                                     <?php endforeach; ?>
                                 </ul>
                                 <div class="dm-post-item-heading dm-post-web-data">
-                                    <a class="dm-post-item-title" href="<?php echo $post_path; ?>#webdevelopmentprojects">
+                                    <a class="dm-post-item-title" href="<?php echo $post_path; ?>#webdevelopment">
                                         <?php echo $post_data["title"]; ?>
                                     </a>
                                     <?php if (isset($post_data["web_url"]) && !empty($post_data["web_url"])) : ?>
@@ -171,9 +175,11 @@ endif;
                                         </p>
                                     <?php endif; ?>
                                 </div>
+
                                 <p class="dm-post-item-description">
                                     <?php echo getFirstCharacters($post_data["description"], 130); ?>
                                 </p>
+
                             </div>
                         </li>
 
