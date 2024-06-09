@@ -1,11 +1,6 @@
 <?php
 
-$seo = [
-    "title" => "Miscellaneous Projects | Denis Marginas",
-    "description" => "Category: Miscellaneous Projects. Assortment of non-profit initiatives and personal passion projects, reflecting my diverse range of creative endeavors.",
-    "keywords" => "denis marginas miscellaneous projects",
-    "slug" => "miscellaneous-projects"
-];
+$seo = getSeoFromCurrentPageData(pathinfo(basename(__FILE__), PATHINFO_FILENAME));
 
 $renderer_structure = new RendererStructure();
 $renderer_sections = new RendererSections();

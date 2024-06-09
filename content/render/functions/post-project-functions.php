@@ -150,9 +150,11 @@ function getCurrentPostProjectData($fileName, $json_posts) {
 }
 
 function getSeoFromCurrentPostProjectData($postData) {
+    $stringSeoSiteName = stringSeoSiteName();
+
     if ($postData != null) {
         $seo = [
-            "title" => $postData["title"]." | Denis Marginas",
+            "title" => $postData["title"].$stringSeoSiteName,
             "description" => $postData["description"],
             "keywords" => $postData["media_path"],
             "slug" => $postData["media_path"]

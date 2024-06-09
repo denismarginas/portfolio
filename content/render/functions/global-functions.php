@@ -437,6 +437,47 @@ function getDataJson($jsonFileName, $jsonFilePathFolder = null, $extractRowNumbe
     }
 }
 
+function stringSeoSiteName() {
+    $jsonGlobalData = getDataJson('data-global-settings', 'data');
+    $siteName = $jsonGlobalData["site-identity"];
+    $stringSeoSiteName ="";
+
+    if( isset($siteName) && !empty($siteName) ) {
+        $stringSeoSiteName = " | ".$siteName;
+    }
+    return $stringSeoSiteName;
+}
+
+function getSeoFromCurrentPageData($filename) {
+    $jsonSeoData = getDataJson('data-seo', 'data');
+    $jsonGlobalData = getDataJson('data-global-settings', 'data');
+    $stringSeoSiteName = stringSeoSiteName();
+    $siteName = $jsonGlobalData["site-identity"];
+
+    if ($filename != null) {
+        foreach ($jsonSeoData as $pageData) {
+            if ($pageData['file'] === $filename) {
+
+                if( str_contains($pageData["seo"]["title"], $siteName)) {
+                    $titleSeo = $pageData["seo"]["title"];
+                } else {
+                    $titleSeo = $pageData["seo"]["title"] . $stringSeoSiteName;
+                }
+
+                $seo = [
+                  "title" => $titleSeo,
+                  "description" => $pageData["seo"]["description"],
+                  "keywords" => $pageData["seo"]["keywords"],
+                  "slug" => $pageData["seo"]["slug"]
+                ];
+                return $seo;
+            }
+        }
+    }
+
+    return null;
+}
+
 function getDataHero($filename) {
 
     if(!isset($jsonGlobalSeo)) {

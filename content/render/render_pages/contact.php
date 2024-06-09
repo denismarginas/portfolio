@@ -1,11 +1,6 @@
 <?php
 
-$seo = [
-    "title" => "Contact | Denis Marginas",
-    "description" => "You can reach me by phone on WhatsApp or through my personal email address. Contact details are provided in the section below.",
-    "keywords" => "denis marginas contact",
-    "slug" => "contact"
-];
+$seo = getSeoFromCurrentPageData(pathinfo(basename(__FILE__), PATHINFO_FILENAME));
 
 $renderer_structure = new RendererStructure();
 $renderer_sections = new RendererSections();

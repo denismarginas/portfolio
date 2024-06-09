@@ -110,6 +110,7 @@
                     "©All copyrights reserved by Denis Marginas"
                 ]
             }
-        }
+        },
+        "preloader": "true"
     }
 }

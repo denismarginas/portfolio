@@ -1,11 +1,6 @@
 <?php
 
-$seo = [
-    "title" => "Education Experience | Denis Marginas",
-    "description" => "Discover my educational journey from high school to university, including courses and diplomas attained along the way.",
-    "keywords" => "denis marginas education experience",
-    "slug" => "education-experience"
-];
+$seo = getSeoFromCurrentPageData(pathinfo(basename(__FILE__), PATHINFO_FILENAME));
 
 $renderer_structure = new RendererStructure();
 $renderer_sections = new RendererSections();

@@ -2,10 +2,19 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     function addJavaScriptAttribute() {
-        document.body.setAttribute('java-script', 'true');
+        let duration = 0;
+        const preloaderElement = document.getElementById('preloader');
+
+        if (preloaderElement) {
+            duration = 10;
+        }
+        setTimeout(() => {
+            document.body.setAttribute('java-script', 'true');
+        }, duration);
     }
     addJavaScriptAttribute();
     transitions();
+    deletePreloaderElement();
 
     // Navbar Functionality
     var navbarToggle = document.querySelector(".dm-navbar-toggle");
@@ -18,24 +27,16 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    /*
-    // - Have a conflict with 'Navbar Functionality' toggle.
-    // Custom Cursor Functionality
-    document.body.innerHTML += '<div class="cursor"></div>';
-    const cursor = document.querySelector('.cursor');
-
-    document.addEventListener('mousemove', e => {
-        cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
-    });
-
-    document.addEventListener('click', () => {
-        cursor.classList.add("expand");
+    // Delete Preloader
+    function deletePreloaderElement() {
+        const preloaderElement = document.getElementById('preloader');
 
         setTimeout(() => {
-            cursor.classList.remove("expand");
-        }, 800);
-    });
-   */
+            if (preloaderElement) {
+                preloaderElement.remove();
+            }
+        }, 500);
+    }
 
     // Scroll Gap Fix
     function scrollToTarget(targetId) {
@@ -43,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (targetElement) {
             const headerHeight = 90; // Adjust this value to match the height of your fixed header
             const offsetTop = targetElement.getBoundingClientRect().top + window.scrollY;
+
             window.scrollTo({
                 top: offsetTop - headerHeight,
                 behavior: 'smooth'
@@ -83,12 +85,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Transitions Animations
     function transitions() {
+        let duration = 50;
+        const preloaderElement = document.getElementById('preloader');
+
+        if (preloaderElement) {
+             duration = 300;
+        }
+
         setTimeout(() => {
+
             // Transitions - Motion Animations
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach((entry) => {
+
                     if (entry.isIntersecting && entry.intersectionRatio >= 1) {
                         const motion = entry.target.getAttribute('data-motion');
+
                         if (motion && motion.includes('0')) {
                             const updatedMotion = motion.replaceAll('0', '1');
                             entry.target.setAttribute('data-motion', updatedMotion);
@@ -101,18 +113,22 @@ document.addEventListener("DOMContentLoaded", function() {
             document.querySelectorAll('[data-motion]').forEach((el) => {
                 observer.observe(el);
             });
+
             const updateVisibleElements = () => {
                 const visibleElements = [];
+
                 document.querySelectorAll('[data-motion]').forEach((el) => {
                     const rect = el.getBoundingClientRect();
                     const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+
                     if (isVisible) {
                         visibleElements.push(el);
                     }
                 });
 
                 visibleElements.forEach((el) => {
-                    const motion = el.getAttribute('data-motion');
+                    const motion = el.getAttribute('data-motion')
+
                     if (motion && motion.includes('0')) {
                         const updatedMotion = motion.replaceAll('0', '1');
                         el.setAttribute('data-motion', updatedMotion);
@@ -122,8 +138,11 @@ document.addEventListener("DOMContentLoaded", function() {
             };
             window.addEventListener('scroll', updateVisibleElements);
             window.addEventListener('resize', updateVisibleElements);
+
             updateVisibleElements();
+
             const motion_data = document.querySelectorAll('[data-duration], [data-delay]');
+
             motion_data.forEach((motion_data) => {
                 const duration = motion_data.getAttribute('data-duration');
                 const delay = motion_data.getAttribute('data-delay');
@@ -131,8 +150,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 motion_data.style.setProperty('--delay', delay);
             });
 
-
-        }, 50);
+        }, duration);
     }
 
 
@@ -157,8 +175,10 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     var toggle = document.getElementById('toggleTheme');
+
     if (toggle !== null) {
         var themePreference = localStorage.getItem('theme');
+
         if (themePreference === 'dark') {
             toggle.checked = true;
             toggleTheme();
@@ -173,11 +193,13 @@ document.addEventListener("DOMContentLoaded", function() {
     var btnLog = document.querySelector('.btn-log');
     var dataLog = document.querySelector('.data-log');
     var logClose = document.querySelector('.log-close');
+
     if (( btnLog !== null ) && (dataLog !== null)) {
         dataLog.style.display = 'none';
         logClose.style.display = 'none';
         btnLog.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default link behavior
+            event.preventDefault();
+
             if (dataLog.style.display === 'none') {
                 dataLog.style.display = 'block';
                 logClose.style.display = 'block';
@@ -187,20 +209,22 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
         logClose.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default link behavior
+            event.preventDefault();
 
             dataLog.style.display = 'none';
             logClose.style.display = 'none';
         });
     }
     var btnRender = document.querySelector('.btn-render');
+
     if (btnRender !== null) {
         btnRender.addEventListener('click', function(event) {
             var renderUrl = btnRender.getAttribute('data-href');
-            event.preventDefault(); // Prevent the default link behavior
+            event.preventDefault();
             var xhr = new XMLHttpRequest();
             xhr.open('GET', renderUrl, true);
             xhr.onload = function() {
+
                 if (xhr.status === 200) {
                     location.reload();
                 } else {
@@ -212,6 +236,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Download File
     const downloadButtons = document.querySelectorAll('.downloadButton');
+
     downloadButtons.forEach(button => {
         button.addEventListener('click', function() {
             const fileUrl = this.dataset.url;
@@ -224,6 +249,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Video Controls
     const videoContainers = document.querySelectorAll(".video-container");
+
     videoContainers.forEach(videoContainer => {
         const playPauseBtn = videoContainer.querySelector(".play-pause-btn");
         const fullScreenBtn = videoContainer.querySelector(".full-screen-btn");
@@ -239,11 +265,13 @@ document.addEventListener("DOMContentLoaded", function() {
         const showPause = videoContainer.querySelector('.show-pause');
 
         document.addEventListener("keydown", e => {
-            const tagName = document.activeElement.tagName.toLowerCase()
-            if (tagName === "input") return
+            const tagName = document.activeElement.tagName.toLowerCase();
+
+            if (tagName === "input") return;
+
             switch (e.key.toLowerCase()) {
                 case " ":
-                    if (tagName === "button") return
+                    if (tagName === "button") return;
                 case "k":
                     togglePlay();
                     break;
@@ -276,6 +304,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let isFirstPlay = true;
 
         video.addEventListener("play", () => {
+
             if (isFirstPlay) {
                 controlsContainer.style.display = 'block';
                 showPlay.style.display = 'none';
@@ -288,9 +317,11 @@ document.addEventListener("DOMContentLoaded", function() {
         timelineContainer.addEventListener("mousemove", handleTimelineUpdate);
         timelineContainer.addEventListener("mousedown", toggleScrubbing);
         document.addEventListener("mouseup", e => {
+
             if (isScrubbing) toggleScrubbing(e);
         })
         document.addEventListener("mousemove", e => {
+
             if (isScrubbing) handleTimelineUpdate(e);
         })
         let isScrubbing = false;
@@ -301,6 +332,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const percent = Math.min(Math.max(0, e.x - rect.x), rect.width) / rect.width;
             isScrubbing = (e.buttons & 1) === 1
             videoContainer.classList.toggle("scrubbing", isScrubbing);
+
             if (isScrubbing) {
                 wasPaused = video.paused;
                 video.pause();
@@ -342,6 +374,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const seconds = Math.floor(time % 60);
             const minutes = Math.floor(time / 60) % 60;
             const hours = Math.floor(time / 3600);
+
             if (hours === 0) {
                 return `${minutes}:${leadingZeroFormatter.format(seconds)}`
             } else {
@@ -364,6 +397,7 @@ document.addEventListener("DOMContentLoaded", function() {
         video.addEventListener("volumechange", () => {
             volumeSlider.value = video.volume;
             let volumeLevel;
+
             if (video.muted || video.volume === 0) {
                 volumeSlider.value = 0
                 volumeLevel = "muted";
@@ -377,6 +411,7 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         fullScreenBtn.addEventListener("click", toggleFullScreenMode);
         function toggleFullScreenMode() {
+
             if (document.fullscreenElement == null) {
                 videoContainer.requestFullscreen();
             } else {
@@ -399,6 +434,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 video.play();
                 videoContainer.classList.remove("paused");
                 const thumbnailImg = videoContainer.querySelector(".thumbnail");
+
                 if (thumbnailImg) {
                     thumbnailImg.style.display = "none";
                 }
@@ -575,8 +611,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-
-
     // **************
     // Blog - See More
 
@@ -597,13 +631,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-
-
-
-
-
 });
-
 
 //Contact Form
 function contact_form_exec() {
@@ -613,7 +641,7 @@ function contact_form_exec() {
     if (!statusMessageSpan) {
         statusMessageSpan = document.createElement('span');
         statusMessageSpan.id = 'dm-send-status';
-        statusMessageSpan.innerHTML = 'The form is inactive. Use the Google Form instead.';
+        statusMessageSpan.innerHTML = 'The form is inactive. Use the the other contact methods instead.';
         buttonDiv.appendChild(statusMessageSpan);
     }
     return false;

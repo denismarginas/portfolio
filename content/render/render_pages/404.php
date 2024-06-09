@@ -9,10 +9,7 @@ $renderer_sections = new RendererSections();
 $renderer_structure->header($seo);
 
 
-$renderer_sections->renderSection('workstation-header');
-$renderer_sections->renderSection('workstation-configuration');
-$renderer_sections->renderSection('workstation-accessories');
-$renderer_sections->renderSection('workstation-video');
+$renderer_sections->renderSection('404');
 
 
 // Function Footer

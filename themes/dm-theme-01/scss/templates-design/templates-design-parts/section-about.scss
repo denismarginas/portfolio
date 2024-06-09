@@ -141,6 +141,7 @@
     @media only screen and (max-width: $screen-desktop-small) {
       > container {
         align-items: start;
+
         > div {
           &:first-of-type {
             width: 30%;

@@ -16,7 +16,7 @@ $pageData = [];
 $htmlFiles = scandir($pagesDirectory);
 
 foreach ($htmlFiles as $file) {
-    if ($file !== '.' && $file !== '..' && pathinfo($file, PATHINFO_EXTENSION) === 'html') {
+    if ($file !== '.' && $file !== '..' && pathinfo($file, PATHINFO_EXTENSION) === 'html' && pathinfo($file, PATHINFO_FILENAME) != "404" && pathinfo($file, PATHINFO_FILENAME) != "search") {
         $htmlContent = file_get_contents($pagesDirectory . $file);
 
         $dom = new DOMDocument();
@@ -65,7 +65,9 @@ foreach ($htmlFiles as $file) {
                 }
             }
         }
-        $title = removeStringFromTitle($title, " | ".$jsonGlobalData["site-identity"]);
+        $removeString = stringSeoSiteName();
+        $title = removeStringFromTitle($title, $removeString);
+
         $pageData[] = [
             'page'=> pathinfo($file, PATHINFO_FILENAME).$jsonGlobalData["page-slug-extension"],
             'meta-title' => $title,
