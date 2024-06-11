@@ -31,7 +31,7 @@ This project was built using these technologies:
 
 ## Features
 
-**📖 Multi-Content, such as Pages & Projects are render in bulk**
+**📖 Multi-Content Rendering, such as Pages & Projects are rendering in bulk**
 
 **🎨 Styled with SCSS and is easy to customize colors and fonts**
 
