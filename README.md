@@ -1,13 +1,18 @@
 <h2 align="center">
-  GitHub Portfolio Website<br/>
+  <br>GitHub Portfolio Website<br/>
   <a href="https://denismarginas.github.io/portfolio/" target="_blank">denismarginas.github.io</a>
 </h2>
+
 <div align="center">
   <img alt="Denis Marginas - GitHub Portoflio" src="./content/img/design-elements/portfolio-github.webp" />
 </div>
 
+<div align="center">
+  <p>A simple solution to create a free portfolio, offering bulk rendering of HTML pages and projects. This portfolio features a modern design with a dark-light theme switcher and is optimized for SEO.</p>
+</div>
+
 ## License
-You can fork this repository to modify and make changes of your own. Please give me proper credit by linking back to [denismarginas](https://github.com/denismarginas/portfolio/). Thanks!
+You can fork this repository to modify and make changes of your own. Please give me proper credit by linking to [denismarginas](https://github.com/denismarginas/portfolio/). Thanks!
 
 ## Built With
 
@@ -53,8 +58,9 @@ This project was built using these technologies:
     - Then, in `portfolio/themes/dm-theme-01/scss/interface-design/fonts.scss`, add the font(s).
     - Finally, use them in the `variables.scss` file by updating the variables `--dm-font-family-primary` and `--dm-font-family-secondary`.
 8. Text and Image Content Changes: Change the text and image content of pages in the `portfolio/content/json/data` directory. Several JSON files there influence the rendering content.
-9. Editing Rendering Structure: The rendering structure of pages can be edited in the `data-pages.json` file.
-10. Editing Project Data and Content: The rendering data and content of projects can be edited in the `data-posts-projects.json` file.
+11. Editing the main settings of the website can be done in `data-global-settings` file
+10. Editing Rendering Structure: The rendering structure of pages can be edited in the `data-pages.json` file.
+11. Editing Project Data and Content: The rendering data and content of projects can be edited in the `data-posts-projects.json` file.
 
 
 ## Usage In GitHub Pages 
