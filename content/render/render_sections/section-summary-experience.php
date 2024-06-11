@@ -1,4 +1,4 @@
-<section class="dm-summary-experience grid-background-animation" style="
+    <section class="dm-summary-experience grid-background-animation" style="
     --dm-color-primary: #454545 !important;
     --dm-color-secondary: #232323; !important;
     --dm-video-color-secondary: #232323 !important;

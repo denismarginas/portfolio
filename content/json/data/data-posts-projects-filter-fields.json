@@ -1,0 +1,44 @@
+[
+    {
+        "name": "category",
+        "id": "post-category",
+        "placeholder": "--select--",
+        "label": "Category:",
+        "type": "select"
+    },
+    {
+        "name": "date-end",
+        "id": "post-date-end",
+        "placeholder": "--select--",
+        "label": "Until Date:",
+        "type": "select"
+    },
+    {
+        "name": "employ",
+        "id": "post-employ",
+        "placeholder": "--select--",
+        "label": "Employee:",
+        "type": "select"
+    },
+    {
+        "name": "web-platform",
+        "id": "post-web-platform",
+        "placeholder": "--select--",
+        "label": "Web Platform:",
+        "type": "select"
+    },
+    {
+        "name": "web-technology",
+        "id": "post-web-technology",
+        "placeholder": "--select--",
+        "label": "Web Technology:",
+        "type": "select"
+    },
+    {
+        "name": "media-platform",
+        "id": "post-media-platform",
+        "placeholder": "--select--",
+        "label": "Media Platform:",
+        "type": "select"
+    }
+]

@@ -641,7 +641,7 @@ function contact_form_exec() {
     if (!statusMessageSpan) {
         statusMessageSpan = document.createElement('span');
         statusMessageSpan.id = 'dm-send-status';
-        statusMessageSpan.innerHTML = 'The form is inactive. Use the the other contact methods instead.';
+        statusMessageSpan.innerHTML = 'The form is inactive. Please use alternative contact methods.';
         buttonDiv.appendChild(statusMessageSpan);
     }
     return false;

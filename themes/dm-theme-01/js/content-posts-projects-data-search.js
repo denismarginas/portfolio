@@ -1,73 +1,28 @@
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Construct Form - Start
+    // Get Filter Json
 
-    var projectsFormId = "#post-list-sort-and-search";
+    // Get Filter Fields
+    var filterFields = [];
+    const getPageUrl = window.location.href;
+    const getPagePath = getPageUrl.substring(0, getPageUrl.lastIndexOf('/') + 1);
+    const jsonFilterFilePath = getPagePath + "content/json/data/data-posts-projects-filter-fields.json";
 
-    var filterFields = [
-        {
-            "name": "category",
-            "placeholder": "Category:",
-            "type": "select"
-        },
-        {
-            "name": "date-end",
-            "placeholder": "Until Date:",
-            "type": "select"
-        },
-        {
-            "name": "employ",
-            "placeholder": "Employee:",
-            "type": "select"
-        },
-        {
-            "name": "web-platform",
-            "placeholder": "Web Platform:",
-            "type": "select"
-        },
-        {
-            "name": "web-technology",
-            "placeholder": "Web Technology:",
-            "type": "select"
-        },
-        {
-            "name": "media-platform",
-            "placeholder": "Media Platform:",
-            "type": "select"
-        }
-    ];
-
-
-
-    var projectsForm = document.querySelector(projectsFormId);
-
-    if (projectsForm) {
-        while (projectsForm.firstChild) {
-            projectsForm.removeChild(projectsForm.firstChild);
-        }
-        var projectsFormHTML = "";
-
-        var projectsFormHTML_block1 = "";
-
-        if (filterFields) {
-            filterFields.forEach(function(field) {
-                projectsFormHTML_block1 += constructPFormField(field);
-            });
-        }
-
-        var projectsFormHTML_block2 = "";
-
-        projectsFormHTML_block2 += constructPFormFieldInputSearch();
-        projectsFormHTML_block2 += constructPFormButtonSubmit();
-
-        projectsFormHTML += '<ul>'
-        projectsFormHTML += '<li class="block-1">' + projectsFormHTML_block1 + '</li>'
-        projectsFormHTML += '<li class="block-2">' + projectsFormHTML_block2 + '</li>'
-        projectsFormHTML += '</ul>'
-
-        projectsForm.innerHTML = projectsFormHTML;
-    }
-    // Construct Form - End
+    fetch(jsonFilterFilePath)
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+          return response.json();
+      })
+      .then(data => {
+          filterFields = data;
+          constructFilterFields(filterFields);
+          console.log(filterFields);
+      })
+      .catch(error => {
+          console.error('There was a problem with the fetch operation:', error);
+      });
 
     var jsonPostsData;
 
@@ -84,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .then(data => {
             jsonPostsData = data;
+
             if (jsonPostsData !== null) {
                 var post_category = [];
                 var post_year_start_set = new Set();
@@ -238,6 +194,39 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => console.error('Error fetching JSON:', error));
 });
 
+function constructFilterFields(filterFields) {
+    var projectsFormId = "#post-list-sort-and-search";
+
+    var projectsForm = document.querySelector(projectsFormId);
+
+    if (projectsForm) {
+        while (projectsForm.firstChild) {
+            projectsForm.removeChild(projectsForm.firstChild);
+        }
+        var projectsFormHTML = "";
+
+        var projectsFormHTML_block1 = "";
+
+        if (filterFields) {
+            filterFields.forEach(function(field) {
+                projectsFormHTML_block1 += constructPFormField(field);
+            });
+        }
+
+        var projectsFormHTML_block2 = "";
+
+        projectsFormHTML_block2 += constructPFormFieldInputSearch();
+        projectsFormHTML_block2 += constructPFormButtonSubmit();
+
+        projectsFormHTML += '<ul>'
+        projectsFormHTML += '<li class="block-1">' + projectsFormHTML_block1 + '</li>'
+        projectsFormHTML += '<li class="block-2">' + projectsFormHTML_block2 + '</li>'
+        projectsFormHTML += '</ul>'
+
+        projectsForm.innerHTML = projectsFormHTML;
+    }
+}
+
 function extractYearFromDate(dateStr) {
     var regex = /\b\d{4}\b|\b\d{1,2}\/\d{4}\b|\b\d{2}\.\d{4}\b/g;
     var matches = dateStr.match(regex);
@@ -246,20 +235,24 @@ function extractYearFromDate(dateStr) {
     }
     return null;
 }
+
 function sortAsc(a, b) {
     return a.localeCompare(b);
 }
+
 function employSort(a, b) {
     if (a === "Freelancer" || a === "Unspecify") return 1;
     if (b === "Freelancer" || b === "Unspecify") return -1;
     return a.localeCompare(b);
 }
+
 function categorySort(a, b) {
     var specialCategories = ["Miscellaneous Projects"];
     if (specialCategories.includes(a)) return 1;
     if (specialCategories.includes(b)) return -1;
     return a.localeCompare(b);
 }
+
 function createOptions(selectElement, array) {
     const defaultOptionText = selectElement.getAttribute("name");
     const defaultOption = document.createElement("option");
@@ -280,6 +273,7 @@ function clearOptions(selectElement) {
         selectElement.removeChild(selectElement.firstChild);
     }
 }
+
 function handleSelect(id, array) {
     const selectElement = document.getElementById(id);
     if (selectElement) {
@@ -287,6 +281,7 @@ function handleSelect(id, array) {
         createOptions(selectElement, array);
     }
 }
+
 function includesKeyword(data, keyword) {
     if (Array.isArray(data)) {
         return data.some((item) => includesKeyword(item, keyword));
@@ -299,16 +294,28 @@ function includesKeyword(data, keyword) {
 }
 
 function constructPFormField(field) {
+    var html ='';
+    html += '<div class="filter">';
+
+    if (field["label"]) {
+        html += '<label>' + field["label"] + '</label>';
+    }
+
     if (field["type"] == 'select' && field["name"] && field["placeholder"]) {
-        var html = '<select id="post-' + field["name"] + '" name="' + field["placeholder"] + '">';
+        html += '<select id="post-' + field["name"] + '" name="' + field["name"] + '" data-placeholder-value="'  + field["placeholder"] + '">';
         html += '<option value="default">' + field["placeholder"] + '</option>';
         html += '</select>';
-        return html;
+
     }
+    html += '</div>';
+
+    return html;
 }
+
 function constructPFormFieldInputSearch() {
     return '<input id="post-keywords" class="post-search" placeholder="Search keywords...">';
 }
+
 function constructPFormButtonSubmit() {
     return '<button id="search-post" type="submit" class="post-search-submit">Search</button>';
 }

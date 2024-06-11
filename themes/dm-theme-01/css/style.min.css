@@ -7174,6 +7174,9 @@ body:not([java-script=true]) .video-container > .show-play, body:not([java-scrip
   padding: var(--dm-spacing-secondary);
   display: -ms-grid;
   display: grid;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
   -ms-grid-columns: 2fr var(--dm-spacing-secondary) 1fr;
   grid-template-columns: 2fr 1fr;
   gap: var(--dm-spacing-secondary);
@@ -7200,7 +7203,28 @@ body:not([java-script=true]) .video-container > .show-play, body:not([java-scrip
       -ms-flex-pack: end;
           justify-content: end;
 }
-#post-list-sort-and-search > ul > li > select, #post-list-sort-and-search > ul > li > input, #post-list-sort-and-search > ul > li > input:focus, #post-list-sort-and-search > ul > li > input:focus-visible {
+#post-list-sort-and-search > ul > li > .filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: calc(var(--dm-spacing-primary) / 3);
+  max-width: 150px;
+}
+#post-list-sort-and-search > ul > li > .filter > label {
+  font-family: var(--dm-font-family);
+  font-size: var(--dm-text-medium-font-size);
+  font-style: var(--dm-text-medium-font-style);
+  font-weight: var(--dm-text-medium-font-weight);
+  line-height: var(--dm-text-medium-line-height);
+  color: var(--dm-text-medium-color);
+  --dm-text-medium-color: var( --dm-color-white );
+  --dm-text-medium-font-weight: 600;
+}
+#post-list-sort-and-search > ul > li select, #post-list-sort-and-search > ul > li > input, #post-list-sort-and-search > ul > li > input:focus, #post-list-sort-and-search > ul > li > input:focus-visible {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
@@ -7219,10 +7243,10 @@ body:not([java-script=true]) .video-container > .show-play, body:not([java-scrip
   outline: none;
   word-break: break-all;
 }
-#post-list-sort-and-search > ul > li > select {
-  max-width: 150px;
+#post-list-sort-and-search > ul > li select {
+  width: 100%;
 }
-#post-list-sort-and-search > ul > li > select > option {
+#post-list-sort-and-search > ul > li select > option {
   font-family: var(--dm-font-family);
   font-size: var(--dm-text-medium-font-size);
   font-style: var(--dm-text-medium-font-style);
@@ -7236,15 +7260,15 @@ body:not([java-script=true]) .video-container > .show-play, body:not([java-scrip
   outline: none;
   word-break: break-all;
 }
-#post-list-sort-and-search > ul > li > select > option::-moz-selection {
+#post-list-sort-and-search > ul > li select > option::-moz-selection {
   background-color: var(--dm-color-white);
   --dm-text-medium-color: var( --dm-color-primary );
 }
-#post-list-sort-and-search > ul > li > select > option::selection, #post-list-sort-and-search > ul > li > select > option:checked {
+#post-list-sort-and-search > ul > li select > option::selection, #post-list-sort-and-search > ul > li select > option:checked {
   background-color: var(--dm-color-white);
   --dm-text-medium-color: var( --dm-color-primary );
 }
-#post-list-sort-and-search > ul > li > select > option:hover, #post-list-sort-and-search > ul > li > select > option:focus, #post-list-sort-and-search > ul > li > select > option:active {
+#post-list-sort-and-search > ul > li select > option:hover, #post-list-sort-and-search > ul > li select > option:focus, #post-list-sort-and-search > ul > li select > option:active {
   background-color: var(--dm-color-secondary);
   --dm-text-medium-color: var( --dm-color-white );
 }
@@ -7315,7 +7339,7 @@ body:not([java-script=true]) .video-container > .show-play, body:not([java-scrip
     grid-template-columns: repeat(1, 1fr);
     gap: var(--dm-spacing-primary);
   }
-  #post-list-sort-and-search > ul > li > select {
+  #post-list-sort-and-search > ul > li > .filter {
     max-width: unset;
     width: calc(33.3333333333% - var(--dm-spacing-primary) / 1.5);
   }
@@ -7326,11 +7350,11 @@ body:not([java-script=true]) .video-container > .show-play, body:not([java-scrip
     grid-template-columns: repeat(1, 1fr);
     gap: var(--dm-spacing-primary);
   }
-  #post-list-sort-and-search > ul > li > select {
+  #post-list-sort-and-search > ul > li > .filter {
     width: calc(33.3333333333% - var(--dm-spacing-primary) / 1.5);
     max-width: unset;
   }
-  #post-list-sort-and-search > ul > li > select:nth-child(4), #post-list-sort-and-search > ul > li > select:nth-child(5), #post-list-sort-and-search > ul > li > select:nth-child(6), #post-list-sort-and-search > ul > li > select:nth-child(7) {
+  #post-list-sort-and-search > ul > li > .filter:nth-child(4), #post-list-sort-and-search > ul > li > .filter:nth-child(5), #post-list-sort-and-search > ul > li > .filter:nth-child(6), #post-list-sort-and-search > ul > li > .filter:nth-child(7) {
     width: 100%;
   }
   #post-list-sort-and-search > ul > li > .post-search-submit {
@@ -7338,7 +7362,7 @@ body:not([java-script=true]) .video-container > .show-play, body:not([java-scrip
   }
 }
 @media only screen and (max-width: 420px) {
-  #post-list-sort-and-search > ul > li:first-of-type > select {
+  #post-list-sort-and-search > ul > li:first-of-type > .filter {
     width: 100%;
   }
   #post-list-sort-and-search > ul > li:last-of-type {

@@ -11,6 +11,7 @@
     background-color: var( --dm-color-secondary );
     padding: var( --dm-spacing-secondary );
     display: grid;
+    align-items: end;
     grid-template-columns: 2fr 1fr;
     gap: var( --dm-spacing-secondary );
 
@@ -25,7 +26,19 @@
       &:last-of-type {
         justify-content: end;
       }
-      > select, > input, > input:focus, > input:focus-visible {
+      > .filter {
+        display: flex;
+        flex-direction: column;
+        gap: calc( var( --dm-spacing-primary ) / 3 );
+        max-width: 150px;
+
+        > label {
+          @include dm-font-medium();
+          --dm-text-medium-color: var( --dm-color-white );
+          --dm-text-medium-font-weight: 600;
+        }
+      }
+      select, > input, > input:focus, > input:focus-visible {
         @include limit-line-text(1);
         @include border-radius( var( --dm-border-radius-primary ) );
         @include dm-font-medium();
@@ -35,8 +48,8 @@
         outline: none;
         word-break: break-all;
       }
-      > select {
-        max-width: 150px;
+      select {
+        width: 100%;
 
         > option {
           @include dm-font-medium();
@@ -57,6 +70,8 @@
           }
         }
       }
+
+
       > .post-search {
         width: 100%;
       }
@@ -82,7 +97,7 @@
       gap: var( --dm-spacing-primary );
 
       > li {
-        > select {
+        > .filter {
           max-width: unset;
           width: calc((100%/3) - ( var( --dm-spacing-primary ) /1.5 ) );
         }
@@ -97,7 +112,7 @@
       gap: var( --dm-spacing-primary );
 
       > li {
-        > select {
+        > .filter {
           width: calc((100%/3) - ( var( --dm-spacing-primary ) /1.5 ) );
           max-width: unset;
 
@@ -117,7 +132,7 @@
     > ul {
       > li {
         &:first-of-type {
-          > select {
+          > .filter {
             width: 100%;
           }
         }

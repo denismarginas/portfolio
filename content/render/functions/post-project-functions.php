@@ -606,14 +606,16 @@ function renderImageBlockProject($post_data ,$image_path = null, $image_file_nam
 }
 
 function renderSliderWithImagesOfProject($post_data, $img_array_path_dir) {
+    $src_current = __DIR__ . "/../../../";
     $html_content = '<div data-motion="transition-fade-0" data-duration="1.2s">';
 
     if( $img_array_path_dir != null) {
 
         $slides_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$img_array_path_dir."/";
 
-        $images = scandir($slides_path);
+        $images = scandir($src_current.$slides_path);
         $images_rendered_array = [];
+
         foreach ( $images as $image_file ) {
             if ($image_file == '.' || $image_file == '..') {
                 continue;
