@@ -63,7 +63,7 @@ This project was built using these technologies:
 11. Editing Project Data and Content: The rendering data and content of projects can be edited in the `data-posts-projects.json` file.
 
 
-## Usage In GitHub Pages 
+## 🛠 Usage In GitHub Pages 
 
 1. Create a Repository: Create a repository in your GitHub account named `portfolio`, and add your portfolio project to it.
 2. Set Repository to Public: Ensure your repository is set to public.
