@@ -2322,6 +2322,100 @@
         "layout": "wrapper-layout"
     },
     {
+        "file": "project-denismarginas-github-portfolio",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "denismarginas-github-portfolio",
+            "title": "Github Portfolio - Denis Marginas",
+            "logo": "logo/logo.png",
+            "logo_path": "denismarginas-github-portfolio",
+            "logo_type": "png",
+            "description": "Project name: GitHub Portfolio Website - Denis Marginas. A simple solution to create a free portfolio, offering bulk rendering of HTML pages and projects. This portfolio features a modern design with a dark-light theme switcher and is optimized for SEO. This project was built using these technologies: PHP, SCSS, Prepros, Java Script, HTML, CSS3, VsCode, PhpStrom, GitHub. Features: Multi-Content Rendering, such as Pages & Projects are rendering in bulk; Styled with SCSS and is easy to customize colors and fonts; Fully Responsive Design. More details in GitHub Readme.md file.",
+            "categories": [
+                "Web Development Projects",
+                "Miscellaneous Projects"
+            ],
+            "web_url": "https://denismarginas.github.io/portfolio/",
+            "web_technology": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SASS",
+                    "svg": "sass"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "TPL",
+                    "svg": "tpl"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design",
+                "personal"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "media_platforms": [
+                {
+                    "name": "Photopea",
+                    "svg": "photopea"
+                }
+            ],
+            "media_custom": [
+                {
+                    "title": "GitHub Readme: ",
+                    "url": " https://github.com/denismarginas/portfolio/blob/main/README.md"
+                },
+                {
+                    "title": "GitHub Repository: ",
+                    "url": "https://github.com/denismarginas/portfolio"
+                },
+                {
+                    "title": "GitHub Portfolio: ",
+                    "url": "https://denismarginas.github.io/portfolio/"
+                }
+            ],
+            "date": {
+                "date_start": "06.2023",
+                "date_end": "06.2024"
+            },
+            "tags": [
+                "web",
+                "content-web"
+            ],
+            "colors": {
+                "post_color_primary": "#5d6977",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#313c4a",
+                "post_color_text_on_background": "#ffffff"
+            }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+            ],
+        "layout": "wrapper-layout"
+    },
+    {
         "file": "project-dsautocenter",
         "type": "post",
         "category": "projects",
