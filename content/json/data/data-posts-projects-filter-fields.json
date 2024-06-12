@@ -4,41 +4,89 @@
         "id": "post-category",
         "placeholder": "--select--",
         "label": "Category:",
-        "type": "select"
+        "type": "select",
+        "json-path": "['post_data']['categories']",
+        "json-type": "array"
+    
     },
     {
         "name": "date-end",
         "id": "post-date-end",
         "placeholder": "--select--",
         "label": "Until Date:",
-        "type": "select"
+        "type": "select",
+        "json-path": "['post_data']['date']['date_end']",
+        "json-type": "date",
+        "json-date-search-mode": "<="
     },
     {
         "name": "employ",
         "id": "post-employ",
         "placeholder": "--select--",
         "label": "Employee:",
-        "type": "select"
+        "type": "select",
+        "json-path": "['post_data']['employer']",
+        "json-type": "string"
     },
     {
         "name": "web-platform",
         "id": "post-web-platform",
         "placeholder": "--select--",
         "label": "Web Platform:",
-        "type": "select"
+        "type": "select",
+        "json-path": "['post_data']['web_platform']",
+        "json-type": "array",
+        "json-get": "name"
     },
     {
         "name": "web-technology",
         "id": "post-web-technology",
         "placeholder": "--select--",
         "label": "Web Technology:",
-        "type": "select"
+        "type": "select",
+        "json-path": "['post_data']['web_technology']",
+        "json-type": "array",
+        "json-get": "name"
     },
     {
         "name": "media-platform",
         "id": "post-media-platform",
         "placeholder": "--select--",
         "label": "Media Platform:",
-        "type": "select"
+        "type": "select",
+        "json-path": "['post_data']['media_platforms']",
+        "json-type": "array",
+        "json-get": "name"
+    },
+    {
+        "name": "project_types",
+        "id": "post-project_types",
+        "placeholder": "--select--",
+        "label": "Project Types:",
+        "type": "select",
+        "json-path": "['post_data']['project_types']",
+        "json-type": "array"
+    
+    },
+    {
+        "name": "collaboration",
+        "id": "post-collaboration",
+        "placeholder": "--select--",
+        "label": "Collaboration:",
+        "type": "select",
+        "json-path": "['post_data']['project_collaboration']",
+        "json-type": "array"
+    
+    },
+    {
+        "name": "web_project_status",
+        "id": "post-web_project_status",
+        "placeholder": "--select--",
+        "label": "Web Project Status:",
+        "type": "select",
+        "json-path": "['post_data']['web_project_status']",
+        "json-type": "string"
+    
     }
+    
 ]

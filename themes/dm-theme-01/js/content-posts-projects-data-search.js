@@ -1,8 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Get Filter Json
+    var projectsFormId = "#post-list-sort-and-search";
 
-    // Get Filter Fields
     var filterFields = [];
     const getPageUrl = window.location.href;
     const getPagePath = getPageUrl.substring(0, getPageUrl.lastIndexOf('/') + 1);
@@ -17,14 +16,19 @@ document.addEventListener("DOMContentLoaded", function() {
       })
       .then(data => {
           filterFields = data;
-          constructFilterFields(filterFields);
-          console.log(filterFields);
+          constructFilterFields(filterFields, projectsFormId);
+
+          document.getElementById("search-post").addEventListener("click", function (event) {
+              event.preventDefault();
+              searchProjectsWithFilters(filterFields, projectsData);
+          });
+
       })
       .catch(error => {
           console.error('There was a problem with the fetch operation:', error);
       });
 
-    var jsonPostsData;
+    var projectsData;
 
     const currentPageUrl = window.location.href;
     const currentPagePath = currentPageUrl.substring(0, currentPageUrl.lastIndexOf('/') + 1);
@@ -38,165 +42,195 @@ document.addEventListener("DOMContentLoaded", function() {
             return response.json();
         })
         .then(data => {
-            jsonPostsData = data;
+            projectsData = data;
+            extractOptionsFieldsJsonProjects(filterFields, projectsData)
 
-            if (jsonPostsData !== null) {
-                var post_category = [];
-                var post_year_start_set = new Set();
-                var post_year_end_set = new Set();
-                var post_web_platform = [];
-                var post_web_technology = [];
-                var post_media_platform = [];
-                var post_employ = [];
-
-                jsonPostsData.forEach(function(item) {
-                    // Category
-                    if (item["post_data"] && 'categories' in item["post_data"]) {
-                        item["post_data"]['categories'].forEach(function(category) {
-                            if (!post_category.includes(category)) {
-                                post_category.push(category);
-                            }
-                        });
-                    }
-                    // Employ
-                    if (item["post_data"] && 'employer' in item["post_data"] && !post_employ.includes(item["post_data"]['employer'])) {
-                        post_employ.push(item["post_data"]['employer']);
-                    }
-                    // Date
-                    if (item["post_data"] && 'date' in item["post_data"]) {
-                        var dateObj = item["post_data"]['date'];
-
-                        if (dateObj['date_start'] && 'date_start' in dateObj) {
-                            var yearStart = extractYearFromDate(dateObj['date_start']);
-                            if (yearStart !== null) {
-                                post_year_start_set.add(yearStart);
-                            }
-                        }
-
-                        if (dateObj['date_end'] && 'date_end' in dateObj) {
-                            var yearEnd = extractYearFromDate(dateObj['date_end']);
-                            if (yearEnd !== null) {
-                                post_year_end_set.add(yearEnd);
-                            }
-                        }
-                    }
-
-                    // Web Languages
-                    if (item["post_data"] && 'web_technology' in item["post_data"]) {
-                        item["post_data"]['web_technology'].forEach(function(technology) {
-                            var technologyName = technology.name;
-                            if (!post_web_technology.includes(technologyName)) {
-                                post_web_technology.push(technologyName);
-                            }
-                        });
-                    }
-
-                    // Web Platforms
-                    if (item["post_data"] && 'web_platform' in item["post_data"]) {
-                        item["post_data"]['web_platform'].forEach(function(platform) {
-                            var platformName = platform.name;
-                            if (!post_web_platform.includes(platformName)) {
-                                post_web_platform.push(platformName);
-                            }
-                        });
-                    }
-
-                    // Media Platform
-                    if (item["post_data"] && 'media_platforms' in item["post_data"]) {
-                        item["post_data"]['media_platforms'].forEach(function(platform) {
-                            var platformName = platform.name;
-                            if (!post_media_platform.includes(platformName)) {
-                                post_media_platform.push(platformName);
-                            }
-                        });
-                    }
-                });
-
-                var post_year_start = Array.from(post_year_start_set).sort(sortAsc);
-                var post_year_end = Array.from(post_year_end_set).sort(sortAsc);
-                post_category.sort(sortAsc).sort(categorySort);
-                post_web_platform.sort(sortAsc);
-                post_web_technology.sort(sortAsc);
-                post_media_platform.sort(sortAsc);
-                post_employ.sort(sortAsc).sort(employSort);
-
-            }
-            var postListSortAndSearchElement = document.getElementById("post-list-sort-and-search");
-
-
-            handleSelect("post-category", post_category);
-            handleSelect("post-date-end", post_year_end);
-            handleSelect("post-employ", post_employ);3
-            handleSelect("post-web-platform", post_web_platform);
-            handleSelect("post-web-technology", post_web_technology);
-            handleSelect("post-media-platform", post_media_platform);
-
-            document.getElementById("search-post").addEventListener("click", function (event) {
-                event.preventDefault();
-
-                // Get the selected values from the select elements
-                const selectedCategory = document.getElementById("post-category").value.toLowerCase();
-                const selectedDate = document.getElementById("post-date-end").value;
-                const selectedEmploy = document.getElementById("post-employ").value.toLowerCase();
-                const selectedWebPlatform = document.getElementById("post-web-platform").value;
-                const selectedWebLanguage = document.getElementById("post-web-technology").value;
-                const selectedMediaPlatform = document.getElementById("post-media-platform").value;
-                const searchKeywords = document.getElementById("post-keywords").value.toLowerCase();
-
-                // Iterate through the jsonPostsData and filter the posts
-                const postList = document.getElementById("post-list");
-                const posts = postList.getElementsByClassName("dm-post-item");
-                for (let i = 0; i < jsonPostsData.length; i++) {
-                    const postData = jsonPostsData[i]["post_data"];
-                    const postCategories = postData["categories"] || []; // No need to convert categories to lowercase
-                    const postEmploy = (postData["employer"] || "").toLowerCase();
-                    const postWebPlatform = (postData["web_platform"] || []).map(item => item.name);
-                    const postWebLanguage = (postData["web_technology"] || []).map(item => item.name);
-                    const postMediaPlatform = (postData["media_platforms"] || []).map(item => item.name);
-                    const postDateEnd = postData["date"] ? postData["date"]["date_end"]  : "";
-                    const postDateStart = postData["date"]  ? postData["date"]["date_start"] : "";
-
-                    // Convert the selected date and post date to numeric years for comparison
-                    const selectedYear = selectedDate !== "default" ? parseInt(extractYearFromDate(selectedDate)) : null;
-                    const postYear = postDateEnd ? parseInt(extractYearFromDate(postDateEnd)) : null;
-                    const postStartYear = postDateStart ? parseInt(extractYearFromDate(postDateStart)) : null;
-
-                    // Check if the post meets the search criteria
-                    const selectedCategoryLowercase = selectedCategory.toLowerCase();
-                    const matchCategory = selectedCategory === "default" || postCategories.some(category => category.toLowerCase() === selectedCategoryLowercase);
-                    const matchDate = selectedDate === "default" ||
-                        (selectedYear &&
-                            ((postYear && selectedYear <= postYear) && (postStartYear && selectedYear >= postStartYear)));
-                    const matchEmploy = selectedEmploy === "default" || postEmploy.includes(selectedEmploy);
-
-                    // Adjust for fields that might not exist in the post datax`R
-                    const matchWebPlatform = !selectedWebPlatform || selectedWebPlatform === "default" || postWebPlatform.includes(selectedWebPlatform);
-                    const matchWebLanguage = !selectedWebLanguage || selectedWebLanguage === "default" || postWebLanguage.includes(selectedWebLanguage);
-                    const matchMediaPlatform = !selectedMediaPlatform || selectedMediaPlatform === "default" || postMediaPlatform.includes(selectedMediaPlatform);
-
-                    // Check if the keywords match any field in the postData object
-                    const matchKeywords =
-                        !searchKeywords ||
-                        includesKeyword(postData, searchKeywords.toLowerCase());
-
-
-                    if (posts[i]) {
-                        // Show/hide the post based on the search result
-                        posts[i].style.display = matchCategory && matchDate && matchEmploy && matchWebPlatform && matchWebLanguage && matchMediaPlatform && matchKeywords ? "flex" : "none";
-
-                        // Update the data-motion attribute
-                        const dataMotionValue = "transition-fade-1 transition-slideInLeft-1";
-                        posts[i].setAttribute("data-motion", dataMotionValue);
-                    }
-                }
-            });
         })
         .catch(error => console.error('Error fetching JSON:', error));
 });
 
-function constructFilterFields(filterFields) {
-    var projectsFormId = "#post-list-sort-and-search";
+function searchProjectsWithFilters(filterFields, projectsData) {
+    if (!projectsData) {
+        console.error("Error: projectsData is empty or undefined.");
+        return;
+    }
 
+    if (!filterFields || !Array.isArray(filterFields)) {
+        console.error("Error: filterFields is empty or not an array.");
+        return;
+    }
+
+    const filterValues = {};
+
+    filterFields.forEach(filter => {
+        const id = filter.id;
+        const element = document.getElementById(id);
+        if (element) {
+            filterValues[id] = element.value.toLowerCase();
+        }
+    });
+
+    const searchKeywordsElement = document.getElementById("post-keywords");
+    const searchKeywords = searchKeywordsElement ? searchKeywordsElement.value.toLowerCase() : "";
+
+    const projectList = document.getElementById("post-list");
+    const projects = projectList.getElementsByClassName("dm-post-item");
+
+    for (let i = 0; i < projectsData.length; i++) {
+        const postData = projectsData[i]["post_data"];
+        let isVisible = true;
+
+        filterFields.forEach(filter => {
+            const id = filter.id;
+            const filterValue = filterValues[id];
+            const fieldValue = getValueFromJsonPath(projectsData[i], filter["json-path"]);
+
+            if (fieldValue) {
+                if (filter["json-type"] === "array" && Array.isArray(fieldValue)) {
+
+                    const valuesArray = fieldValue.map(item => filter["json-get"] ? item[filter["json-get"]].toLowerCase() : item.toLowerCase());
+                    if (!valuesArray.includes(filterValue) && filterValue !== "default" && filterValue !== "") {
+                        isVisible = false;
+                    }
+                }
+                else if(filter["json-type"] == "string") {
+
+                    const singleValue = filter["json-get"] ? fieldValue[filter["json-get"]].toLowerCase() : fieldValue.toLowerCase();
+
+                    if (singleValue !== filterValue && filterValue !== "default" && filterValue !== "") {
+                        isVisible = false;
+                    }
+                }
+                else if (filter["json-type"] == "date") {
+                    const projectYear = extractYearFromDate(fieldValue);
+                    const filterYear = extractYearFromDate(filterValue);
+
+                    if (projectYear && filterYear) {
+                        switch (filter["json-date-search-mode"]) {
+                            case "<":
+                                if (parseInt(projectYear) >= parseInt(filterYear)) {
+                                    isVisible = false;
+                                }
+                                break;
+                            case ">":
+                                if (parseInt(projectYear) <= parseInt(filterYear)) {
+                                    isVisible = false;
+                                }
+                                break;
+                            case "<=":
+                                if (parseInt(projectYear) > parseInt(filterYear)) {
+                                    isVisible = false;
+                                }
+                                break;
+                            case ">=":
+                                if (parseInt(projectYear) < parseInt(filterYear)) {
+                                    isVisible = false;
+                                }
+                                break;
+                            case "=":
+                            default:
+                                if (parseInt(projectYear) !== parseInt(filterYear)) {
+                                    isVisible = false;
+                                }
+                                break;
+                        }
+                    }
+                }
+            } else if (filterValue !== "default" && filterValue !== "") {
+                isVisible = false;
+            }
+        });
+
+        if (searchKeywords !== "") {
+            const postTextContent = JSON.stringify(postData).toLowerCase();
+            if (!postTextContent.includes(searchKeywords)) {
+                isVisible = false;
+            }
+        }
+
+        projects[i].style.display = isVisible ? "flex" : "none";
+
+        const dataMotionValue = "transition-fade-1 transition-slideInLeft-1";
+        projects[i].setAttribute("data-motion", dataMotionValue);
+    }
+}
+
+
+function extractOptionsFieldsJsonProjects(filterFields, projectsData) {
+    if (!projectsData) {
+        console.error("Error: projectsData is empty or undefined.");
+        return;
+    }
+
+    if (!filterFields || !Array.isArray(filterFields)) {
+        console.error("Error: filterFields is empty or not an array.");
+        return;
+    }
+
+    // Initialize filterOptions dynamically based on filterFields
+    filterFields.forEach(filter => {
+        const { id, "json-path": jsonPath, "json-type": jsonType, "json-get": jsonGet } = filter;
+        const selectElement = document.getElementById(id);
+
+        if (!selectElement) {
+            console.error(`Error: select element with ID '${id}' not found.`);
+            return;
+        }
+
+        selectElement.innerHTML = `<option value="default">${filter.placeholder || ""}</option>`;
+
+        const options = new Set(); // Use a Set to store unique options
+        projectsData.forEach(item => {
+            const value = getValueFromJsonPath(item, jsonPath);
+            if (value !== undefined) {
+                if (Array.isArray(value)) {
+                    value.forEach(item => {
+                        let option = jsonGet ? item[jsonGet] : item;
+                        if (jsonType === "date") { // Check if jsonType is "date"
+                            option = extractYearFromDate(option); // Extract year if it's a date
+                        }
+                        if (option !== undefined && !options.has(option)) { // Check if option is not already added
+                            options.add(option);
+                            appendOption(selectElement, option);
+                        }
+                    });
+                } else {
+                    let option = jsonGet ? value[jsonGet] : value;
+                    if (jsonType === "date") { // Check if jsonType is "date"
+                        option = extractYearFromDate(option); // Extract year if it's a date
+                    }
+                    if (option !== undefined && !options.has(option)) { // Check if option is not already added
+                        options.add(option);
+                        appendOption(selectElement, option);
+                    }
+                }
+            }
+        });
+    });
+}
+
+function appendOption(selectElement, option) {
+    const optionElement = document.createElement("option");
+    optionElement.value = option;
+    optionElement.textContent = option;
+    selectElement.appendChild(optionElement);
+}
+
+function getValueFromJsonPath(item, jsonPath) {
+    if (!jsonPath) return undefined;
+
+    const paths = jsonPath.replace(/\['([^']+)'\]/g, '.$1').split('.').filter(path => path !== ''); // Filter out empty strings
+    let value = item;
+
+    paths.forEach(path => {
+        value = value ? value[path] : undefined;
+    });
+
+    return value;
+}
+
+
+function constructFilterFields(filterFields, projectsFormId) {
     var projectsForm = document.querySelector(projectsFormId);
 
     if (projectsForm) {
