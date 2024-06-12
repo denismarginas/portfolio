@@ -2375,12 +2375,6 @@
             "project_collaboration": [
                 "Individual"
             ],
-            "media_platforms": [
-                {
-                    "name": "Photopea",
-                    "svg": "photopea"
-                }
-            ],
             "media_custom": [
                 {
                     "title": "GitHub Readme: ",
