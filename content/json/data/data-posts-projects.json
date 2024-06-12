@@ -2378,15 +2378,15 @@
             "media_custom": [
                 {
                     "title": "GitHub Readme: ",
-                    "url": " https://github.com/denismarginas/portfolio/blob/main/README.md"
+                    "url": "github.com/denismarginas/portfolio/blob/main/README.md"
                 },
                 {
                     "title": "GitHub Repository: ",
-                    "url": "https://github.com/denismarginas/portfolio"
+                    "url": "github.com/denismarginas/portfolio"
                 },
                 {
                     "title": "GitHub Portfolio: ",
-                    "url": "https://denismarginas.github.io/portfolio/"
+                    "url": "denismarginas.github.io/portfolio/"
                 }
             ],
             "date": {
