@@ -5,11 +5,11 @@ if(!isset($jsonGlobalData)) :
 endif;
 
 if(!isset($jsonCategoriesData)) :
-    $jsonCategoriesData = getDataJson('data-categories', 'data');
+    $jsonCategoriesData = getDataJson('data-posts-projects-categories', 'data');
 endif;
 
 if(!isset($jsonJobs)) :
-    $jsonJobsData = getDataJson('data-jobs', 'data');
+    $jsonJobsData = getDataJson('data-items-jobs', 'data');
 endif;
 
 if (!empty($args)) :

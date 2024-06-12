@@ -5,7 +5,7 @@ if(!isset($jsonGlobalData)) :
 endif;
 
 if(!isset($jobs)) :
-    $jobs = getDataJson('data-jobs','data');
+    $jobs = getDataJson('data-items-jobs','data');
 endif;
 
 ?>

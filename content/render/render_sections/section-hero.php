@@ -5,7 +5,7 @@ if(!isset($jsonGlobalData)) :
 endif;
 
 if(!isset($jsonGlobalSeo)) :
-    $jsonGlobalSeo = getDataJson('data-seo', 'data');
+    $jsonGlobalSeo = getDataJson('data-pages-seo', 'data');
 endif;
 
 if(!isset($hero_title)) :

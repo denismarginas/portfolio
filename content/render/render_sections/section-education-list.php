@@ -1,7 +1,7 @@
 <?php
 
 if(!isset($educations)) :
-    $educations = getDataJson('data-education','data');
+    $educations = getDataJson('data-items-education','data');
 endif;
 
 ?>

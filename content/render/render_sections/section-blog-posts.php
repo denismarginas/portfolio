@@ -1,7 +1,7 @@
 <?php
 
 if(!isset($jsonBlogData)) :
-    $jsonBlogData = getDataJson('data-blog-activity', 'data');
+    $jsonBlogData = getDataJson('data-posts-blog-activity', 'data');
 endif;
 
 ?>

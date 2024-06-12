@@ -1,7 +1,7 @@
 <?php
 
 if(!isset($categoriesData)) :
-    $categoriesData = getDataJson('data-categories', 'data');
+    $categoriesData = getDataJson('data-posts-projects-categories', 'data');
 endif;
 
 if(!isset($jsonGlobalData)) :

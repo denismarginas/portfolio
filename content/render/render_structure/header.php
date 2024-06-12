@@ -5,7 +5,7 @@ $seoParam = isset($seo) && is_array($seo) ? $seo : null;
 include "head.php";
 $jsonMenuData = getDataJson('data-menu', 'data');
 $jsonGlobalData = getDataJson('data-global-settings', 'data');
-$jsonCategoriesData = getDataJson('data-categories', 'data');
+$jsonCategoriesData = getDataJson('data-posts-projects-categories', 'data');
 
 ?>
 

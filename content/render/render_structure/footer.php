@@ -4,7 +4,7 @@ $renderer_sections = new RendererSections();
 $renderer_sections->renderSection('debug');
 
 $jsonGlobalData = getDataJson('data-global-settings', 'data');
-$jsonCategoriesData = getDataJson('data-categories', 'data');
+$jsonCategoriesData = getDataJson('data-posts-projects-categories', 'data');
 $jsonSocialsData = getDataJson('data-content-personal', 'data')["socials"]["visual-list"];
 
 ?>

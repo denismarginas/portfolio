@@ -449,7 +449,7 @@ function stringSeoSiteName() {
 }
 
 function getSeoFromCurrentPageData($filename) {
-    $jsonSeoData = getDataJson('data-seo', 'data');
+    $jsonSeoData = getDataJson('data-pages-seo', 'data');
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
     $stringSeoSiteName = stringSeoSiteName();
     $siteName = $jsonGlobalData["site-identity"];
@@ -481,7 +481,7 @@ function getSeoFromCurrentPageData($filename) {
 function getDataHero($filename) {
 
     if(!isset($jsonGlobalSeo)) {
-        $jsonGlobalSeo = getDataJson('data-seo', 'data');
+        $jsonGlobalSeo = getDataJson('data-pages-seo', 'data');
     }
 
     $hero_title = "Title";
