@@ -50,17 +50,18 @@ This project was built using these technologies:
 1. Installation: Install `xampp` or `lampp` which have the PHP version 8.0+.
 2. Installation: Install `prepros` and import the theme directory (`dm-theme-01`) in it.
 3. Clone Repository: Clone this repository into the `htdocs` directory, creating a new directory named `portfolio`.
-4. Rendering HTML and PHP Changes: To render all your HTML pages and apply any PHP changes, run the following URL in your browser: `http://localhost/portfolio/content/render/render.php`.
-5. SCSS to CSS Compilation: Any changes made to SCSS files will automatically compile to CSS after saving the changes.
-6. Global CSS Changes: To change global CSS settings, such as colors, access `portfolio/themes/dm-theme-01/scss/interface-design/variables.scss`.
-7. Adding New Fonts:
+4. For localhost, change the value of `page-slug-extension` to `.html` in the `data-global-settings.json` file to set the links correctly.
+5. Rendering HTML and PHP Changes: To render all your HTML pages and apply any PHP changes, run the following URL in your browser: `http://localhost/portfolio/content/render/render.php`.
+6. SCSS to CSS Compilation: Any changes made to SCSS files will automatically compile to CSS after saving the changes.
+7. Global CSS Changes: To change global CSS settings, such as colors, access `portfolio/themes/dm-theme-01/scss/interface-design/variables.scss`.
+8. Adding New Fonts:
     - Add new font(s) manually to `portfolio/themes/dm-theme-01/fonts`.
     - Then, in `portfolio/themes/dm-theme-01/scss/interface-design/fonts.scss`, add the font(s).
     - Finally, use them in the `variables.scss` file by updating the variables `--dm-font-family-primary` and `--dm-font-family-secondary`.
-8. Text and Image Content Changes: Change the text and image content of pages in the `portfolio/content/json/data` directory. Several JSON files there influence the rendering content.
-11. Editing the main settings of the website can be done in `data-global-settings` file
-10. Editing Rendering Structure: The rendering structure of pages can be edited in the `data-pages.json` file.
-11. Editing Project Data and Content: The rendering data and content of projects can be edited in the `data-posts-projects.json` file.
+9. Text and Image Content Changes: Change the text and image content of pages in the `portfolio/content/json/data` directory. Several JSON files there influence the rendering content.
+10. Editing the main settings of the website can be done in `data-global-settings.json` file
+11. Editing Rendering Structure: The rendering structure of pages can be edited in the `data-pages.json` file.
+12. Editing Project Data and Content: The rendering data and content of projects can be edited in the `data-posts-projects.json` file.
 
 
 ## 🛠 Usage In GitHub Pages 
