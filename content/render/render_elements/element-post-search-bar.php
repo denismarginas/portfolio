@@ -18,5 +18,8 @@ $theme_path = $GLOBALS['urlPath'].$jsonGlobalData["themes-path"]."/".$jsonGlobal
 
 <script src="<?php echo $theme_path ;?>/js/content-posts-projects-data-search.js"></script>
 
-<form id="post-list-sort-and-search" data-filters-number="<?php echo $nr_filters; ?>" data-motion="transition-fade-0" data-duration="0.8s" data-delay="0.1s">
+<form id="post-list-sort-and-search"
+      data-filters-number="<?php echo $nr_filters; ?>"
+      data-filters-divisible="<?php echo listDesign($nr_filters); ?>"
+      data-motion="transition-fade-0" data-duration="0.8s" data-delay="0.1s">
 </form>

@@ -10,6 +10,16 @@
     
     },
     {
+        "name": "date-start",
+        "id": "post-date-start",
+        "placeholder": "--select--",
+        "label": "After Date:",
+        "type": "select",
+        "json-path": "['post_data']['date']['date_start']",
+        "json-type": "date",
+        "json-date-search-mode": ">="
+    },
+    {
         "name": "date-end",
         "id": "post-date-end",
         "placeholder": "--select--",
@@ -77,16 +87,5 @@
         "json-path": "['post_data']['project_collaboration']",
         "json-type": "array"
     
-    },
-    {
-        "name": "web_project_status",
-        "id": "post-web_project_status",
-        "placeholder": "--select--",
-        "label": "Web Project Status:",
-        "type": "select",
-        "json-path": "['post_data']['web_project_status']",
-        "json-type": "string"
-    
     }
-    
 ]

@@ -219,10 +219,10 @@ endif;
                                         </a>
                                     </li>
                                 <?php endif; ?>
-                                <?php if( isset($job["url_twitter"]) && !empty($job["url_twitter"])) : ?>
+                                <?php if( isset($job["url_x"]) && !empty($job["url_x"])) : ?>
                                     <li data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="1.2s" data-delay="0.3s">
-                                        <a href="<?php echo addHttps($job["url_twitter"]);?>" target="_blank">
-                                            <?php SVGRenderer::renderSVG('socials-twitter'); ?>
+                                        <a href="<?php echo addHttps($job["url_x"]);?>" target="_blank">
+                                            <?php SVGRenderer::renderSVG('socials-x'); ?>
                                         </a>
                                     </li>
                                 <?php endif; ?>

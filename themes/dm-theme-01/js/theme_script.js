@@ -630,21 +630,28 @@ document.addEventListener("DOMContentLoaded", function() {
             element.remove();
         });
     });
-
 });
 
 //Contact Form
 function contact_form_exec() {
+    var form = document.getElementById('dm-form');
+    var externalFormUrl = form.getAttribute('data-external-form-url');
+    console.log(externalFormUrl);
     var buttonDiv = document.querySelector('#dm-form-button').parentNode;
     var statusMessageSpan = document.querySelector('#dm-send-status');
+    var statusMessage = "The form is inactive. Please use alternative contact methods.";
+
+    if (externalFormUrl) {
+        window.open(externalFormUrl, '_blank');
+        statusMessage = "You will be redirected to another external form address.";
+    }
 
     if (!statusMessageSpan) {
         statusMessageSpan = document.createElement('span');
         statusMessageSpan.id = 'dm-send-status';
-        statusMessageSpan.innerHTML = 'The form is inactive. Please use alternative contact methods.';
+        statusMessageSpan.innerHTML = statusMessage;
         buttonDiv.appendChild(statusMessageSpan);
+
+        return false;
     }
-    return false;
 }
-
-

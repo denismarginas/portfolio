@@ -26,7 +26,13 @@ endif;
                         </h3>
 
                         <?php if(isset($jsonContactForm["fields"])) : ?>
-                            <form id="#dm-form" target="_self" onsubmit="return contact_form_exec();" action="" autocomplete="off" crossorigin="anonymous">
+                            <form id="dm-form" target="_self"
+
+                              <?php if( $jsonContactForm["external-form-url"] ) : ?>
+                                data-external-form-url="<?php echo $jsonContactForm["external-form-url"]; ?>"
+                              <?php endif; ?>
+                                  onsubmit="return contact_form_exec();"
+                                  action="" autocomplete="off" crossorigin="anonymous">
 
                                 <?php $contact_form_fields = $jsonContactForm["fields"];?>
                                 <?php foreach ($contact_form_fields as $contact_form_field) : ?>
@@ -39,9 +45,16 @@ endif;
 
                                     <?php elseif($contact_form_field["type"] == "send" || $contact_form_field["type"] == "submit") : ?>
                                         <div>
-                                            <button id="<?php echo $contact_form_field["name"]; ?>" data-button="primary" data-sitekey="" data-callback='onSubmit' data-action='submit' type="submit">
+                                            <button class="form-submit" id="<?php echo $contact_form_field["name"]; ?>" data-button="primary" data-sitekey="" data-callback='onSubmit' data-action='submit' type="submit">
                                                 <?php echo $contact_form_field["value"]; ?>
                                             </button>
+
+                                            <?php if( $jsonContactForm["external-form-url"] ) : ?>
+                                                <a class="external-form-submit" href="<?php echo $jsonContactForm["external-form-url"]; ?>" data-button="primary" target="_blank">
+                                                    Proceed to the form
+                                                </a>
+                                            <?php endif; ?>
+
                                         </div>
                                     <?php endif; ?>
 
@@ -62,30 +75,38 @@ endif;
 
                 <?php if(isset($jsonContactSocials["visual-list"])) : ?>
                     <?php $socials_list = $jsonContactSocials["visual-list"];?>
+
                     <div class="dm-socials-list" data-socials="normal-fill">
+
                         <?php $i = 1; foreach ($socials_list as $social_item) : ?>
                             <a data-socials="<?php echo $social_item["icon-svg"]; ?>" href="<?php echo $social_item["link"]; ?>" target="_blank" data-motion="transition-fade-0 transition-slideInLeft-0" data-delay="<?php echo 0.01 + (0.03 * $i); ?>s">
                                 <?php SVGRenderer::renderSVG("socials-".$social_item["icon-svg"]); ?>
                             </a>
                         <?php $i++; endforeach; ?>
+
                     </div>
+
                 <?php endif; ?>
 
                 <?php if(isset($jsonContactSocials["text-list"])) : ?>
                     <?php $socials_text_list = $jsonContactSocials["text-list"];?>
+
                     <div class="dm-socials-text" data-motion="transition-fade-0 transition-slideInLeft-0">
                         <?php $i = 1; foreach ($socials_text_list as $social_text_item) : ?>
                             <a target="_blank" href="<?php echo $social_text_item["link"]; ?>" data-motion="transition-fade-0 transition-slideInLeft-0" data-delay="<?php echo 0.02 + (0.1 * $i); ?>s">
                                 <span>●</span>
+
                                 <b>
                                     <?php echo $social_text_item["title"]; ?>
                                 </b>
+
                                 <span>
                                     <?php echo $social_text_item["text"]; ?>
                                 </span>
                             </a>
                         <?php $i++; endforeach; ?>
                     </div>
+
                 <?php endif; ?>
 
             </li>

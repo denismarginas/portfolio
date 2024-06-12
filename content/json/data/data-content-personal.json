@@ -185,7 +185,8 @@
 					"type": "submit",
 					"value": "Submit"
 				}
-			]
+			],
+			"external-form-url": "https://docs.google.com/forms/d/e/1FAIpQLSdkMKYQyLa4H7yxU7RMUK97urwK5LMvbk-dFs9-wKpCRCO_Ng/viewform"
 		},
 		"menu": {
 			"title": "Contact",
@@ -227,9 +228,9 @@
 				"icon-svg": "linkedin"
 			},
 			{
-				"title": "Twitter",
-				"link": "https://twitter.com/DenisMarginas",
-				"icon-svg": "twitter"
+				"title": "X",
+				"link": "https://x.com/DenisMarginas",
+				"icon-svg": "x"
 			},
 			{
 				"title": "Google Site",
@@ -267,16 +268,6 @@
 				"title": "Github:",
 				"text": "github.com/denismarginas",
 				"link": "https://github.com/denismarginas"
-			},
-			{
-				"title": "CV English:",
-				"text": "drive.google.com/file/d/1-RYU6uYovCR_LT48nD7CZ1sa6xQ8QJh_/view",
-				"link": "https://drive.google.com/file/d/1-RYU6uYovCR_LT48nD7CZ1sa6xQ8QJh_/view"
-			},
-			{
-				"title": "CV Romanian:",
-				"text": "drive.google.com/file/d/1_gPqX2MgLJD7bYCgZ977GHX25pVC_ihz/view",
-				"link": "https://drive.google.com/file/d/1_gPqX2MgLJD7bYCgZ977GHX25pVC_ihz/view"
 			}
 		]
 		

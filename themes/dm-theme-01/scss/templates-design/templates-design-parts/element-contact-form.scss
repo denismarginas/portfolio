@@ -91,3 +91,30 @@ body.theme-dark {
     }
   }
 }
+
+body {
+  .dm-contact-form {
+    > form {
+      .form-submit {
+        display: none;
+      }
+      .external-form-submit {
+        display: flex;
+      }
+    }
+  }
+}
+
+body[java-script="true"] {
+  .dm-contact-form {
+    > form {
+      .form-submit {
+        display: flex;
+      }
+      .external-form-submit {
+        display: none;
+      }
+    }
+  }
+}
+

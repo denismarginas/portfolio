@@ -75,28 +75,23 @@
                         "icon": "socials-youtube"
                     },
                     {
-                        "text": "Visual Media Projects",
                         "url": "https://www.facebook.com/denismarginas09",
                         "icon": "socials-facebook"
                     },
                     {
-                        "text": "https://www.linkedin.com/in/denismarginas09/",
-                        "url": "miscellaneous-projects",
+                        "url": "https://www.linkedin.com/in/denismarginas09/",
                         "icon": "socials-linkedin"
                     },
                     {
-                        "text": "https://twitter.com/DenisMarginas",
-                        "url": "miscellaneous-projects",
-                        "icon": "socials-twitter"
+                        "url": "https://x.com/DenisMarginas",
+                        "icon": "socials-x"
                     },
                     {
-                        "text": "https://sites.google.com/view/denis-marginas",
-                        "url": "miscellaneous-projects",
+                        "url": "https://sites.google.com/view/denis-marginas",
                         "icon": "socials-google-site"
                     },
                     {
-                        "text": "https://github.com/denismarginas",
-                        "url": "miscellaneous-projects",
+                        "url": "https://github.com/denismarginas",
                         "icon": "socials-github"
                     }
                 ]

@@ -164,7 +164,7 @@ $jsonSocialsData = getDataJson('data-content-personal', 'data')["socials"]["visu
 
                 <div class="dm-socials-list" data-socials="circle-light-2">
                     <?php foreach ($list as $key => $item) : ?>
-                        <a href="<?php echo $item_url ?? "#"; ?>" target="_blank">
+                        <a href="<?php echo $item['url'] ?? "#"; ?>" target="_blank">
 
                             <?php if( isset($item["icon"]) ) :
                                 SVGRenderer::renderSVG($item["icon"]);
