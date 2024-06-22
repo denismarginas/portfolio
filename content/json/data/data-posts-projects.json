@@ -2217,21 +2217,20 @@
         "layout": "wrapper-layout"
     },
     {
-        "file": "project-denismarginas",
+        "file": "project-denismarginas-google-site",
         "type": "post",
         "category": "projects",
         "post_data": {
             "display": "enable",
             "post_type": "projects",
-            "media_path": "denismarginas",
-            "title": "Denis Marginas",
+            "media_path": "denismarginas-google-site",
+            "title": "Denis Marginas - Google Site",
             "logo": "logo/logo.png",
-            "logo_path": "denismarginas",
+            "logo_path": "denismarginas-google-site",
             "logo_type": "png",
-            "description": "Simple portfolio website is made with Google Site. <?php echo renderTextVisualMediaPost('projects','denismarginas'); ?>",
+            "description": "A simple portfolio website created with Google Sites effectively showcases work projects. It features detailed descriptions, images, and relevant links, ensuring easy navigation and updates. This user-friendly platform provides a professional way to present skills and achievements, ideal for attracting clients, employers, and collaborators.",
             "categories": [
                 "Web Development Projects",
-                "Visual Media Projects",
                 "Miscellaneous Projects"
             ],
             "web_url": "sites.google.com/view/denis-marginas",
@@ -2246,6 +2245,66 @@
                 "presentation website",
                 "web content",
                 "web design",
+                "personal"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "media_custom": [
+                {
+                    "title": "Google Form: ",
+                    "url": " https://forms.gle/vTHeLVkc1TwXCxBJA"
+                },
+                {
+                    "title": "Google Site: ",
+                    "url": "https://sites.google.com/view/denis-marginas/portfolio"
+                },
+                {
+                    "title": "Resume English: ",
+                    "url": "https://drive.google.com/file/d/1-RYU6uYovCR_LT48nD7CZ1sa6xQ8QJh_/view?fbclid=IwAR2uM1bsxIRykbxASFEuRVHECNNLfcty7zcoMquzH4ctG912jSLQ0UEfR4M"
+                },
+                {
+                    "title": "Resume Romanian: ",
+                    "url": "https://drive.google.com/file/d/1_gPqX2MgLJD7bYCgZ977GHX25pVC_ihz/view?fbclid=IwAR31XhWoDXsDa543gAtcJDrJd0zJIh72zpp35YQeHHTw8mbjnFVwyo9ueng"
+                }
+            ],
+            "date": {
+                "date_start": "06.2020",
+                "date_end": "06.2023"
+            },
+            "tags": [
+                "web"
+            ],
+            "colors": {
+                "post_color_primary": "#5d6977",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#292f3a",
+                "post_color_text_on_background": "#ffffff"
+            }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-denismarginas",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "denismarginas",
+            "title": "Denis Marginas - Media",
+            "logo": "logo/logo.png",
+            "logo_path": "denismarginas",
+            "logo_type": "png",
+            "description": " <?php echo renderTextVisualMediaPost('projects','denismarginas'); ?>",
+            "categories": [
+                "Visual Media Projects",
+                "Miscellaneous Projects"
+            ],
+            "project_types": [
                 "media image",
                 "media video",
                 "personal"
@@ -2304,7 +2363,6 @@
                 "date_end": "<?php echo sprintf('%02d', date('m')) . '.' . date('Y'); ?>"
             },
             "tags": [
-                "web",
                 "photo",
                 "video"
             ],
@@ -2316,7 +2374,6 @@
             }
         },
         "post_content": [
-            "<?php echo renderSectionWebProject($post_current_data); ?>",
             "<?php echo renderSectionMediaProject($post_current_data, ['videos' => [['video-path' => 'personal-portfolio/personal-portfolio.mp4', 'video-thumbnail-path' => 'thumbnails/personal-portfolio.webp'], ['video-path' => 'personal-workstation/desktop-setup.mp4', 'video-thumbnail-path' => 'thumbnails/desktop-setup.webp']]]); ?>"
         ],
         "layout": "wrapper-layout"
@@ -2329,7 +2386,7 @@
             "display": "enable",
             "post_type": "projects",
             "media_path": "denismarginas-github-portfolio",
-            "title": "Github Portfolio - Denis Marginas",
+            "title": "Denis Marginas - Github Portfolio",
             "logo": "logo/logo.png",
             "logo_path": "denismarginas-github-portfolio",
             "logo_type": "png",
@@ -2339,6 +2396,12 @@
                 "Miscellaneous Projects"
             ],
             "web_url": "https://denismarginas.github.io/portfolio/",
+            "web_platform": [
+                {
+                    "name": "GitHub Pages",
+                    "svg": "github-pages"
+                }
+            ],
             "web_technology": [
                 {
                     "name": "HTML",
@@ -4886,24 +4949,15 @@
             "display": "enable",
             "post_type": "projects",
             "media_path": "strikerproduction",
-            "title": "Striker Production",
+            "title": "Striker Production - Media",
             "logo": "logo/logo.png",
             "logo_path": "strikerproduction",
             "logo_type": "png",
-            "description": "Main activity of the Striker Production is the video editing at different video games and real life footage. In addition to creating my own video-photo content, I organize video editing contests with sponsors and I collaborate with clients on various projects. Simple portfolio website is made with Google Site. <?php echo renderTextVisualMediaPost('projects','strikerproduction'); ?>",
+            "description": "Main activity of the Striker Production is the video editing at different video games and real life footage. In addition to creating my own video-photo content, I organize video editing contests with sponsors and I collaborate with clients on various projects. <?php echo renderTextVisualMediaPost('projects','strikerproduction'); ?>",
             "categories": [
-                "Web Development Projects",
                 "Visual Media Projects",
                 "Miscellaneous Projects"
             ],
-            "web_url": "sites.google.com/view/strikerproduction/",
-            "web_platform": [
-                {
-                    "name": "Google Site",
-                    "svg": "googlesite"
-                }
-            ],
-            "web_project_status": "Done",
             "media_platforms": [
                 {
                     "name": "Photopea",
@@ -4952,9 +5006,6 @@
                 }
             ],
             "project_types": [
-                "presentation website",
-                "web content",
-                "web design",
                 "media image",
                 "media video",
                 "personal"
@@ -4967,8 +5018,6 @@
                 "date_end": "12.2022"
             },
             "tags": [
-                "web",
-                "content-web",
                 "photo",
                 "video"
             ],
@@ -4980,8 +5029,81 @@
             }
         },
         "post_content": [
-            "<?php echo renderSectionWebProject($post_current_data); ?>",
             "<?php echo renderSectionMediaProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-strikerproduction-google-site",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "strikerproduction-google-site",
+            "title": "Striker Production - Google Site",
+            "logo": "logo/logo.png",
+            "logo_path": "strikerproduction-google-site",
+            "logo_type": "png",
+            "description": "Main activity of the Striker Production is the video editing at different video games and real life footage. In addition to creating my own video-photo content, I organize video editing contests with sponsors and I collaborate with clients on various projects. Simple portfolio website is made with Google Site.",
+            "categories": [
+                "Web Development Projects",
+                "Miscellaneous Projects"
+            ],
+            "web_url": "sites.google.com/view/strikerproduction/",
+            "web_platform": [
+                {
+                    "name": "Google Site",
+                    "svg": "googlesite"
+                }
+            ],
+            "web_project_status": "Done",
+            "media_facebook_url": "https://www.facebook.com/strikerproduction",
+            "media_youtube_url": "https://www.youtube.com/c/striker09/",
+            "media_custom": [
+                {
+                    "title": "Google Form: ",
+                    "url": "https://forms.gle/XzfTBkvepUoUte2b9"
+                },
+                {
+                    "title": "Discord: ",
+                    "url": "https://discord.gg/b9YQecx"
+                },
+                {
+                    "title": "Google Site: ",
+                    "url": "https://sites.google.com/view/strikerproduction/"
+                },
+                {
+                    "title": "Steam: ",
+                    "url": "https://steamcommunity.com/groups/strikelounge"
+                }
+            ],
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design",
+                "personal"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "date": {
+                "date_start": "09.2016",
+                "date_end": "12.2022"
+            },
+            "tags": [
+                "web",
+                "content-web"
+            ],
+            "colors": {
+                "post_color_primary": "#5d6977",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#292f3a",
+                "post_color_text_on_background": "#ffffff"
+            }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
         ],
         "layout": "wrapper-layout"
     },

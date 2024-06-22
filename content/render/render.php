@@ -11,6 +11,7 @@ $directories = [
     __DIR__ . '/render_index/*.php',
     __DIR__ . '/render_bulk/*.php',
     __DIR__ . '/render_index/*.php',
+    __DIR__ . '/render_adjustments/*.php'
 ];
 
 foreach ($directories as $directory) {
