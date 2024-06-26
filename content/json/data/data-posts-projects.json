@@ -5108,6 +5108,93 @@
         "layout": "wrapper-layout"
     },
     {
+        "file": "project-strikerproduction-rust-killfeed-generator",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "strikerproduction-rust-killfeed-generator",
+            "title": "Striker Production - Rust KillFeed Generator",
+            "logo": "logo/logo.png",
+            "logo_path": "strikerproduction-rust-killfeed-generator",
+            "logo_type": "png",
+            "description": "Simple static website to generate RUST Death Notice overlays for video editing, fast and simple kill-feed generator. The project is hosted on GitHub Pages platform.",
+            "categories": [
+                "Web Development Projects",
+                "Miscellaneous Projects"
+            ],
+            "web_url": "https://strikerprod09.github.io/rust-killfeed-generator/",
+            "web_platform": [
+                {
+                    "name": "GitHub Pages",
+                    "svg": "github-pages"
+                }
+            ],
+            "web_technology": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "jQuery",
+                    "svg": "jquery"
+                },
+                {
+                    "name": "html2canvas"
+                }
+            ],
+            "web_project_status": "Done",
+            "media_custom": [
+                {
+                    "title": "GitHub Pages: ",
+                    "url": "https://strikerprod09.github.io/rust-killfeed-generator/"
+                },
+                {
+                    "title": "GitHub Repository: ",
+                    "url": "https://github.com/StrikerProd09/rust-killfeed-generator"
+                },
+                {
+                    "title": "Google Site: ",
+                    "url": "https://sites.google.com/view/strikerproduction/products/rust-killfeed-generator"
+                }
+            ],
+            "project_types": [
+                "content generator",
+                "web design",
+                "personal"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "date": {
+                "date_start": "03.2021",
+                "date_end": "04.2021"
+            },
+            "tags": [
+                "web"
+            ],
+            "colors": {
+                "post_color_primary": "#cd412a",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#5e2c23",
+                "post_color_text_on_background": "#ffffff"
+            }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
+    },
+    {
         "file": "project-superbrain",
         "type": "post",
         "category": "projects",
