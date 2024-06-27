@@ -12549,10 +12549,12 @@ body.theme-dark .dm-post > container .post-content .dm-post-title-category {
   min-height: 100%;
   width: auto;
   height: auto;
-  max-width: 150%;
+  max-width: 100%;
   max-height: unset;
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .dm-posts-list > container > ul > .dm-post-item.dm-post-item-media:hover > .dm-post-item-logo > img:nth-child(2) {
   opacity: 0.2;

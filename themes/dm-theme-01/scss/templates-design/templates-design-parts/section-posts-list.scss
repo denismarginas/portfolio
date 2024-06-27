@@ -197,9 +197,10 @@
                 min-height: 100%;
                 width: auto;
                 height: auto;
-                max-width: 150%;
+                max-width: 100%;
                 max-height: unset;
                 transition: opacity 0.4s;
+                object-fit: cover;
               }
             }
           }
