@@ -2424,8 +2424,7 @@
                     "svg": "php"
                 },
                 {
-                    "name": "TPL",
-                    "svg": "tpl"
+                    "name": "Prepros"
                 }
             ],
             "web_project_status": "Done",
