@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2259709f-b699-4482-a363-da52decd52d5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/css/templates-design/templates-design-parts/elemenet-posts-list-sort-and-search-layout.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/prepros.config" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/prepros.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-posts-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-posts-list.scss" afterDir="false" />
-    </list>
+    <list default="true" id="2259709f-b699-4482-a363-da52decd52d5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,22 +22,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp-php8.1/htdocs/portfolio&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/xampp-php8.1/htdocs/portfolio/themes/dm-theme-01/scss/templates-design/templates-design-parts",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp-php8.1\htdocs\portfolio\themes\dm-theme-01\scss\templates-design\templates-design-parts" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\themes\dm-theme-01\scss\templates-design\templates-design-parts" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\content\render\render_bulk" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\content\render\render_sections" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\content\render\render_pages" />
-      <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\content\render\render_elements" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -60,6 +56,7 @@
       <workItem from="1718087364403" duration="32933000" />
       <workItem from="1719076599404" duration="1160000" />
       <workItem from="1719468870953" duration="55000" />
+      <workItem from="1720599168820" duration="12358000" />
     </task>
     <servers />
   </component>
