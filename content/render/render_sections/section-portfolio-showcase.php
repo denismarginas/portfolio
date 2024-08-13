@@ -38,10 +38,15 @@ endif;
                         </p>
                         <?php if(isset($video_item["video-data"]["youtube-button-link"]) && isset($video_item["video-data"]["youtube-button-text"])) : ?>
                             <a class="dm-watch-on-youtube" href="<?php echo $video_item["video-data"]["youtube-button-link"]; ?>" target="_blank" data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="1s" data-delay="0.2s">
-                                <?php SVGRenderer::renderSVG($video_item["video-data"]["youtube-button-icon-svg"]); ?>
-                                <span>
+
+                                <span class="icon">
+                                    <?php SVGRenderer::renderSVG($video_item["video-data"]["youtube-button-icon-svg"]); ?>
+                                </span>
+
+                                <span class="text">
                                     <?php echo $video_item["video-data"]["youtube-button-text"]; ?>
                                 </span>
+
                             </a>
                         <?php endif; ?>
 

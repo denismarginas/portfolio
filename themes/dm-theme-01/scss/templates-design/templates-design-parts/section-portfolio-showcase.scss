@@ -9,6 +9,10 @@
 
 
   > container {
+    display: flex;
+    flex-direction: column;
+    gap: var( --dm-spacing-small );
+
     > ul {
       @include reset-list();
       display: grid;
@@ -16,9 +20,14 @@
       grid-template-columns: 2fr 1fr;
       gap: var( --dm-spacing-small );
 
+      &:nth-child(2n) {
+        direction: rtl;
+      }
       > li {
         @include flex-column();
         gap: var( --dm-spacing-secondary );
+        text-align: left;
+        direction: ltr;
 
         > h2 {
           @include dm-font-heading1();
@@ -67,23 +76,72 @@
           }
         }
         .dm-watch-on-youtube {
+          --dm-color-yt-button: #FF3D00;
           @include flex-row();
           @include border-radius( var( --dm-border-radius-secondary ) );
-          padding: var( --dm-spacing-primary );
-          background-color: rgba( var( --dm-color-primary-rgb ) , 0.2 );
+          padding: var( --dm-spacing-primary ) var( --dm-spacing-secondary );
           align-items: center;
           gap: var( --dm-spacing-primary );
+          width: fit-content;
+          border-width: 1px;
+          border-style: solid;
+          border-color: var( --dm-color-yt-button );
+          position: relative;
+          transition: all 0.1s ease-in-out;
+          text-align: center;
 
-          > svg {
-            @include fix-size( 40px );
+          &:before {
+            @include border-radius( var( --dm-border-radius-secondary ) );
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            box-shadow: 0px 0px 0px var( --dm-color-yt-button );
+            z-index: -1;
+            transition: all 0.3s ease-in-out;
+
           }
-          > span {
+          &:hover {
+            &:before {
+              box-shadow: 2px 5px 8px var( --dm-color-yt-button );
+              transition: all 0.3s ease-in-out;
+            }
+          }
+
+          > .icon {
+            position: relative;
+            @include fix-width( 44px );
+            @include fix-height( 32px );
+
+            &:before {
+              content: "";
+              position: absolute;
+              top: 25%;
+              bottom: 30%;
+              right: 30%;
+              left: 25%;
+              background-color: var(--dm-color-white);
+              z-index: -1;
+            }
+            > svg {
+              @include svg-color( --dm-color-yt-button );
+              width: 100%;
+              height: auto;
+              z-index: 2;
+            }
+          }
+
+          > .text {
             @include dm-font-big();
             --dm-font-family: var( --dm-font-family-secondary );
             --dm-text-big-font-weight: 600;
           }
         }
         > .video-container {
+          @include border-radius( var( --dm-border-radius-secondary ) );
+          overflow: hidden;
           width: 100%;
           max-width: 100%;
         }
@@ -122,6 +180,7 @@
     }
   }
 }
+
 body, body.theme-light {
   .dm-portfolio-showcase {
     > container {
@@ -135,8 +194,28 @@ body, body.theme-light {
           }
 
           .dm-watch-on-youtube {
-            > span {
+            background-color: rgba( var( --dm-color-white-rgb ), 0.1);
+
+            > .text {
               --dm-text-big-color: var( --dm-color-gray );
+            }
+            &:before {
+              background: linear-gradient(
+                  190deg,
+                  rgba( var( --dm-color-white-rgb ), 0 ) 40%,
+                  rgba( var( --dm-color-white-rgb ), 1 ) 90%
+              );
+              opacity: 0.6;
+            }
+            &:hover {
+              &:before {
+                background: linear-gradient(
+                    190deg,
+                    rgba( var( --dm-color-white-rgb ), 0 ) 30%,
+                    rgba( var( --dm-color-white-rgb ), 1 ) 88%
+                );
+              }
+              opacity: 1;
             }
           }
         }
@@ -144,6 +223,7 @@ body, body.theme-light {
     }
   }
 }
+
 body.theme-dark {
   .dm-portfolio-showcase {
     > container {
@@ -157,8 +237,28 @@ body.theme-dark {
           }
 
           .dm-watch-on-youtube {
-            > span {
+            background-color: rgba( var( --dm-color-gray-darken-rgb ), 0.2);
+
+            > .text {
               --dm-text-big-color: var( --dm-color-white );
+            }
+            &:before {
+              background: linear-gradient(
+                  190deg,
+                  rgba(36,0,0,0) 20%,
+                  var( --dm-color-yt-button ) 120%
+              );
+              opacity: 0.3;
+            }
+            &:hover {
+              &:before {
+                background: linear-gradient(
+                    190deg,
+                    rgba(36,0,0,0) 10%,
+                    var( --dm-color-yt-button ) 100%
+                );
+                opacity: 0.4;
+              }
             }
           }
         }
