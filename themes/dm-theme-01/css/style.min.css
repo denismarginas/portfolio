@@ -5170,12 +5170,12 @@ body[java-script=true] .dm-contact-form > form .external-form-submit {
   right: -45%;
 }
 .dm-experience-category > div > a > div > svg {
-  width: 50px;
-  height: 50px;
-  min-width: 50px;
-  min-height: 50px;
-  max-width: 50px;
-  max-height: 50px;
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  min-height: 52px;
+  max-width: 52px;
+  max-height: 52px;
   z-index: 1;
   -webkit-filter: drop-shadow(2px 2px 1px rgba(34, 34, 34, 0.4));
           filter: drop-shadow(2px 2px 1px rgba(34, 34, 34, 0.4));
@@ -5212,12 +5212,12 @@ body[java-script=true] .dm-contact-form > form .external-form-submit {
             transform: rotate(-10deg);
   }
   .dm-experience-category > div > a > div > svg {
-    width: 25px;
-    height: 25px;
-    min-width: 25px;
-    min-height: 25px;
-    max-width: 25px;
-    max-height: 25px;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    max-width: 28px;
+    max-height: 28px;
   }
   .dm-experience-category > div > a > span {
     font-family: var(--dm-font-family);

@@ -47,8 +47,8 @@
 	"cards-categories": [
 		{
 			"type": "page",
-			"page": "blog-activity",
-			"name": "Blog Activity",
+			"page": "social-activity",
+			"name": "Social Activity",
 			"svg": "projects",
 			"background-img": "overlay-texture-textile.webp",
 			"background-img-path": "/design-elements/"
@@ -570,5 +570,15 @@
 				"img": "hobby-recording-cinematics.webp"
 			}
 		]
+	},
+	"posts-socials": {
+		"blog-username": "Denis Marginas",
+		"blog-description": "Dive into the world of a full-stack web developer and skilled photo-video editor. Explore the intersection of web development and visual storytelling on Denis Ionut Marginas's insightful blog.",
+		"blog-img-logo": "content/img/projects/denismarginas/media/logo/logo.webp",
+		"blog-img-wallpaper": "content/img/projects/denismarginas/media/backgrounds/wallpaper-facebook.webp",
+		"blog-colors": {
+			"blog-color-primary": "#5d6977",
+			"blog-color-secondary": "#1b2431"
+		}
 	}
 }

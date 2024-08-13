@@ -1,7 +1,11 @@
 <?php
 
 if(!isset($jsonBlogData)) :
-    $jsonBlogData = getDataJson('data-posts-blog-activity', 'data');
+    $jsonBlogData = getDataJson('data-content-personal', 'data')['posts-socials'];
+endif;
+
+if(!isset($jsonBlogPosts)) :
+    $jsonBlogPosts = getDataJson('data-posts-socials', 'data');
 endif;
 
 ?>
@@ -22,8 +26,10 @@ endif;
    >
     <container>
         <div class="dm-blog-posts-section">
-            <?php $post_nr = 1; ?>
-            <?php foreach ($jsonBlogData["blog-posts"] as $post) : ?>
+
+            <?php $post_nr = 1;
+
+            foreach ($jsonBlogPosts as $post) : ?>
 
             <div class="dm-blog-post"  id="<?php echo $post_nr; ?>">
                 <div class="dm-blog-post-user-data">
@@ -64,6 +70,7 @@ endif;
                         <?php endif; ?>
 
                     <?php if(isset($post["sections"])) :
+
                         foreach ($post["sections"] as $section) : ?>
 
                             <?php if(isset($section["section-description"])) : ?>

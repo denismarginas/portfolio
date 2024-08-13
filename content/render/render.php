@@ -19,7 +19,7 @@ foreach ($directories as $directory) {
         require_once $filename;
     }
 }
-$log[] = "Loaded rendering files.";
+$log[] .= "Loaded rendering files.";
 
 // -- Adding Redirect if is needed START --
 /*
@@ -34,7 +34,7 @@ $htaccessFilePath = __DIR__ . '/../../.htaccess';
 
 if (file_exists($htaccessFilePath)) {
     unlink($htaccessFilePath);
-    $log[] = "Deleted existing .htaccess file" . PHP_EOL;
+    $log[] .= "Deleted existing .htaccess file" . PHP_EOL;
 }
 
 // Generate .htaccess file content

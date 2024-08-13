@@ -28,6 +28,6 @@ foreach ($pageFiles as $file) {
     $cleanedContent = synthesizeHtml($content);
     file_put_contents($file, $cleanedContent);
 
-    echo "Cleaned file: $file\n";
+    //echo "Cleaned file: $file\n";
 }
 ?>

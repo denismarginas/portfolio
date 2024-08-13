@@ -112,7 +112,7 @@
         ]
     },
     {
-        "file": "blog-activity",
+        "file": "social-activity",
         "content": [
             ["blog-header"],
             ["blog-posts"]
