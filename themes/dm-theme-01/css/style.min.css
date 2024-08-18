@@ -18056,6 +18056,8 @@ body.theme-dark .dm-jobs > container > ul > li.dm-note > p {
   overflow: hidden;
   width: 100%;
   max-width: 100%;
+  -webkit-box-shadow: 3px 6px 7px rgba(11, 11, 11, 0.2);
+          box-shadow: 3px 6px 7px rgba(11, 11, 11, 0.2);
 }
 .dm-portfolio-showcase:after {
   position: absolute;
