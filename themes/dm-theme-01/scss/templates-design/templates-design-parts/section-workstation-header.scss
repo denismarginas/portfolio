@@ -48,10 +48,12 @@
 
         > li {
           > .video-container {
+            @include border-radius(var(--dm-border-radius-secondary));
             --dm-video-color-primary: var( --workstation-primary-color );
             --dm-color-primary: var( --workstation-primary-color );
             --color-range-primary: var( --workstation-primary-color );
             width: 100%;
+            overflow: hidden;
           }
         }
       }

@@ -213,6 +213,14 @@
         filter: drop-shadow(-9px 5px 7px #00000073);
       }
     }
+    .next, .prev {
+      top: 60%;
+      color: var( --dm-color-white );
+
+      &:hover {
+        color: var( --workstation-primary-color );
+      }
+    }
   }
   @media only screen and (min-width: $screen-desktop-small) {
     > container {

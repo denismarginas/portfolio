@@ -11234,7 +11234,6 @@ body.theme-dark .carousel-list > .carousel-item > .dm-post-item-logo {
       -ms-flex-align: center;
           align-items: center;
   padding: 60px 16px 30px;
-  background-color: var(--dm-color-white);
   border-radius: 14px;
   -webkit-box-shadow: 2px 2px 8px rgba(var(--dm-color-gray-darken-rgb), 0.3);
           box-shadow: 2px 2px 8px rgba(var(--dm-color-gray-darken-rgb), 0.3);
@@ -11256,7 +11255,6 @@ body.theme-dark .carousel-list > .carousel-item > .dm-post-item-logo {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
-  border-left: 1px solid var(--dm-color-black);
   min-height: 20px;
   width: 100%;
 }
@@ -11268,7 +11266,6 @@ body.theme-dark .carousel-list > .carousel-item > .dm-post-item-logo {
   line-height: var(--dm-text-small-line-height);
   color: var(--dm-text-small-color);
   --dm-text-small-font-weight: 600;
-  --dm-text-small-color: var( --dm-color-gray-darken );
   display: none;
   position: absolute;
   bottom: 29px;
@@ -11291,7 +11288,6 @@ body.theme-dark .carousel-list > .carousel-item > .dm-post-item-logo {
   border-left: 1px solid transparent;
 }
 .dm-jobs-grid > .work-timeline {
-  border-bottom: 1px solid var(--dm-color-black);
   z-index: 1;
 }
 .dm-jobs-grid > .jobs-timeline {
@@ -11340,7 +11336,40 @@ body.theme-dark .carousel-list > .carousel-item > .dm-post-item-logo {
   line-height: var(--dm-text-small-line-height);
   color: var(--dm-text-small-color);
   --dm-text-small-font-weight: 600;
+}
+
+body .dm-jobs-grid, body.theme-light .dm-jobs-grid {
+  background-color: rgba(var(--dm-color-white-rgb), 1);
+  border: 1px solid rgba(var(--dm-color-white-rgb), 1);
+}
+body .dm-jobs-grid .work-timeline > .year, body .dm-jobs-grid .jobs-timeline > .year, body.theme-light .dm-jobs-grid .work-timeline > .year, body.theme-light .dm-jobs-grid .jobs-timeline > .year {
+  border-left: 1px solid var(--dm-color-black);
+}
+body .dm-jobs-grid .work-timeline > .year > span, body .dm-jobs-grid .jobs-timeline > .year > span, body.theme-light .dm-jobs-grid .work-timeline > .year > span, body.theme-light .dm-jobs-grid .jobs-timeline > .year > span {
   --dm-text-small-color: var( --dm-color-gray-darken );
+}
+body .dm-jobs-grid > .work-timeline, body.theme-light .dm-jobs-grid > .work-timeline {
+  border-bottom: 1px solid var(--dm-color-black);
+}
+body .dm-jobs-grid > p > span, body.theme-light .dm-jobs-grid > p > span {
+  --dm-text-small-color: var( --dm-color-gray-darken );
+}
+
+body.theme-dark .dm-jobs-grid {
+  background-color: rgba(var(--dm-color-gray-darken-rgb), 0.5);
+  border: 1px solid rgba(var(--dm-color-white-rgb), 0.2);
+}
+body.theme-dark .dm-jobs-grid .work-timeline > .year, body.theme-dark .dm-jobs-grid .jobs-timeline > .year {
+  border-left: 1px solid var(--dm-color-white);
+}
+body.theme-dark .dm-jobs-grid .work-timeline > .year > span, body.theme-dark .dm-jobs-grid .jobs-timeline > .year > span {
+  --dm-text-small-color: var( --dm-color-white );
+}
+body.theme-dark .dm-jobs-grid > .work-timeline {
+  border-bottom: 1px solid var(--dm-color-white);
+}
+body.theme-dark .dm-jobs-grid > p > span {
+  --dm-text-small-color: var( --dm-color-white );
 }
 
 /* ---- Responsive Screens ---- */
@@ -18996,10 +19025,12 @@ body.theme-dark .dm-work-experience > container > ul > li:first-of-type > p {
   grid-template-columns: 1fr 1fr;
 }
 .dm-workstation-header > container > ul.video-workstation > li > .video-container {
+  border-radius: var(--dm-border-radius-secondary);
   --dm-video-color-primary: var( --workstation-primary-color );
   --dm-color-primary: var( --workstation-primary-color );
   --color-range-primary: var( --workstation-primary-color );
   width: 100%;
+  overflow: hidden;
 }
 .dm-workstation-header > container > ul > li:nth-child(2) {
   display: -webkit-box;
@@ -19620,6 +19651,13 @@ body.theme-dark .dm-work-experience > container > ul > li:first-of-type > p {
 .dm-workstation-products .slider .slider-element img {
   -webkit-filter: drop-shadow(-9px 5px 7px rgba(0, 0, 0, 0.4509803922));
           filter: drop-shadow(-9px 5px 7px rgba(0, 0, 0, 0.4509803922));
+}
+.dm-workstation-products .slider .next, .dm-workstation-products .slider .prev {
+  top: 60%;
+  color: var(--dm-color-white);
+}
+.dm-workstation-products .slider .next:hover, .dm-workstation-products .slider .prev:hover {
+  color: var(--workstation-primary-color);
 }
 @media only screen and (min-width: 1240px) {
   .dm-workstation-products > container > .products {

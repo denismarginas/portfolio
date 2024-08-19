@@ -6,7 +6,6 @@
     flex-direction: column;
     align-items: center;
     padding: 60px 16px 30px;
-    background-color: var( --dm-color-white );
     border-radius: 14px;
     box-shadow: 2px 2px 8px rgba(var(--dm-color-gray-darken-rgb), 0.3);
 
@@ -21,14 +20,12 @@
       position: relative;
       display: flex;
       align-items: end;
-      border-left: 1px solid var( --dm-color-black );
       min-height: 20px;
       width: 100%;
 
       > span {
         @include dm-font-small();
         --dm-text-small-font-weight: 600;
-        --dm-text-small-color: var( --dm-color-gray-darken );
         display: none;
         position: absolute;
         bottom: 29px;
@@ -54,7 +51,6 @@
   }
 
   > .work-timeline {
-    border-bottom: 1px solid var( --dm-color-black );
     z-index: 1;
   }
   > .jobs-timeline {
@@ -92,19 +88,61 @@
     flex-direction: row;
     align-items: start;
     justify-content: start;
-    gap:3px;
+    gap: 3px;
     width: 100%;
 
     > span {
       @include dm-font-small();
       --dm-text-small-font-weight: 600;
-      --dm-text-small-color: var( --dm-color-gray-darken );
+
     }
   }
 }
 body, body.theme-light {
+  .dm-jobs-grid {
+    background-color: rgba( var( --dm-color-white-rgb ), 1);
+    border: 1px solid rgba(var(--dm-color-white-rgb), 1);
 
+    .work-timeline, .jobs-timeline {
+      > .year {
+        border-left: 1px solid var( --dm-color-black );
+
+        > span {
+          --dm-text-small-color: var( --dm-color-gray-darken );
+        }
+      }
+    }
+    > .work-timeline {
+      border-bottom: 1px solid var( --dm-color-black );
+    }
+    > p {
+      > span {
+        --dm-text-small-color: var( --dm-color-gray-darken );
+      }
+    }
+  }
 }
 body.theme-dark {
+  .dm-jobs-grid {
+    background-color: rgba( var( --dm-color-gray-darken-rgb ), 0.5 );
+    border: 1px solid rgba(var(--dm-color-white-rgb), 0.2);
 
+    .work-timeline, .jobs-timeline {
+      > .year {
+        border-left: 1px solid var( --dm-color-white );
+
+        > span {
+          --dm-text-small-color: var( --dm-color-white );
+        }
+      }
+    }
+    > .work-timeline {
+      border-bottom: 1px solid var( --dm-color-white );
+    }
+    > p {
+      > span {
+        --dm-text-small-color: var( --dm-color-white );
+      }
+    }
+  }
 }
