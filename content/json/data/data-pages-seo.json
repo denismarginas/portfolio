@@ -123,6 +123,11 @@
             "description": "Welcome to my personal workstation page! This is the hub of my productivity, where I tackle work projects and pursue personal endeavors.",
             "keywords": "denis marginas workstation",
             "slug": "workstation"
+        },
+        "hero": {
+            "title": "Personal Workstation",
+            "bg_img_path": "backgrounds",
+            "bg_img": "bg-workstation.webp"
         }
     },
     {

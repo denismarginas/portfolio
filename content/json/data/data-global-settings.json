@@ -19,7 +19,7 @@
         "button-text": "Search",
         "button-placeholder": "Search keywords.."
     },
-    "page-slug-extension": "",
+    "page-slug-extension": ".html",
     "language": {
         "default": "Enlgish",
         "list": [
@@ -41,7 +41,7 @@
         "footer": {
             "block-1": {
                 "class": "dm-footer-contact",
-                "title": "CV English",
+                "title": "Contact Data",
                 "list": [
                     {
                         "text": "CV English",
@@ -62,7 +62,7 @@
             },
             "block-2": {
                 "class": "dm-footer-catalog",
-                "title": "Categories",
+                "title": "Project Types",
                 "list": "projects"
             },
             "block-3": {

@@ -138,9 +138,9 @@ $jsonSocialsData = getDataJson('data-content-personal', 'data')["socials"]["visu
 
             <div class="<?php echo $footer_blocks["block-3"]["class"] ?? "block"; ?>" data-motion="transition-fade-0" data-duration="0.5s">
 
-                <?php if( isset($footer_blocks["block-2"]["title"]) ) : ?>
+                <?php if( isset($footer_blocks["block-3"]["title"]) ) : ?>
                     <h5>
-                        <?php echo $footer_blocks["block-2"]["title"]; ?>
+                        <?php echo $footer_blocks["block-3"]["title"]; ?>
                     </h5>
                 <?php endif; ?>
 

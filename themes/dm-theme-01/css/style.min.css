@@ -6279,6 +6279,7 @@ body.theme-dark .dm-person-circle-card > span > div .circle-background {
   height: 250px;
   -webkit-box-shadow: 0px 5px 7px rgba(var(--dm-color-gray-rgb), 0.4);
           box-shadow: 0px 5px 7px rgba(var(--dm-color-gray-rgb), 0.4);
+  ransition: all 0.4s ease-in-out;
 }
 .dm-card-summary-project > .content {
   padding: var(--dm-spacing-secondary) var(--dm-spacing-primary);
@@ -6328,10 +6329,15 @@ body.theme-dark .dm-person-circle-card > span > div .circle-background {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-height: 280px;
+  max-height: 274px;
   opacity: 1;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+}
+.dm-card-summary-project:hover > .image > img {
+  -webkit-box-shadow: 0px 5px 7px rgba(var(--dm-color-gray-rgb), 0);
+          box-shadow: 0px 5px 7px rgba(var(--dm-color-gray-rgb), 0);
+  ransition: all 0.4s ease-in-out;
 }
 
 body .dm-card-summary-project, body.theme-light .dm-card-summary-project {
