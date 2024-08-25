@@ -1,27 +1,29 @@
 [
   {
-    "name": "High School Emil Racoviță",
+    "name": "Emil Racoviță High School",
     "display": "true",
     "type": "High School",
     "img_bg": "light",
     "img_bg_color": "#ffffff",
     "img": "content/img/education/logo-high-school-emil-racovita.webp",
     "website": "https://www.liceulracovita.ro/",
-    "date_start": "14.09.2012",
-    "date_end": "18.07.2016",
+    "dates": {
+      "date_start": "14.09.2012",
+      "date_end": "18.07.2016"
+    },
     "location": "Baia Mare",
     "profession": [
       "Mathematics-Informatics"
     ],
-    "attributes": {
+    "description": {
       "text": "Studied disciplines:",
       "list": [
-        "Mathematics", 
-        "ICT", 
+        "Mathematics",
+        "ICT",
         "Computer science",
-        "C++", 
-        "HTML", 
-        "CSS", 
+        "C++",
+        "HTML",
+        "CSS",
         "Visual Fox"
       ]
     }
@@ -34,24 +36,32 @@
     "img_bg_color": "#ffffff",
     "img": "content/img/education/logo-technical-university-of-cluj-napoca-from-baia-mare-utcnbm.webp",
     "website": "https://www.utcluj.ro/",
-    "date_start": "01.10.2016",
-    "date_end": "14.07.2019",
+    "dates": {
+      "date_start": "01.10.2016",
+      "date_end": "14.07.2019"
+    },
     "location": "Baia Mare",
     "profession": [
       "Mathematics-Informatics"
     ],
-    "attributes": {
+    "description": {
       "text": "Studied disciplines:",
       "list": [
-        "Assembly language programming", 
+        "Assembly language programming",
         "Computational logic",
-        "Python programming", 
-        "C programming", 
-        "Computer networking", 
+        "Python programming",
+        "C programming",
+        "Computer networking",
         "Databases",
-        "Advanced database management systems", 
+        "Advanced database management systems",
         "Mathematics"
       ]
-    }
+    },
+    "projects": [
+      {
+        "project-type": "Bachelor's thesis",
+        "file": "project-cursuristudenti-bachelor-s-thesis"
+      }
+    ]
   }
 ]

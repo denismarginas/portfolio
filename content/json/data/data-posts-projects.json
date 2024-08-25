@@ -67,8 +67,7 @@
             }
         },
         "post_content": [
-            "<?php echo renderSectionWebProject($post_current_data); ?>",
-            "<?php echo renderSliderWithImagesOfProject($post_current_data, 'presentation-slides') ?>"
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
         ],
         "layout": "wrapper-layout"
     },
