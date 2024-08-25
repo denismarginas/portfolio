@@ -18035,7 +18035,7 @@ body .dm-education > container > .compact-list > .gap-line, body.theme-light .dm
 }
 body .dm-education > container > .detailed-list .education, body.theme-light .dm-education > container > .detailed-list .education {
   border: 1px solid rgba(var(--dm-color-gray-rgb), 0.2);
-  background-color: rgba(var(--dm-color-white-rgb), 0.6);
+  background-color: rgba(var(--dm-color-white-rgb), 0.7);
 }
 body .dm-education > container > .detailed-list .education > .logo, body.theme-light .dm-education > container > .detailed-list .education > .logo {
   border: 1px solid rgba(var(--dm-color-gray-rgb), 0.2);
@@ -18068,7 +18068,7 @@ body.theme-dark .dm-education > container > .compact-list > .gap-line {
 }
 body.theme-dark .dm-education > container > .detailed-list .education {
   border: 1px solid rgba(var(--dm-color-white-rgb), 0.3);
-  background-color: rgba(var(--dm-color-gray-darken-rgb), 0.6);
+  background-color: rgba(var(--dm-color-gray-darken-rgb), 0.8);
 }
 body.theme-dark .dm-education > container > .detailed-list .education > .logo {
   border: 1px solid rgba(var(--dm-color-white-rgb), 0.3);
