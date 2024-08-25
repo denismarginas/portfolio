@@ -17739,7 +17739,7 @@ body.theme-dark .dm-jobs > container > ul > li.dm-note > p {
   padding: var(--dm-spacing-secondary);
   width: 300px;
   max-width: 100%;
-  height: 120px;
+  height: 160px;
   z-index: 1;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
