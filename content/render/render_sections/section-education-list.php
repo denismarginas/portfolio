@@ -29,7 +29,7 @@ endif;
                 </li>
 
                 <?php if ($index < count($educations) - 1): ?>
-                    <li class="gap-line"></li>
+                    <li class="gap-line" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.4s"></li>
                 <?php endif; ?>
 
             <?php endforeach; ?>

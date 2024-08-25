@@ -1,34 +1,5 @@
 [
   {
-    "name": "Emil Racoviță High School",
-    "display": "true",
-    "type": "High School",
-    "img_bg": "light",
-    "img_bg_color": "#ffffff",
-    "img": "content/img/education/logo-high-school-emil-racovita.webp",
-    "website": "https://www.liceulracovita.ro/",
-    "dates": {
-      "date_start": "14.09.2012",
-      "date_end": "18.07.2016"
-    },
-    "location": "Baia Mare",
-    "profession": [
-      "Mathematics-Informatics"
-    ],
-    "description": {
-      "text": "Studied disciplines:",
-      "list": [
-        "Mathematics",
-        "ICT",
-        "Computer science",
-        "C++",
-        "HTML",
-        "CSS",
-        "Visual Fox"
-      ]
-    }
-  },
-  {
     "name": "Technical University of Cluj-Napoca UTCNBM",
     "display": "true",
     "type": "University",
@@ -63,5 +34,34 @@
         "file": "project-cursuristudenti-bachelor-s-thesis"
       }
     ]
+  },
+  {
+    "name": "Emil Racoviță High School",
+    "display": "true",
+    "type": "High School",
+    "img_bg": "light",
+    "img_bg_color": "#ffffff",
+    "img": "content/img/education/logo-high-school-emil-racovita.webp",
+    "website": "https://www.liceulracovita.ro/",
+    "dates": {
+      "date_start": "14.09.2012",
+      "date_end": "18.07.2016"
+    },
+    "location": "Baia Mare",
+    "profession": [
+      "Mathematics-Informatics"
+    ],
+    "description": {
+      "text": "Studied disciplines:",
+      "list": [
+        "Mathematics",
+        "ICT",
+        "Computer science",
+        "C++",
+        "HTML",
+        "CSS",
+        "Visual Fox"
+      ]
+    }
   }
 ]
