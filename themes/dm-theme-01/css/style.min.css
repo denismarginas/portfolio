@@ -17595,9 +17595,9 @@ body.theme-dark .dm-jobs > container > ul > li.dm-note > p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   gap: var(--dm-spacing-large);
 }
 .dm-education > container > .compact-list {
@@ -17762,6 +17762,7 @@ body.theme-dark .dm-jobs > container > ul > li.dm-note > p {
           flex-direction: column;
   gap: var(--dm-spacing-primary);
   z-index: 1;
+  width: 100%;
 }
 .dm-education > container > .detailed-list > .education > .details > .head {
   display: -webkit-box;
