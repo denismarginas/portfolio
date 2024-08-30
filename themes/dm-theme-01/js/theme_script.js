@@ -630,6 +630,32 @@ document.addEventListener("DOMContentLoaded", function() {
             element.remove();
         });
     });
+
+    // **************
+    // Redirect Extension .html on localhost
+    if (window.location.hostname === 'localhost') {
+        document.querySelectorAll('a[href]').forEach(function (link) {
+            const href = link.getAttribute('href');
+
+            if (!href.endsWith('.html') && !href.includes(':')) {
+                fetch(href)
+                    .then(function (response) {
+                        if (!response.ok) {
+                            return fetch(href + '.html');
+                        }
+                    })
+                    .then(function (htmlResponse) {
+                        if (htmlResponse && htmlResponse.ok) {
+                            link.addEventListener('click', function (event) {
+                                event.preventDefault();
+                                window.location.href = href + '.html';
+                            });
+                        }
+                    })
+            }
+        });
+    }
+
 });
 
 //Contact Form
