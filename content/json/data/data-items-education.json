@@ -4,9 +4,14 @@
     "display": "true",
     "type": "University",
     "img_bg": "light",
-    "img_bg_color": "#ffffff",
     "img": "content/img/education/logo-technical-university-of-cluj-napoca-from-baia-mare-utcnbm.webp",
-    "website": "https://www.utcluj.ro/",
+    "external_links" : [
+      {
+        "name": "website",
+        "link": "https://www.utcluj.ro",
+        "icon": "web"
+      }
+    ],
     "dates": {
       "date_start": "01.10.2016",
       "date_end": "14.07.2019"
@@ -30,8 +35,7 @@
     },
     "projects": [
       {
-        "project-type": "Bachelor's thesis",
-        "file": "project-cursuristudenti-bachelor-s-thesis"
+        "title": "Student Courses - Bachelor's thesis"
       }
     ]
   },
@@ -40,9 +44,14 @@
     "display": "true",
     "type": "High School",
     "img_bg": "light",
-    "img_bg_color": "#ffffff",
     "img": "content/img/education/logo-high-school-emil-racovita.webp",
-    "website": "https://www.liceulracovita.ro/",
+    "external_links" : [
+      {
+        "name": "website",
+        "link": "https://www.liceulracovita.ro",
+        "icon": "web"
+      }
+    ],
     "dates": {
       "date_start": "14.09.2012",
       "date_end": "18.07.2016"

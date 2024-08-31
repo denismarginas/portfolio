@@ -4,6 +4,14 @@ if(!isset($educations)) :
     $educations = getDataJson('data-items-education','data');
 endif;
 
+if(!isset($jsonGlobalData)) :
+    $jsonGlobalData = getDataJson('data-global-settings', 'data');
+endif;
+
+if(!isset($projectsData)) :
+    $projectsData = getDataJson('data-posts-projects', 'data');
+endif;
+
 ?>
 
 <section class="dm-education grid-background-animation">
@@ -40,7 +48,14 @@ endif;
                 <li class="education" id="<?php echo strtolower(str_replace(" ", "-", $education["name"])); ?>" data-motion="transition-fade-0 data-duration="0.6s" data-delay="<?php echo $j*0.02; ?>s">
 
                     <?php if(isset($education["img"]) && !empty($education["img"])) :  ?>
-                        <div class="logo" <?php echo isset($education["img_bg_color"]) ? 'style="background-color:'.$education["img_bg_color"].'"' : ''; ?> data-motion="transition-fade-0" data-duration="1.1s">
+                        <div class="logo"
+                            <?php if( $education["img_bg"] == "dark" ) :
+                                echo " data-layout='dark'";
+                            elseif( $education["img_bg"] == "light" ) :
+                                echo " data-layout='light'";
+                            endif; ?>
+
+                        data-motion="transition-fade-0" data-duration="1.1s">
                             <?php echo renderImage($GLOBALS['urlPath'].$education["img"], false,false, true, ["data-motion"=>"transition-blur-0", "data-duration"=>"0.5s" ]); ?>
                         </div>
                     <?php endif; ?>
@@ -115,15 +130,54 @@ endif;
 
                         </div>
 
-                        <ul class="socials" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.8s">
-                            <?php if(isset($education["url_web"]) && !empty($education["url_web"])) : ?>
-                                <li data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="1.2s" data-delay="0.6s">
-                                    <a href="<?php echo addHttps($education["url_web"]);?>" target="_blank">
-                                        <?php SVGRenderer::renderSVG('web'); ?>
-                                    </a>
-                                </li>
-                            <?php endif; ?>
-                        </ul>
+                        <?php if(isset($education["external_links"]) ||  isset($education["projects"])) : ?>
+                            <div class="additional-information">
+                                <?php if(isset($education["external_links"]) && !empty($education["external_links"])) : ?>
+                                    <div class="external-links" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.7s">
+
+                                        <?php foreach ($education["external_links"] as $item) : ?>
+                                            <a class="external-link" href="<?php echo addHttps($item["link"]);?>" target="_blank">
+                                                <?php SVGRenderer::renderSVG($item["icon"]); ?>
+                                                <span>
+                                                    <?php echo removeHttps($item["link"]); ?>
+                                                </span>
+                                            </a>
+                                        <?php endforeach; ?>
+                                    </div>
+                                <?php endif; ?>
+
+                                <?php if (isset($education["projects"]) && !empty($education["projects"])) : ?>
+                                    <div class="projects" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.8s">
+
+                                        <?php foreach ($education["projects"] as $project) :
+                                            if (isset($project["title"])) :
+                                                $match = false;
+                                                foreach ($projectsData as $project_item) :
+                                                    if (isset($project_item["post_data"]["title"]) && $project_item["post_data"]["title"] === $project["title"]) :
+                                                        $match = true; ?>
+                                                        <a class="project" href="<?php echo $project_item["file"];?>" target="_blank">
+                                                            <?php SVGRenderer::renderSVG('projects'); ?>
+                                                            <span>
+                                                                <?php echo $project_item["post_data"]["title"]; ?>
+                                                            </span>
+                                                        </a>
+                                                    <?php endif;
+                                                endforeach;
+                                                if(!$match) : ?>
+                                                    <div class="project" target="_blank">
+                                                        <?php SVGRenderer::renderSVG('projects'); ?>
+                                                        <span>
+                                                                <?php echo $project["title"]; ?>
+                                                        </span>
+                                                    </div>
+                                                <?php endif;
+                                            endif;
+                                        endforeach; ?>
+
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        <?php endif; ?>
                     </div>
 
                     <div class="background-shape" data-motion="transition-fade-0" data-duration="0.5s" data-delay="0.5s">

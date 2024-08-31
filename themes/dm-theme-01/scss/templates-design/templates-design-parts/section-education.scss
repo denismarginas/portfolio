@@ -114,10 +114,19 @@
             object-fit: contain;
             object-position: center;
           }
+          &[data-layout="light"] {
+            background: rgba(var(--dm-color-white-rgb), 1);
+          }
+          &[data-layout="dark"] {
+            background: rgba(var(--dm-color-gray-darken-rgb), 1);
+          }
         }
         > .details {
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-items: flex-start;
+          justify-content: space-between;
           gap: var( --dm-spacing-primary );
           z-index: 1;
           width: 100%;
@@ -178,12 +187,12 @@
               gap: var( --dm-spacing-primary );
 
               > .profession {
-                @include border-radius( var( --dm-border-radius-secondary ) );
                 @include dm-font-medium();
                 --dm-text-medium-font-weight: 600;
                 --dm-text-medium-color: var( --dm-color-white );
                 padding: calc( var( --dm-spacing-primary ) / 3 ) var( --dm-spacing-primary );
                 background-color: var( --dm-color-primary );
+                border-radius: 4px;
               }
             }
           }
@@ -215,6 +224,65 @@
                 }
                 > span {
                   @include dm-font-medium();
+                }
+              }
+            }
+          }
+          > .additional-information {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: var( --dm-spacing-primary );
+            margin-top: var( --dm-spacing-primary );
+
+            > .external-links {
+              @include flex-row();
+              flex-wrap: wrap;
+              gap: var( --dm-spacing-primary );
+              align-self: flex-start;
+
+              > .external-link {
+                @include flex-row();
+                @include flex-center();
+                @include border-radius( var( --dm-border-radius-secondary ) );
+                background-color: var( --dm-color-primary );
+                padding: calc( var( --dm-spacing-primary ) / 3 ) var( --dm-spacing-primary );
+
+                > svg {
+                  @include svg-color( var( --dm-color-white ) );
+                  @include fix-size(16px);
+                  margin-right: 5px;
+                }
+                > span {
+                  @include dm-font-medium();
+                  --dm-text-medium-color: var( --dm-color-white );
+                  --dm-text-medium-font-weight: 600;
+                }
+              }
+            }
+            > .projects {
+              @include flex-row();
+              flex-wrap: wrap;
+              gap: var( --dm-spacing-primary );
+              align-self: flex-start;
+
+              > .project {
+                @include flex-row();
+                gap: calc( var( --dm-spacing-primary ) / 2 );
+                border-radius: 4px;
+                border-style: solid;
+                border-width: 1px;
+                padding: calc( var( --dm-spacing-primary ) / 3 ) var( --dm-spacing-primary );
+                width: fit-content;
+
+                > svg {
+                  width: 20px;
+                  height: auto;
+                }
+
+                > span {
+                  @include dm-font-medium();
+                  --dm-text-medium-font-weight: 600;
                 }
               }
             }
@@ -365,6 +433,21 @@ body, body.theme-light {
                 }
               }
             }
+            > .additional-information {
+              > .projects {
+                > .project {
+                  background-color: rgba( var( --dm-color-primary-rgb ), 0.1 );
+                  border-color: rgba( var( --dm-color-primary-rgb ), 0.3 );
+
+                  > svg {
+                    @include svg-color( var( --dm-color-secondary ) );
+                  }
+                  > span {
+                    --dm-text-medium-color: var( --dm-color-secondary );
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -413,6 +496,21 @@ body.theme-dark {
               }
               > .list {
                 > li {
+                  > span {
+                    --dm-text-medium-color: var( --dm-color-white );
+                  }
+                }
+              }
+            }
+            > .additional-information {
+              > .projects {
+                > .project {
+                  background-color: rgba( var( --dm-color-primary-rgb ), 0.8 );
+                  border-color: rgba( var( --dm-color-white-rgb ), 0.2 );
+
+                  > svg {
+                    @include svg-color( var( --dm-color-white ) );
+                  }
                   > span {
                     --dm-text-medium-color: var( --dm-color-white );
                   }

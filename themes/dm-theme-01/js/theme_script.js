@@ -638,7 +638,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const href = link.getAttribute('href');
             const lastPart = href.split('/').pop();
 
-            if (!href.endsWith('.html') && !href.includes(':') && !lastPart.includes('.')) {
+            if (!href.endsWith('.html') && !href.includes(':') && !lastPart.includes('.') && !href.startsWith('#')) {
                 fetch(href + '.html')
                     .then(function (htmlResponse) {
                         if (htmlResponse.ok) {
