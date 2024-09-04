@@ -635,16 +635,19 @@ document.addEventListener("DOMContentLoaded", function() {
     // Redirect Extension .html on localhost
     if (window.location.hostname === 'localhost') {
         document.querySelectorAll('a[href]').forEach(function (link) {
-            const href = link.getAttribute('href');
-            const lastPart = href.split('/').pop();
+            let href = link.getAttribute('href');
+            if (href.startsWith('#') || href.includes(':')) return;
 
-            if (!href.endsWith('.html') && !href.includes(':') && !lastPart.includes('.') && !href.startsWith('#')) {
-                fetch(href + '.html')
+            const [baseHref, fragment] = href.split('#');
+            const lastPart = baseHref.split('/').pop();
+
+            if (!baseHref.endsWith('.html') && !lastPart.includes('.')) {
+                fetch(baseHref + '.html')
                     .then(function (htmlResponse) {
                         if (htmlResponse.ok) {
                             link.addEventListener('click', function (event) {
                                 event.preventDefault();
-                                window.location.href = href + '.html';
+                                window.location.href = baseHref + '.html' + (fragment ? `#${fragment}` : '');
                             });
                         } else {
                             return fetch(href);
@@ -657,7 +660,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                 window.location.href = href;
                             });
                         }
-                    });
+                    })
             }
         });
     }

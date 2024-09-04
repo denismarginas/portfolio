@@ -6,24 +6,10 @@
       <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/projects/cursuristudenti-lucrarelicenta/logo/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/projects/cursuristudenti-lucrarelicenta/web/desktop/web-10.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/projects/cursuristudenti-lucrarelicenta/web/desktop/web-11.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/projects/cursuristudenti-lucrarelicenta/web/desktop/web-12.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/projects/cursuristudenti-lucrarelicenta/web/desktop/web-13.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/projects/cursuristudenti-lucrarelicenta/web/desktop/web-2.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/projects/cursuristudenti-lucrarelicenta/web/desktop/web-3.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/projects/cursuristudenti-lucrarelicenta/web/desktop/web-4.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/projects/cursuristudenti-lucrarelicenta/web/desktop/web-5.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/projects/cursuristudenti-lucrarelicenta/web/desktop/web-6.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/projects/cursuristudenti-lucrarelicenta/web/desktop/web-7.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/projects/cursuristudenti-lucrarelicenta/web/desktop/web-8.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/projects/cursuristudenti-lucrarelicenta/web/desktop/web-9.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/projects/cursuristudenti-lucrarelicenta/web/home/home.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/json/data/data-items-education.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-items-education.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/json/data/data-content-personal.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-content-personal.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/json/data/data-posts-projects.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-posts-projects.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/json/index/index-data-pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/index/index-data-pages.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-education-list.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-education-list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/json/index/index-data-posts-projects.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/index/index-data-posts-projects.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/education-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/education-experience.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employee-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/employee-experience.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/experience.html" afterDir="false" />
@@ -51,7 +37,6 @@
       <change beforePath="$PROJECT_DIR$/project-ceramicevo.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-ceramicevo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-copiatoarealbaiulia.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-copiatoarealbaiulia.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-covoarealex.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-covoarealex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-cursuristudenti-bachelor-s-thesis.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project-dabo-sm-bm.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-dabo-sm-bm.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-denismarginas-github-portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-denismarginas-github-portfolio.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-denismarginas-google-site.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-denismarginas-google-site.html" afterDir="false" />
@@ -98,6 +83,7 @@
       <change beforePath="$PROJECT_DIR$/project-strikerproduction-google-site.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-strikerproduction-google-site.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-strikerproduction-rust-killfeed-generator.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-strikerproduction-rust-killfeed-generator.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-strikerproduction.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-strikerproduction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-student-courses-bachelor-s-thesis.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-student-courses-bachelor-s-thesis.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-superbrain.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-superbrain.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-symbol-buildcon.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-symbol-buildcon.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-tinib.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-tinib.html" afterDir="false" />
@@ -180,7 +166,8 @@
       <workItem from="1724506064571" duration="8992000" />
       <workItem from="1724578127446" duration="15946000" />
       <workItem from="1725003408774" duration="4903000" />
-      <workItem from="1725101633999" duration="8524000" />
+      <workItem from="1725101633999" duration="10058000" />
+      <workItem from="1725457407472" duration="988000" />
     </task>
     <servers />
   </component>
