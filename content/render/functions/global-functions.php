@@ -325,18 +325,18 @@ function getFirstCharacters($string, $n) {
 
 function seoImplicitFields() {
     $google_site_verification = "Not set.";
+    $jsonGlobalData = getDataJson('data-global-settings', 'data');
     $url_domain = getURL();
     $seoImplicitFieldsStrucutre = [
         'charset' => '<meta charset="UTF-8">',
         'viewport' => '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
-        'title' => '<title>Densi Marginas - Portfolio</title>',
-        'description' => '<meta name="description" content="My personal portfolio where are my work projects."/>',
-        'keywords' => '<meta name="keywords" content="denismarginas"/>',
+        'title' => '<title>'.$jsonGlobalData["site-identity"].'</title>',
+        'description' => '<meta name="description" content="'.$jsonGlobalData["site-description"].'"/>',
+        'keywords' => '<meta name="keywords" content="'.$jsonGlobalData["site-identity"].'"/>',
         'slug' => '<meta name="slug" content=""/>',
         'google-site-verification' => '<meta name="google-site-verification" content="'.$google_site_verification.'">',
         'robots' => '<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">',
-        'canonical' => '<link rel="canonical" href="'.$url_domain.'">',
-        'profile' => '<link rel="profile" href="https://gmpg.org/xfn/11">'
+        'canonical' => '<link rel="canonical" href="'.$url_domain.'">'
 
     ];
     return $seoImplicitFieldsStrucutre;
@@ -347,7 +347,8 @@ function seoAddInTag($seo_data) {
         'title' => '<title>%s</title>',
         'description' => '<meta name="description" content="%s"/>',
         'keywords' => '<meta name="keywords" content="%s"/>',
-        'slug' => '<meta name="slug" content="%s"/>'
+        'slug' => '<meta name="slug" content="%s"/>',
+        'canonical' => '<link rel="canonical" href="%s">'
     ];
 
     $seo_new_structure = [];
@@ -365,6 +366,7 @@ function seoAddInTag($seo_data) {
 
 function seoAddInContent($seo_data, $existing_content_html) {
     $new_seo_fields_content = seoAddInTag($seo_data);
+    $jsonGlobalData = getDataJson('data-global-settings', 'data');
 
     if (isset($new_seo_fields_content["title"])) {
         $pattern_title = "/<title>.*<\/title>/i"; // Case-insensitive regex pattern
@@ -386,12 +388,26 @@ function seoAddInContent($seo_data, $existing_content_html) {
         $replacement_slug = $new_seo_fields_content["slug"];
         $existing_content_html = preg_replace($pattern_slug, $replacement_slug, $existing_content_html);
     }
+    if (isset($seo_data["slug"])) {
+        $canonical_url = $jsonGlobalData["url"] . $seo_data["slug"] . $jsonGlobalData["page-slug-extension"];
+        $replacement_canonical = '<link rel="canonical" href="' . $canonical_url . '" />';
 
+        // Remove existing canonical tags
+        $pattern_canonical = '/<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/i';
+        $existing_content_html = preg_replace($pattern_canonical, '', $existing_content_html);
+
+        // Append new canonical tag
+        $existing_content_html .= "\n" . $replacement_canonical;
+    }
 
     return $existing_content_html;
 }
 
 function getURL() {
+    $jsonGlobalData = getDataJson('data-global-settings', 'data');
+    $siteUrl = $jsonGlobalData["url"];
+
+
     if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
         $url = "https://";
     else
@@ -399,7 +415,12 @@ function getURL() {
     $url.= $_SERVER['HTTP_HOST'];
     $url.= $_SERVER['REQUEST_URI'];
 
-    $url = "https://denismarginas.github.io/portfolio/";
+    if($siteUrl) {
+        $url = $siteUrl;
+    } else {
+        $url = "http://localhost/";
+    }
+
     return $url;
 }
 

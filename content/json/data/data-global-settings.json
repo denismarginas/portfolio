@@ -1,11 +1,13 @@
 {
     "site-identity": "Denis Marginas",
+    "site-description": "My personal portfolio where are my work projects.",
     "logo": {
         "img": "logo.webp",
         "path": "/logo/",
         "primary-title": "Denis",
         "secondary-title": "Marginas"
     },
+    "url": "https://denismarginas.github.io/portfolio/",
     "front-page": {
         "name": "Home",
         "slug": "home"
