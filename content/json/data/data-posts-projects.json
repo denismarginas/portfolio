@@ -961,6 +961,7 @@
             ],
             "web_project_status": "Done",
             "project_types": [
+                "booking application",
                 "presentation website",
                 "web content",
                 "web design"
@@ -1791,7 +1792,6 @@
         "category": "projects",
         "post_data": {
             "display": "enable",
-            "exclude_from_search": "true",
             "post_type": "projects",
             "media_path": "cekan",
             "title": "Cekan - Case Study",
@@ -2716,7 +2716,7 @@
                 }
             ],
             "project_types": [
-                "media photo"
+                "media image"
             ],
             "project_collaboration": [
                 "Individual"
@@ -6960,6 +6960,322 @@
                 "post_color_secondary": "#ffffff",
                 "post_color_background": "#ffffff",
                 "post_color_text_on_background": "#232b3f"
+            }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-maromsteelline",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "maromsteelline",
+            "title": "Marom Steel Line",
+            "logo": "logo/logo.png",
+            "logo_path": "maromsteelline",
+            "logo_type": "png",
+            "description": "For this project, it was necessary to transform PDF catalogs of products and services into representative pages. This involved creating WordPress post-type pages organized into categories, which feature loop grids of products from the catalog and designs that align with the brand.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "maromsteelline.co.il/building-structure/",
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_technology": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "jQuery",
+                    "svg": "jquery"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                },
+                {
+                    "name": "Unlimited Elements for Elementor Premium",
+                    "svg": "unlimited-elements"
+                },
+                {
+                    "name": "Advanced Custom Fields",
+                    "svg": "acf"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "web content",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual",
+                "Teamwork"
+            ],
+            "project_companies": [
+                "Mentor Marketing Experts"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "06.2024",
+                "date_end": "07.2024"
+            },
+            "tags": [
+                "web", "content-web"
+            ],
+            "colors": {
+                "post_color_primary": "#718b31",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#ffffff",
+                "post_color_text_on_background": "#524f4f"
+            }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-ypages",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "ypages",
+            "title": "Ypages - Pages",
+            "logo": "logo/logo.png",
+            "logo_path": "ypages",
+            "logo_type": "png",
+            "description": "In this project, I was tasked with translating Figma page designs into WordPress pages. Additionally, I ensured that the design was responsive and maintained a consistent appearance across all device sizes.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "ypages.co.il/tre/",
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_technology": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "jQuery",
+                    "svg": "jquery"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                }
+            ],
+            "web_project_status": "Done",
+            "media_custom": [
+                {
+                    "title": "Ramat Dekel: ",
+                    "url": "https://ypages.co.il/ramat-dekel/"
+                },
+                {
+                    "title": "Shdera Bialik: ",
+                    "url": "https://ypages.co.il/shdera-bialik/"
+                },
+                {
+                    "title": "Tre: ",
+                    "url": "https://ypages.co.il/tre/"
+                },
+                {
+                    "title": "Yam Eden: ",
+                    "url": "https://ypages.co.il/yam-eden/"
+                }
+            ],
+            "project_types": [
+                "web design"
+            ],
+            "project_collaboration": [
+                "Teamwork"
+            ],
+            "project_companies": [
+                "Mentor Marketing Experts"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "06.2024",
+                "date_end": "06.2024"
+            },
+            "tags": [
+                "web", "content-web"
+            ],
+            "colors": {
+                "post_color_primary": "#392e2e",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#392e2e",
+                "post_color_text_on_background": "#ffffff"
+            }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-edlaparis",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "edlaparis",
+            "title": "Edla Paris",
+            "logo": "logo/logo.png",
+            "logo_path": "edlaparis",
+            "logo_type": "png",
+            "description": "An accommodation booking website for Paris, developed in both Hebrew and English, with calendars fully synchronized with Booking.com and Airbnb.com. The website was built using a variety of plugins, including Elementor Pro for page building, Hotel Booking by MotoPress for managing reservations, and WPML Multilingual along with Loco Translate for language translation. Additional custom functionalities were implemented using Select Code Snippets, ACF (Advanced Custom Fields), and ACF Photo Gallery Field to create a tailored user experience.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "edlaparis.com",
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_technology": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "jQuery",
+                    "svg": "jquery"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                },
+                {
+                    "name": "Unlimited Elements for Elementor Premium",
+                    "svg": "unlimited-elements"
+                },
+                {
+                    "name": "Dynamic Conditions",
+                    "svg": "dynamic-conditions"
+                },
+                {
+                    "name": "Advanced Custom Fields",
+                    "svg": "acf"
+                },
+                {
+                    "name": "Hotel Booking"
+                },
+                {
+                    "name": "WPML Multilingual"
+                },
+                {
+                    "name": "Code Snippets"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "booking application",
+                "presentation website",
+                "web content",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Teamwork"
+            ],
+            "project_companies": [
+                "Mentor Marketing Experts"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "03.2024",
+                "date_end": "06.2024"
+            },
+            "tags": [
+                "web", "content-web"
+            ],
+            "colors": {
+                "post_color_primary": "#151e2d",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#151e2d",
+                "post_color_text_on_background": "#ffffff"
             }
         },
         "post_content": [
