@@ -7266,7 +7266,7 @@
             "employer": "Mentor Marketing Experts",
             "date": {
                 "date_start": "03.2024",
-                "date_end": "06.2024"
+                "date_end": "07.2024"
             },
             "tags": [
                 "web", "content-web"
@@ -7275,6 +7275,96 @@
                 "post_color_primary": "#151e2d",
                 "post_color_secondary": "#ffffff",
                 "post_color_background": "#151e2d",
+                "post_color_text_on_background": "#ffffff"
+            }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-sdb",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "sdb",
+            "title": "SDB - LP",
+            "logo": "logo/logo.png",
+            "logo_path": "sdb",
+            "logo_type": "png",
+            "description": "A landing page was created to capture interest and drive conversions, utilizing a Figma template for design and Elementor for content creation. This project involves the design and content creation for a website. Utilizing Figma for design the content with Elementor, alongside other plugins enhancing Elementor's capabilities, I crafted the website's visual and textual elements.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "lp.sdb.co.il",
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_technology": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "jQuery",
+                    "svg": "jquery"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "landing page",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual",
+                "Teamwork"
+            ],
+            "project_companies": [
+                "Mentor Marketing Experts"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "07.2024",
+                "date_end": "07.2024"
+            },
+            "tags": [
+                "web"
+            ],
+            "colors": {
+                "post_color_primary": "#38a130",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#38a130",
                 "post_color_text_on_background": "#ffffff"
             }
         },
