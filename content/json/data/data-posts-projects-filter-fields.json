@@ -74,6 +74,7 @@
         "placeholder": "--select--",
         "label": "Project Types:",
         "type": "select",
+        "style": "text-transform: capitalize;",
         "json-path": "['post_data']['project_types']",
         "json-type": "array"
     
@@ -86,6 +87,5 @@
         "type": "select",
         "json-path": "['post_data']['project_collaboration']",
         "json-type": "array"
-    
     }
 ]

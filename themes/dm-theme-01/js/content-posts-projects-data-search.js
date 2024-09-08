@@ -169,7 +169,7 @@ function extractOptionsFieldsJsonProjects(filterFields, projectsData) {
 
     // Initialize filterOptions dynamically based on filterFields
     filterFields.forEach(filter => {
-        const { id, "json-path": jsonPath, "json-type": jsonType, "json-get": jsonGet } = filter;
+        const { id, "json-path": jsonPath, "json-type": jsonType, "json-get": jsonGet, style } = filter;
         const selectElement = document.getElementById(id);
 
         if (!selectElement) {
@@ -191,7 +191,7 @@ function extractOptionsFieldsJsonProjects(filterFields, projectsData) {
                         }
                         if (option !== undefined && !options.has(option)) { // Check if option is not already added
                             options.add(option);
-                            appendOption(selectElement, option);
+                            appendOption(selectElement, option, style);
                         }
                     });
                 } else {
@@ -209,10 +209,13 @@ function extractOptionsFieldsJsonProjects(filterFields, projectsData) {
     });
 }
 
-function appendOption(selectElement, option) {
+function appendOption(selectElement, option, style) {
     const optionElement = document.createElement("option");
     optionElement.value = option;
     optionElement.textContent = option;
+    if (style && typeof style === "string") {
+        optionElement.setAttribute("style", style);
+    }
     selectElement.appendChild(optionElement);
 }
 
@@ -296,7 +299,7 @@ function createOptions(selectElement, array) {
 
     array.forEach((item) => {
         const option = document.createElement("option");
-        option.value = item; // Use the normal text as the value
+        option.value = item;
         option.textContent = item;
         selectElement.appendChild(option);
     });
@@ -334,9 +337,12 @@ function constructPFormField(field) {
     if (field["label"]) {
         html += '<label>' + field["label"] + '</label>';
     }
-
+    var style ='';
+    if (field["style"] && typeof field["style"] === "string") {
+        style =  'style="' + field["style"] + '"';
+    }
     if (field["type"] == 'select' && field["name"] && field["placeholder"]) {
-        html += '<select id="post-' + field["name"] + '" name="' + field["name"] + '" data-placeholder-value="'  + field["placeholder"] + '">';
+        html += '<select id="post-' + field["name"] + '" name="' + field["name"] + '" data-placeholder-value="'  + field["placeholder"] + '"'  + style +  '>';
         html += '<option value="default">' + field["placeholder"] + '</option>';
         html += '</select>';
 
