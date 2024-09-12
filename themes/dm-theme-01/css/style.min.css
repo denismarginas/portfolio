@@ -2340,6 +2340,7 @@ body.theme-dark .grid-background-animation {
 [data-toggle-animation=collapse][data-display=hide] {
   -webkit-animation: collapse-hide 0.1s ease-in-out forwards;
           animation: collapse-hide 0.1s ease-in-out forwards;
+  display: none !important;
 }
 [data-toggle-animation=collapse][data-display=show] {
   -webkit-animation: collapse-show 0.1s ease-in-out forwards;
@@ -2348,62 +2349,79 @@ body.theme-dark .grid-background-animation {
 
 @-webkit-keyframes collapse-hide {
   0% {
+    visibility: visible;
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
     max-height: 100%;
     opacity: 1;
   }
-  99.9% {
+  99% {
+    visibility: hidden;
+    display: none !important;
     -webkit-transform: translateY(-99%);
             transform: translateY(-99%);
     max-height: 0%;
+    height: 0px;
     opacity: 0;
   }
   100% {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
-    display: none;
+    visibility: hidden;
+    display: none !important;
     max-height: 0%;
+    height: 0px;
     opacity: 0;
   }
 }
 
 @keyframes collapse-hide {
   0% {
+    visibility: visible;
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
     max-height: 100%;
     opacity: 1;
   }
-  99.9% {
+  99% {
+    visibility: hidden;
+    display: none !important;
     -webkit-transform: translateY(-99%);
             transform: translateY(-99%);
     max-height: 0%;
+    height: 0px;
     opacity: 0;
   }
   100% {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
-    display: none;
+    visibility: hidden;
+    display: none !important;
     max-height: 0%;
+    height: 0px;
     opacity: 0;
   }
 }
 @-webkit-keyframes collapse-show {
   0% {
+    visibility: hidden;
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
-    display: none;
+    display: none !important;
     max-height: 0%;
+    height: 0px;
     opacity: 0;
   }
   1% {
+    visibility: visible;
     -webkit-transform: translateY(-99%);
             transform: translateY(-99%);
-    max-height: 0%;
+    max-height: 1%;
+    height: 1%;
     opacity: 0;
   }
   100% {
+    visibility: visible;
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
     max-height: 100%;
@@ -2412,19 +2430,24 @@ body.theme-dark .grid-background-animation {
 }
 @keyframes collapse-show {
   0% {
+    visibility: hidden;
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
-    display: none;
+    display: none !important;
     max-height: 0%;
+    height: 0px;
     opacity: 0;
   }
   1% {
+    visibility: visible;
     -webkit-transform: translateY(-99%);
             transform: translateY(-99%);
-    max-height: 0%;
+    max-height: 1%;
+    height: 1%;
     opacity: 0;
   }
   100% {
+    visibility: visible;
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
     max-height: 100%;

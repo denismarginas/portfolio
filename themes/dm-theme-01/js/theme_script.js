@@ -632,7 +632,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // **************
-    // Toggle Collapse animation
+    // Toggle Animation
     setTimeout(function() {
         document.querySelectorAll('[data-toggle]').forEach(toggler => {
             const targetIds = toggler.getAttribute('aria-controls') ? toggler.getAttribute('aria-controls').split(' ') : [];
@@ -655,7 +655,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             toggler.addEventListener('click', toggleCollapse);
         });
-    }, 200);
+    }, 0);
 
     function toggleCollapse(event) {
         event.preventDefault();
