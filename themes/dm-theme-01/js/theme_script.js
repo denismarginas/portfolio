@@ -731,6 +731,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 let newHref = href.replace('.html', '');
 
                 link.addEventListener('click', function (event) {
+                    if (event.ctrlKey || event.metaKey || event.button === 1) {
+                        return;
+                    }
+
                     event.preventDefault();
                     if (targetBlank) {
                         window.open(newHref, '_blank');
