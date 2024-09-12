@@ -1709,7 +1709,9 @@
                 "web content",
                 "web design",
                 "web maintenance",
-                "seo optimization"
+                "seo optimization",
+                "media image",
+                "media video"
             ],
             "project_collaboration": [
                 "Individual"
@@ -5501,7 +5503,8 @@
                 }
             ],
             "project_types": [
-                "media image"
+                "media image",
+                "media video"
             ],
             "project_collaboration": [
                 "Individual"
