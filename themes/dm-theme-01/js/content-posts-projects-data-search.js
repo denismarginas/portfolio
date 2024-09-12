@@ -272,56 +272,53 @@ function constructFilterFields(filterFields, projectsFormId) {
 }
 
 function appendIconsWithToggle(filterFields, projectsForm, blockClass) {
-    setTimeout(() => {
-        if (filterFields.length > 8) {
-            const icons = [
-                ["filter-query", "query-text"],
-                ["filter", "block-filters"]
-            ];
+    if (filterFields.length > 8) {
+        const icons = [
+            ["filter-query", "query-text"],
+            ["filter", "block-filters"]
+        ];
 
-            var blockElement = projectsForm.querySelector(blockClass);
-            blockElement.classList.add("advance-search");
+        var blockElement = projectsForm.querySelector(blockClass);
+        blockElement.classList.add("advance-search");
 
-            if (blockElement) {
-                const searchInputDiv = document.createElement('div');
-                searchInputDiv.className = 'search-input';
+        if (blockElement) {
+            const searchInputDiv = document.createElement('div');
+            searchInputDiv.className = 'search-input';
 
-                const toggleIconsDiv = document.createElement('div');
-                toggleIconsDiv.className = 'toggle-icons';
+            const toggleIconsDiv = document.createElement('div');
+            toggleIconsDiv.className = 'toggle-icons';
 
-                const queryDiv = document.createElement('div');
-                queryDiv.className = 'query-text collapse';
-                queryDiv.id = 'query-text';
+            const queryDiv = document.createElement('div');
+            queryDiv.className = 'query-text collapse';
+            queryDiv.id = 'query-text';
 
-                searchInputDiv.innerHTML = blockElement.innerHTML;
-                blockElement.innerHTML = '';
+            searchInputDiv.innerHTML = blockElement.innerHTML;
+            blockElement.innerHTML = '';
 
-                blockElement.appendChild(searchInputDiv);
-                blockElement.appendChild(toggleIconsDiv);
-                blockElement.appendChild(queryDiv);
+            blockElement.appendChild(searchInputDiv);
+            blockElement.appendChild(toggleIconsDiv);
+            blockElement.appendChild(queryDiv);
 
-                icons.forEach(([iconName, sectionId]) => {
-                    getIconSVG(iconName).then((filterIcon) => {
-                        if (filterIcon) {
-                            const iconDiv = document.createElement('div');
-                            iconDiv.id = `toggle-${iconName}`;
-                            iconDiv.className = 'icon';
-                            iconDiv.setAttribute('aria-controls', sectionId);
-                            iconDiv.setAttribute('data-toggle', 'collapse');
-                            iconDiv.setAttribute('aria-expanded', 'false');
-                            iconDiv.innerHTML = filterIcon;
-                            toggleIconsDiv.appendChild(iconDiv);
-                        }
-                    });
+            icons.forEach(([iconName, sectionId]) => {
+                getIconSVG(iconName).then((filterIcon) => {
+                    if (filterIcon) {
+                        const iconDiv = document.createElement('div');
+                        iconDiv.id = `toggle-${iconName}`;
+                        iconDiv.className = 'icon';
+                        iconDiv.setAttribute('aria-controls', sectionId);
+                        iconDiv.setAttribute('data-toggle', 'collapse');
+                        iconDiv.setAttribute('aria-expanded', 'false');
+                        iconDiv.innerHTML = filterIcon;
+                        toggleIconsDiv.appendChild(iconDiv);
+                    }
                 });
+            });
 
-                var query_amount = countVisibleProjects();
+            var query_amount = countVisibleProjects();
 
-                queryDiv.innerHTML = 'Showing <span id="query-amount">' + query_amount + '</span> results.';
-            }
+            queryDiv.innerHTML = 'Showing <span id="query-amount">' + query_amount + '</span> results.';
         }
-    }, 20);
-
+    }
 }
 
 function countVisibleProjects() {
