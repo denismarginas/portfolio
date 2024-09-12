@@ -111,24 +111,17 @@ document.addEventListener("DOMContentLoaded", function() {
                         } else {
                             searchedDelete.style.display = "none"; // Hide the delete button
                         }
-        
-        
                     });
         
                     searchedDelete.addEventListener("click", function() {
                         searchedString.textContent = "";
-                        searchedDelete.style.display = "none"; // Hide the delete button
-                        searchList.innerHTML = ""; // Clear the search results list
-        
-                        // Clear the search input
+                        searchedDelete.style.display = "none";
+                        searchList.innerHTML = "";
                         searchInput.value = "";
-        
-                        // Reset the content_data to its original state
                         content_data = originalContentData;
-                        // Implement logic to display all the search results again
                     });
                 } else {
-                    //console.log("Search elements not found.");
+                    console.log("Search elements not found.");
                 }
             }
 

@@ -17,12 +17,17 @@ document.addEventListener("DOMContentLoaded", function() {
       .then(data => {
           filterFields = data;
           constructFilterFields(filterFields, projectsFormId);
+          const searchPostButton = document.getElementById("search-post");
 
-          document.getElementById("search-post").addEventListener("click", function (event) {
-              event.preventDefault();
-              searchProjectsWithFilters(filterFields, projectsData);
-          });
-
+          if (searchPostButton) {
+              searchPostButton.addEventListener("click", function (event) {
+                  event.preventDefault();
+                  searchProjectsWithFilters(filterFields, projectsData);
+                  updateQueryAmount();
+              });
+          } else {
+              console.log("The search button was not found.");
+          }
       })
       .catch(error => {
           console.error('There was a problem with the fetch operation:', error);
@@ -243,6 +248,7 @@ function constructFilterFields(filterFields, projectsFormId) {
         var projectsFormHTML = "";
 
         var projectsFormHTML_block1 = "";
+        var projectsFormHTML_block2 = "";
 
         if (filterFields) {
             filterFields.forEach(function(field) {
@@ -250,19 +256,96 @@ function constructFilterFields(filterFields, projectsFormId) {
             });
         }
 
-        var projectsFormHTML_block2 = "";
-
         projectsFormHTML_block2 += constructPFormFieldInputSearch();
         projectsFormHTML_block2 += constructPFormButtonSubmit();
 
         projectsFormHTML += '<ul>'
-        projectsFormHTML += '<li class="block-1">' + projectsFormHTML_block1 + '</li>'
-        projectsFormHTML += '<li class="block-2">' + projectsFormHTML_block2 + '</li>'
+        projectsFormHTML += '<li id="block-filters" class="block-1">' + projectsFormHTML_block1 + '</li>'
+        projectsFormHTML += '<li id="block-search" class="block-2">' + projectsFormHTML_block2 + '</li>'
         projectsFormHTML += '</ul>'
 
+
         projectsForm.innerHTML = projectsFormHTML;
+
+        appendIconsWithToggle(filterFields, projectsForm, ".block-2")
     }
 }
+
+function appendIconsWithToggle(filterFields, projectsForm, blockClass, projects) {
+    if (filterFields.length > 8) {
+        const icons = [
+            ["filter-query", "query-text"],
+            ["filter", "block-filters"]
+        ];
+
+        var blockElement = projectsForm.querySelector(blockClass);
+        blockElement.classList.add("advance-search");
+
+        if (blockElement) {
+            const searchInputDiv = document.createElement('div');
+            searchInputDiv.className = 'search-input';
+
+            const toggleIconsDiv = document.createElement('div');
+            toggleIconsDiv.className = 'toggle-icons';
+
+            const queryDiv = document.createElement('div');
+            queryDiv.className = 'query-text collapse';
+            queryDiv.id = 'query-text';
+
+            searchInputDiv.innerHTML = blockElement.innerHTML;
+            blockElement.innerHTML = '';
+
+            blockElement.appendChild(searchInputDiv);
+            blockElement.appendChild(toggleIconsDiv);
+            blockElement.appendChild(queryDiv);
+
+            icons.forEach(([iconName, sectionId]) => {
+                getIconSVG(iconName).then((filterIcon) => {
+                    if (filterIcon) {
+                        const iconDiv = document.createElement('div');
+                        iconDiv.id = `toggle-${iconName}`;
+                        iconDiv.className = 'icon';
+                        iconDiv.setAttribute('aria-controls', sectionId);
+                        iconDiv.setAttribute('data-toggle', 'collapse');
+                        iconDiv.setAttribute('aria-expanded', 'false');
+                        iconDiv.innerHTML = filterIcon;
+                        toggleIconsDiv.appendChild(iconDiv);
+                    }
+                });
+            });
+
+
+
+            var query_amount = countVisibleProjects();
+
+            queryDiv.innerHTML = 'Showing <span id="query-amount">' + query_amount + '</span> results.';
+        }
+    }
+}
+
+function countVisibleProjects() {
+    const projectListElement = document.getElementById("post-list");
+    const projects = projectListElement.getElementsByClassName("dm-post-item");
+
+    let count = 0;
+    for (let i = 0; i < projects.length; i++) {
+        const style = window.getComputedStyle(projects[i]);
+        if (style.display === 'flex') {
+            count++;
+        }
+    }
+    return count;
+}
+
+function updateQueryAmount() {
+    const queryAmountElement = document.getElementById("query-amount");
+    queryAmountElement.innerText = "(loading...)";
+    setTimeout(() => {
+        const visibleCount = countVisibleProjects();
+        queryAmountElement.innerText = visibleCount + ' results';
+    }, 100);
+}
+
 
 function extractYearFromDate(dateStr) {
     var regex = /\b\d{4}\b|\b\d{1,2}\/\d{4}\b|\b\d{2}\.\d{4}\b/g;
@@ -358,4 +441,29 @@ function constructPFormFieldInputSearch() {
 
 function constructPFormButtonSubmit() {
     return '<button id="search-post" type="submit" class="post-search-submit">Search</button>';
+}
+function getIconSVG(name) {
+    const getPageUrl = window.location.href;
+    const getPagePath = getPageUrl.substring(0, getPageUrl.lastIndexOf('/') + 1);
+    const jsonIcons = getPagePath + "content/json/data/data-icons.json";
+
+    return fetch(jsonIcons)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data[name]) {
+                return data[name];
+            } else {
+                console.error(`Icon with name "${name}" not found.`);
+                return '';
+            }
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+            return '';
+        });
 }

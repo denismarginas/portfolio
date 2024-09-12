@@ -632,6 +632,59 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // **************
+    // Toggle Collapse animation
+    setTimeout(function() {
+        document.querySelectorAll('[data-toggle]').forEach(toggler => {
+            const targetIds = toggler.getAttribute('aria-controls') ? toggler.getAttribute('aria-controls').split(' ') : [];
+            const toggleType = toggler.getAttribute('data-toggle');
+
+
+            targetIds.forEach(id => {
+                const targetElement = document.getElementById(id);
+                if (targetElement) {
+                    const isExpanded = toggler.getAttribute('aria-expanded') === 'true';
+                    targetElement.setAttribute('data-toggle-animation', toggleType);
+
+                    if (isExpanded) {
+                        targetElement.setAttribute('data-display', 'show');
+                    } else {
+                        targetElement.setAttribute('data-display', 'hide');
+                    }
+                }
+            });
+
+            toggler.addEventListener('click', toggleCollapse);
+        });
+    }, 200);
+
+    function toggleCollapse(event) {
+        event.preventDefault();
+
+        const toggler = event.currentTarget;
+        const targetIds = toggler.getAttribute('aria-controls') ? toggler.getAttribute('aria-controls').split(' ') : [];
+
+        targetIds.forEach(id => {
+            const targetElement = document.getElementById(id);
+            if (targetElement) {
+
+                const currentDisplay = targetElement.getAttribute('data-display');
+
+                if (currentDisplay === 'hide') {
+                    targetElement.setAttribute('data-display', 'show');
+                } else {
+                    targetElement.setAttribute('data-display', 'hide')
+                }
+
+                const isExpanded = toggler.getAttribute('aria-expanded') === 'true';
+                toggler.setAttribute('aria-expanded', String(!isExpanded));
+            } else {
+                console.warn(`Element with id "${id}" not found.`);
+            }
+        });
+    }
+
+
+    // **************
     // Redirect Extension .html on localhost
     if (window.location.hostname === 'localhost') {
         document.querySelectorAll('a[href]').forEach(function (link) {
