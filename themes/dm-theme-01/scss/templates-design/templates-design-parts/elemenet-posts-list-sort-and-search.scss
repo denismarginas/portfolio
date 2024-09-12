@@ -137,7 +137,7 @@
     background-color: var( --dm-color-primary );
 
     > svg {
-      @include fix-height(20px);
+      @include fix-height(16px);
       width: auto;
       max-width: 100%;
       @include svg-color( var( --dm-color-white ) );

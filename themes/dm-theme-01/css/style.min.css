@@ -7882,9 +7882,9 @@ body:not([java-script=true]) .video-container > .show-play, body:not([java-scrip
   background-color: var(--dm-color-primary);
 }
 #post-list-sort-and-search .icon > svg {
-  height: 20px;
-  min-height: 20px;
-  max-height: 20px;
+  height: 16px;
+  min-height: 16px;
+  max-height: 16px;
   width: auto;
   max-width: 100%;
 }

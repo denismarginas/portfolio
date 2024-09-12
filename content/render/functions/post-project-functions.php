@@ -180,9 +180,18 @@ function renderGalleryWeb($post_data) {
     $gallery_web_content = "<div id='web' class='dm-gallery-web-content' data-motion='transition-fade-0' data-duration='0.5s'>";
 
     if(isset($post_data)) {
+        $projectsBackgroundDesktop = getDataJson('data-content-personal', 'data')["post-projects"]["background"]["desktop"];
+        $projectsBackgroundPhone = getDataJson('data-content-personal', 'data')["post-projects"]["background"]["phone"];
 
-        $bg_item_phone = $GLOBALS['urlPath']."content/img/design-elements"."/"."overlay-responsive-layout-phone.webp";
-        $bg_item_desktop = $GLOBALS['urlPath']."content/img/design-elements"."/"."overlay-responsive-layout-desktop.webp";
+        $bg_item_desktop = "";
+        $bg_item_phone = "";
+
+        if( $projectsBackgroundDesktop ) {
+            $bg_item_desktop = $GLOBALS['urlPath'].$projectsBackgroundDesktop;
+        }
+        if( $projectsBackgroundDesktop ) {
+            $bg_item_phone = $GLOBALS['urlPath'].$projectsBackgroundPhone;
+        }
 
         $gallery_path_web = "web";
         $gallery_path_web_banner = "home";

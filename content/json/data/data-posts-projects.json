@@ -7167,9 +7167,9 @@
                 "web", "content-web"
             ],
             "colors": {
-                "post_color_primary": "#392e2e",
+                "post_color_primary": "#b08842",
                 "post_color_secondary": "#ffffff",
-                "post_color_background": "#392e2e",
+                "post_color_background": "#b08842",
                 "post_color_text_on_background": "#ffffff"
             }
         },
