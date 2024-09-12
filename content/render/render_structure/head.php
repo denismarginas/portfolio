@@ -19,6 +19,9 @@
     endif;
     echo $seo_fields;
 
+    $renderer = new RendererElements();
+    $renderer->renderElement("google-analytics");
+
     ?>
 
     <link rel="stylesheet" href="<?php echo $theme_path; ?>/css/style.min.css">

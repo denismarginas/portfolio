@@ -35,7 +35,8 @@
     },
     "projects": [
       {
-        "title": "Student Courses - Bachelor's thesis"
+        "title": "Student Courses - Bachelor's thesis",
+        "icon": "folder-open"
       }
     ]
   },

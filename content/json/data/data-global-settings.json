@@ -109,5 +109,8 @@
             }
         },
         "preloader": "true"
+    },
+    "google-analytics": {
+        "id" : "G-GFKNYRN476"
     }
 }

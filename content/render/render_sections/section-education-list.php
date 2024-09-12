@@ -156,7 +156,9 @@ endif;
                                                     if (isset($project_item["post_data"]["title"]) && $project_item["post_data"]["title"] === $project["title"]) :
                                                         $match = true; ?>
                                                         <a class="project" href="<?php echo $project_item["file"];?>" target="_blank">
-                                                            <?php SVGRenderer::renderSVG('projects'); ?>
+                                                            <?php if (isset($project["icon"]) ) :
+                                                                SVGRenderer::renderSVG($project["icon"]);
+                                                            endif; ?>
                                                             <span>
                                                                 <?php echo $project_item["post_data"]["title"]; ?>
                                                             </span>
@@ -165,7 +167,9 @@ endif;
                                                 endforeach;
                                                 if(!$match) : ?>
                                                     <div class="project" target="_blank">
-                                                        <?php SVGRenderer::renderSVG('projects'); ?>
+                                                        <?php if (isset($project["icon"]) ) :
+                                                            SVGRenderer::renderSVG($project["icon"]);
+                                                        endif; ?>
                                                         <span>
                                                                 <?php echo $project["title"]; ?>
                                                         </span>
