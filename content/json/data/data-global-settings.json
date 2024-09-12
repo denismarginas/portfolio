@@ -21,7 +21,7 @@
         "button-text": "Search",
         "button-placeholder": "Search keywords.."
     },
-    "page-slug-extension": "",
+    "page-slug-extension": ".html",
     "language": {
         "default": "Enlgish",
         "list": [

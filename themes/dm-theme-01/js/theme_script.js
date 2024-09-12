@@ -718,6 +718,31 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    // **************
+    // Redirect Extension Removal for GitHub Pages (github.io)
+    if (window.location.hostname.includes('github.io')) {
+        document.querySelectorAll('a[href]').forEach(function (link) {
+            let href = link.getAttribute('href');
+            let targetBlank = link.getAttribute('target') === '_blank';
+
+            if (href.startsWith('#') || href.includes(':')) return;
+
+            if (href.endsWith('.html')) {
+                let newHref = href.replace('.html', '');
+
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    if (targetBlank) {
+                        window.open(newHref, '_blank');
+                    } else {
+                        // Redirect in the same tab
+                        window.location.href = newHref;
+                    }
+                });
+            }
+        });
+    }
+
 
 });
 
