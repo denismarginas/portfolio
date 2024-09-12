@@ -4,9 +4,10 @@ if(!isset($jsonGlobalData)) :
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
 endif;
 
-$googleAnalytics = $jsonGlobalData["google-analytics"]["id"];
+$googleAnalytics = $jsonGlobalData["google-analytics"]["id"] ?? null;
 
-if(isset($googleAnalytics) && !empty($googleAnalytics)) : ?>
+
+if(isset($googleAnalytics)) : ?>
     <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $googleAnalytics; ?>"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
