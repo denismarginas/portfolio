@@ -739,7 +739,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     if (targetBlank) {
                         window.open(newHref, '_blank');
                     } else {
-                        // Redirect in the same tab
                         window.location.href = newHref;
                     }
                 });

@@ -342,7 +342,7 @@ function updateQueryAmount() {
     queryAmountElement.innerText = "(loading...)";
     setTimeout(() => {
         const visibleCount = countVisibleProjects();
-        queryAmountElement.innerText = visibleCount + ' results';
+        queryAmountElement.innerText = visibleCount;
     }, 100);
 }
 
