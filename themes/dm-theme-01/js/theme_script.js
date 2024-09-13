@@ -660,15 +660,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const observerToggle = new MutationObserver(mutationsList => {
         mutationsList.forEach(mutation => {
-            if (mutation.type === 'childList' && mutation.addedNodes.length) {
-                mutation.addedNodes.forEach(node => {
-                    if (node.nodeType === 1) {
-                        if (node.matches('[data-toggle]')) {
-                            initializeTogglers();
-                        }
-                        node.querySelectorAll('[data-toggle]').forEach(initializeTogglers);
-                    }
-                });
+            if (mutation.type === 'childList') {
+                initializeTogglers();
             }
         });
     });

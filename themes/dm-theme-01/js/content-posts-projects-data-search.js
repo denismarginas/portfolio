@@ -22,9 +22,8 @@ document.addEventListener("DOMContentLoaded", async function() {
         } else {
             console.log("The search button was not found.");
         }
-
         extractOptionsFieldsJsonProjects(filterFields, projectsData);
-        await appendIconsWithToggle(filterFields, projectsFormId, ".block-2");
+
 
     } catch (error) {
         console.error('Error:', error);
@@ -149,7 +148,6 @@ function extractOptionsFieldsJsonProjects(filterFields, projectsData) {
         return;
     }
 
-    // Initialize filterOptions dynamically based on filterFields
     filterFields.forEach(filter => {
         const { id, "json-path": jsonPath, "json-type": jsonType, "json-get": jsonGet, style } = filter;
         const selectElement = document.getElementById(id);
@@ -161,27 +159,27 @@ function extractOptionsFieldsJsonProjects(filterFields, projectsData) {
 
         selectElement.innerHTML = `<option value="default">${filter.placeholder || ""}</option>`;
 
-        const options = new Set(); // Use a Set to store unique options
+        const options = new Set();
         projectsData.forEach(item => {
             const value = getValueFromJsonPath(item, jsonPath);
             if (value !== undefined) {
                 if (Array.isArray(value)) {
                     value.forEach(item => {
                         let option = jsonGet ? item[jsonGet] : item;
-                        if (jsonType === "date") { // Check if jsonType is "date"
-                            option = extractYearFromDate(option); // Extract year if it's a date
+                        if (jsonType === "date") {
+                            option = extractYearFromDate(option);
                         }
-                        if (option !== undefined && !options.has(option)) { // Check if option is not already added
+                        if (option !== undefined && !options.has(option)) {
                             options.add(option);
                             appendOption(selectElement, option, style);
                         }
                     });
                 } else {
                     let option = jsonGet ? value[jsonGet] : value;
-                    if (jsonType === "date") { // Check if jsonType is "date"
-                        option = extractYearFromDate(option); // Extract year if it's a date
+                    if (jsonType === "date") {
+                        option = extractYearFromDate(option);
                     }
-                    if (option !== undefined && !options.has(option)) { // Check if option is not already added
+                    if (option !== undefined && !options.has(option)) {
                         options.add(option);
                         appendOption(selectElement, option);
                     }
@@ -241,18 +239,19 @@ function constructFilterFields(filterFields, projectsFormId) {
         projectsFormHTML += '<li id="block-search" class="block-2">' + projectsFormHTML_block2 + '</li>'
         projectsFormHTML += '</ul>'
 
-
         projectsForm.innerHTML = projectsFormHTML;
+
+        appendIconsWithToggle(filterFields, projectsFormId, ".block-2");
     }
 }
 
-async function appendIconsWithToggle(filterFields, projectsFormId, blockClass) {
+function appendIconsWithToggle(filterFields, projectsFormId, blockClass) {
     var projectsForm = document.querySelector(projectsFormId);
 
     if (filterFields.length > 8) {
         const icons = [
             ["filter-query", "query-text", "hide"],
-            ["filter", "block-filters", "show"]
+            ["filter", "block-filters", window.innerWidth < 600 ? "hide" : "show"]
         ];
 
         var blockElement = projectsForm.querySelector(blockClass);
