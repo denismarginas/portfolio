@@ -29,7 +29,7 @@
                 "text": "Enlgish",
                 "iso": "en"
             }
-        ] 
+        ]
     },
     "themes-path": "themes",
     "theme-active": {
@@ -112,5 +112,15 @@
     },
     "google-analytics": {
         "id" : "G-GFKNYRN476"
+    },
+    "cookie-notice": {
+        "display" : "true",
+        "description-text": "By continuing to use this site, you consent to cookies that enhance your experience and analyze traffic.",
+        "page-text": "For more details, please read our %s.",
+        "button-text": "Accept Cookies",
+        "page" : {
+            "title": "Privacy Policy",
+            "slug": "privacy-policy"
+        }
     }
 }

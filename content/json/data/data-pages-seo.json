@@ -202,9 +202,19 @@
         "type": "page",
         "seo": {
             "title": "Social Activity",
-            "description": "Dive into the world of a full-stack web developer and skilled photo-video editor. Explore the intersection of web development and visual storytelling on Denis Ionut Marginas's insightful blog",
+            "description": "Dive into the world of a full-stack web developer and skilled photo-video editor. Explore the intersection of web development and visual storytelling on Denis Ionut Marginas's insightful blog.",
             "keywords": "denis marginas social activity",
             "slug": "social-activity"
+        }
+    },
+    {
+        "file": "privacy-policy",
+        "type": "page",
+        "seo": {
+            "title": "Privacy Policy",
+            "description": "Learn how we collect, use, and protect your personal data. Our Privacy Policy explains our use of cookies, Google Analytics, and your rights regarding your data.",
+            "keywords": "denis marginas privacy-policy",
+            "slug": "privacy-policy"
         }
     }
 ]

@@ -582,5 +582,29 @@
 			"desktop": "content/img/design-elements/overlay-responsive-layout-desktop.webp",
 			"phone": "content/img/design-elements/overlay-responsive-layout-phone.webp"
 		}
+	},
+	"privacy-policy": {
+		"title": "Privacy Policy",
+		"content": [
+			{
+				"subtitle": "Google Analytics",
+				"text": "We use Google Analytics on this website to analyze and understand how visitors interact with our site. Google Analytics is a web analytics service provided by Google Inc. It helps us track and report website traffic, allowing us to improve our content and user experience based on data collected."
+			},
+			{
+				"subtitle": "What Google Analytics Does",
+				"text": "Google Analytics collects data about your visit, including your IP address, browser type, and the pages you view. This information is used to generate reports on website activity and user behavior. The data collected by Google Analytics is aggregated and anonymized, meaning it does not personally identify you."
+			},
+			{
+				"subtitle": "How We Use the Data",
+				"text": "The information collected through Google Analytics helps us understand how users navigate our site, which pages are popular, and how we can enhance our website's performance. We use this data to make informed decisions about our content and services, aiming to provide a better experience for our visitors."
+			},
+			{
+				"subtitle": "Opt-Out",
+				"text": "You can choose to opt-out of Google Analytics tracking by installing the Google Analytics Opt-out Browser Add-on or by disabling cookies in your browser settings. Please note that opting out may affect your experience on our website."
+			},
+			{
+				"text": "For more details on how Google Analytics handles your data, you can refer to Google's Privacy Policy."
+			}
+		]
 	}
 }

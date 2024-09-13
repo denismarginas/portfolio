@@ -1,0 +1,97 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.cookie-notice {
+  display: none;
+}
+
+body[java-script="true"] {
+  .cookie-notice {
+    @include flex-row();
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: var( --dm-spacing-secondary );
+    z-index: 999;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    gap: var( --dm-spacing-primary );
+    width: 680px;
+    max-width: 100%;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 8px rgba(var(--dm-color-gray-darken-rgb), 0.3);
+
+    > .text {
+      @include dm-font-medium();
+      width: 420px;
+      max-width: 100%;
+
+      > .link {
+        @include dm-font-medium();
+        text-decoration: underline;
+      }
+    }
+    > .button-accept {
+      @include flex-center();
+      @include dm-font-medium();
+      gap: 4px;
+
+      > svg {
+        @include svg-color( var( --dm-color-white ) );
+        @include fix-height(18px);
+        width: auto;
+        max-width: 100%;
+        margin: 0px;
+      }
+    }
+  }
+}
+body, body.theme-light {
+  .cookie-notice {
+    background-color: var( --dm-background-color-white );
+
+    > .text {
+      --dm-text-medium-color: var( --dm-color-gray-darken );
+
+      > .link {
+        --dm-text-medium-color: var( --dm-color-gray-darken );
+
+        &:hover {
+          --dm-text-medium-color: var( --dm-color-primary );
+        }
+      }
+    }
+    > .button-accept {
+      &:hover {
+        > svg {
+          @include svg-color( var( --dm-color-primary ) );
+        }
+      }
+    }
+  }
+}
+body.theme-dark {
+  .cookie-notice {
+    background-color: var( --dm-background-color-gray-darken );
+
+    > .text {
+      --dm-text-medium-color: var( --dm-color-white );
+
+      > .link {
+        --dm-text-medium-color: var( --dm-color-white );
+
+        &:hover {
+          --dm-text-medium-color: var( --dm-color-highlight-primary );
+        }
+      }
+    }
+    > .button-accept {
+      &:hover {
+        > svg {
+          @include svg-color( var( --dm-color-highlight-primary ) );
+        }
+      }
+    }
+  }
+}

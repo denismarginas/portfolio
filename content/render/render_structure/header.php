@@ -125,4 +125,9 @@ $jsonCategoriesData = getDataJson('data-posts-projects-categories', 'data');
     </section>
 </header>
 
+<?php if( isset($jsonGlobalData["cookie-notice"]) ) :
+    $renderer = new RendererElements();
+    $renderer->renderElement("cookie-notice");
+endif; ?>
+
 

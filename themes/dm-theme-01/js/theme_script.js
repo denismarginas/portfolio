@@ -633,11 +633,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // **************
     // Toggle Animation
-    setTimeout(function() {
+    function initializeTogglers() {
         document.querySelectorAll('[data-toggle]').forEach(toggler => {
             const targetIds = toggler.getAttribute('aria-controls') ? toggler.getAttribute('aria-controls').split(' ') : [];
             const toggleType = toggler.getAttribute('data-toggle');
-
 
             targetIds.forEach(id => {
                 const targetElement = document.getElementById(id);
@@ -655,7 +654,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
             toggler.addEventListener('click', toggleCollapse);
         });
-    }, 0);
+    }
+    initializeTogglers();
+
+    const observer = new MutationObserver(() => {
+        initializeTogglers();
+    });
+
+    // Observe changes in the document body
+    observer.observe(document.body, { childList: true, subtree: true });
 
     function toggleCollapse(event) {
         event.preventDefault();
@@ -663,25 +670,25 @@ document.addEventListener("DOMContentLoaded", function() {
         const toggler = event.currentTarget;
         const targetIds = toggler.getAttribute('aria-controls') ? toggler.getAttribute('aria-controls').split(' ') : [];
 
+        const isExpanded = toggler.getAttribute('aria-expanded') === 'true';
+        const newExpandedState = String(!isExpanded);
+
+        toggler.setAttribute('aria-expanded', newExpandedState);
+        const newDisplayState = newExpandedState === 'true' ? 'show' : 'hide';
+
         targetIds.forEach(id => {
             const targetElement = document.getElementById(id);
             if (targetElement) {
+                targetElement.setAttribute('data-display', newDisplayState);
 
-                const currentDisplay = targetElement.getAttribute('data-display');
-
-                if (currentDisplay === 'hide') {
-                    targetElement.setAttribute('data-display', 'show');
-                } else {
-                    targetElement.setAttribute('data-display', 'hide')
-                }
-
-                const isExpanded = toggler.getAttribute('aria-expanded') === 'true';
-                toggler.setAttribute('aria-expanded', String(!isExpanded));
+                console.log("Target Element:", targetElement);
+                console.log("Updated data-display:", newDisplayState);
             } else {
                 console.warn(`Element with id "${id}" not found.`);
             }
         });
     }
+
 
 
     // **************
@@ -745,8 +752,24 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
+    // **************
+    // Cookie Notice - functionality
+    var cookieNotice = document.getElementById('cookie-notice');
 
+    if (cookieNotice) {
+        document.querySelector('#cookie-notice .button-accept').addEventListener('click', function() {
+            cookieNotice.setAttribute('data-display', 'hide');
+            setTimeout(function() {
+                cookieNotice.style.display = 'none';
+            }, 300);
+            sessionStorage.setItem('cookieAccepted', 'true');
+        });
 
+        if (sessionStorage.getItem('cookieAccepted') === 'true') {
+            cookieNotice.style.display = 'none';
+            cookieNotice.setAttribute('data-display', 'hide');
+        }
+    }
 });
 
 //Contact Form

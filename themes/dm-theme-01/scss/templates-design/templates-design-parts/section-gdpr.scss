@@ -1,0 +1,61 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-gdpr {
+  @include padding-x();
+  overflow: hidden;
+  min-height: 80vh;
+
+  > container {
+    @include flex-column();
+    gap: var( --dm-spacing-secondary);
+
+    > h1 {
+      --dm-text-heading1-font-family: var( --dm-font-family-secondary );
+      margin-bottom: var( --dm-spacing-secondary);
+
+      &:after{
+        position: relative;
+        display: block;
+        content: "";
+        width: 100%;
+        max-width: var( --dm-spacing-small );
+        height: 3px;
+        background-color: var(--dm-color-primary);
+      }
+    }
+  }
+}
+
+body, body.theme-light {
+  .dm-gdpr {
+    > container {
+      > h1 {
+        --dm-text-heading1-color: var( --dm-color-gray-darken );
+      }
+      > h3 {
+        --dm-text-heading3-color: var( --dm-color-gray-darken );
+      }
+      > p {
+        --dm-text-default-color: var( --dm-color-gray );
+      }
+    }
+  }
+}
+body.theme-dark {
+  .dm-gdpr {
+    > container {
+      > h1 {
+        --dm-text-heading1-color: var( --dm-color-white );
+      }
+      > h3 {
+        --dm-text-heading3-color: var( --dm-color-white );
+      }
+      > p {
+        --dm-text-default-color: var( --dm-color-white );
+      }
+    }
+  }
+}
+
+

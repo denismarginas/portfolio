@@ -118,5 +118,11 @@
             ["blog-header"],
             ["blog-posts"]
         ]
+    },
+    {
+        "file": "privacy-policy",
+        "content": [
+            ["gdpr"]
+        ]
     }
 ]

@@ -1,57 +1,33 @@
-
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", async function() {
     var projectsFormId = "#post-list-sort-and-search";
 
-    var filterFields = [];
-    const getPageUrl = window.location.href;
-    const getPagePath = getPageUrl.substring(0, getPageUrl.lastIndexOf('/') + 1);
-    const jsonFilterFilePath = getPagePath + "content/json/data/data-posts-projects-filter-fields.json";
+    try {
+        const getPageUrl = window.location.href;
+        const getPagePath = getPageUrl.substring(0, getPageUrl.lastIndexOf('/') + 1);
+        const jsonFilterFilePath = getPagePath + "content/json/data/data-posts-projects-filter-fields.json";
+        const jsonFilePath = getPagePath + "content/json/index/index-data-posts-projects.json";
 
-    fetch(jsonFilterFilePath)
-      .then(response => {
-          if (!response.ok) {
-              throw new Error('Network response was not ok');
-          }
-          return response.json();
-      })
-      .then(data => {
-          filterFields = data;
-          constructFilterFields(filterFields, projectsFormId);
-          const searchPostButton = document.getElementById("search-post");
+        const filterFields = await fetchJson(jsonFilterFilePath);
+        const projectsData = await fetchJson(jsonFilePath);
 
-          if (searchPostButton) {
-              searchPostButton.addEventListener("click", function (event) {
-                  event.preventDefault();
-                  searchProjectsWithFilters(filterFields, projectsData);
-                  updateQueryAmount();
-              });
-          } else {
-              console.log("The search button was not found.");
-          }
-      })
-      .catch(error => {
-          console.error('There was a problem with the fetch operation:', error);
-      });
+        constructFilterFields(filterFields, projectsFormId);
 
-    var projectsData;
+        const searchPostButton = document.getElementById("search-post");
+        if (searchPostButton) {
+            searchPostButton.addEventListener("click", function (event) {
+                event.preventDefault();
+                searchProjectsWithFilters(filterFields, projectsData);
+                updateQueryAmount();
+            });
+        } else {
+            console.log("The search button was not found.");
+        }
 
-    const currentPageUrl = window.location.href;
-    const currentPagePath = currentPageUrl.substring(0, currentPageUrl.lastIndexOf('/') + 1);
-    const jsonFilePath = currentPagePath + "content/json/index/index-data-posts-projects.json";
+        extractOptionsFieldsJsonProjects(filterFields, projectsData);
 
-    fetch( jsonFilePath )
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            projectsData = data;
-            extractOptionsFieldsJsonProjects(filterFields, projectsData)
-
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
+    } catch (error) {
+        console.error('Error:', error);
+    }
 });
 
 function searchProjectsWithFilters(filterFields, projectsData) {
@@ -344,7 +320,6 @@ function updateQueryAmount() {
     }, 100);
 }
 
-
 function extractYearFromDate(dateStr) {
     var regex = /\b\d{4}\b|\b\d{1,2}\/\d{4}\b|\b\d{2}\.\d{4}\b/g;
     var matches = dateStr.match(regex);
@@ -464,4 +439,12 @@ function getIconSVG(name) {
             console.error('There was a problem with the fetch operation:', error);
             return '';
         });
+}
+
+async function fetchJson(url) {
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error('Network response was not ok');
+    }
+    return response.json();
 }
