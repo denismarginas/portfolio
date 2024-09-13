@@ -658,7 +658,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     initializeTogglers();
 
-    const observer = new MutationObserver(mutationsList => {
+    const observerToggle = new MutationObserver(mutationsList => {
         mutationsList.forEach(mutation => {
             if (mutation.type === 'childList') {
                 initializeTogglers();
@@ -666,7 +666,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    observer.observe(document.body, { childList: true, subtree: true });
+    observerToggle.observe(document.body, { childList: true, subtree: true });
 
 
     function toggleCollapse(event) {
@@ -685,16 +685,11 @@ document.addEventListener("DOMContentLoaded", function() {
             const targetElement = document.getElementById(id);
             if (targetElement) {
                 targetElement.setAttribute('data-display', newDisplayState);
-
-                console.log("Target Element:", targetElement);
-                console.log("Updated data-display:", newDisplayState);
             } else {
                 console.warn(`Element with id "${id}" not found.`);
             }
         });
     }
-
-
 
     // **************
     // Redirect Extension .html on localhost

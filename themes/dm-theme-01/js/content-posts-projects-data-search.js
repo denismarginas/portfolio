@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         }
 
         extractOptionsFieldsJsonProjects(filterFields, projectsData);
+        await appendIconsWithToggle(filterFields, projectsFormId, ".block-2");
 
     } catch (error) {
         console.error('Error:', error);
@@ -242,12 +243,12 @@ function constructFilterFields(filterFields, projectsFormId) {
 
 
         projectsForm.innerHTML = projectsFormHTML;
-
-        appendIconsWithToggle(filterFields, projectsForm, ".block-2")
     }
 }
 
-async function appendIconsWithToggle(filterFields, projectsForm, blockClass) {
+async function appendIconsWithToggle(filterFields, projectsFormId, blockClass) {
+    var projectsForm = document.querySelector(projectsFormId);
+
     if (filterFields.length > 8) {
         const icons = [
             ["filter-query", "query-text", "hide"],
@@ -290,22 +291,9 @@ async function appendIconsWithToggle(filterFields, projectsForm, blockClass) {
                         iconDiv.setAttribute('aria-expanded', expandDisplay);
                         iconDiv.innerHTML = filterIcon;
                         toggleIconsDiv.appendChild(iconDiv);
-
-                        const sectionElement = document.getElementById(sectionId);
-                        if (sectionElement) {
-                            const isExpanded = iconDiv.getAttribute('aria-expanded') === 'true';
-                            sectionElement.setAttribute('data-toggle-animation', 'collapse');
-
-                            if (isExpanded) {
-                                sectionElement.setAttribute('data-display', 'show');
-                            } else {
-                                sectionElement.setAttribute('data-display', 'hide');
-                            }
-                        }
                     }
                 });
             });
-
             var query_amount = countVisibleProjects();
 
             queryDiv.innerHTML = 'Showing <span id="query-amount">' + query_amount + '</span> results.';
