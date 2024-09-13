@@ -655,14 +655,20 @@ document.addEventListener("DOMContentLoaded", function() {
             toggler.addEventListener('click', toggleCollapse);
         });
     }
+
     initializeTogglers();
 
-    const observer = new MutationObserver(() => {
-        initializeTogglers();
+    const observer = new MutationObserver(mutationsList => {
+        mutationsList.forEach(mutation => {
+            if (mutation.type === 'childList') {
+                initializeTogglers();
+            }
+        });
     });
 
     // Observe changes in the document body
     observer.observe(document.body, { childList: true, subtree: true });
+
 
     function toggleCollapse(event) {
         event.preventDefault();

@@ -247,11 +247,11 @@ function constructFilterFields(filterFields, projectsFormId) {
     }
 }
 
-function appendIconsWithToggle(filterFields, projectsForm, blockClass) {
+async function appendIconsWithToggle(filterFields, projectsForm, blockClass) {
     if (filterFields.length > 8) {
         const icons = [
-            ["filter-query", "query-text"],
-            ["filter", "block-filters"]
+            ["filter-query", "query-text", "hide"],
+            ["filter", "block-filters", "show"]
         ];
 
         var blockElement = projectsForm.querySelector(blockClass);
@@ -275,7 +275,7 @@ function appendIconsWithToggle(filterFields, projectsForm, blockClass) {
             blockElement.appendChild(toggleIconsDiv);
             blockElement.appendChild(queryDiv);
 
-            icons.forEach(([iconName, sectionId]) => {
+            icons.forEach(([iconName, sectionId, display]) => {
                 getIconSVG(iconName).then((filterIcon) => {
                     if (filterIcon) {
                         const iconDiv = document.createElement('div');
@@ -283,9 +283,25 @@ function appendIconsWithToggle(filterFields, projectsForm, blockClass) {
                         iconDiv.className = 'icon';
                         iconDiv.setAttribute('aria-controls', sectionId);
                         iconDiv.setAttribute('data-toggle', 'collapse');
-                        iconDiv.setAttribute('aria-expanded', 'false');
+                        var expandDisplay = "false"
+                        if (display === "show") {
+                            expandDisplay = "true"
+                        }
+                        iconDiv.setAttribute('aria-expanded', expandDisplay);
                         iconDiv.innerHTML = filterIcon;
                         toggleIconsDiv.appendChild(iconDiv);
+
+                        const sectionElement = document.getElementById(sectionId);
+                        if (sectionElement) {
+                            const isExpanded = iconDiv.getAttribute('aria-expanded') === 'true';
+                            sectionElement.setAttribute('data-toggle-animation', 'collapse');
+
+                            if (isExpanded) {
+                                sectionElement.setAttribute('data-display', 'show');
+                            } else {
+                                sectionElement.setAttribute('data-display', 'hide');
+                            }
+                        }
                     }
                 });
             });
