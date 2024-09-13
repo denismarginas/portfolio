@@ -666,7 +666,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Observe changes in the document body
     observer.observe(document.body, { childList: true, subtree: true });
 
 

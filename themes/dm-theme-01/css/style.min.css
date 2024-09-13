@@ -11862,6 +11862,7 @@ body[java-script=true] .cookie-notice > .button-accept > svg[data-svg-type=strok
 }
 
 body .cookie-notice, body.theme-light .cookie-notice {
+  border: 1px solid rgba(var(--dm-color-gray-rgb), 0.2);
   background-color: var(--dm-background-color-white);
 }
 body .cookie-notice > .text, body.theme-light .cookie-notice > .text {
@@ -11881,6 +11882,7 @@ body .cookie-notice > .button-accept:hover > svg[data-svg-type=stroke] > path, b
 }
 
 body.theme-dark .cookie-notice {
+  border: 1px solid rgba(var(--dm-color-white-rgb), 0.2);
   background-color: var(--dm-background-color-gray-darken);
 }
 body.theme-dark .cookie-notice > .text {

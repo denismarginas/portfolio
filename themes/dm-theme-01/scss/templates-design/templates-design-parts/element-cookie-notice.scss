@@ -49,8 +49,9 @@ body[java-script="true"] {
 }
 body, body.theme-light {
   .cookie-notice {
+    border: 1px solid rgba(var(--dm-color-gray-rgb), 0.2);
     background-color: var( --dm-background-color-white );
-
+ 
     > .text {
       --dm-text-medium-color: var( --dm-color-gray-darken );
 
@@ -73,6 +74,7 @@ body, body.theme-light {
 }
 body.theme-dark {
   .cookie-notice {
+    border: 1px solid rgba(var(--dm-color-white-rgb), 0.2);
     background-color: var( --dm-background-color-gray-darken );
 
     > .text {
