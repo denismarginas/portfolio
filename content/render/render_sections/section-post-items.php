@@ -39,10 +39,17 @@ $search_and_sort_bar = true;
                             $shine_animation = 'data-animation="shine"';
                         endif; ?>
 
-                        <a class="dm-post-item-logo" href="<?php echo $post_path; ?>" <?php echo $shine_animation; ?>
+                        <a class="dm-post-item-image" href="<?php echo $post_path; ?>" <?php echo $shine_animation; ?>
                            style="background-color: <?php echo $post_data["colors"]["post_color_background"]; ?>;">
 
-                            <?php echo  renderLogoPost($post_data); ?>
+                            <?php if (isset($post_data["logo"]) && isset($post_data["logo_path"])) :
+                                echo renderLogoPost($post_data,false, "logo");
+                            endif; ?>
+
+                            <?php if (isset($post_data["thumbnail"]) && isset($post_data["thumbnail_path"])) :
+                                $thumbnail = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["thumbnail_path"]."/".$post_data["thumbnail"];
+                                echo renderImage($thumbnail,false, "thumbnail");
+                            endif; ?>
 
                             <?php
                             $web_image_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/web/home/";

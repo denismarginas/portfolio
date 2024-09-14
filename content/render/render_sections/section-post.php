@@ -80,18 +80,31 @@ endif;
         </div>
 
         <aside class="post-data">
-            <div class="post-logo" data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.4s">
-                <?php if (isset($post_data["logo_type"]) && !empty($post_data["logo_type"]) && isset($post_data["logo"]) && isset($post_data["logo_path"])) : ?>
-                
-                    <?php if ( $post_data["logo_type"] == "svg" ) : ?>
+
+
+            <?php if (isset($post_data["logo"]) && isset($post_data["logo_path"])) : ?>
+                <?php $logo = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["logo_path"]."/".$post_data["logo"]; ?>
+
+                <div class="post-image post-logo" data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.4s">
+                    <?php if (isset($post_data["logo_type"]) && !empty($post_data["logo_type"]) && $post_data["logo_type"] == "svg") : ?>
                         <?php SVGRenderer::renderSVG( $post_data["logo"] ); ?>
-                    <?php elseif( ($post_data["logo_type"] == "png") || ($post_data["logo_type"] == "jpg") || $post_data["logo_type"] == "jpeg") : ?>
-                        <img src="<?php echo $GLOBALS['urlPath']; ?>content/img/<?php echo $post_data["post_type"];?>/<?php echo $post_data["logo_path"];?>/<?php echo $post_data["logo"]; ?>" width="100" height="100" alt="<?php echo $post_data["title"];?> - Logo">
+                    <?php else : ?>
+                        <?php echo renderImage($logo, false, false, true, ["alt" => "Post Logo - ".$post_data["title"]],); ?>
                     <?php endif; ?>
-                
-                <?php endif; ?>
-                
-            </div>
+                </div>
+
+            <?php endif; ?>
+
+            <?php if (isset($post_data["thumbnail"]) && isset($post_data["thumbnail_path"])) : ?>
+                <?php $thumbnail = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["thumbnail_path"]."/".$post_data["thumbnail"]; ?>
+
+                <div class="post-image post-thumbnail" data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.4s">
+                    <?php echo renderImage($thumbnail, false, false, true, ["alt" => "Post Thumbnail - ".$post_data["title"]]); ?>
+                    <?php echo renderImage($thumbnail, false, "overlay", true, ["alt" => "Post Thumbnail Overlay"]); ?>
+                </div>
+
+            <?php endif; ?>
+
             <div class="post-text" data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.6s">
                 <?php if (isset($post_data["title"]) && !empty($post_data["title"])) : ?>
                     <h2 class="post-title"><?php echo $post_data["title"]; ?></h2>

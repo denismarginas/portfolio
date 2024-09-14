@@ -9,10 +9,9 @@
             "post_type": "projects",
             "media_path": "student-courses-bachelor-s-thesis",
             "title": "Student Courses - Bachelor's thesis",
-            "logo": "logo/logo.png",
-            "logo_path": "student-courses-bachelor-s-thesis",
-            "logo_type": "png",
-            "description": "This is my Bachelor's thesis named 'Cursuri Studenti - Lucrare Licenta' where I aim was to develop a website catering specifically to students who require access to various courses or specific course materials in text format for reports or projects. The website primarily facilitates the uploading of course content in image format, which is then converted and stored in text format on the site. Additionally, users have the option to edit their personal data, customize their accounts with a logo, and, as administrators, manage both user accounts and course materials. <br></br> Technologies used: Hypertext Markup Language (HTML), Zurb Foundation, JavaScript, Cascading Style Sheets (CSS), Hypertext Preprocessor (PHP), XAMPP, Tesseract OCR, HeidiSQL",
+            "thumbnail": "thumbnail/thumbnail.webp",
+            "thumbnail_path": "student-courses-bachelor-s-thesis",
+            "description": "This is my Bachelor's thesis named Student Courses (RO: 'Cursuri Studenti - Lucrare Licenta') where I aim was to develop a website catering specifically to students who require access to various courses or specific course materials in text format for reports or projects. The website primarily facilitates the uploading of course content in image format, which is then converted and stored in text format on the site. Additionally, users have the option to edit their personal data, customize their accounts with a logo, and, as administrators, manage both user accounts and course materials. <br></br> Technologies used: Hypertext Markup Language (HTML), Zurb Foundation, JavaScript, Cascading Style Sheets (CSS), Hypertext Preprocessor (PHP), XAMPP, Tesseract OCR, HeidiSQL",
             "categories": [
                 "Web Development Projects",
                 "Miscellaneous Projects"
@@ -62,8 +61,8 @@
             "colors": {
                 "post_color_primary": "#e7e7e7", 
                 "post_color_secondary": "#282828",
-                "post_color_background": "#ffffff",
-                "post_color_text_on_background": "#ffffff"
+                "post_color_background": "#9fa3a6",
+                "post_color_text_on_background": "#282828"
             }
         },
         "post_content": [
