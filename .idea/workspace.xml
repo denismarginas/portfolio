@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2259709f-b699-4482-a363-da52decd52d5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/json/index/index-data-pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/index/index-data-pages.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-post-items-media.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-post-items-media.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-post-items-miscellaneous.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-post-items-miscellaneous.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-post-items-web.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-post-items-web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-post-visual-media-layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-post-visual-media-layout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-post-items.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-post-items.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +76,7 @@
       <workItem from="1725734651633" duration="158000" />
       <workItem from="1725793081359" duration="11253000" />
       <workItem from="1725954804796" duration="6966000" />
-      <workItem from="1726128601816" duration="54427000" />
+      <workItem from="1726128601816" duration="55021000" />
     </task>
     <servers />
   </component>

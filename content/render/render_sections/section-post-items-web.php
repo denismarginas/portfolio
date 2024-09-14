@@ -133,15 +133,12 @@ $src_current = __DIR__ . "/../../../";
                                         else:
                                             echo renderLogoPost($post_data,false, "logo");
                                         endif;
-                                    endif; ?>
-
-                                    <?php if (isset($post_data["thumbnail"]) && isset($post_data["thumbnail_path"])) :
+                                    elseif (isset($post_data["thumbnail"]) && isset($post_data["thumbnail_path"])) :
                                         $thumbnail = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["thumbnail_path"]."/".$post_data["thumbnail"];
                                         echo renderImage($thumbnail,false, "thumbnail");
                                     endif; ?>
 
-                                    <?php
-                                    $web_image_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/web/home/";
+                                    <?php $web_image_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/web/home/";
 
                                     if(file_exists($src_current.$web_image_path)) :
 
