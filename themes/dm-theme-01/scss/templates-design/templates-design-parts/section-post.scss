@@ -27,7 +27,8 @@
         &.post-logo {
           padding: var( --dm-spacing-secondary );
 
-          > img {
+          > img, > svg {
+            @include svg-color( var( --dm-color-white ) );
             object-position: center;
             object-fit: contain;
             height: auto;

@@ -43,7 +43,11 @@ $search_and_sort_bar = true;
                            style="background-color: <?php echo $post_data["colors"]["post_color_background"]; ?>;">
 
                             <?php if (isset($post_data["logo"]) && isset($post_data["logo_path"])) :
-                                echo renderLogoPost($post_data,false, "logo");
+                                if (isset($post_data["logo_type"]) && ($post_data["logo_type"] == "svg")) :
+                                    SVGRenderer::renderSVG( $post_data["logo"] );
+                                else:
+                                    echo renderLogoPost($post_data,false, "logo");
+                                endif;
                             endif; ?>
 
                             <?php if (isset($post_data["thumbnail"]) && isset($post_data["thumbnail_path"])) :

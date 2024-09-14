@@ -51,10 +51,25 @@ usort($posts, "personalTypePostProjectSortAsc");
                     ?>
 
                     <li class="carousel-item">
-
-                        <a class="dm-post-item-logo" href="<?php echo $post_path; ?>"
+                        <a class="dm-post-item-image" href="<?php echo $post_path; ?>"
                            style="background-color: <?php echo $post_data["colors"]["post_color_background"]; ?>;">
-                            <?php echo  renderLogoPost($post_data, false, false, false); ?>
+
+                            <?php if (isset($post_data["logo"]) && isset($post_data["logo_path"])) : ?>
+                                <?php $logo = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["logo_path"]."/".$post_data["logo"]; ?>
+
+                                <?php if (isset($post_data["logo_type"]) && !empty($post_data["logo_type"]) && $post_data["logo_type"] == "svg") : ?>
+                                    <?php SVGRenderer::renderSVG( $post_data["logo"] ); ?>
+                                <?php else : ?>
+                                    <?php echo renderImage($logo, false, "logo", true, ["alt" => "Post Logo - ".$post_data["title"]]); ?>
+                                <?php endif; ?>
+                            <?php endif; ?>
+
+                            <?php if (isset($post_data["thumbnail"]) && isset($post_data["thumbnail_path"])) : ?>
+                                <?php $thumbnail = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["thumbnail_path"]."/".$post_data["thumbnail"]; ?>
+
+                                <?php echo renderImage($thumbnail, false, "thumbnail", true, ["alt" => "Post Thumbnail - ".$post_data["title"]]); ?>
+
+                            <?php endif; ?>
 
                         </a>
                     </li>

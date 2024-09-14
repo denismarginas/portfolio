@@ -34,7 +34,8 @@
             height: 110px;
 
 
-           > .logo {
+           > .logo, > .svg {
+             @include svg-color( var( --dm-color-white ) );
              box-sizing: content-box;
              padding: var( --dm-spacing-secondary );
              object-fit: contain;
@@ -212,6 +213,16 @@
                 transition: opacity 0.4s;
                 object-fit: cover;
               }
+            }
+            > svg {
+              @include svg-color( var( --dm-color-white ) );
+              width: auto;
+              height: auto;
+              width: 70%;
+              height: 70%;
+              object-fit: contain;
+              object-position: center;
+              z-index: 1;
             }
           }
           &:hover {
