@@ -156,12 +156,17 @@ $src_current = __DIR__ . "/../../../";
                                 <a class="dm-post-view" href="<?php echo $post_path; ?>#visualmedia">
                                     <div class="photo"
                                          style="background-color: <?php echo $post_data["colors"]["post_color_background"]; ?>;">
+
                                         <?php echo renderImage($first_img); ?>
 
-                                        <div class="logo"
-                                             style="background-color: <?php echo $post_data["colors"]["post_color_background"]; ?>;">
-                                            <?php echo  renderLogoPost($post_data); ?>
-                                        </div>
+                                        <?php if (isset($post_data["logo"]) && isset($post_data["logo_path"])) : ?>
+
+                                            <div class="logo"
+                                                 style="background-color: <?php echo $post_data["colors"]["post_color_background"]; ?>;">
+                                                <?php echo  renderLogoPost($post_data); ?>
+                                            </div>
+
+                                        <?php endif; ?>
 
                                         <div class="bg-overlay-color"
                                              style="background-color: <?php echo $post_data["colors"]["post_color_background"]; ?>;">
@@ -182,9 +187,26 @@ $src_current = __DIR__ . "/../../../";
                                     $shine_animation = 'data-animation="shine"';
                                 endif; ?>
 
-                                <a class="dm-post-item-logo" href="<?php echo $post_path; ?>" <?php echo $shine_animation; ?>
+                                <a class="dm-post-item-image" href="<?php echo $post_path; ?>#visualmedia" <?php echo $shine_animation; ?>
                                    style="background-color: <?php echo $post_data["colors"]["post_color_background"]; ?>;">
-                                    <?php echo  renderLogoPost($post_data); ?>
+
+                                    <?php if (isset($post_data["logo"]) && isset($post_data["logo_path"])) :
+                                        if (isset($post_data["logo_type"]) && ($post_data["logo_type"] == "svg")) :
+                                            SVGRenderer::renderSVG( $post_data["logo"] );
+                                        else:
+                                            echo renderLogoPost($post_data,false, "logo");
+                                        endif;
+                                    endif; ?>
+
+                                    <?php if (isset($post_data["thumbnail"]) && isset($post_data["thumbnail_path"])) :
+                                        $thumbnail = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["thumbnail_path"]."/".$post_data["thumbnail"];
+                                        echo renderImage($thumbnail,false, "thumbnail");
+                                    endif; ?>
+
+                                    <?php if (isset($first_img)) :
+                                        echo renderImage($first_img);
+                                    endif; ?>
+
                                 </a>
 
                             <?php endif; ?>

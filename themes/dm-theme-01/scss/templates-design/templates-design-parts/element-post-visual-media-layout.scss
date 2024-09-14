@@ -17,7 +17,7 @@
       overflow: hidden;
       position: relative;
       border: 1px solid rgba(var( --dm-color-gray-lighten-rgb ), 0.4);
-      height: 150px;
+      height: 120px;
       z-index: 1;
 
       > img {
@@ -33,10 +33,8 @@
         z-index: 1;
         box-sizing: border-box;
         position: absolute;
-        bottom: 0%;
-        top: 20%;
-        left: 10%;
-        right: 10%;
+        bottom: 10%;
+        left: 6%;
         width: 100px;
         height: 100px;
         max-width: 90%;
@@ -47,9 +45,10 @@
         box-shadow: 3px 3px 6px rgba(var( --dm-color-gray-darken-rgb ), 0.4);
 
         > img {
-          width: 80px;
-          height: auto;
-          max-width: 100%;
+          width: 100%;
+          height: 100%;
+          object-position: center;
+          object-fit: contain;
         }
       }
       .bg-overlay-color {

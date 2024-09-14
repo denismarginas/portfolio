@@ -253,7 +253,7 @@ endif;
                 <?php if (isset($post_data["web_project_status"]) && !empty($post_data["web_project_status"])) : ?>
                     <div class="post-website-status">
                         <?php if(isset($jsonPostProjectFields["web_project_status"])) : ?>
-                            <span>
+                            <span class="label">
                                 <?php echo $jsonPostProjectFields["web_project_status"]; ?>
                             </span>
                         <?php endif; ?>
