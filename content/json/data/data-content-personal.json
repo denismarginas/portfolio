@@ -581,6 +581,21 @@
 		"background": {
 			"desktop": "content/img/design-elements/overlay-responsive-layout-desktop.webp",
 			"phone": "content/img/design-elements/overlay-responsive-layout-phone.webp"
+		},
+		"fields": {
+			"web_url": "Website: ",
+			"web_platform": "Platform: ",
+			"web_technology": "Technology: ",
+			"web_plugins": "Modules: ",
+			"project_collaboration": "Project Collaboration: ",
+			"web_project_status": "Web Project Status:",
+			"media_facebook_url": "Facebook: ",
+			"media_instagram_url": "Instagram: ",
+			"media_youtube_url": "YouTube: ",
+			"media_platforms": "Media Platforms: ",
+			"employer_type": "Worked as:",
+			"employer_location": "Worked at:",
+			"date": "Date:"
 		}
 	},
 	"privacy-policy": {

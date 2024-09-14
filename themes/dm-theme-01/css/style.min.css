@@ -11853,12 +11853,22 @@ body[java-script=true] .cookie-notice > .button-accept > svg {
   width: auto;
   max-width: 100%;
   margin: 0px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 body[java-script=true] .cookie-notice > .button-accept > svg[data-svg-type=fill] > path {
   fill: var(--dm-color-white);
 }
 body[java-script=true] .cookie-notice > .button-accept > svg[data-svg-type=stroke] > path {
   stroke: var(--dm-color-white);
+}
+body[java-script=true] .cookie-notice > .button-accept:hover > svg {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 body .cookie-notice, body.theme-light .cookie-notice {
@@ -12253,6 +12263,10 @@ body.theme-dark .cookie-notice > .button-accept:hover > svg[data-svg-type=stroke
   min-height: 16px;
   max-width: 16px;
   max-height: 16px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .dm-post > container > .post-data > .post-text > .post-website > span > svg[data-svg-type=fill] > path {
   fill: var(--post_color_secondary);
@@ -12317,6 +12331,12 @@ body.theme-dark .cookie-notice > .button-accept:hover > svg[data-svg-type=stroke
   color: var(--dm-color-white);
   -webkit-box-shadow: inset 2px -9px 18px rgba(var(--dm-color-gray-darken-rgb), 0.2);
           box-shadow: inset 2px -9px 18px rgba(var(--dm-color-gray-darken-rgb), 0.2);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.dm-post > container > .post-data > .post-text > .post-website:hover > span > svg {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }

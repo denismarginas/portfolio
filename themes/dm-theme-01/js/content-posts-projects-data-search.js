@@ -316,7 +316,7 @@ function countVisibleProjects() {
 
 function updateQueryAmount() {
     const queryAmountElement = document.getElementById("query-amount");
-    queryAmountElement.innerText = "(loading...)";
+    queryAmountElement.innerText = "(...)";
     setTimeout(() => {
         const visibleCount = countVisibleProjects();
         queryAmountElement.innerText = visibleCount;

@@ -4,6 +4,10 @@ if(!isset($jsonGlobalData)) :
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
 endif;
 
+if(!isset($jsonPostProjectFields)) :
+    $jsonPostProjectFields = getDataJson('data-content-personal', 'data')["post-projects"]["fields"];
+endif;
+
 if(!isset($jsonCategoriesData)) :
     $jsonCategoriesData = getDataJson('data-posts-projects-categories', 'data');
 endif;
@@ -22,7 +26,7 @@ if (!isset($post_data)) :
         "post_type" => "catalog",
         "media_path" => "post",
         "title" => "Post Title",
-        "logo" => "logo.svg",
+        "logo" => "folder-open.svg",
         "logo_type" => "svg",
         "description" => "This is an example of text description for this post.",
         "category" => "Website / Media",
@@ -53,7 +57,6 @@ endif;
 
 <?php if (isset($post_data["colors"]) && !empty($post_data["colors"])) : ?>
     <style>
-        /* Custom Design for Posts */
         :root {
         <?php foreach ($post_data["colors"] as $name => $value) :
             echo "--".$name . ": " . $value . ";\n";
@@ -63,13 +66,6 @@ endif;
 <?php endif; ?>
 
 <section class="dm-post grid-background-animation">
-
-    <?php
-
-    if(isset($post_current_data) and !empty($post_current_data)) {
-        $post_content .= "<p> post_current_data: " . print_r($post_current_data, true) . "</p>";
-    }
-    ?>
 
     <container>
 
@@ -81,7 +77,6 @@ endif;
 
         <aside class="post-data">
 
-
             <?php if (isset($post_data["logo"]) && isset($post_data["logo_path"])) : ?>
                 <?php $logo = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["logo_path"]."/".$post_data["logo"]; ?>
 
@@ -89,7 +84,7 @@ endif;
                     <?php if (isset($post_data["logo_type"]) && !empty($post_data["logo_type"]) && $post_data["logo_type"] == "svg") : ?>
                         <?php SVGRenderer::renderSVG( $post_data["logo"] ); ?>
                     <?php else : ?>
-                        <?php echo renderImage($logo, false, false, true, ["alt" => "Post Logo - ".$post_data["title"]],); ?>
+                        <?php echo renderImage($logo, false, false, true, ["alt" => "Post Logo - ".$post_data["title"], "data-motion" => "transition-fade-0 transition-blur-0 transition-slideInBottom-0", "data-duration" => "0.8s"]); ?>
                     <?php endif; ?>
                 </div>
 
@@ -119,24 +114,26 @@ endif;
                 <?php if (isset($post_data["categories"]) && !empty($post_data["categories"])) : ?>
                     <div class="post-categories">
                         <?php foreach ( $post_data["categories"] as $post_category ) : ?>
+
                             <?php if( $post_category == "Miscellaneous Projects" ) : ?>
                                 <span class="post-category">
                                     <?php echo $post_category; ?>
                                 </span>
                             <?php else: ?>
-                                <?php
-                                $post_category_slug = changeSpaceWithHyphenAndLowercase($post_category);
-                                foreach ($jsonCategoriesData["categories"] as $category) :
-                                if ($category["name"] === $post_category) :
-                                    $post_category_slug = $category["slug"];
-                                    break;
-                                endif;
-                                endforeach; ?>
-                                <a class="post-category" href="<?php echo $post_category_slug.$jsonGlobalData["page-slug-extension"]; ?>">
+                                <?php $post_category_slug = changeSpaceWithHyphenAndLowercase($post_category);
 
+                                foreach ($jsonCategoriesData["categories"] as $category) :
+                                    if ($category["name"] === $post_category) :
+                                        $post_category_slug = $category["slug"];
+                                        break;
+                                    endif;
+                                endforeach; ?>
+
+                                <a class="post-category" href="<?php echo $post_category_slug.$jsonGlobalData["page-slug-extension"]; ?>">
                                     <?php echo $post_category; ?>
                                 </a>
                             <?php endif; ?>
+
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
@@ -146,7 +143,12 @@ endif;
 
                         <span>
                             <?php SVGRenderer::renderSVG('web'); ?>
-                            <span>Website: </span>
+
+                            <?php if(isset($jsonPostProjectFields["web"])) : ?>
+                                <span>
+                                    <?php echo $jsonPostProjectFields["web"]; ?>
+                                </span>
+                            <?php endif; ?>
                         </span>
 
                         <a href="<?php echo addHttps($post_data["web_url"]); ?>" target="_blank">
@@ -157,7 +159,12 @@ endif;
 
                 <?php if (isset($post_data["web_platform"]) && !empty($post_data["web_platform"])) : ?>
                     <p class="post-website-platform">
-                        <span>Platform:</span>
+                        <?php if(isset($jsonPostProjectFields["web_platform"])) : ?>
+                            <span>
+                                <?php echo $jsonPostProjectFields["web_platform"]; ?>
+                            </span>
+                        <?php endif; ?>
+
                         <?php for ( $i = 0; $i<count($post_data["web_platform"]); $i++ ) :
                             echo $post_data["web_platform"][$i]["name"];
                             if( $i < count($post_data["web_platform"]) - 1 ) :
@@ -169,7 +176,12 @@ endif;
 
                 <?php if (isset($post_data["web_technology"]) && !empty($post_data["web_technology"])) : ?>
                     <p class="post-website-technology">
-                        <span>Technology: </span>
+                        <?php if(isset($jsonPostProjectFields["web_technology"])) : ?>
+                            <span>
+                                <?php echo $jsonPostProjectFields["web_technology"]; ?>
+                            </span>
+                        <?php endif; ?>
+
                         <?php for ( $i = 0; $i<count($post_data["web_technology"]); $i++ ) :
                             echo $post_data["web_technology"][$i]["name"];
                             if( $i < count($post_data["web_technology"]) - 1 ) :
@@ -180,7 +192,12 @@ endif;
                 <?php endif; ?>
                 <?php if (isset($post_data["web_plugins"]) && !empty($post_data["web_plugins"])) : ?>
                     <p class="post-website-modules">
-                        <span>Modules:</span>
+                        <?php if(isset($jsonPostProjectFields["web_plugins"])) : ?>
+                            <span>
+                                <?php echo $jsonPostProjectFields["web_plugins"]; ?>
+                            </span>
+                        <?php endif; ?>
+
                         <?php for ( $i = 0; $i<count($post_data["web_plugins"]); $i++ ) :
                             echo $post_data["web_plugins"][$i]["name"];
                             if( $i < count($post_data["web_plugins"]) - 1 ) :
@@ -218,7 +235,12 @@ endif;
 
                 <?php if (isset($post_data["project_collaboration"]) && !empty($post_data["project_collaboration"])) : ?>
                     <p class="post-custom-field-text">
-                        <span>Project Collaboration:</span>
+                        <?php if(isset($jsonPostProjectFields["project_collaboration"])) : ?>
+                            <span>
+                                <?php echo $jsonPostProjectFields["project_collaboration"]; ?>
+                            </span>
+                        <?php endif; ?>
+
                         <?php for ( $i = 0; $i<count($post_data["project_collaboration"]); $i++ ) :
                             echo $post_data["project_collaboration"][$i];
                             if( $i < count($post_data["project_collaboration"]) - 1 ) :
@@ -230,7 +252,12 @@ endif;
 
                 <?php if (isset($post_data["web_project_status"]) && !empty($post_data["web_project_status"])) : ?>
                     <div class="post-website-status">
-                        <span class="label">Web Project Status:</span>
+                        <?php if(isset($jsonPostProjectFields["web_project_status"])) : ?>
+                            <span>
+                                <?php echo $jsonPostProjectFields["web_project_status"]; ?>
+                            </span>
+                        <?php endif; ?>
+
                         <span class="status <?php echo strtolower($post_data["web_project_status"]); ?>">
                             <?php echo $post_data["web_project_status"]; ?>
                         </span>
@@ -243,7 +270,13 @@ endif;
                         <a href="<?php echo addHttps($post_data["media_facebook_url"]); ?>" target="_blank">
                             <?php SVGRenderer::renderSVG('socials-facebook'); ?>
                         </a>
-                        <span>Facebook: </span>
+
+                        <?php if(isset($jsonPostProjectFields["media_facebook_url"])) : ?>
+                            <span>
+                                <?php echo $jsonPostProjectFields["media_facebook_url"]; ?>
+                            </span>
+                        <?php endif; ?>
+
                         <a href="<?php echo addHttps($post_data["media_facebook_url"]); ?>" target="_blank">
                             <?php echo removeHttps($post_data["media_facebook_url"]); ?>
                         </a>
@@ -255,7 +288,13 @@ endif;
                         <a href="<?php echo addHttps($post_data["media_instagram_url"]); ?>" target="_blank">
                             <?php SVGRenderer::renderSVG('socials-instagram'); ?>
                         </a>
-                        <span>Instagram: </span>
+
+                        <?php if(isset($jsonPostProjectFields["media_instagram_url"])) : ?>
+                            <span>
+                                <?php echo $jsonPostProjectFields["media_instagram_url"]; ?>
+                            </span>
+                        <?php endif; ?>
+
                         <a href="<?php echo addHttps($post_data["media_instagram_url"]); ?>" target="_blank">
                             <?php echo removeHttps($post_data["media_instagram_url"]); ?>
                         </a>
@@ -267,7 +306,13 @@ endif;
                   <a href="<?php echo addHttps($post_data["media_youtube_url"]); ?>" target="_blank">
                     <?php SVGRenderer::renderSVG('socials-youtube'); ?>
                   </a>
-                  <span>YouTube: </span>
+
+                    <?php if(isset($jsonPostProjectFields["media_youtube_url"])) : ?>
+                        <span>
+                            <?php echo $jsonPostProjectFields["media_youtube_url"]; ?>
+                        </span>
+                    <?php endif; ?>
+
                   <a href="<?php echo addHttps($post_data["media_youtube_url"]); ?>" target="_blank">
                     <?php echo removeHttps($post_data["media_youtube_url"]); ?>
                   </a>
@@ -279,7 +324,9 @@ endif;
                         <?php foreach ($post_data["media_custom"] as $media_custom) : ?>
                             <li>
                                 <?php SVGRenderer::renderSVG('chevron-right'); ?>
+
                                 <span><?php checkEcho($media_custom["title"]); ?></span>
+
                                 <a href="<?php echo addHttps($media_custom["url"]); ?>" target="_blank">
                                     <?php echo removeHttps($media_custom["url"]); ?>
                                 </a>
@@ -291,7 +338,13 @@ endif;
 
                 <?php if (isset($post_data["media_platforms"]) && !empty($post_data["media_platforms"]) && ( count($post_data["media_platforms"]) > 0)) : ?>
                     <p class="post-media-platforms">
-                      <span>Media Platforms:</span>
+
+                        <?php if(isset($jsonPostProjectFields["media_platforms"])) : ?>
+                            <span>
+                                <?php echo $jsonPostProjectFields["media_platforms"]; ?>
+                            </span>
+                        <?php endif; ?>
+
                       <?php for ( $i = 0; $i<count($post_data["media_platforms"]); $i++ ) :
                         echo $post_data["media_platforms"][$i]["name"];
                         if( $i < count($post_data["media_platforms"]) - 1 ) :
@@ -324,33 +377,38 @@ endif;
                     <div class="post-employ">
                         <?php if ($post_data["employer"] == "Freelancer") : ?>
 
-                            <span>Worked as:</span>
+                            <?php if(isset($jsonPostProjectFields["employer_type"])) : ?>
+                                <span>
+                                    <?php echo $jsonPostProjectFields["employer_type"]; ?>
+                                </span>
+                            <?php endif; ?>
 
                             <a href="denismarginas<?php echo $jsonGlobalData["page-slug-extension"]; ?>" target="_blank">
                                 <?php echo $post_data["employer"]; ?>
                             </a>
                         <?php else : ?>
 
-                            <span>Worked at:</span>
+                            <?php if(isset($jsonPostProjectFields["employer_location"])) : ?>
+                                <span>
+                                    <?php echo $jsonPostProjectFields["employer_location"]; ?>
+                                </span>
+                            <?php endif; ?>
 
                             <a href="employee-experience<?php echo $jsonGlobalData["page-slug-extension"]; ?>#<?php echo strtolower(str_replace(" ", "-", $post_data["employer"])); ?>" target="_blank">
                                 <?php echo $post_data["employer"]; ?>
                             </a>
 
-                        <?php
-                        if (isset($jsonJobsData)) :
-                            foreach ($jsonJobsData as $job) :
-                                if (strtolower($job["name"]) == strtolower($post_data["employer"]) && isset($job["img"]) && isset($job["display"]) && $job["display"] == "true") :
-                                    ?>
-                                    <div class="work-logo <?php echo isset($job["img_bg"]) ? $job["img_bg"] : ''; ?>" >
-                                        <?php echo renderImage($GLOBALS['urlPath'].$job["img"], false, false, true); ?>
-                                    </div>
-                                <?php
-                                endif;
-                            endforeach;
-                        endif;
-                        ?>
-
+                            <?php if (isset($jsonJobsData)) :
+                                foreach ($jsonJobsData as $job) :
+                                    if (strtolower($job["name"]) == strtolower($post_data["employer"]) && isset($job["img"]) && isset($job["display"]) && $job["display"] == "true") :
+                                        ?>
+                                        <div class="work-logo <?php echo isset($job["img_bg"]) ? $job["img_bg"] : ''; ?>" >
+                                            <?php echo renderImage($GLOBALS['urlPath'].$job["img"], false, false, true); ?>
+                                        </div>
+                                    <?php
+                                    endif;
+                                endforeach;
+                            endif; ?>
 
                         <?php endif; ?>
                     </div>
@@ -358,7 +416,13 @@ endif;
 
                 <?php if (isset($post_data["date"]) && !empty($post_data["date"])) : ?>
                     <p class="post-data">
-                        <span>Date:</span>
+
+                        <?php if(isset($jsonPostProjectFields["date"])) : ?>
+                            <span>
+                                    <?php echo $jsonPostProjectFields["date"]; ?>
+                                </span>
+                        <?php endif; ?>
+
                         <?php echo $post_data["date"]["date_start"]; ?>
                         <?php echo " - "; ?>
                         <?php echo $post_data["date"]["date_end"]; ?>

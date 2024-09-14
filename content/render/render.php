@@ -57,7 +57,7 @@ RewriteRule ^([^/]+)/?$ $1.html [L]
 
 // Write .htaccess content to file
 //file_put_contents($htaccessFilePath, $htaccessContent);
-$log[] = "Generated .htaccess file" . PHP_EOL;
+//$log[] = "Generated .htaccess file" . PHP_EOL;
 
 // -- RENDER VIEW END --
 
@@ -76,7 +76,7 @@ foreach ($jsonFiles as $jsonFile) {
         else {
             $color_json = "var( --dm-color-status-secondary )";
         }
-        $log[] = " <div style='color : ".$color_json.";'> ".$postJsonFileName.":  [ ".substr(json_encode($jsonFileData), 0, 200)."... ] </div>";
+        $log[] = " <div style='color : ".$color_json.";'> ".$postJsonFileName.":  [ ".substr(json_encode($jsonFileData), 0, 100)."... ] </div>";
     }
     else {
         $log[] = "No json files found in ". $jsonPath;
