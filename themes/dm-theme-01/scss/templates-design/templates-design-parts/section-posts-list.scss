@@ -243,18 +243,15 @@
               transition: all 0.6s ease-in-out;
             }
             > .preview-image {
-              opacity: 1 !important;
+              opacity: 0.7 !important;
+              mask: linear-gradient(0deg, transparent, white 50%, white 100%, transparent);
               transition: all 0.6s ease-in-out;
             }
           }
           &:hover {
             > .dm-post-item-image {
-              > .logo, > .thumbnail, svg {
-                opacity: 1 !important;
-                transition: all 1s ease-in-out;
-              }
               > .preview-image {
-                opacity: 0.3 !important;
+                opacity: 1 !important;
                 transition: all 0.6s ease-in-out;
               }
             }
