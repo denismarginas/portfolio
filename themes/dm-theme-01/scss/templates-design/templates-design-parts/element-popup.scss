@@ -10,7 +10,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba( var( --dm-color-black-rgb ) , 0.8 );
+  background-color: rgba( var( --dm-color-black-rgb ) , 0.9 );
 
   > .popup-content {
     @include flex-center();
@@ -31,6 +31,7 @@
     > .popup-close-button {
       @include dm-button();
       @include dm-font-small();
+      padding: var( --dm-spacing-primary );
       --dm-text-small-color: var( --dm-color-white );
       background-color: var( --dm-color-primary );
       border: 2px solid;
@@ -38,12 +39,38 @@
       height: auto;
       z-index: 1;
       position: absolute;
-      top: 12px;
-      right: 8px;
+      top: var( --dm-spacing-tertiary );
+      right: var( --dm-spacing-tertiary );
 
       &:hover {
         background-color: var( --dm-color-secondary );
-        border-color: white;
+        border-color: var( --dm-color-white );
+
+        > svg {
+          transform: rotate(90deg);
+          transition: all 0.15s ease-in-out;
+        }
+      }
+      > svg {
+        transform: rotate(0deg);
+        @include svg-color( var( --dm-color-white ) );
+        transition: all 0.15s ease-in-out;
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-desktop-small) {
+    > .popup-content {
+      > .popup-close-button {
+        top: var( --dm-spacing-secondary );
+        right: var( --dm-spacing-secondary );
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-small) {
+    > .popup-content {
+      > .popup-close-button {
+        top: var( --dm-spacing-secondary );
+        right: var( --dm-spacing-primary );
       }
     }
   }

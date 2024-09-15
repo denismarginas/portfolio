@@ -3201,7 +3201,7 @@ body.theme-dark .grid-background-animation {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(var(--dm-color-black-rgb), 0.8);
+  background-color: rgba(var(--dm-color-black-rgb), 0.9);
 }
 .dm-popup > .popup-content {
   display: -webkit-box;
@@ -3272,6 +3272,7 @@ body.theme-dark .grid-background-animation {
   font-weight: var(--dm-text-small-font-weight);
   line-height: var(--dm-text-small-line-height);
   color: var(--dm-text-small-color);
+  padding: var(--dm-spacing-primary);
   --dm-text-small-color: var( --dm-color-white );
   background-color: var(--dm-color-primary);
   border: 2px solid;
@@ -3279,8 +3280,8 @@ body.theme-dark .grid-background-animation {
   height: auto;
   z-index: 1;
   position: absolute;
-  top: 12px;
-  right: 8px;
+  top: var(--dm-spacing-tertiary);
+  right: var(--dm-spacing-tertiary);
 }
 .dm-popup > .popup-content > .popup-close-button > svg > path {
   -webkit-transition: all 0.2s ease;
@@ -3288,7 +3289,37 @@ body.theme-dark .grid-background-animation {
 }
 .dm-popup > .popup-content > .popup-close-button:hover {
   background-color: var(--dm-color-secondary);
-  border-color: white;
+  border-color: var(--dm-color-white);
+}
+.dm-popup > .popup-content > .popup-close-button:hover > svg {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+.dm-popup > .popup-content > .popup-close-button > svg {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+.dm-popup > .popup-content > .popup-close-button > svg[data-svg-type=fill] > path {
+  fill: var(--dm-color-white);
+}
+.dm-popup > .popup-content > .popup-close-button > svg[data-svg-type=stroke] > path {
+  stroke: var(--dm-color-white);
+}
+@media only screen and (max-width: 1240px) {
+  .dm-popup > .popup-content > .popup-close-button {
+    top: var(--dm-spacing-secondary);
+    right: var(--dm-spacing-secondary);
+  }
+}
+@media only screen and (max-width: 575px) {
+  .dm-popup > .popup-content > .popup-close-button {
+    top: var(--dm-spacing-secondary);
+    right: var(--dm-spacing-primary);
+  }
 }
 
 [data-popup=true] {

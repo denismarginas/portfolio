@@ -466,7 +466,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
             var closeButton = document.createElement("button");
             closeButton.classList.add("popup-close-button");
-            closeButton.textContent = "Close";
+            closeButton.innerHTML  = "<svg data-svg-type='stroke' width='14' height='14' viewBox='0 0 14 14'><path d='M13 1L1 13M1 1L13 13' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'></path></svg>";
+
             closeButton.addEventListener("click", function() {
                 document.body.removeChild(popupElement);
             });
