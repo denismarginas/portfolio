@@ -13528,12 +13528,12 @@ body.theme-dark .dm-post > container .post-content .dm-post-title-category {
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
 }
-.dm-posts-list > container > ul > .dm-post-item.preview-image > .dm-post-item-image > .logo, .dm-posts-list > container > ul > .dm-post-item.preview-image > .dm-post-item-image svg {
+.dm-posts-list > container > ul > .dm-post-item.preview-image > .dm-post-item-image > .logo, .dm-posts-list > container > ul > .dm-post-item.preview-image > .dm-post-item-image svg, .dm-posts-list > container > ul > .dm-post-item.preview-image > .dm-post-item-image > .thumbnail + .preview-image {
   opacity: 0 !important;
   -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
 }
-.dm-posts-list > container > ul > .dm-post-item.preview-image > .dm-post-item-image > .preview-image {
+.dm-posts-list > container > ul > .dm-post-item.preview-image > .dm-post-item-image > .preview-image, .dm-posts-list > container > ul > .dm-post-item.preview-image > .dm-post-item-image > .thumbnail {
   opacity: 0.7 !important;
   -webkit-mask: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(50%, white), color-stop(100%, white), to(transparent));
   -webkit-mask: linear-gradient(0deg, transparent, white 50%, white 100%, transparent);
@@ -13542,7 +13542,7 @@ body.theme-dark .dm-post > container .post-content .dm-post-title-category {
   -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
 }
-.dm-posts-list > container > ul > .dm-post-item.preview-image:hover > .dm-post-item-image > .preview-image {
+.dm-posts-list > container > ul > .dm-post-item.preview-image:hover > .dm-post-item-image > .preview-image, .dm-posts-list > container > ul > .dm-post-item.preview-image:hover > .dm-post-item-image > .thumbnail {
   opacity: 1 !important;
   -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
