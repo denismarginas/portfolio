@@ -28,7 +28,10 @@ document.addEventListener("DOMContentLoaded", async function() {
     } catch (error) {
         console.error('Error:', error);
     }
+
 });
+
+
 
 function searchProjectsWithFilters(filterFields, projectsData) {
     if (!projectsData) {
@@ -251,7 +254,8 @@ function appendIconsWithToggle(filterFields, projectsFormId, blockClass) {
     if (filterFields.length > 8) {
         const icons = [
             ["filter-query", "query-text", "hide"],
-            ["filter", "block-filters", window.innerWidth < 600 ? "hide" : "show"]
+            ["filter", "block-filters", window.innerWidth < 600 ? "hide" : "show"],
+            ["eye", null, null, "togglePreviewImage()"]
         ];
 
         var blockElement = projectsForm.querySelector(blockClass);
@@ -275,18 +279,27 @@ function appendIconsWithToggle(filterFields, projectsFormId, blockClass) {
             blockElement.appendChild(toggleIconsDiv);
             blockElement.appendChild(queryDiv);
 
-            icons.forEach(([iconName, sectionId, display]) => {
+            icons.forEach(([iconName, sectionId, display, onClick]) => {
                 getIconSVG(iconName).then((filterIcon) => {
                     if (filterIcon) {
                         const iconDiv = document.createElement('div');
                         iconDiv.id = `toggle-${iconName}`;
                         iconDiv.className = 'icon';
-                        iconDiv.setAttribute('aria-controls', sectionId);
-                        iconDiv.setAttribute('data-toggle', 'collapse');
-                        var expandDisplay = "false"
-                        if (display === "show") {
-                            expandDisplay = "true"
+
+                        if(sectionId) {
+                            iconDiv.setAttribute('aria-controls', sectionId);
+                            iconDiv.setAttribute('data-toggle', 'collapse');
                         }
+
+                        var expandDisplay = "false";
+                        if (display === "show") {
+                            expandDisplay = "true";
+                        }
+
+                        if (onClick) {
+                            iconDiv.setAttribute('onClick', onClick);
+                        }
+
                         iconDiv.setAttribute('aria-expanded', expandDisplay);
                         iconDiv.innerHTML = filterIcon;
                         toggleIconsDiv.appendChild(iconDiv);
@@ -294,7 +307,6 @@ function appendIconsWithToggle(filterFields, projectsFormId, blockClass) {
                 });
             });
             var query_amount = countVisibleProjects();
-
             queryDiv.innerHTML = 'Showing <span id="query-amount">' + query_amount + '</span> results.';
         }
     }
@@ -418,6 +430,7 @@ function constructPFormFieldInputSearch() {
 function constructPFormButtonSubmit() {
     return '<button id="search-post" type="submit" class="post-search-submit">Search</button>';
 }
+
 function getIconSVG(name) {
     const getPageUrl = window.location.href;
     const getPagePath = getPageUrl.substring(0, getPageUrl.lastIndexOf('/') + 1);
@@ -450,4 +463,13 @@ async function fetchJson(url) {
         throw new Error('Network response was not ok');
     }
     return response.json();
+}
+
+function togglePreviewImage() {
+    const projectList = document.getElementById("post-list");
+    const projects = projectList.getElementsByClassName("dm-post-item");
+
+    Array.from(projects).forEach(project => {
+        project.classList.toggle("preview-image");
+    });
 }

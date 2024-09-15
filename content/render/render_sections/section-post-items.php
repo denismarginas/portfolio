@@ -62,7 +62,7 @@ $search_and_sort_bar = true;
 
                                 if(!empty( count($get_web_image) > 0 )) :
                                     $web_image = $get_web_image[0];
-                                    echo renderImage($web_image_path.$web_image);
+                                    echo renderImage($web_image_path.$web_image, false,'preview-image');
                                 endif;
 
                             elseif (file_exists($src_current.$media_image_path)) :
@@ -80,7 +80,7 @@ $search_and_sort_bar = true;
 
                                 if(!empty( count($get_web_image) > 0 )) :
                                     $web_image = $get_web_image[0];
-                                    echo renderImage($media_image_path.$dir_image_path.$web_image);
+                                    echo renderImage($media_image_path.$dir_image_path.$web_image, false,'preview-image');
                                 endif;
 
                             endif;
@@ -90,7 +90,9 @@ $search_and_sort_bar = true;
                             <ul class="dm-post-item-categories">
                                 <?php foreach ($post_data["categories"] as $post_category) : ?>
                                     <li>
-                                        <span><?php echo $post_category;?></span>
+                                        <span>
+                                            <?php echo $post_category;?>
+                                        </span>
                                     </li>
                                 <?php endforeach; ?>
                             </ul>

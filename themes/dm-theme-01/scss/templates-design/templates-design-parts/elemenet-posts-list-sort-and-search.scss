@@ -51,6 +51,12 @@
           #toggle-filter {
             order: 1;
           }
+          #toggle-eye {
+            order: 3;
+          }
+          > .icon {
+            cursor: pointer;
+          }
         }
         > .query-text {
           @include dm-font-small();
@@ -162,7 +168,7 @@
       }
     }
     .icon {
-      width: 50%;
+      width: 100%;
     }
   }
 }

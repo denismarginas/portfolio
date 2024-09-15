@@ -146,7 +146,7 @@ $src_current = __DIR__ . "/../../../";
 
                                         if(!empty( count($get_web_image) > 0 )) :
                                             $web_image = $get_web_image[0];
-                                            echo renderImage($web_image_path.$web_image);
+                                            echo renderImage($web_image_path.$web_image, false,'preview-image');
                                         endif;
 
                                     endif;

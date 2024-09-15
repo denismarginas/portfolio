@@ -7686,6 +7686,14 @@ body:not([java-script=true]) .video-container > .show-play, body:not([java-scrip
       -ms-flex-order: 1;
           order: 1;
 }
+#post-list-sort-and-search > ul > li.advance-search > .toggle-icons #toggle-eye {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+#post-list-sort-and-search > ul > li.advance-search > .toggle-icons > .icon {
+  cursor: pointer;
+}
 #post-list-sort-and-search > ul > li.advance-search > .query-text {
   font-family: var(--dm-font-family);
   font-size: var(--dm-text-small-font-size);
@@ -13400,10 +13408,10 @@ body.theme-dark .dm-post > container .post-content .dm-post-title-category {
   letter-spacing: var(--dm-text-extra-small-letter-spacing);
   color: var(--dm-text-extra-small-color);
 }
-.dm-posts-list > container > ul > .dm-post-item.dm-post-item-web > .dm-post-item-image > .logo:nth-child(1) {
+.dm-posts-list > container > ul > .dm-post-item.dm-post-item-web > .dm-post-item-image > img.logo, .dm-posts-list > container > ul > .dm-post-item.dm-post-item-web > .dm-post-item-image > img.thumbnail {
   z-index: 1;
 }
-.dm-posts-list > container > ul > .dm-post-item.dm-post-item-web > .dm-post-item-image > .logo:nth-child(2) {
+.dm-posts-list > container > ul > .dm-post-item.dm-post-item-web > .dm-post-item-image > img.preview-image {
   opacity: 0;
   position: absolute;
   margin: auto;
@@ -13470,7 +13478,7 @@ body.theme-dark .dm-post > container .post-content .dm-post-title-category {
 .dm-posts-list > container > ul > .dm-post-item.dm-post-item-web > .dm-post-item-details > .dm-post-web-data > .dm-post-item-website > svg.website-inactive[data-svg-type=stroke] > path {
   stroke: var(--dm-color-highlight-primary-rgb);
 }
-.dm-posts-list > container > ul > .dm-post-item.dm-post-item-web:hover > .dm-post-item-image > img:nth-child(2) {
+.dm-posts-list > container > ul > .dm-post-item.dm-post-item-web:hover > .dm-post-item-image > img.preview-image {
   opacity: 0.2;
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
@@ -13480,10 +13488,10 @@ body.theme-dark .dm-post > container .post-content .dm-post-title-category {
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
-.dm-posts-list > container > ul > .dm-post-item.dm-post-item-media > .dm-post-item-image > img:nth-child(1) {
+.dm-posts-list > container > ul > .dm-post-item.dm-post-item-media > .dm-post-item-image > img.logo, .dm-posts-list > container > ul > .dm-post-item.dm-post-item-media > .dm-post-item-image > img.thumbnail {
   z-index: 1;
 }
-.dm-posts-list > container > ul > .dm-post-item.dm-post-item-media > .dm-post-item-image > img:nth-child(2) {
+.dm-posts-list > container > ul > .dm-post-item.dm-post-item-media > .dm-post-item-image > img.preview-image {
   opacity: 0;
   position: absolute;
   margin: auto;
@@ -13515,7 +13523,32 @@ body.theme-dark .dm-post > container .post-content .dm-post-title-category {
 .dm-posts-list > container > ul > .dm-post-item.dm-post-item-media > .dm-post-item-image > svg[data-svg-type=stroke] > path {
   stroke: var(--dm-color-white);
 }
-.dm-posts-list > container > ul > .dm-post-item.dm-post-item-media:hover > .dm-post-item-image > img:nth-child(2) {
+.dm-posts-list > container > ul > .dm-post-item.dm-post-item-media:hover > .dm-post-item-image > img.preview-image {
+  opacity: 0.2;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+.dm-posts-list > container > ul > .dm-post-item.preview-image > .dm-post-item-image > .logo, .dm-posts-list > container > ul > .dm-post-item.preview-image > .dm-post-item-image svg {
+  opacity: 0 !important;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+.dm-posts-list > container > ul > .dm-post-item.preview-image > .dm-post-item-image > .preview-image {
+  opacity: 1 !important;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+.dm-posts-list > container > ul > .dm-post-item.preview-image:hover > .dm-post-item-image > .logo, .dm-posts-list > container > ul > .dm-post-item.preview-image:hover > .dm-post-item-image > .thumbnail, .dm-posts-list > container > ul > .dm-post-item.preview-image:hover > .dm-post-item-image svg {
+  opacity: 1 !important;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+.dm-posts-list > container > ul > .dm-post-item.preview-image:hover > .dm-post-item-image > .preview-image {
+  opacity: 0.3 !important;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+.dm-posts-list > container > ul > .dm-post-item:hover > .dm-post-item-image > img.preview-image {
   opacity: 0.2;
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;

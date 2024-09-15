@@ -202,7 +202,7 @@ $src_current = __DIR__ . "/../../../";
                                     endif; ?>
 
                                     <?php if (isset($first_img)) :
-                                        echo renderImage($first_img);
+                                        echo renderImage($first_img, false,'preview-image');
                                     endif; ?>
 
                                 </a>
