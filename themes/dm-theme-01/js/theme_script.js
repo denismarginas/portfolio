@@ -481,7 +481,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 toggleZoom(this);
             });
         }
-    }
+    }  
     var zoomLevel = 0;
 
     function toggleZoom(imageElement) {
