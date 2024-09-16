@@ -164,7 +164,7 @@ function getSeoFromCurrentPostProjectData($postData) {
 }
 
 function renderTitle($title = null) {
-    $htmlTemplate = "<h2 id='%s' class='dm-post-title-category' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.7s'>%s</h2>";
+    $htmlTemplate = "<h2 id='%s' class='dm-post-title-category' data-motion='transition-fade-0' data-duration='0.7s'>%s</h2>";
 
     if ($title !== null) {
         $id = removeSpaceAndLowercase($title); // Call the function to remove spaces and convert to lowercase
@@ -535,8 +535,8 @@ function renderDetailsVisualMediaPost($post_data) {
 
     if (isset($post_data) && !empty($post_data)) {
         $html_content .= "<div class='dm-post-details-grid'>";
-        $html_content .=    "<div class='dm-post-logo-details' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.7s'>".renderImage( $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$post_data["logo"])."</div>";
-        $html_content .=    "<div class='dm-post-title-description' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.7s'>";
+        $html_content .=    "<div class='dm-post-logo-details' data-motion='transition-fade-0' data-duration='0.7s'>".renderImage( $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$post_data["logo"])."</div>";
+        $html_content .=    "<div class='dm-post-title-description' data-motion='transition-fade-0' data-duration='0.7s'>";
         $html_content .=         renderTextVisualMediaPost($post_data["post_type"],$post_data["media_path"], "tags");
         $html_content .=    "</div>";
         $html_content .= "</div>";
@@ -597,7 +597,7 @@ function renderSectionMediaProject($post_data, $params = []) {
 function renderParagraphBlockProject($text = null) {
     $html_content = '';
 
-    $html_content .= "<div class='dm-post-title-description' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.7s'>";
+    $html_content .= "<div class='dm-post-title-description' data-motion='transition-fade-0' data-duration='0.7s'>";
     $html_content .= $text;
     $html_content .=  "</div>";
 
@@ -607,7 +607,7 @@ function renderParagraphBlockProject($text = null) {
 function renderImageBlockProject($post_data ,$image_path = null, $image_file_name = null) {
     $html_content = '';
 
-    $html_content .= "<div class='dm-post-image' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.7s' data-delay='0.2s'>";
+    $html_content .= "<div class='dm-post-image' data-motion='transition-fade-0' data-duration='0.7s' data-delay='0.2s'>";
     $html_content .= renderImage( $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$image_path.$image_file_name, true);
     $html_content .=  "</div>";
 

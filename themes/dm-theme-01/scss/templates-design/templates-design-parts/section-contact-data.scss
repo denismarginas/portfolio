@@ -15,6 +15,7 @@
       padding-bottom: var( --dm-spacing-large );
 
       > li {
+
         > h2 {
           @include dm-font-heading1();
           --dm-text-heading1-font-family: var(--dm-font-family-secondary);
@@ -68,6 +69,11 @@
                 cursor: pointer;
                 background: rgba( var( --dm-color-gray-rgb ) , 0.7);
               }
+              &:hover {
+                + .dm-warning-data {
+                  display: block;
+                }
+              }
             }
             .dm-warning-data {
               @include border-radius( var( --dm-border-radius-primary ) );
@@ -95,11 +101,6 @@
               > p {
                 @include dm-font-small();
                 text-align: center;
-              }
-            }
-            &:hover {
-              .dm-warning-data {
-                display: block;
               }
             }
           }
