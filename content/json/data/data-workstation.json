@@ -9,7 +9,7 @@
 			"title": "PC #1",
 			"short-description": "Welcome to my personal workstation page! This is the hub of my productivity, where I tackle work projects and pursue personal endeavors. With regular updates and enhancements, I strive to maintain an efficient and inspiring work environment. The most recent update to my setup was in January 2023, and I'm excited to showcase the improvements I've made. Get ready to explore my workstation and discover the tools and setup that fuel my productivity!",
 			"path-img": "workstation",
-			"path-vid": "personal-workstation",
+			"path-vid": "projects/denismarginas/personal-workstation",
 			"configuration":
 			{
 				"gpu":

@@ -20,7 +20,7 @@
 	"portfolio-video-archive": [
 		{
 			"video": "personal-portfolio.mp4",
-			"video-path": "/personal-portfolio/",
+			"video-path": "projects/denismarginas/personal-portfolio/",
 			"video-thumbnail": "personal-portfolio.webp",
 			"video-thumbnail-path": "/thumbnails/",
 			"video-data": {

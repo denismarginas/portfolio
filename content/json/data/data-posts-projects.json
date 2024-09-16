@@ -2375,7 +2375,7 @@
             }
         },
         "post_content": [
-            "<?php echo renderSectionMediaProject($post_current_data, ['videos' => [['video-path' => 'personal-portfolio/personal-portfolio.mp4', 'video-thumbnail-path' => 'thumbnails/personal-portfolio.webp'], ['video-path' => 'personal-workstation/desktop-setup.mp4', 'video-thumbnail-path' => 'thumbnails/desktop-setup.webp']]]); ?>"
+            "<?php echo renderSectionMediaProject($post_current_data, ['videos' => [['video-path' => 'projects/denismarginas/personal-portfolio/personal-portfolio.mp4', 'video-thumbnail-path' => 'thumbnails/personal-portfolio.webp'], ['video-path' => 'projects/denismarginas/personal-workstation/desktop-setup.mp4', 'video-thumbnail-path' => 'thumbnails/desktop-setup.webp']]]); ?>"
         ],
         "layout": "wrapper-layout"
     },
