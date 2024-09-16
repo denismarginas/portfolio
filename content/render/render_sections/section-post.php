@@ -88,9 +88,7 @@ endif;
                     <?php endif; ?>
                 </div>
 
-            <?php endif; ?>
-
-            <?php if (isset($post_data["thumbnail"]) && isset($post_data["thumbnail_path"])) : ?>
+            <?php elseif (isset($post_data["thumbnail"]) && isset($post_data["thumbnail_path"])) : ?>
                 <?php $thumbnail = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["thumbnail_path"]."/".$post_data["thumbnail"]; ?>
 
                 <div class="post-image post-thumbnail" data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.4s">
