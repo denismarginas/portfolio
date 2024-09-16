@@ -11,6 +11,8 @@
   left: 0;
   right: 0;
   background-color: rgba( var( --dm-color-black-rgb ) , 0.9 );
+  transition: all 0.2s ease-in-out !important;
+  animation-duration: 0.2s !important;
 
   > .popup-content {
     @include flex-center();
@@ -18,6 +20,10 @@
     padding: var( --dm-spacing-secondary );
     position: relative;
     overflow: hidden;
+    animation-duration: 0.2s !important;
+    transition: all 0.2s ease-in-out !important;
+    animation-delay: 0.2s !important;
+    transition-delay: 0.2s !important;
 
     > img {
       width: auto;
@@ -26,7 +32,7 @@
       max-height: calc(100vh - var( --dm-spacing-secondary )*2);
       cursor: zoom-in;
       margin-bottom: var( --dm-spacing-secondary );
-
+      transition: all 0.3s ease-in-out;
     }
     > .popup-close-button {
       @include dm-button();

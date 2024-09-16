@@ -3202,6 +3202,10 @@ body.theme-dark .grid-background-animation {
   left: 0;
   right: 0;
   background-color: rgba(var(--dm-color-black-rgb), 0.9);
+  -webkit-transition: all 0.2s ease-in-out !important;
+  transition: all 0.2s ease-in-out !important;
+  -webkit-animation-duration: 0.2s !important;
+          animation-duration: 0.2s !important;
 }
 .dm-popup > .popup-content {
   display: -webkit-box;
@@ -3217,6 +3221,14 @@ body.theme-dark .grid-background-animation {
   padding: var(--dm-spacing-secondary);
   position: relative;
   overflow: hidden;
+  -webkit-animation-duration: 0.2s !important;
+          animation-duration: 0.2s !important;
+  -webkit-transition: all 0.2s ease-in-out !important;
+  transition: all 0.2s ease-in-out !important;
+  -webkit-animation-delay: 0.2s !important;
+          animation-delay: 0.2s !important;
+  -webkit-transition-delay: 0.2s !important;
+          transition-delay: 0.2s !important;
 }
 .dm-popup > .popup-content > img {
   width: auto;
@@ -3226,6 +3238,8 @@ body.theme-dark .grid-background-animation {
   cursor: -webkit-zoom-in;
   cursor: zoom-in;
   margin-bottom: var(--dm-spacing-secondary);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .dm-popup > .popup-content > .popup-close-button {
   margin: 0 !important;

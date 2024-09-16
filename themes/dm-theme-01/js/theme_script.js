@@ -460,16 +460,20 @@ document.addEventListener("DOMContentLoaded", function() {
             popupElement = document.createElement("div");
             popupElement.id = "popup";
             popupElement.classList.add("dm-popup");
-
             var popupContent = document.createElement("div");
             popupContent.classList.add("popup-content");
+
+            animationHidePopup(popupContent, popupElement);
 
             var closeButton = document.createElement("button");
             closeButton.classList.add("popup-close-button");
             closeButton.innerHTML  = "<svg data-svg-type='stroke' width='14' height='14' viewBox='0 0 14 14'><path d='M13 1L1 13M1 1L13 13' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'></path></svg>";
 
             closeButton.addEventListener("click", function() {
-                document.body.removeChild(popupElement);
+                animationHidePopup(popupContent, popupElement);
+                setTimeout(function() {
+                    document.body.removeChild(popupElement);
+                }, 300);
             });
 
             popupContent.appendChild(content);
@@ -480,6 +484,21 @@ document.addEventListener("DOMContentLoaded", function() {
             content.addEventListener("click", function() {
                 toggleZoom(this);
             });
+            setTimeout(function() {
+                animationShowPopup(popupContent, popupElement);
+            }, 1);
+            function animationShowPopup(popupContent, popupElement) {
+                if (popupContent && popupElement) {
+                    popupContent.setAttribute('data-motion', 'transition-fade-1');
+                    popupElement.setAttribute('data-motion', 'transition-fade-1');
+                }
+            }
+            function animationHidePopup(popupContent, popupElement) {
+                if (popupContent && popupElement) {
+                    popupContent.setAttribute('data-motion', 'transition-fade-0');
+                    popupElement.setAttribute('data-motion', 'transition-fade-0');
+                }
+            }
         }
     }  
     var zoomLevel = 0;
