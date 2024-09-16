@@ -621,5 +621,9 @@
 				"text": "For more details on how Google Analytics handles your data, you can refer to Google's Privacy Policy."
 			}
 		]
+	},
+	"page-not-found": {
+		"title": "404",
+		"description": "NOT FOUND"
 	}
 }
