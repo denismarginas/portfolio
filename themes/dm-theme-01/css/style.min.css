@@ -1748,10 +1748,10 @@ body.theme-dark .grid-background-animation {
 }
 
 .grid-background-animation {
-  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
-  animation: bg-scrolling-reverse 0.92s infinite;
+  -webkit-animation: bg-scrolling-reverse 1.5s infinite;
+          animation: bg-scrolling-reverse 1.5s infinite;
   -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 @-webkit-keyframes bg-scrolling-reverse {
@@ -1759,6 +1759,7 @@ body.theme-dark .grid-background-animation {
     background-position: 50px 50px;
   }
 }
+
 @keyframes bg-scrolling-reverse {
   100% {
     background-position: 50px 50px;

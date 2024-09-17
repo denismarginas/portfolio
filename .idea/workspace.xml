@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2259709f-b699-4482-a363-da52decd52d5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-404.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-404.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/action-transistions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/action-transistions.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-post.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-post.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/animation-grid-background.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/animation-grid-background.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +76,7 @@
       <workItem from="1725954804796" duration="6966000" />
       <workItem from="1726128601816" duration="65372000" />
       <workItem from="1726468022194" duration="10550000" />
-      <workItem from="1726593815120" duration="726000" />
+      <workItem from="1726593815120" duration="2083000" />
     </task>
     <servers />
   </component>
