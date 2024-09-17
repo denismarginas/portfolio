@@ -889,29 +889,29 @@ body[java-script=true] [data-motion=transition-fade-1] {
 }
 body[java-script=true] [data-motion~=transition-slideInRight-0],
 body[java-script=true] [data-motion=transition-slideInRight-0] {
-  -webkit-transform: translateX(-100vw);
-          transform: translateX(-100vw);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   -webkit-transition: all 1s;
   transition: all 1s;
 }
 body[java-script=true] [data-motion~=transition-slideInRight-1],
 body[java-script=true] [data-motion=transition-slideInRight-1] {
-  -webkit-transform: translateX(0vw);
-          transform: translateX(0vw);
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
   -webkit-transition: all 1s;
   transition: all 1s;
 }
 body[java-script=true] [data-motion~=transition-slideInLeft-0],
 body[java-script=true] [data-motion=transition-slideInLeft-0] {
-  -webkit-transform: translateX(100vw);
-          transform: translateX(100vw);
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
   -webkit-transition: all 1s;
   transition: all 1s;
 }
 body[java-script=true] [data-motion~=transition-slideInLeft-1],
 body[java-script=true] [data-motion=transition-slideInLeft-1] {
-  -webkit-transform: translateX(0vw);
-          transform: translateX(0vw);
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
   -webkit-transition: all 1s;
   transition: all 1s;
 }
@@ -12723,10 +12723,14 @@ body.theme-dark .cookie-notice > .button-accept:hover > svg[data-svg-type=stroke
   padding: var(--dm-spacing-secondary);
 }
 .dm-post > container > .post-content > .dm-post-details-grid .dm-post-logo-details > img {
-  height: auto;
   width: auto;
-  max-width: 80%;
-  max-height: 100%;
+  height: auto;
+  max-height: 80%;
+  max-width: 70%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 .dm-post > container > .post-content > .dm-post-details-grid > .dm-post-title-description {
   display: -webkit-box;

@@ -18,25 +18,25 @@ body[java-script="true"] {
   // slideInRight
   [data-motion~="transition-slideInRight-0"],
   [data-motion="transition-slideInRight-0"] {
-    transform: translateX(-100vw);
+    transform: translateX(-50%);
     transition: all 1s;
 
   }
   [data-motion~="transition-slideInRight-1"],
   [data-motion="transition-slideInRight-1"] {
-    transform: translateX(0vw);
+    transform: translateX(0%);
     transition: all 1s;
   }
 
   // slideInLeft
   [data-motion~="transition-slideInLeft-0"],
   [data-motion="transition-slideInLeft-0"] {
-    transform: translateX(+100vw);
+    transform: translateX(+50%);
     transition: all 1s;
   }
   [data-motion~="transition-slideInLeft-1"],
   [data-motion="transition-slideInLeft-1"] {
-    transform: translateX(0vw);
+    transform: translateX(0%);
     transition: all 1s;
   }
 

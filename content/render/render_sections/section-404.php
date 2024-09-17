@@ -6,7 +6,6 @@ endif;
 
 <section class="dm-404 grid-background-animation">
     <container>
-
         <div class="title">
             <?php if(isset($jsonNotFound["title"])) :
                 echo $jsonNotFound["title"];
@@ -15,7 +14,6 @@ endif;
             endif; ?>
         </div>
         <p class="description">
-
             <?php if(isset($jsonNotFound["title"])) :
                 echo $jsonNotFound["description"];
             else :
