@@ -18,7 +18,7 @@
       display: grid;
       align-items: center;
       grid-template-columns: 2fr 1fr;
-      gap: var( --dm-spacing-small );
+      gap: var( --dm-spacing-large );
 
       &:nth-child(2n) {
         direction: rtl;
@@ -29,7 +29,7 @@
         text-align: left;
         direction: ltr;
 
-        > h2 {
+        .video-title {
           @include dm-font-heading1();
           --dm-text-heading1-font-family: var( --dm-font-family-secondary );
 
@@ -51,29 +51,39 @@
 
           }
         }
-        > p, div p, div ul li span {
+        p, div p, div ul li span {
           @include dm-font-default();
 
         }
-        >  div {
+        .video-timeline {
           > p {
-            --dm-text-default-font-weight: 600;
+            @include dm-font-small();
+            --dm-text-small-font-weight: 600;
           }
           > ul {
             @include reset-list();
+            @include flex-column();
+            gap: calc( var( --dm-spacing-primary ) / 2);
             padding: 6px;
 
             > li {
               @include flex-row();
               align-items: center;
-              gap: 6px;
+              gap: calc( var( --dm-spacing-primary ) / 2);
 
               > svg {
-                @include fix-size( 15px );
-                @include svg-color( var( --dm-color-primary ) );
+                @include border-radius( var( --dm-border-radius-primary ) );
+                @include fix-size( 10px );
+                padding: 3px;
+              }
+              > span {
+                @include dm-font-small();
               }
             }
           }
+        }
+        > .video-description, > .video-description > *{
+          @include dm-font-medium();
         }
         .dm-watch-on-youtube {
           --dm-color-yt-button: #FF3D00;
@@ -135,8 +145,8 @@
 
           > .text {
             @include dm-font-big();
-            --dm-font-family: var( --dm-font-family-secondary );
-            --dm-text-big-font-weight: 600;
+            --dm-font-family: var( --dm-font-family-tertiary );
+            --dm-text-big-font-weight: 500;
           }
         }
         > .video-container {
@@ -160,13 +170,30 @@
     top: 0;
     transform: rotate(328deg);
   }
+
+  @media only screen and (max-width: $screen-desktop-medium) {
+   > container {
+      > ul {
+        gap: var( --dm-spacing-small );
+      }
+   }
+  }
+
   @media only screen and (max-width: $screen-desktop-small) {
     > container {
       > ul {
         grid-template-columns: 1.8fr 1fr;
+
+        > li {
+          .video-title {
+            @include dm-font-heading3();
+            --dm-text-heading3-font-family: var( --dm-font-family-secondary );
+          }
+        }
       }
     }
   }
+
   @media only screen and (max-width: $screen-tablet-large) {
     > container {
       > ul {
@@ -187,10 +214,11 @@ body, body.theme-light {
     > container {
       > ul {
         > li {
-          > h2 {
+          .video-title {
             --dm-text-heading1-color: var( --dm-color-gray );
+            --dm-text-heading3-color: var( --dm-color-gray );
           }
-          > p, div p, div ul li span {
+          p, div p, div ul li span {
             --dm-text-default-color: var( --dm-color-gray );
           }
 
@@ -203,8 +231,8 @@ body, body.theme-light {
             &:before {
               background: linear-gradient(
                   190deg,
-                  rgba( var( --dm-color-white-rgb ), 0 ) 40%,
-                  rgba( var( --dm-color-white-rgb ), 1 ) 90%
+                  rgba( var( --dm-color-gray-lighten-rgb ), 0.1 ) 40%,
+                  rgba( var( --dm-color-gray-lighten-rgb ), 0.3 ) 90%
               );
               opacity: 0.6;
             }
@@ -212,11 +240,30 @@ body, body.theme-light {
               &:before {
                 background: linear-gradient(
                     190deg,
-                    rgba( var( --dm-color-white-rgb ), 0 ) 30%,
-                    rgba( var( --dm-color-white-rgb ), 1 ) 88%
+                    rgba( var( --dm-color-gray-lighten-rgb ), 0.1 ) 45%,
+                    rgba( var( --dm-color-gray-lighten-rgb ), 0.3 ) 90%
                 );
               }
               opacity: 1;
+            }
+          }
+          > .video-description, > .video-description > *{
+            --dm-text-medium-color: var( --dm-color-gray );
+          }
+          .video-timeline {
+            > p {
+              --dm-text-small-color: var( --dm-color-gray );
+            }
+            > ul {
+              > li {
+                > span {
+                  --dm-text-small-color: var( --dm-color-gray );
+                }
+                > svg {
+                  @include svg-color( var( --dm-color-primary ) );
+                  background-color: rgba( var( --dm-color-gray-rgb ), 0.1 );
+                }
+              }
             }
           }
         }
@@ -230,13 +277,16 @@ body.theme-dark {
     > container {
       > ul {
         > li {
-          > h2 {
+          .video-title {
             --dm-text-heading1-color: var( --dm-color-white );
+            --dm-text-heading3-color: var( --dm-color-white );
           }
-          > p, div p, div ul li span {
+          p, div p, div ul li span {
             --dm-text-default-color: var( --dm-color-white );
           }
-
+          > .video-description, > .video-description > *{
+            --dm-text-medium-color: var( --dm-color-white );
+          }
           .dm-watch-on-youtube {
             background-color: rgba( var( --dm-color-gray-darken-rgb ), 0.2);
 
@@ -259,6 +309,22 @@ body.theme-dark {
                     var( --dm-color-yt-button ) 100%
                 );
                 opacity: 0.4;
+              }
+            }
+          }
+          .video-timeline {
+            > p {
+              --dm-text-small-color: var( --dm-color-white );
+            }
+            > ul {
+              > li {
+                > span {
+                  --dm-text-small-color: var( --dm-color-white );
+                }
+                > svg {
+                  @include svg-color( var( --dm-color-white ) );
+                  background-color: rgba( var( --dm-color-primary-rgb ), 0.6 );
+                }
               }
             }
           }

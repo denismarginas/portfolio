@@ -105,6 +105,7 @@
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -256,6 +257,7 @@
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -792,6 +794,7 @@
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -1075,6 +1078,7 @@ body[java-script=true] [data-delay] {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -1280,6 +1284,7 @@ body[java-script=true] [data-delay] {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -1874,6 +1879,7 @@ body.theme-dark .grid-background-animation {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -2154,6 +2160,7 @@ body.theme-dark .grid-background-animation {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -2531,6 +2538,7 @@ body.theme-dark .grid-background-animation {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -2701,6 +2709,7 @@ body.theme-dark .grid-background-animation {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -3141,6 +3150,7 @@ body.theme-dark .grid-background-animation {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -3440,6 +3450,7 @@ body.theme-dark .grid-background-animation {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -3757,6 +3768,7 @@ body.theme-dark .grid-background-animation {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -3932,6 +3944,7 @@ body[java-script=true] input[type=range].progress::-webkit-slider-thumb {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -4083,6 +4096,7 @@ body[java-script=true] input[type=range].progress::-webkit-slider-thumb {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -4420,6 +4434,7 @@ body[java-script=true] .dm-contact-form > form .external-form-submit {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -4552,8 +4567,7 @@ body[java-script=true] .dm-contact-form > form .external-form-submit {
   letter-spacing: var(--dm-text-heading1-letter-spacing);
   color: var(--dm-text-heading1-color);
   --dm-text-heading1-color: var( --dm-color-white );
-  --dm-text-heading1-font-family: var( --dm-font-family-secondary );
-  --dm-text-heading1-font-family: "Space Nation";
+  --dm-text-heading1-font-family: var( --dm-font-family-tertiary );
   --dm-text-heading1-font-weight: 500;
   --dm-text-heading1-font-size: 50px;
   --dm-text-heading1-line-height: 64px;
@@ -4716,6 +4730,7 @@ body[java-script=true] .dm-contact-form > form .external-form-submit {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -5192,6 +5207,7 @@ body[java-script=true] .dm-contact-form > form .external-form-submit {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -5544,6 +5560,7 @@ body[java-script=true] .dm-contact-form > form .external-form-submit {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -5971,6 +5988,7 @@ body.theme-dark .resume-card > div > div > button:hover {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -6308,6 +6326,7 @@ body.theme-dark .dm-person-circle-card > span > div .circle-background {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -6614,6 +6633,7 @@ body.theme-dark .dm-card-summary-project > .content > p, body.theme-dark .dm-car
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -6885,6 +6905,7 @@ body[java-script=true] .dm-toggletheme {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -7381,6 +7402,7 @@ body:not([java-script=true]) .video-container > .show-play, body:not([java-scrip
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -7573,6 +7595,7 @@ body:not([java-script=true]) .video-container > .show-play, body:not([java-scrip
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -8514,6 +8537,7 @@ body[java-script=true] #post-list-sort-and-search {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -8726,6 +8750,7 @@ body[java-script=true] #post-list-sort-and-search {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -9029,6 +9054,7 @@ body.theme-dark .dm-gallery-web-content {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -9234,6 +9260,7 @@ body.theme-dark .dm-gallery-web-content {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -9481,6 +9508,7 @@ body.theme-dark .dm-gallery-media-content {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -9741,6 +9769,7 @@ body.theme-dark .dm-video-media-content {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -10148,6 +10177,7 @@ body.theme-dark .dm-video-media-content {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -10404,6 +10434,7 @@ body.theme-dark .dm-video-media-content {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -10683,6 +10714,7 @@ body:not([java-script=true]) .slider > .slider-container .slider-element {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -10929,6 +10961,7 @@ body.theme-dark .carousel-list > .carousel-item > .dm-post-item-image {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -11268,6 +11301,7 @@ body.theme-dark .carousel-list > .carousel-item > .dm-post-item-image {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -11474,6 +11508,7 @@ body.theme-dark .carousel-list > .carousel-item > .dm-post-item-image {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -11775,6 +11810,7 @@ body.theme-dark .dm-jobs-grid > p > span {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -12061,6 +12097,7 @@ body.theme-dark .cookie-notice > .button-accept:hover > svg[data-svg-type=stroke
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -13176,6 +13213,7 @@ body.theme-dark .dm-post > container .post-content .dm-post-title-category {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -13885,6 +13923,7 @@ body.theme-dark .dm-posts-list > container > ul > .dm-post-item.dm-post-item-web
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -14064,6 +14103,7 @@ body.theme-dark .dm-posts-list > container > ul > .dm-post-item.dm-post-item-web
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -14403,6 +14443,7 @@ body.theme-dark .dm-posts-list > container > ul > .dm-post-item.dm-post-item-web
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -14838,6 +14879,7 @@ body.theme-dark .dm-contact-data > container > ul > li > ul > li .dm-warning-dat
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -15100,6 +15142,7 @@ body.theme-dark .dm-contact-details > container > ul > .dm-socials > .dm-socials
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -15380,6 +15423,7 @@ body.theme-dark .dm-resume-data > container > ul > li:last-of-type > div > p {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -15811,6 +15855,7 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -16173,6 +16218,7 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -16359,6 +16405,7 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -16691,6 +16738,7 @@ body.theme-dark .dm-experience-knowledge > container > div > ul > li {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -17110,6 +17158,7 @@ body.theme-dark .dm-summary-experience .dm-experience-section > container > hr {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -18246,6 +18295,7 @@ body.theme-dark .dm-jobs > container > ul > li.dm-note > p {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -19103,6 +19153,7 @@ body.theme-dark .dm-education > container > .detailed-list .education > .details
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -19396,6 +19447,7 @@ body.theme-dark .dm-education > container > .detailed-list .education > .details
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -19508,9 +19560,9 @@ body.theme-dark .dm-education > container > .detailed-list .education > .details
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-grid-columns: 2fr var(--dm-spacing-small) 1fr;
+  -ms-grid-columns: 2fr var(--dm-spacing-large) 1fr;
   grid-template-columns: 2fr 1fr;
-  gap: var(--dm-spacing-small);
+  gap: var(--dm-spacing-large);
 }
 .dm-portfolio-showcase > container > ul:nth-child(2n) {
   direction: rtl;
@@ -19527,7 +19579,7 @@ body.theme-dark .dm-education > container > .detailed-list .education > .details
   text-align: left;
   direction: ltr;
 }
-.dm-portfolio-showcase > container > ul > li > h2 {
+.dm-portfolio-showcase > container > ul > li .video-title {
   font-family: var(--dm-text-heading1-font-family);
   font-size: var(--dm-text-heading1-font-size);
   font-style: var(--dm-text-heading1-font-style);
@@ -19537,7 +19589,7 @@ body.theme-dark .dm-education > container > .detailed-list .education > .details
   color: var(--dm-text-heading1-color);
   --dm-text-heading1-font-family: var( --dm-font-family-secondary );
 }
-.dm-portfolio-showcase > container > ul > li > h2:after {
+.dm-portfolio-showcase > container > ul > li .video-title:after {
   position: relative;
   display: block;
   content: "";
@@ -19560,7 +19612,7 @@ body.theme-dark .dm-education > container > .detailed-list .education > .details
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
-.dm-portfolio-showcase > container > ul > li > p, .dm-portfolio-showcase > container > ul > li div p, .dm-portfolio-showcase > container > ul > li div ul li span {
+.dm-portfolio-showcase > container > ul > li p, .dm-portfolio-showcase > container > ul > li div p, .dm-portfolio-showcase > container > ul > li div ul li span {
   font-family: var(--dm-font-family);
   font-size: var(--dm-text-default-font-size);
   font-style: var(--dm-text-default-font-style);
@@ -19568,16 +19620,30 @@ body.theme-dark .dm-education > container > .detailed-list .education > .details
   line-height: var(--dm-text-default-line-height);
   color: var(--dm-text-default-color);
 }
-.dm-portfolio-showcase > container > ul > li > div > p {
-  --dm-text-default-font-weight: 600;
+.dm-portfolio-showcase > container > ul > li .video-timeline > p {
+  font-family: var(--dm-font-family);
+  font-size: var(--dm-text-small-font-size);
+  font-style: var(--dm-text-small-font-style);
+  font-weight: var(--dm-text-small-font-weight);
+  line-height: var(--dm-text-small-line-height);
+  color: var(--dm-text-small-color);
+  --dm-text-small-font-weight: 600;
 }
-.dm-portfolio-showcase > container > ul > li > div > ul {
+.dm-portfolio-showcase > container > ul > li .video-timeline > ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: calc(var(--dm-spacing-primary) / 2);
   padding: 6px;
 }
-.dm-portfolio-showcase > container > ul > li > div > ul > li {
+.dm-portfolio-showcase > container > ul > li .video-timeline > ul > li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19588,21 +19654,33 @@ body.theme-dark .dm-education > container > .detailed-list .education > .details
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 6px;
+  gap: calc(var(--dm-spacing-primary) / 2);
 }
-.dm-portfolio-showcase > container > ul > li > div > ul > li > svg {
-  width: 15px;
-  height: 15px;
-  min-width: 15px;
-  min-height: 15px;
-  max-width: 15px;
-  max-height: 15px;
+.dm-portfolio-showcase > container > ul > li .video-timeline > ul > li > svg {
+  border-radius: var(--dm-border-radius-primary);
+  width: 10px;
+  height: 10px;
+  min-width: 10px;
+  min-height: 10px;
+  max-width: 10px;
+  max-height: 10px;
+  padding: 3px;
 }
-.dm-portfolio-showcase > container > ul > li > div > ul > li > svg[data-svg-type=fill] > path {
-  fill: var(--dm-color-primary);
+.dm-portfolio-showcase > container > ul > li .video-timeline > ul > li > span {
+  font-family: var(--dm-font-family);
+  font-size: var(--dm-text-small-font-size);
+  font-style: var(--dm-text-small-font-style);
+  font-weight: var(--dm-text-small-font-weight);
+  line-height: var(--dm-text-small-line-height);
+  color: var(--dm-text-small-color);
 }
-.dm-portfolio-showcase > container > ul > li > div > ul > li > svg[data-svg-type=stroke] > path {
-  stroke: var(--dm-color-primary);
+.dm-portfolio-showcase > container > ul > li > .video-description, .dm-portfolio-showcase > container > ul > li > .video-description > * {
+  font-family: var(--dm-font-family);
+  font-size: var(--dm-text-medium-font-size);
+  font-style: var(--dm-text-medium-font-style);
+  font-weight: var(--dm-text-medium-font-weight);
+  line-height: var(--dm-text-medium-line-height);
+  color: var(--dm-text-medium-color);
 }
 .dm-portfolio-showcase > container > ul > li .dm-watch-on-youtube {
   --dm-color-yt-button: #FF3D00;
@@ -19687,8 +19765,8 @@ body.theme-dark .dm-education > container > .detailed-list .education > .details
   font-weight: var(--dm-text-big-font-weight);
   line-height: var(--dm-text-big-line-height);
   color: var(--dm-text-big-color);
-  --dm-font-family: var( --dm-font-family-secondary );
-  --dm-text-big-font-weight: 600;
+  --dm-font-family: var( --dm-font-family-tertiary );
+  --dm-text-big-font-weight: 500;
 }
 .dm-portfolio-showcase > container > ul > li > .video-container {
   border-radius: var(--dm-border-radius-secondary);
@@ -19710,10 +19788,25 @@ body.theme-dark .dm-education > container > .detailed-list .education > .details
   -webkit-transform: rotate(328deg);
           transform: rotate(328deg);
 }
+@media only screen and (max-width: 1440px) {
+  .dm-portfolio-showcase > container > ul {
+    gap: var(--dm-spacing-small);
+  }
+}
 @media only screen and (max-width: 1240px) {
   .dm-portfolio-showcase > container > ul {
     -ms-grid-columns: 1.8fr 1fr;
     grid-template-columns: 1.8fr 1fr;
+  }
+  .dm-portfolio-showcase > container > ul > li .video-title {
+    font-family: var(--dm-text-heading3-font-family);
+    font-size: var(--dm-text-heading3-font-size);
+    font-style: var(--dm-text-heading3-font-style);
+    font-weight: var(--dm-text-heading3-font-weight);
+    line-height: var(--dm-text-heading3-line-height);
+    letter-spacing: var(--dm-text-heading3-letter-spacing);
+    color: var(--dm-text-heading3-color);
+    --dm-text-heading3-font-family: var( --dm-font-family-secondary );
   }
 }
 @media only screen and (max-width: 992px) {
@@ -19729,10 +19822,11 @@ body.theme-dark .dm-education > container > .detailed-list .education > .details
   }
 }
 
-body .dm-portfolio-showcase > container > ul > li > h2, body.theme-light .dm-portfolio-showcase > container > ul > li > h2 {
+body .dm-portfolio-showcase > container > ul > li .video-title, body.theme-light .dm-portfolio-showcase > container > ul > li .video-title {
   --dm-text-heading1-color: var( --dm-color-gray );
+  --dm-text-heading3-color: var( --dm-color-gray );
 }
-body .dm-portfolio-showcase > container > ul > li > p, body .dm-portfolio-showcase > container > ul > li div p, body .dm-portfolio-showcase > container > ul > li div ul li span, body.theme-light .dm-portfolio-showcase > container > ul > li > p, body.theme-light .dm-portfolio-showcase > container > ul > li div p, body.theme-light .dm-portfolio-showcase > container > ul > li div ul li span {
+body .dm-portfolio-showcase > container > ul > li p, body .dm-portfolio-showcase > container > ul > li div p, body .dm-portfolio-showcase > container > ul > li div ul li span, body.theme-light .dm-portfolio-showcase > container > ul > li p, body.theme-light .dm-portfolio-showcase > container > ul > li div p, body.theme-light .dm-portfolio-showcase > container > ul > li div ul li span {
   --dm-text-default-color: var( --dm-color-gray );
 }
 body .dm-portfolio-showcase > container > ul > li .dm-watch-on-youtube, body.theme-light .dm-portfolio-showcase > container > ul > li .dm-watch-on-youtube {
@@ -19742,21 +19836,43 @@ body .dm-portfolio-showcase > container > ul > li .dm-watch-on-youtube > .text, 
   --dm-text-big-color: var( --dm-color-gray );
 }
 body .dm-portfolio-showcase > container > ul > li .dm-watch-on-youtube:before, body.theme-light .dm-portfolio-showcase > container > ul > li .dm-watch-on-youtube:before {
-  background: linear-gradient(190deg, rgba(var(--dm-color-white-rgb), 0) 40%, rgba(var(--dm-color-white-rgb), 1) 90%);
+  background: linear-gradient(190deg, rgba(var(--dm-color-gray-lighten-rgb), 0.1) 40%, rgba(var(--dm-color-gray-lighten-rgb), 0.3) 90%);
   opacity: 0.6;
 }
 body .dm-portfolio-showcase > container > ul > li .dm-watch-on-youtube:hover, body.theme-light .dm-portfolio-showcase > container > ul > li .dm-watch-on-youtube:hover {
   opacity: 1;
 }
 body .dm-portfolio-showcase > container > ul > li .dm-watch-on-youtube:hover:before, body.theme-light .dm-portfolio-showcase > container > ul > li .dm-watch-on-youtube:hover:before {
-  background: linear-gradient(190deg, rgba(var(--dm-color-white-rgb), 0) 30%, rgba(var(--dm-color-white-rgb), 1) 88%);
+  background: linear-gradient(190deg, rgba(var(--dm-color-gray-lighten-rgb), 0.1) 45%, rgba(var(--dm-color-gray-lighten-rgb), 0.3) 90%);
+}
+body .dm-portfolio-showcase > container > ul > li > .video-description, body .dm-portfolio-showcase > container > ul > li > .video-description > *, body.theme-light .dm-portfolio-showcase > container > ul > li > .video-description, body.theme-light .dm-portfolio-showcase > container > ul > li > .video-description > * {
+  --dm-text-medium-color: var( --dm-color-gray );
+}
+body .dm-portfolio-showcase > container > ul > li .video-timeline > p, body.theme-light .dm-portfolio-showcase > container > ul > li .video-timeline > p {
+  --dm-text-small-color: var( --dm-color-gray );
+}
+body .dm-portfolio-showcase > container > ul > li .video-timeline > ul > li > span, body.theme-light .dm-portfolio-showcase > container > ul > li .video-timeline > ul > li > span {
+  --dm-text-small-color: var( --dm-color-gray );
+}
+body .dm-portfolio-showcase > container > ul > li .video-timeline > ul > li > svg, body.theme-light .dm-portfolio-showcase > container > ul > li .video-timeline > ul > li > svg {
+  background-color: rgba(var(--dm-color-gray-rgb), 0.1);
+}
+body .dm-portfolio-showcase > container > ul > li .video-timeline > ul > li > svg[data-svg-type=fill] > path, body.theme-light .dm-portfolio-showcase > container > ul > li .video-timeline > ul > li > svg[data-svg-type=fill] > path {
+  fill: var(--dm-color-primary);
+}
+body .dm-portfolio-showcase > container > ul > li .video-timeline > ul > li > svg[data-svg-type=stroke] > path, body.theme-light .dm-portfolio-showcase > container > ul > li .video-timeline > ul > li > svg[data-svg-type=stroke] > path {
+  stroke: var(--dm-color-primary);
 }
 
-body.theme-dark .dm-portfolio-showcase > container > ul > li > h2 {
+body.theme-dark .dm-portfolio-showcase > container > ul > li .video-title {
   --dm-text-heading1-color: var( --dm-color-white );
+  --dm-text-heading3-color: var( --dm-color-white );
 }
-body.theme-dark .dm-portfolio-showcase > container > ul > li > p, body.theme-dark .dm-portfolio-showcase > container > ul > li div p, body.theme-dark .dm-portfolio-showcase > container > ul > li div ul li span {
+body.theme-dark .dm-portfolio-showcase > container > ul > li p, body.theme-dark .dm-portfolio-showcase > container > ul > li div p, body.theme-dark .dm-portfolio-showcase > container > ul > li div ul li span {
   --dm-text-default-color: var( --dm-color-white );
+}
+body.theme-dark .dm-portfolio-showcase > container > ul > li > .video-description, body.theme-dark .dm-portfolio-showcase > container > ul > li > .video-description > * {
+  --dm-text-medium-color: var( --dm-color-white );
 }
 body.theme-dark .dm-portfolio-showcase > container > ul > li .dm-watch-on-youtube {
   background-color: rgba(var(--dm-color-gray-darken-rgb), 0.2);
@@ -19771,6 +19887,21 @@ body.theme-dark .dm-portfolio-showcase > container > ul > li .dm-watch-on-youtub
 body.theme-dark .dm-portfolio-showcase > container > ul > li .dm-watch-on-youtube:hover:before {
   background: linear-gradient(190deg, rgba(36, 0, 0, 0) 10%, var(--dm-color-yt-button) 100%);
   opacity: 0.4;
+}
+body.theme-dark .dm-portfolio-showcase > container > ul > li .video-timeline > p {
+  --dm-text-small-color: var( --dm-color-white );
+}
+body.theme-dark .dm-portfolio-showcase > container > ul > li .video-timeline > ul > li > span {
+  --dm-text-small-color: var( --dm-color-white );
+}
+body.theme-dark .dm-portfolio-showcase > container > ul > li .video-timeline > ul > li > svg {
+  background-color: rgba(var(--dm-color-primary-rgb), 0.6);
+}
+body.theme-dark .dm-portfolio-showcase > container > ul > li .video-timeline > ul > li > svg[data-svg-type=fill] > path {
+  fill: var(--dm-color-white);
+}
+body.theme-dark .dm-portfolio-showcase > container > ul > li .video-timeline > ul > li > svg[data-svg-type=stroke] > path {
+  stroke: var(--dm-color-white);
 }
 
 /* ---- Responsive Screens ---- */
@@ -19844,6 +19975,7 @@ body.theme-dark .dm-portfolio-showcase > container > ul > li .dm-watch-on-youtub
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -20161,6 +20293,7 @@ body.theme-dark .dm-work-experience > container > ul > li:first-of-type > p {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -20476,6 +20609,7 @@ body.theme-dark .dm-work-experience > container > ul > li:first-of-type > p {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -20892,6 +21026,7 @@ body.theme-dark .dm-work-experience > container > ul > li:first-of-type > p {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -21501,6 +21636,7 @@ body.theme-dark .dm-workstation-products > container > .products > .product {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -22050,6 +22186,7 @@ body.theme-dark .dm-search-section .search-item > .search-item-data > .descripti
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -22394,6 +22531,7 @@ body.theme-dark .dm-404 > container > .description {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -22601,6 +22739,7 @@ body.theme-dark .dm-gdpr > container > p {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -22993,6 +23132,7 @@ body.theme-dark .dm-gdpr > container > p {
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -23464,6 +23604,7 @@ body:not([java-script=true]) .dm-blog-posts > container > .dm-blog-posts-section
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -24205,6 +24346,7 @@ body:not([java-script=true]) .dm-blog-posts > container > .dm-blog-posts-section
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );
@@ -24597,6 +24739,7 @@ body[java-script=true] > * ::selection, .theme-light[java-script=true] > * ::sel
   /* ---- Fonts ---- */
   --dm-font-family-primary: "Roboto", sans-serif;
   --dm-font-family-secondary: "Gerth", sans-serif;
+  --dm-font-family-tertiary: "Space Nation", sans-serif;
   --dm-font-family: var(--dm-font-family-primary);
   /* ---- Text Elements ---- */
   --dm-text-extra-small-font-family: var( --dm-font-family-primary );

@@ -42,8 +42,7 @@
   > h2 {
     @include dm-font-heading1();
     --dm-text-heading1-color: var( --dm-color-white );
-    --dm-text-heading1-font-family: var( --dm-font-family-secondary );
-    --dm-text-heading1-font-family: 'Space Nation';
+    --dm-text-heading1-font-family: var( --dm-font-family-tertiary );
     --dm-text-heading1-font-weight: 500;
     --dm-text-heading1-font-size: 50px;
     --dm-text-heading1-line-height: 64px;
