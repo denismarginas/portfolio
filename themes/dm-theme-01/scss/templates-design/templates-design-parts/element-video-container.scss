@@ -370,13 +370,22 @@ $background-color_4: var( --dm-video-color-primary );
       .controls {
         button {
           @include dm-font-small();
-          --dm-text-small-color: var( --dm-color-white );
+          --dm-text-small-color: var(--dm-color-white);
           width: 20px;
           height: 20px;
         }
       }
+    }
+    .volume-container {
+      &:hover {
+        .volume-slider {
+          width: 60px;
+        }
+      }
       .volume-slider {
-        width: 60px !important;
+        &:focus-within {
+          width: 60px;
+        }
       }
     }
     .duration-container, .speed-btn {
@@ -388,16 +397,24 @@ $background-color_4: var( --dm-video-color-primary );
     .video-controls-container {
       .volume-slider {
         transform: rotate(270deg) scale(0);
-        width: 70px !important;
-        bottom: 20px;
+        bottom: 18px;
         left: 40px;
         position: absolute;
         box-shadow: inset 10px 10px 0px rgba( var( --dm-color-black-rgb ), 0.2 );
       }
     }
-    .video-controls-container:hover, .video-controls-container:focus-within {
-      .volume-slider {
-        transform: rotate(270deg) scale(1);
+    .video-controls-container, .video-controls-container:hover {
+      .volume-container {
+        &:hover {
+          .volume-slider {
+            transform: rotate(270deg) scale(1);
+          }
+        }
+        .volume-slider {
+          &:focus-within {
+            transform: rotate(270deg) scale(1);
+          }
+        }
       }
     }
   }
