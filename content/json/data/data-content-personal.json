@@ -596,7 +596,8 @@
 			"employer_type": "Worked as:",
 			"employer_location": "Worked at:",
 			"date": "Date:"
-		}
+		},
+		"index": "false"
 	},
 	"privacy-policy": {
 		"title": "Privacy Policy",

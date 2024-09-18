@@ -15,7 +15,6 @@
 
     if (isset($seo)) :
         $seo_fields = seoAddInContent($seo, $seo_fields);
-        //$seo_fields = implode(" ",seoAddInTag($seo));
     endif;
     echo $seo_fields;
 

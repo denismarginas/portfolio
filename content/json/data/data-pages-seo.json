@@ -6,7 +6,8 @@
             "title": "Denis Marginas",
             "description": "My name is Denis Ionut Marginas, I'm 25-year-old, and I've been working as a full-stack web developer and photo-video editor since 2019. Before entering the web development field, I worked as a freelance video editor, specializing in editing videos for video games.",
             "keywords": "denis marginas portfolio",
-            "slug": "index"
+            "slug": "index",
+            "index": "true"
         }
     },
     {
@@ -16,7 +17,8 @@
             "title": "404",
             "description": "Page not found.",
             "keywords": "404",
-            "slug": "404"
+            "slug": "404",
+            "index": "false"
         }
     },
     {
@@ -26,7 +28,8 @@
             "title": "Home",
             "description": "My name is Denis Ionut Marginas, I'm 25-year-old, and I've been working as a full-stack web developer and photo-video editor since 2019. Before entering the web development field, I worked as a freelance video editor, specializing in editing videos for video games.",
             "keywords": "denis marginas home",
-            "slug": "home"
+            "slug": "home",
+            "index": "true"
         }
     },
     {
@@ -36,7 +39,8 @@
             "title": "About",
             "description": "My name is Denis Ionut Marginas, I'm 25-year-old, and I've been working as a full-stack web developer and photo-video editor since 2019. Before entering the web development field, I worked as a freelance video editor, specializing in editing videos for video games.",
             "keywords": "denis marginas about",
-            "slug": "about"
+            "slug": "about",
+            "index": "false"
         } 
     },
     {
@@ -46,7 +50,8 @@
             "title": "Contact",
             "description": "You can reach me by phone on WhatsApp or through my personal email address. Contact details are provided in the section below.",
             "keywords": "denis marginas contact",
-            "slug": "contact"
+            "slug": "contact",
+            "index": "false"
         }
     },
     {
@@ -56,7 +61,8 @@
             "title": "Experience",
             "description": "Experience a captivating journey through my professional work from 2019 to 2023 in this short video. From a captivating intro to web development, photo editing, and video editing, witness my diverse expertise in just under two minutes.",
             "keywords": "denis marginas experience",
-            "slug": "experience"
+            "slug": "experience",
+            "index": "true"
         }
     },
     {
@@ -66,7 +72,8 @@
             "title": "Summary Work Experience",
             "description": "Experience a captivating journey through my professional work from 2019 to 2023 in this short resume of projects.",
             "keywords": "denis marginas summary experience",
-            "slug": "summary-experience"
+            "slug": "summary-experience",
+            "index": "false"
         },
         "hero": {
             "title": "Summary Work Experience",
@@ -82,7 +89,8 @@
             "title": "Employee Experience",
             "description": "Explore my professional journey through my employ experience, where I showcase a chronological record of my employment history. Discover insights into my roles, responsibilities, and significant contributions at various companies, along with dates and key attributes.",
             "keywords": "denis marginas employee experience",
-            "slug": "employee-experience"
+            "slug": "employee-experience",
+            "index": "false"
         },
         "hero": {
             "title": "Experience as an employee",
@@ -97,7 +105,8 @@
             "title": "Education Experience",
             "description": "Discover my educational journey from high school to university, including courses and diplomas attained along the way.",
             "keywords": "denis marginas education experience",
-            "slug": "education-experience"
+            "slug": "education-experience",
+            "index": "false"
         },
         "hero": {
             "title": "Educational experience path",
@@ -112,7 +121,8 @@
             "title": "Search",
             "description": "Search items in the website.",
             "keywords": "denis marginas search",
-            "slug": "search"
+            "slug": "search",
+            "index": "false"
         }
     },
     {
@@ -122,7 +132,8 @@
             "title": "Personal Workstation",
             "description": "Welcome to my personal workstation page! This is the hub of my productivity, where I tackle work projects and pursue personal endeavors.",
             "keywords": "denis marginas workstation",
-            "slug": "workstation"
+            "slug": "workstation",
+            "index": "false"
         },
         "hero": {
             "title": "Personal Workstation",
@@ -137,7 +148,8 @@
             "title": "Projects",
             "description": "Showcase of projects I have created or I was involved, featuring designs and functionality of websites and media content.",
             "keywords": "denis marginas projects",
-            "slug": "projects"
+            "slug": "projects",
+            "index": "false"
         },
         "hero": {
             "title": "Projects",
@@ -154,7 +166,8 @@
             "title": "Web Development Projects",
             "description": "Category: Web Development Projects. Showcase of websites and online shops I have created, featuring engaging designs and seamless functionality.",
             "keywords": "denis marginas web development projects",
-            "slug": "web-development-projects"
+            "slug": "web-development-projects",
+            "index": "false"
         },
         "hero": {
             "title": "Web Development Projects",
@@ -171,7 +184,8 @@
             "title": "Visual Media Projects",
             "description": "Category: Visual Media Projects. Collection of visually captivating projects showcasing my expertise in graphic design, photo editing, and video production.",
             "keywords": "denis marginas visual media projects",
-            "slug": "visual-media-projects"
+            "slug": "visual-media-projects",
+            "index": "false"
         },
         "hero": {
             "title": "Visual Media Projects",
@@ -188,7 +202,8 @@
             "title": "Miscellaneous Projects",
             "description": "Category: Miscellaneous Projects. A mix of non-profit initiatives, personal passion projects, and freelancing work, reflecting my diverse creative endeavors.",
             "keywords": "denis marginas miscellaneous projects",
-            "slug": "miscellaneous-projects"
+            "slug": "miscellaneous-projects",
+            "index": "false"
         },
         "hero": {
             "title": "Miscellaneous Projects",
@@ -204,7 +219,8 @@
             "title": "Social Activity",
             "description": "Dive into the world of a full-stack web developer and skilled photo-video editor. Explore the intersection of web development and visual storytelling on Denis Ionut Marginas's insightful blog.",
             "keywords": "denis marginas social activity",
-            "slug": "social-activity"
+            "slug": "social-activity",
+            "index": "false"
         }
     },
     {
@@ -214,7 +230,8 @@
             "title": "Privacy Policy",
             "description": "Learn how we collect, use, and protect your personal data. Our Privacy Policy explains our use of cookies, Google Analytics, and your rights regarding your data.",
             "keywords": "denis marginas privacy-policy",
-            "slug": "privacy-policy"
+            "slug": "privacy-policy",
+            "index": "false"
         }
     }
 ]

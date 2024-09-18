@@ -533,6 +533,7 @@
         },
         "post_content": [
             "<?php echo renderSectionWebProject($post_current_data); ?>",
+            "<?php echo renderImageBlockProject($post_current_data,'web/seo-optimization/', 'seo-optimization.webp'); ?>",
             "<?php echo renderSectionMediaProject($post_current_data); ?>"
         ],
         "layout": "wrapper-layout"
@@ -2470,7 +2471,7 @@
         },
         "post_content": [
             "<?php echo renderSectionWebProject($post_current_data); ?>",
-            "<?php echo renderImageBlockProject($post_current_data,'media/seo-optimization/', 'seo-optimization.webp'); ?>"
+            "<?php echo renderImageBlockProject($post_current_data,'web/seo-optimization/', 'seo-optimization.webp'); ?>"
         ],
         "layout": "wrapper-layout"
     },
@@ -3878,6 +3879,7 @@
         },
         "post_content": [
             "<?php echo renderSectionWebProject($post_current_data); ?>",
+            "<?php echo renderImageBlockProject($post_current_data,'web/seo-optimization/', 'seo-optimization.webp'); ?>",
             "<?php echo renderSectionMediaProject($post_current_data); ?>"
         ],
         "layout": "wrapper-layout"
@@ -4529,6 +4531,7 @@
         },
         "post_content": [
             "<?php echo renderSectionWebProject($post_current_data); ?>",
+            "<?php echo renderImageBlockProject($post_current_data,'web/seo-optimization/', 'seo-optimization.webp'); ?>",
             "<?php echo renderSectionMediaProject($post_current_data); ?>"
         ],
         "layout": "wrapper-layout"

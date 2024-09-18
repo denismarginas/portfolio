@@ -91,7 +91,8 @@ $seo = [
     "title" => "Render Project | Denis Marginas",
     "description" => "Rendering all content.",
     "keywords" => "render",
-    "slug" => "render"
+    "slug" => "render",
+    "index" => "false"
 ];
 
 echo '<head>';

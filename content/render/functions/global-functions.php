@@ -324,8 +324,12 @@ function getFirstCharacters($string, $n) {
 }
 
 function seoImplicitFields() {
-    $google_site_verification = "Not set.";
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
+    $google_site_verification = $jsonGlobalData["google-site-verification"];
+
+    if( !isset($google_site_verification) && $google_site_verification != "" ) {
+        $google_site_verification = "Not set.";
+    }
     $url_domain = getURL();
     $seoImplicitFieldsStrucutre = [
         'charset' => '<meta charset="UTF-8">',
@@ -348,7 +352,8 @@ function seoAddInTag($seo_data) {
         'description' => '<meta name="description" content="%s"/>',
         'keywords' => '<meta name="keywords" content="%s"/>',
         'slug' => '<meta name="slug" content="%s"/>',
-        'canonical' => '<link rel="canonical" href="%s">'
+        'canonical' => '<link rel="canonical" href="%s">',
+        'index' => '<meta name="robots" content="index, follow">'
     ];
 
     $seo_new_structure = [];
@@ -392,12 +397,26 @@ function seoAddInContent($seo_data, $existing_content_html) {
         $canonical_url = $jsonGlobalData["url"] . $seo_data["slug"] . $jsonGlobalData["page-slug-extension"];
         $replacement_canonical = '<link rel="canonical" href="' . $canonical_url . '" />';
 
-        // Remove existing canonical tags
         $pattern_canonical = '/<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/i';
         $existing_content_html = preg_replace($pattern_canonical, '', $existing_content_html);
 
-        // Append new canonical tag
         $existing_content_html .= "\n" . $replacement_canonical;
+    }
+    if (isset($seo_data["index"])) {
+        $index_value = "Unset correctly, true/false.";
+
+        if( $seo_data["index"] == "false") {
+            $index_value = "noindex, nofollow";
+        }
+        if( $seo_data["index"] == "true") {
+            $index_value = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
+        }
+        $pattern_robots = '/<meta\s+name="robots"\s+content=".*?"\s*\/?>/i';
+        $existing_content_html = preg_replace($pattern_robots, '', $existing_content_html);
+
+        // Add the new robots meta tag
+        $replacement_robots = '<meta name="robots" content="' . $index_value . '"/>';
+        $existing_content_html .= "\n" . $replacement_robots;
     }
 
     return $existing_content_html;
@@ -489,7 +508,8 @@ function getSeoFromCurrentPageData($filename) {
                   "title" => $titleSeo,
                   "description" => $pageData["seo"]["description"],
                   "keywords" => $pageData["seo"]["keywords"],
-                  "slug" => $pageData["seo"]["slug"]
+                  "slug" => $pageData["seo"]["slug"],
+                  "index" => $pageData["seo"]["index"]
                 ];
                 return $seo;
             }

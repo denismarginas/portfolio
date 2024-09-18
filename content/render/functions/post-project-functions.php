@@ -151,13 +151,23 @@ function getCurrentPostProjectData($fileName, $json_posts) {
 
 function getSeoFromCurrentPostProjectData($postData) {
     $stringSeoSiteName = stringSeoSiteName();
+    $indexJson = getDataJson('data-content-personal', 'data')["post-projects"]["index"];
 
     if ($postData != null) {
+        $index = "true";
+        if(isset($indexJson)) {
+            $index = $indexJson;
+        }
+        if(isset($postData["index"])) {
+            $index = $postData["index"];
+        }
+
         $seo = [
             "title" => $postData["title"].$stringSeoSiteName,
             "description" => $postData["description"],
             "keywords" => $postData["media_path"],
-            "slug" => $postData["media_path"]
+            "slug" => $postData["media_path"],
+            "index" => $index
         ];
         return $seo;
     }
