@@ -40,6 +40,13 @@ usort($posts, "personalTypePostProjectSortAsc");
                 $post_path = pathinfo($post["file"], PATHINFO_FILENAME) . $jsonGlobalData["page-slug-extension"];
                 $post_data = $post["post_data"];
 
+                $has_logo = isset($post_data["logo"]) && isset($post_data["logo_path"]);
+                $has_thumbnail = isset($post_data["thumbnail"]) && isset($post_data["thumbnail_path"]);
+
+                if (!$has_logo && !$has_thumbnail) {
+                    continue;
+                }
+
                 if (
                     isset($post["post_data"]["categories"]) &&
                     in_array("Web Development Projects", $post["post_data"]["categories"]) &&

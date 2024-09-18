@@ -10807,18 +10807,20 @@ body:not([java-script=true]) .slider > .slider-container .slider-element {
 }
 .carousel-list > .carousel-item > .dm-post-item-image > .logo, .carousel-list > .carousel-item > .dm-post-item-image > svg {
   padding: var(--dm-spacing-secondary);
+  width: auto;
+  max-width: 60%;
+  height: auto;
+  max-height: 60%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .carousel-list > .carousel-item > .dm-post-item-image > .logo[data-svg-type=fill] > path, .carousel-list > .carousel-item > .dm-post-item-image > svg[data-svg-type=fill] > path {
   fill: var(--dm-color-white);
 }
 .carousel-list > .carousel-item > .dm-post-item-image > .logo[data-svg-type=stroke] > path, .carousel-list > .carousel-item > .dm-post-item-image > svg[data-svg-type=stroke] > path {
   stroke: var(--dm-color-white);
-}
-.carousel-list > .carousel-item > .dm-post-item-image > .logo:nth-child(1), .carousel-list > .carousel-item > .dm-post-item-image > svg:nth-child(1) {
-  width: auto;
-  max-width: 70%;
-  height: auto;
-  max-height: 60%;
 }
 .carousel-list > .carousel-item > .dm-post-item-image > .thumbnail {
   width: 100%;
