@@ -24712,6 +24712,10 @@ container, .container {
   display: none;
 }
 
+.page-heading {
+  display: none;
+}
+
 .theme-dark {
   --dm-link-color-primary: var( --dm-color-highlight-primary );
   background-color: var(--dm-background-color-gray-darken);

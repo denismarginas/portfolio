@@ -125,6 +125,10 @@ $jsonCategoriesData = getDataJson('data-posts-projects-categories', 'data');
     </section>
 </header>
 
+<?php if(isset($seoParam["title"]) && !empty($seoParam["title"])) :
+    echo '<h1 class="page-heading">'.$seoParam["title"].'</h1>';
+endif;?>
+
 <?php if( isset($jsonGlobalData["cookie-notice"]) ) :
     $renderer = new RendererElements();
     $renderer->renderElement("cookie-notice");

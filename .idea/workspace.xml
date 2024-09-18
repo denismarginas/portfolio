@@ -6,16 +6,9 @@
       <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/projects/denismarginas-github-portfolio/media/seo-optimization/seo-optimization.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/json/data/data-content-personal.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-content-personal.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/json/data/data-global-settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-global-settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/json/data/data-pages-seo.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-pages-seo.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/json/data/data-posts-projects.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-posts-projects.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/json/index/index-data-pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/index/index-data-pages.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/render/functions/global-functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/functions/global-functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/functions/post-project-functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/functions/post-project-functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render_structure/head.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_structure/head.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/render_structure/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_structure/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/education-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/education-experience.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employee-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/employee-experience.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/experience.html" afterDir="false" />
@@ -107,6 +100,8 @@
       <change beforePath="$PROJECT_DIR$/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/social-activity.html" beforeDir="false" afterPath="$PROJECT_DIR$/social-activity.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/summary-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/summary-experience.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/structure-design/body.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/structure-design/body.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/visual-media-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/visual-media-projects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-development-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-development-projects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/workstation.html" beforeDir="false" afterPath="$PROJECT_DIR$/workstation.html" afterDir="false" />
@@ -183,7 +178,7 @@
       <workItem from="1726468022194" duration="10550000" />
       <workItem from="1726593815120" duration="4233000" />
       <workItem from="1726646698876" duration="6108000" />
-      <workItem from="1726661017558" duration="16371000" />
+      <workItem from="1726661017558" duration="17266000" />
     </task>
     <servers />
   </component>
