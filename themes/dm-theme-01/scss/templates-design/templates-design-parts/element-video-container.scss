@@ -209,6 +209,7 @@ video {
       cursor: pointer;
       width: 100px;
       transform: scaleX(1);
+      transition: all 0.1s ease-in-out !important;
     }
   }
   > button {
@@ -223,14 +224,15 @@ video {
     }
   }
   .volume-slider {
-    width: 0;
+    width: 0px;
     transform-origin: left;
     transform: scaleX(0);
-    transition: width 150ms ease-in-out, transform 150ms ease-in-out;
+    transition: all 0.1s ease-in-out;
 
     &:focus-within {
       width: 100px;
       transform: scaleX(1);
+      transition: all 0.1s ease-in-out;
     }
   }
 }

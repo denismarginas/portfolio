@@ -7207,6 +7207,8 @@ video {
   width: 100px;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
+  -webkit-transition: all 0.1s ease-in-out !important;
+  transition: all 0.1s ease-in-out !important;
 }
 .volume-container > button .volume-high-icon {
   display: none;
@@ -7218,20 +7220,20 @@ video {
   display: none;
 }
 .volume-container .volume-slider {
-  width: 0;
+  width: 0px;
   -webkit-transform-origin: left;
           transform-origin: left;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  -webkit-transition: width 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
-  transition: width 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
-  transition: width 150ms ease-in-out, transform 150ms ease-in-out;
-  transition: width 150ms ease-in-out, transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 .volume-container .volume-slider:focus-within {
   width: 100px;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .duration-container {
