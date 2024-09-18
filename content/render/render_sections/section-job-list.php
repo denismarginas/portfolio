@@ -38,10 +38,10 @@ endif;
                                     echo "data-layout='light' data-animation='shine-gray'";
                                 endif; ?>
                             >
-                                <a href="#<?php echo strtolower(str_replace(" ", "-", $job["name"])); ?>" class="work-logo" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.3s">
+                                <a href="#<?php echo strtolower(str_replace(" ", "-", $job["name"])); ?>" class="work-logo" data-motion="transition-fade-0 transition-grow-0" data-duration="0.8s">
                                     <?php echo renderImage($GLOBALS['urlPath'].$job["img"]); ?>
                                 </a>
-                                <a href="#<?php echo strtolower(str_replace(" ", "-", $job["name"])); ?>" class="company-name" data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.4s">
+                                <a href="#<?php echo strtolower(str_replace(" ", "-", $job["name"])); ?>" class="company-name" data-motion="transition-fade-0" data-duration="1s">
                                     <span>
                                         <?php echo $job["name"]; ?>
                                     </span>

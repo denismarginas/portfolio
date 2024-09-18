@@ -944,7 +944,7 @@ body[java-script=true] [data-motion=transition-slideInBottom-1] {
   transition: all 1s;
 }
 body[java-script=true] [data-motion~=transition-blur-0],
-body[java-script=true] [data-motion=transition-blurIn-0] {
+body[java-script=true] [data-motion=transition-blur-0] {
   -webkit-filter: blur(20px);
           filter: blur(20px);
   -webkit-transition: all 1s;
@@ -954,6 +954,34 @@ body[java-script=true] [data-motion~=transition-blur-1],
 body[java-script=true] [data-motion=transition-blur-1] {
   -webkit-filter: blur(0px);
           filter: blur(0px);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+body[java-script=true] [data-motion~=transition-grow-0],
+body[java-script=true] [data-motion=transition-grow-0] {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+body[java-script=true] [data-motion~=transition-grow-1],
+body[java-script=true] [data-motion=transition-grow-1] {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+body[java-script=true] [data-motion~=transition-shrink-0],
+body[java-script=true] [data-motion=transition-shrink-0] {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+body[java-script=true] [data-motion~=transition-shrink-1],
+body[java-script=true] [data-motion=transition-shrink-1] {
+  -webkit-transform: scale(0);
+          transform: scale(0);
   -webkit-transition: all 1s;
   transition: all 1s;
 }
