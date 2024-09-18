@@ -7350,7 +7350,7 @@ body[java-script=true] .dm-toggletheme {
     --scale: 1;
   }
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 420px) {
   .video-container .video-controls-container .controls button {
     font-family: var(--dm-font-family);
     font-size: var(--dm-text-small-font-size);
@@ -7371,6 +7371,8 @@ body[java-script=true] .dm-toggletheme {
     color: var(--dm-text-small-color);
     --dm-text-small-color: var( --dm-color-white );
   }
+}
+@media only screen and (max-width: 375px) {
   .video-container .video-controls-container .volume-slider {
     -webkit-transform: rotate(270deg) scale(0);
             transform: rotate(270deg) scale(0);

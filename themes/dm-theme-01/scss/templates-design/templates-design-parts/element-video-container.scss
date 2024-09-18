@@ -364,7 +364,7 @@ $background-color_4: var( --dm-video-color-primary );
       }
     }
   }
-  @media only screen and (max-width: $screen-phone-medium) {
+  @media only screen and (max-width: $screen-phone-large) {
     .video-controls-container {
       .controls {
         button {
@@ -379,6 +379,8 @@ $background-color_4: var( --dm-video-color-primary );
       @include dm-font-small();
       --dm-text-small-color: var( --dm-color-white );
     }
+  }
+  @media only screen and (max-width: $screen-phone-medium) {
     .video-controls-container {
       .volume-slider {
         transform: rotate(270deg) scale(0);
