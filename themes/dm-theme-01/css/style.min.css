@@ -6997,6 +6997,7 @@ body[java-script=true] .dm-toggletheme {
           justify-content: center;
   margin-inline: auto;
   background-color: var(--dm-color-black);
+  container-type: inline-size;
 }
 .video-container:focus-within .video-controls-container {
   opacity: 1;
@@ -7362,6 +7363,9 @@ body[java-script=true] .dm-toggletheme {
     width: 20px;
     height: 20px;
   }
+  .video-container .video-controls-container .volume-slider {
+    width: 60px !important;
+  }
   .video-container .duration-container, .video-container .speed-btn {
     font-family: var(--dm-font-family);
     font-size: var(--dm-text-small-font-size);
@@ -7376,7 +7380,7 @@ body[java-script=true] .dm-toggletheme {
   .video-container .video-controls-container .volume-slider {
     -webkit-transform: rotate(270deg) scale(0);
             transform: rotate(270deg) scale(0);
-    width: 80px !important;
+    width: 70px !important;
     bottom: 20px;
     left: 40px;
     position: absolute;

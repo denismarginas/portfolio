@@ -16,6 +16,7 @@ $background-color_4: var( --dm-video-color-primary );
   justify-content: center;
   margin-inline: auto;
   background-color: $background-color_1;
+  container-type: inline-size;
 
   &:focus-within {
     .video-controls-container {
@@ -374,6 +375,9 @@ $background-color_4: var( --dm-video-color-primary );
           height: 20px;
         }
       }
+      .volume-slider {
+        width: 60px !important;
+      }
     }
     .duration-container, .speed-btn {
       @include dm-font-small();
@@ -384,7 +388,7 @@ $background-color_4: var( --dm-video-color-primary );
     .video-controls-container {
       .volume-slider {
         transform: rotate(270deg) scale(0);
-        width: 80px !important;
+        width: 70px !important;
         bottom: 20px;
         left: 40px;
         position: absolute;
