@@ -2433,7 +2433,8 @@
                 "presentation website",
                 "web content",
                 "web design",
-                "personal"
+                "personal",
+                "seo optimization"
             ],
             "project_collaboration": [
                 "Individual"
@@ -2468,8 +2469,9 @@
             }
         },
         "post_content": [
-            "<?php echo renderSectionWebProject($post_current_data); ?>"
-            ],
+            "<?php echo renderSectionWebProject($post_current_data); ?>",
+            "<?php echo renderImageBlockProject($post_current_data,'media/seo-optimization/', 'seo-optimization.webp'); ?>"
+        ],
         "layout": "wrapper-layout"
     },
     {

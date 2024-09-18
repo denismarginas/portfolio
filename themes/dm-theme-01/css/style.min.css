@@ -8054,6 +8054,9 @@ body:not([java-script=true]) .video-container > .show-play, body:not([java-scrip
 #post-list-sort-and-search .icon:hover {
   background-color: var(--dm-color-secondary);
 }
+#post-list-sort-and-search .icon[aria-expanded=true] {
+  background-color: var(--dm-color-secondary);
+}
 @media only screen and (max-width: 767px) {
   #post-list-sort-and-search > ul > li.advance-search > .search-input {
     -webkit-box-ordinal-group: 2;

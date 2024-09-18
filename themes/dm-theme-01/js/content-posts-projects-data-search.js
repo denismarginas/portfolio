@@ -468,8 +468,16 @@ async function fetchJson(url) {
 function togglePreviewImage() {
     const projectList = document.getElementById("post-list");
     const projects = projectList.getElementsByClassName("dm-post-item");
+    const togglePreview = document.getElementById("toggle-eye");
+    togglePreview.setAttribute('aria-expanded', "true/false");
+
+    let previewVisible = false;
 
     Array.from(projects).forEach(project => {
         project.classList.toggle("preview-image");
+        if (project.classList.contains("preview-image")) {
+            previewVisible = true;
+        }
     });
+    togglePreview.setAttribute('aria-expanded', previewVisible ? "true" : "false");
 }
