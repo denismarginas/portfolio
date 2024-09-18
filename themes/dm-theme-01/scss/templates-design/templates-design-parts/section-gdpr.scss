@@ -10,7 +10,7 @@
     @include flex-column();
     gap: var( --dm-spacing-secondary);
 
-    > h1 {
+    > h2 {
       --dm-text-heading1-font-family: var( --dm-font-family-secondary );
       margin-bottom: var( --dm-spacing-secondary);
 
@@ -30,7 +30,7 @@
 body, body.theme-light {
   .dm-gdpr {
     > container {
-      > h1 {
+      > h2 {
         --dm-text-heading1-color: var( --dm-color-gray-darken );
       }
       > h3 {
@@ -45,7 +45,7 @@ body, body.theme-light {
 body.theme-dark {
   .dm-gdpr {
     > container {
-      > h1 {
+      > h2 {
         --dm-text-heading1-color: var( --dm-color-white );
       }
       > h3 {

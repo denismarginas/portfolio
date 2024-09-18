@@ -35,13 +35,13 @@ endif;
 
                 </div>
                 <div class="dm-blog-user-details">
-                    <h1 class="dm-blog-user-name">
+                    <h2 class="dm-blog-user-name">
 
                         <?php if(isset($jsonBlogData["blog-username"])) :
                             echo $jsonBlogData["blog-username"];
                         endif; ?>
 
-                    </h1>
+                    </h2>
                     <p class="dm-blog-user-description">
 
                         <?php if(isset($jsonBlogData["blog-description"])) :

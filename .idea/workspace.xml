@@ -8,7 +8,11 @@
       <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/json/index/index-data-pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/index/index-data-pages.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/render/functions/global-functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/functions/global-functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render_structure/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_structure/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/render_index/index-html-pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_index/index-html-pages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-blog-header.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-blog-header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-gdpr.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-gdpr.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-search.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-workstation-header.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-workstation-header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/education-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/education-experience.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employee-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/employee-experience.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/experience.html" afterDir="false" />
@@ -101,7 +105,9 @@
       <change beforePath="$PROJECT_DIR$/social-activity.html" beforeDir="false" afterPath="$PROJECT_DIR$/social-activity.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/summary-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/summary-experience.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/structure-design/body.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/structure-design/body.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-gdpr.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-gdpr.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-search.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-search.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-workstation-header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-workstation-header.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/visual-media-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/visual-media-projects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-development-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-development-projects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/workstation.html" beforeDir="false" afterPath="$PROJECT_DIR$/workstation.html" afterDir="false" />
@@ -178,7 +184,7 @@
       <workItem from="1726468022194" duration="10550000" />
       <workItem from="1726593815120" duration="4233000" />
       <workItem from="1726646698876" duration="6108000" />
-      <workItem from="1726661017558" duration="17266000" />
+      <workItem from="1726661017558" duration="19343000" />
     </task>
     <servers />
   </component>

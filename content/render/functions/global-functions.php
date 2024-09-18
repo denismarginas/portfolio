@@ -379,18 +379,20 @@ function seoAddInContent($seo_data, $existing_content_html) {
         $existing_content_html = preg_replace($pattern_title, $replacement_title, $existing_content_html);
     }
     if (isset($new_seo_fields_content["description"])) {
-        $description = $new_seo_fields_content["description"];
-        if (strlen($description) > 157) {
-            $truncated_description = substr($description, 0, 157) . '...';
-        } else {
-            $truncated_description = $description;
+        preg_match('/<meta name="description" content="(.*?)"\/>/i', $new_seo_fields_content["description"], $matches);
+
+        if (isset($matches[1])) {
+            $description = $matches[1];
+
+            if (strlen($description) > 157) {
+                $description = substr($description, 0, 157) . '...';
+            }
+            $replacement_description = '<meta name="description" content="' . htmlspecialchars($description, ENT_QUOTES, 'UTF-8') . '"/>';
+            $pattern_description = '/<meta name="description" content=".*?"\/>/i';
+            $existing_content_html = preg_replace($pattern_description, $replacement_description, $existing_content_html);
         }
-
-        $pattern_description = "/<meta name=\"description\" content=\".*?\"\/>/i";
-        $replacement_description = '<meta name="description" content="' . htmlspecialchars($truncated_description, ENT_QUOTES, 'UTF-8') . '"/>';
-
-        $existing_content_html = preg_replace($pattern_description, $replacement_description, $existing_content_html);
     }
+
 
     if (isset($new_seo_fields_content["keywords"])) {
         $pattern_keywords = "/<meta name=\"keywords\" content=\".*?\"\/>/i";

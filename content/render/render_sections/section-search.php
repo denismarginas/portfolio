@@ -18,9 +18,9 @@ $theme_path = $GLOBALS['urlPath'].$jsonGlobalData["themes-path"]."/".$jsonGlobal
 <section class="dm-search-section grid-background-animation">
     <container>
         <div class="dm-search-header" data-motion="transition-fade-0">
-            <h1>
+            <h2>
                 <?php echo $jsonGlobalData["search-fields"]["title"]; ?>
-            </h1>
+            </h2>
             <form id="search" class="dm-search-bar">
                 <div class="search-input">
                     <input id="search-keywords" class="input-search" placeholder="<?php echo $jsonGlobalData["search-fields"]["button-placeholder"]; ?>">

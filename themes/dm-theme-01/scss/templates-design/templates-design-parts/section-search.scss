@@ -20,7 +20,7 @@
       padding: var( --dm-spacing-secondary );
       gap: var( --dm-spacing-primary );
 
-      > h1 {
+      > h2 {
         @include dm-font-heading1();
         --dm-text-heading1-color: var( --dm-color-white );
       }
@@ -183,7 +183,7 @@
   @media only screen and (max-width: $screen-phone-medium) {
     > container {
       > .dm-search-header {
-        > h1 {
+        > h2 {
           @include dm-font-heading3();
           --dm-text-heading3-color: var( --dm-color-white );
         }

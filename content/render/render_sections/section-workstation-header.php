@@ -14,12 +14,12 @@ endif;
     <container>
         <ul>
             <li>
-                <h1 data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.6s">
+                <h2 data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.6s">
                     <?php echo strtoupper($jsonWorkstationData["title"]); ?>
-                </h1>
-                <h2 data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.8s">
-                    <?php echo $jsonWorkstationData["setups"]["setup 1"]["title"]; ?> Setup
                 </h2>
+                <h3 data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.8s">
+                    <?php echo $jsonWorkstationData["setups"]["setup 1"]["title"]; ?> Setup
+                </h3>
                 <p data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
                     <?php echo $jsonWorkstationData["setups"]["setup 1"]["short-description"]; ?>
                 </p>

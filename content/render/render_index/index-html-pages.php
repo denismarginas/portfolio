@@ -40,7 +40,6 @@ foreach ($htmlFiles as $file) {
             }
         }
 
-
         if (empty($title) && empty($metaDescription)) {
             $log[] = "Page doesn't have meta fields: $file"; // Append message to the log array
         }
@@ -49,9 +48,7 @@ foreach ($htmlFiles as $file) {
         $bodyElement = $dom->getElementsByTagName('body')->item(0);
         extractContent($content, $bodyElement); // Call the function directly
 
-        // Remove newline characters and extra spaces
         $content = trim(preg_replace('/\s+/', ' ', $content));
-
 
         $defaultImg = '';
         $pageContentElement = $dom->getElementById('page-content');
@@ -93,7 +90,6 @@ function removeStringFromTitle($title, $string) {
     return str_replace($string, '', $title);
 }
 
-// Convert the page data array to JavaScript format
 $jsonContent = json_encode($pageData, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
 $targetDirectory = __DIR__ . '/../../../content/json/index/';

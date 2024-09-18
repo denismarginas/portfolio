@@ -16,9 +16,9 @@ endif;
         <?php if(isset($jsonGDPR)) : ?>
 
             <?php if(isset($jsonGDPR["title"])) : ?>
-                <h1>
+                <h2>
                     <?php echo $jsonGDPR["title"]; ?>
-                </h1>
+                </h2>
             <?php endif; ?>
 
             <?php if(isset($jsonGDPR["content"])) : ?>
