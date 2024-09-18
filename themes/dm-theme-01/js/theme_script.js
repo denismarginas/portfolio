@@ -393,6 +393,13 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         function toggleMute() {
             video.muted = !video.muted;
+            console.log(video.volume);
+            if(video.muted) {
+                volumeSlider.style.background = `linear-gradient(to right, var(--color-range-primary) 0%, var(--color-range-primary) 0%, transparent 0%, transparent 100%)`;
+
+            } else {
+                volumeSlider.style.background = `linear-gradient(to right, var(--color-range-primary) 0%, var(--color-range-primary) 100%, transparent 100%, transparent 100%)`;
+            }
         }
         video.addEventListener("volumechange", () => {
             volumeSlider.value = video.volume;
@@ -409,6 +416,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             videoContainer.dataset.volumeLevel = volumeLevel;
         })
+
         fullScreenBtn.addEventListener("click", toggleFullScreenMode);
         function toggleFullScreenMode() {
 
