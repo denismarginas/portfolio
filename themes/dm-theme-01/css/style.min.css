@@ -6998,9 +6998,6 @@ body[java-script=true] .dm-toggletheme {
   margin-inline: auto;
   background-color: var(--dm-color-black);
 }
-.video-container:hover .video-controls-container {
-  opacity: 1;
-}
 .video-container:focus-within .video-controls-container {
   opacity: 1;
 }
@@ -7092,7 +7089,6 @@ body[java-script=true] .dm-toggletheme {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-
 .video-container.full-screen {
   max-width: initial;
   width: 100%;
@@ -7101,63 +7097,15 @@ body[java-script=true] .dm-toggletheme {
 .video-container.full-screen .open {
   display: none;
 }
-
-video {
-  width: 100%;
+.video-container.scrubbing .timeline {
+  height: 100%;
 }
-
-.video-controls-container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  color: var(--dm-color-white);
-  z-index: 100;
-  opacity: 0;
-  -webkit-transition: opacity 150ms ease-in-out;
-  transition: opacity 150ms ease-in-out;
+.video-container.scrubbing .timeline::before {
+  display: block;
 }
-.video-controls-container::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(transparent));
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
-  width: 100%;
-  aspect-ratio: 6/1;
-  z-index: -1;
-  pointer-events: none;
+.video-container.scrubbing .thumb-indicator {
+  --scale: 1;
 }
-.video-controls-container .controls {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  padding: 0.25rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.video-controls-container .controls button {
-  background: none;
-  border: none;
-  color: inherit;
-  padding: 0;
-  height: 30px;
-  width: 30px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  opacity: 0.85;
-  -webkit-transition: opacity 150ms ease-in-out;
-  transition: opacity 150ms ease-in-out;
-}
-.video-controls-container .controls button:hover {
-  opacity: 1;
-}
-.video-controls-container .controls button.wide-btn {
-  width: 50px;
-}
-
 .video-container.paused {
   cursor: pointer;
 }
@@ -7181,62 +7129,58 @@ video {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-
-.video-container[data-volume-level=high] .volume-high-icon {
-  display: block;
+.video-container .video-controls-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: var(--dm-color-white);
+  z-index: 100;
+  opacity: 0;
+  -webkit-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
 }
-
-.video-container[data-volume-level=low] .volume-low-icon {
-  display: block;
+.video-container .video-controls-container::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(transparent));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+  width: 100%;
+  aspect-ratio: 6/1;
+  z-index: -1;
+  pointer-events: none;
 }
-
-.video-container[data-volume-level=muted] .volume-muted-icon {
-  display: block;
-}
-
-.volume-container {
+.video-container .video-controls-container .controls {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 0.5rem;
+  padding: 0.25rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-.volume-container:hover .volume-slider {
+.video-container .video-controls-container .controls button {
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  font-size: 1.1rem;
   cursor: pointer;
-  width: 100px;
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transition: all 0.1s ease-in-out !important;
-  transition: all 0.1s ease-in-out !important;
+  opacity: 0.85;
+  -webkit-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
 }
-.volume-container > button .volume-high-icon {
-  display: none;
+.video-container .video-controls-container .controls button:hover {
+  opacity: 1;
 }
-.volume-container > button .volume-low-icon {
-  display: none;
+.video-container .video-controls-container .controls button.wide-btn {
+  width: 50px;
 }
-.volume-container > button .volume-muted-icon {
-  display: none;
-}
-.volume-container .volume-slider {
-  width: 0px;
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-}
-.volume-container .volume-slider:focus-within {
-  width: 100px;
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-}
-
-.duration-container {
+.video-container .duration-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7248,8 +7192,7 @@ video {
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
-
-.timeline-container {
+.video-container .timeline-container {
   padding: 4px 0px;
   height: 7px;
   margin-inline: 0.5rem;
@@ -7261,26 +7204,25 @@ video {
       -ms-flex-align: center;
           align-items: center;
 }
-.timeline-container:hover .preview-img {
+.video-container .timeline-container:hover .preview-img {
   display: block;
 }
-.timeline-container:hover .timeline {
+.video-container .timeline-container:hover .timeline {
   height: 100%;
 }
-.timeline-container:hover .timeline::before {
+.video-container .timeline-container:hover .timeline::before {
   display: block;
 }
-.timeline-container:hover .thumb-indicator {
+.video-container .timeline-container:hover .thumb-indicator {
   --scale: 1;
 }
-
-.timeline {
+.video-container .timeline {
   background-color: rgba(100, 100, 100, 0.5);
   height: 3px;
   width: 100%;
   position: relative;
 }
-.timeline::before {
+.video-container .timeline::before {
   content: "";
   position: absolute;
   left: 0;
@@ -7290,7 +7232,7 @@ video {
   background-color: rgb(150, 150, 150);
   display: none;
 }
-.timeline::after {
+.video-container .timeline::after {
   content: "";
   position: absolute;
   left: 0;
@@ -7299,7 +7241,7 @@ video {
   right: calc(100% - var(--progress-position) * 100%);
   background-color: var(--dm-video-color-primary);
 }
-.timeline .thumb-indicator {
+.video-container .timeline .thumb-indicator {
   --scale: 0;
   position: absolute;
   -webkit-transform: translateX(-50%) scale(var(--scale));
@@ -7315,15 +7257,61 @@ video {
   transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
   aspect-ratio: 1/1;
 }
-
-.video-container.scrubbing .timeline {
-  height: 100%;
+.video-container video {
+  width: 100%;
 }
-.video-container.scrubbing .timeline::before {
+.video-container .volume-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.video-container .volume-container:hover .volume-slider {
+  cursor: pointer;
+  width: 100px;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: all 0.1s ease-in-out !important;
+  transition: all 0.1s ease-in-out !important;
+}
+.video-container .volume-container > button .volume-high-icon {
+  display: none;
+}
+.video-container .volume-container > button .volume-low-icon {
+  display: none;
+}
+.video-container .volume-container > button .volume-muted-icon {
+  display: none;
+}
+.video-container .volume-container .volume-slider {
+  width: 0px;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.video-container .volume-container .volume-slider:focus-within {
+  width: 100px;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.video-container[data-volume-level=high] .volume-container > button .volume-high-icon {
   display: block;
 }
-.video-container.scrubbing .thumb-indicator {
-  --scale: 1;
+.video-container[data-volume-level=low] .volume-container > button .volume-low-icon {
+  display: block;
+}
+.video-container[data-volume-level=muted] .volume-container > button .volume-muted-icon {
+  display: block;
+}
+.video-container:hover .video-controls-container {
+  opacity: 1 !important;
 }
 
 body:not([java-script=true]) .video-container > .thumbnail {
