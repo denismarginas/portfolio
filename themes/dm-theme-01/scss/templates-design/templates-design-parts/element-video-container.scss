@@ -57,6 +57,7 @@ $background-color_4: var( --dm-video-color-primary );
     background-size: cover;
     overflow: hidden;
     cursor: pointer;
+    z-index: 101;
 
     > img {
       position: absolute;
@@ -86,6 +87,7 @@ $background-color_4: var( --dm-video-color-primary );
     opacity: 0.2;
     transition: all 0.3s ease;
     filter: drop-shadow(2px 4px 1px #00000094);
+    z-index: 102;
 
     > svg {
       width: 100px;
@@ -165,6 +167,8 @@ $background-color_4: var( --dm-video-color-primary );
       gap: .5rem;
       padding: .25rem;
       align-items: center;
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
 
       button {
         background: none;
@@ -326,18 +330,28 @@ $background-color_4: var( --dm-video-color-primary );
   }
 
   @media only screen and (max-width: $screen-tablet-small) {
-    &:hover {
+    &:hover, &:focus-within {
       .timeline {
         height: 7px;
       }
+      .video-controls-container {
+        opacity: 1;
+        display: flex;
+
+        > .controls {
+          opacity: 1;
+          transition: all 0.2s ease-in-out;
+        }
+      }
     }
-    &:not(:hover), &:not(:focus), &:not(:focus-within) {
+    &:not(:hover) {
       .video-controls-container {
         opacity: 1;
         display: none;
 
         > .controls {
           opacity: 0;
+          transition: all 0.2s ease-in-out;
         }
       }
       .timeline {
@@ -365,14 +379,19 @@ $background-color_4: var( --dm-video-color-primary );
       @include dm-font-small();
       --dm-text-small-color: var( --dm-color-white );
     }
-    .volume-container, .volume-container:hover, .volume-container:focus-within {
+    .video-controls-container {
       .volume-slider {
-        width: 60px;
-        transform: rotate(270deg) scale(1.5);
+        transform: rotate(270deg) scale(0);
+        width: 80px !important;
         bottom: 20px;
         left: 40px;
         position: absolute;
-        box-shadow: inset 10px 10px 0px rgba( var( --dm-color-black-rgb ), 0.6 );
+        box-shadow: inset 10px 10px 0px rgba( var( --dm-color-black-rgb ), 0.2 );
+      }
+    }
+    .video-controls-container:hover, .video-controls-container:focus-within {
+      .volume-slider {
+        transform: rotate(270deg) scale(1);
       }
     }
   }
