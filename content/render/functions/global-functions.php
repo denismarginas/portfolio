@@ -374,7 +374,7 @@ function seoAddInContent($seo_data, $existing_content_html) {
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
 
     if (isset($new_seo_fields_content["title"])) {
-        $pattern_title = "/<title>.*<\/title>/i"; // Case-insensitive regex pattern
+        $pattern_title = "/<title>.*<\/title>/i";
         $replacement_title = $new_seo_fields_content["title"];
         $existing_content_html = preg_replace($pattern_title, $replacement_title, $existing_content_html);
     }

@@ -8036,7 +8036,7 @@ body:not([java-script=true]) .video-container > .show-play, body:not([java-scrip
   border-radius: var(--dm-border-radius-primary);
   padding: 6px 12px;
   border: 2px solid var(--dm-color-white);
-  background-color: var(--dm-color-primary);
+  background-color: rgba(var(--dm-color-primary-rgb), 1);
 }
 #post-list-sort-and-search .icon > svg {
   height: 16px;
@@ -8052,10 +8052,10 @@ body:not([java-script=true]) .video-container > .show-play, body:not([java-scrip
   stroke: var(--dm-color-white);
 }
 #post-list-sort-and-search .icon:hover {
-  background-color: var(--dm-color-secondary);
+  background-color: rgba(var(--dm-color-gray-darken-rgb), 0.2);
 }
 #post-list-sort-and-search .icon[aria-expanded=true] {
-  background-color: var(--dm-color-secondary);
+  background-color: rgba(var(--dm-color-gray-darken-rgb), 0.5);
 }
 @media only screen and (max-width: 767px) {
   #post-list-sort-and-search > ul > li.advance-search > .search-input {

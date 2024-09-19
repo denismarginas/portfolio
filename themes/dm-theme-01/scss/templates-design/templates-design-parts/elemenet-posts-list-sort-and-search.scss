@@ -140,7 +140,7 @@
     @include border-radius( var( --dm-border-radius-primary ) );
     padding: 6px 12px;
     border: 2px solid var( --dm-color-white );
-    background-color: var( --dm-color-primary );
+    background-color: rgba(var( --dm-color-primary-rgb ), 1);
 
     > svg {
       @include fix-height(16px);
@@ -149,10 +149,10 @@
       @include svg-color( var( --dm-color-white ) );
     }
     &:hover {
-      background-color: var( --dm-color-secondary );
+      background-color: rgba(var( --dm-color-gray-darken-rgb ), 0.2);
     }
     &[aria-expanded="true"] {
-      background-color: var( --dm-color-secondary );
+      background-color: rgba(var( --dm-color-gray-darken-rgb ), 0.5);
     }
   }
   @media only screen and (max-width: $screen-tablet-medium) {
