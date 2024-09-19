@@ -105,7 +105,6 @@
 
             > a {
               @include flex-row;
-              @include limit-line-text(1);
               gap: 4px;
               background-color: var( --blog-color-primary );
               padding: calc( var( --dm-spacing-primary ) / 3 ) calc( var( --dm-spacing-primary )  );
@@ -123,10 +122,11 @@
                 margin: 0;
               }
               > span {
+                @include limit-line-text(1);
                 @include dm-font-small();
                 --dm-text-small-color: var( --dm-color-white );
                 --dm-text-small-font-weight: 600;
-                --dm-text-small-line-height: 200%;
+                --dm-text-small-line-height: 150%;
               }
               &:hover {
                 background-color: transparent !important;
