@@ -143,16 +143,20 @@
     background-color: rgba(var( --dm-color-primary-rgb ), 1);
 
     > svg {
+      @include svg-color( rgba( var( --dm-color-white-rgb ), 1 ) );
       @include fix-height(16px);
       width: auto;
       max-width: 100%;
-      @include svg-color( var( --dm-color-white ) );
     }
     &:hover {
       background-color: rgba(var( --dm-color-gray-darken-rgb ), 0.2);
     }
     &[aria-expanded="true"] {
       background-color: rgba(var( --dm-color-gray-darken-rgb ), 0.5);
+
+      > svg {
+        @include svg-color( rgba( var( --dm-color-white-rgb ), 0.8 ) );
+      }
     }
   }
   @media only screen and (max-width: $screen-tablet-medium) {

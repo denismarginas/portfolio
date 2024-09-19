@@ -8046,16 +8046,22 @@ body:not([java-script=true]) .video-container > .show-play, body:not([java-scrip
   max-width: 100%;
 }
 #post-list-sort-and-search .icon > svg[data-svg-type=fill] > path {
-  fill: var(--dm-color-white);
+  fill: rgba(var(--dm-color-white-rgb), 1);
 }
 #post-list-sort-and-search .icon > svg[data-svg-type=stroke] > path {
-  stroke: var(--dm-color-white);
+  stroke: rgba(var(--dm-color-white-rgb), 1);
 }
 #post-list-sort-and-search .icon:hover {
   background-color: rgba(var(--dm-color-gray-darken-rgb), 0.2);
 }
 #post-list-sort-and-search .icon[aria-expanded=true] {
   background-color: rgba(var(--dm-color-gray-darken-rgb), 0.5);
+}
+#post-list-sort-and-search .icon[aria-expanded=true] > svg[data-svg-type=fill] > path {
+  fill: rgba(var(--dm-color-white-rgb), 0.8);
+}
+#post-list-sort-and-search .icon[aria-expanded=true] > svg[data-svg-type=stroke] > path {
+  stroke: rgba(var(--dm-color-white-rgb), 0.8);
 }
 @media only screen and (max-width: 767px) {
   #post-list-sort-and-search > ul > li.advance-search > .search-input {
