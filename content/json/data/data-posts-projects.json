@@ -5399,6 +5399,8 @@
             "logo": "logo/logo.png",
             "logo_path": "tndc",
             "logo_type": "png",
+            "thumbnail": "thumbnail/thumbnail.webp",
+            "thumbnail_path": "promotionalcampaignstndc",
             "description": "In collaboration with TNDC, I developed two website pages, each dedicated to a promotional campaign for Snickers and Orbit (promotiiorbit.ro and promotiiorbit.ro/choco). These pages feature custom PHP form scripts enabling users to register in a database by submitting participant data and an image of the product invoice. The PHP form is time-restricted, allowing customers to participate only during the promotion period. After the promotion concludes, the form is automatically disabled, and I manually update the pages with the winners. For design, I utilized Elementor as the page builder, complemented by custom CSS, HTML, and JS codes to enhance the overall user experience.",
             "categories": [
                 "Web Development Projects",

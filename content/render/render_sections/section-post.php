@@ -86,6 +86,11 @@ endif;
                     <?php else : ?>
                         <?php echo renderImage($logo, false, false, true, ["alt" => "Post Logo - ".$post_data["title"], "data-motion" => "transition-fade-0 transition-blur-0 transition-slideInBottom-0", "data-duration" => "0.8s"]); ?>
                     <?php endif; ?>
+
+                    <?php if (isset($post_data["thumbnail"]) && isset($post_data["thumbnail_path"])) :
+                        $thumbnail = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["thumbnail_path"]."/".$post_data["thumbnail"];
+                        echo renderImage($thumbnail, false, "thumbnail-overlay-for-logo", true, ["alt" => "Post Thumbnail - ".$post_data["title"]]);
+                    endif; ?>
                 </div>
 
             <?php elseif (isset($post_data["thumbnail"]) && isset($post_data["thumbnail_path"])) : ?>
