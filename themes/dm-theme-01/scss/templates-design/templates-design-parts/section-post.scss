@@ -611,6 +611,11 @@ body, body.theme-light {
         .dm-post-title-category {
           border: 1px solid rgba(var(--dm-color-gray-rgb), 0.2);
         }
+        > .dm-post-details-grid {
+          > .dm-post-logo-details {
+            border: 1px solid rgba(var(--dm-color-gray-rgb), 0.2);
+          }
+        }
       }
     }
   }
@@ -701,6 +706,11 @@ body.theme-dark {
         }
         .dm-post-title-category {
           border: 1px solid rgba(var(--dm-color-white-rgb), 0.2);
+        }
+        > .dm-post-details-grid {
+          > .dm-post-logo-details {
+            border: 1px solid rgba(var(--dm-color-white-rgb), 0.2);
+          }
         }
       }
     }
