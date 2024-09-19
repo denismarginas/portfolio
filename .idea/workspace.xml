@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2259709f-b699-4482-a363-da52decd52d5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-post.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-post.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-workstation-video.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-workstation-video.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +81,7 @@
       <workItem from="1726735561637" duration="720000" />
       <workItem from="1726743669034" duration="306000" />
       <workItem from="1726744199439" duration="302000" />
-      <workItem from="1726746252218" duration="189000" />
+      <workItem from="1726746252218" duration="400000" />
     </task>
     <servers />
   </component>

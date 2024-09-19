@@ -20,7 +20,7 @@ $videoData = $jsonWorkstationData["setups"]["setup 1"]["videos"]["full-setup"];
     <container>
         <ul class="video-workstation">
             <li data-motion="transition-fade-0 transition-slideInRight-0">
-                <h2><?php echo $videoData["title"]; ?></h2>
+                <h3><?php echo $videoData["title"]; ?></h3>
                 <p></p>
                 <?php echo $videoData["description"]; ?>
             </li>
