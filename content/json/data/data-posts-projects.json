@@ -5185,7 +5185,8 @@
                 "date_end": "04.2021"
             },
             "tags": [
-                "web"
+                "web",
+                "media-web"
             ],
             "colors": {
                 "post_color_primary": "#cb432a",
