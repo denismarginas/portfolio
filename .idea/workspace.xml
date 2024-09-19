@@ -7,12 +7,7 @@
       <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/json/index/index-data-pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/index/index-data-pages.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/functions/global-functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/functions/global-functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/render/render_index/index-html-pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_index/index-html-pages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-blog-header.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-blog-header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-gdpr.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-gdpr.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-search.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-search.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-workstation-header.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-workstation-header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/education-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/education-experience.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employee-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/employee-experience.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/experience.html" afterDir="false" />
@@ -104,10 +99,6 @@
       <change beforePath="$PROJECT_DIR$/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/social-activity.html" beforeDir="false" afterPath="$PROJECT_DIR$/social-activity.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/summary-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/summary-experience.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-gdpr.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-gdpr.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-search.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-search.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-workstation-header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-workstation-header.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/visual-media-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/visual-media-projects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-development-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-development-projects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/workstation.html" beforeDir="false" afterPath="$PROJECT_DIR$/workstation.html" afterDir="false" />
@@ -132,23 +123,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp-php8.1/htdocs/portfolio/themes/dm-theme-01/scss/templates-design/templates-design-parts&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/xampp-php8.1/htdocs/portfolio/content/render/render_index",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp-php8.1\htdocs\portfolio\content\render\render_index" />
       <recent name="C:\xampp-php8.1\htdocs\portfolio\themes\dm-theme-01\scss\templates-design\templates-design-parts" />
       <recent name="C:\xampp-php8.1\htdocs\portfolio\content\render\render_sections" />
       <recent name="C:\xampp-php8.1\htdocs\portfolio\content\render\render_elements" />
       <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\themes\dm-theme-01\scss\templates-design\templates-design-parts" />
-      <recent name="C:\xampp-php8.1\htdocs\personal-portfolio\content\render\render_bulk" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -184,7 +175,7 @@
       <workItem from="1726468022194" duration="10550000" />
       <workItem from="1726593815120" duration="4233000" />
       <workItem from="1726646698876" duration="6108000" />
-      <workItem from="1726661017558" duration="19343000" />
+      <workItem from="1726661017558" duration="20583000" />
     </task>
     <servers />
   </component>

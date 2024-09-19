@@ -9,10 +9,8 @@ $projectPath = __DIR__ . '/../../../';
 $pagesDirectory = $projectPath. $jsonGlobalData["theme-active"]["html-render-path"] ?? "content/pages/";
 $thumbnailDirectory = $pagesDirectory. '/content/img/thumbnails-pages/';
 
-// Create an array to store page data
 $pageData = [];
 
-// Get all HTML files in the pages directory
 $htmlFiles = scandir($pagesDirectory);
 
 foreach ($htmlFiles as $file) {
@@ -25,7 +23,6 @@ foreach ($htmlFiles as $file) {
         $title = '';
         $metaDescription = '';
 
-        // Extract title
         $titleElement = $dom->getElementsByTagName('title')->item(0);
 
         if ($titleElement) {
@@ -41,7 +38,7 @@ foreach ($htmlFiles as $file) {
         }
 
         if (empty($title) && empty($metaDescription)) {
-            $log[] = "Page doesn't have meta fields: $file"; // Append message to the log array
+            $log[] = "Page doesn't have meta fields: $file";
         }
 
         $content = '';
