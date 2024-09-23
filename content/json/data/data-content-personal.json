@@ -164,22 +164,26 @@
 				{
 					"name": "name",
 					"type": "text",
-					"placeholder": "Name"
+					"placeholder": "Name",
+					"field-name-extern": "entry.372576771"
 				},
 				{
 					"name": "email",
 					"type": "text",
-					"placeholder": "Email"
+					"placeholder": "Email",
+					"field-name-extern": "entry.1216480420"
 				},
 				{
 					"name": "phone",
 					"type": "text",
-					"placeholder": "Phone Number"
+					"placeholder": "Phone Number",
+					"field-name-extern": "entry.839463599"
 				},
 				{
 					"name": "message",
 					"type": "textarea",
-					"placeholder": "Message"
+					"placeholder": "Message",
+					"field-name-extern": "entry.401433199"
 				},
 				{
 					"name": "dm-form-button",
@@ -187,7 +191,8 @@
 					"value": "Submit"
 				}
 			],
-			"external-form-url": "https://docs.google.com/forms/d/e/1FAIpQLSdkMKYQyLa4H7yxU7RMUK97urwK5LMvbk-dFs9-wKpCRCO_Ng/viewform"
+			"external-form-url": "https://docs.google.com/forms/d/e/1FAIpQLSdkMKYQyLa4H7yxU7RMUK97urwK5LMvbk-dFs9-wKpCRCO_Ng/viewform",
+			"external-form-type": "google-forms"
 		},
 		"menu": {
 			"title": "Contact",

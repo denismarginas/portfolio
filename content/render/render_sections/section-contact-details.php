@@ -27,25 +27,34 @@ endif;
 
                         <?php if(isset($jsonContactForm["fields"])) : ?>
                             <form id="dm-form" target="_self"
-
                               <?php if( $jsonContactForm["external-form-url"] ) : ?>
                                 data-external-form-url="<?php echo $jsonContactForm["external-form-url"]; ?>"
+                                onsubmit="return contact_form_exec();"
                               <?php endif; ?>
-                                  onsubmit="return contact_form_exec();"
-                                  action="" autocomplete="off" crossorigin="anonymous">
+                              <?php if( $jsonContactForm["external-form-type"] ) : ?>
+                                  data-external-form-type="<?php echo $jsonContactForm["external-form-type"]; ?>"
+                              <?php endif; ?>
+                                action="" autocomplete="off" crossorigin="anonymous">
 
                                 <?php $contact_form_fields = $jsonContactForm["fields"];?>
                                 <?php foreach ($contact_form_fields as $contact_form_field) : ?>
 
                                     <?php if($contact_form_field["type"] == "text" || $contact_form_field["type"] == "input") : ?>
-                                        <input id="<?php echo $contact_form_field["name"]; ?>" type="text" name="<?php echo $contact_form_field["name"]; ?>" placeholder="<?php echo $contact_form_field["placeholder"]; ?>" value="">
-
+                                        <input id="<?php echo $contact_form_field["name"]; ?>" type="text" name="<?php echo $contact_form_field["name"]; ?>" placeholder="<?php echo $contact_form_field["placeholder"]; ?>" value=""
+                                            <?php if(isset($contact_form_field["field-name-extern"]) && !empty(isset($contact_form_field["field-name-extern"]))) :
+                                                echo 'field-name-extern="'.$contact_form_field["field-name-extern"].'"';
+                                            endif;?>
+                                        >
                                     <?php elseif($contact_form_field["type"] == "message" || $contact_form_field["type"] == "textarea") : ?>
-                                        <textarea id="<?php echo $contact_form_field["name"]; ?>" type="text" name="<?php echo $contact_form_field["name"]; ?>" placeholder="<?php echo $contact_form_field["placeholder"]; ?>" value=""></textarea>
+                                        <textarea id="<?php echo $contact_form_field["name"]; ?>" type="text" name="<?php echo $contact_form_field["name"]; ?>" placeholder="<?php echo $contact_form_field["placeholder"]; ?>" value=""
+                                            <?php if(isset($contact_form_field["field-name-extern"]) && !empty(isset($contact_form_field["field-name-extern"]))) :
+                                                echo 'field-name-extern="'.$contact_form_field["field-name-extern"].'"';
+                                            endif;?>
+                                        ></textarea>
 
                                     <?php elseif($contact_form_field["type"] == "send" || $contact_form_field["type"] == "submit") : ?>
                                         <div>
-                                            <button class="form-submit" id="<?php echo $contact_form_field["name"]; ?>" data-button="primary" data-sitekey="" data-callback='onSubmit' data-action='submit' type="submit">
+                                            <button class="form-submit" id="<?php echo $contact_form_field["name"]; ?>" data-button="primary" data-callback='onSubmit' data-action='submit' type="submit">
                                                 <?php echo $contact_form_field["value"]; ?>
                                             </button>
 
