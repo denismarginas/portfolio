@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2259709f-b699-4482-a363-da52decd52d5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-workstation-video.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-workstation-video.php" afterDir="false" />
-    </list>
+    <list default="true" id="2259709f-b699-4482-a363-da52decd52d5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,6 +80,7 @@
       <workItem from="1726743669034" duration="306000" />
       <workItem from="1726744199439" duration="302000" />
       <workItem from="1726746252218" duration="400000" />
+      <workItem from="1727074952059" duration="4459000" />
     </task>
     <servers />
   </component>

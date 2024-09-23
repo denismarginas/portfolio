@@ -32,7 +32,7 @@ endif;
 
             <?php $i = 1; foreach ($about_text_list as $about_text_item) : ?>
                 <p data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.7s">
-                    <?php echo $about_text_item; ?>
+                    <?php echo executePhpInString($about_text_item); ?>
                 </p>
                 <?php if( $layout == "compress" ) : ?>
 

@@ -1,10 +1,11 @@
 {
 	"about": {
 		"title": "About Me",
+		"birth-date": "09/09/1997",
 		"text": [
-			"My name is Denis Ionuț Mărginaș, I'm 26-year-old, and I've been working as a full-stack web developer and photo-video editor since 2019. Before entering the web development field, I worked as a freelance video editor, specializing in editing videos for video games. After completing my university studies in Mathematics and Informatics, I shifted my focus to web development and began pursuing a career in that field.",
-			"In 2019, I joined Pia Soft Product as a web developer and video-photo editor. During my time there, I worked on various tasks, including creating presentation websites and online shops using platforms like WordPress and Prestashop. I also handled SEO optimization, website and host maintenance, customer communication, and designing banners, logos, and video advertisements. Working independently on my tasks, I took the initiative to learn from scratch, except for my prior experience in video editing. Additionally, I developed web applications using PHP, TPL, SQL, JavaScript, jQuery, HTML, CSS, and more.",
-			"Towards the end of 2021, I transitioned to working full time at Netex Romania, where I was hired as a front-end developer. My responsibilities involved maintaining multiple WordPress websites and working on web design projects. The web design aspect was particularly challenging as I received templates and page sections in formats, similar to Figma projects, and had to recreate them as static web pages using HTML, SASS, Node.js, Bootstrap, JavaScript, and jQuery. Initially, I worked independently on my part of the project, but later collaborated with a colleague who joined to assist with the same project. During this time, I gained valuable experience with the GitLab platform, learned Git commands, and improved my teamwork skills."
+			"My name is Denis Ionuț Mărginaș, I'm <?php echo calculatePersonAge(); ?> years old, and I have experience as a full-stack web developer. With my education in Mathematics and Informatics, I am passionate about technology and creativity, continuously seeking to expand my skills and expertise in web development.",
+			"Before entering the web development industry, I spent my free time focused on video editing, specifically for video games. I am passionate about cinematic executions and angles in video editing, and this interest led to some freelance opportunities, where I honed my skills. Eventually, I shifted my focus to web development, which has since become my main area of expertise. In my free time, I enjoy building computer hardware, playing video games, cycling, and playing tennis.",
+			"In the future, I aim to continue growing as a developer, stay updated with the latest technologies, and make a significant impact in the tech industry. When I’m not coding, I enjoy gaming and exploring new technologies that inspire my work."
 		],
 		"buttons": [
 			{
@@ -274,6 +275,11 @@
 	},
 	"experience": {
 		"title": "Experience",
+		"text": [
+			"Before entering the web development field, I worked as a freelance video editor, specializing in editing videos for video games. After completing my university studies in Mathematics and Informatics, I shifted my focus to web development and began pursuing a career in that field.",
+			"In 2019, I joined Pia Soft Product as a web developer and video-photo editor. During my time there, I worked on various tasks, including creating presentation websites and online shops using platforms like WordPress and Prestashop. I also handled SEO optimization, website and host maintenance, customer communication, and designing banners, logos, and video advertisements. Working independently on my tasks, I took the initiative to learn from scratch, except for my prior experience in video editing. Additionally, I developed web applications using PHP, TPL, SQL, JavaScript, jQuery, HTML, CSS, and more.",
+			"Towards the end of 2021, I transitioned to working full time at Netex Romania, where I was hired as a front-end developer. My responsibilities involved maintaining multiple WordPress websites and working on web design projects. The web design aspect was particularly challenging as I received templates and page sections in formats, similar to Figma projects, and had to recreate them as static web pages using HTML, SASS, Node.js, Bootstrap, JavaScript, and jQuery. Initially, I worked independently on my part of the project, but later collaborated with a colleague who joined to assist with the same project. During this time, I gained valuable experience with the GitLab platform, learned Git commands, and improved my teamwork skills."
+		],
 		"img": "dm-personal-image-0.webp",
 		"img-path": "/personal-images/",
 		"knowledge-lists-text": {

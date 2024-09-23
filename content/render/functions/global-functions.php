@@ -469,7 +469,6 @@ function getDataJson($jsonFileName, $jsonFilePathFolder = null, $extractRowNumbe
 
         $jsonFilePath = __DIR__ . $jsonFolderPath . $jsonFileName;
 
-        // Check if the file exists
         if (!file_exists($jsonFilePath)) {
             throw new RuntimeException("File not found: $jsonFilePath");
         }
@@ -598,6 +597,19 @@ function calculateDaysWorkedInMonth($currentDate, $jobs) {
     }
 
     return $daysWorked;
+}
+function calculatePersonAge(): int {
+    $birthDate = getDataJson('data-content-personal', 'data')["about"]["birth-date"];
+    $age = 0;
+
+    if (isset($birthDate) && !empty($birthDate)) {
+        $birthDateObj = new DateTime($birthDate);
+        $currentDate = new DateTime();
+        $ageInterval = $currentDate->diff($birthDateObj);
+        $age = $ageInterval->y;
+    }
+
+    return $age;
 }
 
 ?>

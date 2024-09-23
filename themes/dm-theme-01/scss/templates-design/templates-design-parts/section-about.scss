@@ -44,7 +44,7 @@
           clip-path: polygon(0 0, 100% 28%, 100% 80%, 0 100%);
         }
       }
-      &:last-of-type {
+      &:not(:first-of-type) {
         width: 60%;
         display: grid;
         gap: var( --dm-spacing-secondary );

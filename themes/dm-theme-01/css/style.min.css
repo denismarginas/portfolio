@@ -15673,13 +15673,13 @@ body.theme-dark .dm-resume-data > container > ul > li:last-of-type > div > p {
   background-image: linear-gradient(var(--dm-background-color-secondary), var(--dm-background-color-primary) 20%, var(--dm-background-color-secondary) 170%);
   clip-path: polygon(0 0, 100% 28%, 100% 80%, 0 100%);
 }
-.dm-about > container > div:last-of-type {
+.dm-about > container > div:not(:first-of-type) {
   width: 60%;
   display: -ms-grid;
   display: grid;
   gap: var(--dm-spacing-secondary);
 }
-.dm-about > container > div:last-of-type > h2 {
+.dm-about > container > div:not(:first-of-type) > h2 {
   font-family: var(--dm-text-heading1-font-family);
   font-size: var(--dm-text-heading1-font-size);
   font-style: var(--dm-text-heading1-font-style);
@@ -15689,7 +15689,7 @@ body.theme-dark .dm-resume-data > container > ul > li:last-of-type > div > p {
   color: var(--dm-text-heading1-color);
   --dm-text-heading1-font-family: var(--dm-font-family-secondary);
 }
-.dm-about > container > div:last-of-type > h2:after {
+.dm-about > container > div:not(:first-of-type) > h2:after {
   position: relative;
   display: block;
   content: "";
@@ -15712,12 +15712,12 @@ body.theme-dark .dm-resume-data > container > ul > li:last-of-type > div > p {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
-.dm-about > container > div:last-of-type > h2:hover:after {
+.dm-about > container > div:not(:first-of-type) > h2:hover:after {
   max-width: var(--dm-spacing-medium);
   -webkit-transition: max-width 0.3s;
   transition: max-width 0.3s;
 }
-.dm-about > container > div:last-of-type p {
+.dm-about > container > div:not(:first-of-type) p {
   font-family: var(--dm-font-family);
   font-size: var(--dm-text-default-font-size);
   font-style: var(--dm-text-default-font-style);
@@ -15726,15 +15726,15 @@ body.theme-dark .dm-resume-data > container > ul > li:last-of-type > div > p {
   color: var(--dm-text-default-color);
   word-break: break-word;
 }
-.dm-about > container > div:last-of-type p:nth-of-type(1) {
+.dm-about > container > div:not(:first-of-type) p:nth-of-type(1) {
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
-.dm-about > container > div:last-of-type p:nth-of-type(2) {
+.dm-about > container > div:not(:first-of-type) p:nth-of-type(2) {
   -webkit-transition-delay: 0.1s;
           transition-delay: 0.1s;
 }
-.dm-about > container > div:last-of-type p:nth-of-type(3) {
+.dm-about > container > div:not(:first-of-type) p:nth-of-type(3) {
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
 }
@@ -16593,7 +16593,11 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   --dm-text-heading6-color: var( --dm-color-black );
 }
 
-.dm-experience-knowledge > container > div:first-of-type {
+.dm-experience-knowledge > container {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.dm-experience-knowledge > container .person-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16603,22 +16607,26 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: calc(40% - var(--dm-spacing-large)) !important;
 }
-.dm-experience-knowledge > container > div:first-of-type > img {
+.dm-experience-knowledge > container .person-image > img {
   width: auto;
   max-width: 100%;
   height: 600px;
-  clip-path: none;
+  clip-path: none !important;
 }
-.dm-experience-knowledge > container > div:first-of-type > svg {
+.dm-experience-knowledge > container .person-image > svg {
   max-width: 100%;
 }
-.dm-experience-knowledge > container > div:last-of-type > ul {
+.dm-experience-knowledge > container .experience-knowledge {
+  width: 60% !important;
+}
+.dm-experience-knowledge > container .experience-knowledge > ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
-.dm-experience-knowledge > container > div:last-of-type > ul > li {
+.dm-experience-knowledge > container .experience-knowledge > ul > li {
   font-family: var(--dm-font-family);
   font-size: var(--dm-text-medium-font-size);
   font-style: var(--dm-text-medium-font-style);
@@ -16626,7 +16634,7 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   line-height: var(--dm-text-medium-line-height);
   color: var(--dm-text-medium-color);
 }
-.dm-experience-knowledge > container > div:last-of-type > .buttons {
+.dm-experience-knowledge > container .experience-knowledge > .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16638,7 +16646,7 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
       flex-wrap: wrap;
   gap: var(--dm-spacing-primary);
 }
-.dm-experience-knowledge > container > div:last-of-type > .buttons > a {
+.dm-experience-knowledge > container .experience-knowledge > .buttons > a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16648,20 +16656,20 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
           flex-direction: row;
   gap: 6px;
 }
-.dm-experience-knowledge > container > div:last-of-type > .buttons > a > svg {
+.dm-experience-knowledge > container .experience-knowledge > .buttons > a > svg {
   height: 22px;
   min-height: 22px;
   max-height: 22px;
   width: auto;
   margin: 0;
 }
-.dm-experience-knowledge > container > div:last-of-type > .buttons > a > svg[data-svg-type=fill] > path {
+.dm-experience-knowledge > container .experience-knowledge > .buttons > a > svg[data-svg-type=fill] > path {
   fill: var(--dm-color-white);
 }
-.dm-experience-knowledge > container > div:last-of-type > .buttons > a > svg[data-svg-type=stroke] > path {
+.dm-experience-knowledge > container .experience-knowledge > .buttons > a > svg[data-svg-type=stroke] > path {
   stroke: var(--dm-color-white);
 }
-.dm-experience-knowledge > container > div:last-of-type > .buttons > a > span {
+.dm-experience-knowledge > container .experience-knowledge > .buttons > a > span {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
@@ -16676,29 +16684,32 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   --dm-text-default-font-weight: 600;
   --dm-text-default-color: var( --dm-color-white );
 }
-.dm-experience-knowledge > container > div:last-of-type > .buttons > a:hover > svg[data-svg-type=fill] > path {
+.dm-experience-knowledge > container .experience-knowledge > .buttons > a:hover > svg[data-svg-type=fill] > path {
   fill: var(--dm-link-color-primary);
 }
-.dm-experience-knowledge > container > div:last-of-type > .buttons > a:hover > svg[data-svg-type=stroke] > path {
+.dm-experience-knowledge > container .experience-knowledge > .buttons > a:hover > svg[data-svg-type=stroke] > path {
   stroke: var(--dm-link-color-primary);
 }
-.dm-experience-knowledge > container > div:last-of-type > .buttons > a:hover > span {
+.dm-experience-knowledge > container .experience-knowledge > .buttons > a:hover > span {
   --dm-text-default-color: var( --dm-link-color-primary );
 }
-.dm-experience-knowledge > container > div:last-of-type > .dm-knowledge-lists-icons > ul {
+.dm-experience-knowledge > container .experience-knowledge > .dm-knowledge-lists-icons > ul {
   max-width: 650px;
   gap: var(--dm-spacing-primary);
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
-.dm-experience-knowledge > container > div:last-of-type > .dm-knowledge-lists-icons > ul > li > a > svg {
+.dm-experience-knowledge > container .experience-knowledge > .dm-knowledge-lists-icons > ul > li > a > svg {
   height: 25px;
   min-height: 25px;
   max-height: 25px;
 }
+.dm-experience-knowledge > container .experience-text {
+  width: 100% !important;
+}
 @media only screen and (max-width: 1240px) {
-  .dm-experience-knowledge > container > div:first-of-type > img {
+  .dm-experience-knowledge > container .person-image > img {
     height: 470px;
   }
 }
@@ -16708,7 +16719,7 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
         -ms-flex-align: start;
             align-items: start;
   }
-  .dm-experience-knowledge > container > div:first-of-type > img {
+  .dm-experience-knowledge > container .person-image > img {
     height: 350px;
   }
 }
@@ -16720,22 +16731,22 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
             flex-direction: column;
     gap: var(--dm-spacing-secondary);
   }
-  .dm-experience-knowledge > container > div:first-of-type {
-    width: 100%;
+  .dm-experience-knowledge > container .person-image {
+    width: 100% !important;
   }
-  .dm-experience-knowledge > container > div:first-of-type > img {
+  .dm-experience-knowledge > container .person-image > img {
     height: 300px;
   }
-  .dm-experience-knowledge > container > div:first-of-type > svg {
-    width: 200px;
-    max-width: 50%;
-    right: 40%;
-    left: 40%;
+  .dm-experience-knowledge > container .person-image > svg {
+    width: 400px !important;
+    max-width: 50% !important;
+    right: 40% !important;
+    left: 40% !important;
   }
-  .dm-experience-knowledge > container > div:last-of-type {
-    width: 100%;
+  .dm-experience-knowledge > container .experience-knowledge {
+    width: 100% !important;
   }
-  .dm-experience-knowledge > container > div:last-of-type > .buttons {
+  .dm-experience-knowledge > container .experience-knowledge > .buttons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -16751,10 +16762,10 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   .dm-experience-knowledge > container {
     gap: var(--dm-spacing-secondary);
   }
-  .dm-experience-knowledge > container > div:last-of-type > .dm-knowledge-lists-icons > ul {
+  .dm-experience-knowledge > container .experience-knowledge > .dm-knowledge-lists-icons > ul {
     gap: calc(var(--dm-spacing-primary) / 2);
   }
-  .dm-experience-knowledge > container > div:last-of-type > .dm-knowledge-lists-icons > ul > li > a > svg {
+  .dm-experience-knowledge > container .experience-knowledge > .dm-knowledge-lists-icons > ul > li > a > svg {
     height: 20px;
     min-height: 20px;
     max-height: 20px;

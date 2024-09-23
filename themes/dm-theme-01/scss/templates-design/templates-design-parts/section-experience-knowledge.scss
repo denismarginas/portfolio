@@ -4,88 +4,90 @@
 .dm-experience-knowledge {
 
   > container {
-    > div {
+    flex-wrap: wrap;
 
-      &:first-of-type {
-        @include flex-center();
+    .person-image {
+      @include flex-center();
+      width: calc(40% - var(--dm-spacing-large)) !important;
 
-        > img {
-          width: auto;
-          max-width: 100%;
-          height: 600px;
-          clip-path: none;
-        }
-        > svg {
-          max-width: 100%;
+      > img {
+        width: auto;
+        max-width: 100%;
+        height: 600px;
+        clip-path: none !important;
+      }
+      > svg {
+        max-width: 100%;
+      }
+    }
+    .experience-knowledge {
+      width: 60% !important;
 
+      > ul {
+        @include reset-list();
+
+        > li {
+          @include dm-font-medium();
         }
       }
-      &:last-of-type {
-        > ul {
-          @include reset-list();
+      > .buttons {
+        @include flex-row();
+        flex-wrap: wrap;
+        gap: var( --dm-spacing-primary );
 
-          > li {
-            @include dm-font-medium();
+        > a {
+          display: flex;
+          flex-direction: row;
+          gap: 6px;
+
+
+          > svg {
+            @include svg-color( var( --dm-color-white ) );
+            @include fix-height(22px);
+            width: auto;
+            margin: 0;
           }
-        }
-        > .buttons {
-          @include flex-row();
-          flex-wrap: wrap;
-          gap: var( --dm-spacing-primary );
-
-          > a {
-            display: flex;
-            flex-direction: row;
-            gap: 6px;
-
-
+          > span {
+            @include limit-line-text(1);
+            @include dm-font-default();
+            --dm-text-default-font-weight: 600;
+            --dm-text-default-color: var( --dm-color-white );
+          }
+          &:hover {
             > svg {
-              @include svg-color( var( --dm-color-white ) );
-              @include fix-height(22px);
-              width: auto;
-              margin: 0;
+              @include svg-color( var( --dm-link-color-primary ) );
             }
             > span {
-              @include limit-line-text(1);
-              @include dm-font-default();
-              --dm-text-default-font-weight: 600;
-              --dm-text-default-color: var( --dm-color-white );
-            }
-            &:hover {
-              > svg {
-                @include svg-color( var( --dm-link-color-primary ) );
-              }
-              > span {
-                --dm-text-default-color: var( --dm-link-color-primary );
-              }
+              --dm-text-default-color: var( --dm-link-color-primary );
             }
           }
         }
-        > .dm-knowledge-lists-icons {
-          > ul {
-            max-width: 650px;
-            gap: var(--dm-spacing-primary);
-            justify-content: flex-start;
+      }
+      > .dm-knowledge-lists-icons {
+        > ul {
+          max-width: 650px;
+          gap: var(--dm-spacing-primary);
+          justify-content: flex-start;
 
-            > li {
-              > a {
-                > svg {
-                  @include fix-height(25px);
-                }
+          > li {
+            > a {
+              > svg {
+                @include fix-height(25px);
               }
             }
           }
         }
       }
     }
+    .experience-text {
+      width: 100% !important;
+    }
   }
   @media only screen and (max-width: $screen-desktop-small) {
     > container {
-      > div {
-        &:first-of-type {
-          > img {
-            height: 470px;
-          }
+      .person-image {
+        > img {
+          height: 470px;
         }
       }
     }
@@ -94,11 +96,9 @@
     > container {
       align-items: start;
 
-      > div {
-        &:first-of-type {
-          > img {
-            height: 350px;
-          }
+      .person-image {
+        > img {
+          height: 350px;
         }
       }
     }
@@ -108,51 +108,50 @@
       flex-direction: column;
       gap: var( --dm-spacing-secondary );
 
-      > div {
-        &:first-of-type {
-          width: 100%;
+      .person-image {
+        width: 100% !important;
 
-          > img {
-            height: 300px;
-          }
-          > svg {
-            width: 200px;
-            max-width: 50%;
-            right: 40%;
-            left: 40%;
-          }
+        > img {
+          height: 300px;
         }
-        &:last-of-type {
-          width: 100%;
-
-          > .buttons {
-            @include flex-center();
-          }
+        > svg {
+          width: 400px !important;
+          max-width: 50% !important;
+          right: 40% !important;
+          left: 40% !important;
         }
       }
+
+      .experience-knowledge {
+        width: 100% !important;
+
+        > .buttons {
+          @include flex-center();
+        }
+      }
+
     }
   }
   @media only screen and (max-width: $screen-tablet-small) {
     > container {
       gap: var( --dm-spacing-secondary );
 
-      > div {
-        &:last-of-type {
-          > .dm-knowledge-lists-icons {
-            > ul {
-              gap: calc(var(--dm-spacing-primary) / 2 );
+      .experience-knowledge {
+        > .dm-knowledge-lists-icons {
+          > ul {
+            gap: calc(var(--dm-spacing-primary) / 2 );
 
-              > li {
-                > a {
-                  > svg {
-                    @include fix-height(20px);
-                  }
+            > li {
+              > a {
+                > svg {
+                  @include fix-height(20px);
                 }
               }
             }
           }
         }
       }
+
     }
   }
   @media only screen and (max-width: $screen-phone-small) {
