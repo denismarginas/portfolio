@@ -77,12 +77,12 @@ endif;
           <div class="experience-text">
               <?php if (is_array($jsonDataExperience["text"])) : ?>
                   <?php $i = 1; foreach ($jsonDataExperience["text"] as $textItem) : ?>
-                      <p data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.6s" data-delay="<?php echo $i*0.06; ?>s">
+                      <p data-motion="transition-fade-0" data-duration="1.2s" data-delay="<?php echo $i*0.06; ?>s">
                           <?php echo htmlspecialchars($textItem); ?>
                       </p>
                   <?php $i++; endforeach; ?>
               <?php else : ?>
-                  <p data-motion="transition-fade-0" data-duration="0.6s" data-delay="0.1s">
+                  <p data-motion="transition-fade-0" data-duration="0.8s" data-delay="0.1s">
                       <?php echo htmlspecialchars($jsonDataExperience["text"]); ?>
                   </p>
               <?php endif; ?>
