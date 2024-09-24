@@ -641,6 +641,11 @@ function renderContactFormField($contact_form_field) {
 
         foreach ($radioOptions as $option) : ?>
             <div class="radio">
+
+                <?php if( isset($option["content"]) && !empty($option["content"])) :
+                    echo executePhpInString($option["content"]);
+                endif; ?>
+
                 <input type="radio" id="<?php echo $option["name"]; ?>" name="<?php echo $contact_form_field["name"]; ?>" value="<?php echo $option["value"]; ?>"
                     <?php if(isset($option["step"]) ) :
                         echo 'data-step="'.$option["step"].'"';
@@ -679,11 +684,11 @@ function renderContactFormField($contact_form_field) {
             </button>
         </div>
     <?php elseif($contact_form_field["type"] == "html" || $contact_form_field["type"] == "HTML") : ?>
-        <div class="html">
+        <div class="content">
             <?php echo $contact_form_field["content"]; ?>
         </div>
     <?php elseif($contact_form_field["type"] == "code" || $contact_form_field["type"] == "CODE") : ?>
-        <div class="code">
+        <div class="content">
             <?php echo executePhpInString($contact_form_field["content"]); ?>
         </div>
     <?php endif;

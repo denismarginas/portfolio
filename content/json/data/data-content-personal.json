@@ -197,7 +197,7 @@
 					{
 						"name": "step-html-banner",
 						"type": "code",
-						"content": "<?php echo renderImage('content/img/projects/denismarginas/media/banners-ultra-wide/wallpaper-contact-02.webp', true, 'banner'); ?>"
+						"content": "<?php echo renderImage('content/img/projects/denismarginas/media/banners-ultra-wide/wallpaper-contact-02.webp', false, 'banner'); ?>"
 					},
 					{
 						"name": "step-name",
@@ -227,34 +227,36 @@
 							{
 								"name": "send-a-message",
 								"value": "Send a Message",
-								"step": "3"
+								"step": "3",
+								"content": "<div class='option-preview'><?php SVGRenderer::renderSVG('envelope'); ?></div>"
 							},
 							{
 								"name": "hire-me-for-a-freelance-project",
 								"value": "Hire me for a freelance project",
-								"step": "4"
+								"step": "4",
+								"content": "<div class='option-preview'><?php SVGRenderer::renderSVG( 'folder-open'); ?></div>"
 							},
 							{
 								"name": "offer-me-a-position-at-your-company",
 								"value": "Offer me a position at your company",
-								"step": "5"
+								"step": "5",
+								"content": "<div class='option-preview'><?php SVGRenderer::renderSVG( 'employ'); ?></div>"
 							}
 						],
 						"field-name-step": "message"
-					},
-					{
-						"name": "dm-next-step",
-						"type": "next",
-						"value": "Next Step",
-						"step": "subject"
 					},
 					{
 						"name": "dm-prev-step",
 						"type": "prev",
 						"value": "Previous Step",
 						"step": "1"
+					},
+					{
+						"name": "dm-next-step",
+						"type": "next",
+						"value": "Next Step",
+						"step": "subject"
 					}
-
 				],
 				[
 					{
@@ -264,16 +266,16 @@
 						"field-name-step": "message"
 					},
 					{
-						"name": "dm-form-button",
-						"type": "submit",
-						"value": "Submit",
-						"redirect": "Proceed to the form"
-					},
-					{
 						"name": "dm-prev-step",
 						"type": "prev",
 						"value": "Previous Step",
 						"step": "2"
+					},
+					{
+						"name": "dm-form-button",
+						"type": "submit",
+						"value": "Submit",
+						"redirect": "Proceed to the form"
 					}
 				],
 				[
@@ -363,19 +365,19 @@
 					{
 						"name": "step-phone-number",
 						"type": "text",
-						"placeholder": "Your Phone Number",
+						"placeholder": "Your Phone Number (Optional)",
 						"field-name-step": "phone"
 					},
 					{
 						"name": "step-your-contact",
 						"type": "text",
-						"placeholder": "Your Contact",
+						"placeholder": "Your Contact (Optional)",
 						"field-name-step": "message"
 					},
 					{
 						"name": "step-your-company",
 						"type": "text",
-						"placeholder": "Your Company",
+						"placeholder": "Your Company (Optional)",
 						"field-name-step": "message"
 					},
 					{
@@ -476,6 +478,11 @@
 				"title": "Github:",
 				"text": "github.com/denismarginas",
 				"link": "https://github.com/denismarginas"
+			},
+			{
+				"title": "GitHub Pages",
+				"text": "denismarginas.github.io",
+				"link": "https://denismarginas.github.io/portfolio/"
 			}
 		]
 		

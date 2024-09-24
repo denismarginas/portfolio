@@ -2398,7 +2398,7 @@ body.theme-dark .grid-background-animation {
   100% {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
-    display: none;
+    display: none !important;
     max-height: 0%;
     opacity: 0;
   }
@@ -2420,7 +2420,7 @@ body.theme-dark .grid-background-animation {
   100% {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
-    display: none;
+    display: none !important;
     max-height: 0%;
     opacity: 0;
   }
@@ -2429,7 +2429,7 @@ body.theme-dark .grid-background-animation {
   0% {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
-    display: none;
+    display: none !important;
     max-height: 0%;
     opacity: 0;
   }
@@ -2450,7 +2450,7 @@ body.theme-dark .grid-background-animation {
   0% {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
-    display: none;
+    display: none !important;
     max-height: 0%;
     opacity: 0;
   }
@@ -4199,6 +4199,7 @@ body[java-script=true] input[type=range].progress::-webkit-slider-thumb {
   --dm-text-heading3-font-family: var( --dm-font-family-secondary );
 }
 .dm-contact-form > form {
+  border-radius: var(--dm-border-radius-primary);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4206,7 +4207,16 @@ body[java-script=true] input[type=range].progress::-webkit-slider-thumb {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: var(--dm-spacing-secondary);
+  padding: var(--dm-spacing-tertiary) var(--dm-spacing-secondary);
+  max-width: 800px;
 }
 .dm-contact-form > form > div {
   display: -webkit-box;
@@ -4226,6 +4236,23 @@ body[java-script=true] input[type=range].progress::-webkit-slider-thumb {
   line-height: var(--dm-text-default-line-height);
   color: var(--dm-text-default-color);
 }
+.dm-contact-form > form .step {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  gap: var(--dm-spacing-secondary);
+}
+.dm-contact-form > form .step > input, .dm-contact-form > form .step textarea {
+  width: 100%;
+}
+.dm-contact-form > form .step .content {
+  width: 100%;
+}
 .dm-contact-form > form input, .dm-contact-form > form textarea {
   border-radius: var(--dm-border-radius-primary);
   font-family: var(--dm-font-family);
@@ -4234,9 +4261,11 @@ body[java-script=true] input[type=range].progress::-webkit-slider-thumb {
   font-weight: var(--dm-text-default-font-weight);
   line-height: var(--dm-text-default-line-height);
   color: var(--dm-text-default-color);
-  padding: calc(var(--dm-spacing-primary) / 3) var(--dm-spacing-primary);
+  padding: calc(var(--dm-spacing-primary) / 2) var(--dm-spacing-primary);
   border: 2px solid var(--dm-border-color-primary);
   background-color: rgba(var(--dm-color-gray-rgb), 0.1);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .dm-contact-form > form input::-webkit-input-placeholder, .dm-contact-form > form textarea::-webkit-input-placeholder {
   font-family: var(--dm-font-family);
@@ -4321,8 +4350,8 @@ body[java-script=true] input[type=range].progress::-webkit-slider-thumb {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 6px;
   position: relative;
   cursor: pointer;
@@ -4330,6 +4359,36 @@ body[java-script=true] input[type=range].progress::-webkit-slider-thumb {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+.dm-contact-form > form .radio label {
+  max-width: calc(100% - 40px);
+}
+.dm-contact-form > form .radio .option-preview > svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: var(--dm-border-radius-primary);
+  background-color: var(--dm-color-primary);
+  padding: var(--dm-spacing-primary) var(--dm-spacing-tertiary);
+  width: 30px;
+  height: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  margin-right: var(--dm-spacing-primary);
+}
+.dm-contact-form > form .radio .option-preview > svg[data-svg-type=fill] > path {
+  fill: var(--dm-color-white);
+}
+.dm-contact-form > form .radio .option-preview > svg[data-svg-type=stroke] > path {
+  stroke: var(--dm-color-white);
 }
 .dm-contact-form > form .radio input {
   z-index: 2;
@@ -4361,9 +4420,24 @@ body[java-script=true] input[type=range].progress::-webkit-slider-thumb {
 .dm-contact-form > form .radio input:checked + .checkmark {
   background-color: rgba(var(--dm-color-primary-rgb), 1);
 }
+.dm-contact-form > form button[type=button] {
+  border-radius: var(--dm-border-radius-primary) !important;
+}
+@media only screen and (max-width: 992px) {
+  .dm-contact-form > form .radio .option-preview {
+    width: 100%;
+    max-width: 100%;
+  }
+  .dm-contact-form > form .radio .option-preview > svg {
+    margin-right: 0;
+  }
+}
 
 body .dm-contact-form > h3, body.theme-light .dm-contact-form > h3 {
   --dm-text-heading3-color: var( --dm-color-gray-darken );
+}
+body .dm-contact-form > form, body.theme-light .dm-contact-form > form {
+  background-color: rgba(var(--dm-color-gray-rgb), 0.1);
 }
 body .dm-contact-form > form input, body .dm-contact-form > form textarea, body.theme-light .dm-contact-form > form input, body.theme-light .dm-contact-form > form textarea {
   --dm-text-default-color: var( --dm-color-gray-darken );
@@ -4395,6 +4469,9 @@ body .dm-contact-form > form button[data-action=prev-step], body.theme-light .dm
 
 body.theme-dark .dm-contact-form > h3 {
   --dm-text-heading3-color: var( --dm-color-white );
+}
+body.theme-dark .dm-contact-form > form {
+  background-color: rgba(var(--dm-color-gray-lighten-rgb), 0.1);
 }
 body.theme-dark .dm-contact-form > form input, body.theme-dark .dm-contact-form > form textarea {
   --dm-text-default-color: var( --dm-color-white );
@@ -4451,15 +4528,9 @@ body[java-script=true] .dm-contact-form > form[data-form-type=steps] .step {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
-body[java-script=true] .dm-contact-form > form[data-form-type=steps] .step > input, body[java-script=true] .dm-contact-form > form[data-form-type=steps] .step textarea {
-  width: 100%;
+body[java-script=true] .dm-contact-form > form[data-form-type=steps] .step[data-display=hide] {
+  display: none;
 }
 
 /* ---- Responsive Screens ---- */

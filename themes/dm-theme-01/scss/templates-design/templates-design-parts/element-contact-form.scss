@@ -11,8 +11,12 @@
     --dm-text-heading3-font-family: var( --dm-font-family-secondary );
   }
   > form {
+    @include border-radius( var( --dm-border-radius-primary ) );
     @include flex-column();
+    @include flex-center();
     gap: var( --dm-spacing-secondary );
+    padding: var( --dm-spacing-tertiary ) var( --dm-spacing-secondary );
+    max-width: 800px;
 
     > div {
       @include flex-column();
@@ -22,12 +26,27 @@
         @include dm-font-default();
       }
     }
+    .step {
+      flex-direction: row;
+      display: none;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: var( --dm-spacing-secondary );
+
+      > input, textarea {
+        width: 100%;
+      }
+      .content {
+        width: 100%;
+      }
+    }
     input, textarea {
       @include border-radius( var( --dm-border-radius-primary ) );
       @include dm-font-default();
-      padding: calc(var( --dm-spacing-primary ) / 3) var( --dm-spacing-primary );
+      padding: calc(var( --dm-spacing-primary ) / 2) var( --dm-spacing-primary );
       border: 2px solid var( --dm-border-color-primary );
       background-color: rgba( var(--dm-color-gray-rgb) , 0.1 );
+      box-sizing: border-box;
 
       &::placeholder {
         @include dm-font-default();
@@ -59,12 +78,29 @@
       width: 100%;
       max-width: 100%;
       align-items: center;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       gap: 6px;
       position: relative;
       cursor: pointer;
       user-select: none;
 
+      label {
+        max-width: calc(100% - 40px);
+      }
+      .option-preview {
+        > svg {
+          @include flex-center();
+          @include svg-color( var( --dm-color-white ));
+          @include border-radius( var( --dm-border-radius-primary ) );
+          background-color: var( --dm-color-primary );
+          padding: var( --dm-spacing-primary ) var( --dm-spacing-tertiary );
+          width: 30px;
+          height: 20px;
+          object-fit: contain;
+          object-position: center;
+          margin-right: var( --dm-spacing-primary );
+        }
+      }
       input {
         z-index: 2;
         position: absolute;
@@ -96,6 +132,25 @@
         background-color: rgba( var(--dm-color-primary-rgb), 1 );
       }
     }
+    button {
+      &[type="button"] {
+        border-radius:  var( --dm-border-radius-primary ) !important;
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-large) {
+    > form {
+      .radio {
+        .option-preview {
+          width: 100%;
+          max-width: 100%;
+
+          > svg {
+            margin-right: 0;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -105,6 +160,8 @@ body, body.theme-light {
       --dm-text-heading3-color: var( --dm-color-gray-darken );
     }
     > form {
+      background-color: rgba(var(--dm-color-gray-rgb), 0.1);
+
       input, textarea {
         --dm-text-default-color: var( --dm-color-gray-darken );
 
@@ -135,6 +192,8 @@ body.theme-dark {
       --dm-text-heading3-color: var( --dm-color-white );
     }
     > form {
+      background-color: rgba(var(--dm-color-gray-lighten-rgb), 0.1);
+
       input, textarea {
         --dm-text-default-color: var( --dm-color-white );
 
@@ -192,11 +251,9 @@ body[java-script="true"] {
         }
         .step {
           display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
 
-          > input, textarea {
-            width: 100%;
+          &[data-display="hide"] {
+            display: none;
           }
         }
       }

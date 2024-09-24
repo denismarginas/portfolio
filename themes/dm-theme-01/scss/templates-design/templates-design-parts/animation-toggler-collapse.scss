@@ -27,7 +27,7 @@
   }
   100% {
     transform: translateY(-100%);
-    display: none;
+    display: none !important;
     max-height: 0%;
     opacity: 0;
   }
@@ -36,7 +36,7 @@
 @keyframes collapse-show {
   0% {
     transform: translateY(-100%);
-    display: none;
+    display: none !important;
     max-height: 0%;
     opacity: 0;
   }
