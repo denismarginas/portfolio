@@ -220,6 +220,11 @@
 				],
 				[
 					{
+						"name": "step-html-image",
+						"type": "code",
+						"content": "<div class='banner-svg'><?php SVGRenderer::renderSVG('faq'); ?><label>Subject</label></div>"
+					},
+					{
 						"name": "subject",
 						"type": "radio",
 						"placeholder": "Subject",
@@ -260,6 +265,11 @@
 				],
 				[
 					{
+						"name": "step-html-image",
+						"type": "code",
+						"content": "<div class='banner-svg'><?php SVGRenderer::renderSVG('envelope'); ?><label>Send a Message</label></div>"
+					},
+					{
 						"name": "step-message",
 						"type": "textarea",
 						"placeholder": "Message",
@@ -280,25 +290,34 @@
 				],
 				[
 					{
+						"name": "step-html-image",
+						"type": "code",
+						"content": "<div class='banner-svg'><?php SVGRenderer::renderSVG('folder-open'); ?><label>Project Request</label></div>"
+					},
+					{
 						"name": "step-project-type",
 						"type": "radio",
 						"placeholder": "Project Type",
 						"values": [
 							{
 								"name": "web-development",
-								"value": "Web Development"
+								"value": "Web Development",
+								"content": "<div class='option-preview'><?php SVGRenderer::renderSVG( 'hobby-web-design'); ?></div>"
 							},
 							{
 								"name": "video-editing",
-								"value": "Video Editing"
+								"value": "Video Editing",
+								"content": "<div class='option-preview'><?php SVGRenderer::renderSVG( 'hobby-video-editing'); ?></div>"
 							},
 							{
 								"name": "photo-editing",
-								"value": "Photo Editing"
+								"value": "Photo Editing",
+								"content": "<div class='option-preview'><?php SVGRenderer::renderSVG( 'hobby-photo-editing'); ?></div>"
 							},
 							{
 								"name": "other",
-								"value": "Other"
+								"value": "Other",
+								"content": "<div class='option-preview'><?php SVGRenderer::renderSVG( 'hobby-unknown'); ?></div>"
 							}
 						],
 						"field-name-step": "message"
@@ -330,6 +349,11 @@
 
 				],
 				[
+					{
+						"name": "step-html-image",
+						"type": "code",
+						"content": "<div class='banner-svg'><?php SVGRenderer::renderSVG('employ'); ?><label>Job Offer</label></div>"
+					},
 					{
 						"name": "step-job-title",
 						"type": "text",

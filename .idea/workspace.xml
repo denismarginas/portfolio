@@ -7,10 +7,9 @@
       <change beforePath="$PROJECT_DIR$/content/json/data/data-content-personal.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-content-personal.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/json/data/data-icons.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-icons.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/json/index/index-data-pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/index/index-data-pages.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/functions/global-functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/functions/global-functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/animation-toggler-collapse.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/animation-toggler-collapse.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-contact-form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-contact-form.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-catalog-categories.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-catalog-categories.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
