@@ -2398,8 +2398,8 @@ body.theme-dark .grid-background-animation {
   100% {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
-    display: none !important;
-    max-height: 0%;
+    display: none;
+    max-height: 0px;
     opacity: 0;
   }
 }
@@ -2420,8 +2420,8 @@ body.theme-dark .grid-background-animation {
   100% {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
-    display: none !important;
-    max-height: 0%;
+    display: none;
+    max-height: 0px;
     opacity: 0;
   }
 }
