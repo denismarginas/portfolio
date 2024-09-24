@@ -798,43 +798,8 @@ document.addEventListener("DOMContentLoaded", function() {
             cookieNotice.setAttribute('data-display', 'hide');
         }
     }
+
 });
 
 
-// Contact Form
-function contact_form_exec() {
-    var form = document.getElementById('dm-form');
-    var externalFormUrl = form.getAttribute('data-external-form-url');
-    var formFields = form.querySelectorAll('[field-name-extern]');
-    var statusMessageSpan = document.querySelector('#dm-send-status');
-    var buttonDiv = document.querySelector('#dm-form-button').parentNode;
-    var statusMessage = "The form is inactive. Please use alternative contact methods.";
-
-    if (externalFormUrl) {
-        var formParams = new URLSearchParams();
-
-        formFields.forEach(function(field) {
-            var fieldGoogleName = field.getAttribute('field-name-extern');
-            var fieldValue = field.value;
-
-            if (fieldGoogleName) {
-                formParams.append(fieldGoogleName, fieldValue);
-            }
-        });
-
-        var fullUrl = externalFormUrl + '?' + formParams.toString();
-
-        window.open(fullUrl, '_blank');
-        statusMessage = "You will be redirected to another external form address.";
-    }
-
-    if (!statusMessageSpan) {
-        statusMessageSpan = document.createElement('span');
-        statusMessageSpan.id = 'dm-send-status';
-        statusMessageSpan.innerHTML = statusMessage;
-        buttonDiv.appendChild(statusMessageSpan);
-
-        return false;
-    }
-}
 

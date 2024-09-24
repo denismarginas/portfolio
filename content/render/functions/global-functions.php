@@ -124,7 +124,6 @@ function countFilesInFolder($folderPath) {
     return $fileCount;
 }
 
-
 function listDesign($nr) {
     switch ($nr) {
         case ($nr % 13 === 0):
@@ -598,6 +597,7 @@ function calculateDaysWorkedInMonth($currentDate, $jobs) {
 
     return $daysWorked;
 }
+
 function calculatePersonAge(): int {
     $birthDate = getDataJson('data-content-personal', 'data')["about"]["birth-date"];
     $age = 0;
@@ -611,5 +611,83 @@ function calculatePersonAge(): int {
 
     return $age;
 }
+
+function renderContactFormField($contact_form_field) {
+    if($contact_form_field["type"] == "text" || $contact_form_field["type"] == "input") : ?>
+        <input id="<?php echo $contact_form_field["name"]; ?>" type="text" name="<?php echo $contact_form_field["name"]; ?>" placeholder="<?php echo $contact_form_field["placeholder"]; ?>" value=""
+            <?php if(isset($contact_form_field["field-name-extern"]) && !empty($contact_form_field["field-name-extern"])) :
+                echo 'field-name-extern="'.$contact_form_field["field-name-extern"].'"';
+            endif;?>
+            <?php if(isset($contact_form_field["field-name-step"]) ) :
+                echo 'field-name-step="'.$contact_form_field["field-name-step"].'"';
+            endif;?>
+        >
+    <?php elseif($contact_form_field["type"] == "message" || $contact_form_field["type"] == "textarea") : ?>
+        <textarea id="<?php echo $contact_form_field["name"]; ?>" type="text" name="<?php echo $contact_form_field["name"]; ?>" placeholder="<?php echo $contact_form_field["placeholder"]; ?>" value=""
+            <?php if(isset($contact_form_field["field-name-extern"]) && !empty($contact_form_field["field-name-extern"])) :
+                echo 'field-name-extern="'.$contact_form_field["field-name-extern"].'"';
+            endif;?>
+            <?php if(isset($contact_form_field["field-name-step"]) ) :
+                echo 'field-name-step="'.$contact_form_field["field-name-step"].'"';
+            endif;?>
+        ></textarea>
+    <?php elseif($contact_form_field["type"] == "radio" || $contact_form_field["type"] == "radiobuttons") : ?>
+        <?php $radioOptions = $contact_form_field["values"] ?? [[
+                "name" => $contact_form_field["name"],
+                "step" => $contact_form_field["step"],
+                "value" => $contact_form_field["value"],
+                "placeholder" => $contact_form_field["placeholder"]
+            ]];
+
+        foreach ($radioOptions as $option) : ?>
+            <div class="radio">
+                <input type="radio" id="<?php echo $option["name"]; ?>" name="<?php echo $contact_form_field["name"]; ?>" value="<?php echo $option["value"]; ?>"
+                    <?php if(isset($option["step"]) ) :
+                        echo 'data-step="'.$option["step"].'"';
+                    endif;?>
+                    <?php if(isset($contact_form_field["field-name-step"]) ) :
+                        echo 'field-name-step="'.$contact_form_field["field-name-step"].'"';
+                        echo 'placeholder="'.$contact_form_field["placeholder"].'"';
+                    endif;?>
+                >
+                <span class="checkmark"></span>
+                <label for="<?php echo $option["name"]; ?>"><?php echo $option["value"]; ?></label>
+            </div>
+        <?php endforeach; ?>
+    <?php elseif($contact_form_field["type"] == "send" || $contact_form_field["type"] == "submit") : ?>
+        <div>
+            <button class="form-submit" id="<?php echo $contact_form_field["name"]; ?>" data-button="primary" data-callback='onSubmit' data-action='submit' type="submit">
+                <?php echo $contact_form_field["value"]; ?>
+            </button>
+
+            <?php if(isset($jsonContactForm["external-form-url"])) : ?>
+                <a class="external-form-submit" href="<?php echo $jsonContactForm["external-form-url"]; ?>" data-button="primary" target="_blank">
+                    <?php echo $contact_form_field["redirect"]; ?>
+                </a>
+            <?php endif; ?>
+        </div>
+    <?php elseif($contact_form_field["type"] == "next" || $contact_form_field["type"] == "step") : ?>
+        <div>
+            <button class="form-next-step" id="<?php echo $contact_form_field["name"]; ?>" data-button="primary" data-action="next-step" data-step="<?php echo $contact_form_field["step"]; ?>" type="button">
+                <?php echo $contact_form_field["value"]; ?>
+            </button>
+        </div>
+    <?php elseif($contact_form_field["type"] == "prev" || $contact_form_field["type"] == "step") : ?>
+        <div>
+            <button class="form-prev-step" id="<?php echo $contact_form_field["name"]; ?>" data-button="primary" data-action="prev-step" data-step="<?php echo $contact_form_field["step"]; ?>" type="button">
+                <?php echo $contact_form_field["value"]; ?>
+            </button>
+        </div>
+    <?php elseif($contact_form_field["type"] == "html" || $contact_form_field["type"] == "HTML") : ?>
+        <div class="html">
+            <?php echo $contact_form_field["content"]; ?>
+        </div>
+    <?php elseif($contact_form_field["type"] == "code" || $contact_form_field["type"] == "CODE") : ?>
+        <div class="code">
+            <?php echo executePhpInString($contact_form_field["content"]); ?>
+        </div>
+    <?php endif;
+}
+
 
 ?>

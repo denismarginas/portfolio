@@ -4208,74 +4208,6 @@ body[java-script=true] input[type=range].progress::-webkit-slider-thumb {
           flex-direction: column;
   gap: var(--dm-spacing-secondary);
 }
-.dm-contact-form > form > input, .dm-contact-form > form textarea {
-  border-radius: var(--dm-border-radius-primary);
-  font-family: var(--dm-font-family);
-  font-size: var(--dm-text-default-font-size);
-  font-style: var(--dm-text-default-font-style);
-  font-weight: var(--dm-text-default-font-weight);
-  line-height: var(--dm-text-default-line-height);
-  color: var(--dm-text-default-color);
-  padding: calc(var(--dm-spacing-primary) / 3) var(--dm-spacing-primary);
-  border: 2px solid var(--dm-border-color-primary);
-  background-color: rgba(var(--dm-color-gray-rgb), 0.1);
-}
-.dm-contact-form > form > input::-webkit-input-placeholder, .dm-contact-form > form textarea::-webkit-input-placeholder {
-  font-family: var(--dm-font-family);
-  font-size: var(--dm-text-default-font-size);
-  font-style: var(--dm-text-default-font-style);
-  font-weight: var(--dm-text-default-font-weight);
-  line-height: var(--dm-text-default-line-height);
-  color: var(--dm-text-default-color);
-  opacity: 0.8;
-}
-.dm-contact-form > form > input::-moz-placeholder, .dm-contact-form > form textarea::-moz-placeholder {
-  font-family: var(--dm-font-family);
-  font-size: var(--dm-text-default-font-size);
-  font-style: var(--dm-text-default-font-style);
-  font-weight: var(--dm-text-default-font-weight);
-  line-height: var(--dm-text-default-line-height);
-  color: var(--dm-text-default-color);
-  opacity: 0.8;
-}
-.dm-contact-form > form > input:-ms-input-placeholder, .dm-contact-form > form textarea:-ms-input-placeholder {
-  font-family: var(--dm-font-family);
-  font-size: var(--dm-text-default-font-size);
-  font-style: var(--dm-text-default-font-style);
-  font-weight: var(--dm-text-default-font-weight);
-  line-height: var(--dm-text-default-line-height);
-  color: var(--dm-text-default-color);
-  opacity: 0.8;
-}
-.dm-contact-form > form > input::-ms-input-placeholder, .dm-contact-form > form textarea::-ms-input-placeholder {
-  font-family: var(--dm-font-family);
-  font-size: var(--dm-text-default-font-size);
-  font-style: var(--dm-text-default-font-style);
-  font-weight: var(--dm-text-default-font-weight);
-  line-height: var(--dm-text-default-line-height);
-  color: var(--dm-text-default-color);
-  opacity: 0.8;
-}
-.dm-contact-form > form > input::placeholder, .dm-contact-form > form textarea::placeholder {
-  font-family: var(--dm-font-family);
-  font-size: var(--dm-text-default-font-size);
-  font-style: var(--dm-text-default-font-style);
-  font-weight: var(--dm-text-default-font-weight);
-  line-height: var(--dm-text-default-line-height);
-  color: var(--dm-text-default-color);
-  opacity: 0.8;
-}
-.dm-contact-form > form > input:focus, .dm-contact-form > form textarea:focus {
-  outline: none;
-  background-color: rgba(var(--dm-color-primary-rgb), 0.2);
-}
-.dm-contact-form > form > textarea {
-  width: auto;
-  max-width: 100%;
-  min-height: 100px;
-  max-height: 400px;
-  resize: none;
-}
 .dm-contact-form > form > div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4294,55 +4226,202 @@ body[java-script=true] input[type=range].progress::-webkit-slider-thumb {
   line-height: var(--dm-text-default-line-height);
   color: var(--dm-text-default-color);
 }
+.dm-contact-form > form input, .dm-contact-form > form textarea {
+  border-radius: var(--dm-border-radius-primary);
+  font-family: var(--dm-font-family);
+  font-size: var(--dm-text-default-font-size);
+  font-style: var(--dm-text-default-font-style);
+  font-weight: var(--dm-text-default-font-weight);
+  line-height: var(--dm-text-default-line-height);
+  color: var(--dm-text-default-color);
+  padding: calc(var(--dm-spacing-primary) / 3) var(--dm-spacing-primary);
+  border: 2px solid var(--dm-border-color-primary);
+  background-color: rgba(var(--dm-color-gray-rgb), 0.1);
+}
+.dm-contact-form > form input::-webkit-input-placeholder, .dm-contact-form > form textarea::-webkit-input-placeholder {
+  font-family: var(--dm-font-family);
+  font-size: var(--dm-text-default-font-size);
+  font-style: var(--dm-text-default-font-style);
+  font-weight: var(--dm-text-default-font-weight);
+  line-height: var(--dm-text-default-line-height);
+  color: var(--dm-text-default-color);
+  opacity: 0.8;
+}
+.dm-contact-form > form input::-moz-placeholder, .dm-contact-form > form textarea::-moz-placeholder {
+  font-family: var(--dm-font-family);
+  font-size: var(--dm-text-default-font-size);
+  font-style: var(--dm-text-default-font-style);
+  font-weight: var(--dm-text-default-font-weight);
+  line-height: var(--dm-text-default-line-height);
+  color: var(--dm-text-default-color);
+  opacity: 0.8;
+}
+.dm-contact-form > form input:-ms-input-placeholder, .dm-contact-form > form textarea:-ms-input-placeholder {
+  font-family: var(--dm-font-family);
+  font-size: var(--dm-text-default-font-size);
+  font-style: var(--dm-text-default-font-style);
+  font-weight: var(--dm-text-default-font-weight);
+  line-height: var(--dm-text-default-line-height);
+  color: var(--dm-text-default-color);
+  opacity: 0.8;
+}
+.dm-contact-form > form input::-ms-input-placeholder, .dm-contact-form > form textarea::-ms-input-placeholder {
+  font-family: var(--dm-font-family);
+  font-size: var(--dm-text-default-font-size);
+  font-style: var(--dm-text-default-font-style);
+  font-weight: var(--dm-text-default-font-weight);
+  line-height: var(--dm-text-default-line-height);
+  color: var(--dm-text-default-color);
+  opacity: 0.8;
+}
+.dm-contact-form > form input::placeholder, .dm-contact-form > form textarea::placeholder {
+  font-family: var(--dm-font-family);
+  font-size: var(--dm-text-default-font-size);
+  font-style: var(--dm-text-default-font-style);
+  font-weight: var(--dm-text-default-font-weight);
+  line-height: var(--dm-text-default-line-height);
+  color: var(--dm-text-default-color);
+  opacity: 0.8;
+}
+.dm-contact-form > form input:focus, .dm-contact-form > form textarea:focus {
+  outline: none;
+  background-color: rgba(var(--dm-color-primary-rgb), 0.2);
+}
+.dm-contact-form > form textarea {
+  width: auto;
+  max-width: 100%;
+  min-height: 100px;
+  max-height: 400px;
+  resize: none;
+}
+.dm-contact-form > form label {
+  font-family: var(--dm-font-family);
+  font-size: var(--dm-text-default-font-size);
+  font-style: var(--dm-text-default-font-style);
+  font-weight: var(--dm-text-default-font-weight);
+  line-height: var(--dm-text-default-line-height);
+  color: var(--dm-text-default-color);
+}
+.dm-contact-form > form img {
+  border-radius: var(--dm-border-radius-primary);
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+.dm-contact-form > form .radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  max-width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 6px;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.dm-contact-form > form .radio input {
+  z-index: 2;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.dm-contact-form > form .radio .checkmark {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: rgba(var(--dm-color-gray-lighten-rgb), 0.2);
+  border-color: rgba(var(--dm-color-white-rgb), 1);
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 2px;
+  outline: 2px solid rgba(var(--dm-color-primary-rgb), 1);
+  margin: 4px;
+}
+.dm-contact-form > form .radio input:checked + .checkmark {
+  background-color: rgba(var(--dm-color-primary-rgb), 1);
+}
 
 body .dm-contact-form > h3, body.theme-light .dm-contact-form > h3 {
   --dm-text-heading3-color: var( --dm-color-gray-darken );
 }
-body .dm-contact-form > form > input, body .dm-contact-form > form textarea, body.theme-light .dm-contact-form > form > input, body.theme-light .dm-contact-form > form textarea {
+body .dm-contact-form > form input, body .dm-contact-form > form textarea, body.theme-light .dm-contact-form > form input, body.theme-light .dm-contact-form > form textarea {
   --dm-text-default-color: var( --dm-color-gray-darken );
 }
-body .dm-contact-form > form > input::-webkit-input-placeholder, body .dm-contact-form > form textarea::-webkit-input-placeholder, body.theme-light .dm-contact-form > form > input::-webkit-input-placeholder, body.theme-light .dm-contact-form > form textarea::-webkit-input-placeholder {
+body .dm-contact-form > form input::-webkit-input-placeholder, body .dm-contact-form > form textarea::-webkit-input-placeholder, body.theme-light .dm-contact-form > form input::-webkit-input-placeholder, body.theme-light .dm-contact-form > form textarea::-webkit-input-placeholder {
   --dm-text-default-color: var( --dm-color-gray );
 }
-body .dm-contact-form > form > input::-moz-placeholder, body .dm-contact-form > form textarea::-moz-placeholder, body.theme-light .dm-contact-form > form > input::-moz-placeholder, body.theme-light .dm-contact-form > form textarea::-moz-placeholder {
+body .dm-contact-form > form input::-moz-placeholder, body .dm-contact-form > form textarea::-moz-placeholder, body.theme-light .dm-contact-form > form input::-moz-placeholder, body.theme-light .dm-contact-form > form textarea::-moz-placeholder {
   --dm-text-default-color: var( --dm-color-gray );
 }
-body .dm-contact-form > form > input:-ms-input-placeholder, body .dm-contact-form > form textarea:-ms-input-placeholder, body.theme-light .dm-contact-form > form > input:-ms-input-placeholder, body.theme-light .dm-contact-form > form textarea:-ms-input-placeholder {
+body .dm-contact-form > form input:-ms-input-placeholder, body .dm-contact-form > form textarea:-ms-input-placeholder, body.theme-light .dm-contact-form > form input:-ms-input-placeholder, body.theme-light .dm-contact-form > form textarea:-ms-input-placeholder {
   --dm-text-default-color: var( --dm-color-gray );
 }
-body .dm-contact-form > form > input::-ms-input-placeholder, body .dm-contact-form > form textarea::-ms-input-placeholder, body.theme-light .dm-contact-form > form > input::-ms-input-placeholder, body.theme-light .dm-contact-form > form textarea::-ms-input-placeholder {
+body .dm-contact-form > form input::-ms-input-placeholder, body .dm-contact-form > form textarea::-ms-input-placeholder, body.theme-light .dm-contact-form > form input::-ms-input-placeholder, body.theme-light .dm-contact-form > form textarea::-ms-input-placeholder {
   --dm-text-default-color: var( --dm-color-gray );
 }
-body .dm-contact-form > form > input::placeholder, body .dm-contact-form > form textarea::placeholder, body.theme-light .dm-contact-form > form > input::placeholder, body.theme-light .dm-contact-form > form textarea::placeholder {
+body .dm-contact-form > form input::placeholder, body .dm-contact-form > form textarea::placeholder, body.theme-light .dm-contact-form > form input::placeholder, body.theme-light .dm-contact-form > form textarea::placeholder {
   --dm-text-default-color: var( --dm-color-gray );
+}
+body .dm-contact-form > form label, body.theme-light .dm-contact-form > form label {
+  --dm-text-default-color: var( --dm-color-gray-darken );
 }
 body .dm-contact-form > form > div #dm-send-status, body.theme-light .dm-contact-form > form > div #dm-send-status {
   --dm-text-default-color: var( --dm-color-gray-darken );
+}
+body .dm-contact-form > form button[data-action=prev-step], body.theme-light .dm-contact-form > form button[data-action=prev-step] {
+  --dm-color-primary: var( --dm-color-gray );
 }
 
 body.theme-dark .dm-contact-form > h3 {
   --dm-text-heading3-color: var( --dm-color-white );
 }
-body.theme-dark .dm-contact-form > form > input, body.theme-dark .dm-contact-form > form textarea {
+body.theme-dark .dm-contact-form > form input, body.theme-dark .dm-contact-form > form textarea {
   --dm-text-default-color: var( --dm-color-white );
 }
-body.theme-dark .dm-contact-form > form > input::-webkit-input-placeholder, body.theme-dark .dm-contact-form > form textarea::-webkit-input-placeholder {
+body.theme-dark .dm-contact-form > form input::-webkit-input-placeholder, body.theme-dark .dm-contact-form > form textarea::-webkit-input-placeholder {
   --dm-text-default-color: var( --dm-color-white );
 }
-body.theme-dark .dm-contact-form > form > input::-moz-placeholder, body.theme-dark .dm-contact-form > form textarea::-moz-placeholder {
+body.theme-dark .dm-contact-form > form input::-moz-placeholder, body.theme-dark .dm-contact-form > form textarea::-moz-placeholder {
   --dm-text-default-color: var( --dm-color-white );
 }
-body.theme-dark .dm-contact-form > form > input:-ms-input-placeholder, body.theme-dark .dm-contact-form > form textarea:-ms-input-placeholder {
+body.theme-dark .dm-contact-form > form input:-ms-input-placeholder, body.theme-dark .dm-contact-form > form textarea:-ms-input-placeholder {
   --dm-text-default-color: var( --dm-color-white );
 }
-body.theme-dark .dm-contact-form > form > input::-ms-input-placeholder, body.theme-dark .dm-contact-form > form textarea::-ms-input-placeholder {
+body.theme-dark .dm-contact-form > form input::-ms-input-placeholder, body.theme-dark .dm-contact-form > form textarea::-ms-input-placeholder {
   --dm-text-default-color: var( --dm-color-white );
 }
-body.theme-dark .dm-contact-form > form > input::placeholder, body.theme-dark .dm-contact-form > form textarea::placeholder {
+body.theme-dark .dm-contact-form > form input::placeholder, body.theme-dark .dm-contact-form > form textarea::placeholder {
+  --dm-text-default-color: var( --dm-color-white );
+}
+body.theme-dark .dm-contact-form > form label {
   --dm-text-default-color: var( --dm-color-white );
 }
 body.theme-dark .dm-contact-form > form > div #dm-send-status {
   --dm-text-default-color: var( --dm-color-white );
+}
+body.theme-dark .dm-contact-form > form button[data-action=prev-step] {
+  --dm-color-primary: var( --dm-color-secondary );
 }
 
 body .dm-contact-form > form .form-submit {
@@ -4353,6 +4432,9 @@ body .dm-contact-form > form .external-form-submit {
   display: -ms-flexbox;
   display: flex;
 }
+body .dm-contact-form > form[data-form-type=steps] .step {
+  display: none;
+}
 
 body[java-script=true] .dm-contact-form > form .form-submit {
   display: -webkit-box;
@@ -4361,6 +4443,23 @@ body[java-script=true] .dm-contact-form > form .form-submit {
 }
 body[java-script=true] .dm-contact-form > form .external-form-submit {
   display: none;
+}
+body[java-script=true] .dm-contact-form > form[data-form-type=steps] > * {
+  display: none;
+}
+body[java-script=true] .dm-contact-form > form[data-form-type=steps] .step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+body[java-script=true] .dm-contact-form > form[data-form-type=steps] .step > input, body[java-script=true] .dm-contact-form > form[data-form-type=steps] .step textarea {
+  width: 100%;
 }
 
 /* ---- Responsive Screens ---- */

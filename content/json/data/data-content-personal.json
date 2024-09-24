@@ -188,9 +188,211 @@
 				{
 					"name": "dm-form-button",
 					"type": "submit",
-					"value": "Submit"
+					"value": "Submit",
+					"redirect": "Proceed to the form"
 				}
 			],
+			"step-fields": [
+				[
+					{
+						"name": "step-html-banner",
+						"type": "code",
+						"content": "<?php echo renderImage('content/img/projects/denismarginas/media/banners-ultra-wide/wallpaper-contact-02.webp', true, 'banner'); ?>"
+					},
+					{
+						"name": "step-name",
+						"type": "text",
+						"placeholder": "Name",
+						"field-name-step": "name"
+					},
+					{
+						"name": "step-email",
+						"type": "text",
+						"placeholder": "Email",
+						"field-name-step": "email"
+					},
+					{
+						"name": "dm-next-step",
+						"type": "next",
+						"value": "Next Step",
+						"step": "2"
+					}
+				],
+				[
+					{
+						"name": "subject",
+						"type": "radio",
+						"placeholder": "Subject",
+						"values": [
+							{
+								"name": "send-a-message",
+								"value": "Send a Message",
+								"step": "3"
+							},
+							{
+								"name": "hire-me-for-a-freelance-project",
+								"value": "Hire me for a freelance project",
+								"step": "4"
+							},
+							{
+								"name": "offer-me-a-position-at-your-company",
+								"value": "Offer me a position at your company",
+								"step": "5"
+							}
+						],
+						"field-name-step": "message"
+					},
+					{
+						"name": "dm-next-step",
+						"type": "next",
+						"value": "Next Step",
+						"step": "subject"
+					},
+					{
+						"name": "dm-prev-step",
+						"type": "prev",
+						"value": "Previous Step",
+						"step": "1"
+					}
+
+				],
+				[
+					{
+						"name": "step-message",
+						"type": "textarea",
+						"placeholder": "Message",
+						"field-name-step": "message"
+					},
+					{
+						"name": "dm-form-button",
+						"type": "submit",
+						"value": "Submit",
+						"redirect": "Proceed to the form"
+					},
+					{
+						"name": "dm-prev-step",
+						"type": "prev",
+						"value": "Previous Step",
+						"step": "2"
+					}
+				],
+				[
+					{
+						"name": "step-project-type",
+						"type": "radio",
+						"placeholder": "Project Type",
+						"values": [
+							{
+								"name": "web-development",
+								"value": "Web Development"
+							},
+							{
+								"name": "video-editing",
+								"value": "Video Editing"
+							},
+							{
+								"name": "photo-editing",
+								"value": "Photo Editing"
+							},
+							{
+								"name": "other",
+								"value": "Other"
+							}
+						],
+						"field-name-step": "message"
+					},
+					{
+						"name": "step-budget",
+						"type": "text",
+						"placeholder": "Project Budget",
+						"field-name-step": "message"
+					},
+					{
+						"name": "step-project-details",
+						"type": "textarea",
+						"placeholder": "Project Details",
+						"field-name-step": "message"
+					},
+					{
+						"name": "dm-prev-step",
+						"type": "prev",
+						"value": "Previous Step",
+						"step": "2"
+					},
+					{
+						"name": "dm-next-step",
+						"type": "next",
+						"value": "Next",
+						"step": "6"
+					}
+
+				],
+				[
+					{
+						"name": "step-job-title",
+						"type": "text",
+						"placeholder": "Job Title",
+						"field-name-step": "message"
+					},
+					{
+						"name": "step-salary",
+						"type": "text",
+						"placeholder": "Salary Offer",
+						"field-name-step": "message"
+					},
+					{
+						"name": "step-offer-details",
+						"type": "textarea",
+						"placeholder": "Details Offer",
+						"field-name-step": "message"
+					},
+					{
+						"name": "dm-prev-step",
+						"type": "prev",
+						"value": "Previous Step",
+						"step": "2"
+					},
+					{
+						"name": "dm-next-step",
+						"type": "next",
+						"value": "Next",
+						"step": "6"
+					}
+				],
+				[
+					{
+						"name": "step-phone-number",
+						"type": "text",
+						"placeholder": "Your Phone Number",
+						"field-name-step": "phone"
+					},
+					{
+						"name": "step-your-contact",
+						"type": "text",
+						"placeholder": "Your Contact",
+						"field-name-step": "message"
+					},
+					{
+						"name": "step-your-company",
+						"type": "text",
+						"placeholder": "Your Company",
+						"field-name-step": "message"
+					},
+					{
+						"name": "dm-prev-step",
+						"type": "prev",
+						"value": "Go Back",
+						"step": "2"
+					},
+					{
+						"name": "dm-form-button",
+						"type": "submit",
+						"value": "Submit",
+						"redirect": "Proceed to the form"
+					}
+				]
+			],
+			"type": "steps",
 			"external-form-url": "https://docs.google.com/forms/d/e/1FAIpQLSdkMKYQyLa4H7yxU7RMUK97urwK5LMvbk-dFs9-wKpCRCO_Ng/viewform",
 			"external-form-type": "google-forms"
 		},

@@ -14,7 +14,15 @@
     @include flex-column();
     gap: var( --dm-spacing-secondary );
 
-    > input, textarea {
+    > div {
+      @include flex-column();
+      gap: var( --dm-spacing-primary );
+
+      #dm-send-status {
+        @include dm-font-default();
+      }
+    }
+    input, textarea {
       @include border-radius( var( --dm-border-radius-primary ) );
       @include dm-font-default();
       padding: calc(var( --dm-spacing-primary ) / 3) var( --dm-spacing-primary );
@@ -30,19 +38,62 @@
         background-color: rgba( var(--dm-color-primary-rgb) , 0.2 );
       }
     }
-    > textarea {
+    textarea {
       width: auto;
       max-width: 100%;
       min-height: 100px;
       max-height: 400px;
       resize: none;
     }
-    > div {
-      @include flex-column();
-      gap: var( --dm-spacing-primary );
+    label  {
+      @include dm-font-default();
+    }
+    img {
+      @include border-radius( var( --dm-border-radius-primary ) );
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    }
+    .radio {
+      @include flex-row();
+      width: 100%;
+      max-width: 100%;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 6px;
+      position: relative;
+      cursor: pointer;
+      user-select: none;
 
-      #dm-send-status {
-        @include dm-font-default();
+      input {
+        z-index: 2;
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      .checkmark {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: rgba( var(--dm-color-gray-lighten-rgb), 0.2 );
+        border-color: rgba( var(--dm-color-white-rgb), 1 );
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 2px;
+        outline: 2px solid rgba( var(--dm-color-primary-rgb), 1 );
+        margin: 4px;
+      }
+      input:checked + .checkmark {
+        background-color: rgba( var(--dm-color-primary-rgb), 1 );
       }
     }
   }
@@ -54,16 +105,24 @@ body, body.theme-light {
       --dm-text-heading3-color: var( --dm-color-gray-darken );
     }
     > form {
-      > input, textarea {
+      input, textarea {
         --dm-text-default-color: var( --dm-color-gray-darken );
 
         &::placeholder {
           --dm-text-default-color: var( --dm-color-gray );
         }
       }
+      label {
+        --dm-text-default-color: var( --dm-color-gray-darken );
+      }
       > div {
         #dm-send-status {
           --dm-text-default-color: var( --dm-color-gray-darken );
+        }
+      }
+      button {
+        &[data-action="prev-step"] {
+          --dm-color-primary: var( --dm-color-gray );
         }
       }
     }
@@ -76,16 +135,24 @@ body.theme-dark {
       --dm-text-heading3-color: var( --dm-color-white );
     }
     > form {
-      > input, textarea {
+      input, textarea {
         --dm-text-default-color: var( --dm-color-white );
 
         &::placeholder {
           --dm-text-default-color: var( --dm-color-white );
         }
       }
+      label {
+        --dm-text-default-color: var( --dm-color-white );
+      }
       > div {
         #dm-send-status {
           --dm-text-default-color: var( --dm-color-white );
+        }
+      }
+      button {
+        &[data-action="prev-step"] {
+          --dm-color-primary: var( --dm-color-secondary );
         }
       }
     }
@@ -101,6 +168,11 @@ body {
       .external-form-submit {
         display: flex;
       }
+      &[data-form-type="steps"] {
+        .step {
+          display: none;
+        }
+      }
     }
   }
 }
@@ -113,6 +185,20 @@ body[java-script="true"] {
       }
       .external-form-submit {
         display: none;
+      }
+      &[data-form-type="steps"] {
+        > * {
+          display: none;
+        }
+        .step {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+
+          > input, textarea {
+            width: 100%;
+          }
+        }
       }
     }
   }
