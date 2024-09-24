@@ -437,19 +437,21 @@ document.addEventListener("DOMContentLoaded", function() {
         showPlay.addEventListener("click", togglePlay);
         showPause.addEventListener("click", togglePlay);
 
+        let isPlaying = false;
+
         function togglePlay() {
-            if (video.paused) {
+            if (isPlaying) {
+                video.pause();
+                videoContainer.classList.add("paused");
+            } else {
                 video.play();
                 videoContainer.classList.remove("paused");
                 const thumbnailImg = videoContainer.querySelector(".thumbnail");
-
                 if (thumbnailImg) {
                     thumbnailImg.style.display = "none";
                 }
-            } else {
-                video.pause();
-                videoContainer.classList.add("paused");
             }
+            isPlaying = !isPlaying; // Toggle play state
         }
         video.addEventListener("play", () => {
             videoContainer.classList.remove("paused");
@@ -457,8 +459,6 @@ document.addEventListener("DOMContentLoaded", function() {
         video.addEventListener("pause", () => {
             videoContainer.classList.add("paused");
         });
-
-
     });
     // **************
     // Pop-Up
