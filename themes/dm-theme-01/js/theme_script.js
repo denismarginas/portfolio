@@ -386,25 +386,45 @@ document.addEventListener("DOMContentLoaded", function() {
         function skip(duration) {
             video.currentTime += duration;
         }
+        let lastVolume = 0.5;
+        volumeSlider.value = lastVolume;
+
         muteBtn.addEventListener("click", toggleMute);
         volumeSlider.addEventListener("input", e => {
             video.volume = e.target.value;
             video.muted = e.target.value === 0;
-        })
+            updateSliderBackground();
+        });
+
         function toggleMute() {
             video.muted = !video.muted;
-            if(video.muted) {
-                volumeSlider.style.background = `linear-gradient(to right, var(--color-range-primary) 0%, var(--color-range-primary) 0%, transparent 0%, transparent 100%)`;
+
+            if (video.muted) {
+                lastVolume = video.volume;
+                video.volume = 0;
+                volumeSlider.value = 0;
+                updateSliderBackground();
             } else {
-                volumeSlider.style.background = `linear-gradient(to right, var(--color-range-primary) 0%, var(--color-range-primary) 100%, transparent 100%, transparent 100%)`;
+                video.volume = lastVolume;
+                volumeSlider.value = lastVolume;
+                updateSliderBackground();
             }
         }
+
         video.addEventListener("volumechange", () => {
-            volumeSlider.value = video.volume;
+            if (!video.muted) {
+                lastVolume = video.volume;
+            }
+            updateSliderBackground();
+        });
+
+        function updateSliderBackground() {
+            const percentage = (volumeSlider.value / volumeSlider.max) * 100;
+            volumeSlider.style.background = `linear-gradient(to right, var(--color-range-primary) ${percentage}%, transparent ${percentage}%)`;
             let volumeLevel;
 
             if (video.muted || video.volume === 0) {
-                volumeSlider.value = 0
+                volumeSlider.value = 0;
                 volumeLevel = "muted";
             } else if (video.volume >= 0.5) {
                 volumeLevel = "high";
@@ -413,7 +433,8 @@ document.addEventListener("DOMContentLoaded", function() {
             }
 
             videoContainer.dataset.volumeLevel = volumeLevel;
-        })
+        }
+
 
         fullScreenBtn.addEventListener("click", toggleFullScreenMode);
         function toggleFullScreenMode() {
