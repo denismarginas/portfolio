@@ -393,10 +393,8 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         function toggleMute() {
             video.muted = !video.muted;
-            console.log(video.volume);
             if(video.muted) {
                 volumeSlider.style.background = `linear-gradient(to right, var(--color-range-primary) 0%, var(--color-range-primary) 0%, transparent 0%, transparent 100%)`;
-
             } else {
                 volumeSlider.style.background = `linear-gradient(to right, var(--color-range-primary) 0%, var(--color-range-primary) 100%, transparent 100%, transparent 100%)`;
             }
@@ -437,22 +435,21 @@ document.addEventListener("DOMContentLoaded", function() {
         showPlay.addEventListener("click", togglePlay);
         showPause.addEventListener("click", togglePlay);
 
-        let isPlaying = false;
-
         function togglePlay() {
-            if (isPlaying) {
-                video.pause();
-                videoContainer.classList.add("paused");
-            } else {
+            if (video.paused) {
                 video.play();
                 videoContainer.classList.remove("paused");
                 const thumbnailImg = videoContainer.querySelector(".thumbnail");
+
                 if (thumbnailImg) {
                     thumbnailImg.style.display = "none";
                 }
+            } else {
+                video.pause();
+                videoContainer.classList.add("paused");
             }
-            isPlaying = !isPlaying; // Toggle play state
         }
+
         video.addEventListener("play", () => {
             videoContainer.classList.remove("paused");
         });
@@ -460,6 +457,7 @@ document.addEventListener("DOMContentLoaded", function() {
             videoContainer.classList.add("paused");
         });
     });
+
     // **************
     // Pop-Up
     function createPopup(content) {

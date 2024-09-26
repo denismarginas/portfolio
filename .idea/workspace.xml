@@ -6,8 +6,7 @@
       <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/projects/mentormarketingexperts/logo/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/content/img/projects/mentormarketingexperts/logo/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/json/data/data-items-jobs.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-items-jobs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/render_adjustments/render_synthesize_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_adjustments/render_synthesize_html.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/education-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/education-experience.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employee-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/employee-experience.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/experience.html" afterDir="false" />
@@ -99,6 +98,8 @@
       <change beforePath="$PROJECT_DIR$/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/social-activity.html" beforeDir="false" afterPath="$PROJECT_DIR$/social-activity.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/summary-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/summary-experience.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/js/theme_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/js/theme_script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/js/theme_script.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/js/theme_script.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/visual-media-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/visual-media-projects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-development-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-development-projects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/workstation.html" beforeDir="false" afterPath="$PROJECT_DIR$/workstation.html" afterDir="false" />
@@ -184,7 +185,7 @@
       <workItem from="1727074952059" duration="6115000" />
       <workItem from="1727096388732" duration="76000" />
       <workItem from="1727098217638" duration="1896000" />
-      <workItem from="1727336720935" duration="54000" />
+      <workItem from="1727336720935" duration="4003000" />
     </task>
     <servers />
   </component>

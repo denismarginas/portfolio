@@ -28,21 +28,35 @@ function moveTagsToHead($html) {
     }
 
     $tagsToMove = ['script', 'style', 'title', 'meta', 'link'];
-
     $movedContent = '';
+
+    $existingTags = [];
     foreach ($tagsToMove as $tag) {
-        $pattern = '/<('.$tag.').*?<\/\1>/is';
+        preg_match_all('/<'.$tag.'.*?<\/'.$tag.'>/is', $html, $matches);
+        foreach ($matches[0] as $foundTag) {
+            $existingTags[] = strip_tags($foundTag); // Store tag content for comparison
+        }
+    }
+
+    foreach ($tagsToMove as $tag) {
+        $pattern = '/<'.$tag.'.*?<\/'.$tag.'>/is';
         preg_match_all($pattern, $html, $matches);
 
         foreach ($matches[0] as $foundTag) {
-            $movedContent .= $foundTag . "\n";
-            $html = str_replace($foundTag, '', $html);
+            $tagContent = strip_tags($foundTag);
+
+            if (!in_array($tagContent, $existingTags)) {
+                $movedContent .= $foundTag . "\n";
+                $html = str_replace($foundTag, '', $html);
+            }
         }
     }
+
     $html = preg_replace('/(<head.*?>)/i', '$1' . "\n" . $movedContent, $html);
 
     return $html;
 }
+
 
 function standardizeAttributeQuotes($html) {
     $pattern = "/=+'([^']+)'/";
