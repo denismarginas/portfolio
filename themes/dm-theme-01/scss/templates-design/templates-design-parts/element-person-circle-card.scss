@@ -167,7 +167,7 @@ body.theme-dark {
       }
       > div {
         .circle-background {
-          background-color: rgba( var( --dm-color-white-rgb ) , 1);
+          background-color: rgba( var( --dm-color-primary-rgb ) , 1); 
           border: 2px solid var( --dm-color-primary );
         }
       }

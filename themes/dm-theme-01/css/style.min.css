@@ -6503,7 +6503,7 @@ body.theme-dark .dm-person-circle-card > span:after {
   background-color: var(--dm-background-color-primary);
 }
 body.theme-dark .dm-person-circle-card > span > div .circle-background {
-  background-color: rgba(var(--dm-color-white-rgb), 1);
+  background-color: rgba(var(--dm-color-primary-rgb), 1);
   border: 2px solid var(--dm-color-primary);
 }
 
