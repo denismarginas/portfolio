@@ -276,14 +276,8 @@ body.theme-dark {
 body {
   .dm-contact-form {
     > form {
-      > input,textarea {
-        width: 100%;
-      }
-      > div {
-        align-self: flex-start;
-      }
       .form-submit {
-        display: flex;
+        display: none;
       }
       .external-form-submit {
         display: flex;

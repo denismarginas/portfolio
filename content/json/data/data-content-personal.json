@@ -125,22 +125,6 @@
 			"download-button-text": "Download",
 			"cv-list": [
 				{
-					"name": "Resume #3 English",
-					"thumbnail": "content/cv/cv-3/dm-cv-3-english-public-thumbnail.webp",
-					"image": "content/cv/cv-3/dm-cv-3-english-public-compressed.webp",
-					"pdf": "content/cv/cv-3/dm-cv-3-english-public-compressed.pdf",
-					"date": "Sep 17, 2023",
-					"description": "CV - Model 3"
-				},
-				{
-					"name": "Resume #3 Romanian",
-					"thumbnail": "content/cv/cv-3/dm-cv-3-romana-public-thumbnail.webp",
-					"image": "content/cv/cv-3/dm-cv-3-romana-public-compressed.webp",
-					"pdf": "content/cv/cv-3/dm-cv-3-romana-public-compressed.pdf",
-					"date": "Sep 17, 2023",
-					"description": "CV - Model 3"
-				},
-				{
 					"name": "Resume #2 English",
 					"thumbnail": "content/cv/cv-2/dm-cv-2-english-public-thumbnail.webp",
 					"image": "content/cv/cv-2/dm-cv-2-english-public-compressed.webp",
