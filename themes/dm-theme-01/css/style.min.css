@@ -4583,8 +4583,17 @@ body.theme-dark .dm-contact-form > form button[data-action=prev-step] {
   --dm-color-primary: var( --dm-color-secondary );
 }
 
+body .dm-contact-form > form > input, body .dm-contact-form > form textarea {
+  width: 100%;
+}
+body .dm-contact-form > form > div {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
 body .dm-contact-form > form .form-submit {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 body .dm-contact-form > form .external-form-submit {
   display: -webkit-box;
