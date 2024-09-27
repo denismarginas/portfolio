@@ -231,7 +231,7 @@ function renderGalleryWeb($post_data) {
 
             foreach ($gallery_web as $image_web) {
                 $image_path = $gallery_web_path_current.$gallery_web_desktop.$image_web;
-                $gallery_web_content .=  "<li class='dm-web-gallery-item gallery-item-web' data-motion='transition-fade-0' data-duration='0.3s'>".renderImage($image_path, true)."<div style='background-image: url(\"".$bg_item_desktop."\")'></div></li>";
+                $gallery_web_content .=  '<li class="dm-web-gallery-item gallery-item-web" data-motion="transition-fade-0" data-duration="0.3s">' . renderImage($image_path, true) . '<div style="background-image: url("' . $bg_item_desktop . '")"></div></li>';
             }
 
             $gallery_web_phone = $gallery_path_web_phone."/";
@@ -240,7 +240,7 @@ function renderGalleryWeb($post_data) {
             if( !empty($gallery_phone) ) {
                 foreach ($gallery_phone as $image_web) {
                     $image_path = $gallery_web_path_current.$gallery_web_phone.$image_web;
-                    $gallery_web_content .=  "<li class='dm-web-gallery-item gallery-item-phone' data-motion='transition-fade-0' data-duration='0.3s'>".renderImage($image_path, true)."<div style='background-image: url(\"".$bg_item_phone."\")'></div></li>";
+                    $gallery_web_content .=  '<li class="dm-web-gallery-item gallery-item-phone" data-motion="transition-fade-0" data-duration="0.3s">' . renderImage($image_path, true) . '<div style="background-image: url("' . $bg_item_phone . '")"></div></li>';
                 }
             }
             $gallery_web_content .= '</ul>';
@@ -267,7 +267,7 @@ function renderGalleryWebMedia($post_data) {
 
             foreach ($gallery as $item) {
                 $image_path = $gallery_path.$item;
-                $gallery_media_web_content .=  "<li class='dm-web-media-gallery-item' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderImage($image_path, true)."<div style='background-image: url(\"".$image_path."\")'></div></li>";
+                $gallery_media_web_content .=  '<li class="dm-web-media-gallery-item" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.3s">' . renderImage($image_path, true) . '<div style="background-image: url("' . $image_path . '")"></div></li>';
             }
 
             $gallery_media_web_content .= "</ul>";
@@ -285,7 +285,7 @@ function renderGalleryWebMedia($post_data) {
 
                     foreach ($gallery as $item) {
                         $image_path = $gallery_path.$dir."/".$item;
-                        $gallery_media_web_content .=  "<li class='dm-web-media-gallery-item' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderImage($image_path, true)."<div style='background-image: url(\"".$image_path."\")'></div></li>";
+                        $gallery_media_web_content .=  '<li class="dm-web-media-gallery-item" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.3s">' . renderImage($image_path, true) . '<div style="background-image: url("' . $image_path . '")"></div></li>';
                     }
 
                     $gallery_media_web_content .= "</ul>";
@@ -334,13 +334,19 @@ function renderGalleryWebContent($post_data) {
             if( !empty($gallery_web) ) {
                 foreach ($gallery_web as $image_web) {
                     $image_path = $gallery_web_content_desktop.$image_web;
-                    $gallery_web_content .=  "<li class='dm-web-gallery-item gallery-item-web' data-motion='transition-fade-0' data-duration='0.3s'>".renderImage($image_path, true)."<div style='background-image: url(\"".$bg_item_desktop."\")'></div></li>";
+                    $gallery_web_content .=  '<li class="dm-web-gallery-item gallery-item-web" data-motion="transition-fade-0" data-duration="0.3s">'
+                        . renderImage($image_path, true)
+                        . '<div style="background-image: url("' . $bg_item_desktop . '")"></div>
+                    </li>';
                 }
             }
             if( !empty($gallery_phone) ) {
                 foreach ($gallery_phone as $image_web) {
                     $image_path = $gallery_web_content_phone.$image_web;
-                    $gallery_web_content .=  "<li class='dm-web-gallery-item gallery-item-phone' data-motion='transition-fade-0' data-duration='0.3s'>".renderImage($image_path, true)."<div style='background-image: url(\"".$bg_item_phone."\")'></div></li>";
+                    $gallery_web_content .=  '<li class="dm-web-gallery-item gallery-item-phone" data-motion="transition-fade-0" data-duration="0.3s">'
+                        . renderImage($image_path, true)
+                        . '<div style="background-image: url("' . $bg_item_phone . '")"></div>
+                    </li>';
                 }
             }
             $gallery_web_content .= '</ul>';

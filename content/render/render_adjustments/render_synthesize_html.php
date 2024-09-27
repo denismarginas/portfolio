@@ -59,10 +59,20 @@ function moveTagsToHead($html) {
 
 
 function standardizeAttributeQuotes($html) {
-    $pattern = "/=+'([^']+)'/";
-    $html = preg_replace($pattern, '="$1"', $html);
+    $pattern = '/(\w+)\s*=\s*["\']([^"\']+)["\']/';
+    $html = preg_replace($pattern, '$1="$2"', $html);
     return $html;
 }
+function standardizeBackgroundImageUrls($html) {
+    $html = html_entity_decode($html);
+    $pattern = '/background-image:\s*url\(\s*[\'"]?([^\'"()]+)[\'"]?\s*\)/';
+    $replacement = 'background-image: url(\'$1\')';
+    $html = preg_replace($pattern, $replacement, $html);
+
+    return $html;
+}
+
+
 
 
 $pageFiles = glob($pagePath . '*.html');
@@ -72,6 +82,7 @@ foreach ($pageFiles as $file) {
     $cleanedContent = synthesizeHtml($content);
     $cleanedContent = moveTagsToHead($cleanedContent);
     $cleanedContent = standardizeAttributeQuotes($cleanedContent);
+    $cleanedContent = standardizeBackgroundImageUrls($cleanedContent);
     file_put_contents($file, $cleanedContent);
 }
 $log[] = "Cleaned HTML code.";
