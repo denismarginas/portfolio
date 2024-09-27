@@ -12,7 +12,7 @@ $GLOBALS['urlPath'] = getUrlPaths();
 $pagePath = $projectPath. $renderPath;
 $pageFiles = glob($pagePath . '*.html');
 
-function synthesizeHtml($html) {
+function inLineHtml($html) {
     $html = preg_replace('/\s+/', ' ', $html);
     $html = preg_replace('/>\s+</', '><', $html);
     $html = str_replace("\n", '', $html);
@@ -79,7 +79,8 @@ $pageFiles = glob($pagePath . '*.html');
 
 foreach ($pageFiles as $file) {
     $content = file_get_contents($file);
-    $cleanedContent = synthesizeHtml($content);
+    $cleanedContent = $content;
+    $cleanedContent = inLineHtml($content);
     $cleanedContent = moveTagsToHead($cleanedContent);
     $cleanedContent = standardizeAttributeQuotes($cleanedContent);
     $cleanedContent = standardizeBackgroundImageUrls($cleanedContent);

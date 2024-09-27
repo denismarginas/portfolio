@@ -10,13 +10,12 @@ endif;
 
 ?>
 
-<section class="dm-about dm-experience-knowledge grid-background-animation">
+<section class="dm-experience-knowledge grid-background-animation">
   <container>
-
-      <?php if(isset($jsonDataExperience["img"])) : ?>
+      <?php $images = $jsonDataExperience["images"] ?>
+      <?php if(isset($images["portrait"])) : ?>
           <div class="person-image" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
-              <?php echo renderImage($GLOBALS['urlPath']."content/img".$jsonDataExperience["img-path"].$jsonDataExperience["img"]);?>
-              <?php SVGRenderer::renderSVG('background-shape-1'); ?>
+              <?php echo renderImage($GLOBALS['urlPath']."content/img".$images["portrait"]["img-path"].$images["portrait"]["img"]);?>
           </div>
       <?php endif; ?>
 
@@ -74,17 +73,26 @@ endif;
       </div>
 
       <?php if (isset($jsonDataExperience["text"])) : ?>
-          <div class="experience-text">
-              <?php if (is_array($jsonDataExperience["text"])) : ?>
-                  <?php $i = 1; foreach ($jsonDataExperience["text"] as $textItem) : ?>
-                      <p data-motion="transition-fade-0" data-duration="1.2s" data-delay="<?php echo $i*0.06; ?>s">
-                          <?php echo htmlspecialchars($textItem); ?>
+          <div class="experience-container">
+
+              <div class="text">
+                  <?php if (is_array($jsonDataExperience["text"])) : ?>
+                      <?php $i = 1; foreach ($jsonDataExperience["text"] as $textItem) : ?>
+                          <p data-motion="transition-fade-0" data-duration="1.2s" data-delay="<?php echo $i*0.06; ?>s">
+                              <?php echo htmlspecialchars($textItem); ?>
+                          </p>
+                          <?php $i++; endforeach; ?>
+                  <?php else : ?>
+                      <p data-motion="transition-fade-0" data-duration="0.8s" data-delay="0.1s">
+                          <?php echo htmlspecialchars($jsonDataExperience["text"]); ?>
                       </p>
-                  <?php $i++; endforeach; ?>
-              <?php else : ?>
-                  <p data-motion="transition-fade-0" data-duration="0.8s" data-delay="0.1s">
-                      <?php echo htmlspecialchars($jsonDataExperience["text"]); ?>
-                  </p>
+                  <?php endif; ?>
+              </div>
+
+              <?php if(isset($images["banner"])) : ?>
+                  <div class="banner-image" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
+                      <?php echo renderImage($GLOBALS['urlPath']."content/img".$images["banner"]["img-path"].$images["banner"]["img"], true);?>
+                  </div>
               <?php endif; ?>
           </div>
       <?php endif; ?>
