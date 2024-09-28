@@ -16,6 +16,10 @@ endif;
       <?php if(isset($images["portrait"])) : ?>
           <div class="person-image" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
               <?php echo renderImage($GLOBALS['urlPath']."content/img".$images["portrait"]["img-path"].$images["portrait"]["img"]);?>
+              <div class="graphic-element-1">
+                  <?php SVGRenderer::renderSVG('dots-graphic'); ?>
+              </div>
+
           </div>
       <?php endif; ?>
 
