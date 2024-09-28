@@ -83,6 +83,7 @@ foreach ($pageFiles as $file) {
     $cleanedContent = inLineHtml($content);
     $cleanedContent = moveTagsToHead($cleanedContent);
     $cleanedContent = standardizeAttributeQuotes($cleanedContent);
+    $cleanedContent = inLineHtml($content);
     $cleanedContent = standardizeBackgroundImageUrls($cleanedContent);
     file_put_contents($file, $cleanedContent);
 }
