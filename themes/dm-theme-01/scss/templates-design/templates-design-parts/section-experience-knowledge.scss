@@ -32,11 +32,12 @@
         padding: var( --dm-spacing-secondary ) var( --dm-spacing-secondary ) 0 var( --dm-spacing-secondary );
       }
       > .graphic-element-1 {
+        @include border-radius( var( --dm-border-radius-primary ) );
         z-index: -1;
         content: "";
         position: absolute;
-        left: 50%;
-        bottom: -5%;
+        left: 10%;
+        bottom: -10%;
         width: 80%;
         height: auto;
 
@@ -52,9 +53,10 @@
         z-index: -1;
         content: "";
         position: absolute;
-        width: 100%;
-        padding-bottom: 100%;
+        width: 90%;
+        padding-bottom: 90%;
         bottom: 0%;
+        left: 0%;
         border-radius: 50%;
         background-color: var( --dm-color-primary );
         background-image: -webkit-gradient(
@@ -189,6 +191,12 @@
   @media only screen and (max-width: $screen-desktop-small) {
     > container {
       gap: var( --dm-spacing-small);
+
+      .person-image {
+        > img {
+          height: 400px;
+        }
+      }
     }
   }
   @media only screen and (max-width: $screen-tablet-large) {
@@ -223,9 +231,11 @@
         &:before {
           width: 30%;
           padding-bottom: 30%;
+          left: 25%;
         }
         > .graphic-element-1 {
           width: 40%;
+          left: 34%;
         }
       }
     }
@@ -251,9 +261,9 @@
       }
       .person-image {
         &:before {
-          width: 50%;
-          padding-bottom: 50%;
-          left: 10%;
+          width: 55%;
+          padding-bottom: 55%;
+          left: 5%;
         }
         > .graphic-element-1 {
           width: 60%;

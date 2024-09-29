@@ -16910,11 +16910,12 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   padding: var(--dm-spacing-secondary) var(--dm-spacing-secondary) 0 var(--dm-spacing-secondary);
 }
 .dm-experience-knowledge > container .person-image > .graphic-element-1 {
+  border-radius: var(--dm-border-radius-primary);
   z-index: -1;
   content: "";
   position: absolute;
-  left: 50%;
-  bottom: -5%;
+  left: 10%;
+  bottom: -10%;
   width: 80%;
   height: auto;
 }
@@ -16934,9 +16935,10 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   z-index: -1;
   content: "";
   position: absolute;
-  width: 100%;
-  padding-bottom: 100%;
+  width: 90%;
+  padding-bottom: 90%;
   bottom: 0%;
+  left: 0%;
   border-radius: 50%;
   background-color: var(--dm-color-primary);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, var(--dm-color-primary)), color-stop(200%, var(--dm-color-secondary)));
@@ -17121,6 +17123,9 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   .dm-experience-knowledge > container {
     gap: var(--dm-spacing-small);
   }
+  .dm-experience-knowledge > container .person-image > img {
+    height: 400px;
+  }
 }
 @media only screen and (max-width: 992px) {
   .dm-experience-knowledge > container {
@@ -17171,9 +17176,11 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   .dm-experience-knowledge > container .person-image:before {
     width: 30%;
     padding-bottom: 30%;
+    left: 25%;
   }
   .dm-experience-knowledge > container .person-image > .graphic-element-1 {
     width: 40%;
+    left: 34%;
   }
 }
 @media only screen and (max-width: 575px) {
@@ -17189,9 +17196,9 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
     max-height: 20px;
   }
   .dm-experience-knowledge > container .person-image:before {
-    width: 50%;
-    padding-bottom: 50%;
-    left: 10%;
+    width: 55%;
+    padding-bottom: 55%;
+    left: 5%;
   }
   .dm-experience-knowledge > container .person-image > .graphic-element-1 {
     width: 60%;
