@@ -12,7 +12,7 @@ endif;
 
 <section class="dm-experience-knowledge grid-background-animation">
   <container>
-      <?php $images = $jsonDataExperience["images"] ?>
+      <?php $images = $jsonDataExperience["images"]; ?>
       <?php if(isset($images["portrait"])) : ?>
           <div class="person-image" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
               <?php echo renderImage($GLOBALS['urlPath']."content/img".$images["portrait"]["img-path"].$images["portrait"]["img"]);?>
@@ -32,25 +32,36 @@ endif;
           <?php endif; ?>
 
           <?php if(isset($jsonDataExperience["knowledge-lists-text"]["text-items"])) : ?>
-              <?php $experience_text = $jsonDataExperience["knowledge-lists-text"]["text-items"];?>
+              <?php $experience_text = $jsonDataExperience["knowledge-lists-text"]["text-items"]; ?>
 
               <?php $i = 1; foreach ($experience_text as $experience_text_item) : ?>
-                  <p data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.6s" data-delay="<?php echo $i*0.03; ?>s">
+                  <p data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.6s" data-delay="<?php echo $i * 0.03; ?>s">
                       <?php echo $experience_text_item; ?>
                   </p>
                   <?php $i++; endforeach; ?>
           <?php endif; ?>
 
           <?php if(isset($jsonDataExperience["knowledge-lists-text"]["list-items"])) : ?>
-              <?php $experience_list = $jsonDataExperience["knowledge-lists-text"]["list-items"];?>
-              <ul>
-                  <?php $i = 1; foreach ($experience_list as $experience_list_item) : ?>
-                      <li data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.6s" data-delay="<?php echo $i*0.06; ?>s">
-                          <?php echo $experience_list_item; ?>
-                      </li>
-                      <?php $i++; endforeach; ?>
-              </ul>
+              <?php $knowledge_categories = $jsonDataExperience["knowledge-lists-text"]["list-items"]; ?>
+                <div class="list">
+                    <?php $j = 1; foreach ($knowledge_categories as $category) : ?>
+                        <div class="list-section">
+                            <p class="subtitle" data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.6s" data-delay="<?php echo $j * 0.01; ?>s">
+                                <?php echo $category['category']; ?>
+                            </p>
+                            <ul>
+                                <?php $n = 1; foreach ($category['items'] as $item) : ?>
+                                    <li data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.6s" data-delay="<?php echo ($j * 0.01) + ($n * 0.02); ?>s">
+                                        <?php echo $item; ?>
+                                    </li>
+                                <?php $n++; endforeach; ?>
+                            </ul>
+                        </div>
+                    <?php $j++; endforeach; ?>
+                </div>
+
           <?php endif; ?>
+
 
           <?php if(isset($jsonDataExperience["knowledge-lists-items"])) : ?>
               <?php

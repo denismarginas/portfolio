@@ -17,12 +17,21 @@ endif;
 
 <section class="dm-about grid-background-animation" data-layout="<?php echo $layout; ?>">
     <container>
+        <?php $images = $jsonAboutData["images"];
+        $renderImage = $images["compress"];
 
-        <div data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
-            <?php echo renderImage($GLOBALS['urlPath']."content/img".$jsonAboutData["img-path"].$jsonAboutData["img"]); ?>
-            <?php SVGRenderer::renderSVG('background-shape-1'); ?>
-            <span data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s" data-delay="0.5s"></span>
-        </div>
+        if( $layout == "standard" ) :
+            $renderImage = $images["standard"];
+        endif; ?>
+
+        <?php if(isset($renderImage)) : ?>
+            <div data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s">
+
+                <?php echo renderImage($GLOBALS['urlPath']."content/img".$renderImage["img-path"].$renderImage["img"]); ?>
+                <?php SVGRenderer::renderSVG('background-shape-1'); ?>
+                <span data-motion="transition-fade-0 transition-slideInRight-0" data-duration="1s" data-delay="0.5s"></span>
+            </div>
+        <?php endif; ?>
 
         <div>
             <h2 data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.5s">

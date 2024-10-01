@@ -15891,22 +15891,29 @@ body.theme-dark .dm-resume-data > container > ul > li:last-of-type > div > p {
           justify-content: center;
   gap: var(--dm-spacing-large);
 }
+.dm-about > container > div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 .dm-about > container > div:first-of-type {
   position: relative;
   width: 40%;
   z-index: 0;
 }
 .dm-about > container > div:first-of-type > img {
-  width: 100%;
-  max-width: 357px;
+  width: 450px;
+  max-width: 100%;
   height: auto;
-  clip-path: polygon(0 0, 100% 0, 100% 87%, 0 95%);
+  clip-path: polygon(0 0, 100% 0, 100% 82%, 0 82%);
+  margin-left: var(--dm-spacing-primary);
 }
 .dm-about > container > div:first-of-type > svg {
   position: absolute;
   z-index: -1;
-  width: 400px;
+  width: 360px;
+  max-width: 80%;
   height: auto;
+  top: 0%;
   left: 20%;
   -webkit-transform: rotate(40deg);
           transform: rotate(40deg);
@@ -15920,10 +15927,9 @@ body.theme-dark .dm-resume-data > container > ul > li:last-of-type > div > p {
   height: 400px;
   left: 0;
   bottom: 5.8%;
-  background-color: var(--dm-background-color-primary);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--dm-background-color-secondary)), color-stop(20%, var(--dm-background-color-primary)), color-stop(170%, var(--dm-background-color-secondary)));
-  background-image: linear-gradient(var(--dm-background-color-secondary), var(--dm-background-color-primary) 20%, var(--dm-background-color-secondary) 170%);
-  clip-path: polygon(0 0, 100% 28%, 100% 80%, 0 100%);
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(var(--dm-color-secondary-rgb), 0)), color-stop(40%, rgba(var(--dm-color-primary-rgb), 0.6)), color-stop(170%, rgba(var(--dm-color-secondary-rgb), 1)));
+  background-image: linear-gradient(270deg, rgba(var(--dm-color-secondary-rgb), 0), rgba(var(--dm-color-primary-rgb), 0.6) 40%, rgba(var(--dm-color-secondary-rgb), 1) 170%);
+  clip-path: polygon(0 0, 100% 28%, 100% 100%, 0 100%);
 }
 .dm-about > container > div:not(:first-of-type) {
   width: 60%;
@@ -15953,8 +15959,8 @@ body.theme-dark .dm-resume-data > container > ul > li:last-of-type > div > p {
   transition: max-width 0.3s;
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: R2s;
+          animation-duration: R2s;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: 1;
@@ -15994,9 +16000,10 @@ body.theme-dark .dm-resume-data > container > ul > li:last-of-type > div > p {
   width: 30%;
 }
 .dm-about[data-layout=standard] > container > div:first-of-type > img {
-  width: 100%;
-  max-width: 500px;
+  width: 500px;
+  max-width: 100%;
   clip-path: none;
+  margin: 0px;
 }
 .dm-about[data-layout=standard] > container > div:first-of-type > svg {
   width: 100%;
@@ -16052,25 +16059,49 @@ body.theme-dark .dm-resume-data > container > ul > li:last-of-type > div > p {
     width: 100%;
   }
   .dm-about[data-layout=standard] > container > div:first-of-type > img {
-    width: 100%;
-    max-width: 300px;
-    clip-path: none;
+    width: 300px;
+    max-width: 100%;
   }
   .dm-about[data-layout=standard] > container > div:first-of-type > svg {
-    max-width: 300px;
+    width: 300px;
   }
   .dm-about[data-layout=standard] > container > div:last-of-type {
     width: 100%;
   }
 }
+@media only screen and (max-width: 375px) {
+  .dm-about[data-layout=standard] > container > div:first-of-type {
+    padding: var(--dm-spacing-primary) var(--dm-spacing-primary) 0 var(--dm-spacing-primary);
+  }
+}
+.dm-about[data-layout=compress] > container > div:first-of-type {
+  position: relative;
+}
+.dm-about[data-layout=compress] > container > div:first-of-type > img {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: var(--dm-border-radius-secondary);
+  padding: var(--dm-spacing-secondary) var(--dm-spacing-secondary) 0px var(--dm-spacing-secondary);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(var(--dm-color-white-rgb), 0.5)), color-stop(60%, rgba(var(--dm-color-primary-rgb), 1)));
+}
+.dm-about[data-layout=compress] > container > div:first-of-type:after {
+  border-radius: 0 0 var(--dm-border-radius-secondary) var(--dm-border-radius-secondary);
+  content: "";
+  position: absolute;
+  width: 450px;
+  margin-left: var(--dm-spacing-primary);
+  max-width: 100%;
+  height: 15px;
+  background-color: var(--dm-color-primary);
+  bottom: calc(18% - 15px);
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
 @media only screen and (max-width: 1440px) {
   .dm-about[data-layout=compress] > container {
     gap: var(--dm-spacing-tertiary);
-  }
-}
-@media only screen and (max-width: 1240px) {
-  .dm-about[data-layout=compress] > container > div:first-of-type > img {
-    clip-path: none;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -16080,17 +16111,23 @@ body.theme-dark .dm-resume-data > container > ul > li:last-of-type > div > p {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: var(--dm-spacing-secondary);
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .dm-about[data-layout=compress] > container > div:first-of-type {
-    width: 100%;
+    width: 300px;
+    max-width: 100%;
   }
   .dm-about[data-layout=compress] > container > div:first-of-type > img {
     width: 100%;
     max-width: 300px;
-    clip-path: none;
   }
   .dm-about[data-layout=compress] > container > div:first-of-type > svg {
-    max-width: 300px;
+    width: 300px;
+  }
+  .dm-about[data-layout=compress] > container > div:first-of-type > span {
+    height: 300px;
   }
   .dm-about[data-layout=compress] > container > div:last-of-type {
     width: 100%;
@@ -16098,22 +16135,28 @@ body.theme-dark .dm-resume-data > container > ul > li:last-of-type > div > p {
 }
 @media only screen and (max-width: 420px) {
   .dm-about[data-layout=compress] > container > div:first-of-type > img {
-    max-width: 200px;
+    width: 200px;
   }
   .dm-about[data-layout=compress] > container > div:first-of-type > span {
     height: 200px;
   }
   .dm-about[data-layout=compress] > container > div:first-of-type > svg {
-    width: 65%;
+    width: 50%;
     height: auto;
+  }
+  .dm-about[data-layout=compress] > container > div:first-of-type:after {
+    width: 200px;
   }
 }
 @media only screen and (max-width: 295px) {
   .dm-about[data-layout=compress] > container > div:first-of-type > img {
-    max-width: 150px;
+    width: 150px;
   }
   .dm-about[data-layout=compress] > container > div:first-of-type > span {
     display: none;
+  }
+  .dm-about[data-layout=compress] > container > div:first-of-type:after {
+    width: 150px;
   }
 }
 
@@ -16877,6 +16920,9 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 .dm-experience-knowledge > container .person-image {
   display: -webkit-box;
@@ -16891,7 +16937,7 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
-  width: 35%;
+  width: 40%;
   max-width: 100%;
   overflow: hidden;
   border-bottom: 20px solid var(--dm-color-primary);
@@ -16902,7 +16948,7 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
           box-sizing: border-box;
   width: auto;
   max-width: 100%;
-  height: 600px;
+  height: 580px;
   -o-object-position: bottom;
      object-position: bottom;
   -o-object-fit: contain;
@@ -16947,7 +16993,7 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   display: -ms-grid;
   display: grid;
   gap: var(--dm-spacing-secondary);
-  width: calc(65% - var(--dm-spacing-large));
+  width: calc(60% - var(--dm-spacing-large));
 }
 .dm-experience-knowledge > container .experience-knowledge > h2 {
   font-family: var(--dm-text-heading1-font-family);
@@ -16996,18 +17042,41 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   color: var(--dm-text-default-color);
   word-break: break-word;
 }
-.dm-experience-knowledge > container .experience-knowledge > ul {
+.dm-experience-knowledge > container .experience-knowledge ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
-.dm-experience-knowledge > container .experience-knowledge > ul > li {
+.dm-experience-knowledge > container .experience-knowledge ul li {
   font-family: var(--dm-font-family);
   font-size: var(--dm-text-medium-font-size);
   font-style: var(--dm-text-medium-font-style);
   font-weight: var(--dm-text-medium-font-weight);
   line-height: var(--dm-text-medium-line-height);
   color: var(--dm-text-medium-color);
+}
+.dm-experience-knowledge > container .experience-knowledge > .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: var(--dm-spacing-primary);
+}
+.dm-experience-knowledge > container .experience-knowledge > .list > .list-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2px;
+}
+.dm-experience-knowledge > container .experience-knowledge > .list > .list-section > .subtitle {
+  font-weight: 600;
 }
 .dm-experience-knowledge > container .experience-knowledge > .buttons {
   display: -webkit-box;
@@ -17119,12 +17188,37 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
      object-position: center;
   max-width: 100%;
 }
-@media only screen and (max-width: 1240px) {
-  .dm-experience-knowledge > container {
-    gap: var(--dm-spacing-small);
+@media only screen and (min-width: 1920px) {
+  .dm-experience-knowledge > container .person-image {
+    width: 45%;
   }
   .dm-experience-knowledge > container .person-image > img {
-    height: 400px;
+    height: 650px;
+  }
+  .dm-experience-knowledge > container .experience-knowledge {
+    width: calc(55% - var(--dm-spacing-large));
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .dm-experience-knowledge > container {
+    gap: var(--dm-spacing-medium);
+  }
+  .dm-experience-knowledge > container .person-image > img {
+    height: 520px;
+  }
+  .dm-experience-knowledge > container .experience-knowledge {
+    width: calc(60% - var(--dm-spacing-medium));
+  }
+}
+@media only screen and (max-width: 1240px) {
+  .dm-experience-knowledge > container {
+    gap: var(--dm-spacing-tertiary);
+  }
+  .dm-experience-knowledge > container .person-image > img {
+    height: 440px;
+  }
+  .dm-experience-knowledge > container .experience-knowledge {
+    width: calc(60% - var(--dm-spacing-tertiary));
   }
 }
 @media only screen and (max-width: 992px) {
@@ -17213,6 +17307,9 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   .dm-experience-knowledge > container .person-image > .graphic-element-1 {
     width: 90%;
   }
+  .dm-experience-knowledge > container .experience-knowledge > .buttons > a {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 295px) {
   .dm-experience-knowledge > container {
@@ -17230,7 +17327,7 @@ body .dm-experience-knowledge p, body.theme-light .dm-experience-knowledge p {
   --dm-text-default-color: var( --dm-color-gray );
   --dm-text-medium-color: var( --dm-color-gray );
 }
-body .dm-experience-knowledge > container > div > ul > li, body.theme-light .dm-experience-knowledge > container > div > ul > li {
+body .dm-experience-knowledge > container > div ul li, body.theme-light .dm-experience-knowledge > container > div ul li {
   --dm-text-medium-color: var( --dm-color-gray );
 }
 
@@ -17241,7 +17338,7 @@ body.theme-dark .dm-experience-knowledge p {
   --dm-text-default-color: var( --dm-color-white );
   --dm-text-medium-color: var( --dm-color-white );
 }
-body.theme-dark .dm-experience-knowledge > container > div > ul > li {
+body.theme-dark .dm-experience-knowledge > container > div ul li {
   --dm-text-medium-color: var( --dm-color-white );
 }
 

@@ -44,8 +44,7 @@
             ["experience-knowledge", "standard"],
             ["categories"],
             ["portfolio-showcase"],
-            ["carousel-post-items", "standard"],
-            ["web-development-description"]
+            ["carousel-post-items", "standard"]
         ]
     },
     {

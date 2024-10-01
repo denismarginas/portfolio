@@ -3,9 +3,9 @@
 		"title": "About Me",
 		"birth-date": "09/09/1997",
 		"text": [
-			"My name is Denis Ionuț Mărginaș, I'm <?php echo calculatePersonAge(); ?> years old, and I have experience as a full-stack web developer. With my education in Mathematics and Informatics, I am passionate about technology and creativity, continuously seeking to expand my skills and expertise in web development.",
-			"Before entering the web development industry, I spent my free time focused on video editing, specifically for video games. I am passionate about cinematic executions and angles in video editing, and this interest led to some freelance opportunities, where I honed my skills. Eventually, I shifted my focus to web development, which has since become my main area of expertise. In my free time, I enjoy building computer hardware, playing video games, cycling, and playing tennis.",
-			"In the future, I aim to continue growing as a developer, stay updated with the latest technologies, and make a significant impact in the tech industry. When I’m not coding, I enjoy gaming and exploring new technologies that inspire my work."
+			"My name is Denis Ionuț Mărginaș, I'm <?php echo calculatePersonAge(); ?> years old, and I have experience as a full-stack web developer. I am passionate about technology and creativity, always seeking to expand my skills and expertise in web development, staying curious about the latest innovations.",
+			"Before entering the web development industry, I focused on video editing, specifically for video games. My interest in cinematic executions and angles led to freelance opportunities where I honed my skills. With a strong background in Mathematics and Informatics, I eventually shifted my focus to web development, which has since become my main area of expertise. In my free time, I enjoy building computer hardware, playing video games, cycling, and playing tennis.",
+			"Looking ahead, I aim to continue growing as a developer, stay updated with the latest technologies, and make a significant impact in the tech industry. When I’m not coding, I enjoy gaming and exploring new technologies that inspire my work."
 		],
 		"buttons": [
 			{
@@ -14,9 +14,16 @@
 				"button_page_redirect_slug": "about"
 			}
 		],
-
-		"img": "dm-personal-image-1.webp",
-		"img-path": "/personal-images/"
+		"images": {
+			"compress" :{
+				"img": "dm-personal-image-2.webp",
+				"img-path": "/personal-images/"
+			},
+			"standard" : {
+				"img": "dm-personal-image-1.webp",
+				"img-path": "/personal-images/"
+			}
+		}
 	},
 	"portfolio-video-archive": [
 		{
@@ -111,7 +118,7 @@
 					"warning-text": "For security reasons, the phone number is not displayed. However, you can request the contact phone number by sending a mail to the provided email address."
 				}
 			],
-			"img": "dm-personal-image-2.webp",
+			"img": "dm-personal-image-0.webp",
 			"img-path": "/personal-images/"
 		},
 		"resume": {
@@ -546,20 +553,36 @@
 		},
 		"knowledge-lists-text": {
 			"text-items": [
-				"I have knowledge and skills in these categories:"
+				"I have experience as a Full-Stack Web Developer on projects such as presentation websites, online shops, booking web applications, competition form applications, and SEO optimization. Additionally, I have experience as a Photo-Video Editor working on projects like ad banners, promotional offers, company logos, identity media content, and video ads."
 			],
 			"list-items": [
-				"● Web Platforms: WordPress, Prestashop, Google Site",
-				"● Page builders: Elementor, WpBakery, Gutenberg",
-				"● Operating systems: Windows, Linux",
-				"● Languages: PHP, TPL, SQL, JS, HTML, CSS, SASS/SCSS, Python, C/C++",
-				"● Libraries: jQuery 3, Bootstrap 5, Font Awesome 4, MaterialDesignWebfront",
-				"● Web development programs: cPanel, HeidiSQL, phpMyAdmin, XAMPP, GitLab, GitHub, Visual Studio Code, PhpStorm, PyCharm, Node.js, Prepros, Figma",
-				"● Photo editing programs: Photopea, Photoshop, Paint.net, Xara Photo, Topaz Gigapixel",
-				"● Video editing programs: Adobe After Effects, Sony Vegas Pro, Topaz Enhance, BCC, RSMB, Sapphire, Ignite Pro, Optical Flares, Plexus, Particular, Element 3d, 3D Camera Tracking",
-				"● 3D Programs: Blender",
-				"● Streaming programs: OBS, Google Meet, Zoom",
-				"● Other programs: Microsoft Excel, Microsoft Word, Microsoft PowerPoint, Google Sheet, Google Docs, Google Slides"
+				{
+					"category": "Web Development",
+					"category": "Web Development",
+					"items": [
+						"Technology: PHP, TPL, SQL, JS, Git, HTML, CSS, SASS/SCSS, Python, C/C++, jQuery 3, Bootstrap 5",
+						"Platforms: WordPress, Prestashop, Node.js, GitHub Pages, Google Site, XAMPP, cPanel",
+						"CMS: Elementor, WPBakery, Gutenberg",
+						"Others: HeidiSQL, phpMyAdmin, GitLab, GitHub, Visual Studio Code, PhpStorm, PyCharm, Prepros, Figma",
+						"Operating Systems: Windows, Linux"
+					]
+				},
+				{
+					"category": "Photo-Video Editing",
+					"items": [
+						"Video Editing Software: Sony Vegas Pro, Adobe After Effects, Topaz Video Enhance",
+						"Video Editing Plugins: BCC, RSMB, Sapphire, Ignite Pro, Optical Flares, Plexus, Particular, Element 3D, 3D Camera Tracking",
+						"Photo Editing Software: Photopea, Photoshop, Paint.net, Xara Photo, Topaz Gigapixel",
+						"3D Programs: Blender"
+					]
+				},
+				{
+					"category": "Office Software",
+					"items": [
+						"Microsoft Office: Microsoft Excel, Microsoft Word, Microsoft PowerPoint",
+						"Google Drive: Google Sheets, Google Docs, Google Slides"
+					]
+				}
 			]
 		},
 		"buttons": [
