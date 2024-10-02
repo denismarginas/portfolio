@@ -17215,7 +17215,11 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border-radius: var(--dm-border-radius-primary);
   gap: var(--dm-spacing-secondary);
+  padding: var(--dm-spacing-secondary);
+  background-color: rgba(var(--dm-color-primary-rgb), 0.1);
+  background-image: linear-gradient(65deg, rgba(var(--dm-color-secondary-rgb), 0), rgba(var(--dm-color-primary-rgb), 0.1) 40%, rgba(var(--dm-color-secondary-rgb), 0.2) 170%);
 }
 .dm-experience-knowledge > container .experience-container .text > p {
   font-family: var(--dm-font-family);
@@ -17225,10 +17229,13 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   line-height: var(--dm-text-medium-line-height);
   color: var(--dm-text-medium-color);
 }
+.dm-experience-knowledge > container .experience-container .banner-image {
+  height: 100%;
+}
 .dm-experience-knowledge > container .experience-container .banner-image > img {
   border-radius: var(--dm-border-radius-primary);
   width: auto;
-  height: 330px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -17255,6 +17262,9 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   }
   .dm-experience-knowledge > container .experience-knowledge {
     width: calc(60% - var(--dm-spacing-medium));
+  }
+  .dm-experience-knowledge > container .experience-container {
+    gap: var(--dm-spacing-small);
   }
 }
 @media only screen and (max-width: 1240px) {
@@ -17308,7 +17318,15 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    flex-direction: column-reverse;
     gap: var(--dm-spacing-tertiary);
+  }
+  .dm-experience-knowledge > container .experience-container .banner-image {
+    width: 100%;
+  }
+  .dm-experience-knowledge > container .experience-container .banner-image > img {
+    width: 100%;
+    height: 330px;
   }
   .dm-experience-knowledge > container .person-image {
     padding: var(--dm-spacing-primary) var(--dm-spacing-primary) 0px var(--dm-spacing-primary);
@@ -17356,6 +17374,9 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   }
   .dm-experience-knowledge > container .experience-knowledge > .buttons > a {
     width: 100%;
+  }
+  .dm-experience-knowledge > container .experience-container .banner-image > img {
+    height: 200px;
   }
 }
 @media only screen and (max-width: 295px) {
