@@ -18047,12 +18047,16 @@ body.theme-dark .dm-summary-experience .dm-experience-section > container > hr {
   position: relative;
   overflow: hidden;
   max-width: 300px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .dm-jobs > container > ul > li.dm-job-list > ul > li > .work-logo > img {
-  width: auto;
-  height: auto;
-  max-width: 70%;
-  max-height: 70%;
+  width: 100%;
+  height: 70px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 .dm-jobs > container > ul > li.dm-job-list > ul > li > .company-name {
   display: -webkit-box;
@@ -18633,8 +18637,8 @@ body.theme-dark .dm-summary-experience .dm-experience-section > container > hr {
 }
 @media only screen and (max-width: 1240px) {
   .dm-jobs > container > ul > li.dm-job-list > ul[data-listing] {
-    width: 40%;
-    max-width: 40%;
+    width: calc(50% - var(--dm-spacing-secondary));
+    max-width: calc(50% - var(--dm-spacing-secondary));
   }
   .dm-jobs > container > ul > li.dm-job > ul > li.work-details > .work-data {
     -ms-grid-columns: 1.2fr 1.5fr 0.2fr;
@@ -18642,15 +18646,14 @@ body.theme-dark .dm-summary-experience .dm-experience-section > container > hr {
   }
 }
 @media only screen and (max-width: 992px) {
-  .dm-jobs > container > ul > li.dm-job-list > ul[data-listing] {
-    width: 42%;
-    max-width: 42%;
-  }
   .dm-jobs > container > ul > li.dm-job-list > ul > li > .work-logo {
     padding: var(--dm-spacing-primary);
-    max-height: 70px;
-    width: 160px;
+    width: 100%;
     max-width: 100%;
+    max-height: 100px;
+  }
+  .dm-jobs > container > ul > li.dm-job-list > ul > li > .work-logo > img {
+    height: 50px;
   }
   .dm-jobs > container > ul > li.dm-job-list > ul > li > .company-name {
     height: 100%;
@@ -18711,14 +18714,25 @@ body.theme-dark .dm-summary-experience .dm-experience-section > container > hr {
   .dm-jobs > container > ul > li.dm-job-list > ul {
     max-width: 100%;
   }
+  .dm-jobs > container > ul > li.dm-job-list > ul[data-listing] {
+    width: calc(50% - var(--dm-spacing-primary));
+    max-width: calc(50% - var(--dm-spacing-primary));
+  }
+  .dm-jobs > container > ul > li.dm-job-list > ul > li > .work-logo {
+    max-height: 76px;
+  }
+  .dm-jobs > container > ul > li.dm-job-list > ul > li > .work-logo > img {
+    height: 40px;
+  }
   .dm-jobs > container > ul > li.dm-job-list > ul > li > .company-name > span {
-    font-family: var(--dm-font-family);
-    font-size: var(--dm-text-small-font-size);
-    font-style: var(--dm-text-small-font-style);
-    font-weight: var(--dm-text-small-font-weight);
-    line-height: var(--dm-text-small-line-height);
-    color: var(--dm-text-small-color);
-    --dm-text-small-font-weight: 600;
+    font-family: var(--dm-text-extra-small-font-family);
+    font-size: var(--dm-text-extra-small-font-size);
+    font-style: var(--dm-text-extra-small-font-style);
+    font-weight: var(--dm-text-extra-small-font-weight);
+    line-height: var(--dm-text-extra-small-line-height);
+    letter-spacing: var(--dm-text-extra-small-letter-spacing);
+    color: var(--dm-text-extra-small-color);
+    --dm-text-extra-small-font-weight: 600;
   }
   .dm-jobs > container > ul > li.dm-job > ul > li.work-details > .work-function > span {
     font-family: var(--dm-font-family);
@@ -18825,7 +18839,7 @@ body .dm-jobs > container > ul > li.dm-job-list > ul > li > .company-name, body.
 }
 body .dm-jobs > container > ul > li.dm-job-list > ul > li > .company-name > span, body.theme-light .dm-jobs > container > ul > li.dm-job-list > ul > li > .company-name > span {
   --dm-text-medium-color: var( --dm-color-gray );
-  --dm-text-small-color: var( --dm-color-gray );
+  --dm-text-extra-small-color: var( --dm-color-gray );
 }
 body .dm-jobs > container > ul > li.dm-job, body.theme-light .dm-jobs > container > ul > li.dm-job {
   border: 1px solid rgba(var(--dm-color-gray-rgb), 0.2);
@@ -18880,7 +18894,7 @@ body.theme-dark .dm-jobs > container > ul > li.dm-job-list > ul > li > .company-
 }
 body.theme-dark .dm-jobs > container > ul > li.dm-job-list > ul > li > .company-name > span {
   --dm-text-medium-color: var( --dm-color-white );
-  --dm-text-small-color: var( --dm-color-white );
+  --dm-text-extra-small-color: var( --dm-color-white );
 }
 body.theme-dark .dm-jobs > container > ul > li.dm-job {
   border: 1px solid rgba(var(--dm-color-white-rgb), 0.2);

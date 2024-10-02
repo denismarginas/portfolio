@@ -44,12 +44,13 @@
               position: relative;
               overflow: hidden;
               max-width: 300px;
+              box-sizing: border-box;
 
               > img {
-                width: auto;
-                height: auto;
-                max-width: 70%;
-                max-height: 70%;
+                width: 100%;
+                height: 70px;
+                object-fit: contain;
+                object-position: center;
               }
             }
             > .company-name {
@@ -434,8 +435,8 @@
         > li.dm-job-list {
           > ul {
             &[data-listing] {
-              width: 40%;
-              max-width: 40%;
+              width: calc(50% - var( --dm-spacing-secondary ));
+              max-width: calc(50% - var( --dm-spacing-secondary ));
             }
           }
         }
@@ -456,17 +457,16 @@
       > ul {
         > li.dm-job-list {
           > ul {
-            &[data-listing] {
-              width: 42%;
-              max-width: 42%;
-            }
             > li {
-
               > .work-logo {
                 padding: var( --dm-spacing-primary );
-                max-height: 70px;
-                width: 160px;
+                width: 100%;
                 max-width: 100%;
+                max-height: 100px;
+
+                > img {
+                  height: 50px;
+                }
               }
               > .company-name {
                 height: 100%;
@@ -546,11 +546,22 @@
           > ul {
             max-width: 100%;
 
+            &[data-listing] {
+              width: calc(50% - var( --dm-spacing-primary ));
+              max-width: calc(50% - var( --dm-spacing-primary ));
+            }
             > li {
+              > .work-logo {
+                max-height: 76px;
+
+                > img {
+                  height: 40px;
+                }
+              }
               > .company-name {
                 > span {
-                  @include dm-font-small();
-                  --dm-text-small-font-weight: 600;
+                  @include dm-font-extra-small();
+                  --dm-text-extra-small-font-weight: 600;
                 }
               }
             }
@@ -676,7 +687,7 @@ body, body.theme-light {
 
                 > span {
                   --dm-text-medium-color: var( --dm-color-gray );
-                  --dm-text-small-color: var( --dm-color-gray );
+                  --dm-text-extra-small-color: var( --dm-color-gray );
                 }
               }
             }
@@ -757,7 +768,7 @@ body.theme-dark {
 
                 > span {
                   --dm-text-medium-color: var( --dm-color-white );
-                  --dm-text-small-color: var( --dm-color-white );
+                  --dm-text-extra-small-color: var( --dm-color-white );
                 }
               }
             }
