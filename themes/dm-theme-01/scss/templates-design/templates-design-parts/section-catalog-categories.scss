@@ -104,7 +104,7 @@
       }
     }
   }
-  @media only screen and (max-width: $screen-tablet-small) {
+  @media only screen and (max-width: $screen-phone-large ) {
     > container {
       > div {
         > h2 {
@@ -115,8 +115,17 @@
         }
         > ul {
           padding: var( --dm-spacing-secondary ) 0;
-          gap: var( --dm-spacing-primary );
+          gap: calc( var( --dm-spacing-primary ) );
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-medium ) {
+    > container {
+      > div {
+        > ul {
           grid-template-columns: repeat(1, 0.95fr);
+          gap: calc( var( --dm-spacing-primary ) );
 
           > li {
             &:first-of-type {

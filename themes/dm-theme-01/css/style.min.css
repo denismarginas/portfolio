@@ -5096,6 +5096,8 @@ body[java-script=true] .dm-contact-form > form[data-form-type=steps] .step[data-
   transition: box-shadow 0.4s;
   transition: box-shadow 0.4s, -webkit-box-shadow 0.4s;
   max-height: 450px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .category-card > img {
   width: 100%;
@@ -5207,10 +5209,12 @@ body[java-script=true] .dm-contact-form > form[data-form-type=steps] .step[data-
   text-overflow: ellipsis;
   background: rgba(var(--dm-color-black-rgb), 0.7);
   width: 100%;
-  padding: calc(var(--dm-spacing-primary) + 6px) var(--dm-spacing-secondary) var(--dm-spacing-primary);
+  padding: calc(var(--dm-spacing-primary) + 10px) var(--dm-spacing-primary) var(--dm-spacing-primary);
   --dm-text-big-color: var( --dm-color-white );
   --dm-text-big-font-weight: 600;
   text-transform: uppercase;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .category-card > div > a:after {
   content: "";
@@ -5232,6 +5236,13 @@ body[java-script=true] .dm-contact-form > form[data-form-type=steps] .step[data-
   transition: width 0.5s ease, background-color 0.5s ease;
 }
 .category-card > div > p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: rgba(var(--dm-color-primary-rgb), 0.8);
   min-height: 60px;
   padding: var(--dm-spacing-secondary) var(--dm-spacing-secondary);
@@ -5338,8 +5349,40 @@ body[java-script=true] .dm-contact-form > form[data-form-type=steps] .step[data-
     color: var(--dm-text-small-color);
     --dm-text-small-color: var( --dm-color-white );
     --dm-text-small-font-weight: 600;
+    padding: calc(var(--dm-spacing-primary) + 8px) 6px var(--dm-spacing-primary) 6px;
   }
   .category-card > div > p > span {
+    font-family: var(--dm-text-extra-small-font-family);
+    font-size: var(--dm-text-extra-small-font-size);
+    font-style: var(--dm-text-extra-small-font-style);
+    font-weight: var(--dm-text-extra-small-font-weight);
+    line-height: var(--dm-text-extra-small-line-height);
+    letter-spacing: var(--dm-text-extra-small-letter-spacing);
+    color: var(--dm-text-extra-small-color);
+    --dm-text-extra-small-color: var( --dm-color-white );
+  }
+}
+@container (max-width: 180px) {
+  .category-card > div {
+    width: 100%;
+  }
+  .category-card > div > a {
+    font-family: var(--dm-text-extra-small-font-family);
+    font-size: var(--dm-text-extra-small-font-size);
+    font-style: var(--dm-text-extra-small-font-style);
+    font-weight: var(--dm-text-extra-small-font-weight);
+    line-height: var(--dm-text-extra-small-line-height);
+    letter-spacing: var(--dm-text-extra-small-letter-spacing);
+    color: var(--dm-text-extra-small-color);
+    --dm-text-extra-small-color: var( --dm-color-white );
+    --dm-text-extra-small-font-weight: 600;
+  }
+  .category-card > div > p {
+    padding: 6px;
+    min-height: 90px;
+  }
+  .category-card > div > p > span {
+    display: none;
     font-family: var(--dm-text-extra-small-font-family);
     font-size: var(--dm-text-extra-small-font-size);
     font-style: var(--dm-text-extra-small-font-style);
@@ -20030,7 +20073,7 @@ body.theme-dark .dm-education > container > .detailed-list .education > .details
     grid-column: span 2;
   }
 }
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 420px) {
   .dm-catalog-categories > container > div > h2 {
     font-family: var(--dm-text-heading3-font-family);
     font-size: var(--dm-text-heading3-font-size);
@@ -20045,9 +20088,14 @@ body.theme-dark .dm-education > container > .detailed-list .education > .details
   }
   .dm-catalog-categories > container > div > ul {
     padding: var(--dm-spacing-secondary) 0;
-    gap: var(--dm-spacing-primary);
+    gap: calc(var(--dm-spacing-primary));
+  }
+}
+@media only screen and (max-width: 375px) {
+  .dm-catalog-categories > container > div > ul {
     -ms-grid-columns: 0.95fr;
     grid-template-columns: repeat(1, 0.95fr);
+    gap: calc(var(--dm-spacing-primary));
   }
   .dm-catalog-categories > container > div > ul > li:first-of-type {
     -ms-grid-column-span: 1;
