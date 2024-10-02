@@ -16083,7 +16083,11 @@ body.theme-dark .dm-resume-data > container > ul > li:last-of-type > div > p {
           box-sizing: border-box;
   border-radius: var(--dm-border-radius-secondary);
   padding: var(--dm-spacing-secondary) var(--dm-spacing-secondary) 0px var(--dm-spacing-secondary);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(var(--dm-color-white-rgb), 0.5)), color-stop(60%, rgba(var(--dm-color-primary-rgb), 1)));
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(var(--dm-color-primary-rgb), 0)), color-stop(50%, rgba(var(--dm-color-primary-rgb), 0.8)), color-stop(140%, rgba(var(--dm-color-secondary-rgb), 1)));
+}
+.dm-about[data-layout=compress] > container > div:first-of-type > svg {
+  width: 320px;
+  max-width: 80%;
 }
 .dm-about[data-layout=compress] > container > div:first-of-type:after {
   border-radius: 0 0 var(--dm-border-radius-secondary) var(--dm-border-radius-secondary);
@@ -16124,7 +16128,7 @@ body.theme-dark .dm-resume-data > container > ul > li:last-of-type > div > p {
     max-width: 300px;
   }
   .dm-about[data-layout=compress] > container > div:first-of-type > svg {
-    width: 300px;
+    width: 200px;
   }
   .dm-about[data-layout=compress] > container > div:first-of-type > span {
     height: 300px;
@@ -16141,7 +16145,7 @@ body.theme-dark .dm-resume-data > container > ul > li:last-of-type > div > p {
     height: 200px;
   }
   .dm-about[data-layout=compress] > container > div:first-of-type > svg {
-    width: 50%;
+    width: 40%;
     height: auto;
   }
   .dm-about[data-layout=compress] > container > div:first-of-type:after {

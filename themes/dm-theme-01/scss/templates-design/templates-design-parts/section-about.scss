@@ -207,9 +207,14 @@
             padding: var(  --dm-spacing-secondary ) var(  --dm-spacing-secondary ) 0px var(  --dm-spacing-secondary );
             background-image: -webkit-gradient(
                 linear, left top, left bottom,
-                color-stop(20%, rgba( var( --dm-color-white-rgb ), 0.5 )),
-                color-stop(60%, rgba( var( --dm-color-primary-rgb ), 1 ))
+                color-stop(20%, rgba( var( --dm-color-primary-rgb ), 0 )),
+                color-stop(50%, rgba( var( --dm-color-primary-rgb ), 0.8 )),
+                color-stop(140%, rgba( var( --dm-color-secondary-rgb ), 1 ))
             );
+          }
+          > svg {
+            width: 320px;
+            max-width: 80%;
           }
           &:after {
             @include border-radius( 0 0  var( --dm-border-radius-secondary ) var( --dm-border-radius-secondary ));
@@ -250,7 +255,7 @@
               max-width: 300px;
             }
             > svg {
-              width: 300px;
+              width: 200px;
             }
             > span {
               height: 300px;
@@ -273,7 +278,7 @@
               height: 200px;
             }
             > svg {
-              width: 50%;
+              width: 40%;
               height: auto;
             }
             &:after {
