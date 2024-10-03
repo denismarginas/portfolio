@@ -54,7 +54,7 @@
     > .carousel-item {
       > .dm-post-item-image {
         @include fix-width(100px);
-        height: 60px;
+        height: 75px;
       }
     }
   }
