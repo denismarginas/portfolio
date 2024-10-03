@@ -760,8 +760,34 @@
 		"title": "WORK",
 		"subtitle": "EXPERIENCE",
 		"description": "Since 2019, I have actively immersed myself in numerous web projects, collaborating with diverse companies to create a wide range of online solutions. Throughout this period, my expertise has encompassed the development of presentation sites, online stores, web applications, SEO optimization, as well as web design.",
-		"img-path": "design-elements",
-		"img-preview": "portfolio-experience-image.webp",
+		"images" : {
+			"screen": {
+				"img-path": "design-elements",
+				"img-preview": "monitor-with-project.webp"
+			},
+			"cards": [
+				{
+					"img-path": "design-elements",
+					"img-preview": "mini-work-card-3d-editing.webp"
+				},
+				{
+					"img-path": "design-elements",
+					"img-preview": "mini-work-card-video-editing.webp"
+				},
+				{
+					"img-path": "design-elements",
+					"img-preview": "mini-work-card-seo-optimization.webp"
+				},
+				{
+					"img-path": "design-elements",
+					"img-preview": "mini-work-card-web-design.webp"
+				},
+				{
+					"img-path": "design-elements",
+					"img-preview": "mini-work-card-photo-editing.webp"
+				}
+			]
+		},
 		"buttons": [
 			{
 				"button_text": "More Details",

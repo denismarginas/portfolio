@@ -11,11 +11,11 @@
       @include reset-list();
       @include flex-center();
       display: flex;
-      gap: var( --dm-spacing-small );
+      gap: var( --dm-spacing-large );
 
       > li {
         &:first-of-type {
-          width: 70%;
+          width: 40%;
           display: grid;
           gap: var( --dm-spacing-tertiary );
 
@@ -28,6 +28,7 @@
               --dm-text-heading1-color: var( --dm-color-primary );
               --dm-text-heading1-font-size: 50px;
               padding: var( --dm-spacing-primary ) var( --dm-spacing-tertiary );
+              box-sizing: border-box;
 
               &:first-of-type {
                 background-color: rgba( var( --dm-color-primary-rgb ), 0.9 );
@@ -39,12 +40,87 @@
             @include dm-font-default();
           }
         }
-        &:last-of-type {
-          width: 30%;
+        &.projects-previews {
+          width: 60%;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: start;
+          justify-content: center;
+          gap: 0px;
 
-          > img {
-            width: 100%;
-            height: auto;
+          .screen-container {
+            @include flex-row();
+            width: 65%;
+            margin-left: -35%;
+            justify-content: end;
+            transition: all 0.3s ease-in-out;
+
+            > img {
+              width: auto;
+              height: 540px;
+              max-width: 100%;
+              object-position: right;
+              object-fit: contain;
+            }
+          }
+          .cards-container {
+            width: 50%;
+            position: relative;
+            height: 500px;
+            z-index: 1;
+            transition: all 0.3s ease-in-out;
+
+            > img {
+              filter: saturate(0.7);
+              position: absolute;
+              width: auto;
+              height: auto;
+              max-width: 100%;
+
+              &:hover {
+                filter: saturate(1);
+              }
+            }
+            .card-1 {
+              width: 20%;
+              left: 14%;
+              top: 34%;
+            }
+            .card-2 {
+              width: 40%;
+              left: 14%;
+              bottom: 12%;
+            }
+            .card-3 {
+              width: 55%;
+              right: 0%;
+              top: 30%;
+            }
+            .card-4 {
+              width: 66%;
+              left: 22%;
+              top: 0%;
+            }
+            .card-5 {
+              width: 50%;
+              right: 20%;
+              bottom: 5%;
+            }
+            .bg {
+              border-radius: 20%;
+              content: "";
+              position: absolute;
+              z-index: -1;
+              background-color: rgba( var( --dm-color-primary-rgb ), 0.6 );
+              width: 60%;
+              height: 60%;
+              left: 40%;
+              bottom: 20%;
+              top: 20%;
+              right: 0%;
+              filter: blur(56px);
+            }
           }
         }
       }
@@ -53,10 +129,24 @@
   @media only screen and (max-width: $screen-desktop-large) {
     > container {
       > ul {
-        > li:first-of-type {
-          > h2 {
-            > span {
-              --dm-text-heading1-font-size: 36px;
+        gap: var( --dm-spacing-medium );
+
+        > li {
+          &:first-of-type {
+            > h2 {
+              > span {
+                --dm-text-heading1-font-size: 36px;
+              }
+            }
+          }
+          &.projects-previews {
+            > .screen-container {
+              > img {
+                height: 500px;
+              }
+            }
+            > .cards-container {
+              height: 450px;
             }
           }
         }
@@ -66,19 +156,54 @@
   @media only screen and (max-width: $screen-desktop-medium) {
     > container {
       > ul {
-        > li:first-of-type {
-          > h2 {
-            > span {
-              @include dm-font-heading2();
-              --dm-text-heading2-font-family: var( --dm-font-family-secondary );
-              padding: var( --dm-spacing-primary );
+        gap: var( --dm-spacing-small );
 
-              &:first-of-type{
-                --dm-text-heading2-color: var( --dm-color-white );
+        > li {
+          &:first-of-type {
+            > h2 {
+              > span {
+                @include dm-font-heading2();
+                --dm-text-heading2-font-family: var( --dm-font-family-secondary );
+                padding: var( --dm-spacing-primary );
+
+                &:first-of-type{
+                  --dm-text-heading2-color: var( --dm-color-white );
+                }
+                &:last-of-type{
+                  --dm-text-heading2-color: var( --dm-color-primary );
+                }
               }
-              &:last-of-type{
-                --dm-text-heading2-color: var( --dm-color-primary );
+            }
+          }
+          &.projects-previews {
+            > .screen-container {
+              > img {
+                height: 480px;
               }
+            }
+            > .cards-container {
+              height: 420px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-desktop-small) {
+    > container {
+      > ul {
+        >  li {
+          &.projects-previews {
+            > .screen-container {
+              margin-left: -25%;
+
+              > img {
+                height: 460px;
+              }
+            }
+            > .cards-container {
+              width: 75%;
+              height: 420px;
             }
           }
         }
@@ -88,18 +213,30 @@
   @media only screen and (max-width: $screen-tablet-large) {
     > container {
       > ul {
-        > li:first-of-type {
-          > h2 {
-            > span {
-              @include dm-font-heading4();
-              --dm-text-heading4-font-family: var( --dm-font-family-secondary );
+        >  li {
+          &:first-of-type {
+            > h2 {
+              > span {
+                @include dm-font-heading4();
+                --dm-text-heading4-font-family: var( --dm-font-family-secondary );
 
-              &:first-of-type{
-                --dm-text-heading4-color: var( --dm-color-white );
+                &:first-of-type{
+                  --dm-text-heading4-color: var( --dm-color-white );
+                }
+                &:last-of-type{
+                  --dm-text-heading4-color: var( --dm-color-primary );
+                }
               }
-              &:last-of-type{
-                --dm-text-heading4-color: var( --dm-color-primary );
+            }
+          }
+          &.projects-previews {
+            > .screen-container {
+              > img {
+                height: 340px;
               }
+            }
+            > .cards-container {
+              height: 320px;
             }
           }
         }
@@ -110,8 +247,21 @@
     > container {
       > ul {
         flex-direction: column;
-        > li:first-of-type, li:last-of-type {
-          width: 100%;
+        > li {
+          &:first-of-type {
+            width: 100%;
+          }
+          &.projects-previews {
+            width: 100%;
+
+            > .screen-container {
+              width: 50%;
+              margin-left: -20%;
+            }
+            > .cards-container {
+              width: 60%;
+            }
+          }
         }
       }
     }
@@ -119,18 +269,30 @@
   @media only screen and (max-width: $screen-tablet-small) {
     > container {
       > ul {
-        > li:first-of-type {
-          > h2 {
-            > span {
-              @include dm-font-heading6();
-              --dm-text-heading6-font-family: var( --dm-font-family-secondary );
+        > li {
+          &:first-of-type {
+            > h2 {
+              > span {
+                @include dm-font-heading6();
+                --dm-text-heading6-font-family: var( --dm-font-family-secondary );
 
-              &:first-of-type{
-                --dm-text-heading6-color: var( --dm-color-white );
+                &:first-of-type{
+                  --dm-text-heading6-color: var( --dm-color-white );
+                }
+                &:last-of-type{
+                  --dm-text-heading6-color: var( --dm-color-primary );
+                }
               }
-              &:last-of-type{
-                --dm-text-heading6-color: var( --dm-color-primary );
-              }
+            }
+          }
+          &.projects-previews {
+            > .screen-container {
+                > img {
+                  height: 320px;
+                }
+            }
+            > .cards-container {
+              height: 280px;
             }
           }
         }
@@ -140,9 +302,71 @@
   @media only screen and (max-width: $screen-phone-large) {
     > container {
       > ul {
-        > li:first-of-type {
-          > h2 {
-            flex-direction: column;
+        > li {
+          &:first-of-type {
+            > h2 {
+              flex-wrap: wrap;
+            }
+          }
+          &.projects-previews {
+            > .screen-container {
+              > img {
+                height: 320px;
+              }
+            }
+            > .cards-container {
+              width: 80%;
+              height: 290px;
+
+              .bg {
+                filter: blur(25px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-medium) {
+    > container {
+      > ul {
+        > li {
+          &.projects-previews {
+            > .screen-container {
+              > img {
+                height: 280px;
+              }
+            }
+            > .cards-container {
+              width: 80%;
+              height: 260px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-small) {
+    > container {
+      > ul {
+        > li {
+          &:first-of-type {
+            > h2 {
+              > span {
+                padding: calc( var( --dm-spacing-primary ) / 2);
+              }
+            }
+          }
+          &.projects-previews {
+            > .screen-container {
+              > img {
+                height: 220px;
+              }
+            }
+            > .cards-container {
+              width: 80%;
+              height: 200px;
+            }
           }
         }
       }
