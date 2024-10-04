@@ -21,6 +21,7 @@
 
           > h2 {
             display: flex;
+            align-items: center;
 
             > span {
               @include dm-font-heading1();

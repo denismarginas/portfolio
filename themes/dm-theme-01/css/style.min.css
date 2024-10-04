@@ -20855,6 +20855,9 @@ body.theme-dark .dm-portfolio-showcase > container > ul > li .video-timeline > u
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .dm-work-experience > container > ul > li:first-of-type > h2 > span {
   font-family: var(--dm-text-heading1-font-family);
