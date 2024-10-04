@@ -4,8 +4,7 @@
         "content": [
             ["about", "compress"],
             ["categories"],
-            ["work-experience"],
-            ["carousel-post-items", "compress"]
+            ["work-experience"]
         ]
     },
     {
@@ -19,15 +18,15 @@
         "content": [
             ["about", "compress"],
             ["categories"],
-            ["work-experience"],
-            ["carousel-post-items", "compress"]
+            ["work-experience"]
         ]
     },
     {
         "file": "about",
         "content": [
             ["about", "standard"],
-            ["hobby-list"]
+            ["hobby-list"],
+            ["carousel-post-items", "compress"]
         ]
     },
     {

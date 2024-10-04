@@ -58,5 +58,10 @@ endif;
         $renderer->renderElement("animation-waves");
     endif; ?>
 
+    <?php if($layout == "standard") :
+        $renderer = new RendererElements();
+        $renderer->renderElement("animation-waves");
+    endif; ?>
+
 </div>
 

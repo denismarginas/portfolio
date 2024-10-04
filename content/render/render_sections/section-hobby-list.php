@@ -53,10 +53,8 @@ endif;
 
     </container>
 
-    <?php
-    $renderer = new RendererElements();
-    $renderer->renderElement("animation-blurred-lines");
-    ?>
+    <?php $renderer = new RendererElements();
+    $renderer->renderElement("animation-blurred-lines"); ?>
 
 </section>
 
