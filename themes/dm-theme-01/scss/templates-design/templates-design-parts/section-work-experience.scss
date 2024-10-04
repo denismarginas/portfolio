@@ -29,7 +29,6 @@
               --dm-text-heading1-color: var( --dm-color-primary );
               --dm-text-heading1-font-size: 50px;
               padding: var( --dm-spacing-primary ) var( --dm-spacing-tertiary );
-              box-sizing: border-box;
 
               &:first-of-type {
                 background-color: rgba( var( --dm-color-primary-rgb ), 0.9 );

@@ -20871,8 +20871,6 @@ body.theme-dark .dm-portfolio-showcase > container > ul > li .video-timeline > u
   --dm-text-heading1-color: var( --dm-color-primary );
   --dm-text-heading1-font-size: 50px;
   padding: var(--dm-spacing-primary) var(--dm-spacing-tertiary);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 .dm-work-experience > container > ul > li:first-of-type > h2 > span:first-of-type {
   background-color: rgba(var(--dm-color-primary-rgb), 0.9);
