@@ -6,10 +6,9 @@
       <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/json/data/data-pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-pages.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/json/data/data-workstation.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-workstation.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/json/index/index-data-pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/index/index-data-pages.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render_elements/element-hero.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_elements/element-hero.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-hobby-list.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-hobby-list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/vid/projects/denismarginas/personal-workstation/desktop-setup.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/content/vid/projects/denismarginas/personal-workstation/desktop-setup.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/xml/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/content/xml/sitemap.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/education-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/education-experience.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employee-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/employee-experience.html" afterDir="false" />
@@ -126,17 +125,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/xampp-php8.1/htdocs/portfolio/content/render/render_sections",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.editor",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp-php8.1/htdocs/portfolio/content/render/render_sections&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp-php8.1\htdocs\portfolio\content\render\render_sections" />
@@ -202,6 +201,7 @@
       <workItem from="1727862432855" duration="5699000" />
       <workItem from="1727947614736" duration="2019000" />
       <workItem from="1727976351386" duration="14989000" />
+      <workItem from="1728202055808" duration="1675000" />
     </task>
     <servers />
   </component>
