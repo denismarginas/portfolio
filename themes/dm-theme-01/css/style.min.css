@@ -7445,6 +7445,8 @@ body[java-script=true] .dm-toggletheme {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(transparent));
   background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
   width: 100%;
+  left: 0;
+  right: 0;
   aspect-ratio: 6/1;
   z-index: -1;
   pointer-events: none;
