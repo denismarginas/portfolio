@@ -13737,6 +13737,9 @@ body.theme-dark .dm-post > container .post-content > .dm-post-details-grid > .dm
   word-break: break-word;
   position: relative;
   overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
 }
 .dm-posts-list > container > ul > .dm-post-item > .dm-post-item-image {
   display: -webkit-box;

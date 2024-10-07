@@ -22,6 +22,8 @@
         word-break: break-word;
         position: relative;
         overflow: hidden;
+        box-sizing: border-box;
+        height: 100%; 
 
         > .dm-post-item-image {
             @include flex-center();
