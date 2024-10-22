@@ -1,0 +1,307 @@
+[
+	{
+		"file": "personal-workstation-1",
+		"title": "Personal-Workstation #1",
+		"description": "Welcome to my personal workstation page! This is the hub of my productivity, where I tackle work projects and pursue personal endeavors. With regular updates and enhancements, I strive to maintain an efficient and inspiring work environment. The most recent update to my setup was in January 2023, and I'm excited to showcase the improvements I've made. Get ready to explore my workstation and discover the tools and setup that fuel my productivity!",
+		"media_path": "pc-01",
+		"path_img": "workstation",
+		"path_vid": "projects/denismarginas/personal-workstation",
+		"style": {
+			"--w-color-primary": "#2866c8",
+			"--w-color-secondary": "#273f65",
+			"--w-text-color-on-bg": "#ffffff",
+			"--w-title-font": "'Matricode'",
+			"--w-text-font": "'Roboto'"
+		},
+		"status": "active",
+		"images": {
+			"full-setup": ["pc_setup_1.webp", "pc_setup_2.webp", "pc_setup_3.webp"],
+			"workstation": ["pc-00.webp", "pc-01.webp"]
+		},
+		"configuration": {
+			"gpu":
+			{
+				"name": "GPU GIGABYTE GeForce RTX 3070 OC 8GB GDDR6 256-bit",
+				"img-src": "gpu_gigabyte_geforce_rtx_3070_gaming_oc_lhr_8gb_gddr6_256_bit.webp",
+				"img-src-box": "gpu_gigabyte_geforce_rtx_3070_gaming_oc_lhr_8gb_gddr6_256_bit_box.webp",
+				"tag": "GPU",
+				"description": "GPU Boost clock: 1815 MHz\nNumber of transistors: 17400 million\nCUDA Cores: 5888\nMemory type: GDDR6\nMemory size: 8 GB\nBUS memory: 256 bit\nEffective memory frequency: 14000 MHz\nDimensions: 286 x 115 x 51 mm"
+			},
+			"cpu":
+			{
+				"name": "CPU AMD Ryzen 5 7600X 38MB 4.7/5.3GHz Boost",
+				"img-src": "cpu_amd_ryzen_5_7600x_38mb_4.7_5.3ghz_boost.webp",
+				"img-src-box": "cpu_amd_ryzen_5_7600x_38mb_4.7_5.3ghz_boost_box.webp",
+				"tag": "CPU",
+				"description": "Cache memory: 38 MB\nSocket: AM5\nProcessor frequency (MHz): 4.7 GHz\nTurbo Boost up to: 5.3 GHz\nNumber of cores: 6\nNumber of threads: 12\nManufacturing technology (nanometers): 5 nm\nThermal power (W): 105 W\n"
+			},
+			"cpu-cooler":
+			{
+				"name": "Cooler ARCTIC Freezer 34 eSports DUO Grey",
+				"img-src": "cooler_arctic_freezer_34_esports_duo_grey.webp",
+				"tag": "CPU Cooler",
+				"description": "Cooling type: Air\nRotation speed (rpm): 200 - 2100\nDimensions (W x D x H cm): 124 x 103 x 157"
+			},
+			"motherboard":
+			{
+				"name": "Motherboard ASUS TUF GAMING B650-PLUS AM5",
+				"img-src": "motherboard_asus_tuf_gaming_b650_plus_socket_am5.webp",
+				"tag": "Motherboard",
+				"description": "Format: ATX\nCPU Socket: AM5\nChipset: AMD B650\nSupported processors: AMD Ryzen 7000 Series\nMemory type: DDR5\nConnectivity: 5 x Audio Jacks, 1 x Display Port, 1 x USB 3.2 Gen 2x2 port(s) (1 x USB Type-C®), 3 x USB 3.2 Gen 2 (2 x Type-A+1 x USB Type-C®), 1 x RJ-45 2.5G LAN, 4 x USB 2.0, 1 x HDMI, 2 x PCI Express x1, 2 x PCIe 4.0 x16, 4 x SATA III"
+			},
+			"ram":
+			{
+				"name": "RAM Kingston FURY Beast 32GB DDR5 5200MHz CL40 Dual Channel",
+				"img-src": "ram_kingston_fury_beast_32gb_ddr5_5200mhz_cl40_dual_channel_kit.webp",
+				"tag": "RAM Memory",
+				"description": "Series: FURY Beast\nType: DDR5\nCapacity: 32 GB\nFrequency: 5200 MHz\nDual Channel kit: 2x 16 GB\nCAS latency: 40 CL"
+			},
+			"computer-case":
+			{
+				"name": "Computer Case AQIRYS Antares ARGB",
+				"img-src": "computer_case_aqirys_antares_argb.webp",
+				"tag": "Computer Case",
+				"description": "Type: Middle Tower\nDimensions (H x D x W): 450 x 410 x 205 mm\nTotal fans included: 4\nIllumination LED: ARGB"
+			},
+			"ssd-sata-3":
+			{
+				"name": "SSD GIGABYTE 480GB SATA-III 2.5 inch",
+				"img-src": "ssd_gigabyte_480gb_sata_iii_25_inch.webp",
+				"tag": "Secondary SSD",
+				"description": "Form factor: 2.5 inches\nInterface: SATA-III\nCapacity: 480 GB\nMax write: 480 MB/s\nMax read: 550 MB/s"
+			},
+			"ssd-m2":
+			{
+				"name": "SSD Kingston NV2 1TB PCI Express 4.0 x4 M.2 2280",
+				"img-src": "ssd_kingston_nv2_1tb_pci_express_40_x4_m2_2280.webp",
+				"tag": "Primary SSD",
+				"description": "Series: NV2\nSSD type: Internal\nForm factor: M.2\nInterface: PCI Express 4.0 x4\nCapacity: 1 TB\nMax write: 2100 MB/s\nMax read: 3500 MB/s"
+			},
+			"psu":
+			{
+				"name": "PSU GIGABYTE P850GM 80+ Gold 850W",
+				"img-src": "psu_gigabyte_p850gm_80_plus_gold_850w.webp",
+				"tag": "PSU",
+				"description": "Type: ATX 12V V2.31\nPower: 850 W\nNumber of fans: 1x 120 mm\nVoltage/Amperage: 100-240Vac\nEfficiency: 90%\nCertification: 80+ Gold\nDimensions: 150 x 140 x 86 mm\nModularity: Yes, Full Modularity\nProtections: OCP, OTP, OVP, OPP, UVP, SCP"
+			}
+		},
+		"accessories": {
+			"headset":
+			{
+				"name": "Headset wireless HyperX Cloud Stinger Core 7.1",
+				"img-src": "headset_wireless_hyperx_cloud_stinger_core_71.webp",
+				"tag": "Headset",
+				"description": "Technology: Wireless\nResponse frequency (Hz): 20 - 20000\nConnection: Wireless\nDiffuser diameter: 40 mm\nDimensions: 210 x 87 x 190mm"
+			},
+			"mouse":
+			{
+				"name": "Mouse LOGITECH G203 LIGHTSYNC RGB, 8.000 dpi",
+				"img-src": "mouse_logitech_g203_lightsync_rgb_8000_dpi.webp",
+				"tag": "Mouse",
+				"description": "Connection: Wired\nInterface: USB\nDimensions (W x H x I cm): 11.66 x 6.215 x 3.82\nSensor: Optical\nResolution: 200 – 8,000 DPI\nButtons: 6 programmable\nLighting: RGB"
+			},
+			"keyboard":
+			{
+				"name": "Mechanical Keyboard LOGITECH G512 GX Red Linear",
+				"img-src": "mechanical_keyboard_logitech_g512_gx_red_linear.webp",
+				"tag": "Keyboard",
+				"description": "Type: Mechanics\nTechnology: GX Red Linear\nConnection: Wired\nInterface: USB\nLED color: RGB\nSwitch: Yes"
+			},
+			"mouse-pad":
+			{
+				"name": "Mouse Pad GENESIS Carbon 700 Maxi Cordura",
+				"img-src": "mouse_pad_genesis_carbon_700_maxi_cordura.webp",
+				"tag": "Mouse Pad",
+				"description": "Surface: Waterproof\nMaterial: Rubber base\nDimensions (W x H x I cm): 45 x 40 x 0.3"
+			},
+			"speakers":
+			{
+				"name": "Speakers Trust Arys Compact RGB 2.0 Set",
+				"img-src": "speakers_trust_arys_compact_rgb_20_set.webp",
+				"tag": "Speakers",
+				"description": "RMS power: 6W\nFrequency band: 100 - 20000 Hz\nLighting: RGB\nUSB connection: Yes\nSatellite size (W x D x H mm): 165 x 160 x 75"
+			},
+			"monitor-primary":
+			{
+				"name": "Monitor IPS SAMSUNG Odyssey G5, 27 Inch, WQHD, 165Hz",
+				"img-src": "monitor_ips_samsung_odyssey_g5_27_wqhd_165hz.webp",
+				"tag": "Primary Monitor",
+				"description": "Screen: Flat\nPanel type: IPS\nScreen (Lighting): LED\nDiagonal (inch): 27\nBrightness (cd/m2): 350\nResolution (pixels): 2560 x 1440\nRefresh rate: 165Hz\nOther screen features: HDR 400"
+			},
+			"monitor-secondary":
+			{
+				"name": "Monitor LED ASUS PB277Q 27 Inch, WQHD, 75Hz",
+				"img-src": "monitor_led_asus_pb277q_27_inch_wqhd_75hz.webp",
+				"tag": "Secondary Monitor",
+				"description": "Screen: Flat\nPanel type: TN\nScreen (Lighting): LED\nDiagonal (inch): 27\nBrightness (cd/m2): 350\nResolution (pixels): 2560 x 1440\nRefresh rate: 75Hz"
+			},
+			"usb-hub":
+			{
+				"name": "ORICO USB C HUB 3.0 Desktop",
+				"img-src": "orico_usb_c_hub_3.0_desktop.webp",
+				"tag": "USB Hub",
+				"description": "4 Port USB 3.0 HUB"
+			},
+			"hdd-extern-model-1":
+			{
+				"name": "2x HDD Extern Seagate Expansion Portable 1TB 2.5 Inch USB 3.0",
+				"img-src": "hdd_extern_seagate_expansion_portable_1tb_2.5_inch_usb_3.0_model_1.webp",
+				"tag": "HDD Extern",
+				"description": "Capacity: 1 TB\nDimensions (L x W x H cm): 115.3 x 80 x 12.6 mm\nInterface:USB 3.0"
+			},
+			"hdd-extern-model-2":
+			{
+				"name": "1x HDD Extern Seagate Expansion Portable 1TB 2.5 Inch USB 3.0",
+				"img-src": "hdd_extern_seagate_expansion_portable_1tb_2.5_inch_usb_3.0_model_2.webp",
+				"tag": "HDD Extern",
+				"description": "Capacity: 1 TB\nInterface:USB 3.0"
+			}
+		},
+		"videos": {
+			"full-setup":
+			{
+				"src": "desktop-setup.mp4",
+				"thumbnail": "desktop-setup.webp",
+				"title": "Setup #1 Workstation",
+				"description": "<span>Recording Device: Samsung A52s</br>Editing Software: Sony Vegas Pro 20, Photopea, Topaz Video Enhance AI</br>Sondtrack: Skeler - Lxst Cxntury - Mirax</span></br><span>Date: Apr 25, 2023</span></br></br><span>Video Timeline:</span><ul><li>00:00 - 00:05 - Intro</li><li>00:02 - 00:14 - Setup Info</li><li>00:14 - 00:41 - Showcase Peripherals and Accessories</li><li>00:41 - 01:05 - Showcase PC Components</li><li>01:05 - 01:15 - Otro</li></ul>",
+				"date": "Apr 25, 2023"
+			}
+		},
+		"content": [
+            ["workstation-header", "default", "post_data"],
+			["workstation-configuration", "default", "post_data"]
+        ]
+	},
+	{
+		"file": "personal-workstation-0",
+		"title": "Personal-Workstation #0",
+		"description": "Welcome to my personal workstation page! This is the hub of my productivity, where I tackle work projects and pursue personal endeavors. With regular updates and enhancements, I strive to maintain an efficient and inspiring work environment.",
+		"media_path": "pc-00",
+		"path_img": "workstation",
+		"style": {
+			"--w-color-primary": "#c7514d",
+			"--w-color-secondary": "#962b27",
+			"--w-text-color-on-bg": "#ffffff",
+			"--w-title-font": "'Space Nation'",
+			"--w-text-font": "'Roboto'"
+		},
+		"status": "inactive",
+		"images": {
+			"full-setup": ["pc_setup_0.webp"],
+			"workstation": ["pc-00.webp"]
+		},
+		"configuration": {
+			"gpu":
+			{
+				"name": "GPU Sapphire Radeon RX 480 NITRO+ 8GB DDR5 256-bit Lite",
+				"img-src": "rx480_8gb_nitro.webp",
+				"tag": "GPU",
+				"description": "GPU Boost clock: 1306 MHz\nNumber of transistors: 6200 million\nMemory type: GDDR5\nMemory size: 8 GB\nBUS memory: 256 bit\nEffective memory frequency: 8000 MHz\nDimensions: 240 x 120 x 41 mm"
+			},
+			"cpu":
+			{
+				"name": "CPU Intel Skylake, Core i5 6500 3.20GHz",
+				"img-src": "cpu_i5_6500.webp",
+				"tag": "CPU",
+				"description": "Cache memory: 6 MB\nSocket: 1151\nProcessor frequency (MHz): 3.2 GHz\nTurbo Boost up to: 3.6 GHz\nNumber of cores: 4\nNumber of threads: 4\nManufacturing technology (nanometers): 14 nm\nThermal power (W): 65 W\n"
+			},
+			"cpu-cooler":
+			{
+				"name": "Cooler CPU Stock Intel Skylake",
+				"img-src": "cpu_cooler_i5_6500.webp",
+				"tag": "CPU Cooler",
+				"description": ""
+			},
+			"motherboard":
+			{
+				"name": "Motherboard ASRock B150A-X1",
+				"img-src": "motherboard_asrock_b150a-x1.webp",
+				"tag": "Motherboard",
+				"description": "Format: ATX\nCPU Socket: 1151\nChipset: B150\nSupported processors: Intel 6th Generation\nMemory type: DDR4"
+			},
+			"ram":
+			{
+				"name": "RAM HyperX Fury Black 16GB DDR4 2133MHz CL14 Dual Channel Kit",
+				"img-src": "ram_hyperx_ddr4_16gb.webp",
+				"tag": "RAM Memory",
+				"description": "Series: Fury\nType: DDR4\nCapacity: 16 GB\nFrequency: 2133 MHz\nDual Channel kit: 2x 8 GB\nCAS latency: 14 CL"
+			},
+			"computer-case":
+			{
+				"name": "Computer Zalman Z1 Neo",
+				"img-src": "pc_case_zalman_z1_neo.webp",
+				"tag": "Computer Case",
+				"description": "Type: Middle Tower\nDimensions (H x D x W): 445 x 464 x 203 mm\nTotal fans included: 3\nIllumination LED: Blue"
+			},
+			"ssd-sata-3":
+			{
+				"name": "SSD Patriot P200, 512GB, 2.5 SATA III",
+				"img-src": "ssd_sata3_patriot_p200_512gb.webp",
+				"tag": "SSD",
+				"description": "Form factor: 3.5 inches\nInterface: SATA-III\nCapacity: 512 GB\nMax write: 530 MB/s\nMax read: 460 MB/s"
+			},
+			"sshd":
+			{
+				"name": "SSHD Seagate FireCuda 1TB SATA-III 7200RPM 64MB",
+				"img-src": "sshd_seagate_fire_cuda_1tb.webp",
+				"tag": "SSHD",
+				"description": "Series: FireCuda\nCapacity: 1 TB\nInterface: SATA-III\nSpeed: 7200 RPM\nForm factor: 3.5 inches"
+			},
+			"psu":
+			{
+				"name": "PSU Sirtec High Power Element BRONZE II 700W",
+				"img-src": "psu_sirtec_high_power_element_700w.webp",
+				"tag": "PSU",
+				"description": "Type: ATX 2.3\nPower: 700 W\nNumber of fans: 1x 120 mm\nVoltage/Amperage: 230Vac\nEfficiency: 85%\nCertification: 80+ Bronze\nDimensions: 150 x 140 x 86 mm\nProtections: UVP, OVP, OPP, SCP"
+			}
+		},
+		"accessories": {
+			"headset":
+			{
+				"name": "Headset HyperX Cloud Stinger Core stereo",
+				"img-src": "headset_hyperx_cloud_stinger_core.webp",
+				"tag": "Headset",
+				"description": "Technology: Wired\nResponse frequency (Hz): 20 - 20000\nConnection: Jack 3.5mm"
+			},
+			"mouse":
+			{
+				"name": "Mouse Gaming Redragon Invader Black RGB",
+				"img-src": "mouse_redragon_invader_black_rgb.webp",
+				"tag": "Mouse",
+				"description": "Connection: Wired\nInterface: USB\nDimensions: 117 x 64 x 39 mm\nSensor: Optical\nResolution: 12400 DPI\nButtons: 8\nLighting: RGB"
+			},
+			"keyboard":
+			{
+				"name": "Mechanical Redragon Dark Avenger RGB",
+				"img-src": "mechanical_keyboard_redragon_dark_avenger_rgb.webp",
+				"tag": "Keyboard",
+				"description": "Type: Mechanics\nTechnology: Outemu Blue\nConnection: Wired\nInterface: USB\nLED color: RGB\nSwitch: Yes"
+			},
+			"mouse-pad":
+			{
+				"name": "Mouse Pad White shark GMP-1899",
+				"img-src": "mouse_pad_shite_shark_800.webp",
+				"tag": "Mouse Pad",
+				"description": "Surface: SKID-PROOF\nDimensions: 800 x 350 mm"
+			},
+			"speakers":
+			{
+				"name": "Speakers Tellur 6W USB",
+				"img-src": "speakers_tellur_6w.webp",
+				"tag": "Speakers",
+				"description": "RMS power: 6W\nFrequency band: 100 - 18000 Hz\nLighting: No\nUSB connection: Yes\nSatellite size: 150 x 95 x 75"
+			},
+			"monitor-primary":
+			{
+				"name": "Monitor LED IPS LG 23, Full HD 23MP48HQ-P",
+				"img-src": "monitor_lg_23_ips_23mp48hq-p.webp",
+				"tag": "Primary Monitor",
+				"description": "Screen: Flat\nPanel type: IPS\nScreen (Lighting): LED\nDiagonal (inch): 23\nBrightness (cd/m2): 250\nResolution (pixels): 1920 x 1080\nRefresh rate: 75Hz\n"
+			}
+		},
+		"content": [
+            ["workstation-header", "default", "post_data"],
+			["workstation-configuration", "default", "post_data"]
+        ]
+	}
+]

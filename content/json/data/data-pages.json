@@ -73,13 +73,10 @@
         ]
     },
     {
-        "file": "workstation",
+        "file": "workstations",
         "content": [
-            ["hero", "compress-squares", {"filename": "workstation"}],
-            ["workstation-header"],
-            ["workstation-configuration"],
-            ["workstation-accessories"],
-            ["workstation-video"]
+            ["hero", "compress-squares", {"filename": "workstations"}],
+            ["workstation-list"]
         ]
     },
     {

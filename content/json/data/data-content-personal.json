@@ -63,7 +63,7 @@
 		},
 		{
 			"type": "page",
-			"page": "workstation",
+			"page": "personal-workstation-1",
 			"name": "Personal Workstation",
 			"svg": "workstation",
 			"background-img": "overlay-texture-textile.webp",

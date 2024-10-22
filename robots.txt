@@ -47,6 +47,18 @@ Allow: /
 Meta-robots: noindex, nofollow
 
 User-agent: *
+Disallow: /personal-workstation-0
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
+Disallow: /personal-workstation-1
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
 Disallow: /privacy-policy
 Crawl-delay: 10
 Allow: /
@@ -563,7 +575,7 @@ Allow: /
 Meta-robots: noindex, nofollow
 
 User-agent: *
-Disallow: /workstation
+Disallow: /workstations
 Crawl-delay: 10
 Allow: /
 Meta-robots: noindex, nofollow

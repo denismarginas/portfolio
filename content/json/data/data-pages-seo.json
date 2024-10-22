@@ -126,17 +126,17 @@
         }
     },
     {
-        "file": "workstation",
+        "file": "workstations",
         "type": "page",
         "seo": {
-            "title": "Personal Workstation",
+            "title": "Personal Workstations",
             "description": "Welcome to my personal workstation page! This is the hub of my productivity, where I tackle work projects and pursue personal endeavors.",
-            "keywords": "denis marginas workstation",
-            "slug": "workstation",
+            "keywords": "denis marginas workstations",
+            "slug": "workstations",
             "index": "false"
         },
         "hero": {
-            "title": "Personal Workstation",
+            "title": "Personal Workstations",
             "bg_img_path": "backgrounds",
             "bg_img": "bg-workstation.webp"
         }

@@ -1,0 +1,232 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-workstation-list {
+  @include padding-x();
+  overflow: hidden;
+  position: relative;
+
+  > container {
+    > ul {
+      @include reset-list();
+      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(2, 2fr);
+      gap: var(--dm-spacing-medium);
+
+      .dm-workstation-item {
+        @include flex-column();
+        @include border-radius( var( --dm-border-radius-primary ));
+        padding: var( --dm-spacing-secondary );
+        gap: var( --dm-spacing-primary );
+        overflow: hidden;
+        position: relative;
+        z-index: 0;
+
+        .preview {
+          position: relative;
+          box-sizing: border-box;
+          overflow: hidden;
+          background-color: var( --w-color-primary );
+          background-image: radial-gradient(
+                          var(--w-color-primary) 0%,
+                          var(--w-color-secondary) 100%
+          );
+
+          > .primary {
+            visibility: visible;
+            opacity: 1;
+            transition: all 0.2s ease-in-out;
+          }
+          > .secondary {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            top: -100%;
+            left: 0;
+            right: 0;
+            bottom: 100%;
+            transition: all 0.2s ease-in-out;
+          }
+          img, svg {
+            box-sizing: border-box;
+            padding: var( --dm-spacing-secondary );
+            width: 100%;
+            height: 400px;
+            max-width: 100%;
+            object-fit: contain;
+            object-position: center;
+            filter: drop-shadow(-9px 5px 7px rgba(0, 0, 0, 0.2));
+          }
+          svg {
+            @include svg-color(var( --w-text-color-on-bg ));
+            padding: 10%;
+          }
+          .status {
+            @include flex-row();
+            @include flex-center();
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            box-sizing: border-box;
+            padding: 5px 12px;
+            background-color: rgba( var( --dm-color-white-rgb ), 0.8 );
+            border-top-left-radius: 22px;
+            gap: 4px;
+
+            > span {
+              @include dm-font-small();
+              --dm-text-small-color: var( --dm-color-gray-darken );
+              text-transform: capitalize;
+              --dm-text-small-font-weight: 600;
+            }
+            > .dot {
+              @include border-radius( 50%);
+              width: 12px;
+              height: 12px;
+              background-color: var( --dm-color-gray-lighten );
+
+              &.active {
+                background-color: var( --dm-color-status-primary );
+              }
+              &.in-hold {
+                background-color: var( --dm-color-status-secondary );
+              }
+              &.inactive {
+                background-color: var( --dm-color-status-tertiary );
+              }
+            }
+          }
+        }
+        .title {
+          text-align: center;
+          padding: 0px var( --dm-spacing-primary );
+           > .heading {
+             @include dm-font-medium();
+             --dm-text-medium-font-weight: 600;
+           }
+        }
+        &:before {
+          z-index: -1;
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: -40%;
+          bottom: 0%;
+          left: -30%;
+          right: 0%;
+          background-color: var( --w-color-primary );
+          filter: blur(70px);
+          opacity: 0.2;
+          transition: all 0.5s ease-in-out;
+
+        }
+        &:hover {
+          .preview {
+            > .primary {
+              visibility: hidden;
+              opacity: 0;
+              transition: all 0.2s ease-in-out;
+            }
+            > .secondary {
+              visibility: visible;
+              opacity: 1;
+              top: 0%;
+              bottom: 0%;
+              transition: all 0.2s ease-in-out;
+            }
+          }
+          &:before {
+            top: 50%;
+            bottom: 0%;
+            left: 30%;
+            right: 0%;
+            transition: all 0.5s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-desktop-medium) {
+    > container {
+      > ul {
+        gap: var(--dm-spacing-small);
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-large) {
+    > container {
+      > ul {
+        gap: var(--dm-spacing-tertiary);
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-medium) {
+    > container {
+      > ul {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-large) {
+    > container {
+      > ul {
+        gap: var(--dm-spacing-secondary);
+
+        .dm-workstation-item {
+          padding: var( --dm-spacing-primary );
+
+          .preview {
+            img, svg {
+              height: 250px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body, body.theme-light {
+  .dm-workstation-list {
+    > container {
+      > ul {
+        .dm-workstation-item {
+          border: 1px solid rgba(var(--dm-color-gray-rgb), 0.2);
+          background-color: rgba(var( --dm-color-white-rgb ), 0.8);
+
+          .preview {
+            border: 1px solid rgba(var(--dm-color-gray-rgb), 0.2);
+          }
+          .title {
+            .heading {
+              --dm-text-medium-color: var( --dm-color-gray-darken );
+            }
+          }
+        }
+      }
+    }
+  }
+}
+body.theme-dark {
+  .dm-workstation-list {
+    > container {
+      > ul {
+        .dm-workstation-item {
+          border: 1px solid rgba(var(--dm-color-white-rgb), 0.2);
+          background-color: rgba(var( --dm-color-gray-darken-rgb ), 0.8);
+
+          .preview {
+            border: 1px solid rgba(var(--dm-color-white-rgb), 0.2);
+          }
+          .title {
+            .heading {
+              --dm-text-medium-color: var( --dm-color-white );
+            }
+          }
+        }
+      }
+    }
+  }
+}

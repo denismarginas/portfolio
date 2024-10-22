@@ -1,0 +1,115 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+
+.dm-product-card {
+  .product {
+    @include border-radius( var( --dm-border-radius-primary ));
+    @include flex-column();
+    @include reset-list();
+    border-width: 1px;
+    border-style: solid;
+    gap: 0px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+
+    > .visual {
+      @include flex-column();
+      @include flex-center();
+      padding: var( --dm-spacing-secondary );
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+      box-sizing: border-box;
+
+      > img {
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: contain;
+      }
+      > .tag {
+        @include border-radius( var( --dm-border-radius-primary ));
+        @include dm-font-extra-small();
+        --dm-text-extra-small-font-weight: 600;
+        text-transform: uppercase;
+        position: absolute;
+        left: var( --dm-spacing-primary );
+        bottom: 4px;
+        box-sizing: border-box;
+        padding: 4px 8px;
+        --dm-text-extra-small-color: var( --w-text-color-on-bg );
+        background-color: var( --w-color-primary );
+      }
+    }
+    > .text {
+      @include flex-column();
+      gap: calc(var( --dm-spacing-primary ) / 2);
+      padding: var( --dm-spacing-primary );
+
+      .title {
+        @include dm-font-medium();
+        --dm-text-medium-font-weight: 600;
+      }
+      .hover {
+        overflow: hidden;
+        padding: var( --dm-spacing-primary );
+        --dm-color-primary: var( --w-color-primary );
+        --dm-color-secondary: var( --w-color-secondary );
+        background-color: var( --w-color-secondary );
+        box-sizing: border-box;
+        position: absolute;
+        opacity: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 40%;
+        margin-bottom: -40%;
+        margin-right: 8px;
+        transition: all 0.3s ease-in-out;
+
+        ::-webkit-scrollbar {
+          width: 8px;
+        }
+      }
+      .description {
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 100%;
+        @include dm-font-extra-small();
+        --dm-text-extra-small-color: var( --w-text-color-on-bg );
+      }
+    }
+    &:hover {
+      > .text {
+        .hover {
+          opacity: 1;
+          margin-bottom: 0%;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+body, body.theme-light {
+  .dm-product-card  {
+    .product {
+      border-color: rgba(var(--dm-color-gray-rgb), 0.2);
+      background-color: rgba(var( --dm-color-white-rgb ), 0.8);
+    }
+  }
+}
+body.theme-dark {
+  .dm-product-card  {
+    .product {
+      border-color: rgba(var(--dm-color-white-rgb), 0.2);
+      background-color: rgba(var(--dm-color-gray-darken-rgb), 0.8);
+    }
+  }
+}

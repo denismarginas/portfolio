@@ -1,0 +1,188 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-workstation-header {
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  background-color: var( --w-color-primary );
+  background-image: radial-gradient(
+                  var(--w-color-primary) 0%,
+                  var(--w-color-secondary) 100%
+  );
+  .wave-shape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+
+    &.primary {
+      z-index: 1;
+      fill: var( --w-color-primary );
+      width: 110%;
+      margin-bottom: -3%;
+    }
+    &.secondary {
+      z-index: 0;
+      fill: var( --w-color-secondary );
+      width: 150%;
+      margin-bottom: -12%;
+    }
+  }
+  > ul {
+    @include reset-list();
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: var( --dm-spacing-large );
+    padding: var( --dm-spacing-tertiary ) var( --dm-spacing-large );
+
+    > .media-content {
+      > .visual {
+        @include flex-row();
+        @include flex-center();
+
+        > img, svg {
+          box-sizing: border-box;
+          width: auto;
+          max-width: 100%;
+          height: 350px;
+          object-position: center;
+          object-fit: contain;
+          filter: drop-shadow(-9px 5px 7px rgba(0, 0, 0, 0.2));
+        }
+        > svg {
+          @include svg-color(var( --w-text-color-on-bg ));
+          padding: 20%;
+        }
+      }
+    }
+    > .text-content {
+      @include flex-column();
+      gap: var( --dm-spacing-secondary );
+
+      > h2 {
+        @include dm-font-heading1();
+        --dm-text-heading1-color: var( --w-text-color-on-bg );
+        --dm-text-heading1-font-family: var( --w-title-font );
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      > p {
+        @include dm-font-medium();
+        --dm-text-medium-color: var( --w-text-color-on-bg );
+        --dm-text-medium-font-family: var( --w-text-font );
+      }
+      > span {
+        @include dm-font-small();
+        --dm-text-small-color: var( --w-text-font );
+        --dm-font-family: var( --w-text-font );
+      }
+    }
+  }
+  .status {
+    @include flex-row();
+    @include flex-center();
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    padding: 5px 12px;
+    background-color: rgba( var( --dm-color-white-rgb ), 0.8 );
+    border-top-left-radius: 22px;
+    gap: 4px;
+
+    > span {
+      @include dm-font-small();
+      --dm-text-small-color: var( --dm-color-gray-darken );
+      text-transform: capitalize;
+      --dm-text-small-font-weight: 600;
+    }
+    > .dot {
+      @include border-radius( 50%);
+      width: 12px;
+      height: 12px;
+      background-color: var( --dm-color-gray-lighten );
+
+      &.active {
+        background-color: var( --dm-color-status-primary );
+      }
+      &.in-hold {
+        background-color: var( --dm-color-status-secondary );
+      }
+      &.inactive {
+        background-color: var( --dm-color-status-tertiary );
+      }
+    }
+  }
+
+  @media only screen and (max-width: $screen-tablet-large) {
+    > ul {
+      gap: var( --dm-spacing-tertiary );
+      grid-template-columns: 1.5fr 1fr;
+      padding: var( --dm-spacing-tertiary ) var( --dm-spacing-tertiary );
+
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-medium) {
+    > ul {
+      gap: var( --dm-spacing-secondary );
+      grid-template-columns: repeat(1, 1fr);
+      padding: var( --dm-spacing-tertiary ) var( --dm-spacing-secondary );
+
+      > .text-content {
+        > h2 {
+          @include dm-font-heading3();
+          --dm-text-heading3-color: var( --w-text-color-on-bg );
+          --dm-text-heading3-font-family: var( --w-title-font );
+        }
+      }
+    }
+    .wave-shape {
+      &.primary {
+        width: 310%;
+        margin-bottom: -3%;
+      }
+      &.secondary {
+        width: 450%;
+        margin-bottom: -12%;
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-phone-large ) {
+    > ul {
+      > .text-content {
+        gap: var( --dm-spacing-primary );
+
+        > h2 {
+          @include dm-font-heading5();
+          --dm-text-heading5-color: var( --w-text-color-on-bg );
+          --dm-text-heading5-font-family: var( --w-title-font );
+        }
+      }
+      > .media-content {
+        > .visual {
+          > img, svg {
+            height: 240px;
+          }
+        }
+      }
+    }
+    .wave-shape {
+      &.primary {
+        width: 610%;
+        margin-bottom: -7%;
+        margin-left: -150%;
+      }
+      &.secondary {
+        width: 750%;
+        margin-bottom: -12%;
+      }
+    }
+  }
+}

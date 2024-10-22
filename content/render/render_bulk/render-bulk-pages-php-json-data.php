@@ -46,9 +46,6 @@ function render_page_template_content($page) {
     $renderer_elements = new RendererElements();
 
     $content = "";
-
-
-
     //$page_content = executePhpInString($page_content, ['filename' => $page["file"]]);
 
     // Render Header
