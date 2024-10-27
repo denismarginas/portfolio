@@ -1,5 +1,5 @@
 <?php if (isset($product)) : ?>
-    <li class="dm-product-card" data-motion="transition-fade-0 transition-slideInRight-0">
+    <li class="dm-w-product-card" data-motion="transition-fade-0 transition-slideInRight-0">
         <div class="product"
             <?php if (isset($product["name"])) : ?>
              id="<?php echo $product["name"]; ?>" >

@@ -2,7 +2,7 @@
 @import "../../functions/functions.scss";
 
 
-.dm-product-card {
+.dm-w-product-card {
   .product {
     @include border-radius( var( --dm-border-radius-primary ));
     @include flex-column();
@@ -140,7 +140,7 @@
 }
 
 body, body.theme-light {
-  .dm-product-card  {
+  .dm-w-product-card  {
     .product {
       border-color: rgba(var(--dm-color-gray-rgb), 0.2);
       background-color: rgba(var( --dm-color-white-rgb ), 0.8);
@@ -159,7 +159,7 @@ body, body.theme-light {
   }
 }
 body.theme-dark {
-  .dm-product-card  {
+  .dm-w-product-card  {
     .product {
       border-color: rgba(var(--dm-color-white-rgb), 0.2);
       background-color: rgba(var(--dm-color-gray-darken-rgb), 0.8);

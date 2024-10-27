@@ -53,7 +53,7 @@ endif;
                     <?php endif; ?>
 
                         <div class="preview" data-motion="transition-slideInBottom-0" data-duration="0.4s">
-                            <div class="primary" data-motion="transition-fade-0 transition-blur-0 transition-slideInBottom-0" data-duration="0.8s" data-delay="0.5s">
+                            <div class="primary" data-motion="transition-fade-0 transition-blur-0" data-duration="0.8s" data-delay="0.5s">
                                 <?php if($workstationSetupImg) :
                                     echo renderImage($imgPath.$workstationSetupImg);
                                 else:
