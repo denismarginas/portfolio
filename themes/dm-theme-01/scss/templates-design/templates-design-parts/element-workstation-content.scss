@@ -5,6 +5,7 @@
   overflow: hidden;
   position: relative;
   box-sizing: border-box;
+  width: 100%;
 
   > ul {
     @include reset-list();
@@ -50,7 +51,42 @@
     grid-template-columns: repeat(4, 4fr);
     gap: var( --dm-spacing-primary );
   }
+  .summary {
+    @include flex-column();
+    gap: var( --dm-spacing-secondary );
+  }
+  .enumeration {
+    @include reset-list();
+    @include flex-column();
+    gap: var( --dm-spacing-primary );
 
+    > li {
+      @include flex-row();
+      gap: calc(var( --dm-spacing-primary) / 2);
+
+      > svg {
+        @include border-radius( 50% );
+        @include svg-color(var( --w-text-color-on-bg ));
+        background-color: var( --w-color-primary );
+        box-sizing: border-box;
+        object-position: center;
+        object-fit: contain;
+        width: 15px;
+        height: 15px;
+        padding: 4px;
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-desktop-medium ) {
+    .product-list {
+      grid-template-columns: repeat(3, 3fr);
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-small ) {
+    .product-list {
+      grid-template-columns: repeat(2, 2fr);
+    }
+  }
   @media only screen and (max-width: $screen-phone-large ) {
     .visual {
       > img, svg {

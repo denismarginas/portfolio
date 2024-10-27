@@ -15,35 +15,71 @@
     z-index: 0;
     height: 100%;
     width: 100%;
+    container-type: inline-size;
 
     > .visual {
       @include flex-column();
       @include flex-center();
-      padding: var( --dm-spacing-secondary );
       width: 100%;
       height: 200px;
       overflow: hidden;
       position: relative;
-      box-sizing: border-box;
 
       > img {
-        width: 100%;
-        height: 100%;
+        padding: var( --dm-spacing-primary );
+        box-sizing: border-box;
+        z-index: 1;
+        width: 90%;
+        height: 90%;
         object-position: center;
         object-fit: contain;
+        filter: drop-shadow(4px 6px 4px rgba(var( --dm-color-black-rgb ), 0.4));
+      }
+      &[tag="cpu"], &[tag="cpu cooler"] {
+        > img {
+          width: 60%;
+        }
+      }
+      &[tag*="ssd"] {
+        > img {
+          width: 70%;
+        }
+      }
+      &:before {
+        box-sizing: border-box;
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: var( --dm-color-white );
+        background-image: radial-gradient(
+            var(--w-color-primary) 0%,
+            var(--w-color-secondary) 200%
+        );
+        max-width: 100%;
+        max-height: 100%;
+        border-width: 0px;
+        border-bottom-width: 1px;
+        border-style: solid;
       }
       > .tag {
         @include border-radius( var( --dm-border-radius-primary ));
         @include dm-font-extra-small();
+        z-index: 1;
         --dm-text-extra-small-font-weight: 600;
         text-transform: uppercase;
         position: absolute;
-        left: var( --dm-spacing-primary );
-        bottom: 4px;
+        left: calc(var( --dm-spacing-primary ) + 4px);
+        bottom: 8px;
         box-sizing: border-box;
-        padding: 4px 8px;
+        padding: 5px 8px;
         --dm-text-extra-small-color: var( --w-text-color-on-bg );
-        background-color: var( --w-color-primary );
+        background-color: var( --w-color-secondary );
+        box-shadow: 1px 1px 4px rgba(var( --dm-color-black-rgb ), 0.2);
       }
     }
     > .text {
@@ -52,10 +88,11 @@
       padding: var( --dm-spacing-primary );
 
       .title {
-        @include dm-font-medium();
-        --dm-text-medium-font-weight: 600;
+        @include dm-font-small();
+        --dm-text-small-font-weight: 600;
       }
       .hover {
+        z-index: 4;
         overflow: hidden;
         padding: var( --dm-spacing-primary );
         --dm-color-primary: var( --w-color-primary );
@@ -94,6 +131,11 @@
         }
       }
     }
+    @container (max-width: 200px) {
+      > .visual {
+        height: 150px;
+      }
+    }
   }
 }
 
@@ -102,6 +144,17 @@ body, body.theme-light {
     .product {
       border-color: rgba(var(--dm-color-gray-rgb), 0.2);
       background-color: rgba(var( --dm-color-white-rgb ), 0.8);
+
+      > .visual {
+        &:before {
+          border-color: rgba(var(--dm-color-gray-rgb), 0.2);
+        }
+      }
+      > .text {
+        .title {
+          --dm-text-small-color: var( --dm-color-gray-darken );
+        }
+      }
     }
   }
 }
@@ -110,6 +163,17 @@ body.theme-dark {
     .product {
       border-color: rgba(var(--dm-color-white-rgb), 0.2);
       background-color: rgba(var(--dm-color-gray-darken-rgb), 0.8);
+
+      > .visual {
+        &:before {
+          border-color: rgba(var(--dm-color-white-rgb), 0.2);
+        }
+      }
+      > .text {
+        .title {
+          --dm-text-small-color: var( --dm-color-white );
+        }
+      }
     }
   }
 }

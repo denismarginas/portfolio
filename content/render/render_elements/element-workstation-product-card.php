@@ -5,7 +5,11 @@
              id="<?php echo $product["name"]; ?>" >
             <?php endif; ?>
 
-            <div class="visual">
+            <div class="visual"
+            <?php if (isset($product["tag"]) && !empty($product["tag"])) : ?>
+                tag="<?php echo strtolower($product["tag"]); ?>"
+            <?php endif; ?>>
+
                 <?php if (isset($product["img-src"]) && !empty($product["img-src"]) && isset($product["img-path"])) :
                     echo renderImage($product["img-path"].$product["img-src"], true, "product-image");
                 else:
