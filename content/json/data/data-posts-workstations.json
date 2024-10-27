@@ -180,8 +180,8 @@
 		"media_path": "pc-00",
 		"path_img": "workstation",
 		"style": {
-			"--w-color-primary": "#c7514d",
-			"--w-color-secondary": "#962b27",
+			"--w-color-primary": "#3f5161",
+			"--w-color-secondary": "#28323b",
 			"--w-text-color-on-bg": "#ffffff",
 			"--w-title-font": "'Matricode'",
 			"--w-text-font": "'Roboto'"
