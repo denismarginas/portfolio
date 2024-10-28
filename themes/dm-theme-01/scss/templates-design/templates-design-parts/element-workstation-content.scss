@@ -34,6 +34,30 @@
       padding: 20%;
       height: 350px;
     }
+    .card-bg {
+      @include flex-row();
+      @include flex-center();
+      @include border-radius( var( --dm-border-radius-primary ));
+      overflow: hidden;
+      position: relative;
+      background-color: var( --w-color-primary );
+      background-image: radial-gradient(
+          var(--w-color-primary) 0%,
+          var(--w-color-secondary) 100%
+      );
+      width: 100%;
+      height: 100%;
+      padding: var( --dm-spacing-secondary );
+
+      svg {
+        @include svg-color( var( --w-text-color-on-bg ) );
+        padding: 10%;
+        object-fit: contain;
+        object-position: center;
+        width: 70%;
+        height: 70%;
+      }
+    }
   }
   .title {
     @include dm-font-heading4();
@@ -165,16 +189,20 @@
     }
   }
   @media only screen and (max-width: $screen-desktop-small) {
+    > ul {
+      padding: var( --dm-spacing-tertiary);
+      gap: var( --dm-spacing-tertiary );
+    }
   }
   @media only screen and (max-width: $screen-tablet-large) {
     > ul {
-      padding: var( --dm-spacing-tertiary );
       grid-template-columns: repeat(1, 1fr) !important;
     }
   }
   @media only screen and (max-width: $screen-tablet-medium) {
     > ul {
       padding: var( --dm-spacing-secondary);
+      gap: var( --dm-spacing-secondary );
     }
     .product-list {
       grid-template-columns: repeat(2, 2fr);

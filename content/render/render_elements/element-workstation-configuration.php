@@ -21,11 +21,15 @@
                 <div class="visual">
                     <?php if ($imgList && count($imgList) > 1):
                         echo renderSlider($imgList, true, false, true);
-                    elseif ($imgList && count($imgList) === 1) :
-                        echo $imgList[0];
-                    else:
-                        echo SVGRenderer::renderSVG("workstation");
-                    endif; ?>
+                    elseif ($imgList && count($imgList) === 1) : ?>
+                        <div class="card-bg">
+                            <?php echo $imgList[0]; ?>
+                        </div>
+                    <?php else: ?>
+                        <div class="card-bg">
+                            <?php echo SVGRenderer::renderSVG("workstation"); ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <div class="text">
                     <ul class="enumeration">

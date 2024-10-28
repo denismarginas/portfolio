@@ -61,16 +61,6 @@ endif;
                                 endif; ?>
                             </div>
 
-                            <div class="secondary">
-                                <?php if($workstationDeviceImg) :
-                                    echo  renderImage($imgPath.$workstationDeviceImg);
-                                else:
-                                    echo SVGRenderer::renderSVG("workstation-desk");
-                                endif; ?>
-                            </div>
-
-
-
                             <?php if (isset($workstation["status"]) && !empty($workstation["status"])): ?>
                                 <div class="status">
                                     <span class="dot <?php echo $workstation["status"]; ?>"></span>
