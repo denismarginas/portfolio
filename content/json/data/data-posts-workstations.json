@@ -15,7 +15,7 @@
 		},
 		"status": "active",
 		"images": {
-			"full-setup": ["pc_setup_1.webp", "pc_setup_2.webp", "pc_setup_3.webp"],
+			"full-setup": ["pc_setup_1.webp", "pc_setup_2.webp", "pc_setup_3.webp", "pc_setup_4.webp"],
 			"workstation": ["pc-00.webp", "pc-01.webp"]
 		},
 		"configuration": {
