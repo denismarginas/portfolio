@@ -10,6 +10,8 @@
                   var(--w-color-primary) 0%,
                   var(--w-color-secondary) 100%
   );
+  width: 100%;
+
   .wave-shape {
     position: absolute;
     bottom: 0;
@@ -37,9 +39,11 @@
     z-index: 2;
     align-items: center;
     display: grid;
+    width: 100%;
     grid-template-columns: 1.6fr 1fr;
     gap: var( --dm-spacing-large );
     padding: var( --dm-spacing-tertiary ) var( --dm-spacing-large );
+    box-sizing: border-box;
 
     > .media-content {
       > .visual {

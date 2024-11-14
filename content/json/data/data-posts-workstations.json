@@ -1,8 +1,8 @@
 [
 	{
-		"file": "personal-workstation-1",
-		"title": "Personal-Workstation #1",
-		"description": "Welcome to my personal workstation page! This is the hub of my productivity, where I tackle work projects and pursue personal endeavors. With regular updates and enhancements, I strive to maintain an efficient and inspiring work environment. The most recent update to my setup was in January 2023, and I'm excited to showcase the improvements I've made. Get ready to explore my workstation and discover the tools and setup that fuel my productivity!",
+		"file": "personal-workstation-build-1",
+		"title": "Personal Workstation Build 1",
+		"description": "This is my productivity setup, designed for both work projects and personal pursuits. With regular updates to keep it efficient and inspiring, this workstation powers my main work and creative endeavors. I’m excited to share the tools and setup that drive my daily productivity.",
 		"media_path": "pc-01",
 		"path_img": "workstation",
 		"path_vid": "projects/denismarginas/personal-workstation",
@@ -157,26 +157,26 @@
 				"description": "Capacity: 1 TB\nInterface:USB 3.0"
 			}
 		},
-		"videos": {
-			"full-setup":
+		"videos": [
 			{
-				"src": "desktop-setup.mp4",
-				"thumbnail": "desktop-setup.webp",
+				"video-path": "personal-workstation-build-1.mp4",
+				"video-thumbnail": "/thumbnails/personal-workstation-build-1.webp",
 				"title": "Setup #1 Workstation",
-				"description": "<span>Recording Device: Samsung A52s</br>Editing Software: Sony Vegas Pro 20, Photopea, Topaz Video Enhance AI</br>Sondtrack: Skeler - Lxst Cxntury - Mirax</span></br><span>Date: Apr 25, 2023</span></br></br><span>Video Timeline:</span><ul><li>00:00 - 00:05 - Intro</li><li>00:02 - 00:14 - Setup Info</li><li>00:14 - 00:41 - Showcase Peripherals and Accessories</li><li>00:41 - 01:05 - Showcase PC Components</li><li>01:05 - 01:15 - Otro</li></ul>",
+				"description": "<span>Recording Device: Samsung A52s</span><br><span>Editing Software: Sony Vegas Pro 20, Photopea, Topaz Video Enhance AI</span><br><span>Soundtrack: Skeler - Lxst Cxntury - Mirax</span><br><span>Date: Apr 25, 2023</span><br><br><span>Video Timeline:</span><ul><li>00:00 - 00:05 - Intro</li><li>00:05 - 00:14 - Setup Info</li><li>00:14 - 00:41 - Showcase Peripherals and Accessories</li><li>00:41 - 01:05 - Showcase PC Components</li><li>01:05 - 01:15 - Outro</li></ul>",
 				"date": "Apr 25, 2023"
 			}
-		},
+		],
 		"content": [
             ["workstation-header", "default", "post_data"],
 			["workstation-configuration", "default", "post_data"],
-			["workstation-accessories", "default", "post_data"]
+			["workstation-accessories", "default", "post_data"],
+			["workstation-videos", "default", "post_data"]
         ]
 	},
 	{
-		"file": "personal-workstation-0",
-		"title": "Personal-Workstation #0",
-		"description": "Welcome to my personal workstation page! This is the hub of my productivity, where I tackle work projects and pursue personal endeavors. With regular updates and enhancements, I strive to maintain an efficient and inspiring work environment.",
+		"file": "personal-workstation-build-0",
+		"title": "Personal Workstation Build 0",
+		"description": "This setup supported my productivity from 2016 to 2022 across university projects, occasional remote work tasks, and video editing as a hobby for 'Striker Production' projects. Regular updates helped me maintain an efficient and inspiring environment for both personal and professional growth.",
 		"media_path": "pc-00",
 		"path_img": "workstation",
 		"style": {

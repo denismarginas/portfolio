@@ -19,7 +19,7 @@
       z-index: 0;
 
       > .element {
-        @include flex-row();
+        @include flex-column();
       }
     }
   }

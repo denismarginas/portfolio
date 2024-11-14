@@ -47,13 +47,13 @@ Allow: /
 Meta-robots: noindex, nofollow
 
 User-agent: *
-Disallow: /personal-workstation-0
+Disallow: /personal-workstation-build-0
 Crawl-delay: 10
 Allow: /
 Meta-robots: noindex, nofollow
 
 User-agent: *
-Disallow: /personal-workstation-1
+Disallow: /personal-workstation-build-1
 Crawl-delay: 10
 Allow: /
 Meta-robots: noindex, nofollow

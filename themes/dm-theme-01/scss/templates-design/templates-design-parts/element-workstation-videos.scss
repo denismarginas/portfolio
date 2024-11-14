@@ -1,0 +1,134 @@
+@import "../../functions/mixins.scss";
+@import "../../functions/functions.scss";
+
+.dm-workstation-videos {
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  background-color: var( --w-color-primary );
+  background-image: radial-gradient(
+                  var(--w-color-primary) 0%,
+                  var(--w-color-secondary) 100%
+  );
+  width: 100%;
+
+  .wave-shape {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: auto;
+
+    &.primary {
+      z-index: 1;
+      bottom: 0;
+      fill: var( --w-color-primary );
+      width: 110%;
+      margin-bottom: -4%;
+    }
+    &.secondary {
+      z-index: 0;
+      bottom: 0;
+      fill: var( --w-color-secondary );
+      width: 150%;
+      margin-bottom: -3%;
+    }
+    &.tertiary {
+      z-index: 1;
+      fill: var( --w-color-primary );
+      width: 110%;
+      margin-top: -6%;
+      top: 0;
+    }
+  }
+  > ul {
+    @include reset-list();
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    align-items: center;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1.3fr;
+    gap: var( --dm-spacing-large );
+    padding: var( --dm-spacing-small ) var( --dm-spacing-large );
+    box-sizing: border-box;
+
+    > .media-content {
+      .video-container {
+        --dm-video-color-primary: var( --w-color-primary );
+        --color-range-primary: var( --w-color-primary );
+        @include border-radius( var( --dm-border-radius-secondary ) );
+        overflow: hidden;
+        width: 100%;
+        max-width: 100%;
+        box-shadow: 3px 6px 7px rgba(11, 11, 11, 0.2);
+      }
+    }
+    > .text-content {
+      @include flex-column();
+      gap: var( --dm-spacing-secondary );
+
+      .title {
+        @include dm-font-heading3();
+        --dm-text-heading3-color: var( --w-text-color-on-bg );
+        --dm-text-heading3-font-family: var( --w-title-font );
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      .description, .description * {
+        @include dm-font-medium();
+        --dm-text-medium-color: var( --w-text-color-on-bg );
+        --dm-text-medium-font-family: var( --w-text-font );
+      }
+      .date {
+        @include dm-font-small();
+        --dm-text-small-color: var( --w-text-color-on-bg );
+        --dm-font-family: var( --w-text-font );
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-desktop-small) {
+    > ul {
+      gap: var( --dm-spacing-tertiary );
+      grid-template-columns: 1fr 1.2fr;
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-large) {
+    > ul {
+      grid-template-columns: repeat(1, 1fr);
+      padding: var( --dm-spacing-tertiary ) var( --dm-spacing-tertiary );
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-medium) {
+    > ul {
+
+    }
+    .wave-shape {
+      &.primary {
+        width: 310%;
+      }
+      &.secondary {
+        width: 450%;
+      }
+      &.tertiary {
+        width: 220%;
+        margin-left: -110%;
+        margin-top: -8%;
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-tablet-small ) {
+    > ul {
+      padding: var( --dm-spacing-tertiary ) var( --dm-spacing-secondary );
+    }
+    .wave-shape {
+      &.primary {
+        width: 310%;
+        margin-left: -150%;
+      }
+      &.secondary {
+        width: 550%;
+      }
+    }
+  }
+}
