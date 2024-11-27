@@ -10390,6 +10390,17 @@ body.theme-dark .dm-video-media-content {
   max-height: 100%;
   z-index: 2;
 }
+.dm-post-item-web > .dm-post-view:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
 @media only screen and (max-width: 1240px) {
   .dm-post-item-web > .dm-post-view {
     min-width: 50px;
@@ -10723,6 +10734,17 @@ body.theme-dark .dm-video-media-content {
   width: 100%;
   height: 100%;
   opacity: 0.6;
+}
+.dm-post-item-media > .dm-post-view:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 @media only screen and (max-width: 767px) {
   .dm-post-item-media > .dm-post-view > .photo > .logo {
@@ -11243,6 +11265,17 @@ body:not([java-script=true]) .slider > .slider-container .slider-element {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.carousel-list > .carousel-item > .dm-post-item-image:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
 @media only screen and (max-width: 767px) {
   .carousel-list {
     gap: var(--dm-spacing-secondary);
@@ -11603,6 +11636,17 @@ body.theme-dark .carousel-list > .carousel-item > .dm-post-item-image {
   height: 100%;
   max-height: 100%;
   z-index: 2;
+}
+.carousel-list-devices > .carousel-item > .dm-post:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
 }
 @media only screen and (max-width: 575px) {
   .carousel-list-devices > .carousel-item > .dm-post > .device-layout-laptop {
@@ -15306,6 +15350,22 @@ body.theme-dark .dm-post > container .post-content > .dm-post-details-grid > .dm
      object-position: center;
   width: 100%;
   height: 100%;
+}
+.dm-posts-list > container > ul > .dm-post-item > .dm-post-item-image:before {
+  content: "";
+  position: absolute;
+  left: -40%;
+  right: 0;
+  bottom: 0;
+  top: -40%;
+  width: 200%;
+  height: 200%;
+  z-index: 3;
+  -webkit-transform: none !important;
+          transform: none !important;
+  opacity: 1;
+  background-color: unset !important;
+  pointer-events: auto;
 }
 .dm-posts-list > container > ul > .dm-post-item > .dm-post-item-details {
   display: -webkit-box;
@@ -19605,6 +19665,17 @@ body.theme-dark .dm-summary-experience .dm-experience-section > container > hr {
   -o-object-position: center;
      object-position: center;
 }
+.dm-jobs > container > ul > li.dm-job-list > ul > li > .work-logo:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
 .dm-jobs > container > ul > li.dm-job-list > ul > li > .company-name {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19753,6 +19824,17 @@ body.theme-dark .dm-summary-experience .dm-experience-section > container > hr {
   height: auto;
   max-width: 80%;
   max-height: 80%;
+}
+.dm-jobs > container > ul > li.dm-job > ul > li.work-summary > .work-logo:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 .dm-jobs > container > ul > li.dm-job > ul > li.work-summary > .company-name {
   font-family: var(--dm-text-heading4-font-family);
@@ -20742,6 +20824,17 @@ body.theme-dark .dm-jobs > container > ul > li.dm-note > p {
 .dm-education > container > .compact-list > .education > .logo[data-layout=dark] > .name {
   --dm-text-medium-color: var( --dm-color-white );
 }
+.dm-education > container > .compact-list > .education > .logo:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
 .dm-education > container > .compact-list > .education > .name {
   border-radius: 4px;
   text-align: center;
@@ -20837,6 +20930,17 @@ body.theme-dark .dm-jobs > container > ul > li.dm-note > p {
 }
 .dm-education > container > .detailed-list > .education > .logo[data-layout=dark] {
   background: rgba(var(--dm-color-gray-darken-rgb), 1);
+}
+.dm-education > container > .detailed-list > .education > .logo:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 .dm-education > container > .detailed-list > .education > .details {
   display: -webkit-box;

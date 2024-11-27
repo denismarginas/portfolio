@@ -53,6 +53,17 @@
               --dm-text-medium-color: var( --dm-color-white );
             }
           }
+          &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+          }
         }
         > .name {
           @include border-radius(4px);
@@ -119,6 +130,17 @@
           }
           &[data-layout="dark"] {
             background: rgba(var(--dm-color-gray-darken-rgb), 1);
+          }
+          &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
           }
         }
         > .details {
