@@ -271,6 +271,7 @@
             .dm-logo {
                 .dm-logo-img {
                     @include fix-size(40px);
+                    border-radius: var( --dm-border-radius-primary );
 
                     [data="dm-logo-front"] {
                         margin-left: -10px;
