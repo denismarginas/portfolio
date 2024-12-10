@@ -231,7 +231,8 @@
                 @include svg-color(var(--dm-color-white));
 
                 > path {
-                    @include transition( transform 400ms 100ms );
+                    opacity: 1;
+                    @include transition(transform 400ms 100ms, opacity 700ms);
                 }
             }
             &:hover {

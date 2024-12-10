@@ -26253,11 +26253,12 @@ body:not([java-script=true]) .dm-blog-posts > container > .dm-blog-posts-section
   stroke: var(--dm-color-white);
 }
 #header > section .dm-navbar-toggle > svg > path {
-  -webkit-transition: transform 400ms 100ms;
-  -webkit-transition: -webkit-transform 400ms 100ms;
-  transition: -webkit-transform 400ms 100ms;
-  transition: transform 400ms 100ms;
-  transition: transform 400ms 100ms, -webkit-transform 400ms 100ms;
+  opacity: 1;
+  -webkit-transition: transform 400ms 100ms, opacity 700ms;
+  -webkit-transition: opacity 700ms, -webkit-transform 400ms 100ms;
+  transition: opacity 700ms, -webkit-transform 400ms 100ms;
+  transition: transform 400ms 100ms, opacity 700ms;
+  transition: transform 400ms 100ms, opacity 700ms, -webkit-transform 400ms 100ms;
 }
 #header > section .dm-navbar-toggle:hover {
   background-color: var(--dm-background-color-primary);

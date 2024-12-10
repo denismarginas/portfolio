@@ -80,17 +80,18 @@
   border-radius         : $var;
 }
 
-@mixin transform ( $var ) {
+@mixin transform ( $vars... ) {
   -ms-transform     : $var;
   -webkit-transform : $var;
   transform         : $var;
 }
 
-@mixin transition ( $var ) {
-  -webkit-transition : $var;
-  -o-transition      : $var;
-  transition         : $var;
+@mixin transition( $vars... ) {
+  -webkit-transition: $vars;
+  -o-transition: $vars;
+  transition: $vars;
 }
+
 
 @mixin animation ( $var ) {
   -webkit-animation : $var;

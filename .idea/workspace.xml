@@ -4,6 +4,7 @@
     <list default="true" id="2259709f-b699-4482-a363-da52decd52d5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/functions/mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/functions/mixins.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/structure-design/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/structure-design/header.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +112,8 @@
       <workItem from="1731576988343" duration="5632000" />
       <workItem from="1731595786203" duration="627000" />
       <workItem from="1732724702726" duration="1703000" />
-      <workItem from="1733855986255" duration="5179000" />
+      <workItem from="1733855986255" duration="5773000" />
+      <workItem from="1733864758457" duration="468000" />
     </task>
     <servers />
   </component>
