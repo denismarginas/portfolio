@@ -3,7 +3,7 @@
 
 #header {
     position: fixed;
-    background-color: var(--dm-color-secondary);
+    background-color: rgba( var(--dm-color-secondary-rgb), 1 );
     color: #fff;
     width: 100%;
     min-height: 50px;
@@ -12,6 +12,8 @@
     z-index: 999;
     margin: 0px;
     padding: var( --dm-spacing-primary ) 0;
+    backdrop-filter: blur(10px);
+    transition: all 0.2s ease-in-out;
 
     > section {
         @include container();
@@ -32,24 +34,23 @@
                 border: 3px solid var( --dm-color-white );
                 position: relative;
                 overflow: hidden;
-                transition: box-shadow 0.3s;
                 box-shadow: 0px 0px 0px #22222200;
                 background: var( --dm-background-color-primary );
                 background-image: linear-gradient(var( --dm-background-color-primary ), var( --dm-background-color-primary ) 20%, var( --dm-background-color-secondary ) 120%);
+                transition: all 0.3s ease-in-out;
 
                 [data="dm-logo-front"] {
                     @include fix-size(60px);
-                    transition: top 0.3s, filter 0.4s;
                     filter: drop-shadow(0px 0px 0px #22222200);
                     position: absolute;
                     top: 10%;
+                    transition: all 0.3s ease-in-out;
                 }
                 &:hover {
                     box-shadow: 3px 3px 3px #222;
                     transition: box-shadow 0.3s;
 
                     [data="dm-logo-front"] {
-                        @include fix-size(60px);
                         transition: top 0.3s, filter 0.4s;
                         filter: drop-shadow(5px 5px 6px #222);
                         top: 5%;
@@ -174,12 +175,13 @@
                     cursor: pointer;
                     border: 2px solid var( --dm-color-white );
                     padding: calc( var( --dm-spacing-primary ) / 2 );
+                    transition: all 0.3s ease-in-out;
 
                     svg {
                         @include fix-size(20px);
                         @include svg-color(var(--dm-color-white));
                         transform: rotate(-10deg);
-                        transition: transform 0.4s;
+                        transition: all 0.3s ease-in-out;
 
                         $duration: 0.3s;
                         $increment: 0.2s;
@@ -223,6 +225,7 @@
             cursor: pointer;
             border: 2px solid var( --dm-color-white );
             padding: calc( var( --dm-spacing-primary ) / 2 );
+            transition: all 0.3s ease-in-out;
 
             > svg {
                 @include svg-color(var(--dm-color-white));
@@ -259,6 +262,40 @@
             }
         }
     }
+    &.scrolled {
+        min-height: 46px;
+        height: 46px;
+        background-color: rgba( var(--dm-color-secondary-rgb), 0.9 );
+
+        > section {
+            .dm-logo {
+                .dm-logo-img {
+                    @include fix-size(40px);
+
+                    [data="dm-logo-front"] {
+                        @include fix-size(40px);
+                    }
+                }
+            }
+            .dm-menu {
+                .dm-menu-utility {
+                    .dm-search {
+                        @include fix-size(24px);
+
+                        > svg {
+                            @include fix-size(18px);
+                        }
+                    }
+                }
+            }
+            .dm-navbar-toggle {
+                &.active {
+                    top: 12px;
+                }
+            }
+        }
+    }
+
     @media only screen and (max-width: $screen-tablet-large) {
         > section {
             .dm-navbar-toggle {
@@ -336,6 +373,19 @@
             }
         }
 
+    }
+    @media only screen and (max-width: $screen-tablet-small) {
+        > section {
+            .dm-logo {
+                .dm-logo-img {
+                    @include fix-size(46px);
+
+                    [data="dm-logo-front"] {
+                        @include fix-size(46px);
+                    }
+                }
+            }
+        }
     }
     @media only screen and (max-width: $screen-phone-medium) {
         > section {

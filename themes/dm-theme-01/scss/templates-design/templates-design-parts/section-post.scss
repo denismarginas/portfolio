@@ -80,7 +80,8 @@
 
         > .post-title {
           @include dm-font-heading4();
-          --dm-text-heading4-font-family: var( --dm-font-family-secondary );
+          --dm-text-heading4-font-family: var( --dm-font-family-tertiary );
+          --dm-text-heading4-font-weight: 500;
           margin: calc( var( --dm-spacing-primary ) / 2 ) 0;
 
           &:after {
@@ -365,6 +366,8 @@
         @include border-radius( var( --dm-border-radius-primary ));
         @include flex-center();
         @include dm-font-heading4();
+        --dm-text-heading4-font-family: var( --dm-font-family-tertiary );
+        --dm-text-heading4-font-weight: 600;
         padding: var( --dm-spacing-secondary );
         --dm-text-heading4-color: var(--post_color_secondary);
         background-color: var(--post_color_primary);

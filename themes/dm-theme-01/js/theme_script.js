@@ -153,6 +153,19 @@ document.addEventListener("DOMContentLoaded", function() {
         }, duration);
     }
 
+    //  Header Scroll Checking
+    const header = document.querySelector("header");
+    const scrollMargin = 100;
+
+    function handleScroll() {
+        if (window.scrollY > scrollMargin) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    }
+
+    window.addEventListener("scroll", handleScroll);
 
     // Toggle Theme
     function toggleTheme() {
