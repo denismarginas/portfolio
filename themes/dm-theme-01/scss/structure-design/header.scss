@@ -273,7 +273,7 @@
                     @include fix-size(40px);
 
                     [data="dm-logo-front"] {
-                        @include fix-size(40px);
+                        margin-left: -10px;
                     }
                 }
             }
@@ -381,7 +381,7 @@
                     @include fix-size(46px);
 
                     [data="dm-logo-front"] {
-                        @include fix-size(46px);
+                        margin-left: -7px;
                     }
                 }
             }

@@ -26303,12 +26303,7 @@ body:not([java-script=true]) .dm-blog-posts > container > .dm-blog-posts-section
   max-height: 40px;
 }
 #header.scrolled > section .dm-logo .dm-logo-img [data=dm-logo-front] {
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
-  min-height: 40px;
-  max-width: 40px;
-  max-height: 40px;
+  margin-left: -10px;
 }
 #header.scrolled > section .dm-menu .dm-menu-utility .dm-search {
   width: 24px;
@@ -26418,12 +26413,7 @@ body:not([java-script=true]) .dm-blog-posts > container > .dm-blog-posts-section
     max-height: 46px;
   }
   #header > section .dm-logo .dm-logo-img [data=dm-logo-front] {
-    width: 46px;
-    height: 46px;
-    min-width: 46px;
-    min-height: 46px;
-    max-width: 46px;
-    max-height: 46px;
+    margin-left: -7px;
   }
 }
 @media only screen and (max-width: 375px) {
