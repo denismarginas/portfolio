@@ -29,12 +29,14 @@
 
           > img, > svg {
             @include svg-color( var( --dm-color-white ) );
-            object-position: center;
-            object-fit: contain;
             height: auto;
             width: auto;
             max-width: 80%;
             max-height: 80%;
+          }
+          > svg {
+            width: 150px;
+            height: auto;
           }
           > .thumbnail-overlay-for-logo {
             opacity: 0.2;
@@ -51,9 +53,17 @@
             object-fit: cover;
             object-position: center;
           }
+          &.bg-thumbnail {
+            > img:not(.thumbnail-overlay-for-logo), > svg {
+              box-sizing: border-box;
+              padding: var( --dm-spacing-tertiary );
+              background-color: var(--post_color_background);
+              border-radius: var( --dm-spacing-secondary );
+              box-shadow: 4px 4px 4px rgba( var( --dm-color-black-rgb ), 0.3 );
+            }
+          }
         }
         &.post-thumbnail {
-
           > img {
             width: 400px;
             max-width: 100%;
@@ -486,9 +496,18 @@
       > .post-content, > .post-data {
         gap: var( --dm-spacing-secondary );
 
-        > .post-logo {
-          @include fix-height(100px);
+        > .post-image {
+          &.post-logo {
+            @include fix-height(100px);
+
+            &.bg-thumbnail {
+              > img:not(.thumbnail-overlay-for-logo), > svg {
+                padding: var( --dm-spacing-secondary );
+              }
+            }
+          }
         }
+
         > .dm-post-details-grid {
           grid-template-columns: 1.8fr 3fr;
         }

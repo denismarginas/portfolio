@@ -80,11 +80,19 @@ endif;
             <?php if (isset($post_data["logo"]) && isset($post_data["logo_path"])) : ?>
                 <?php $logo = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["logo_path"]."/".$post_data["logo"]; ?>
 
-                <div class="post-image post-logo" data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.4s">
+                <div class="post-image post-logo
+                <?php echo (isset($post_data["thumbnail"]) && isset($post_data["thumbnail_path"])) ? "bg-thumbnail" : ""; ?>"
+                data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.4s">
                     <?php if (isset($post_data["logo_type"]) && !empty($post_data["logo_type"]) && $post_data["logo_type"] == "svg") : ?>
                         <?php SVGRenderer::renderSVG( $post_data["logo"] ); ?>
                     <?php else : ?>
-                        <?php echo renderImage($logo, false, false, true, ["alt" => "Post Logo - ".$post_data["title"], "data-motion" => "transition-fade-0 transition-blur-0 transition-slideInBottom-0", "data-duration" => "0.8s"]); ?>
+                        <?php echo renderImage($logo, false, false, true,
+                            [
+                                "alt" => "Post Logo - ".$post_data["title"],
+                                "data-motion" => "transition-fade-0 transition-blur-0 transition-slideInBottom-0",
+                                "data-duration" => "0.8s"
+                            ]
+                        ); ?>
                     <?php endif; ?>
 
                     <?php if (isset($post_data["thumbnail"]) && isset($post_data["thumbnail_path"])) :

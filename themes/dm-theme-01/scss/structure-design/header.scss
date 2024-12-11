@@ -265,7 +265,7 @@
         }
     }
     &:before {
-        @include box-shadow(0px 2px 7px 4px rgb(8 7 7 / 30%));
+        @include box-shadow(0px 2px 7px 4px rgba( var( --dm-color-black-rgb ), 0.3 ));
         content: "";
         background-image: linear-gradient(
                         rgba(var(--dm-color-secondary-rgb), 0.5) -10%,
