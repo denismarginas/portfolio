@@ -11239,6 +11239,7 @@ body:not([java-script=true]) .slider > .slider-container .slider-element {
   border-radius: var(--dm-border-radius-primary);
   background-color: rgba(var(--dm-color-gray-rgb), 0.1);
   height: 120px;
+  position: relative;
 }
 .carousel-list > .carousel-item > .dm-post-item-image > .logo, .carousel-list > .carousel-item > .dm-post-item-image > svg {
   padding: var(--dm-spacing-secondary);

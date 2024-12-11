@@ -18,7 +18,8 @@
       overflow: hidden;
       border-radius: var(--dm-border-radius-primary);
       background-color: rgba(var(--dm-color-gray-rgb),0.1);
-      height: 120px; 
+      height: 120px;
+      position: relative;
 
       > .logo, > svg {
         @include svg-color( var( --dm-color-white ) );
