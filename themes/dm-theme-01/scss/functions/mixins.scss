@@ -81,9 +81,9 @@
 }
 
 @mixin transform ( $vars... ) {
-  -ms-transform     : $var;
-  -webkit-transform : $var;
-  transform         : $var;
+  -ms-transform     : $vars;
+  -webkit-transform : $vars;
+  transform         : $vars;
 }
 
 @mixin transition( $vars... ) {

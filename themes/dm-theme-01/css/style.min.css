@@ -25861,6 +25861,7 @@ body:not([java-script=true]) .dm-blog-posts > container > .dm-blog-posts-section
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: var(--dm-spacing-secondary);
+  z-index: 1;
 }
 @media only screen and (max-width: 767px) {
   #header > section {
@@ -26290,10 +26291,27 @@ body:not([java-script=true]) .dm-blog-posts > container > .dm-blog-posts-section
   -webkit-transform: rotate(-45deg) translateY(-3px) translateX(-9px);
   transform: rotate(-45deg) translateY(-3px) translateX(-9px);
 }
+#header:before {
+  -webkit-box-shadow: 0px 2px 7px 4px rgba(8, 7, 7, 0.3);
+  box-shadow: 0px 2px 7px 4px rgba(8, 7, 7, 0.3);
+  content: "";
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(-10%, rgba(var(--dm-color-secondary-rgb), 0.5)), color-stop(140%, rgba(var(--dm-color-primary-rgb), 0.6)));
+  background-image: linear-gradient(rgba(var(--dm-color-secondary-rgb), 0.5) -10%, rgba(var(--dm-color-primary-rgb), 0.6) 140%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
 #header.scrolled {
   min-height: 46px;
   height: 46px;
-  background-color: rgba(var(--dm-color-secondary-rgb), 0.9);
+  background-color: rgba(var(--dm-color-secondary-rgb), 0.7);
 }
 #header.scrolled > section .dm-logo .dm-logo-img {
   width: 40px;
@@ -26325,6 +26343,9 @@ body:not([java-script=true]) .dm-blog-posts > container > .dm-blog-posts-section
 }
 #header.scrolled > section .dm-navbar-toggle.active {
   top: 12px;
+}
+#header.scrolled:before {
+  opacity: 1;
 }
 @media only screen and (max-width: 992px) {
   #header > section .dm-navbar-toggle {

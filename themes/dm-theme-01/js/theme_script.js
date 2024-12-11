@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //  Header Scroll Checking
     const header = document.querySelector("header");
-    const scrollMargin = 100;
+    const scrollMargin = 200;
 
     function handleScroll() {
         if (window.scrollY > scrollMargin) {
