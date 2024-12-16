@@ -20077,10 +20077,33 @@ body.theme-dark .dm-summary-experience .dm-experience-section > container > hr {
   font-weight: var(--dm-text-large-font-weight);
   line-height: var(--dm-text-large-line-height);
   color: var(--dm-text-large-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: calc(var(--dm-text-large-font-size) * 2);
+  height: calc(var(--dm-text-large-font-size) * 2);
+  min-width: calc(var(--dm-text-large-font-size) * 2);
+  min-height: calc(var(--dm-text-large-font-size) * 2);
+  max-width: calc(var(--dm-text-large-font-size) * 2);
+  max-height: calc(var(--dm-text-large-font-size) * 2);
+  padding: calc(var(--dm-spacing-primary) / 3);
   --dm-text-large-font-weight: 600;
   --dm-text-large-color: var( --dm-color-white );
   text-transform: uppercase;
-  padding: 6px 16px;
+  padding: 6px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .dm-jobs > container > ul > li.dm-job > ul > li.work-details > .work-data > li > .work-time > li > span.years-nr {
   background-color: var(--dm-color-primary);
@@ -20419,9 +20442,16 @@ body.theme-dark .dm-summary-experience .dm-experience-section > container > hr {
     font-weight: var(--dm-text-medium-font-weight);
     line-height: var(--dm-text-medium-line-height);
     color: var(--dm-text-medium-color);
+    width: calc(var(--dm-text-medium-font-size) * 2.2);
+    height: calc(var(--dm-text-medium-font-size) * 2.2);
+    min-width: calc(var(--dm-text-medium-font-size) * 2.2);
+    min-height: calc(var(--dm-text-medium-font-size) * 2.2);
+    max-width: calc(var(--dm-text-medium-font-size) * 2.2);
+    max-height: calc(var(--dm-text-medium-font-size) * 2.2);
+    padding: calc(var(--dm-spacing-primary) / 4);
+    --dm-text-medium-line-height: var( --dm-text-medium-font-size );
     --dm-text-medium-color: var( --dm-color-white );
     --dm-text-medium-font-weight: 600;
-    padding: 6px 12px;
   }
   .dm-jobs > container > ul > li.dm-job > ul > li.work-details > .work-socials {
     padding-top: var(--dm-spacing-primary) 0;

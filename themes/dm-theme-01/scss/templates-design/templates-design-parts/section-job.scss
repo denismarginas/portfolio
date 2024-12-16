@@ -300,10 +300,15 @@
                       &.nr-circle {
                         @include border-radius(50%);
                         @include dm-font-large();
+                        @include flex-row();
+                        @include flex-center();
+                        @include fix-size(calc( var(--dm-text-large-font-size ) * 2));
+                        padding: calc( var( --dm-spacing-primary ) / 3);
                         --dm-text-large-font-weight: 600;
                         --dm-text-large-color: var( --dm-color-white );
                         text-transform: uppercase;
-                        padding: 6px 16px;
+                        padding: 6px;
+                        box-sizing: border-box;
                       }
                       &.years-nr {
                         background-color: var( --dm-color-primary );
@@ -615,9 +620,11 @@
                         }
                         &.nr-circle {
                           @include dm-font-medium();
+                          @include fix-size(calc( var( --dm-text-medium-font-size ) * 2.2));
+                          padding: calc( var( --dm-spacing-primary ) / 4);
+                          --dm-text-medium-line-height: var( --dm-text-medium-font-size );
                           --dm-text-medium-color: var( --dm-color-white );
                           --dm-text-medium-font-weight: 600;
-                          padding: 6px 12px
                         }
                       }
                     }

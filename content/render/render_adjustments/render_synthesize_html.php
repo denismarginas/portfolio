@@ -57,12 +57,12 @@ function moveTagsToHead($html) {
     return $html;
 }
 
-
 function standardizeAttributeQuotes($html) {
     $pattern = '/(\w+)\s*=\s*["\']([^"\']+)["\']/';
     $html = preg_replace($pattern, '$1="$2"', $html);
     return $html;
 }
+
 function standardizeBackgroundImageUrls($html) {
     $html = html_entity_decode($html);
     $pattern = '/background-image:\s*url\(\s*[\'"]?([^\'"()]+)[\'"]?\s*\)/';

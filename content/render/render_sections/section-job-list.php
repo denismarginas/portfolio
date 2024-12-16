@@ -8,7 +8,13 @@ if(!isset($jobs)) :
     $jobs = getDataJson('data-items-jobs','data');
 endif;
 
+$theme_path = $GLOBALS['urlPath'] . $jsonGlobalData["themes-path"] . "/" . $jsonGlobalData["theme-active"]["dir-name"];
+
 ?>
+
+<?php if(!empty($theme_path)) :  ?>
+    <script src="<?php echo $theme_path;?>/js/content-posts-jobs-worktime-calculation.js"></script>
+<?php endif; ?>
 
 <section class="dm-jobs grid-background-animation">
     <container>
