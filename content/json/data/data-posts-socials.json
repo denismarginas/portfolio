@@ -183,8 +183,8 @@
         "media": [
             {
                 "type": "video",
-                "path": "content/vid/projects/denismarginas/personal-portfolio/personal-portfolio.mp4",
-                "thumbnail": "content/img/thumbnails/personal-portfolio.webp"
+                "path": "content/vid/projects/denismarginas/personal-portfolio/personal-portfolio-1.mp4",
+                "thumbnail": "content/img/thumbnails/personal-portfolio-1.webp"
             }
         ]
     },
@@ -238,8 +238,8 @@
         "media": [
             {
                 "type": "video",
-                "path": "content/vid/projects/denismarginas/personal-workstation/desktop-setup.mp4",
-                "thumbnail": "content/img/thumbnails/desktop-setup.webp"
+                "path": "content/vid/projects/denismarginas/personal-workstation/personal-workstation-build-1.mp4",
+                "thumbnail": "content/img/thumbnails/personal-workstation-build-1.webp"
             }
         ]
     },

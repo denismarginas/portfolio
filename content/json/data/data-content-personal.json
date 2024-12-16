@@ -27,9 +27,9 @@
 	},
 	"portfolio-video-archive": [
 		{
-			"video": "personal-portfolio.mp4",
+			"video": "personal-portfolio-1.mp4",
 			"video-path": "projects/denismarginas/personal-portfolio/",
-			"video-thumbnail": "personal-portfolio.webp",
+			"video-thumbnail": "personal-portfolio-1.webp",
 			"video-thumbnail-path": "/thumbnails/",
 			"video-data": {
 				"title": "Portfolio Showcase",
