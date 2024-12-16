@@ -14,6 +14,7 @@ $theme_path = $GLOBALS['urlPath'] . $jsonGlobalData["themes-path"] . "/" . $json
 
 <?php if(!empty($theme_path)) :  ?>
     <script src="<?php echo $theme_path;?>/js/content-posts-jobs-worktime-calculation.js"></script>
+    <script src="<?php echo $theme_path;?>/js/content-posts-jobs-worktime-graph-calculation.js"></script>
 <?php endif; ?>
 
 <section class="dm-jobs grid-background-animation">

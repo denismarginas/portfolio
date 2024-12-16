@@ -143,6 +143,10 @@ $latestEndDateDisplay = ($latestEndDate !== null) ? $latestEndDate->format('m.Y'
         endfor;
     endforeach;
 
+    // Convert total experience months into years if they exceed 12
+    $total_experience_years += floor($total_experience_months / 12); // Convert excess months to years
+    $total_experience_months = $total_experience_months % 12; // Remaining months
+
     // Convert total timeline days to months and years
     $total_timeline_years = floor($total_timeline_days / 365);
     $total_timeline_months = floor(($total_timeline_days % 365) / 30);
@@ -153,23 +157,23 @@ $latestEndDateDisplay = ($latestEndDate !== null) ? $latestEndDate->format('m.Y'
         <p>
             <span>Total Work Experience: </span>
             <span><?php echo $total_experience_years; ?></span>
-            <span>years, </span>
+            <span> years, </span>
             <span><?php echo $total_experience_months; ?></span>
             <span> months</span>
         </p>
     <?php endif; ?>
 
     <?php
-    // Display the total timeline results
     if ($total_timeline_years > 0 || $total_timeline_months > 0) :
         ?>
         <p>
             <span>Total Work Timeline: </span>
             <span><?php echo $total_timeline_years; ?></span>
-            <span>years, </span>
+            <span> years, </span>
             <span><?php echo $total_timeline_months; ?></span>
             <span> months</span>
         </p>
     <?php endif; ?>
+
 
 </div>
