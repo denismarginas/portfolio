@@ -26847,6 +26847,17 @@ svg[data-svg-type=stroke] > path {
           flex-direction: column;
   padding-top: var(--header-height);
 }
+#page-content:before {
+  background-color: var(--dm-color-secondary);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: var(--header-height);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: unset;
+}
 
 container, .container {
   margin: 0 auto;
