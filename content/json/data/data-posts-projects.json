@@ -3027,6 +3027,7 @@
             ],
             "project_types": [
                 "online shop",
+                "cron application",
                 "feed application",
                 "web content",
                 "web design",
@@ -7503,8 +7504,9 @@
             "web_project_status": "Done",
             "project_types": [
                 "online shop",
+                "cron application",
+                "api integration",
                 "web design",
-                "api application",
                 "seo optimization"
             ],
             "project_collaboration": [
