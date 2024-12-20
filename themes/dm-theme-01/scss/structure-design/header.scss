@@ -293,7 +293,9 @@
                     border-radius: var( --dm-border-radius-primary );
 
                     [data="dm-logo-front"] {
-                        margin-left: -10px;
+                        @include fix-size(83px);
+                        margin-left: -22px;
+                        margin-top: -2px;
                     }
                 }
             }
