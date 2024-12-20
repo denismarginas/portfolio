@@ -26036,7 +26036,7 @@ body:not([java-script=true]) .dm-blog-posts > container > .dm-blog-posts-section
 #header > section .dm-menu.navbar-active {
   left: 0 !important;
   z-index: 100;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 #header > section .dm-menu > ul {
   padding: 0;
@@ -26681,6 +26681,7 @@ body:not([java-script=true]) .dm-blog-posts > container > .dm-blog-posts-section
 }
 
 body {
+  position: relative;
   font-family: var(--dm-font-family-primary);
   background-color: var(--dm-background-color-white);
   padding: 0;
@@ -26697,6 +26698,29 @@ body {
           justify-content: space-between;
   min-height: 100vh;
   direction: ltr;
+}
+body:after {
+  z-index: -2;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(var(--dm-color-black-rgb), 0);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+body[data-overlay=true] {
+  overflow: hidden;
+}
+body[data-overlay=true]:after {
+  z-index: 1;
+  opacity: 1;
+  background-color: rgba(var(--dm-color-black-rgb), 0.7);
 }
 
 ul,

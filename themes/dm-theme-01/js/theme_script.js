@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
     deletePreloaderElement();
 
     // Navbar Functionality
+    var bodySection = document.querySelector("body");
     var navbarToggle = document.querySelector(".dm-navbar-toggle");
     var navbarToggleSection = document.querySelector(".dm-menu");
 
@@ -24,6 +25,12 @@ document.addEventListener("DOMContentLoaded", function() {
         navbarToggle.addEventListener("click", function() {
             navbarToggle.classList.toggle("active");
             navbarToggleSection.classList.toggle("navbar-active");
+
+            if (bodySection.hasAttribute("data-overlay")) {
+                bodySection.removeAttribute("data-overlay");
+            } else {
+                bodySection.setAttribute("data-overlay", "true");
+            }
         });
     }
 

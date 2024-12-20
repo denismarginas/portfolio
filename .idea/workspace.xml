@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2259709f-b699-4482-a363-da52decd52d5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/json/index/index-data-pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/index/index-data-pages.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/js/theme_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/js/theme_script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/js/theme_script.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/js/theme_script.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/structure-design/body.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/structure-design/body.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/structure-design/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/structure-design/header.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +120,7 @@
       <workItem from="1734018912703" duration="351000" />
       <workItem from="1734341934522" duration="20594000" />
       <workItem from="1734381537538" duration="6707000" />
-      <workItem from="1734696816359" duration="1066000" />
+      <workItem from="1734696816359" duration="2457000" />
     </task>
     <servers />
   </component>
