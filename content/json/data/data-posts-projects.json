@@ -7544,5 +7544,287 @@
 
         ],
         "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-lironpinkhas",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "lironpinkhas",
+            "title": "Liron Pinkhas",
+            "logo": "logo/logo.png",
+            "logo_path": "lironpinkhas",
+            "logo_type": "png",
+            "description": "Presentation website created using Elementor, translating the design from Figma into a functional web design. The website was developed in two languages using the provided content; however, some text content is pending finalization, allowing the client to make adjustments at their discretion.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "lironpinkhas.com",
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_technology": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Teamwork"
+            ],
+            "project_companies": [
+                "Mentor Marketing Experts"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "10.2024",
+                "date_end": "12.2024"
+            },
+            "tags": [
+                "web"
+            ],
+            "colors": {
+                "post_color_primary": "#192a56",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#192a56",
+                "post_color_text_on_background": "#ffffff"
+            }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-colorplay",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "colorplay",
+            "title": "Color Play",
+            "logo": "logo/logo.png",
+            "logo_path": "colorplay",
+            "logo_type": "png",
+            "description": "Presentation website created using Elementor, transforming the design from Figma into a functional web design. The website's content was developed in 7 languages.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "clrply.com",
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_technology": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Teamwork"
+            ],
+            "project_companies": [
+                "Mentor Marketing Experts"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "11.2024",
+                "date_end": "12.2024"
+            },
+            "tags": [
+                "web"
+            ],
+            "colors": {
+                "post_color_primary": "#4e4eca",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#ffffff",
+                "post_color_text_on_background": "#4e4eca"
+            }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-barantech",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "barantech",
+            "title": "Barantech",
+            "logo": "logo/logo.png",
+            "logo_path": "barantech",
+            "logo_type": "png",
+            "description": "Using Elementor and additional plugins, this presentation website was rebuilt by translating the original design from a custom WordPress theme into an Elementor-based theme. The new design maintains 95% similarity to the original, with some animations not replicated exactly",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "barantech.com",
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_technology": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "jQuery",
+                    "svg": "jquery"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                },
+                {
+                    "name": "Unlimited Elements for Elementor Premium",
+                    "svg": "unlimited-elements"
+                },
+                {
+                    "name": "Advanced Custom Fields",
+                    "svg": "acf"
+                },
+                {
+                    "name": "Dynamic Content for Elementor",
+                    "svg": "dynamic-elementor"
+                },
+                {
+                    "name": "Premium Addons for Elementor"
+                },
+                {
+                    "name": "Code Snippets"
+                },
+                {
+                    "name": "Yoast SEO"
+                }
+            ],
+            "web_project_status": "Undone",
+            "project_types": [
+                "presentation website",
+                "web content",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Teamwork"
+            ],
+            "project_companies": [
+                "Mentor Marketing Experts"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "08.2024",
+                "date_end": "12.2024"
+            },
+            "tags": [
+                "web",
+                "content-web"
+            ],
+            "colors": {
+                "post_color_primary": "#2a4887",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#233066",
+                "post_color_text_on_background": "#ffffff"
+            }
+        },
+        "post_content": [
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     }
 ]
