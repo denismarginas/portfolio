@@ -74,7 +74,7 @@ if(isset($post_data) && !empty($post_data)) :
         $render_bg_color = 'style="background-color: '.$post_data["colors"]["post_color_primary"].'"';
     endif;
 
-    if ($have_photo_content != false) : ?>
+    if ($have_photo_content != false && in_array("photo", $post_data["tags"]) ) : ?>
 
         <div class="devices-item-media type-img">
             <div class="dm-post"
@@ -93,7 +93,7 @@ if(isset($post_data) && !empty($post_data)) :
         </div>
     <?php endif; ?>
 
-    <?php if ($have_video_content != false ) :?>
+    <?php if ($have_video_content != false && in_array("video", $post_data["tags"]) ) : ?>
         <div class="devices-item-media type-vid" >
             <div class="dm-post"
                  style="--primary-color-post: <?php echo $post_data["colors"]["post_color_primary"]; ?>;">

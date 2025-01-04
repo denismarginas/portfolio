@@ -42,12 +42,12 @@ if(isset($post_data) && !empty($post_data)) :
     endif;
 
     if (
-        $have_web_desktop_image != false
+        $have_web_desktop_image != false &&
+        in_array("web", $post_data["tags"])
     ) :
         ?>
 
         <div class="devices-item-web">
-
             <div class="dm-post"
                style="--primary-color-post: <?php echo $post_data["colors"]["post_color_primary"]; ?>;">
                 <div class="device-layout-laptop">
