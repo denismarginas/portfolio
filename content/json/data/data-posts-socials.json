@@ -329,5 +329,28 @@
                 "path": "content/cv/cv-2/dm-cv-2-english-public-compressed.webp"
             }
         ]
+    },
+    {
+        "description": "Projects I have created or I was involved in, featuring designs and functionality of websites and photo-video media content.",
+        "sections": [
+            {
+                "section-description": "Links:",
+                "buttons": [
+                    {
+                        "text": "Personal Portfolio",
+                        "link": "https://denismarginas.github.io/portfolio/",
+                        "icon": "web"
+                    }
+                ]
+            }
+        ],
+        "date": "04-01-2024",
+        "type": "blog-post",
+        "media": [
+            {
+                "type": "photo",
+                "path": "content/img/projects/denismarginas/media/banners-1-1/banner-005.webp"
+            }
+        ]
     }
 ]
