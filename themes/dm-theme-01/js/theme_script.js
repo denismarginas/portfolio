@@ -819,6 +819,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
+
     // **************
     // Cookie Notice - functionality
     var cookieNotice = document.getElementById('cookie-notice');

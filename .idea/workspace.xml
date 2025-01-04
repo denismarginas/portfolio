@@ -6,9 +6,14 @@
       <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/img/design-elements/portfolio-experience-image.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/json/data/data-content-personal.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-content-personal.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/json/data/data-icons.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-icons.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/json/data/data-posts-projects.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-posts-projects.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/json/index/index-data-pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/index/index-data-pages.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/json/index/index-data-posts-projects.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/index/index-data-posts-projects.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/functions/post-project-functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/functions/post-project-functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/render/render_elements/element-experience-categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_elements/element-experience-categories.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/xml/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/content/xml/sitemap.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/education-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/education-experience.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employee-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/employee-experience.html" afterDir="false" />
@@ -27,6 +32,7 @@
       <change beforePath="$PROJECT_DIR$/project-amorino.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-amorino.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-augustinnailtrainer.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-augustinnailtrainer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-axacompany.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-axacompany.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-barantech.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-barantech.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-boneamed.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-boneamed.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-brbhome.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-brbhome.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-brisascents.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-brisascents.html" afterDir="false" />
@@ -39,6 +45,7 @@
       <change beforePath="$PROJECT_DIR$/project-casadarius-shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-casadarius-shop.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-cekan.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-cekan.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-ceramicevo.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-ceramicevo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-colorplay.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-colorplay.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-copiatoarealbaiulia.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-copiatoarealbaiulia.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-covoarealex.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-covoarealex.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-dabo-sm-bm.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-dabo-sm-bm.html" afterDir="false" />
@@ -56,6 +63,7 @@
       <change beforePath="$PROJECT_DIR$/project-ilnicelectric.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-ilnicelectric.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-lavplast-ambalajelavplast.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-lavplast-ambalajelavplast.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-lavplast-lavmag.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-lavplast-lavmag.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-lironpinkhas.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-lironpinkhas.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-logistic-brain.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-logistic-brain.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-marasafety.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-marasafety.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-maromsteelline.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-maromsteelline.html" afterDir="false" />
@@ -101,10 +109,12 @@
       <change beforePath="$PROJECT_DIR$/project-woodworkart.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-woodworkart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-ypages.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-ypages.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/robots.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/social-activity.html" beforeDir="false" afterPath="$PROJECT_DIR$/social-activity.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/summary-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/summary-experience.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/js/theme_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/js/theme_script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/visual-media-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/visual-media-projects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-development-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-development-projects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/workstations.html" beforeDir="false" afterPath="$PROJECT_DIR$/workstations.html" afterDir="false" />
@@ -129,22 +139,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp-php8.1/htdocs/portfolio/themes/dm-theme-01/js&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;watcher.settings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/xampp-php8.1/htdocs/portfolio/content/render/render_elements",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "watcher.settings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp-php8.1\htdocs\portfolio\themes\dm-theme-01\js" />
-      <recent name="C:\xampp-php8.1\htdocs\portfolio\themes\dm-theme-01\scss\templates-design\templates-design-parts" />
       <recent name="C:\xampp-php8.1\htdocs\portfolio\content\render\render_elements" />
+      <recent name="C:\xampp-php8.1\htdocs\portfolio\themes\dm-theme-01\scss\templates-design\templates-design-parts" />
+      <recent name="C:\xampp-php8.1\htdocs\portfolio\themes\dm-theme-01\js" />
       <recent name="C:\xampp-php8.1\htdocs\portfolio\content\render\render_sections" />
       <recent name="C:\xampp-php8.1\htdocs\portfolio\content\render\functions" />
     </key>
@@ -221,7 +231,8 @@
       <workItem from="1734341934522" duration="20594000" />
       <workItem from="1734381537538" duration="6707000" />
       <workItem from="1734696816359" duration="3651000" />
-      <workItem from="1735489180531" duration="5744000" />
+      <workItem from="1735489180531" duration="6933000" />
+      <workItem from="1735812661581" duration="24391000" />
     </task>
     <servers />
   </component>

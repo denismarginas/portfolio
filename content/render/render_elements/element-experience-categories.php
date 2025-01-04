@@ -32,8 +32,8 @@ endif;
                             <?php SVGRenderer::renderSVG( $experience_category["svg"]); ?>
                         </div>
                         <span>
-                                    <?php echo $experience_category["name"]; ?>
-                                </span>
+                            <?php echo $experience_category["name"]; ?>
+                        </span>
                         <?php echo renderImage($GLOBALS['urlPath']."content/img".$experience_category["background-img-path"].$experience_category["background-img"]);?>
                     </a>
 

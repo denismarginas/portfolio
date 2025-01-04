@@ -620,7 +620,7 @@ function renderParagraphBlockProject($text = null) {
     return $html_content;
 }
 
-function renderImageBlockProject($post_data ,$image_path = null, $image_file_name = null) {
+function renderImageBlockProject($post_data, $image_path = null, $image_file_name = null) {
     $html_content = '';
 
     $html_content .= "<div class='dm-post-image' data-motion='transition-fade-0' data-duration='0.7s' data-delay='0.2s'>";
@@ -650,6 +650,42 @@ function renderSliderWithImagesOfProject($post_data, $img_array_path_dir) {
         $html_content .=  renderSlider($images_rendered_array, true, false, true);
         $html_content .= '</div>';
     }
+
+
+    return $html_content;
+}
+
+function renderFeatureHero($post_data) {
+    $src_current = __DIR__ . "/../../../";
+    $html_content = '';
+    $html_content .= '<div class="dm-post-feature-hero" 
+                        data-motion="transition-fade-0" data-duration="0.7s" data-delay="0.1s">';
+
+    $img_texture = $GLOBALS['urlPath'].getDataJson('data-content-personal', 'data')["post-projects"]["background"]["overlay-texture"];
+    $html_content .=  '<div class="bg-texture" style="background-image: url("' . $img_texture . '")"></div>';
+
+
+
+
+
+    ob_start();
+    require_once __DIR__ . '/../classes/renderSVG.php';
+    require_once __DIR__ . '/../classes/renderStructure.php';
+
+    $img_shape_1 = $GLOBALS['urlPath'].getDataJson('data-content-personal', 'data')["post-projects"]["background"]["overlay-shape-1"];
+    $html_content .=  SVGRenderer::renderSVG( $img_shape_1);
+
+    $img_shape_2 = $GLOBALS['urlPath'].getDataJson('data-content-personal', 'data')["post-projects"]["background"]["overlay-shape-2"];
+    $html_content .=  SVGRenderer::renderSVG( $img_shape_2);
+
+    $renderer = new RendererElements();
+    $html_content .= $renderer->renderElement("devices-post-item-web", "", ["post_data" => $post_data]);
+    $html_content .= $renderer->renderElement("devices-post-item-media", "", ["post_data" => $post_data]);
+
+    $html_content .= $renderer->renderElement("animation-waves");
+    $html_content .= ob_get_clean();
+
+    $html_content .=  "</div>";
 
 
     return $html_content;

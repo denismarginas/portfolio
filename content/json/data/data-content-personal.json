@@ -897,7 +897,10 @@
 	"post-projects" : {
 		"background": {
 			"desktop": "content/img/design-elements/overlay-responsive-layout-desktop.webp",
-			"phone": "content/img/design-elements/overlay-responsive-layout-phone.webp"
+			"phone": "content/img/design-elements/overlay-responsive-layout-phone.webp",
+			"overlay-texture": "content/img/design-elements/overlay-texture-noise.webp",
+			"overlay-shape-1": "hexagon-3d",
+			"overlay-shape-2": "distortion-plane-3d"
 		},
 		"fields": {
 			"web_url": "Website: ",
