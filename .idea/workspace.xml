@@ -25,17 +25,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/xampp-php8.1/htdocs/portfolio/content/render/render_elements",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "watcher.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp-php8.1/htdocs/portfolio/content/render/render_elements&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;watcher.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp-php8.1\htdocs\portfolio\content\render\render_elements" />
@@ -118,7 +118,8 @@
       <workItem from="1734381537538" duration="6707000" />
       <workItem from="1734696816359" duration="3651000" />
       <workItem from="1735489180531" duration="6933000" />
-      <workItem from="1735812661581" duration="26962000" />
+      <workItem from="1735812661581" duration="27557000" />
+      <workItem from="1736081613855" duration="327000" />
     </task>
     <servers />
   </component>

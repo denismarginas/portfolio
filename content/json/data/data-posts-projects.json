@@ -809,7 +809,6 @@
             }
         },
         "post_content": [
-            "<?php echo renderFeatureHero($post_current_data); ?>",
             "<?php echo renderSectionMediaProject($post_current_data); ?>"
         ],
         "layout": "wrapper-layout"
@@ -1265,7 +1264,6 @@
             }
         },
         "post_content": [
-            "<?php echo renderFeatureHero($post_current_data); ?>",
             "<?php echo renderSectionMediaProject($post_current_data); ?>"
         ],
         "layout": "wrapper-layout"
@@ -1881,7 +1879,6 @@
             }
         },
         "post_content": [
-            "<?php echo renderFeatureHero($post_current_data); ?>",
             "<?php echo renderSectionWebProject($post_current_data); ?>"
         ],
         "layout": "wrapper-layout"
@@ -2239,7 +2236,6 @@
             }
         },
         "post_content": [
-            "<?php echo renderFeatureHero($post_current_data); ?>",
             "<?php echo renderSectionMediaProject($post_current_data); ?>"
         ],
         "layout": "wrapper-layout"
@@ -2566,7 +2562,6 @@
             }
         },
         "post_content": [
-            "<?php echo renderFeatureHero($post_current_data); ?>",
             "<?php echo renderSectionMediaProject($post_current_data); ?>"
         ],
         "layout": "wrapper-layout"
@@ -4731,7 +4726,6 @@
             }
         },
         "post_content": [
-            "<?php echo renderFeatureHero($post_current_data); ?>",
             "<?php echo renderSectionMediaProject($post_current_data); ?>"
         ],
         "layout": "wrapper-layout"
@@ -4874,7 +4868,6 @@
             }
         },
         "post_content": [
-            "<?php echo renderFeatureHero($post_current_data); ?>",
             "<?php echo renderSectionMediaProject($post_current_data); ?>"
         ],
         "layout": "wrapper-layout"
@@ -4995,7 +4988,6 @@
             }
         },
         "post_content": [
-            "<?php echo renderFeatureHero($post_current_data); ?>",
             "<?php echo renderSectionMediaProject($post_current_data); ?>"
         ],
         "layout": "wrapper-layout"
@@ -5537,7 +5529,6 @@
             }
         },
         "post_content": [
-            "<?php echo renderFeatureHero($post_current_data); ?>",
             "<?php echo renderSectionWebProject($post_current_data); ?>"
         ],
         "layout": "wrapper-layout"
@@ -5599,7 +5590,6 @@
             }
         },
         "post_content": [
-            "<?php echo renderFeatureHero($post_current_data); ?>",
             "<?php echo renderSectionMediaProject($post_current_data); ?>"
         ],
         "layout": "wrapper-layout"
@@ -5690,7 +5680,6 @@
             }
         },
         "post_content": [
-            "<?php echo renderFeatureHero($post_current_data); ?>",
             "<?php echo renderSectionWebProject($post_current_data); ?>"
         ],
         "layout": "wrapper-layout"
@@ -5746,7 +5735,6 @@
             }
         },
         "post_content": [
-            "<?php echo renderFeatureHero($post_current_data); ?>",
             "<?php echo renderSectionMediaProject($post_current_data); ?>"
         ],
         "layout": "wrapper-layout"
