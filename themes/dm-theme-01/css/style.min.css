@@ -27420,7 +27420,7 @@ body[data-overlay=true] {
   overflow: hidden;
 }
 body[data-overlay=true]:after {
-  z-index: 1;
+  z-index: 2;
   opacity: 1;
   background-color: rgba(var(--dm-color-black-rgb), 0.7);
 }

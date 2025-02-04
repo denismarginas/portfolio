@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2259709f-b699-4482-a363-da52decd52d5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/json/data/data-posts-summary-projects.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-posts-summary-projects.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/structure-design/body.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/structure-design/body.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-category-card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-category-card.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +122,7 @@
       <workItem from="1735812661581" duration="27557000" />
       <workItem from="1736081613855" duration="10170000" />
       <workItem from="1738340699038" duration="8374000" />
-      <workItem from="1738426334626" duration="13452000" />
+      <workItem from="1738426334626" duration="14074000" />
     </task>
     <servers />
   </component>
