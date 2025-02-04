@@ -646,7 +646,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         function renderArrows(container) {
-            const prevButton = document.createElement('a');
+            const prevButton = document.createElement('span');
             prevButton.classList.add('prev');
             prevButton.innerHTML = '❮';
             prevButton.addEventListener('click', function() {
@@ -654,7 +654,7 @@ document.addEventListener("DOMContentLoaded", function() {
             });
             container.appendChild(prevButton);
 
-            const nextButton = document.createElement('a');
+            const nextButton = document.createElement('span');
             nextButton.classList.add('next');
             nextButton.innerHTML = '❯';
             nextButton.addEventListener('click', function() {

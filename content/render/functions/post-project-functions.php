@@ -610,15 +610,23 @@ function renderSectionMediaProject($post_data, $params = []) {
     return $html_content;
 }
 
-function renderParagraphBlockProject($text = null) {
+function renderParagraphBlockProject($text = null, $htmlcontent = '', $style = '') {
     $html_content = '';
 
-    $html_content .= "<div class='dm-post-title-description' data-motion='transition-fade-0' data-duration='0.7s'>";
+    $html_content .= "<div class='dm-post-title-description' data-motion='transition-fade-0' data-duration='0.7s'";
+    if (!empty($style)) {
+        $html_content .= " style='$style'";
+    }
+    $html_content .= ">";
     $html_content .= $text;
-    $html_content .=  "</div>";
+    if (!empty($htmlcontent)) {
+        $html_content .= $htmlcontent;
+    }
+    $html_content .= "</div>";
 
     return $html_content;
 }
+
 
 function renderImageBlockProject($post_data, $image_path = null, $image_file_name = null) {
     $html_content = '';

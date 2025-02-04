@@ -389,6 +389,7 @@
         @include flex-center();
         @include dm-font-medium();
         word-break: break-word;
+        gap: var( --dm-spacing-secondary );
         padding: var( --dm-spacing-secondary );
       }
       > .dm-post-details-grid {
@@ -456,6 +457,12 @@
           cursor: pointer;
         }
       }
+    }
+  }
+  .slider {
+    .next:hover, .prev:hover {
+      color: var(--dm-color-white);
+      background-color: rgba( var( --dm-color-black-rgb ), 0.8);
     }
   }
   @media only screen and (max-width: $screen-desktop-large) {

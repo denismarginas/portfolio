@@ -2,13 +2,11 @@
 @import "../../functions/functions.scss";
 
 .dm-video-media-content {
-  --color-range-primary: var( --post_color_primary );
-
-  @include border-radius( var( --dm-border-radius-primary ));
+  @include border-radius(var(--dm-border-radius-primary));
   @include flex-column();
-  background-color: rgba( var( --dm-color-gray-rgb ) , 0.1);
-  padding: var( --dm-spacing-secondary );
-  gap: var( --dm-spacing-secondary );
+  background-color: rgba(var(--dm-color-gray-rgb), 0.1);
+  padding: var(--dm-spacing-secondary);
+  gap: var(--dm-spacing-secondary);
   position: relative;
   overflow: hidden;
 
@@ -17,70 +15,77 @@
     @include flex-center();
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var( --dm-spacing-secondary );
+    gap: var(--dm-spacing-secondary);
 
-    > .dm-media-video-item {
-      @include flex-center();
-      overflow: hidden;
+    @media only screen and (max-width: $screen-tablet-medium) {
+      > .dm-media-video {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+    @media only screen and (max-width: $screen-phone-large) {
+      gap: var(--dm-spacing-primary);
 
-      > .video-container {
-        width: 100%;
-        max-width: 100%;
+      > .dm-media-video {
+        gap: var(--dm-spacing-primary);
+      }
+    }
+  }
+}
 
-        > .thumbnail {
-          flex-direction: column;
-          background-color: var(--post_color_background);
-          background-position: center;
-          background-size: cover;
+.dm-media-video-item {
+  --color-range-primary: var(--post_color_primary);
+  @include flex-center();
+  overflow: hidden;
 
-          > img {
-            width: auto;
-            height: auto;
-            max-width: 40%;
-            max-height: 40%;
-            position: relative;
-            transition: max-width 0.3s, max-height 0.3s;
+
+  > .video-container {
+    width: 100%;
+    max-width: 100%;
+
+    > .thumbnail {
+      flex-direction: column;
+      background-color: var(--post_color_background);
+      background-position: center;
+      background-size: cover;
+
+      > img {
+        width: auto;
+        height: auto;
+        max-width: 40%;
+        max-height: 40%;
+        position: relative;
+        transition: max-width 0.3s, max-height 0.3s;
+      }
+    }
+
+    > .video-controls-container {
+      > .timeline-container {
+        > .timeline {
+          background-color: var(--dm-color-gray);
+
+          &:after {
+            background-color: var(--post_color_primary);
           }
-        }
-        > .video-controls-container {
-          > .timeline-container {
-            > .timeline {
-              background-color: var( --dm-color-gray );
 
-              &:after {
-                background-color: var( --post_color_primary );
-              }
-              > .thumb-indicator {
-                background-color: var( --post_color_primary );
-              }
-            }
-          }
-        }
-        &:hover {
-          > .thumbnail {
-            > img {
-              max-width: 45%;
-              max-height: 45%;
-              transition: max-width 0.3s, max-height 0.3s;
-            }
+          > .thumb-indicator {
+            background-color: var(--post_color_primary);
           }
         }
       }
     }
-  }
-  @media only screen and (max-width: $screen-tablet-medium) {
-    > .dm-media-video {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
-  @media only screen and (max-width: $screen-phone-large) {
-    gap: var( --dm-spacing-primary );
 
-    > .dm-media-video {
-      gap: var( --dm-spacing-primary );
+    &:hover {
+      > .thumbnail {
+        > img {
+          max-width: 45%;
+          max-height: 45%;
+          transition: max-width 0.3s, max-height 0.3s;
+        }
+      }
     }
   }
 }
+
 body, body.theme-light {
   .dm-video-media-content {
     border: 1px solid rgba(var(--dm-color-gray-rgb), 0.2);
