@@ -199,7 +199,7 @@
             "<?php echo renderVideo('content/vid/projects/strikerproduction/csgo/NoMercy_CSGO.webm','content/img/projects/strikerproduction/logo/logo.png','content/img/thumbnails/workpreview-summary-thumbnail.webp'); ?>",
             "<?php echo renderVideo('content/vid/projects/strikerproduction/pubg/SleeplessNight_PUBG.webm','content/img/projects/strikerproduction/logo/logo.png','content/img/thumbnails/workpreview-summary-thumbnail.webp'); ?>",
             "<?php echo renderVideo('content/vid/projects/strikerproduction/rust/CoverYourEyes_Rust.webm','content/img/projects/strikerproduction/logo/logo.png','content/img/thumbnails/workpreview-summary-thumbnail.webp'); ?>"
-        ]
+        ]v
     },
     {
         "title": "Personal 3D Blender Renders",

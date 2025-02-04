@@ -5190,7 +5190,7 @@ body[java-script=true] .dm-contact-form > form[data-form-type=steps] .step[data-
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  margin-bottom: -108px;
+  margin-bottom: -88px;
   -webkit-transition: margin-bottom 0.3s;
   transition: margin-bottom 0.3s;
   z-index: 1;
@@ -5236,6 +5236,8 @@ body[java-script=true] .dm-contact-form > form[data-form-type=steps] .step[data-
   transition: width 0.5s ease, background-color 0.5s ease;
 }
 .category-card > div > p {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5320,6 +5322,9 @@ body[java-script=true] .dm-contact-form > form[data-form-type=steps] .step[data-
   .category-card:hover > span > a > svg {
     top: 5px;
   }
+  .category-card > div {
+    margin-bottom: -66px;
+  }
   .category-card > div > a {
     font-family: var(--dm-font-family);
     font-size: var(--dm-text-medium-font-size);
@@ -5329,6 +5334,9 @@ body[java-script=true] .dm-contact-form > form[data-form-type=steps] .step[data-
     color: var(--dm-text-medium-color);
     --dm-text-medium-color: var( --dm-color-white );
     --dm-text-medium-font-weight: 600;
+  }
+  .category-card > div > p {
+    padding: var(--dm-spacing-primary);
   }
   .category-card > div > p > span {
     font-family: var(--dm-font-family);
