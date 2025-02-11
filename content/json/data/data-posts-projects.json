@@ -14,7 +14,7 @@
             "logo_type": "svg",
             "thumbnail": "thumbnail/thumbnail.webp",
             "thumbnail_path": "student-courses-bachelor-s-thesis",
-            "description": "This is my Bachelor's thesis named Student Courses (RO: 'Cursuri Studenti - Lucrare Licenta') where I aim was to develop a website catering specifically to students who require access to various courses or specific course materials in text format for reports or projects. The website primarily facilitates the uploading of course content in image format, which is then converted and stored in text format on the site. Additionally, users have the option to edit their personal data, customize their accounts with a logo, and, as administrators, manage both user accounts and course materials. <br></br> Technologies used: Hypertext Markup Language (HTML), Zurb Foundation, JavaScript, Cascading Style Sheets (CSS), Hypertext Preprocessor (PHP), XAMPP, Tesseract OCR, HeidiSQL",
+            "description": "This is my Bachelor's thesis, titled Student Courses (RO: Cursuri Studenți - Lucrare Licență). The goal was to develop a website tailored for students who need access to various courses or specific course materials in text format for reports or projects. The platform allows users to upload course content as images, which are then converted and stored as text. Additionally, users can edit their personal information, customize their accounts with a logo, and, as administrators, manage both user accounts and course materials.",
             "categories": [
                 "Web Development Projects",
                 "Miscellaneous Projects"

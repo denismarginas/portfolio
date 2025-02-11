@@ -18,7 +18,7 @@
         "content": [
             "<?php echo renderImage('content/img/projects/resurseeducationale/web/paid-article-upload-system/upload-paid-articles-1.webp', true); ?>",
             "<p>This project have a custom PHP code integrated with 2 modules that which allows you uploading files depending on the number of uploads or depending on the subscription. The number of uploads and subscriptions can be purchased with payment by card. The files accepted by the administrator will be displayed on the site and stored in a SQL database.</p>",
-            "<p>Modules used: Elementor, PHP Everywhere, WooCommerce, WooCommerce Points and Rewards, WooCommerce Memberships</p>",     
+            "<p>Modules used: Elementor, PHP Everywhere, WooCommerce, WooCommerce Points and Rewards, WooCommerce Memberships</p>",
             "<?php echo renderImage('content/img/projects/resurseeducationale/web/paid-article-upload-system/upload-paid-articles-2.webp', true); ?>",
             "<?php echo renderImage('content/img/projects/resurseeducationale/web/paid-article-upload-system/upload-paid-articles-3.webp', true); ?>"
         ]
@@ -199,7 +199,7 @@
             "<?php echo renderVideo('content/vid/projects/strikerproduction/csgo/NoMercy_CSGO.webm','content/img/projects/strikerproduction/logo/logo.png','content/img/thumbnails/workpreview-summary-thumbnail.webp'); ?>",
             "<?php echo renderVideo('content/vid/projects/strikerproduction/pubg/SleeplessNight_PUBG.webm','content/img/projects/strikerproduction/logo/logo.png','content/img/thumbnails/workpreview-summary-thumbnail.webp'); ?>",
             "<?php echo renderVideo('content/vid/projects/strikerproduction/rust/CoverYourEyes_Rust.webm','content/img/projects/strikerproduction/logo/logo.png','content/img/thumbnails/workpreview-summary-thumbnail.webp'); ?>"
-        ]v
+        ]
     },
     {
         "title": "Personal 3D Blender Renders",
