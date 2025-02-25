@@ -557,6 +557,12 @@ Allow: /
 Meta-robots: noindex, nofollow
 
 User-agent: *
+Disallow: /project-uppura
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
 Disallow: /project-vreaualpin
 Crawl-delay: 10
 Allow: /

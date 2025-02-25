@@ -17,7 +17,11 @@ $posts = getDataJson($postJsonPath, 'data');
 
 if(count($posts) > 0) {
     foreach ($posts as $post) {
-        //$log[] = $post["file"];
+
+        if(isset($post["post_data"]["display"]) && $post["post_data"]["display"]!="enable") {
+            $log[] =  "Skip: -- $postHtmlFileName";
+            continue;
+        }
 
         try {
             $postHtmlFileName = $post["file"] . '.html';
@@ -30,7 +34,6 @@ if(count($posts) > 0) {
         } catch (Exception $e) {
             $log[] = "Error: " . $e->getMessage() . PHP_EOL;
         }
-        //break;
     }
 } else {
     $log[] = "No posts was found in ". $postPath;

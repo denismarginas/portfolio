@@ -8232,5 +8232,91 @@
             "<?php echo renderSectionWebProject($post_current_data); ?>"
         ],
         "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-solveo",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "disable",
+            "post_type": "projects",
+            "media_path": "solveo",
+            "title": "Solveo",
+            "logo": "logo/logo.png",
+            "logo_path": "solveo",
+            "logo_type": "png",
+            "description": "Presentation website created using Elementor, translating the design from Figma into a functional web design.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "",
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_technology": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Teamwork"
+            ],
+            "project_companies": [
+                "Mentor Marketing Experts"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "02.2025",
+                "date_end": "02.2025"
+            },
+            "tags": [
+                "web"
+            ],
+            "colors": {
+                "post_color_primary": "#1b2e43",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#ffffff",
+                "post_color_text_on_background": "#1b2e43"
+            }
+        },
+        "post_content": [
+            "<?php echo renderFeatureHero($post_current_data); ?>",
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     }
 ]
