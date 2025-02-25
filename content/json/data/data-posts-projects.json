@@ -7956,5 +7956,109 @@
             "<?php echo renderSectionWebProject($post_current_data); ?>"
         ],
         "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-offmarket",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "offmarket",
+            "title": "Offmarket",
+            "logo": "logo/logo.png",
+            "logo_path": "offmarket",
+            "logo_type": "png",
+            "description": "A reseller shop based on a classic WordPress WooCommerce setup, where certain users are designated as resellers and have access to coupons that can be shared with potential customers via product URLs. In the reseller’s frontend account (under \"My Account\"), a table will display the coupons assigned to them by the site administrator. This table will also include the shareable link structure, showing the parameters to add to a product URL:<br>[Product URL]/?r={Reseller ID}&c={Coupon Code}<br>Since WooCommerce does not update the product price when a coupon is applied, custom code has been implemented to dynamically adjust the price on the frontend, including in the mini cart popup, where the coupon discount is displayed. Additionally, the cart total has been modified to reflect the applied discount, as this functionality was not included in WooCommerce's default Elementor widgets.<br><br>The purpose of resellers is to share products on social marketplaces like Facebook Marketplace, including their reseller ID and coupon, to drive more sales and earn rewards.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "offmarketbrands.com",
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_technology": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                },
+                {
+                    "name": "Unlimited Elements for Elementor Premium",
+                    "svg": "unlimited-elements"
+                },
+                {
+                    "name": "Advanced Custom Fields",
+                    "svg": "acf"
+                },
+                {
+                    "name": "Code Snippets"
+                },
+                {
+                    "name": "ACF to REST API"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "online shop",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Teamwork"
+            ],
+            "project_companies": [
+                "Mentor Marketing Experts"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "12.2024",
+                "date_end": "01.2025"
+            },
+            "tags": [
+                "web"
+            ],
+            "colors": {
+                "post_color_primary": "#1977f3",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#ffffff",
+                "post_color_text_on_background": "#1977f3"
+            }
+        },
+        "post_content": [
+            "<?php echo renderFeatureHero($post_current_data); ?>",
+            "<?php echo renderSectionWebProject($post_current_data); ?>",
+            "<?php echo renderTitle('Apply Reseller Coupons via URL'); ?>",
+            "<?php echo renderImageBlockProject($post_current_data,'web/banners/', 'wp-apply-coupons-from-reseller-with-params.webp'); ?>",
+            "<?php echo renderParagraphBlockProject('This project involved implementing custom code to improve WooCommerce functionality for resellers. A custom post type named Resellers was created and linked to user accounts via a Reseller ID, allowing a coupon table to appear in the My Account section on the frontend. Each Reseller Post includes custom fields such as image, location, name, and a repeater field for storing assigned coupons. The repeater contains the Coupon ID, now visible when editing coupons, and the Coupon URL parameter used in the shareable link structure. When a Reseller Post is updated, the repeater field updates automatically and builds the full shareable link in the format: [Product URL]/?r={Reseller ID}&c={Coupon Param URL}.<br><br>When a product URL includes valid reseller and coupon parameters, a box near the product title displays reseller details, including their image, name, and location, along with the full discount percentage. The discount adjusts dynamically based on the sale price if the product is on sale or as a percentage of the fixed discount amount when applicable.<br><br>A PHP REST API retrieves reseller and coupon data, and custom logic applies the coupon when the page loads. Since WooCommerce does not adjust product prices dynamically when a coupon is applied, custom code updates the frontend product price with the correct discounted amount. The side cart also features modifications where the coupon discount appears, and the total cart value updates accordingly using custom'); ?>"
+
+        ],
+        "layout": "wrapper-layout"
     }
 ]
