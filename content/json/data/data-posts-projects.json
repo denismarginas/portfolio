@@ -8239,6 +8239,7 @@
         "category": "projects",
         "post_data": {
             "display": "disable",
+            "exclude_from_search": "true",
             "post_type": "projects",
             "media_path": "solveo",
             "title": "Solveo",

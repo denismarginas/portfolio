@@ -8,7 +8,11 @@ document.addEventListener("DOMContentLoaded", async function() {
         const jsonFilePath = getPagePath + "content/json/index/index-data-posts-projects.json";
 
         const filterFields = await fetchJson(jsonFilterFilePath);
-        const projectsData = await fetchJson(jsonFilePath);
+        let  projectsData = await fetchJson(jsonFilePath);
+
+        projectsData = projectsData.filter(project =>
+            project.post_data.display !== "disable" && project.exclude_from_search !== "true"
+        );
 
         constructFilterFields(filterFields, projectsFormId);
 
@@ -132,10 +136,13 @@ function searchProjectsWithFilters(filterFields, projectsData) {
             }
         }
 
-        projects[i].style.display = isVisible ? "flex" : "none";
-
-        const dataMotionValue = "transition-fade-1 transition-slideInLeft-1";
-        projects[i].setAttribute("data-motion", dataMotionValue);
+        if (projects[i]) {
+            projects[i].style.display = isVisible ? "flex" : "none";
+            projects[i].setAttribute("data-motion", "transition-fade-1 transition-slideInLeft-1");
+        } else {
+            console.warn(`No matching DOM element found for project at index ${i}`);
+            console.log(`projectsData length: ${projectsData.length}, projects length: ${projects.length}`);
+        }
     }
 }
 
