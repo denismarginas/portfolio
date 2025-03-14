@@ -577,10 +577,11 @@ document.addEventListener("DOMContentLoaded", function() {
                     popupElement.setAttribute('data-motion', 'transition-fade-0');
                 }
             }
+
             const popupImages = popupContent.querySelectorAll('img');
             popupImages.forEach(function (imgElement) {
-                imgElement.addEventListener("click", function () {
-                    toggleZoom(imgElement);
+                imgElement.addEventListener("click", function (event) {
+                    toggleZoom(imgElement, event);
                 });
             });
         }
@@ -588,9 +589,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     // Popup - Zoom Function
-    function toggleZoom(imageElement) {
+    function toggleZoom(imageElement, event) {
         let zoomLevel = parseInt(imageElement.dataset.zoomLevel || 0);
         zoomLevel++;
+
+        const rect = imageElement.getBoundingClientRect();
+        const mouseX = event.clientX - rect.left;
+        const mouseY = event.clientY - rect.top;
+
+        imageElement.style.transformOrigin = `${(mouseX / rect.width) * 100}% ${(mouseY / rect.height) * 100}%`;
 
         if (zoomLevel === 1) {
             imageElement.style.transform = "scale(1.25)";
@@ -603,7 +610,7 @@ document.addEventListener("DOMContentLoaded", function() {
             zoomLevel = 0;
         }
 
-        imageElement.dataset.zoomLevel = zoomLevel; // Save the new zoomLevel to dataset
+        imageElement.dataset.zoomLevel = zoomLevel;
     }
 
     // Popup - Click Event Listener for Popup Creation (Delegated for all images inside slider)
