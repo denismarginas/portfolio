@@ -7429,6 +7429,9 @@ body[java-script=true] .dm-toggletheme {
 .video-container.paused .pause-icon {
   display: none;
 }
+.video-container.paused > .show-pause {
+  z-index: 99;
+}
 .video-container.paused:hover > .show-play, .video-container.paused:hover > .show-pause {
   opacity: 0.7;
   -webkit-filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5803921569));

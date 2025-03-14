@@ -128,6 +128,9 @@ $background-color_4: var( --dm-video-color-primary );
     .pause-icon {
       display: none;
     }
+    > .show-pause {
+      z-index: 99;
+    }
 
     &:hover {
       > .show-play, > .show-pause {
