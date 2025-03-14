@@ -3,31 +3,38 @@
 
 .slider {
   position: relative;
+  overflow: hidden;
+  width: 100%;
 
-  > .slider-container {
-    position: relative;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.5s ease;
-    gap: var( --dm-spacing-primary );
+  > .slider-wrapper {
+    width: 100%;
+    overflow: hidden;
 
-    .slider-element {
-      flex: 0 0 100%;
+    > .slider-container {
+      position: relative;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      transition: transform 0.5s ease-in-out;
 
-      > img {
+      .slider-element {
         width: 100%;
-        vertical-align: middle;
-        height: auto;
-      }
+        overflow: hidden;
 
-      > .number-text {
-        color: var( --dm-color-white );
-        font-size: 12px;
-        padding: 8px 12px;
-        position: absolute;
-        top: 0;
-        background-color: rgba( var( --dm-color-black-rgb ), 0.1);
+        > img {
+          width: 100%;
+          vertical-align: middle;
+          height: auto;
+        }
+
+        > .number-text {
+          color: var( --dm-color-white );
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+          background-color: rgba( var( --dm-color-black-rgb ), 0.1);
+        }
       }
     }
   }
@@ -90,21 +97,24 @@
     }
   }
 }
+
 body:not([java-script="true"]) {
   .slider {
     display: block;
     max-width: 100%;
 
-    > .slider-container {
-      display: flex;
-      flex-direction: row;
-      gap: var( --dm-spacing-primary );
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
+    > .slider-wrapper {
+      > .slider-container {
+        display: flex;
+        flex-direction: row;
+        gap: var( --dm-spacing-primary );
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
 
-      .slider-element {
-        flex: 0 0 calc(33.33% - var(--dm-spacing-primary));
+        .slider-element {
+          flex: 0 0 calc(33.33% - var(--dm-spacing-primary));
+        }
       }
     }
   }

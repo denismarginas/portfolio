@@ -269,15 +269,16 @@ function renderSlider($items_content, $show_arrows = true, $show_dots = true, $s
 
     $html = '
         <div class="slider" data-navigation="' . $navigation . '">
-            <div class="slider-container">';
+            <div class="slider-wrapper">
+                <div class="slider-container">';
 
-    foreach ($items_content as $key => $item_content) {
-        $number_text = ($show_numbers ? '<div class="number-text">' . ($key + 1) . ' / ' . count($items_content) . '</div>' : '');
-        $html .= '
-                <div class="slider-element">' . $number_text . $item_content . '</div>';
-    }
+                    foreach ($items_content as $key => $item_content) {
+                        $number_text = ($show_numbers ? '<div class="number-text">' . ($key + 1) . ' / ' . count($items_content) . '</div>' : '');
+                        $html .= '
+                                <div class="slider-element">' . $number_text . $item_content . '</div>';
+                    }
 
-    $html .= '
+    $html .= ' </div>
             </div>
         </div>';
 

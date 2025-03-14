@@ -25,13 +25,15 @@
     animation-delay: 0.2s !important;
     transition-delay: 0.2s !important;
 
-    > img {
+    > * {
+      box-shadow: 0px 2px 7px 4px rgba( var( --dm-color-black-rgb ), 0.3);
+    }
+     img {
       width: auto;
       max-width: 100%;
       height: auto;
       max-height: calc(100vh - var( --dm-spacing-secondary )*2);
       cursor: zoom-in;
-      margin-bottom: var( --dm-spacing-secondary );
       transition: all 0.3s ease-in-out;
     }
     > .popup-close-button {

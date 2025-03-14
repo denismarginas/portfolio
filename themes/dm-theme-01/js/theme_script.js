@@ -500,13 +500,14 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // **************
-    // Pop-Up
+    // Pop-Up Function
     function createPopup(content) {
         var popupElement = document.querySelector("#popup");
         if (!popupElement) {
             popupElement = document.createElement("div");
             popupElement.id = "popup";
             popupElement.classList.add("dm-popup");
+
             var popupContent = document.createElement("div");
             popupContent.classList.add("popup-content");
 
@@ -514,7 +515,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             var closeButton = document.createElement("button");
             closeButton.classList.add("popup-close-button");
-            closeButton.innerHTML  = "<svg data-svg-type='stroke' width='14' height='14' viewBox='0 0 14 14'><path d='M13 1L1 13M1 1L13 13' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'></path></svg>";
+            closeButton.innerHTML = "<svg data-svg-type='stroke' width='14' height='14' viewBox='0 0 14 14'><path d='M13 1L1 13M1 1L13 13' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'></path></svg>";
 
             closeButton.addEventListener("click", function() {
                 animationHidePopup(popupContent, popupElement);
@@ -523,159 +524,205 @@ document.addEventListener("DOMContentLoaded", function() {
                 }, 300);
             });
 
-            popupContent.appendChild(content);
+            let clickedElement = event.target;
+            let slider = null;
+
+            while (clickedElement) {
+                if (clickedElement.parentElement && clickedElement.parentElement.classList.contains('slider-element')) {
+                    slider = clickedElement.closest('.slider');
+                    if (slider) {
+                        break;
+                    }
+                }
+
+                clickedElement = clickedElement.parentElement;
+                if (!clickedElement) {
+                    break;
+                }
+            }
+
+
+            if (slider) {
+                const clonedSlider = slider.cloneNode(true);
+                popupContent.appendChild(clonedSlider);
+                initializeSlider(clonedSlider);
+
+                const images = clonedSlider.querySelectorAll("img");
+                images.forEach(function (image) {
+                    image.removeAttribute("data-popup");
+                });
+            } else {
+                const elementClone = content.cloneNode(true);
+                popupContent.appendChild(elementClone);
+            }
+
             popupContent.appendChild(closeButton);
             popupElement.appendChild(popupContent);
             document.body.appendChild(popupElement);
 
-            content.addEventListener("click", function() {
-                toggleZoom(this);
-            });
             setTimeout(function() {
                 animationShowPopup(popupContent, popupElement);
             }, 1);
+
             function animationShowPopup(popupContent, popupElement) {
                 if (popupContent && popupElement) {
                     popupContent.setAttribute('data-motion', 'transition-fade-1');
                     popupElement.setAttribute('data-motion', 'transition-fade-1');
                 }
             }
+
             function animationHidePopup(popupContent, popupElement) {
                 if (popupContent && popupElement) {
                     popupContent.setAttribute('data-motion', 'transition-fade-0');
                     popupElement.setAttribute('data-motion', 'transition-fade-0');
                 }
             }
-        }
-    }  
-    var zoomLevel = 0;
-
-    function toggleZoom(imageElement) {
-        zoomLevel++;
-        if (zoomLevel === 1) {
-            imageElement.style.transform = "scale(1.5)";
-        } else if (zoomLevel === 2) {
-            imageElement.style.transform = "scale(2)";
-        } else if (zoomLevel === 3) {
-            imageElement.style.transform = "scale(3)";
-        } else {
-            imageElement.style.transform = "scale(1)";
-            zoomLevel = 0;
+            const popupImages = popupContent.querySelectorAll('img');
+            popupImages.forEach(function (imgElement) {
+                imgElement.addEventListener("click", function () {
+                    toggleZoom(imgElement);
+                });
+            });
         }
     }
 
 
+    // Popup - Zoom Function
+    function toggleZoom(imageElement) {
+        let zoomLevel = parseInt(imageElement.dataset.zoomLevel || 0);
+        zoomLevel++;
 
+        if (zoomLevel === 1) {
+            imageElement.style.transform = "scale(1.25)";
+        } else if (zoomLevel === 2) {
+            imageElement.style.transform = "scale(1.5)";
+        } else if (zoomLevel === 3) {
+            imageElement.style.transform = "scale(2)";
+        } else {
+            imageElement.style.transform = "scale(1)";
+            zoomLevel = 0;
+        }
+
+        imageElement.dataset.zoomLevel = zoomLevel; // Save the new zoomLevel to dataset
+    }
+
+    // Popup - Click Event Listener for Popup Creation (Delegated for all images inside slider)
     document.addEventListener("click", function(event) {
         var target = event.target;
-        if (target.getAttribute("data-popup") === "true") {
-            if (target.tagName.toLowerCase() === "img") {
-                createPopup(target.cloneNode());
+
+        if (target.getAttribute("data-popup") === "true" || target.closest("[data-popup='true']")) {
+            var imgElement = target.tagName.toLowerCase() === "img" ? target : target.querySelector("img");
+
+            if (imgElement) {
+                createPopup(imgElement.cloneNode());
             } else {
-                var imgElement = target.querySelector("img");
-                if (imgElement) {
-                    createPopup(imgElement.cloneNode());
-                } else {
-                    createPopup(target.cloneNode(true));
-                }
+                createPopup(target.cloneNode(true));
             }
         }
     });
-    
+
     // **************
     // Slider
-    const sliders = document.querySelectorAll('.slider');
-    sliders.forEach(function(slider) {
-        let slideIndex = 1;
-        const navigation = slider.getAttribute('data-navigation');
-        const slides = slider.querySelectorAll('.slider-element');
+    function initializeSlider(slider) {
+        const slides = slider.querySelectorAll(".slider-element");
+        const sliderWrapper = slider.querySelector(".slider-wrapper");
+        const sliderContainer = slider.querySelector(".slider-container");
+        const slideCount = slides.length;
+        const navigation = slider.getAttribute("data-navigation");
 
-        if (navigation === 'arrows' || navigation === 'arrows dots') {
+        sliderWrapper.style.width = "100%";
+        sliderContainer.style.width = `${slideCount * 100}%`;
+
+        slides.forEach(slide => {
+            slide.style.width = `${100 / slideCount}%`;
+        });
+
+        let slideIndex = 0;
+
+        function updateSlider() {
+            sliderContainer.style.transform = `translateX(-${slideIndex * (100 / slideCount)}%)`;
+            updateNumberText();
+            updateDots();
+        }
+
+        function plusSlides(n) {
+            slideIndex += n;
+            if (slideIndex >= slideCount) {
+                slideIndex = 0;
+            } else if (slideIndex < 0) {
+                slideIndex = slideCount - 1;
+            }
+            updateSlider();
+        }
+
+        function currentSlide(n) {
+            slideIndex = n;
+            updateSlider();
+        }
+
+        function updateNumberText() {
+            slides.forEach((slide, index) => {
+                const numberText = slide.querySelector(".number-text");
+                if (numberText) {
+                    numberText.innerText = `${index + 1} / ${slideCount}`;
+                }
+            });
+        }
+
+        function updateDots() {
+            const dots = slider.querySelectorAll(".dot");
+            dots.forEach((dot, index) => {
+                dot.classList.toggle("active", index === slideIndex);
+            });
+        }
+
+        if (navigation === "arrows" || navigation === "arrows dots") {
             renderArrows(slider);
-            let arrows = true;
-        } else  {
-            let arrows = false;
         }
-        if (navigation === 'dots' || navigation === 'arrows dots') {
+
+        if (navigation === "dots" || navigation === "arrows dots") {
             renderDots(slider, slides);
-            let dots = true;
-        } else  {
-            let dots = false;
-        }
-
-        showSlides(slider, slideIndex);
-
-        function showSlides(container, n) {
-            let i;
-            let slidesItems = slider.querySelectorAll(".slider-element");
-            let dots = slider.querySelectorAll(".dot");
-
-            if (slidesItems.length === 0) {
-                return;
-            }
-
-            if (n > slidesItems.length) {
-                slideIndex = 1;
-            } else if (n < 1) {
-                slideIndex = slidesItems.length;
-            } else {
-                slideIndex = n;
-            }
-
-            for (i = 0; i < slidesItems.length; i++) {
-                slidesItems[i].style.display = "none";
-            }
-
-            for (i = 0; i < dots.length; i++) {
-                dots[i].classList.remove("active");
-            }
-
-            slidesItems[slideIndex - 1].style.display = "block";
-
-            if (dots === true) {
-                dots[slideIndex - 1].classList.add("active");
-            }
-        }
-
-        function plusSlides(n, sliderIndex) {
-            showSlides(sliders[sliderIndex], slideIndex + n);
-        }
-
-        function currentSlide(n, sliderIndex) {
-            showSlides(sliders[sliderIndex], n);
         }
 
         function renderArrows(container) {
-            const prevButton = document.createElement('span');
-            prevButton.classList.add('prev');
-            prevButton.innerHTML = '❮';
-            prevButton.addEventListener('click', function() {
+            const prevButton = document.createElement("span");
+            prevButton.classList.add("prev");
+            prevButton.innerHTML = "❮";
+            prevButton.addEventListener("click", function () {
                 plusSlides(-1);
             });
             container.appendChild(prevButton);
 
-            const nextButton = document.createElement('span');
-            nextButton.classList.add('next');
-            nextButton.innerHTML = '❯';
-            nextButton.addEventListener('click', function() {
+            const nextButton = document.createElement("span");
+            nextButton.classList.add("next");
+            nextButton.innerHTML = "❯";
+            nextButton.addEventListener("click", function () {
                 plusSlides(1);
             });
             container.appendChild(nextButton);
         }
 
         function renderDots(container, slides) {
-            const dotSection = document.createElement('div');
-            dotSection.classList.add('dot-section');
-            for (let i = 0; i < slides.length; i++) {
-                const dot = document.createElement('span');
-                dot.classList.add('dot');
-                dot.addEventListener('click', function() {
-                    currentSlide(i + 1);
+            const dotSection = document.createElement("div");
+            dotSection.classList.add("dot-section");
+            slides.forEach((_, i) => {
+                const dot = document.createElement("span");
+                dot.classList.add("dot");
+                if (i === 0) dot.classList.add("active");
+                dot.addEventListener("click", function () {
+                    currentSlide(i);
                 });
                 dotSection.appendChild(dot);
-            }
+            });
             container.appendChild(dotSection);
         }
+
+        updateSlider();
+    }
+
+    const sliders = document.querySelectorAll(".slider");
+    sliders.forEach(function (slider) {
+        initializeSlider(slider);
     });
 
     // **************
