@@ -3283,6 +3283,9 @@ body.theme-dark .grid-background-animation {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+.dm-popup > .popup-content > .slider {
+  overflow: hidden;
+}
 .dm-popup > .popup-content > .popup-close-button {
   margin: 0 !important;
   border: none;
@@ -11632,7 +11635,6 @@ body.theme-dark .dm-post-feature-hero {
 
 .slider {
   position: relative;
-  overflow: hidden;
   width: 100%;
 }
 .slider > .slider-wrapper {

@@ -28,6 +28,7 @@
     > * {
       box-shadow: 0px 2px 7px 4px rgba( var( --dm-color-black-rgb ), 0.3);
     }
+
      img {
       width: auto;
       max-width: 100%;
@@ -36,6 +37,11 @@
       cursor: zoom-in;
       transition: all 0.3s ease-in-out;
     }
+
+    > .slider {
+      overflow: hidden;
+    }
+
     > .popup-close-button {
       @include dm-button();
       @include dm-font-small();
@@ -59,6 +65,7 @@
           transition: all 0.15s ease-in-out;
         }
       }
+
       > svg {
         transform: rotate(0deg);
         @include svg-color( var( --dm-color-white ) );
