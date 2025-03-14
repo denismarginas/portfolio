@@ -3,96 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2259709f-b699-4482-a363-da52decd52d5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/json/index/index-data-pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/index/index-data-pages.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/functions/post-project-functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/functions/post-project-functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-aatoysfurnitures.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-aatoysfurnitures.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-acvaticbebeclub.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-acvaticbebeclub.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-agramix.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-agramix.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-agromir-sh.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-agromir-sh.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-agromir.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-agromir.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-amorino.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-amorino.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-augustinnailtrainer.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-augustinnailtrainer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-axacompany.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-axacompany.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-barantech.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-barantech.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-boneamed.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-boneamed.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-brbhome.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-brbhome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-brisascents.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-brisascents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-bullionhouse.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-bullionhouse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-busvip.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-busvip.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-cadredidactice.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-cadredidactice.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-cafeagano.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-cafeagano.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-carconcordia.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-carconcordia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-casadarius-presentation.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-casadarius-presentation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-casadarius-shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-casadarius-shop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-ceramicevo.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-ceramicevo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-chezpepe.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-chezpepe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-colorplay.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-colorplay.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-copiatoarealbaiulia.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-copiatoarealbaiulia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-covoarealex.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-covoarealex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-dabo-sm-bm.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-dabo-sm-bm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-denismarginas-github-portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-denismarginas-github-portfolio.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-denismarginas-google-site.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-denismarginas-google-site.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-denismarginas.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-denismarginas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-dsautocenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-dsautocenter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-earldom.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-earldom.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-edlaparis.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-edlaparis.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-familyfirst.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-familyfirst.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-freymobdesign.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-freymobdesign.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-gamadametal.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-gamadametal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-gla.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-gla.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-hartkeepyouthaton.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-hartkeepyouthaton.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-ilnicelectric.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-ilnicelectric.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-lavplast-ambalajelavplast.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-lavplast-ambalajelavplast.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-lavplast-lavmag.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-lavplast-lavmag.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-lironpinkhas.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-lironpinkhas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-logistic-brain.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-logistic-brain.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-marasafety.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-marasafety.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-maromsteelline.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-maromsteelline.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-masiniinratebaiamare.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-masiniinratebaiamare.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-medicalortovit.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-medicalortovit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-merkaz-nadlan.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-merkaz-nadlan.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-mewi.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-mewi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-mobilasimexplus.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-mobilasimexplus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-mscardetailing.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-mscardetailing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-mycreativedesign.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-mycreativedesign.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-netexromania.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-netexromania.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-offmarket.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-offmarket.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-petri.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-petri.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-philadelphiarugcleaning.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-philadelphiarugcleaning.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-piasoftproduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-piasoftproduct.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-prismanord.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-prismanord.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-promotiimars.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-promotiimars.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-purstyle.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-purstyle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-remodelingmv.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-remodelingmv.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-resurseeducationale.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-resurseeducationale.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-revelnail-avadores.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-revelnail-avadores.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-revistaeducatie.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-revistaeducatie.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-roundselfie.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-roundselfie.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-royalcompass.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-royalcompass.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-ryllo.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-ryllo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-sdb.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-sdb.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-sosdeepcleaning.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-sosdeepcleaning.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-spalatorieautomatabaiamare.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-spalatorieautomatabaiamare.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-specialevents.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-specialevents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-speed-sm.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-speed-sm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-strikerproduction-google-site.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-strikerproduction-google-site.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-strikerproduction-rust-killfeed-generator.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-strikerproduction-rust-killfeed-generator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-strikerproduction.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-strikerproduction.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-student-courses-bachelor-s-thesis.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-student-courses-bachelor-s-thesis.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-superbrain.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-superbrain.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-symbol-buildcon.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-symbol-buildcon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-tinib.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-tinib.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-transportosian.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-transportosian.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-troni.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-troni.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-uppura.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-uppura.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-vreaualpin.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-vreaualpin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-vseconstruct.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-vseconstruct.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-woodworkart.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-woodworkart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/js/theme_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/js/theme_script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/js/theme_script.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/js/theme_script.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-popup.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-popup.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-slider.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-workstation-content.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-workstation-content.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +129,7 @@
       <workItem from="1739523159767" duration="1000" />
       <workItem from="1740472107546" duration="7517000" />
       <workItem from="1741858837824" duration="3033000" />
-      <workItem from="1741940040256" duration="21795000" />
+      <workItem from="1741940040256" duration="22952000" />
     </task>
     <servers />
   </component>

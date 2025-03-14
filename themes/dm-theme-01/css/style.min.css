@@ -3303,6 +3303,17 @@ body.theme-dark .grid-background-animation {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.dm-popup > .popup-content > .slider > .slider-wrapper > .slider-container > .slider-element > img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: var(--dm-spacing-primary);
+}
 .dm-popup > .popup-content > .popup-close-button {
   margin: 0 !important;
   border: none;
@@ -13817,6 +13828,7 @@ body.theme-dark .cookie-notice > .button-accept:hover > svg[data-svg-type=stroke
      object-fit: contain;
   -webkit-filter: drop-shadow(-9px 5px 7px rgba(0, 0, 0, 0.2));
           filter: drop-shadow(-9px 5px 7px rgba(0, 0, 0, 0.2));
+  padding: 10%;
 }
 .dm-workstation-content .visual svg {
   padding: 20%;

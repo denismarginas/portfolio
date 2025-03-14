@@ -48,6 +48,16 @@
 
           > .slider-element {
             @include flex-center();
+
+            > img{
+              width: auto;
+              max-width: 100%;
+              height: auto;
+              vertical-align: middle;
+              object-position: center;
+              object-fit: contain;
+              padding: var( --dm-spacing-primary );
+            }
           }
         }
       }
