@@ -227,11 +227,15 @@ function renderGalleryWeb($post_data) {
         $gallery_web = getImagesInFolder($gallery_web_path.$gallery_web_desktop );
 
         if( !empty($gallery_web) ) {
-            $gallery_web_content .= '<ul class="dm-web-gallery">';
+            $gallery_web_content .= '<ul class="dm-web-gallery" data-slider-container-src="dm-web-post-gallery">';
 
             foreach ($gallery_web as $image_web) {
                 $image_path = $gallery_web_path_current.$gallery_web_desktop.$image_web;
-                $gallery_web_content .=  '<li class="dm-web-gallery-item gallery-item-web" data-motion="transition-fade-0" data-duration="0.3s">' . renderImage($image_path, true) . '<div style="background-image: url("' . $bg_item_desktop . '")"></div></li>';
+                $gallery_web_content .=  '
+                    <li class="dm-web-gallery-item gallery-item-web" data-motion="transition-fade-0" data-duration="0.3s">' .
+                        renderImage($image_path, true, '',true,
+                            ["data-slider-item" => "true", "data-slider-items-src" => "dm-web-post-gallery", "data-slider-item-query-attr" => "web-item-img" ]) .
+                    '<div style="background-image: url("' . $bg_item_desktop . '")"></div></li>';
             }
 
             $gallery_web_phone = $gallery_path_web_phone."/";
@@ -240,7 +244,11 @@ function renderGalleryWeb($post_data) {
             if( !empty($gallery_phone) ) {
                 foreach ($gallery_phone as $image_web) {
                     $image_path = $gallery_web_path_current.$gallery_web_phone.$image_web;
-                    $gallery_web_content .=  '<li class="dm-web-gallery-item gallery-item-phone" data-motion="transition-fade-0" data-duration="0.3s">' . renderImage($image_path, true) . '<div style="background-image: url("' . $bg_item_phone . '")"></div></li>';
+                    $gallery_web_content .=  '
+                        <li class="dm-web-gallery-item gallery-item-phone" data-motion="transition-fade-0" data-duration="0.3s">' .
+                            renderImage($image_path, true, '',true,
+                                ["data-slider-item" => "true", "data-slider-items-src" => "dm-web-post-gallery", "data-slider-item-query-attr" => "web-item-img" ]) .
+                        '<div style="background-image: url("' . $bg_item_phone . '")"></div></li>';
                 }
             }
             $gallery_web_content .= '</ul>';
@@ -263,21 +271,27 @@ function renderGalleryWebMedia($post_data) {
         $dirs = getDirectoriesInFolder($src_current.$gallery_path );
 
         if( !empty($gallery) ) {
-            $gallery_media_web_content .= "<ul class='dm-web-media-gallery' data-list-design='".listDesign(count($gallery))."' data-motion='transition-fade-0' data-duration='0.8s'>";
+            $gallery_media_web_content .= "<ul class='dm-web-media-gallery' data-list-design='".listDesign(count($gallery))."' 
+            data-slider-container-src='dm-gallery-web-content'
+            data-motion='transition-fade-0' data-duration='0.8s'>";
 
             foreach ($gallery as $item) {
                 $image_path = $gallery_path.$item;
-                $gallery_media_web_content .=  '<li class="dm-web-media-gallery-item" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.3s">' . renderImage($image_path, true) . '<div style="background-image: url("' . $image_path . '")"></div></li>';
+                $gallery_media_web_content .=  '<li class="dm-web-media-gallery-item" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.3s">' .
+                    renderImage($image_path, true, '',true,
+                        ["data-slider-item" => "true", "data-slider-items-src" => "dm-gallery-web-content", "data-slider-item-query-attr" => "gallery-web-content-0" ]) .
+                    '<div style="background-image: url("' . $image_path . '")"></div></li>';
             }
 
             $gallery_media_web_content .= "</ul>";
         }
         if( !empty($dirs) ) {
-            foreach ($dirs as $dir) {
+            foreach ($dirs as  $key => $dir) {
                 $gallery = getImagesInFolder($src_current.$gallery_path.$dir."/");
 
                 if( !empty($gallery) ) {
-                    $gallery_media_web_content .= "<ul class='dm-web-media-gallery' data-list-design='".listDesign(count($gallery))."'  ";
+                    $gallery_media_web_content .= "<ul class='dm-web-media-gallery' data-list-design='".listDesign(count($gallery))."'  " .
+                    "data-slider-container-src='dm-gallery-web-content-$key'";
                     if ( ($dir == "logo") || ($dir == "favicon") ) {
                         $gallery_media_web_content .= "data-list-item='logo'";
                     }
@@ -285,7 +299,10 @@ function renderGalleryWebMedia($post_data) {
 
                     foreach ($gallery as $item) {
                         $image_path = $gallery_path.$dir."/".$item;
-                        $gallery_media_web_content .=  '<li class="dm-web-media-gallery-item" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.3s">' . renderImage($image_path, true) . '<div style="background-image: url("' . $image_path . '")"></div></li>';
+                        $gallery_media_web_content .=  '<li class="dm-web-media-gallery-item" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.3s">' .
+                            renderImage($image_path, true, '',true,
+                                ["data-slider-item" => "true", "data-slider-items-src" => "dm-gallery-web-content-$key", "data-slider-item-query-attr" => "gallery-web-content-$key" ]) .
+                            '<div style="background-image: url("' . $image_path . '")"></div></li>';
                     }
 
                     $gallery_media_web_content .= "</ul>";
@@ -367,17 +384,21 @@ function renderGalleryMedia($post_data) {
         $gallery_media_path_current = $src_current. $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$gallery_path_media."/";
         $directories = glob($gallery_media_path_current . '*', GLOB_ONLYDIR);
 
-        foreach ($directories as $directory) {
+        foreach ($directories as $key => $directory) {
             if (is_dir($directory)) {
                 $directoryName = basename($directory);
                 $gallery_items = getImagesInFolder($gallery_media_path_current.$directoryName );
 
                 if( !empty($gallery_items ) ) {
-                    $gallery_media_content .= "<ul class='dm-media-gallery' data-list-design='".listDesign(count($gallery_items))."'>";
+                    $gallery_media_content .= "<ul class='dm-media-gallery' data-list-design='".listDesign(count($gallery_items))."'" .
+                        "data-slider-container-src='gallery-media-content-$key' >";
 
                     foreach ($gallery_items as $gallery_item) {
                         $image_path = $gallery_media_path.$directoryName."/".$gallery_item;
-                        $gallery_media_content .=  "<li class='dm-media-gallery-item' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderImage($image_path, true)."</li>";
+                        $gallery_media_content .=  "<li class='dm-media-gallery-item' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".
+                            renderImage($image_path, true, '',true,
+                                ["data-slider-item" => "true", "data-slider-items-src" => "gallery-media-content-$key", "data-slider-item-query-attr" => "gallery-media-content-$key" ]) .
+                        "</li>";
                     }
                     $gallery_media_content .= "</ul>";
                 }
