@@ -93,6 +93,13 @@
         background-color: var( --dm-color-white );
         outline: none;
         word-break: break-all;
+
+        ::selection {
+          background-color: var(--dm-color-white) !important;
+          color: var(--dm-color-gray-darken)  !important;
+          -webkit-text-fill-color: var(--dm-color-gray-darken)  !important;
+          text-shadow: unset !important;
+        }
       }
       select {
         width: 100%;
@@ -116,7 +123,6 @@
           }
         }
       }
-
 
       .post-search {
         width: 100%;

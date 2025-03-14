@@ -35,7 +35,7 @@ body[java-script="true"] {
     > .button-accept {
       @include flex-center();
       @include dm-font-medium();
-      gap: 4px;
+      gap: 8px;
 
       > svg {
         @include svg-color( var( --dm-color-white ) );
