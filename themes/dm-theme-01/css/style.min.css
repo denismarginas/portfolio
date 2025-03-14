@@ -25513,6 +25513,13 @@ body.theme-dark .dm-404 > container > .description {
   gap: var(--dm-spacing-secondary);
 }
 .dm-gdpr > container > h2 {
+  font-family: var(--dm-text-heading1-font-family);
+  font-size: var(--dm-text-heading1-font-size);
+  font-style: var(--dm-text-heading1-font-style);
+  font-weight: var(--dm-text-heading1-font-weight);
+  line-height: var(--dm-text-heading1-line-height);
+  letter-spacing: var(--dm-text-heading1-letter-spacing);
+  color: var(--dm-text-heading1-color);
   --dm-text-heading1-font-family: var( --dm-font-family-secondary );
   margin-bottom: var(--dm-spacing-secondary);
 }

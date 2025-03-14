@@ -11,6 +11,7 @@
     gap: var( --dm-spacing-secondary);
 
     > h2 {
+      @include dm-font-heading1();
       --dm-text-heading1-font-family: var( --dm-font-family-secondary );
       margin-bottom: var( --dm-spacing-secondary);
 
@@ -42,6 +43,7 @@ body, body.theme-light {
     }
   }
 }
+
 body.theme-dark {
   .dm-gdpr {
     > container {
