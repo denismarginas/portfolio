@@ -39,6 +39,18 @@
           background-color: rgba( var( --dm-color-black-rgb ), 0.3);
           text-shadow: 1px 1px 3px rgba( var( --dm-color-black-rgb ), 0.2);
         }
+        &.active {
+          > .number-text {
+            opacity: 1;
+            transition: all 1s ease-in-out;
+          }
+        }
+        &:not(.active) {
+          > .number-text {
+            opacity: 0;
+            transition: all 1s ease-in-out;
+          }
+        }
       }
     }
   }

@@ -697,6 +697,12 @@ document.addEventListener("DOMContentLoaded", function() {
             sliderContainer.style.transform = `translateX(-${slideIndex * (100 / slideCount)}%)`;
             updateNumberText();
             updateDots();
+            updateActiveSlide();
+        }
+        function updateActiveSlide() {
+            slides.forEach((slide, index) => {
+                slide.classList.toggle("active", index === slideIndex);
+            });
         }
 
         function plusSlides(n) {

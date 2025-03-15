@@ -11708,6 +11708,16 @@ body.theme-dark .dm-post-feature-hero {
   background-color: rgba(var(--dm-color-black-rgb), 0.3);
   text-shadow: 1px 1px 3px rgba(var(--dm-color-black-rgb), 0.2);
 }
+.slider > .slider-wrapper > .slider-container .slider-element.active > .number-text {
+  opacity: 1;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+.slider > .slider-wrapper > .slider-container .slider-element:not(.active) > .number-text {
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
 .slider .prev,
 .slider .next {
   cursor: pointer;

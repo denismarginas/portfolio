@@ -11,9 +11,9 @@
             <?php endif; ?>>
 
                 <?php if (isset($product["img-src"]) && !empty($product["img-src"]) && isset($product["img-path"])) :
-                    echo renderImage($product["img-path"].$product["img-src"], true, "product-image");
+                    echo renderImage($product["img-path"] . $product["img-src"], true, "product-image", true, isset($slider_atr) ? $slider_atr : []);
                 else:
-                    echo renderImage("content/img/placeholder/img-placeholder.webp", false, "product-image");
+                    echo renderImage("content/img/placeholder/img-placeholder.webp", false, "product-image") ;
                 endif; ?>
 
                 <?php if (isset($product["tag"]) && !empty($product["tag"])) : ?>

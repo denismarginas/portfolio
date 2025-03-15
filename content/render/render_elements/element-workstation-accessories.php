@@ -18,14 +18,15 @@
         ?>
         <ul>
             <li class="configuration">
-                <ul class="product-list">
+                <ul class="product-list" data-slider-container-src="dm-products-config">
                     <?php
                     $renderer = new RendererElements();
 
                     foreach ($products as $key => $product) :
                         if (isset($product['name'])) :
                             $product['img-path'] = $imgPath;
-                            $renderer->renderElement('workstation-product-card', "default", ['product' => $product]);
+                            $renderer->renderElement('workstation-product-card', "default",
+                                ['product' => $product, 'slider_atr' => ['data-slider-item' => 'true', 'data-slider-items-src'=>'dm-products-config', 'data-slider-item-query-attr'=>'dm-product-config']]);
                         endif;
                     endforeach;
                     ?>
