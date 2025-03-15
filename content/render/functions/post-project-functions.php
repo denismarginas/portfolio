@@ -330,7 +330,7 @@ function renderGalleryWebContent($post_data) {
         $gallery_web_content_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$gallery_path_web."/".$gallery_path_web_content."/";
 
         $dirs = getDirectoriesInFolder($src_current.$gallery_web_content_path);
-        foreach ($dirs as $dir) {
+        foreach ($dirs as $key => $dir) {
 
             $gallery_web_content_desktop = $gallery_web_content_path.$dir."/".$gallery_path_web_desktop."/";
             $gallery_web_content_phone = $gallery_web_content_path.$dir."/".$gallery_path_web_phone."/";
@@ -346,13 +346,15 @@ function renderGalleryWebContent($post_data) {
                 $gallery_phone  = [];
             }
             $nr_items = count($gallery_web) + count($gallery_phone);
-            $gallery_web_content .= '<ul id="content-web" class="dm-web-gallery" data-list-design="'.listDesign($nr_items).'">';
+            $gallery_web_content .= '<ul id="content-web" class="dm-web-gallery" data-list-design="'.listDesign($nr_items).'"
+            data-slider-container-src="dm-gallery-web-content-'.$key.'">';
 
             if( !empty($gallery_web) ) {
                 foreach ($gallery_web as $image_web) {
                     $image_path = $gallery_web_content_desktop.$image_web;
                     $gallery_web_content .=  '<li class="dm-web-gallery-item gallery-item-web" data-motion="transition-fade-0" data-duration="0.3s">'
-                        . renderImage($image_path, true)
+                        . renderImage($image_path, true, '',true,
+                            ["data-slider-item" => "true", "data-slider-items-src" => "dm-gallery-web-content-$key", "data-slider-item-query-attr" => "gallery-web-content-$key" ])
                         . '<div style="background-image: url("' . $bg_item_desktop . '")"></div>
                     </li>';
                 }
@@ -361,7 +363,8 @@ function renderGalleryWebContent($post_data) {
                 foreach ($gallery_phone as $image_web) {
                     $image_path = $gallery_web_content_phone.$image_web;
                     $gallery_web_content .=  '<li class="dm-web-gallery-item gallery-item-phone" data-motion="transition-fade-0" data-duration="0.3s">'
-                        . renderImage($image_path, true)
+                        . renderImage($image_path, true, '',true,
+                            ["data-slider-item" => "true", "data-slider-items-src" => "dm-gallery-web-content-$key", "data-slider-item-query-attr" => "gallery-web-content-$key" ])
                         . '<div style="background-image: url("' . $bg_item_phone . '")"></div>
                     </li>';
                 }
