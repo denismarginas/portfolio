@@ -3,31 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2259709f-b699-4482-a363-da52decd52d5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/functions/post-project-functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/functions/post-project-functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-barantech.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-barantech.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-cadredidactice.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-cadredidactice.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-cekan.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-cekan.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-denismarginas-github-portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-denismarginas-github-portfolio.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-earldom.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-earldom.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-edlaparis.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-edlaparis.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-familyfirst.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-familyfirst.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-gla.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-gla.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-logistic-brain.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-logistic-brain.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-maromsteelline.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-maromsteelline.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-merkaz-nadlan.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-merkaz-nadlan.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-mewi.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-mewi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-mscardetailing.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-mscardetailing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-philadelphiarugcleaning.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-philadelphiarugcleaning.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-promotiimars.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-promotiimars.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-promotionalcampaignstndc.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-promotionalcampaignstndc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-reifendirekt.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-reifendirekt.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-remodelingmv.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-remodelingmv.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-resurseeducationale.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-resurseeducationale.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-revelnail-avadores.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-revelnail-avadores.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-revistaeducatie.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-revistaeducatie.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-sosdeepcleaning.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-sosdeepcleaning.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-strikerproduction-google-site.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-strikerproduction-google-site.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-ypages.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-ypages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/json/data/data-posts-socials.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-posts-socials.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +129,8 @@
       <workItem from="1741858837824" duration="3033000" />
       <workItem from="1741940040256" duration="24740000" />
       <workItem from="1742053900714" duration="7112000" />
-      <workItem from="1742069277646" duration="435000" />
+      <workItem from="1742069277646" duration="1033000" />
+      <workItem from="1742118462553" duration="25000" />
     </task>
     <servers />
   </component>
