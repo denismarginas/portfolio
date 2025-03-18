@@ -148,7 +148,6 @@ function listDesign($nr) {
 }
 
 function renderImage($src, $popup = false, $class = false, $lazyLoad = true, $additionalAttributes = array()) {
-    // Server-side path (absolute path for file operations)
     $src_current = __DIR__ . "/../../../" . $src;
 
     if (!file_exists($src_current)) {

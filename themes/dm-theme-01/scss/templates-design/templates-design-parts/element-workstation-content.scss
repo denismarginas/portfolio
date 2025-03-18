@@ -21,9 +21,9 @@
     @include flex-row();
     @include flex-center();
 
-    img, svg {
+    img, svg, .slider > .slider-wrapper > .slider-container .slider-element > img {
       box-sizing: border-box;
-      width: auto;
+      width: 100%;
       max-width: 100%;
       height: 450px;
       object-position: center;
