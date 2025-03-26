@@ -183,7 +183,7 @@
         "media": [
             {
                 "type": "video",
-                "path": "content/vid/projects/denismarginas/personal-portfolio/personal-portfolio-1.mp4",
+                "path": "content/vid/projects/denismarginas/personal-portfolio/personal-portfolio-1.webm",
                 "thumbnail": "content/img/thumbnails/personal-portfolio-1.webp"
             }
         ]
@@ -238,7 +238,7 @@
         "media": [
             {
                 "type": "video",
-                "path": "content/vid/projects/denismarginas/personal-workstation/personal-workstation-build-1.mp4",
+                "path": "content/vid/projects/denismarginas/personal-workstation/personal-workstation-build-1.webm",
                 "thumbnail": "content/img/thumbnails/personal-workstation-build-1.webp"
             }
         ]

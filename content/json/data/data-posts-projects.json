@@ -2430,7 +2430,7 @@
             }
         },
         "post_content": [
-            "<?php echo renderSectionMediaProject($post_current_data, ['videos' => [['video-path' => 'projects/denismarginas/personal-portfolio/personal-portfolio-1.mp4', 'video-thumbnail-path' => 'thumbnails/personal-portfolio-1.webp'], ['video-path' => 'projects/denismarginas/personal-workstation/personal-workstation-build-1.mp4', 'video-thumbnail-path' => 'thumbnails/personal-workstation-build-1.webp']]]); ?>"
+            "<?php echo renderSectionMediaProject($post_current_data, ['videos' => [['video-path' => 'projects/denismarginas/personal-portfolio/personal-portfolio-1.webm', 'video-thumbnail-path' => 'thumbnails/personal-portfolio-1.webp'], ['video-path' => 'projects/denismarginas/personal-workstation/personal-workstation-build-1.webm', 'video-thumbnail-path' => 'thumbnails/personal-workstation-build-1.webp']]]); ?>"
         ],
         "layout": "wrapper-layout"
     },

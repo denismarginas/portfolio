@@ -84,7 +84,7 @@
         "content": [
             "<p>Softwares used: Sony Vegas Pro 18, Photopea, Topaz Video Enhance, Topaz Gigapixel AI</p>",
             "<?php echo renderVideo('content/vid/projects/agromir/videos_1/agromir_7.webm','content/img/projects/agromir/logo/logo.png','content/img/thumbnails/workpreview-summary-thumbnail.webp'); ?>",
-            "<?php echo renderVideo('content/vid/projects/casadarius-shop/videos_1/casadarius_3.mp4','content/img/projects/casadarius-presentation/logo/logo.png','content/img/thumbnails/workpreview-summary-thumbnail.webp'); ?>",
+            "<?php echo renderVideo('content/vid/projects/casadarius-shop/videos_1/casadarius_3.webm','content/img/projects/casadarius-presentation/logo/logo.png','content/img/thumbnails/workpreview-summary-thumbnail.webp'); ?>",
             "<?php echo renderImage('content/img/projects/agromir/media-video-editing/video-editing-agromir-0.webp', true); ?>",
             "<?php echo renderImage('content/img/projects/agromir/media-video-editing/video-editing-agromir-1.webp', true); ?>"
         ]
@@ -100,7 +100,7 @@
             "<?php echo renderImage('content/img/projects/busvip/media-video-editing-map-animation/video-editing-busvip-0.webp', true); ?>",
             "<?php echo renderImage('content/img/projects/busvip/media-video-editing-map-animation/video-editing-busvip-1.webp', true); ?>",
             "<?php echo renderImage('content/img/projects/busvip/media-video-editing-map-animation/video-editing-busvip-2.webp', true); ?>",
-            "<?php echo renderVideo('content/vid/projects/busvip/videos_3/busvip_2.mp4','content/img/projects/busvip/logo/logo.png','content/img/thumbnails/workpreview-summary-thumbnail.webp'); ?>"
+            "<?php echo renderVideo('content/vid/projects/busvip/videos_3/busvip_2.webm','content/img/projects/busvip/logo/logo.png','content/img/thumbnails/workpreview-summary-thumbnail.webp'); ?>"
         ]
     },
     {
@@ -114,7 +114,7 @@
             "<?php echo renderImage('content/img/projects/busvip/media-video-editing-car-animation/video-editing-busvip-0.webp', true); ?>",
             "<?php echo renderImage('content/img/projects/busvip/media-video-editing-car-animation/video-editing-busvip-1.webp', true); ?>",
             "<?php echo renderImage('content/img/projects/busvip/media-video-editing-car-animation/video-editing-busvip-2.webp', true); ?>",
-            "<?php echo renderVideo('content/vid/projects/busvip/videos_2/busvip_3.mp4','content/img/projects/busvip/logo/logo.png','content/img/thumbnails/workpreview-summary-thumbnail.webp'); ?>"
+            "<?php echo renderVideo('content/vid/projects/busvip/videos_2/busvip_3.webm','content/img/projects/busvip/logo/logo.png','content/img/thumbnails/workpreview-summary-thumbnail.webp'); ?>"
         ]
     },
     {
@@ -126,8 +126,8 @@
             "<p>Softwares used: Adobe After Effects 2020, Sony Vegas Pro 16, Photopea</p>",
             "<p>Plugin(s): BCC, Sapphire, RSMB, MBL</p>",
             "<?php echo renderImage('content/img/projects/dsautocenter/media-video-editing-ad/video-editing-ad-dsautocenter-0.webp', true); ?>",
-            "<?php echo renderVideo('content/vid/projects/dsautocenter/dsautocenter_1.mp4','content/img/projects/dsautocenter/logo/logo.png','content/img/thumbnails/workpreview-summary-thumbnail.webp'); ?>",
-            "<?php echo renderVideo('content/vid/projects/revelnail-avadores/videos_2/avadores_4.mp4','content/img/projects/revelnail-avadores/logo/logo.png','content/img/thumbnails/workpreview-summary-thumbnail.webp'); ?>",
+            "<?php echo renderVideo('content/vid/projects/dsautocenter/dsautocenter_1.webm','content/img/projects/dsautocenter/logo/logo.png','content/img/thumbnails/workpreview-summary-thumbnail.webp'); ?>",
+            "<?php echo renderVideo('content/vid/projects/revelnail-avadores/videos_2/avadores_4.webm','content/img/projects/revelnail-avadores/logo/logo.png','content/img/thumbnails/workpreview-summary-thumbnail.webp'); ?>",
             "<?php echo renderVideo('content/vid/projects/agromir/videos_3/agromir_4.webm','content/img/projects/agromir/logo/logo.png','content/img/thumbnails/workpreview-summary-thumbnail.webp'); ?>"
         ]
     },
