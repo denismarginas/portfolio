@@ -7,9 +7,10 @@ endif;
 if(isset($post_data) && !empty($post_data)) :
     $have_web_desktop_image = false;
     $have_web_phone_image = false;
-    $device_layout_laptop_img = "device-layout-laptop.webp";
-    $device_layout_phone_img = "device-layout-phone.webp";
-    $device_layout_img_path = $GLOBALS['urlPath'] . "content/img/" ."design-elements" ."/";
+    $data = getDataJson('data-content-personal', 'data')["post-projects"]["img"] ?? [];
+    $device_layout_laptop_img = $data["devices"]["post-laptop"] ?? "";
+    $device_layout_phone_img = $data["devices"]["post-phone"] ?? "";
+    $device_layout_img_path = $GLOBALS['urlPath'];
     $src_current = __DIR__ . "/../../../";
 
 

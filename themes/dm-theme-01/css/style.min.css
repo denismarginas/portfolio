@@ -9359,7 +9359,7 @@ body[java-script=true] #post-list-sort-and-search {
   -webkit-filter: blur(0.5px);
           filter: blur(0.5px);
 }
-.dm-gallery-web-content > .dm-web-gallery > .dm-web-gallery-item > div {
+.dm-gallery-web-content > .dm-web-gallery > .dm-web-gallery-item > .bg {
   position: absolute;
   background-size: cover;
   background-position: center;
@@ -9376,12 +9376,80 @@ body[java-script=true] #post-list-sort-and-search {
   -webkit-transition: width 0.3s, height 0.3s;
   transition: width 0.3s, height 0.3s;
 }
-.dm-gallery-web-content > .dm-web-gallery > .dm-web-gallery-item.gallery-item-phone > img {
+.dm-gallery-web-content > .dm-web-gallery > .dm-web-gallery-item.gallery-item-phone > .layout {
+  position: relative;
+  width: auto;
+  max-width: 90%;
+  height: auto;
+  max-height: 90%;
+}
+.dm-gallery-web-content > .dm-web-gallery > .dm-web-gallery-item.gallery-item-phone > .layout:before {
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  right: 2%;
+  bottom: 3%;
+  width: 100%;
+  max-width: 96%;
+  height: 100%;
+  max-height: 86%;
+  border-radius: 8%;
+  background-color: var(--post_color_primary);
+}
+.dm-gallery-web-content > .dm-web-gallery > .dm-web-gallery-item.gallery-item-phone > .layout img {
   width: auto;
   max-height: 90%;
   height: 100%;
   -webkit-filter: unset;
           filter: unset;
+}
+.dm-gallery-web-content > .dm-web-gallery > .dm-web-gallery-item.gallery-item-phone > .layout img.device {
+  z-index: 1;
+  position: relative;
+  pointer-events: none;
+}
+.dm-gallery-web-content > .dm-web-gallery > .dm-web-gallery-item.gallery-item-phone > .layout img.photo {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  z-index: 0;
+  -webkit-mask: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(30%, white), color-stop(100%, white), to(transparent));
+  -webkit-mask: linear-gradient(0deg, transparent, white 30%, white 100%, transparent);
+          mask: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(30%, white), color-stop(100%, white), to(transparent));
+          mask: linear-gradient(0deg, transparent, white 30%, white 100%, transparent);
+}
+.dm-gallery-web-content > .dm-web-gallery > .dm-web-gallery-item.gallery-item-phone > .layout img.photo.model-1 {
+  top: 11.5%;
+  left: 7%;
+  right: 7%;
+  bottom: 45%;
+  max-width: 87%;
+  max-height: 66%;
+}
+.dm-gallery-web-content > .dm-web-gallery > .dm-web-gallery-item.gallery-item-phone > .layout img.photo.model-2 {
+  top: 10%;
+  left: 6%;
+  right: 6%;
+  bottom: 12%;
+  max-width: 88%;
+  max-height: 72%;
+}
+.dm-gallery-web-content > .dm-web-gallery > .dm-web-gallery-item.gallery-item-phone > .layout img.photo.model-3 {
+  top: 2%;
+  left: 2%;
+  right: 2%;
+  bottom: 3%;
+  max-width: 96%;
+  max-height: 86%;
+  border-radius: 8%;
 }
 @media only screen and (max-width: 992px) {
   .dm-gallery-web-content > .dm-web-gallery {
@@ -12353,11 +12421,12 @@ body.theme-dark .carousel-list > .carousel-item > .dm-post-item-image {
 .carousel-list-devices > .carousel-item > .dm-post > .device-layout-phone {
   position: absolute;
   z-index: 2;
-  bottom: 20%;
-  top: 20%;
+  bottom: 0%;
+  top: auto;
   left: 70%;
   right: 0%;
-  height: 80%;
+  height: auto;
+  max-height: 80%;
 }
 .carousel-list-devices > .carousel-item > .dm-post > .device-layout-phone > .screen {
   border-radius: 8%;
@@ -12378,7 +12447,7 @@ body.theme-dark .carousel-list > .carousel-item > .dm-post-item-image {
   position: absolute;
   left: 12%;
   right: 12%;
-  height: 75%;
+  height: 72%;
   top: 8%;
   bottom: 30%;
 }

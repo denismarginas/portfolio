@@ -185,79 +185,121 @@ function renderTitle($title = null) {
     }
 }
 
-function renderGalleryWeb($post_data) {
+function renderDevicePhoneLayout($post_data, $img) {
+    $html = "";
+    $data = getDataJson('data-content-personal', 'data')["post-projects"]["img"];
+    $devicePhoneModel1 = $data["devices"]["phone-model-01"] ?? "";
+    $devicePhoneModel2 = $data["devices"]["phone-model-02"] ?? "";
+    $devicePhoneModel3 = $data["devices"]["phone-model-03"] ?? "";
 
+    $devicePhoneMode = "";
+    $class = "";
+    if (isset($post_data["date"]["date_start"])) {
+        preg_match('/\d{4}/', $post_data["date"]["date_start"], $matches);
+        $year = $matches[0] ?? null;
+        if ($year) {
+            if ($year < 2021 && !empty($devicePhoneModel1)) {
+                $devicePhoneMode = $devicePhoneModel1;
+                $class = "model-1";
+            } elseif ($year >= 2021 && $year <= 2022 && !empty($devicePhoneModel2)) {
+                $devicePhoneMode = $devicePhoneModel2;
+                $class = "model-2";
+            } elseif ($year > 2022 && !empty($devicePhoneModel3)) {
+                $devicePhoneMode = $devicePhoneModel3;
+                $class = "model-3";
+            }
+        }
+    }
+
+    if (!empty($devicePhoneMode)) {
+        $devicePhone = $GLOBALS['urlPath'].$devicePhoneMode;
+        $html .= renderImage($devicePhone, false, "device $class", true);
+    }
+
+    if (!empty($img)) {
+        $html .= renderImage($img, true, "photo $class", true, [
+            "data-slider-item" => "true",
+            "data-slider-items-src" => "dm-web-post-gallery",
+            "data-slider-item-query-attr" => "web-item-img"
+        ]);
+    }
+
+    return "<div class='layout'>".$html."<div>";
+}
+
+
+
+function renderGalleryWeb($post_data) {
     $gallery_web_content = "<div id='web' class='dm-gallery-web-content' data-motion='transition-fade-0' data-duration='0.5s'>";
 
-    if(isset($post_data)) {
-        $projectsBackgroundDesktop = getDataJson('data-content-personal', 'data')["post-projects"]["background"]["desktop"];
-        $projectsBackgroundPhone = getDataJson('data-content-personal', 'data')["post-projects"]["background"]["phone"];
+    if (!empty($post_data)) {
+        $data = getDataJson('data-content-personal', 'data')["post-projects"]["img"];
 
-        $bg_item_desktop = "";
-        $bg_item_phone = "";
+        $projectsBackgroundDesktop = $data["background"]["desktop"] ?? "";
+        $projectsBackgroundPhone = $data["background"]["phone"] ?? "";
 
-        if( $projectsBackgroundDesktop ) {
-            $bg_item_desktop = $GLOBALS['urlPath'].$projectsBackgroundDesktop;
-        }
-        if( $projectsBackgroundDesktop ) {
-            $bg_item_phone = $GLOBALS['urlPath'].$projectsBackgroundPhone;
-        }
+        $bg_item_desktop = !empty($projectsBackgroundDesktop) ? $GLOBALS['urlPath'].$projectsBackgroundDesktop : "";
+        $bg_item_phone = !empty($projectsBackgroundPhone) ? $GLOBALS['urlPath'].$projectsBackgroundPhone : "";
 
         $gallery_path_web = "web";
-        $gallery_path_web_banner = "home";
-        $gallery_path_web_desktop = "desktop";
-        $gallery_path_web_phone = "phone";
-        $src_current = __DIR__ . "/../../../";
         $gallery_web_path_current = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$gallery_path_web."/";
-        $gallery_web_path = $src_current. $gallery_web_path_current;
+        $gallery_web_path = __DIR__ . "/../../../" . $gallery_web_path_current;
 
-        $gallery_web_home = $gallery_path_web_banner."/";
-        $home_image = getImagesInFolder($gallery_web_path.$gallery_web_home );
+        // Home Desktop Gallery
+        $gallery_web_home = "home/";
+        $home_image = getImagesInFolder($gallery_web_path.$gallery_web_home);
 
-        if( !empty($home_image) ) {
+        if (!empty($home_image)) {
             $gallery_web_content .= "<div class='dm-web-home-banner' data-motion='transition-fade-0' data-duration='0.8s'>";
             foreach ($home_image as $image_home) {
                 $image_path = $gallery_web_path_current.$gallery_web_home.$image_home;
-                $gallery_web_content .=  renderImage($image_path, true);
+                $gallery_web_content .= renderImage($image_path, true);
             }
             $gallery_web_content .= "</div>";
         }
 
-        $gallery_web_desktop = $gallery_path_web_desktop."/";
-        $gallery_web = getImagesInFolder($gallery_web_path.$gallery_web_desktop );
+        // Desktop Gallery
+        $gallery_web_desktop = "desktop/";
+        $gallery_web = getImagesInFolder($gallery_web_path.$gallery_web_desktop);
 
-        if( !empty($gallery_web) ) {
+        if (!empty($gallery_web)) {
             $gallery_web_content .= '<ul class="dm-web-gallery" data-slider-container-src="dm-web-post-gallery">';
 
             foreach ($gallery_web as $image_web) {
                 $image_path = $gallery_web_path_current.$gallery_web_desktop.$image_web;
-                $gallery_web_content .=  '
+                $gallery_web_content .= '
                     <li class="dm-web-gallery-item gallery-item-web" data-motion="transition-fade-0" data-duration="0.3s">' .
-                        renderImage($image_path, true, '',true,
-                            ["data-slider-item" => "true", "data-slider-items-src" => "dm-web-post-gallery", "data-slider-item-query-attr" => "web-item-img" ]) .
-                    '<div style="background-image: url("' . $bg_item_desktop . '")"></div></li>';
+                    '<div class="bg" style="background-image: url(' . $bg_item_desktop . ')"></div>'.
+                        renderImage($image_path, true, '', true, [
+                            "data-slider-item" => "true",
+                            "data-slider-items-src" => "dm-web-post-gallery",
+                            "data-slider-item-query-attr" => "web-item-img"
+                        ]) .
+                    '</li>';
             }
 
-            $gallery_web_phone = $gallery_path_web_phone."/";
-            $gallery_phone = getImagesInFolder($gallery_web_path.$gallery_web_phone );
+            // Phone Gallery
+            $gallery_web_phone = "phone/";
+            $gallery_phone = getImagesInFolder($gallery_web_path.$gallery_web_phone);
 
-            if( !empty($gallery_phone) ) {
+            if (!empty($gallery_phone)) {
                 foreach ($gallery_phone as $image_web) {
                     $image_path = $gallery_web_path_current.$gallery_web_phone.$image_web;
-                    $gallery_web_content .=  '
+                    $gallery_web_content .= '
                         <li class="dm-web-gallery-item gallery-item-phone" data-motion="transition-fade-0" data-duration="0.3s">' .
-                            renderImage($image_path, true, '',true,
-                                ["data-slider-item" => "true", "data-slider-items-src" => "dm-web-post-gallery", "data-slider-item-query-attr" => "web-item-img" ]) .
-                        '<div style="background-image: url("' . $bg_item_phone . '")"></div></li>';
+                        '<div class="bg" style="background-image: url(' . $bg_item_phone . ')"></div>'.
+                            renderDevicePhoneLayout($post_data, $image_path) .
+                        '</li>';
                 }
             }
             $gallery_web_content .= '</ul>';
         }
     }
-    $gallery_web_content .= '</div>';
 
+    $gallery_web_content .= '</div>';
     return $gallery_web_content;
 }
+
 
 function renderGalleryWebMedia($post_data) {
     $gallery_media_web_content = "<div id='media-web' class='dm-gallery-web-content' data-motion='transition-fade-0' data-duration='0.5s'>";
@@ -693,7 +735,7 @@ function renderFeatureHero($post_data) {
     $html_content .= '<div class="dm-post-feature-hero" 
                         data-motion="transition-fade-0" data-duration="0.7s" data-delay="0.1s">';
 
-    $img_texture = $GLOBALS['urlPath'].getDataJson('data-content-personal', 'data')["post-projects"]["background"]["overlay-texture"];
+    $img_texture = $GLOBALS['urlPath'].getDataJson('data-content-personal', 'data')["post-projects"]["img"]["background"]["overlay-texture"];
     $html_content .=  '<div class="bg-texture" style="background-image: url("' . $img_texture . '")"></div>';
 
 
@@ -704,10 +746,10 @@ function renderFeatureHero($post_data) {
     require_once __DIR__ . '/../classes/renderSVG.php';
     require_once __DIR__ . '/../classes/renderStructure.php';
 
-    $img_shape_1 = $GLOBALS['urlPath'].getDataJson('data-content-personal', 'data')["post-projects"]["background"]["overlay-shape-1"];
+    $img_shape_1 = $GLOBALS['urlPath'].getDataJson('data-content-personal', 'data')["post-projects"]["img"]["background"]["overlay-shape-1"];
     $html_content .=  SVGRenderer::renderSVG( $img_shape_1);
 
-    $img_shape_2 = $GLOBALS['urlPath'].getDataJson('data-content-personal', 'data')["post-projects"]["background"]["overlay-shape-2"];
+    $img_shape_2 = $GLOBALS['urlPath'].getDataJson('data-content-personal', 'data')["post-projects"]["img"]["background"]["overlay-shape-2"];
     $html_content .=  SVGRenderer::renderSVG( $img_shape_2);
 
     $renderer = new RendererElements();

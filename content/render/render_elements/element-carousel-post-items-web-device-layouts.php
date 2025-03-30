@@ -27,10 +27,11 @@ endif;
 usort($posts, "dateStartPostSortDesc");
 usort($posts, "personalTypePostProjectSortAsc");
 
-$device_layout_laptop_img = "device-layout-laptop.webp";
-$device_layout_phone_img = "device-layout-phone.webp";
+$data = getDataJson('data-content-personal', 'data')["post-projects"]["img"] ?? [];
+$device_layout_laptop_img = $data["devices"]["post-laptop"] ?? "";
+$device_layout_phone_img = $data["devices"]["post-phone"] ?? "";
 
-$device_layout_img_path = $GLOBALS['urlPath'] . "content/img/" ."design-elements" ."/";
+$device_layout_img_path = $GLOBALS['urlPath'];
 $src_current = __DIR__ . "/../../../";
 
 ?>

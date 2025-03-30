@@ -895,12 +895,23 @@
 		"blog-img-wallpaper": "content/img/projects/denismarginas/media/backgrounds/wallpaper-facebook.webp"
 	},
 	"post-projects" : {
-		"background": {
-			"desktop": "content/img/design-elements/overlay-responsive-layout-desktop.webp",
-			"phone": "content/img/design-elements/overlay-responsive-layout-phone.webp",
-			"overlay-texture": "content/img/design-elements/overlay-texture-noise.webp",
-			"overlay-shape-1": "hexagon-3d",
-			"overlay-shape-2": "distortion-plane-3d"
+		"img": {
+			"background": {
+				"desktop": "content/img/design-elements/overlay-responsive-layout-desktop.webp",
+				"phone": "content/img/design-elements/overlay-responsive-layout-phone.webp",
+				"overlay-texture": "content/img/design-elements/overlay-texture-noise.webp",
+				"overlay-shape-1": "hexagon-3d",
+				"overlay-shape-2": "distortion-plane-3d"
+			},
+			"devices" : {
+				"post-laptop": "content/img/design-elements/device-layout-laptop.webp",
+				"post-phone": "content/img/design-elements/device-layout-phone.webp",
+				"tablet-landscape": "content/img/design-elements/device-layout-tablet-landscape.webp",
+				"tablet": "content/img/design-elements/device-layout-tablet.webp",
+				"phone-model-01": "content/img/design-elements/device-layout-phone-model-001.webp",
+				"phone-model-02": "content/img/design-elements/device-layout-phone-model-002.webp",
+				"phone-model-03": "content/img/design-elements/device-layout-phone-model-003.webp"
+			}
 		},
 		"fields": {
 			"web_url": "Website: ",

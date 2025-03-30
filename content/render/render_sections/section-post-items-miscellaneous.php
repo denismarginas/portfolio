@@ -1,4 +1,5 @@
 <?php
+$data = getDataJson('data-content-personal', 'data')["post-projects"]["img"] ?? [];
 
 if(!isset($jsonGlobalData)) :
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
@@ -9,15 +10,15 @@ if(!isset($posts)) :
 endif;
 
 if(!isset($device_layout_laptop_img)) :
-    $device_layout_laptop_img = "device-layout-laptop.webp";
+    $device_layout_laptop_img = $data["devices"]["post-laptop"] ?? "";
 endif;
 
 if(!isset($device_layout_phone_img)) :
-    $device_layout_phone_img = "device-layout-phone.webp";
+    $device_layout_phone_img = $data["devices"]["post-phone"] ?? "";
 endif;
 
 if(!isset($device_layout_img_path)) :
-    $device_layout_img_path = $GLOBALS['urlPath'] . "content/img/" ."design-elements" ."/";
+    $device_layout_img_path = $GLOBALS['urlPath'];
 endif;
 
 $src_current = __DIR__ . "/../../../";

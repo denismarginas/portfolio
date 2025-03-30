@@ -75,12 +75,12 @@
       > .device-layout-phone {
         position: absolute;
         z-index: 2;
-        bottom: 20%;
-        top: 20%;
+        bottom: 0%;
+        top: auto;
         left: 70%;
         right: 0%;
-        height: 80%;
-
+        height: auto;
+        max-height: 80%;
 
         > .screen {
           @include border-radius( 8% );
@@ -91,7 +91,7 @@
           position: absolute;
           left: 12%;
           right: 12%;
-          height: 75%;
+          height: 72%;
           top: 8%;
           bottom: 30%;
 
