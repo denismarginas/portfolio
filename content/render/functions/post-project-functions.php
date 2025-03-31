@@ -193,35 +193,68 @@ function renderDevicePhoneLayout($post_data, $img, $atr) {
     $devicePhoneModel3 = $data["devices"]["phone-model-03"] ?? "";
 
     $devicePhoneMode = "";
-    $class = "";
+    $classDevice = "";
     if (isset($post_data["date"]["date_start"])) {
         preg_match('/\d{4}/', $post_data["date"]["date_start"], $matches);
         $year = $matches[0] ?? null;
         if ($year) {
             if ($year < 2021 && !empty($devicePhoneModel1)) {
                 $devicePhoneMode = $devicePhoneModel1;
-                $class = "model-1";
+                $classDevice = " phone-model-01";
             } elseif ($year >= 2021 && $year <= 2022 && !empty($devicePhoneModel2)) {
                 $devicePhoneMode = $devicePhoneModel2;
-                $class = "model-2";
+                $classDevice = " phone-model-02";
             } elseif ($year > 2022 && !empty($devicePhoneModel3)) {
                 $devicePhoneMode = $devicePhoneModel3;
-                $class = "model-3";
+                $classDevice = " phone-model-03";
             }
         }
     }
 
     if (!empty($devicePhoneMode)) {
         $devicePhone = $GLOBALS['urlPath'].$devicePhoneMode;
-        $html .= renderImage($devicePhone, false, "device $class", true);
+        $html .= renderImage($devicePhone, false, "device $classDevice", true);
     }
+
+    $layoutAtr = "cover top";
 
     if (!empty($img)) {
-        $html .= renderImage($img, true, "photo $class", true, $atr);
+        $src_current = __DIR__ . "/../../../" . $img;
+        if (file_exists($src_current)) {
+            $imageInfo = getimagesize($src_current);
+
+            if ($imageInfo !== false) {
+                $imageWidth = $imageInfo[0];
+                $imageHeight = $imageInfo[1];
+
+                $aspectRatio = $imageWidth / $imageHeight;
+
+                if ($imageWidth >= $imageHeight) {
+                    $layoutAtr = "center";
+                } elseif ($aspectRatio >= 0.7) {
+                    $layoutAtr = "center";
+                } else {
+                    $layoutAtr = "top";
+                }
+                if ($aspectRatio <= 0.7 ) {
+                    $layoutAtr .= " bg-primary fade-under";
+                } else {
+                    $layoutAtr .= " bg-white";
+                }
+                $layoutAtr .= " " . $aspectRatio;
+            }
+        }
+
+        $html .= "<div class='screen".$classDevice."' layout='".$layoutAtr."'>".
+                    renderImage($img, false, "element", true).
+                 "</div>";
+        $html .= renderImage($img, true, "overlay", true, $atr);
     }
 
-    return "<div class='layout'>".$html."<div>";
+    return "<div class='layout'>".$html."</div>";
 }
+
+
 
 
 

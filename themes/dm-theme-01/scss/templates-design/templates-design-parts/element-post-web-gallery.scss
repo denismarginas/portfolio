@@ -57,7 +57,7 @@
         height: 120%;
         width: 120%;
         opacity: 0.7;
-        mix-blend-mode: multiply;
+        mix-blend-mode: multiply; 
         transition: width 0.3s, height 0.3s;
       }
       &:hover {
@@ -71,73 +71,114 @@
         > .layout {
           position: relative;
           width: auto;
-          max-width: 90%;
           height: auto;
           max-height: 90%;
 
-          &:before {
-            content: "";
-            display: block;
-            overflow: hidden;
+          > .overlay {
             position: absolute;
-            top: 2%;
-            left: 2%;
-            right: 2%;
-            bottom: 3%;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
             width: 100%;
-            max-width: 96%;
             height: 100%;
-            max-height: 86%;
-            border-radius: 8%;
-            background-color: var( --post_color_primary );
+            opacity: 0;
+            z-index: 3;
           }
 
-          img {
+          > .device {
+            z-index: 1;
+            position: relative;
+            pointer-events: none;
             width: auto;
-            max-height: 90%;
             height: 100%;
             filter: unset;
+          }
 
-            &.device {
-              z-index: 1;
-              position: relative;
-              pointer-events: none;
-            }
-            &.photo {
-              overflow: hidden;
+          > .screen {
+            overflow: hidden;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
+            &:after {
+              content: "";
               position: absolute;
               width: 100%;
               height: 100%;
-              object-fit: cover;
-              object-position: top;
-              z-index: 0;
-              mask: linear-gradient(0deg, transparent, white 30%, white 100%, transparent);
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-image: linear-gradient(180deg,
+                      rgba(0,0,0, 0) 60%,
+                      var( --post_color_primary ) 100%
+              );
+            }
 
-              &.model-1 {
-                top: 11.5%;
-                left: 7%;
-                right: 7%;
-                bottom: 45%;
-                max-width: 87%;
-                max-height: 66%;
+            > img {
+                width: 100%;
+                height: auto;
+                z-index: 0;
+            }
+
+            &[layout*="top"] {
+              justify-content: flex-start;
+            }
+
+            &[layout*="center"] {
+              justify-content: center;
+            }
+
+            &[layout*="bottom"] {
+              justify-content: flex-end;
+            }
+            &[layout*="fade-under"] {
+              > img {
+                mask: linear-gradient(0deg, transparent, white 30%, white 100%, transparent);
               }
-              &.model-2 {
-                top: 10%;
-                left: 6%;
-                right: 6%;
-                bottom: 12%;
-                max-width: 88%;
-                max-height: 72%;
+            }
+            &[layout*="bg-primary"] {
+              background-color: var( --post_color_primary );
+            }
+            &[layout*="bg-white"] {
+              background-color: var( --dm-color-white );
+            }
+            &[layout*="cover"] {
+              > img {
+                object-fit: cover;
+                object-position: top;
+                width: 100%;
+                height: 100%;
               }
-              &.model-3 {
-                top: 2%;
-                left: 2%;
-                right: 2%;
-                bottom: 3%;
-                max-width: 96%;
-                max-height: 86%;
-                border-radius: 8%;
-              }
+            }
+            &.phone-model-01 {
+              top: 13%;
+              left: 7%;
+              right: 7%;
+              bottom: 45%;
+              max-width: 87%;
+              max-height: 74%;
+            }
+
+            &.phone-model-02 {
+              top: 10%;
+              left: 6%;
+              right: 6%;
+              bottom: 12%;
+              max-width: 88%;
+              max-height: 82%;
+            }
+            &.phone-model-03 {
+              top: 2%;
+              left: 2%;
+              right: 2%;
+              bottom: 3%;
+              max-width: 96%;
+              max-height: 96%;
+              border-radius: 8%;
             }
           }
         }
