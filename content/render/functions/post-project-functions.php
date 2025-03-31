@@ -185,7 +185,7 @@ function renderTitle($title = null) {
     }
 }
 
-function renderDevicePhoneLayout($post_data, $img) {
+function renderDevicePhoneLayout($post_data, $img, $atr) {
     $html = "";
     $data = getDataJson('data-content-personal', 'data')["post-projects"]["img"];
     $devicePhoneModel1 = $data["devices"]["phone-model-01"] ?? "";
@@ -217,11 +217,7 @@ function renderDevicePhoneLayout($post_data, $img) {
     }
 
     if (!empty($img)) {
-        $html .= renderImage($img, true, "photo $class", true, [
-            "data-slider-item" => "true",
-            "data-slider-items-src" => "dm-web-post-gallery",
-            "data-slider-item-query-attr" => "web-item-img"
-        ]);
+        $html .= renderImage($img, true, "photo $class", true, $atr);
     }
 
     return "<div class='layout'>".$html."<div>";
@@ -288,7 +284,11 @@ function renderGalleryWeb($post_data) {
                     $gallery_web_content .= '
                         <li class="dm-web-gallery-item gallery-item-phone" data-motion="transition-fade-0" data-duration="0.3s">' .
                         '<div class="bg" style="background-image: url(' . $bg_item_phone . ')"></div>'.
-                            renderDevicePhoneLayout($post_data, $image_path) .
+                            renderDevicePhoneLayout($post_data, $image_path, [
+                                "data-slider-item" => "true",
+                                "data-slider-items-src" => "dm-web-post-gallery",
+                                "data-slider-item-query-attr" => "web-item-img"
+                            ]) .
                         '</li>';
                 }
             }
@@ -404,11 +404,14 @@ function renderGalleryWebContent($post_data) {
             if( !empty($gallery_phone) ) {
                 foreach ($gallery_phone as $image_web) {
                     $image_path = $gallery_web_content_phone.$image_web;
-                    $gallery_web_content .=  '<li class="dm-web-gallery-item gallery-item-phone" data-motion="transition-fade-0" data-duration="0.3s">'
-                        . renderImage($image_path, true, '',true,
-                            ["data-slider-item" => "true", "data-slider-items-src" => "dm-gallery-web-content-$key", "data-slider-item-query-attr" => "gallery-web-content-$key" ])
-                        . '<div style="background-image: url("' . $bg_item_phone . '")"></div>
-                    </li>';
+                    $gallery_web_content .=  '<li class="dm-web-gallery-item gallery-item-phone" data-motion="transition-fade-0" data-duration="0.3s">' .
+                        '<div class="bg" style="background-image: url(' . $bg_item_phone . ')"></div>'.
+                            renderDevicePhoneLayout($post_data, $image_path, [
+                                "data-slider-item" => "true",
+                                "data-slider-items-src" => "dm-gallery-web-content-$key",
+                                "data-slider-item-query-attr" => "gallery-web-content-$key"
+                            ]) .
+                        '</li>';
                 }
             }
             $gallery_web_content .= '</ul>';
