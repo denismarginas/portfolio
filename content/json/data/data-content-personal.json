@@ -910,7 +910,11 @@
 				"tablet": "content/img/design-elements/device-layout-tablet.webp",
 				"phone-model-01": "content/img/design-elements/device-layout-phone-model-001.webp",
 				"phone-model-02": "content/img/design-elements/device-layout-phone-model-002.webp",
-				"phone-model-03": "content/img/design-elements/device-layout-phone-model-003.webp"
+				"phone-model-03": "content/img/design-elements/device-layout-phone-model-003.webp",
+				"desktop-model-01": "content/img/design-elements/device-layout-desktop-model-001.webp",
+				"desktop-model-02": "content/img/design-elements/device-layout-desktop-model-002.webp",
+				"desktop-model-03": "content/img/design-elements/device-layout-desktop-model-003.webp"
+
 			}
 		},
 		"fields": {

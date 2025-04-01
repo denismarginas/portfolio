@@ -185,63 +185,77 @@ function renderTitle($title = null) {
     }
 }
 
-function renderDevicePhoneLayout($post_data, $img, $atr) {
+function renderDeviceLayout($type,$post_data, $img, $atr) {
     $html = "";
-    $data = getDataJson('data-content-personal', 'data')["post-projects"]["img"];
-    $devicePhoneModel1 = $data["devices"]["phone-model-01"] ?? "";
-    $devicePhoneModel2 = $data["devices"]["phone-model-02"] ?? "";
-    $devicePhoneModel3 = $data["devices"]["phone-model-03"] ?? "";
+    $data = getDataJson('data-content-personal', 'data')["post-projects"]["img"] ?? [];
 
-    $devicePhoneMode = "";
-    $classDevice = "";
-    if (isset($post_data["date"]["date_start"])) {
-        preg_match('/\d{4}/', $post_data["date"]["date_start"], $matches);
-        $year = $matches[0] ?? null;
-        if ($year) {
-            if ($year < 2021 && !empty($devicePhoneModel1)) {
-                $devicePhoneMode = $devicePhoneModel1;
-                $classDevice = " phone-model-01";
-            } elseif ($year >= 2021 && $year <= 2022 && !empty($devicePhoneModel2)) {
-                $devicePhoneMode = $devicePhoneModel2;
-                $classDevice = " phone-model-02";
-            } elseif ($year > 2022 && !empty($devicePhoneModel3)) {
-                $devicePhoneMode = $devicePhoneModel3;
-                $classDevice = " phone-model-03";
+
+    if($type == "phone" || $type == "desktop") {
+        $deviceModel1 = $data["devices"][$type."-model-01"] ?? "";
+        $deviceModel2 = $data["devices"][$type."-model-02"] ?? "";
+        $deviceModel3 = $data["devices"][$type."-model-03"] ?? "";
+
+        $deviceMode = "";
+        $classDevice = "";
+
+        if (isset($post_data["date"]["date_start"]) && !empty($post_data["date"]["date_start"])) {
+            preg_match('/\d{4}/', $post_data["date"]["date_start"], $matches);
+            $year = $matches[0] ?? null;
+
+            if(isset($post_data["project_types"]) && in_array("personal", $post_data["project_types"])) {
+                $deviceMode = $deviceModel1;
+                $classDevice = " ".$type."-model-01";
+            }
+            elseif ($year) {
+                if ($year < 2022 && !empty($deviceModel1)) {
+                    $deviceMode = $deviceModel2;
+                    $classDevice = " ".$type."-model-02";
+                } elseif ($year >= 2022 && !empty($deviceModel3)) {
+                    $deviceMode = $deviceModel3;
+                    $classDevice = " ".$type."-model-03";
+                }
+            } else {
+                $deviceMode = $deviceModel3;
+                $classDevice = " ".$type."-model-03";
             }
         }
-    }
 
-    if (!empty($devicePhoneMode)) {
-        $devicePhone = $GLOBALS['urlPath'].$devicePhoneMode;
-        $html .= renderImage($devicePhone, false, "device $classDevice", true);
-    }
+        if (!empty($deviceMode)) {
+            $device = $GLOBALS['urlPath'].$deviceMode;
+            $html .= renderImage($device, false, "device", true);
+        }
 
-    $layoutAtr = "cover top";
+        $layoutAtr = "cover top";
 
-    if (!empty($img)) {
-        $src_current = __DIR__ . "/../../../" . $img;
-        if (file_exists($src_current)) {
-            $imageInfo = getimagesize($src_current);
+        if (!empty($img)) {
+            $src_current = __DIR__ . "/../../../" . $img;
+            if (file_exists($src_current)) {
+                $imageInfo = getimagesize($src_current);
 
-            if ($imageInfo !== false) {
-                $imageWidth = $imageInfo[0];
-                $imageHeight = $imageInfo[1];
+                if ($imageInfo !== false) {
+                    $imageWidth = $imageInfo[0];
+                    $imageHeight = $imageInfo[1];
 
-                $aspectRatio = $imageWidth / $imageHeight;
+                    $aspectRatio = $imageWidth / $imageHeight;
 
-                if ($imageWidth >= $imageHeight) {
-                    $layoutAtr = "center";
-                } elseif ($aspectRatio >= 0.7) {
-                    $layoutAtr = "center";
-                } else {
-                    $layoutAtr = "top";
+                    if ($type == "phone" && $imageWidth >= $imageHeight) {
+                        $layoutAtr = "center";
+                    }
+                    elseif ($type == "desktop" && ($imageHeight > $imageWidth || ($aspectRatio >= 1 && $aspectRatio <= 1.6))) {
+                        $layoutAtr = "top";
+                    }
+                    elseif ($aspectRatio >= 0.7) {
+                        $layoutAtr = "center";
+                    } else {
+                        $layoutAtr = "top";
+                    }
+                    if ($aspectRatio <= 0.7 ) {
+                        $layoutAtr .= " bg-primary fade-under";
+                    } else {
+                        $layoutAtr .= " bg-white";
+                    }
+                    $layoutAtr .= " " . round($aspectRatio, 2);
                 }
-                if ($aspectRatio <= 0.7 ) {
-                    $layoutAtr .= " bg-primary fade-under";
-                } else {
-                    $layoutAtr .= " bg-white";
-                }
-                $layoutAtr .= " " . $aspectRatio;
             }
         }
 
@@ -249,7 +263,12 @@ function renderDevicePhoneLayout($post_data, $img, $atr) {
                     renderImage($img, false, "element", true).
                  "</div>";
         $html .= renderImage($img, true, "overlay", true, $atr);
+
     }
+     else {
+        $html .= renderImage($img, true, "", true, $atr);
+    }
+
 
     return "<div class='layout'>".$html."</div>";
 }
@@ -299,7 +318,7 @@ function renderGalleryWeb($post_data) {
                 $gallery_web_content .= '
                     <li class="dm-web-gallery-item gallery-item-web" data-motion="transition-fade-0" data-duration="0.3s">' .
                     '<div class="bg" style="background-image: url(' . $bg_item_desktop . ')"></div>'.
-                        renderImage($image_path, true, '', true, [
+                        renderDeviceLayout("desktop", $post_data, $image_path, [
                             "data-slider-item" => "true",
                             "data-slider-items-src" => "dm-web-post-gallery",
                             "data-slider-item-query-attr" => "web-item-img"
@@ -317,7 +336,7 @@ function renderGalleryWeb($post_data) {
                     $gallery_web_content .= '
                         <li class="dm-web-gallery-item gallery-item-phone" data-motion="transition-fade-0" data-duration="0.3s">' .
                         '<div class="bg" style="background-image: url(' . $bg_item_phone . ')"></div>'.
-                            renderDevicePhoneLayout($post_data, $image_path, [
+                            renderDeviceLayout("phone", $post_data, $image_path, [
                                 "data-slider-item" => "true",
                                 "data-slider-items-src" => "dm-web-post-gallery",
                                 "data-slider-item-query-attr" => "web-item-img"
@@ -427,11 +446,14 @@ function renderGalleryWebContent($post_data) {
             if( !empty($gallery_web) ) {
                 foreach ($gallery_web as $image_web) {
                     $image_path = $gallery_web_content_desktop.$image_web;
-                    $gallery_web_content .=  '<li class="dm-web-gallery-item gallery-item-web" data-motion="transition-fade-0" data-duration="0.3s">'
-                        . renderImage($image_path, true, '',true,
-                            ["data-slider-item" => "true", "data-slider-items-src" => "dm-gallery-web-content-$key", "data-slider-item-query-attr" => "gallery-web-content-$key" ])
-                        . '<div style="background-image: url("' . $bg_item_desktop . '")"></div>
-                    </li>';
+                    $gallery_web_content .=  '<li class="dm-web-gallery-item gallery-item-web" data-motion="transition-fade-0" data-duration="0.3s">'.
+                        '<div class="bg" style="background-image: url(' . $bg_item_desktop . ')"></div>'.
+                            renderDeviceLayout("desktop", $post_data, $image_path, [
+                                "data-slider-item" => "true",
+                                "data-slider-items-src" => "dm-gallery-web-content-$key",
+                                "data-slider-item-query-attr" => "gallery-web-content-$key"
+                            ]) .
+                            '</li>';
                 }
             }
             if( !empty($gallery_phone) ) {
@@ -439,7 +461,7 @@ function renderGalleryWebContent($post_data) {
                     $image_path = $gallery_web_content_phone.$image_web;
                     $gallery_web_content .=  '<li class="dm-web-gallery-item gallery-item-phone" data-motion="transition-fade-0" data-duration="0.3s">' .
                         '<div class="bg" style="background-image: url(' . $bg_item_phone . ')"></div>'.
-                            renderDevicePhoneLayout($post_data, $image_path, [
+                            renderDeviceLayout("phone", $post_data, $image_path, [
                                 "data-slider-item" => "true",
                                 "data-slider-items-src" => "dm-gallery-web-content-$key",
                                 "data-slider-item-query-attr" => "gallery-web-content-$key"

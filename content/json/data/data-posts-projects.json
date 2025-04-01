@@ -3409,7 +3409,7 @@
             "display": "enable",
             "post_type": "projects",
             "media_path": "mewi",
-            "title": "Mewi",
+            "title": "Mewi - Maintenance",
             "logo": "logo/logo.png",
             "logo_path": "mewi",
             "logo_type": "png",
@@ -5388,6 +5388,7 @@
             },
             "tags": [
                 "web",
+                "content-web",
                 "media-web"
             ],
             "colors": {

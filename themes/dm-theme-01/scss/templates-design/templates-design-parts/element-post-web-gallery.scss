@@ -31,25 +31,33 @@
     gap: var( --dm-spacing-secondary );
 
     > .dm-web-gallery-item {
-      @include fix-height(300px);
+      @include fix-height(220px);
       @include flex-center();
       @include border-radius( var( --dm-border-radius-primary ));
       flex-direction: column;
       overflow: hidden;
       position: relative;
       background-color: var( --post_color_primary );
+      padding: var( --dm-spacing-primary );
 
-      > img {
-        cursor: pointer;
-        z-index: 1;
+      > .layout {
+        position: relative;
         width: 100%;
-        height: auto;
-        max-height: 100%;
-        object-fit: cover;
-        object-position: top;
-        transition: width 0.4s, max-width 0.4s;
-        filter: blur(0.5px);
+        height: 100%;
+        @include flex-center();
+
+        > img {
+          cursor: pointer;
+          z-index: 1;
+          width: 100%;
+          height: auto;
+          max-height: 100%;
+          object-fit: cover;
+          object-position: top;
+          transition: width 0.4s, max-width 0.4s;
+        }
       }
+
       > .bg {
         position: absolute;
         background-size: cover;
@@ -57,22 +65,33 @@
         height: 120%;
         width: 120%;
         opacity: 0.7;
-        mix-blend-mode: multiply; 
+        mix-blend-mode: multiply;
         transition: width 0.3s, height 0.3s;
       }
+
       &:hover {
-        > div {
+        > .bg  {
           height: 140%;
           width: 140%;
           transition: width 0.3s, height 0.3s;
         }
       }
-      &.gallery-item-phone {
+      &.gallery-item-web {
+        > .layout {
+          > .screen {
+            > img {
+              ilter: blur(0.5px);
+            }
+          }
+        }
+      }
+      &.gallery-item-phone, &.gallery-item-web {
         > .layout {
           position: relative;
           width: auto;
           height: auto;
-          max-height: 90%;
+          max-height: 100%;
+          max-width: 100%;
 
           > .overlay {
             position: absolute;
@@ -87,12 +106,10 @@
           }
 
           > .device {
-            z-index: 1;
-            position: relative;
-            pointer-events: none;
             width: auto;
-            height: 100%;
-            filter: unset;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
           }
 
           > .screen {
@@ -114,7 +131,7 @@
               bottom: 0;
               background-image: linear-gradient(180deg,
                       rgba(0,0,0, 0) 60%,
-                      var( --post_color_primary ) 100%
+                      var( --post_color_primary ) 150%
               );
             }
 
@@ -154,7 +171,40 @@
                 height: 100%;
               }
             }
-            &.phone-model-01 {
+            &.desktop-model-01 {
+              top: 1.6%;
+              left: 1%;
+              right: 1%;
+              bottom: 15%;
+              max-width: 98%;
+              max-height: 77%;
+            }
+          &.desktop-model-02 {
+            top: 5%;
+            left: 11.5%;
+            right: 11.5%;
+            bottom: 15%;
+            max-width: 77.5%;
+            max-height: 86%;
+          }
+            &.desktop-model-03 {
+              top: 3%;
+              left: 2%;
+              right: 2%;
+              bottom: 15%;
+              max-width: 96%;
+              max-height: 79%;
+          }
+          &.phone-model-01 {
+              top: 8%;
+              left: 3%;
+              right: 3%;
+              bottom: 12%;
+              max-width: 93%;
+              max-height: 84%;
+            }
+
+            &.phone-model-02 {
               top: 13%;
               left: 7%;
               right: 7%;
@@ -163,22 +213,13 @@
               max-height: 74%;
             }
 
-            &.phone-model-02 {
-              top: 10%;
-              left: 6%;
-              right: 6%;
-              bottom: 12%;
-              max-width: 88%;
-              max-height: 82%;
-            }
             &.phone-model-03 {
-              top: 2%;
-              left: 2%;
-              right: 2%;
-              bottom: 3%;
-              max-width: 96%;
-              max-height: 96%;
-              border-radius: 8%;
+              top: 8.8%;
+              left: 5%;
+              right: 5%;
+              bottom: 13%;
+              max-width: 90%;
+              max-height: 83%;
             }
           }
         }
@@ -195,7 +236,7 @@
       grid-template-columns: repeat(2, 1fr);
 
       > .dm-web-gallery-item {
-        @include fix-height(200px);
+        @include fix-height(120px);
       }
     }
   }
