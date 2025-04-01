@@ -233,27 +233,17 @@ function renderDeviceLayout($type,$post_data, $img, $atr) {
                 $imageInfo = getimagesize($src_current);
 
                 if ($imageInfo !== false) {
-                    $imageWidth = $imageInfo[0];
-                    $imageHeight = $imageInfo[1];
-
+                    list($imageWidth, $imageHeight) = $imageInfo;
                     $aspectRatio = $imageWidth / $imageHeight;
 
                     if ($type == "phone" && $imageWidth >= $imageHeight) {
                         $layoutAtr = "center";
-                    }
-                    elseif ($type == "desktop" && ($imageHeight > $imageWidth || ($aspectRatio >= 1 && $aspectRatio <= 1.6))) {
+                    } elseif ($type == "desktop" && ($imageHeight > $imageWidth || ($aspectRatio >= 1 && $aspectRatio <= 1.6))) {
                         $layoutAtr = "top";
-                    }
-                    elseif ($aspectRatio >= 0.7) {
-                        $layoutAtr = "center";
                     } else {
-                        $layoutAtr = "top";
+                        $layoutAtr = ($aspectRatio >= 0.7) ? "center" : "top";
                     }
-                    if ($aspectRatio <= 0.7 ) {
-                        $layoutAtr .= " bg-primary fade-under";
-                    } else {
-                        $layoutAtr .= " bg-white";
-                    }
+                    $layoutAtr .= ($aspectRatio <= 0.7) ? " bg-primary fade-under" : " bg-white";
                     $layoutAtr .= " " . round($aspectRatio, 2);
                 }
             }
@@ -282,12 +272,8 @@ function renderGalleryWeb($post_data) {
 
     if (!empty($post_data)) {
         $data = getDataJson('data-content-personal', 'data')["post-projects"]["img"];
-
-        $projectsBackgroundDesktop = $data["background"]["desktop"] ?? "";
-        $projectsBackgroundPhone = $data["background"]["phone"] ?? "";
-
-        $bg_item_desktop = !empty($projectsBackgroundDesktop) ? $GLOBALS['urlPath'].$projectsBackgroundDesktop : "";
-        $bg_item_phone = !empty($projectsBackgroundPhone) ? $GLOBALS['urlPath'].$projectsBackgroundPhone : "";
+        $img_texture = $data["background"]["overlay-texture"];
+        $bg_item_texture = !empty($img_texture) ? $GLOBALS['urlPath'].$img_texture : "";
 
         $gallery_path_web = "web";
         $gallery_web_path_current = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$gallery_path_web."/";
@@ -317,7 +303,7 @@ function renderGalleryWeb($post_data) {
                 $image_path = $gallery_web_path_current.$gallery_web_desktop.$image_web;
                 $gallery_web_content .= '
                     <li class="dm-web-gallery-item gallery-item-web" data-motion="transition-fade-0" data-duration="0.3s">' .
-                    '<div class="bg" style="background-image: url(' . $bg_item_desktop . ')"></div>'.
+                    '<div class="bg" style="background-image: url(' . $bg_item_texture . ')"></div>'.
                         renderDeviceLayout("desktop", $post_data, $image_path, [
                             "data-slider-item" => "true",
                             "data-slider-items-src" => "dm-web-post-gallery",
@@ -335,7 +321,7 @@ function renderGalleryWeb($post_data) {
                     $image_path = $gallery_web_path_current.$gallery_web_phone.$image_web;
                     $gallery_web_content .= '
                         <li class="dm-web-gallery-item gallery-item-phone" data-motion="transition-fade-0" data-duration="0.3s">' .
-                        '<div class="bg" style="background-image: url(' . $bg_item_phone . ')"></div>'.
+                        '<div class="bg" style="background-image: url(' . $bg_item_texture . ')"></div>'.
                             renderDeviceLayout("phone", $post_data, $image_path, [
                                 "data-slider-item" => "true",
                                 "data-slider-items-src" => "dm-web-post-gallery",
@@ -412,8 +398,9 @@ function renderGalleryWebMedia($post_data) {
 
 function renderGalleryWebContent($post_data) {
     $src_current = __DIR__ . "/../../../";
-    $bg_item_phone = $GLOBALS['urlPath']."content/img/design-elements"."/"."overlay-responsive-layout-phone.webp";
-    $bg_item_desktop = $GLOBALS['urlPath']."content/img/design-elements"."/"."overlay-responsive-layout-desktop.webp";
+    $data = getDataJson('data-content-personal', 'data')["post-projects"]["img"];
+    $img_texture = $data["background"]["overlay-texture"];
+    $bg_item_texture = !empty($img_texture) ? $GLOBALS['urlPath'].$img_texture : "";
     $gallery_web_content = "<div id='web-content' class='dm-gallery-web-content' data-motion='transition-fade-0' data-duration='0.5s'>";
 
     if(isset($post_data)) {
@@ -447,7 +434,7 @@ function renderGalleryWebContent($post_data) {
                 foreach ($gallery_web as $image_web) {
                     $image_path = $gallery_web_content_desktop.$image_web;
                     $gallery_web_content .=  '<li class="dm-web-gallery-item gallery-item-web" data-motion="transition-fade-0" data-duration="0.3s">'.
-                        '<div class="bg" style="background-image: url(' . $bg_item_desktop . ')"></div>'.
+                        '<div class="bg" style="background-image: url(' . $bg_item_texture . ')"></div>'.
                             renderDeviceLayout("desktop", $post_data, $image_path, [
                                 "data-slider-item" => "true",
                                 "data-slider-items-src" => "dm-gallery-web-content-$key",
@@ -460,7 +447,7 @@ function renderGalleryWebContent($post_data) {
                 foreach ($gallery_phone as $image_web) {
                     $image_path = $gallery_web_content_phone.$image_web;
                     $gallery_web_content .=  '<li class="dm-web-gallery-item gallery-item-phone" data-motion="transition-fade-0" data-duration="0.3s">' .
-                        '<div class="bg" style="background-image: url(' . $bg_item_phone . ')"></div>'.
+                        '<div class="bg" style="background-image: url(' . $bg_item_texture . ')"></div>'.
                             renderDeviceLayout("phone", $post_data, $image_path, [
                                 "data-slider-item" => "true",
                                 "data-slider-items-src" => "dm-gallery-web-content-$key",
@@ -795,10 +782,6 @@ function renderFeatureHero($post_data) {
 
     $img_texture = $GLOBALS['urlPath'].getDataJson('data-content-personal', 'data')["post-projects"]["img"]["background"]["overlay-texture"];
     $html_content .=  '<div class="bg-texture" style="background-image: url("' . $img_texture . '")"></div>';
-
-
-
-
 
     ob_start();
     require_once __DIR__ . '/../classes/renderSVG.php';
