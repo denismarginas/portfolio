@@ -202,7 +202,11 @@ function renderDeviceLayout($type,$post_data, $img, $atr) {
             preg_match('/\d{4}/', $post_data["date"]["date_start"], $matches);
             $year = $matches[0] ?? null;
 
-            if(isset($post_data["project_types"]) && in_array("personal", $post_data["project_types"])) {
+            if (
+                isset($post_data["project_types"]) &&
+                in_array("personal", $post_data["project_types"]) &&
+                !in_array("bachelor's thesis", $post_data["project_types"])
+            ) {
                 $deviceMode = $deviceModel1;
                 $classDevice = " ".$type."-model-01";
             }
