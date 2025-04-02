@@ -3315,25 +3315,30 @@ body.theme-dark .grid-background-animation {
   padding: var(--dm-spacing-primary);
 }
 .dm-popup > .popup-content > .slider > .slider-wrapper > .slider-container > .slider-element.full-size {
-  overflow: auto;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  display: block !important;
+  overflow: auto !important;
+  -webkit-box-align: start !important;
+      -ms-flex-align: start !important;
+          align-items: flex-start !important;
+  -webkit-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out;
 }
 .dm-popup > .popup-content > .slider > .slider-wrapper > .slider-container > .slider-element.full-size > img {
+  display: block !important;
   -webkit-transform-origin: unset !important;
           transform-origin: unset !important;
   -webkit-transform: unset !important;
           transform: unset !important;
-  width: 100% !important;
+  width: auto !important;
   height: auto !important;
+  max-width: none !important;
   max-height: none !important;
-  max-width: 100% !important;
   -o-object-fit: unset !important;
      object-fit: unset !important;
   overflow: auto !important;
-  display: block;
   padding: 0px !important;
+  -webkit-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out;
 }
 .dm-popup > .popup-content > .popup-close-button {
   margin: 0 !important;

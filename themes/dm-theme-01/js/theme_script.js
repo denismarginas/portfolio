@@ -655,6 +655,8 @@ document.addEventListener("DOMContentLoaded", function() {
             sliderElement
         ) {
             sliderElement.classList.add("full-size");
+            sliderElement.scrollLeft = (sliderElement.scrollWidth - sliderElement.clientWidth) / 2;
+
         } else {
             imageElement.style.transform = "scale(1)";
             zoomLevel = 0;

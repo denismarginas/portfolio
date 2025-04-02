@@ -60,20 +60,23 @@
 
             }
             &.full-size {
-              overflow: auto;
-              align-items: flex-start;
+              display: block !important;
+              overflow: auto !important;
+              align-items: flex-start !important;
+              transition: all 0s ease-in-out;
 
               > img {
+                display: block !important;
                 transform-origin: unset !important;
                 transform: unset !important;
-                width: 100% !important;
+                width: auto !important;
                 height: auto !important;
+                max-width: none !important;
                 max-height: none !important;
-                max-width: 100% !important;
                 object-fit: unset !important;
                 overflow: auto !important;
-                display: block;
                 padding: 0px !important;
+                transition: all 0s ease-in-out;
               }
             }
           }
