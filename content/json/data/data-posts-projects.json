@@ -8326,7 +8326,7 @@
             "employer": "Mentor Marketing Experts",
             "date": {
                 "date_start": "03.2025",
-                "date_end": "04.2025"
+                "date_end": "03.2025"
             },
             "tags": [
                 "web"
@@ -8336,6 +8336,103 @@
                 "post_color_secondary": "#ffffff",
                 "post_color_background": "#6d3c6b",
                 "post_color_text_on_background": "#ffffff"
+            }
+        },
+        "post_content": [
+            "<?php echo renderFeatureHero($post_current_data); ?>",
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-ideas-rip",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "ideas-rip",
+            "title": "Ideas.rip",
+            "logo": "logo/logo.png",
+            "logo_path": "ideas-rip",
+            "logo_type": "png",
+            "description": "A presentation website was built using WordPress with Elementor and SCF, primarily for uploading and showcasing articles. I redesigned it entirely in Elementor to match the original site. The new design is on the Ideas page, where I translated a Figma layout into Elementor. For the tag filter carousel navigation, I used custom JavaScript.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "ideas.rip",
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_technology": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "jQuery",
+                    "svg": "jquery"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                },
+                {
+                    "name": "Unlimited Elements for Elementor Premium",
+                    "svg": "unlimited-elements"
+                },
+                {
+                    "name": "Secure Custom Fields",
+                    "svg": "acf"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual",
+                "Teamwork"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "03.2025",
+                "date_end": "03.2025"
+            },
+            "tags": [
+                "web",
+                "web-content"
+            ],
+            "colors": {
+                "post_color_primary": "#fed76a",
+                "post_color_secondary": "#3a3832",
+                "post_color_background": "#ffffff",
+                "post_color_text_on_background": "#000000"
             }
         },
         "post_content": [
