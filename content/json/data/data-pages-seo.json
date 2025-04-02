@@ -129,14 +129,14 @@
         "file": "workstations",
         "type": "page",
         "seo": {
-            "title": "Personal Workstations",
-            "description": "Here you can check my list with personal workstations setups.",
+            "title": "Workstations",
+            "description": "Here you can check my list with workstations setups.",
             "keywords": "denis marginas workstations",
             "slug": "workstations",
             "index": "false"
         },
         "hero": {
-            "title": "Personal Workstations",
+            "title": "Workstations",
             "bg_img_path": "backgrounds",
             "bg_img": "bg-workstation.webp"
         }
