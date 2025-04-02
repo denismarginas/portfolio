@@ -8247,5 +8247,101 @@
             "<?php echo renderSectionWebProject($post_current_data); ?>"
         ],
         "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-symbol-podcasts",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "symbol-podcasts",
+            "title": "Symbol Podcasts",
+            "logo": "logo/logo.png",
+            "logo_path": "symbol-podcasts",
+            "logo_type": "png",
+            "description": "A presentation website was built using WordPress with Elementor, Unlimited Elements, and SCF, designed primarily for uploading and showcasing podcasts in audio format. The design was based on PSD files, while the content and structure were implemented using Elementor, enhanced by additional plugins to extend its functionality.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "symbol.vc/nowwhat/",
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_technology": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "jQuery",
+                    "svg": "jquery"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                },
+                {
+                    "name": "Unlimited Elements for Elementor Premium",
+                    "svg": "unlimited-elements"
+                },
+                {
+                    "name": "Secure Custom Fields",
+                    "svg": "acf"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual",
+                "Teamwork"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "03.2025",
+                "date_end": "04.2025"
+            },
+            "tags": [
+                "web"
+            ],
+            "colors": {
+                "post_color_primary": "#6d3c6b",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#6d3c6b",
+                "post_color_text_on_background": "#ffffff"
+            }
+        },
+        "post_content": [
+            "<?php echo renderFeatureHero($post_current_data); ?>",
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     }
 ]
