@@ -5731,7 +5731,8 @@
                 "date_end": "07.2023"
             },
             "tags": [
-                "web"
+                "web",
+                "content-web"
             ],
             "colors": {
                 "post_color_primary": "#00aad7",
