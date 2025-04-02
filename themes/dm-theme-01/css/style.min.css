@@ -3337,6 +3337,8 @@ body.theme-dark .grid-background-animation {
      object-fit: unset !important;
   overflow: auto !important;
   padding: 0px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   -webkit-transition: all 0s ease-in-out;
   transition: all 0s ease-in-out;
 }
