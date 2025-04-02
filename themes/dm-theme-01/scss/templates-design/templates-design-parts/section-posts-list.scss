@@ -79,7 +79,6 @@
             @include limit-line-text(1);
             @include dm-font-default();
             --dm-text-default-font-weight: 600;
-            text-transform: uppercase;
 
             &:hover {
               --dm-text-default-color: var( --dm-color-primary );
@@ -119,7 +118,6 @@
               @include limit-line-text(1);
               @include dm-font-default();
               --dm-text-default-font-weight: 600;
-              text-transform: uppercase;
 
               &:hover {
                 --dm-text-default-color: var( --dm-color-primary );

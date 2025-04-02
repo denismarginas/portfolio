@@ -3,15 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="2259709f-b699-4482-a363-da52decd52d5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/projects/vreaualpin/web/desktop/web-1.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/projects/vreaualpin/web/desktop/web-2.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/projects/vreaualpin/web/desktop/web-3.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/projects/vreaualpin/web/desktop/web-5.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/projects/vreaualpin/web/maintenance-website/alpinlux57/desktop/web-redirect.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/img/projects/specialevents/media/invitations/weeding-inv-01.webp" beforeDir="false" afterPath="$PROJECT_DIR$/content/img/projects/specialevents/media/invitations/weeding-inv-01.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/img/projects/specialevents/media/tables/weeding-table-02.webp" beforeDir="false" afterPath="$PROJECT_DIR$/content/img/projects/specialevents/media/tables/weeding-table-02.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/img/projects/specialevents/media/tables/weeding-tables.webp" beforeDir="false" afterPath="$PROJECT_DIR$/content/img/projects/specialevents/media/tables/weeding-tables.webp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/json/data/data-posts-projects.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-posts-projects.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/json/index/index-data-pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/index/index-data-pages.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/json/index/index-data-posts-projects.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/index/index-data-posts-projects.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-vreaualpin.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-vreaualpin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-reifendirekt.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-reifendirekt.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-posts-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-posts-list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-development-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-development-projects.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,6 +152,7 @@
       <workItem from="1743437635292" duration="24011000" />
       <workItem from="1743531420718" duration="22000" />
       <workItem from="1743534586877" duration="13095000" />
+      <workItem from="1743600674212" duration="1118000" />
     </task>
     <servers />
   </component>

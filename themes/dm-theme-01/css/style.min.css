@@ -16379,7 +16379,6 @@ body.theme-dark .dm-post > container .post-content > .dm-post-details-grid > .dm
   line-height: var(--dm-text-default-line-height);
   color: var(--dm-text-default-color);
   --dm-text-default-font-weight: 600;
-  text-transform: uppercase;
 }
 .dm-posts-list > container > ul > .dm-post-item > .dm-post-item-details > .dm-post-item-title:hover {
   --dm-text-default-color: var( --dm-color-primary );
@@ -16458,7 +16457,6 @@ body.theme-dark .dm-post > container .post-content > .dm-post-details-grid > .dm
   line-height: var(--dm-text-default-line-height);
   color: var(--dm-text-default-color);
   --dm-text-default-font-weight: 600;
-  text-transform: uppercase;
 }
 .dm-posts-list > container > ul > .dm-post-item > .dm-post-item-details > .dm-post-item-heading > .dm-post-item-title:hover {
   --dm-text-default-color: var( --dm-color-primary );

@@ -1849,7 +1849,7 @@
             "logo": "logo/logo.png",
             "logo_path": "cekan",
             "logo_type": "png",
-            "description": "Translated Figma web design for the Case Study section on the cekan.ca website, ensuring 99% accuracy in replicating the responsive look across various screen sizes. Utilized HTML and SCSS to implement the page design, using Prepro to compile SCSS into CSS. Managed the code using PhpStorm. Completed the project in 4 days, dedicating 2-4 hours of work each day.",
+            "description": "Translated Figma web design for the Case Study single post on the cekan.ca website, ensuring 99% accuracy in replicating the responsive look across various screen sizes. Utilized HTML and SCSS to implement the page design, using Prepro to compile SCSS into CSS. Managed the code using PhpStorm. Completed the project in 4 days, dedicating 2-4 hours of work each day.",
             "categories": [
                 "Web Development Projects",
                 "Miscellaneous Projects"
@@ -4285,7 +4285,7 @@
             "display": "enable",
             "post_type": "projects",
             "media_path": "reifendirekt",
-            "title": "Reifen Direkt",
+            "title": "Reifen Direkt - Frontend",
             "logo": "logo/logo.png",
             "logo_path": "reifendirekt",
             "logo_type": "png",
