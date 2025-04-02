@@ -9395,6 +9395,8 @@ body[java-script=true] #post-list-sort-and-search {
   height: auto;
   max-height: 100%;
   max-width: 100%;
+  -webkit-filter: drop-shadow(4px 4px 4px rgba(var(--dm-color-black-rgb), 0.3));
+          filter: drop-shadow(4px 4px 4px rgba(var(--dm-color-black-rgb), 0.3));
 }
 .dm-gallery-web-content > .dm-web-gallery > .dm-web-gallery-item.gallery-item-phone > .layout > .overlay, .dm-gallery-web-content > .dm-web-gallery > .dm-web-gallery-item.gallery-item-web > .layout > .overlay {
   position: absolute;
@@ -9412,8 +9414,6 @@ body[java-script=true] #post-list-sort-and-search {
   height: auto;
   max-width: 100%;
   max-height: 100%;
-  -webkit-filter: drop-shadow(3px 3px 5px rgba(var(--dm-color-black-rgb), 0.3));
-          filter: drop-shadow(3px 3px 5px rgba(var(--dm-color-black-rgb), 0.3));
 }
 .dm-gallery-web-content > .dm-web-gallery > .dm-web-gallery-item.gallery-item-phone > .layout > .screen, .dm-gallery-web-content > .dm-web-gallery > .dm-web-gallery-item.gallery-item-web > .layout > .screen {
   overflow: hidden;
