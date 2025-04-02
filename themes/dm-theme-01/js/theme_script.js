@@ -637,15 +637,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
         imageElement.style.transformOrigin = `${(mouseX / rect.width) * 100}% ${(mouseY / rect.height) * 100}%`;
 
+        const imgWidth = imageElement.naturalWidth;
+        const imgHeight = imageElement.naturalHeight;
+        const sliderElement = imageElement.closest(".slider-element");
+
         if (zoomLevel === 1) {
             imageElement.style.transform = "scale(1.25)";
         } else if (zoomLevel === 2) {
             imageElement.style.transform = "scale(1.5)";
         } else if (zoomLevel === 3) {
             imageElement.style.transform = "scale(2)";
+        } else if (
+            zoomLevel === 4 &&
+            imgWidth > 1200 &&
+            imgHeight > imgWidth * 1.6 &&
+            imgHeight > 3000 &&
+            sliderElement
+        ) {
+            sliderElement.classList.add("full-size");
         } else {
             imageElement.style.transform = "scale(1)";
             zoomLevel = 0;
+
+            if (sliderElement) {
+                sliderElement.classList.remove("full-size");
+            }
         }
 
         imageElement.dataset.zoomLevel = zoomLevel;
