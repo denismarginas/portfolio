@@ -8431,7 +8431,7 @@
             "colors": {
                 "post_color_primary": "#fed76a",
                 "post_color_secondary": "#3a3832",
-                "post_color_background": "#ffffff",
+                "post_color_background": "#fed76a",
                 "post_color_text_on_background": "#000000"
             }
         },
