@@ -9,6 +9,10 @@
   position: relative;
   overflow: hidden;
 
+  &:has(.dm-web-gallery) .dm-web-home-banner {
+    display: none;
+  }
+
   > .dm-web-home-banner {
     @include flex-row();
     @include border-radius( var( --dm-border-radius-primary ));
@@ -155,7 +159,7 @@
             }
             &[layout*="fade-under"] {
               > img {
-                mask: linear-gradient(0deg, transparent, white 30%, white 100%, transparent);
+                mask: linear-gradient(0deg, transparent, var( --dm-color-white ) 30%, var( --dm-color-white ) 100%, transparent);
               }
             }
             &[layout*="bg-primary"] {

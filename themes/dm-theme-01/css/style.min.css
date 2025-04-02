@@ -9312,6 +9312,9 @@ body[java-script=true] #post-list-sort-and-search {
   position: relative;
   overflow: hidden;
 }
+.dm-gallery-web-content:has(.dm-web-gallery) .dm-web-home-banner {
+  display: none;
+}
 .dm-gallery-web-content > .dm-web-home-banner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9489,10 +9492,10 @@ body[java-script=true] #post-list-sort-and-search {
           justify-content: flex-end;
 }
 .dm-gallery-web-content > .dm-web-gallery > .dm-web-gallery-item.gallery-item-phone > .layout > .screen[layout*=fade-under] > img, .dm-gallery-web-content > .dm-web-gallery > .dm-web-gallery-item.gallery-item-web > .layout > .screen[layout*=fade-under] > img {
-  -webkit-mask: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(30%, white), color-stop(100%, white), to(transparent));
-  -webkit-mask: linear-gradient(0deg, transparent, white 30%, white 100%, transparent);
-          mask: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(30%, white), color-stop(100%, white), to(transparent));
-          mask: linear-gradient(0deg, transparent, white 30%, white 100%, transparent);
+  -webkit-mask: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(30%, var(--dm-color-white)), color-stop(100%, var(--dm-color-white)), to(transparent));
+  -webkit-mask: linear-gradient(0deg, transparent, var(--dm-color-white) 30%, var(--dm-color-white) 100%, transparent);
+          mask: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(30%, var(--dm-color-white)), color-stop(100%, var(--dm-color-white)), to(transparent));
+          mask: linear-gradient(0deg, transparent, var(--dm-color-white) 30%, var(--dm-color-white) 100%, transparent);
 }
 .dm-gallery-web-content > .dm-web-gallery > .dm-web-gallery-item.gallery-item-phone > .layout > .screen[layout*=bg-primary], .dm-gallery-web-content > .dm-web-gallery > .dm-web-gallery-item.gallery-item-web > .layout > .screen[layout*=bg-primary] {
   background-color: var(--post_color_primary);
