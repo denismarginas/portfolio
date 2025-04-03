@@ -8170,8 +8170,7 @@
         "type": "post",
         "category": "projects",
         "post_data": {
-            "display": "disable",
-            "exclude_from_search": "true",
+            "display": "enable",
             "post_type": "projects",
             "media_path": "solveo",
             "title": "Solveo",
@@ -8182,7 +8181,7 @@
             "categories": [
                 "Web Development Projects"
             ],
-            "web_url": "",
+            "web_url": "solveo.co.il",
             "web_platform": [
                 {
                     "name": "Wordpress",
@@ -8215,6 +8214,14 @@
                 {
                     "name": "Elementor Website Builder Pro",
                     "svg": "elementor"
+                },
+                {
+                    "name": "Unlimited Elements for Elementor Premium",
+                    "svg": "unlimited-elements"
+                },
+                {
+                    "name": "Secure Custom Fields",
+                    "svg": "acf"
                 }
             ],
             "web_project_status": "Done",
@@ -8231,10 +8238,11 @@
             "employer": "Mentor Marketing Experts",
             "date": {
                 "date_start": "02.2025",
-                "date_end": "02.2025"
+                "date_end": "03.2025"
             },
             "tags": [
-                "web"
+                "web",
+                "content-web"
             ],
             "colors": {
                 "post_color_primary": "#1b2e43",
