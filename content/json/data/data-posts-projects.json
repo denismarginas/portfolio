@@ -8011,7 +8011,7 @@
             "logo": "logo/logo.png",
             "logo_path": "chezpepe",
             "logo_type": "png",
-            "description": "Presentation website built with Elementor, designing the website based on another website's layout.",
+            "description": "Simple presentation website built with Elementor, designing the website based on another website's layout.",
             "categories": [
                 "Web Development Projects"
             ],
@@ -8094,7 +8094,7 @@
             "logo": "logo/logo.png",
             "logo_path": "uppura",
             "logo_type": "png",
-            "description": "Presentation website created using Elementor, translating the design from Figma into a functional web design.",
+            "description": "A fully functional presentation website was crafted using Elementor, carefully translating the design from Figma into a seamless web experience.",
             "categories": [
                 "Web Development Projects"
             ],
@@ -8131,6 +8131,10 @@
                 {
                     "name": "Elementor Website Builder Pro",
                     "svg": "elementor"
+                },
+                {
+                    "name": "Secure Custom Fields",
+                    "svg": "acf"
                 }
             ],
             "web_project_status": "Done",
@@ -8365,7 +8369,7 @@
             "logo": "logo/logo.png",
             "logo_path": "ideas-rip",
             "logo_type": "png",
-            "description": "A presentation website was built using WordPress with Elementor and SCF, primarily for uploading and showcasing articles. I redesigned it entirely in Elementor to match the original site. The new design is on the Ideas page, where I translated a Figma layout into Elementor. For the tag filter carousel navigation, I used custom JavaScript.",
+            "description": "Built with WordPress, Elementor, and SCF, this presentation website was designed primarily for uploading and showcasing articles. I completely redesigned it in Elementor to match the original site, implementing the new design on the Ideas page by translating a Figma layout. Additionally, I developed a custom JavaScript solution for the tag filter carousel navigation.",
             "categories": [
                 "Web Development Projects"
             ],
@@ -8438,6 +8442,94 @@
                 "post_color_secondary": "#3a3832",
                 "post_color_background": "#fed76a",
                 "post_color_text_on_background": "#000000"
+            }
+        },
+        "post_content": [
+            "<?php echo renderFeatureHero($post_current_data); ?>",
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-prc-cardio-optic",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "prc-cardio-optic",
+            "title": "PRC Cardio Optic",
+            "logo": "logo/logo.png",
+            "logo_path": "prc-cardio-optic",
+            "logo_type": "png",
+            "description": "Using WordPress and Elementor, Word documents were seamlessly transformed into well-organized web pages with a minimalist design.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "prc-cardio-optic.com",
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_technology": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "jQuery",
+                    "svg": "jquery"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "presentation website",
+                "web design"
+            ],
+            "project_collaboration": [
+                "Individual",
+                "Teamwork"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "02.2025",
+                "date_end": "02.2025"
+            },
+            "tags": [
+                "web"
+            ],
+            "colors": {
+                "post_color_primary": "#0aa6f0",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#ffffff",
+                "post_color_text_on_background": "#262626"
             }
         },
         "post_content": [
