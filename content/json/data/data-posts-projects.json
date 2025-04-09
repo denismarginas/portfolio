@@ -2900,7 +2900,7 @@
                 "media-web"
             ],
             "colors": {
-                "post_color_primary": "#130091",
+                "post_color_primary": "#00183d",
                 "post_color_secondary": "#ffffff",
                 "post_color_background": "#00183e",
                 "post_color_text_on_background": "#ffffff"
@@ -2908,7 +2908,11 @@
         },
         "post_content": [
             "<?php echo renderFeatureHero($post_current_data); ?>",
-            "<?php echo renderSectionWebProject($post_current_data); ?>"
+            "<?php echo renderSectionWebProject($post_current_data); ?>",
+            "<?php echo renderTitle('Custom Canvas Submission Form'); ?>",
+            "<?php echo renderImageBlockProject($post_current_data,'web/contact-form-with-paint-canvas-image/', 'contact-form-with-paint-canvas-image.webp'); ?>",
+            "<?php echo renderParagraphBlockProject('This project features a custom form built with Contact Form 7 and enhanced using JavaScript to enable an interactive image manipulation experience. Users can select items from an image gallery and arrange them freely on a canvas-like area—supporting drag, resize, and rotation actions, similar to a simplified design editor. Once the user is satisfied with their layout, the final composition is captured using html2canvas and included as an image in the form submission email. This setup allows users to visually communicate their ideas or preferences directly through the form, making it ideal for design-based requests or layout planning.\n\n<br>Date: 03.2025'); ?>"
+
         ],
         "layout": "wrapper-layout"
     },
@@ -6882,7 +6886,13 @@
         },
         "post_content": [
             "<?php echo renderFeatureHero($post_current_data); ?>",
-            "<?php echo renderSectionWebProject($post_current_data); ?>"
+            "<?php echo renderSectionWebProject($post_current_data); ?>",
+            "<?php echo renderTitle('Manage Kids In Groups'); ?>",
+            "<?php echo renderImageBlockProject($post_current_data,'web/manage-kids-in-group/', 'manage-kids-in-group.webp'); ?>",
+            "<?php echo renderParagraphBlockProject('This task involved creating a private admin page for website administrators to efficiently manage children registered through camp orders, ultimately helping camp teachers better organize their groups. Each order includes camp products, which contain child-specific data and selected registration weeks (1 to 4 weeks).<br><br>I developed a custom environment that dynamically generates a table by extracting child data and custom fields (such as the selected weeks) from orders, displaying each child as a row. Administrators can then assign children to groups, which are stored in a separate custom post type with all relevant data saved.<br><br>Additionally, I implemented advanced filters for the table, allowing sorting and searching by child name, group, registration weeks, order date, and other custom fields.<br>Date: 02.2025'); ?>",
+            "<?php echo renderTitle('Export Advance CSV from HTML Table'); ?>",
+            "<?php echo renderImageBlockProject($post_current_data,'web/export-advance-csv-from-html-table/', 'export-advance-csv-from-html-table.webp'); ?>",
+            "<?php echo renderParagraphBlockProject('I developed a vanilla JavaScript script that automatically generates a bottom section after each HTML table from Family First. This section includes two buttons and one input field. The input allows users to customize the CSV delimiter, while the buttons handle table data export.<br>The first button performs a basic export—excluding toggle content and HTML formatting. The second button triggers an advanced export that scans toggle sections for custom fields with labels and values, then adds new columns to the CSV using those labels, filling in each row with the corresponding values.<br>Date: 02.2025'); ?>"
         ],
         "layout": "wrapper-layout"
     },
