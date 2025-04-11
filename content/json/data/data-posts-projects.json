@@ -8547,5 +8547,92 @@
             "<?php echo renderSectionWebProject($post_current_data); ?>"
         ],
         "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-yourdistribution",
+        "type": "post",
+        "category": "projects",
+        "post_data": {
+            "display": "enable",
+            "post_type": "projects",
+            "media_path": "yourdistribution",
+            "title": "Your Distribution",
+            "logo": "logo/logo.png",
+            "logo_path": "yourdistribution",
+            "logo_type": "png",
+            "description": "Simple online shop built with WordPress and Elementor, allowing customers to place orders and receive a proforma invoice instead of a standard invoice.",
+            "categories": [
+                "Web Development Projects",
+                "Miscellaneous Projects"
+            ],
+            "web_url": "yourdistribution.ro",
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_technology": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "jQuery",
+                    "svg": "jquery"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "online shop"
+            ],
+            "project_collaboration": [
+                "Individual"
+            ],
+            "project_contractor": [
+                "Freelancer"
+            ],
+            "employer": "Freelancer",
+            "date": {
+                "date_start": "02.2025",
+                "date_end": "03.2025"
+            },
+            "tags": [
+                "web"
+            ],
+            "colors": {
+                "post_color_primary": "#596164",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#596164",
+                "post_color_text_on_background": "#ffffff"
+            }
+        },
+        "post_content": [
+            "<?php echo renderFeatureHero($post_current_data); ?>",
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     }
 ]
