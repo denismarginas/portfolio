@@ -27,6 +27,29 @@
 	},
 	"portfolio-video-archive": [
 		{
+			"video": "experience-highlights-1.webm",
+			"video-path": "projects/denismarginas/personal-portfolio/",
+			"video-thumbnail": "experience-highlights-1.webp",
+			"video-thumbnail-path": "/thumbnails/",
+			"video-data": {
+				"title": "Experience Highlights",
+				"short-description": "This is a summary of my most impactful projects and tasks from 2019 to 2025. In just a few seconds, you'll see a presentation of some of the most unique and defining examples from my professional experience.</br></br>Editing Software: Adobe After Effects 2023, Sony Vegas Pro 20, Photopea, Topaz Video Enhance AI</br>Sondtrack: Lorn - Yo2_Rustlin",
+				"date": "Apr 14, 2025",
+				"youtube-button-text": "Watch on YouTube",
+				"youtube-button-link": "https://www.youtube.com/watch?v=HxGdZ_embL8",
+				"youtube-button-icon-svg": "socials-youtube",
+				"timeline": {
+					"text": "Video Timeline:",
+					"list": [
+						"00:00 - 00:08 - Intro",
+						"00:08 - 00:22 - Experience Highlights",
+						"00:22 - 00:28 - Contact"
+					]
+				},
+				"video-color-primary": "#5d6977"
+			}
+		},
+		{
 			"video": "personal-portfolio-1.webm",
 			"video-path": "projects/denismarginas/personal-portfolio/",
 			"video-thumbnail": "personal-portfolio-1.webp",
@@ -45,7 +68,7 @@
 						"00:04 - 00:55 - Web Development",
 						"00:55 - 01:14 - Photo Editing",
 						"01:14 - 01:52 - Video Editing",
-						"01:52 - 01:56 - Otro"
+						"01:52 - 01:56 - Outro"
 					]
 				},
 				"video-color-primary": "#5d6977"

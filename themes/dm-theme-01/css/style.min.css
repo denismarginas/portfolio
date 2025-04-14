@@ -22939,6 +22939,19 @@ body.theme-dark .dm-education > container > .detailed-list .education > .details
   overflow: hidden;
   position: relative;
   min-height: 786px;
+  /*
+  &:after {
+    position: absolute;
+    content: "";
+    width: 82vw;
+    height: 159vh;
+    background-color: rgba(var(--dm-color-primary-rgb),0.5);
+    z-index: -1;
+    left: -40vw;
+    top: 0;
+    transform: rotate(328deg);
+  }
+  */
 }
 @media only screen and (max-width: 375px) {
   .dm-portfolio-showcase {
@@ -22954,7 +22967,7 @@ body.theme-dark .dm-education > container > .detailed-list .education > .details
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: var(--dm-spacing-small);
+  gap: var(--dm-spacing-medium);
 }
 .dm-portfolio-showcase > container > ul {
   padding: 0;
@@ -22962,9 +22975,9 @@ body.theme-dark .dm-education > container > .detailed-list .education > .details
   list-style-type: none;
   display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   -ms-grid-columns: 2fr var(--dm-spacing-large) 1fr;
   grid-template-columns: 2fr 1fr;
   gap: var(--dm-spacing-large);
@@ -23181,24 +23194,15 @@ body.theme-dark .dm-education > container > .detailed-list .education > .details
   -webkit-box-shadow: 3px 6px 7px rgba(11, 11, 11, 0.2);
           box-shadow: 3px 6px 7px rgba(11, 11, 11, 0.2);
 }
-.dm-portfolio-showcase:after {
-  position: absolute;
-  content: "";
-  width: 82vw;
-  height: 159vh;
-  background-color: rgba(var(--dm-color-primary-rgb), 0.5);
-  z-index: -1;
-  left: -40vw;
-  top: 0;
-  -webkit-transform: rotate(328deg);
-          transform: rotate(328deg);
-}
 @media only screen and (max-width: 1440px) {
   .dm-portfolio-showcase > container > ul {
     gap: var(--dm-spacing-small);
   }
 }
 @media only screen and (max-width: 1240px) {
+  .dm-portfolio-showcase > container {
+    gap: var(--dm-spacing-small);
+  }
   .dm-portfolio-showcase > container > ul {
     -ms-grid-columns: 1.8fr 1fr;
     grid-template-columns: 1.8fr 1fr;
@@ -23224,6 +23228,11 @@ body.theme-dark .dm-education > container > .detailed-list .education > .details
     display: none;
     content: unset;
     opacity: 0;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .dm-portfolio-showcase > container {
+    gap: var(--dm-spacing-secondary);
   }
 }
 

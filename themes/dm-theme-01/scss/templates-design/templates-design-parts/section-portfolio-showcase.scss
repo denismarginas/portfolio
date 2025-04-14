@@ -11,12 +11,12 @@
   > container {
     display: flex;
     flex-direction: column;
-    gap: var( --dm-spacing-small );
+    gap: var( --dm-spacing-medium );
 
     > ul {
       @include reset-list();
       display: grid;
-      align-items: center;
+      align-items: start;
       grid-template-columns: 2fr 1fr;
       gap: var( --dm-spacing-large );
 
@@ -159,6 +159,7 @@
       }
     }
   }
+  /*
   &:after {
     position: absolute;
     content: "";
@@ -170,6 +171,7 @@
     top: 0;
     transform: rotate(328deg);
   }
+  */
 
   @media only screen and (max-width: $screen-desktop-medium) {
    > container {
@@ -181,6 +183,8 @@
 
   @media only screen and (max-width: $screen-desktop-small) {
     > container {
+      gap: var( --dm-spacing-small );
+
       > ul {
         grid-template-columns: 1.8fr 1fr;
 
@@ -205,6 +209,11 @@
       display: none;
       content: unset;
       opacity: 0;
+    }
+  }
+  @media only screen and (max-width: $screen-phone-large) {
+    > container {
+      gap: var( --dm-spacing-secondary );
     }
   }
 }

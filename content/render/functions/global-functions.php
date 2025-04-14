@@ -190,9 +190,6 @@ function renderImage($src, $popup = false, $class = false, $lazyLoad = true, $ad
     return $html;
 }
 
-
-
-
 function renderVideo($src, $thumbnail = NULL, $thumbnail_bg = NULL) {
     $html = '<div class="video-container paused" data-volume-level="high">';
 
