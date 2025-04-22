@@ -71,7 +71,7 @@
         "media": [
             {
                 "type": "photo",
-                "path": "content/img/projects/denismarginas/media/backgrounds/wallpaper-facebook.webp"
+                "path": "content/img/projects/denismarginas/media/bannners-facebook/banner-facebook-01.webp"
             }
         ]
     },
@@ -109,15 +109,15 @@
         "media": [
             {
                 "type": "photo",
-                "path": "content/img/projects/denismarginas/media/workstations/PC0_1.webp"
+                "path": "content/img/projects/denismarginas/media/workstation-01/PC0_1.webp"
             },
             {
                 "type": "photo",
-                "path": "content/img/projects/denismarginas/media/workstations/PC0_2.webp"
+                "path": "content/img/projects/denismarginas/media/workstation-01/PC0_2.webp"
             },
             {
                 "type": "photo",
-                "path": "content/img/projects/denismarginas/media/workstations/PC0_3.webp"
+                "path": "content/img/projects/denismarginas/media/workstation-01/PC0_3.webp"
             }
         ]
     },
@@ -139,19 +139,19 @@
         "media": [
             {
                 "type": "photo",
-                "path": "content/img/projects/denismarginas/media/workstations/PC1_1.webp"
+                "path": "content/img/projects/denismarginas/media/workstation-02/PC1_1.webp"
             },
             {
                 "type": "photo",
-                "path": "content/img/projects/denismarginas/media/workstations/PC1_2.webp"
+                "path": "content/img/projects/denismarginas/media/workstation-02/PC1_2.webp"
             },
             {
                 "type": "photo",
-                "path": "content/img/projects/denismarginas/media/workstations/PC1_3.webp"
+                "path": "content/img/projects/denismarginas/media/workstation-02/PC1_3.webp"
             },
             {
                 "type": "photo",
-                "path": "content/img/projects/denismarginas/media/workstations/PC1_4.webp"
+                "path": "content/img/projects/denismarginas/media/workstation-02/PC1_4.webp"
             }
         ]
     },

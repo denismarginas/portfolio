@@ -26033,7 +26033,7 @@ body.theme-dark .dm-gdpr > container > p {
 .dm-blog-header > container > .dm-blog-user > .dm-blog-user-wallpaper > img {
   min-width: 100%;
   width: 100%;
-  height: auto;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
