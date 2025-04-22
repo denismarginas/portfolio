@@ -26438,6 +26438,15 @@ body.theme-dark .dm-gdpr > container > p {
   gap: var(--dm-spacing-primary);
 }
 .dm-blog-posts > container > .dm-blog-posts-section > .dm-blog-post > .dm-blog-post-user-data > .dm-blog-post-user-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 50px;
   height: 50px;
   min-width: 50px;
@@ -26450,13 +26459,11 @@ body.theme-dark .dm-gdpr > container > p {
   border-style: solid;
   overflow: hidden;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .dm-blog-posts > container > .dm-blog-posts-section > .dm-blog-post > .dm-blog-post-user-data > .dm-blog-post-user-logo > img {
-  width: 100%;
-  height: 100%;
+  width: 110%;
+  height: 110%;
 }
 .dm-blog-posts > container > .dm-blog-posts-section > .dm-blog-post > .dm-blog-post-user-data > .dm-blog-post-information {
   display: -webkit-box;

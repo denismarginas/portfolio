@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2259709f-b699-4482-a363-da52decd52d5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/json/data/data-content-personal.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-content-personal.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/json/data/data-posts-socials.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-posts-socials.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/json/index/index-data-pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/index/index-data-pages.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-activity.html" beforeDir="false" afterPath="$PROJECT_DIR$/social-activity.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-blog-header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-blog-header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-blog-posts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-blog-posts.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +155,7 @@
       <workItem from="1744641628552" duration="3001000" />
       <workItem from="1744791068590" duration="1245000" />
       <workItem from="1745313281904" duration="1393000" />
-      <workItem from="1745328988978" duration="261000" />
+      <workItem from="1745328988978" duration="539000" />
     </task>
     <servers />
   </component>
