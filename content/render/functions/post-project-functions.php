@@ -167,6 +167,7 @@ function getSeoFromCurrentPostProjectData($postData) {
             "description" => $postData["description"],
             "keywords" => $postData["media_path"],
             "slug" => $postData["media_path"],
+            "post-type" => $postData["post_single_type"],
             "index" => $index
         ];
         return $seo;
@@ -174,7 +175,11 @@ function getSeoFromCurrentPostProjectData($postData) {
 }
 
 function renderTitle($title = null) {
-    $htmlTemplate = "<h2 id='%s' class='dm-post-title-category' data-motion='transition-fade-0' data-duration='0.7s'>%s</h2>";
+    $bg_item_texture_img = renderBgImgOverlayTexture();
+    $htmlTemplate = "<h2 id='%s' class='dm-post-title-category' data-motion='transition-fade-0' data-duration='0.7s'>
+                        %s".$bg_item_texture_img."
+                    </h2>";
+
 
     if ($title !== null) {
         $id = removeSpaceAndLowercase($title); // Call the function to remove spaces and convert to lowercase
@@ -275,9 +280,7 @@ function renderGalleryWeb($post_data) {
     $gallery_web_content = "<div id='web' class='dm-gallery-web-content' data-motion='transition-fade-0' data-duration='0.5s'>";
 
     if (!empty($post_data)) {
-        $data = getDataJson('data-content-personal', 'data')["post-projects"]["img"];
-        $img_texture = $data["background"]["overlay-texture"];
-        $bg_item_texture = !empty($img_texture) ? $GLOBALS['urlPath'].$img_texture : "";
+        $bg_item_texture_img = renderBgImgOverlayTexture();
 
         $gallery_path_web = "web";
         $gallery_web_path_current = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$gallery_path_web."/";
@@ -307,7 +310,7 @@ function renderGalleryWeb($post_data) {
                 $image_path = $gallery_web_path_current.$gallery_web_desktop.$image_web;
                 $gallery_web_content .= '
                     <li class="dm-web-gallery-item gallery-item-web" data-motion="transition-fade-0" data-duration="0.3s">' .
-                    '<div class="bg" style="background-image: url(' . $bg_item_texture . ')"></div>'.
+                    $bg_item_texture_img.
                         renderDeviceLayout("desktop", $post_data, $image_path, [
                             "data-slider-item" => "true",
                             "data-slider-items-src" => "dm-web-post-gallery",
@@ -325,7 +328,7 @@ function renderGalleryWeb($post_data) {
                     $image_path = $gallery_web_path_current.$gallery_web_phone.$image_web;
                     $gallery_web_content .= '
                         <li class="dm-web-gallery-item gallery-item-phone" data-motion="transition-fade-0" data-duration="0.3s">' .
-                        '<div class="bg" style="background-image: url(' . $bg_item_texture . ')"></div>'.
+                        $bg_item_texture_img.
                             renderDeviceLayout("phone", $post_data, $image_path, [
                                 "data-slider-item" => "true",
                                 "data-slider-items-src" => "dm-web-post-gallery",
@@ -402,9 +405,7 @@ function renderGalleryWebMedia($post_data) {
 
 function renderGalleryWebContent($post_data) {
     $src_current = __DIR__ . "/../../../";
-    $data = getDataJson('data-content-personal', 'data')["post-projects"]["img"];
-    $img_texture = $data["background"]["overlay-texture"];
-    $bg_item_texture = !empty($img_texture) ? $GLOBALS['urlPath'].$img_texture : "";
+    $bg_item_texture_img = renderBgImgOverlayTexture();
     $gallery_web_content = "<div id='web-content' class='dm-gallery-web-content' data-motion='transition-fade-0' data-duration='0.5s'>";
 
     if(isset($post_data)) {
@@ -438,7 +439,7 @@ function renderGalleryWebContent($post_data) {
                 foreach ($gallery_web as $image_web) {
                     $image_path = $gallery_web_content_desktop.$image_web;
                     $gallery_web_content .=  '<li class="dm-web-gallery-item gallery-item-web" data-motion="transition-fade-0" data-duration="0.3s">'.
-                        '<div class="bg" style="background-image: url(' . $bg_item_texture . ')"></div>'.
+                        $bg_item_texture_img.
                             renderDeviceLayout("desktop", $post_data, $image_path, [
                                 "data-slider-item" => "true",
                                 "data-slider-items-src" => "dm-gallery-web-content-$key",
@@ -451,7 +452,7 @@ function renderGalleryWebContent($post_data) {
                 foreach ($gallery_phone as $image_web) {
                     $image_path = $gallery_web_content_phone.$image_web;
                     $gallery_web_content .=  '<li class="dm-web-gallery-item gallery-item-phone" data-motion="transition-fade-0" data-duration="0.3s">' .
-                        '<div class="bg" style="background-image: url(' . $bg_item_texture . ')"></div>'.
+                        $bg_item_texture_img.
                             renderDeviceLayout("phone", $post_data, $image_path, [
                                 "data-slider-item" => "true",
                                 "data-slider-items-src" => "dm-gallery-web-content-$key",
@@ -784,8 +785,7 @@ function renderFeatureHero($post_data) {
     $html_content .= '<div class="dm-post-feature-hero" 
                         data-motion="transition-fade-0" data-duration="0.7s" data-delay="0.1s">';
 
-    $img_texture = $GLOBALS['urlPath'].getDataJson('data-content-personal', 'data')["post-projects"]["img"]["background"]["overlay-texture"];
-    $html_content .=  '<div class="bg-texture" style="background-image: url("' . $img_texture . '")"></div>';
+    $html_content .=  renderBgImgOverlayTexture();
 
     ob_start();
     require_once __DIR__ . '/../classes/renderSVG.php';
@@ -809,3 +809,12 @@ function renderFeatureHero($post_data) {
 
     return $html_content;
 }
+
+function renderBgImgOverlayTexture() {
+    $html_content = "";
+    $img_texture = $GLOBALS['urlPath'].getDataJson('data-content-personal', 'data')["post-projects"]["img"]["background"]["overlay-texture"];
+    $html_content .=  '<div class="bg-texture" style="background-image: url("' . $img_texture . '")"></div>';
+
+    return $html_content;
+}
+?>

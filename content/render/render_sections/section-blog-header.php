@@ -17,6 +17,9 @@ endif;
         endif;
     ?>
     >
+    <?php
+
+    ?>
     <container>
         <div class="dm-blog-user">
             <div class="dm-blog-user-wallpaper">

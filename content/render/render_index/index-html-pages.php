@@ -22,6 +22,7 @@ foreach ($htmlFiles as $file) {
 
         $title = '';
         $metaDescription = '';
+        $postType = '';
 
         $titleElement = $dom->getElementsByTagName('title')->item(0);
 
@@ -33,6 +34,14 @@ foreach ($htmlFiles as $file) {
         foreach ($metaTags as $metaTag) {
             if ($metaTag->getAttribute('name') === 'description') {
                 $metaDescription = $metaTag->getAttribute('content');
+                break;
+            }
+        }
+
+        $postTypesTag = $dom->getElementsByTagName('meta');
+        foreach ($postTypesTag as $metaTag) {
+            if ($metaTag->getAttribute('name') === 'post-type') {
+                $postType = $metaTag->getAttribute('content');
                 break;
             }
         }
@@ -66,6 +75,7 @@ foreach ($htmlFiles as $file) {
             'page'=> pathinfo($file, PATHINFO_FILENAME).$jsonGlobalData["page-slug-extension"],
             'meta-title' => $title,
             'meta-description' => $metaDescription,
+            'post-type' => $postType,
             'content' => $content,
             'default-img' => $defaultImg
         ];

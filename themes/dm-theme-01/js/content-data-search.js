@@ -90,12 +90,22 @@ document.addEventListener("DOMContentLoaded", function() {
                             aTitle.className = "title";
                             aTitle.href = result.data["page"];
                             aTitle.textContent = result.data["meta-title"];
-        
+
+                            var listDiv = document.createElement("div");
+                            listDiv.className = "list";
+
+                            var postTypeSpan = document.createElement("span");
+                            postTypeSpan.className = "post-type";
+                            postTypeSpan.textContent = result.data["post-type"] || "page";
+
+                            listDiv.appendChild(postTypeSpan);
+
                             var pDescription = document.createElement("p");
                             pDescription.className = "description";
-                            pDescription.textContent = result.data["meta-description"].substring(0, 130); // Extract the first 130 characters
+                            pDescription.textContent = result.data["meta-description"].substring(0, 130);
         
                             divData.appendChild(aTitle);
+                            divData.appendChild(listDiv);
                             divData.appendChild(pDescription);
         
                             li.appendChild(aImage);

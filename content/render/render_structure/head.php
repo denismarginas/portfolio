@@ -24,7 +24,6 @@
     ?>
 
     <link rel="stylesheet" href="<?php echo $theme_path; ?>/css/style.min.css">
-    <link rel="icon" type="image/x-icon" href="<?php echo $GLOBALS['urlPath']; ?>content/img/favicon/favicon.ico">
     <script src="<?php echo $theme_path; ?>/js/theme_script.min.js"></script>
 </head>
 

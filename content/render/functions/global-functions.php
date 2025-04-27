@@ -333,10 +333,12 @@ function seoImplicitFields() {
         'title' => '<title>'.$jsonGlobalData["site-identity"].'</title>',
         'description' => '<meta name="description" content="'.$jsonGlobalData["site-description"].'"/>',
         'keywords' => '<meta name="keywords" content="'.$jsonGlobalData["site-identity"].'"/>',
+        'post-type' => '<meta name="post-type" content="page"/>',
         'slug' => '<meta name="slug" content=""/>',
         'google-site-verification' => '<meta name="google-site-verification" content="'.$google_site_verification.'">',
         'robots' => '<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">',
-        'canonical' => '<link rel="canonical" href="'.$url_domain.'">'
+        'canonical' => '<link rel="canonical" href="'.$url_domain.'">',
+        'favicon' => '<link rel="icon" type="image/x-icon" href="content/img'.$jsonGlobalData['favicon'].'">'
 
     ];
     return $seoImplicitFieldsStrucutre;
@@ -347,9 +349,11 @@ function seoAddInTag($seo_data) {
         'title' => '<title>%s</title>',
         'description' => '<meta name="description" content="%s"/>',
         'keywords' => '<meta name="keywords" content="%s"/>',
+        'post-type' => '<meta name="post-type" content="%s"/>',
         'slug' => '<meta name="slug" content="%s"/>',
         'canonical' => '<link rel="canonical" href="%s">',
-        'index' => '<meta name="robots" content="index, follow">'
+        'index' => '<meta name="robots" content="index, follow">',
+        'favicon' => '<link rel="icon" type="image/x-icon" href="%s">'
     ];
 
     $seo_new_structure = [];
@@ -395,6 +399,11 @@ function seoAddInContent($seo_data, $existing_content_html) {
         $replacement_keywords = $new_seo_fields_content["keywords"];
         $existing_content_html = preg_replace($pattern_keywords, $replacement_keywords, $existing_content_html);
     }
+    if (isset($new_seo_fields_content["post-type"])) {
+        $pattern_post_type = "/<meta name=\"post-type\" content=\".*?\"\/>/i";
+        $replacement_post_type = $new_seo_fields_content["post-type"];
+        $existing_content_html = preg_replace($pattern_post_type, $replacement_post_type, $existing_content_html);
+    }
     if (isset($new_seo_fields_content["slug"])) {
         $pattern_slug = "/<meta name=\"slug\" content=\".*?\"\/>/i";
         $replacement_slug = $new_seo_fields_content["slug"];
@@ -424,6 +433,11 @@ function seoAddInContent($seo_data, $existing_content_html) {
         // Add the new robots meta tag
         $replacement_robots = '<meta name="robots" content="' . $index_value . '"/>';
         $existing_content_html .= "\n" . $replacement_robots;
+    }
+    if (isset($new_seo_fields_content["favicon"])) {
+        $pattern_favicon = '/<link\s+rel="icon"\s+type="image\/x-icon"\s+href="[^"]*"\s*\/?>/i';
+        $replacement_favicon = $new_seo_fields_content["favicon"];
+        $existing_content_html = preg_replace($pattern_favicon, $replacement_favicon, $existing_content_html);
     }
 
     return $existing_content_html;
@@ -690,6 +704,4 @@ function renderContactFormField($contact_form_field) {
         </div>
     <?php endif;
 }
-
-
 ?>

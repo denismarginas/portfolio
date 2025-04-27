@@ -381,8 +381,8 @@
         padding: var( --dm-spacing-secondary );
         --dm-text-heading4-color: var(--post_color_secondary);
         background-color: var(--post_color_primary);
-        text-transform: uppercase;
         text-align: center;
+        position: relative;
       }
       > .dm-post-title-description {
         @include border-radius( var( --dm-border-radius-primary ));

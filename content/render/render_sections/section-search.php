@@ -53,6 +53,12 @@ $theme_path = $GLOBALS['urlPath'].$jsonGlobalData["themes-path"]."/".$jsonGlobal
                             <?php echo $item["meta-title"]; ?>
                         </a>
 
+                        <div class="list">
+                            <span class="post-type">
+                                <?php echo $item["post-type"]; ?>
+                            </span>
+                        </div>
+
                         <p class="description">
                             <?php echo $item["meta-description"]; ?>
                         </p>

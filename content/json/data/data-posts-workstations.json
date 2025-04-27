@@ -1,6 +1,7 @@
 [
 	{
 		"file": "personal-workstation-build-1",
+		"post_single_type": "workstation",
 		"title": "Personal Workstation Build 1",
 		"description": "This is my productivity setup, designed for both work projects and personal pursuits. With regular updates to keep it efficient and inspiring, this workstation powers my main work and creative endeavors. I’m excited to share the tools and setup that drive my daily productivity.",
 		"media_path": "pc-01",
@@ -175,6 +176,7 @@
 	},
 	{
 		"file": "personal-workstation-build-0",
+		"post_single_type": "workstation",
 		"title": "Personal Workstation Build 0",
 		"description": "This setup supported my productivity from 2016 to 2022 across university projects, occasional remote work tasks, and video editing as a hobby for 'Striker Production' projects. Regular updates helped me maintain an efficient and inspiring environment for both personal and professional growth.",
 		"media_path": "pc-00",

@@ -83,6 +83,7 @@ endif;
                 <div class="post-image post-logo
                 <?php echo (isset($post_data["thumbnail"]) && isset($post_data["thumbnail_path"])) ? "bg-thumbnail" : ""; ?>"
                 data-motion="transition-fade-0 transition-slideInLeft-0" data-duration="0.4s">
+                    <?php echo $bg_item_texture_img = renderBgImgOverlayTexture(); ?>
                     <?php if (isset($post_data["logo_type"]) && !empty($post_data["logo_type"]) && $post_data["logo_type"] == "svg") : ?>
                         <?php SVGRenderer::renderSVG( $post_data["logo"] ); ?>
                     <?php else : ?>

@@ -1,11 +1,10 @@
 [
     {
         "file": "project-student-courses-bachelor-s-thesis",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
             "exclude_from_search": "true",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "student-courses-bachelor-s-thesis",
             "title": "Student Courses - Bachelor's thesis",
@@ -62,7 +61,7 @@
                 "web"
             ],
             "colors": {
-                "post_color_primary": "#e7e7e7", 
+                "post_color_primary": "#e7e7e7",
                 "post_color_secondary": "#282828",
                 "post_color_background": "#9fa3a6",
                 "post_color_text_on_background": "#282828"
@@ -75,10 +74,9 @@
     },
     {
         "file": "project-aatoysfurnitures",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "aatoysfurnitures",
             "title": "A&A Toys & Furniture",
@@ -163,10 +161,9 @@
     },
     {
         "file": "project-acvaticbebeclub",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "acvaticbebeclub",
             "title": "Acvatic Bebe Club",
@@ -250,10 +247,9 @@
     },
     {
         "file": "project-agramix",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "agramix",
             "title": "Agramix",
@@ -398,10 +394,9 @@
     },
     {
         "file": "project-agromir",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "agromir",
             "title": "Agromir",
@@ -563,10 +558,9 @@
     },
     {
         "file": "project-agromir-sh",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "agromir-sh",
             "title": "Agromir Second-Hand",
@@ -676,10 +670,9 @@
     },
     {
         "file": "project-amorino",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "amorino",
             "title": "Amorino",
@@ -776,10 +769,9 @@
     },
     {
         "file": "project-augustinnailtrainer",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "augustinnailtrainer",
             "title": "Augustin Nail Trainer",
@@ -832,10 +824,9 @@
     },
     {
         "file": "project-axacompany",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "axacompany",
             "title": "AXA Company",
@@ -930,10 +921,9 @@
     },
     {
         "file": "project-boneamed",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "boneamed",
             "title": "Bonea Med",
@@ -1033,10 +1023,9 @@
     },
     {
         "file": "project-brbhome",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "brbhome",
             "title": "BRB Home",
@@ -1125,10 +1114,9 @@
     },
     {
         "file": "project-brisascents",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "brisascents",
             "title": "Brisa Scents",
@@ -1215,10 +1203,9 @@
     },
     {
         "file": "project-busvip",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "busvip",
             "title": "Bus-Vip",
@@ -1300,10 +1287,9 @@
     },
     {
         "file": "project-cadredidactice",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "cadredidactice",
             "title": "Centrul de Resurse Educationale",
@@ -1393,10 +1379,9 @@
     },
     {
         "file": "project-cafeagano",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "cafeagano",
             "title": "Cafea Gano",
@@ -1489,10 +1474,9 @@
     },
     {
         "file": "project-carconcordia",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "carconcordia",
             "title": "Concordia CAR",
@@ -1584,10 +1568,9 @@
     },
     {
         "file": "project-casadarius-presentation",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "casadarius-presentation",
             "title": "Casa Darius",
@@ -1677,10 +1660,9 @@
     },
     {
         "file": "project-casadarius-shop",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "casadarius-shop",
             "title": "Casa Darius",
@@ -1839,10 +1821,9 @@
     },
     {
         "file": "project-cekan",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "cekan",
             "title": "Cekan - Case Study",
@@ -1915,10 +1896,9 @@
     },
     {
         "file": "project-ceramicevo",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "ceramicevo",
             "title": "Ceramic & Stone Evolutione",
@@ -2000,10 +1980,9 @@
     },
     {
         "file": "project-copiatoarealbaiulia",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "copiatoarealbaiulia",
             "title": "Copiatoare Alba Iulia",
@@ -2102,10 +2081,9 @@
     },
     {
         "file": "project-covoarealex",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "covoarealex",
             "title": "Covoare Alex",
@@ -2209,10 +2187,9 @@
     },
     {
         "file": "project-dabo-sm-bm",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "dabo-sm-bm",
             "title": "Dabo - SM & BM",
@@ -2272,10 +2249,9 @@
     },
     {
         "file": "project-denismarginas-google-site",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "denismarginas-google-site",
             "title": "Denis Marginas - Google Site",
@@ -2344,10 +2320,9 @@
     },
     {
         "file": "project-denismarginas",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "denismarginas",
             "title": "Denis Marginas - Media",
@@ -2435,10 +2410,9 @@
     },
     {
         "file": "project-denismarginas-github-portfolio",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "denismarginas-github-portfolio",
             "title": "Denis Marginas - Github Portfolio",
@@ -2532,10 +2506,9 @@
     },
     {
         "file": "project-dsautocenter",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "dsautocenter",
             "title": "DS Auto Center",
@@ -2601,10 +2574,9 @@
     },
     {
         "file": "project-freymobdesign",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "freymobdesign",
             "title": "FreyMob Design",
@@ -2693,10 +2665,9 @@
     },
     {
         "file": "project-gamadametal",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "gamadametal",
             "title": "Gamada Metal",
@@ -2748,10 +2719,9 @@
     },
     {
         "file": "project-hartkeepyouthaton",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "hartkeepyouthaton",
             "title": "HART - Keep your hat on",
@@ -2812,10 +2782,9 @@
     },
     {
         "file": "project-ilnicelectric",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "ilnicelectric",
             "title": "Ilnic Electric",
@@ -2918,10 +2887,9 @@
     },
     {
         "file": "project-lavplast-ambalajelavplast",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "ambalajelavplast",
             "title": "Ambalaje Lavplast",
@@ -3014,10 +2982,9 @@
     },
     {
         "file": "project-lavplast-lavmag",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "lavmag",
             "title": "Lavmag",
@@ -3130,10 +3097,9 @@
     },
     {
         "file": "project-marasafety",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "marasafety",
             "title": "Mara Safety",
@@ -3216,10 +3182,9 @@
     },
     {
         "file": "project-masiniinratebaiamare",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "masiniinratebaiamare",
             "title": "Masini in Rate Baia Mare",
@@ -3316,10 +3281,9 @@
     },
     {
         "file": "project-medicalortovit",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "medicalortovit",
             "title": "Medical Ortovit - Content",
@@ -3406,10 +3370,9 @@
     },
     {
         "file": "project-mewi",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "mewi",
             "title": "Mewi - Maintenance",
@@ -3501,10 +3464,9 @@
     },
     {
         "file": "project-mobilasimexplus",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "mobilasimexplus",
             "title": "Mobila Simex Plus",
@@ -3599,10 +3561,9 @@
     },
     {
         "file": "project-mycreativedesign",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "mycreativedesign",
             "title": "My Creative Design",
@@ -3658,10 +3619,9 @@
     },
     {
         "file": "project-netexromania",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "netexromania",
             "title": "Netex Romania - Maintenance",
@@ -3747,10 +3707,9 @@
     },
     {
         "file": "project-petri",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "petri",
             "title": "Petri",
@@ -3837,10 +3796,9 @@
     },
     {
         "file": "project-piasoftproduct",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "piasoftproduct",
             "title": "Pia Soft Product",
@@ -3967,10 +3925,9 @@
     },
     {
         "file": "project-prismanord",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "prismanord",
             "title": "Prisma Nord",
@@ -4089,10 +4046,9 @@
     },
     {
         "file": "project-promotiimars",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "promotiimars",
             "title": "Promotii Mars",
@@ -4186,10 +4142,9 @@
     },
     {
         "file": "project-purstyle",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "purstyle",
             "title": "Pur Style",
@@ -4283,10 +4238,9 @@
     },
     {
         "file": "project-reifendirekt",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "reifendirekt",
             "title": "Reifen Direkt - Frontend",
@@ -4372,10 +4326,9 @@
     },
     {
         "file": "project-resurseeducationale",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "resurseeducationale",
             "title": "Resurse Educationale",
@@ -4492,10 +4445,9 @@
     },
     {
         "file": "project-revelnail-avadores",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "revelnail-avadores",
             "title": "Revel Nail - Avadores",
@@ -4639,10 +4591,9 @@
     },
     {
         "file": "project-revistaeducatie",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "revistaeducatie",
             "title": "Centrul de Excelenta",
@@ -4733,10 +4684,9 @@
     },
     {
         "file": "project-roundselfie",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "roundselfie",
             "title": "Round Selfie",
@@ -4789,10 +4739,9 @@
     },
     {
         "file": "project-royalcompass",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "royalcompass",
             "title": "Royal Compass",
@@ -4876,10 +4825,9 @@
     },
     {
         "file": "project-spalatorieautomatabaiamare",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "spalatorieautomatabaiamare",
             "title": "Spalatorie Automata Baia Mare",
@@ -4931,10 +4879,9 @@
     },
     {
         "file": "project-specialevents",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "specialevents",
             "title": "Special Events",
@@ -4992,10 +4939,9 @@
     },
     {
         "file": "project-speed-sm",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "speed-sm",
             "title": "Speed - Satu Mare",
@@ -5051,10 +4997,9 @@
     },
     {
         "file": "project-strikerproduction",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "strikerproduction",
             "title": "Striker Production - Media",
@@ -5148,10 +5093,9 @@
     },
     {
         "file": "project-strikerproduction-google-site",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "strikerproduction-google-site",
             "title": "Striker Production - Google Site",
@@ -5223,10 +5167,9 @@
     },
     {
         "file": "project-strikerproduction-rust-killfeed-generator",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "strikerproduction-rust-killfeed-generator",
             "title": "Striker Production - Rust KillFeed Generator",
@@ -5312,10 +5255,9 @@
     },
     {
         "file": "project-superbrain",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "superbrain",
             "title": "Super Brain",
@@ -5409,10 +5351,9 @@
     },
     {
         "file": "project-tinib",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "tinib",
             "title": "Tinib",
@@ -5503,10 +5444,9 @@
     },
     {
         "file": "project-promotionalcampaignstndc",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "promotionalcampaignstndc",
             "title": "Promotional campaigns - Tndc",
@@ -5598,10 +5538,9 @@
     },
     {
         "file": "project-transportosian",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "transportosian",
             "title": "Transport Osian",
@@ -5661,10 +5600,9 @@
     },
     {
         "file": "project-vreaualpin",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "vreaualpin",
             "title": "Vreau Alpin",
@@ -5752,10 +5690,9 @@
     },
     {
         "file": "project-vseconstruct",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "vseconstruct",
             "title": "VSE Construct",
@@ -5807,10 +5744,9 @@
     },
     {
         "file": "project-woodworkart",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "woodworkart",
             "title": "Wood Work Art",
@@ -5899,10 +5835,9 @@
     },
     {
         "file": "project-remodelingmv",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "remodelingmv",
             "title": "Modern Vision Remodeling",
@@ -6000,10 +5935,9 @@
     },
     {
         "file": "project-philadelphiarugcleaning",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "philadelphiarugcleaning",
             "title": "Philadelphia Rug Cleaning",
@@ -6097,10 +6031,9 @@
     },
     {
         "file": "project-logistic-brain",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "logistic-brain",
             "title": "Logistic Brain",
@@ -6198,10 +6131,9 @@
     },
     {
         "file": "project-merkaz-nadlan",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "merkaz-nadlan",
             "title": "Merkaz Ha-Ir - City Center",
@@ -6303,10 +6235,9 @@
     },
     {
         "file": "project-troni",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "troni",
             "title": "Troni - LP",
@@ -6317,7 +6248,7 @@
             "categories": [
                 "Web Development Projects"
             ],
-            "web_url": "troni.io", 
+            "web_url": "troni.io",
             "web_platform": [
                 {
                     "name": "Wordpress",
@@ -6395,10 +6326,9 @@
     },
     {
         "file": "project-mscardetailing",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "mscardetailing",
             "title": "MS Car Detailing",
@@ -6488,10 +6418,9 @@
     },
     {
         "file": "project-gla",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "gla",
             "title": "GLA Israel",
@@ -6589,10 +6518,9 @@
     },
     {
         "file": "project-earldom",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "earldom",
             "title": "Earldom",
@@ -6690,10 +6618,9 @@
     },
     {
         "file": "project-sosdeepcleaning",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "sosdeepcleaning",
             "title": "SOS Deep Cleaning",
@@ -6787,10 +6714,9 @@
     },
     {
         "file": "project-familyfirst",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "familyfirst",
             "title": "Family First",
@@ -6898,10 +6824,9 @@
     },
     {
         "file": "project-symbol-buildcon",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "symbol-buildcon",
             "title": "Symbol Buildcon - LP",
@@ -6912,7 +6837,7 @@
             "categories": [
                 "Web Development Projects"
             ],
-            "web_url": "symbol.vc/buildcon/", 
+            "web_url": "symbol.vc/buildcon/",
             "web_platform": [
                 {
                     "name": "Wordpress",
@@ -6986,10 +6911,9 @@
     },
     {
         "file": "project-ryllo",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "ryllo",
             "title": "Ryllo - LP",
@@ -7000,7 +6924,7 @@
             "categories": [
                 "Web Development Projects"
             ],
-            "web_url": "ryllo.io", 
+            "web_url": "ryllo.io",
             "web_platform": [
                 {
                     "name": "Wordpress",
@@ -7078,10 +7002,9 @@
     },
     {
         "file": "project-maromsteelline",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "maromsteelline",
             "title": "Marom Steel Line",
@@ -7174,10 +7097,9 @@
     },
     {
         "file": "project-ypages",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "ypages",
             "title": "Ypages - Pages",
@@ -7282,10 +7204,9 @@
     },
     {
         "file": "project-edlaparis",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "edlaparis",
             "title": "EdlaParis",
@@ -7392,10 +7313,9 @@
     },
     {
         "file": "project-sdb",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "sdb",
             "title": "SDB - LP",
@@ -7480,10 +7400,9 @@
     },
     {
         "file": "project-bullionhouse",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "bullionhouse",
             "title": "Bullion House",
@@ -7634,10 +7553,9 @@
     },
     {
         "file": "project-lironpinkhas",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "lironpinkhas",
             "title": "Liron Pinkhas",
@@ -7717,10 +7635,9 @@
     },
     {
         "file": "project-colorplay",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "colorplay",
             "title": "Color Play",
@@ -7800,10 +7717,9 @@
     },
     {
         "file": "project-barantech",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "barantech",
             "title": "Barantech",
@@ -7910,10 +7826,9 @@
     },
     {
         "file": "project-offmarket",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "offmarket",
             "title": "Offmarket",
@@ -8011,10 +7926,9 @@
     },
     {
         "file": "project-chezpepe",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "chezpepe",
             "title": "Chez Pepe",
@@ -8094,10 +8008,9 @@
     },
     {
         "file": "project-uppura",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "uppura",
             "title": "Uppura",
@@ -8181,10 +8094,9 @@
     },
     {
         "file": "project-solveo",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "solveo",
             "title": "Solveo",
@@ -8273,10 +8185,9 @@
     },
     {
         "file": "project-symbol-podcasts",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "symbol-podcasts",
             "title": "Symbol Podcasts",
@@ -8369,10 +8280,9 @@
     },
     {
         "file": "project-ideas-rip",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "ideas-rip",
             "title": "Ideas.rip",
@@ -8462,10 +8372,9 @@
     },
     {
         "file": "project-prc-cardio-optic",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "enable",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "prc-cardio-optic",
             "title": "PRC Cardio Optic",
@@ -8550,11 +8459,10 @@
     },
     {
         "file": "project-yourdistribution",
-        "type": "post",
-        "category": "projects",
         "post_data": {
             "display": "disable",
             "exclude_from_search": "true",
+            "post_single_type": "project",
             "post_type": "projects",
             "media_path": "yourdistribution",
             "title": "Your Distribution",

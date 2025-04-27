@@ -152,6 +152,24 @@
             @include limit-line-text(2);
             @include dm-font-medium();
           }
+          > .list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 6px;
+
+            > .post-type {
+              @include limit-line-text(1);
+              @include dm-font-extra-small();
+              --dm-text-extra-small-font-weight: 600;
+              --dm-text-extra-small-color: var( --dm-color-white );
+              text-transform: capitalize;
+              background-color: var( --dm-color-primary );
+              border-radius: var( --dm-border-radius-primary );
+              padding: 4px 8px;
+            }
+          }
+
         }
         &:hover {
           > .search-item-image {
