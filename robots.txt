@@ -317,6 +317,12 @@ Allow: /
 Meta-robots: noindex, nofollow
 
 User-agent: *
+Disallow: /project-lockfinity
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
 Disallow: /project-logistic-brain
 Crawl-delay: 10
 Allow: /
@@ -372,6 +378,12 @@ Meta-robots: noindex, nofollow
 
 User-agent: *
 Disallow: /project-mycreativedesign
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
+Disallow: /project-nationalrugscleaners
 Crawl-delay: 10
 Allow: /
 Meta-robots: noindex, nofollow

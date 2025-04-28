@@ -6,19 +6,9 @@
       <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/json/data/data-global-settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-global-settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/json/data/data-posts-projects.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-posts-projects.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/json/data/data-posts-workstations.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-posts-workstations.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/json/index/index-data-pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/index/index-data-pages.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/json/index/index-data-posts-projects.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/index/index-data-posts-projects.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/functions/global-functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/functions/global-functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/functions/post-project-functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/functions/post-project-functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render_index/index-html-pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_index/index-html-pages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-blog-header.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-blog-header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render_sections/section-search.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_sections/section-search.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/render/render_structure/head.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/render/render_structure/head.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/xml/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/content/xml/sitemap.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/education-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/education-experience.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employee-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/employee-experience.html" afterDir="false" />
@@ -121,16 +111,10 @@
       <change beforePath="$PROJECT_DIR$/project-woodworkart.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-woodworkart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-ypages.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-ypages.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/robots.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/social-activity.html" beforeDir="false" afterPath="$PROJECT_DIR$/social-activity.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/summary-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/summary-experience.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/js/content-data-search.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/js/content-data-search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-post-feature-hero.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-post-feature-hero.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-post-web-gallery.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/element-post-web-gallery.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-post.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-post.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-search.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design-parts/section-search.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design.scss" beforeDir="false" afterPath="$PROJECT_DIR$/themes/dm-theme-01/scss/templates-design/templates-design.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/visual-media-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/visual-media-projects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-development-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-development-projects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/workstations.html" beforeDir="false" afterPath="$PROJECT_DIR$/workstations.html" afterDir="false" />
@@ -285,7 +269,7 @@
       <workItem from="1744791068590" duration="1245000" />
       <workItem from="1745313281904" duration="1393000" />
       <workItem from="1745328988978" duration="1133000" />
-      <workItem from="1745754838708" duration="8378000" />
+      <workItem from="1745754838708" duration="11095000" />
     </task>
     <servers />
   </component>
