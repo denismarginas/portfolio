@@ -8554,7 +8554,7 @@
             "title": "National Rugs Cleaners – Quote-to-Checkout System",
             "logo": "logo/logo.webp",
             "logo_path": "nationalrugscleaners",
-            "logo_type": "png",
+            "logo_type": "webp",
             "description": "I implemented a Clean Rug system on the WordPress website. It works as follows: the user fills out a Quote Form made with Elementor, and after submitting, they are redirected to the first Rug Product page (Rug 1) with the form parameters passed along.<br><br>From there, users can add up to 10 different rugs, each with their own parameters such as zip code, feet, length, width, and others. This functionality is handled using the WooCommerce Product Add-Ons Ultimate plugin.<br><br>To make this system work, I created multiple custom code snippets. These snippets populate the input fields on the product page with the values from the Quote Form. They also populate the checkout form fields, pulling information like the zip code from the first product and address or name from the original Quote Form.<br><br>I added extra buttons to the Single Product Template: one button to add another rug (allowing up to 10 rugs in total) and another button to proceed directly to checkout. I also changed the text displayed in the Cart and Checkout pages, customizing the wording from the WooCommerce Deposits and Part Payments plugin. The new text explains more clearly that 50% of the total order is paid upfront and the remaining 50% is paid in person.<br><br>This entire custom system is designed to work only if the products in the cart belong to the specific taxonomy created for the Cleaning Quote.",
             "categories": [
                 "Web Development Projects"
@@ -8651,7 +8651,7 @@
             "title": "Lockfinity - LP",
             "logo": "logo/logo.webp",
             "logo_path": "lockfinity",
-            "logo_type": "png",
+            "logo_type": "webp",
             "description": "A landing page was created to capture interest and drive conversions, utilizing Figma for design and Elementor for content creation. This project involves the design and content creation for a website. Utilizing Figma for design the content with Elementor, alongside other plugins enhancing Elementor's capabilities, I crafted the website's visual and textual elements.",
             "categories": [
                 "Web Development Projects"
@@ -8729,6 +8729,103 @@
         "post_content": [
             "<?php echo renderFeatureHero($post_current_data); ?>",
             "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-noom",
+        "post_data": {
+            "display": "enable",
+            "post_single_type": "project",
+            "post_type": "projects",
+            "media_path": "noom",
+            "title": "Noom - Maintenance",
+            "logo": "logo/logo.webp",
+            "logo_path": "noom",
+            "logo_type": "webp",
+            "description": "On this website, I made minimal adjustments and additionally integrated a custom mini cart that allows users to increase or decrease the quantity of a product using JavaScript and AJAX with WooCommerce. I also developed a responsive free shipping progress bar, which dynamically updates based on the cart's total price retrieved through a custom API.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "noom.co.il",
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_technology": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "jQuery",
+                    "svg": "jquery"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                },
+                {
+                    "name": "Unlimited Elements for Elementor Premium",
+                    "svg": "unlimited-elements"
+                },
+                {
+                    "name": "Code Snippets"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "web maintenance",
+                "online shop"
+            ],
+            "project_collaboration": [
+                "Individual",
+                "Teamwork"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "04.2025",
+                "date_end": "04.2025"
+            },
+            "tags": [
+                "web"
+            ],
+            "colors": {
+                "post_color_primary": "#9b79d4",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#9b79d4",
+                "post_color_text_on_background": "#ffffff"
+            }
+        },
+        "post_content": [
+            "<?php echo renderFeatureHero($post_current_data); ?>",
+            "<?php echo renderSectionWebProject($post_current_data); ?>",
+            "<?php echo renderTitle('Custom Mini Cart and Free Shipping Bar'); ?>",
+            "<?php echo renderImageBlockProject($post_current_data,'web/custom-mini-cart-and-free-shipping-bar/', 'custom-mini-cart-and-free-shipping-bar.webp'); ?>",
+            "<?php echo renderParagraphBlockProject('This project involved an integration for an online shop, where I developed two custom shortcodes: one that renders a free shipping bar showing how much is left to reach the free shipping threshold, and another that displays a custom mini cart allowing users to increase or decrease the quantity of specific products. The live updating of product quantities and the free shipping bar was handled using JavaScript and a custom API that retrieves the total cart amount along with the currency.'); ?>"
         ],
         "layout": "wrapper-layout"
     }
