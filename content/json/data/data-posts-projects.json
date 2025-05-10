@@ -8828,5 +8828,102 @@
             "<?php echo renderParagraphBlockProject('This project involved an integration for an online shop, where I developed two custom shortcodes: one that renders a free shipping bar showing how much is left to reach the free shipping threshold, and another that displays a custom mini cart allowing users to increase or decrease the quantity of specific products. The live updating of product quantities and the free shipping bar was handled using JavaScript and a custom API that retrieves the total cart amount along with the currency.'); ?>"
         ],
         "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-lilain",
+        "post_data": {
+            "display": "enable",
+            "post_single_type": "project",
+            "post_type": "projects",
+            "media_path": "lilain",
+            "title": "Lilain",
+            "logo": "logo/logo.webp",
+            "logo_path": "lilain",
+            "logo_type": "webp",
+            "description": "A simple online shop built with WooCommerce, based on a custom WordPress theme that I recreated using Elementor Pro, with a few small vanilla JavaScript scripts for basic animations and toggles.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "lilain.co.il",
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_technology": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "jQuery",
+                    "svg": "jquery"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                },
+                {
+                    "name": "Unlimited Elements for Elementor Premium",
+                    "svg": "unlimited-elements"
+                },
+                {
+                    "name": "Code Snippets"
+                },
+                {
+                    "name": "Woocommerce",
+                    "svg": "woocommerce"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "online shop"
+            ],
+            "project_collaboration": [
+                "Individual",
+                "Teamwork"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "03.2024",
+                "date_end": "05.2025"
+            },
+            "tags": [
+                "web"
+            ],
+            "colors": {
+                "post_color_primary": "#7e1b25",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#ffffff",
+                "post_color_text_on_background": "#7e1b25"
+            }
+        },
+        "post_content": [
+            "<?php echo renderFeatureHero($post_current_data); ?>",
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     }
 ]
