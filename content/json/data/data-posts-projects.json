@@ -8925,5 +8925,112 @@
             "<?php echo renderSectionWebProject($post_current_data); ?>"
         ],
         "layout": "wrapper-layout"
+    },
+    {
+        "file": "project-devillajewelry",
+        "post_data": {
+            "display": "enable",
+            "post_single_type": "project",
+            "post_type": "projects",
+            "media_path": "devillajewelry",
+            "title": "De Villa Jewelry",
+            "logo": "logo/logo.webp",
+            "logo_path": "devillajewelry",
+            "logo_type": "webp",
+            "description": "A jewelry online shop built with WooCommerce and Elementor, featuring custom PHP code to add a Buy Now button that redirects users directly to the cart with the selected product already added. Custom JavaScript was used on the product template to enhance the gallery thumbnails and implement custom navigation arrows with slider limits, ensuring that the next arrow disappears when reaching the end of the slider. All products were imported using WP All Import Pro from an Excel file, with multiple custom fields that were also populated and updated through the import process.",
+            "categories": [
+                "Web Development Projects"
+            ],
+            "web_url": "devillajewelry.com",
+            "web_platform": [
+                {
+                    "name": "Wordpress",
+                    "svg": "wordpress"
+                }
+            ],
+            "web_technology": [
+                {
+                    "name": "HTML",
+                    "svg": "html"
+                },
+                {
+                    "name": "CSS",
+                    "svg": "css"
+                },
+                {
+                    "name": "JS",
+                    "svg": "js"
+                },
+                {
+                    "name": "SQL",
+                    "svg": "sql"
+                },
+                {
+                    "name": "PHP",
+                    "svg": "php"
+                },
+                {
+                    "name": "jQuery",
+                    "svg": "jquery"
+                }
+            ],
+            "web_plugins": [
+                {
+                    "name": "Elementor Website Builder Pro",
+                    "svg": "elementor"
+                },
+                {
+                    "name": "Unlimited Elements for Elementor Premium",
+                    "svg": "unlimited-elements"
+                },
+                {
+                    "name": "WP All Import Pro"
+                },
+                {
+                    "name": "Code Snippets"
+                },
+                {
+                    "name": "JetSmartFilters"
+                },
+                {
+                    "name": "Secure Custom Fields",
+                    "svg": "acf"
+                },
+                {
+                    "name": "Woocommerce",
+                    "svg": "woocommerce"
+                }
+            ],
+            "web_project_status": "Done",
+            "project_types": [
+                "online shop"
+            ],
+            "project_collaboration": [
+                "Individual",
+                "Teamwork"
+            ],
+            "project_contractor": [
+                "Mentor Marketing Experts"
+            ],
+            "employer": "Mentor Marketing Experts",
+            "date": {
+                "date_start": "03.2025",
+                "date_end": "05.2025"
+            },
+            "tags": [
+                "web"
+            ],
+            "colors": {
+                "post_color_primary": "#c4a77c",
+                "post_color_secondary": "#ffffff",
+                "post_color_background": "#ffffff",
+                "post_color_text_on_background": "#c4a77c"
+            }
+        },
+        "post_content": [
+            "<?php echo renderFeatureHero($post_current_data); ?>",
+            "<?php echo renderSectionWebProject($post_current_data); ?>"
+        ],
+        "layout": "wrapper-layout"
     }
 ]
