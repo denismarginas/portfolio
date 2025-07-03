@@ -1,986 +1,977 @@
 {
-	"about": {
-		"title": "About Me",
-		"birth-date": "09/09/1997",
-		"text": [
-			"My name is Denis Ionuț Mărginaș, I'm <?php echo calculatePersonAge(); ?> years old, and I have experience as a full-stack web developer. I am passionate about technology and creativity, always seeking to expand my skills and expertise in web development, staying curious about the latest innovations.",
-			"Before entering the web development industry, I focused on video editing, specifically for video games. My interest in cinematic executions and angles led to freelance opportunities where I honed my skills. With a strong background in Mathematics and Informatics, I eventually shifted my focus to web development, which has since become my main area of expertise. In my free time, I enjoy building computer hardware, playing video games, cycling, and playing tennis.",
-			"Looking ahead, I aim to continue growing as a developer, stay updated with the latest technologies, and make a significant impact in the tech industry. When I’m not coding, I enjoy gaming and exploring new technologies that inspire my work."
-		],
-		"buttons": [
-			{
-				"button_text": "More Details",
-				"button_page_redirect": "About",
-				"button_page_redirect_slug": "about"
-			}
-		],
-		"images": {
-			"compress" :{
-				"img": "dm-personal-image-2.webp",
-				"img-path": "/personal-images/"
-			},
-			"standard" : {
-				"img": "dm-personal-image-1.webp",
-				"img-path": "/personal-images/"
-			}
-		}
-	},
-	"portfolio-video-archive": [
-		{
-			"video": "experience-highlights-1.webm",
-			"video-path": "projects/denismarginas/personal-portfolio/",
-			"video-thumbnail": "experience-highlights-1.webp",
-			"video-thumbnail-path": "/thumbnails/",
-			"video-data": {
-				"title": "Experience Highlights",
-				"short-description": "This is a summary of my most impactful projects and tasks from 2019 to 2025. In just a few seconds, you'll see a presentation of some of the most unique and defining examples from my professional experience.</br></br>Editing Software: Adobe After Effects 2023, Sony Vegas Pro 20, Photopea, Topaz Video Enhance AI</br>Sondtrack: Lorn - Yo2_Rustlin",
-				"date": "Apr 14, 2025",
-				"youtube-button-text": "Watch on YouTube",
-				"youtube-button-link": "https://www.youtube.com/watch?v=HxGdZ_embL8",
-				"youtube-button-icon-svg": "socials-youtube",
-				"timeline": {
-					"text": "Video Timeline:",
-					"list": [
-						"00:00 - 00:08 - Intro",
-						"00:08 - 00:22 - Experience Highlights",
-						"00:22 - 00:28 - Contact"
-					]
-				},
-				"video-color-primary": "#5d6977"
-			}
-		},
-		{
-			"video": "personal-portfolio-1.webm",
-			"video-path": "projects/denismarginas/personal-portfolio/",
-			"video-thumbnail": "personal-portfolio-1.webp",
-			"video-thumbnail-path": "/thumbnails/",
-			"video-data": {
-				"title": "Portfolio Showcase",
-				"short-description": "Experience a captivating journey through my professional work from 2019 to 2023 in this short video. From a captivating intro to web development, photo editing, and video editing, witness my diverse expertise in just under two minutes.</br></br>Editing Software: Sony Vegas Pro 20, Photopea, Topaz Video Enhance AI</br>Sondtrack: Skeler - Tel Aviv (Hijacked Remix)",
-				"date": "Apr 20, 2023",
-				"youtube-button-text": "Watch on YouTube",
-				"youtube-button-link": "https://www.youtube.com/watch?v=ilz2avyGG_U",
-				"youtube-button-icon-svg": "socials-youtube",
-				"timeline": {
-					"text": "Video Timeline:",
-					"list": [
-						"00:00 - 00:04 - Intro",
-						"00:04 - 00:55 - Web Development",
-						"00:55 - 01:14 - Photo Editing",
-						"01:14 - 01:52 - Video Editing",
-						"01:52 - 01:56 - Outro"
-					]
-				},
-				"video-color-primary": "#5d6977"
-			}
-		}
-	],
-	"cards-categories": [
-		{
-			"type": "page",
-			"page": "social-activity",
-			"name": "Social Activity",
-			"svg": "projects",
-			"background-img": "overlay-texture-textile.webp",
-			"background-img-path": "/design-elements/"
-		},
-		{
-			"type": "page",
-			"page": "personal-workstation-build-1",
-			"name": "Personal Workstation",
-			"svg": "workstation",
-			"background-img": "overlay-texture-textile.webp",
-			"background-img-path": "/design-elements/"
-		},
-		{
-			"type": "page",
-			"page": "employee-experience",
-			"name": "Employee Experience",
-			"svg": "employ",
-			"background-img": "overlay-texture-textile.webp",
-			"background-img-path": "/design-elements/"
-		},
-		{
-			"type": "page",
-			"page": "education-experience",
-			"name": "Education Experience",
-			"svg": "resume",
-			"background-img": "overlay-texture-textile.webp",
-			"background-img-path": "/design-elements/"
-		},
-		{
-			"type": "page",
-			"page": "projects",
-			"name": "Projects Experience",
-			"svg": "about-me",
-			"background-img": "overlay-texture-textile.webp",
-			"background-img-path": "/design-elements/"
-		}
-	],
-	"contact": {
-		"data": {
-			"title": "Contact Data",
-			"text": [
-				"You can reach me by phone on WhatsApp or through my personal email address.",
-				"Contact details are provided in the section below."
-			],
-			"contacts": [
-				{
-					"label": "Email:",
-					"value": "denismarginas09@gmail.com",
-					"link": "mailto:denismarginas09@gmail.com"
-				},
-				{
-					"label": "Address:",
-					"value": "Romania, Baia Mare",
-					"warning-text": "For security reasons, the address is not displayed. However, you can request the contact address by sending an email to the provided email address."
-				},
-				{
-					"label": "Phone:",
-					"value": "+40-74*******",
-					"warning-text": "For security reasons, the phone number is not displayed. However, you can request the contact phone number by sending a mail to the provided email address."
-				}
-			],
-			"img": "dm-personal-image-0.webp",
-			"img-path": "/personal-images/"
-		},
-		"resume": {
-			"text-list": [
-				"I am a skilled professional with expertise in web development and programming. With a strong foundation in various web platforms and programming languages, I possess the ability to create dynamic and user-friendly websites. My proficiency extends to page builders and web development programs, enabling me to design and customize web pages effectively.",
-				"I have experience working with a range of software and tools, including photo editing and video editing programs. My knowledge extends to streaming programs and other widely used applications, such as Microsoft Office and Google Suite.",
-				"With a strong technical aptitude and adaptability, I am confident in my ability to contribute to innovative projects and deliver exceptional results. I am eager to leverage my skills and experiences to make a meaningful impact."
-			],
-			"img": "dm-desktop-working.webp",
-			"img-path": "/personal-images/",
-			"download-button-text": "Download",
-			"cv-list": [
-				{
-					"name": "Resume #3 English",
-					"thumbnail": "content/cv/cv-3/dm-cv-3-english-public-thumbnail.webp",
-					"image": "content/cv/cv-3/dm-cv-3-english-public-compressed.webp",
-					"pdf": "content/cv/cv-3/dm-cv-3-english-public-compressed.pdf",
-					"date": "Sep 27, 2024",
-					"description": "CV - Model 3"
-				},
-				{
-					"name": "Resume #3 Romanian",
-					"thumbnail": "content/cv/cv-3/dm-cv-3-romana-public-thumbnail.webp",
-					"image": "content/cv/cv-3/dm-cv-3-romana-public-compressed.webp",
-					"pdf": "content/cv/cv-3/dm-cv-3-romana-public-compressed.pdf",
-					"date": "Sep 27, 2024",
-					"description": "CV - Model 3"
-				},
-				{
-					"name": "Resume #2 English",
-					"thumbnail": "content/cv/cv-2/dm-cv-2-english-public-thumbnail.webp",
-					"image": "content/cv/cv-2/dm-cv-2-english-public-compressed.webp",
-					"pdf": "content/cv/cv-2/dm-cv-2-english-public-compressed.pdf",
-					"date": "Jun 3, 2023",
-					"description": "CV - Model 2"
-				},
-				{
-					"name": "Resume #2 Romanian",
-					"thumbnail": "content/cv/cv-2/dm-cv-2-romana-public-thumbnail.webp",
-					"image": "content/cv/cv-2/dm-cv-2-romana-public-compressed.webp",
-					"pdf": "content/cv/cv-2/dm-cv-2-romana-public-compressed.pdf",
-					"date": "Jun 3, 2023",
-					"description": "CV - Model 2"
-				},
-				{
-					"name": "Resume #1 English",
-					"thumbnail": "content/cv/cv-1/dm-cv-1-english-public-thumbnail.webp",
-					"image": "content/cv/cv-1/dm-cv-1-english-public-compressed.webp",
-					"pdf": "content/cv/cv-1/dm-cv-1-english-public-compressed.pdf",
-					"date": "May 16, 2023",
-					"description": "CV - Model 1"
-				},
-				{
-					"name": "Resume #1 Romanian",
-					"thumbnail": "content/cv/cv-1/dm-cv-1-romana-public-thumbnail.webp",
-					"image": "content/cv/cv-1/dm-cv-1-romana-public-compressed.webp",
-					"pdf": "content/cv/cv-1/dm-cv-1-romana-public-compressed.pdf",
-					"date": "May 16, 2023",
-					"description": "CV - Model 1"
-				}
-			]
-		},
-		"form": {
-			"title": "Contact Form",
-			"fields": [
-				{
-					"name": "name",
-					"type": "text",
-					"placeholder": "Name",
-					"field-name-extern": "entry.372576771"
-				},
-				{
-					"name": "email",
-					"type": "text",
-					"placeholder": "Email",
-					"field-name-extern": "entry.1216480420"
-				},
-				{
-					"name": "phone",
-					"type": "text",
-					"placeholder": "Phone Number",
-					"field-name-extern": "entry.839463599"
-				},
-				{
-					"name": "message",
-					"type": "textarea",
-					"placeholder": "Message",
-					"field-name-extern": "entry.401433199"
-				},
-				{
-					"name": "dm-form-button",
-					"type": "submit",
-					"value": "Submit",
-					"redirect": "Proceed to the form"
-				}
-			],
-			"step-fields": [
-				[
-					{
-						"name": "step-html-banner",
-						"type": "code",
-						"content": "<?php echo renderImage('content/img/projects/denismarginas/media/banners-ultra-wide/wallpaper-contact-02.webp', false, 'banner'); ?>"
-					},
-					{
-						"name": "step-name",
-						"type": "text",
-						"placeholder": "Name",
-						"field-name-step": "name"
-					},
-					{
-						"name": "step-email",
-						"type": "text",
-						"placeholder": "Email",
-						"field-name-step": "email"
-					},
-					{
-						"name": "dm-next-step",
-						"type": "next",
-						"value": "Next Step",
-						"step": "2"
-					}
-				],
-				[
-					{
-						"name": "step-html-image",
-						"type": "code",
-						"content": "<div class='banner-svg'><?php SVGRenderer::renderSVG('faq'); ?><label>Subject</label></div>"
-					},
-					{
-						"name": "subject",
-						"type": "radio",
-						"placeholder": "Subject",
-						"values": [
-							{
-								"name": "send-a-message",
-								"value": "Send a Message",
-								"step": "3",
-								"content": "<div class='option-preview'><?php SVGRenderer::renderSVG('envelope'); ?></div>"
-							},
-							{
-								"name": "hire-me-for-a-freelance-project",
-								"value": "Hire me for a freelance project",
-								"step": "4",
-								"content": "<div class='option-preview'><?php SVGRenderer::renderSVG( 'folder-open'); ?></div>"
-							},
-							{
-								"name": "offer-me-a-position-at-your-company",
-								"value": "Offer me a position at your company",
-								"step": "5",
-								"content": "<div class='option-preview'><?php SVGRenderer::renderSVG( 'employ'); ?></div>"
-							}
-						],
-						"field-name-step": "message"
-					},
-					{
-						"name": "dm-prev-step",
-						"type": "prev",
-						"value": "Previous Step",
-						"step": "1"
-					},
-					{
-						"name": "dm-next-step",
-						"type": "next",
-						"value": "Next Step",
-						"step": "subject"
-					}
-				],
-				[
-					{
-						"name": "step-html-image",
-						"type": "code",
-						"content": "<div class='banner-svg'><?php SVGRenderer::renderSVG('envelope'); ?><label>Send a Message</label></div>"
-					},
-					{
-						"name": "step-message",
-						"type": "textarea",
-						"placeholder": "Message",
-						"field-name-step": "message"
-					},
-					{
-						"name": "dm-prev-step",
-						"type": "prev",
-						"value": "Previous Step",
-						"step": "2"
-					},
-					{
-						"name": "dm-form-button",
-						"type": "submit",
-						"value": "Submit",
-						"redirect": "Proceed to the form"
-					}
-				],
-				[
-					{
-						"name": "step-html-image",
-						"type": "code",
-						"content": "<div class='banner-svg'><?php SVGRenderer::renderSVG('folder-open'); ?><label>Project Request</label></div>"
-					},
-					{
-						"name": "step-project-type",
-						"type": "radio",
-						"placeholder": "Project Type",
-						"values": [
-							{
-								"name": "web-development",
-								"value": "Web Development",
-								"content": "<div class='option-preview'><?php SVGRenderer::renderSVG( 'hobby-web-design'); ?></div>"
-							},
-							{
-								"name": "video-editing",
-								"value": "Video Editing",
-								"content": "<div class='option-preview'><?php SVGRenderer::renderSVG( 'hobby-video-editing'); ?></div>"
-							},
-							{
-								"name": "photo-editing",
-								"value": "Photo Editing",
-								"content": "<div class='option-preview'><?php SVGRenderer::renderSVG( 'hobby-photo-editing'); ?></div>"
-							},
-							{
-								"name": "other",
-								"value": "Other",
-								"content": "<div class='option-preview'><?php SVGRenderer::renderSVG( 'hobby-unknown'); ?></div>"
-							}
-						],
-						"field-name-step": "message"
-					},
-					{
-						"name": "step-budget",
-						"type": "text",
-						"placeholder": "Project Budget",
-						"field-name-step": "message"
-					},
-					{
-						"name": "step-project-details",
-						"type": "textarea",
-						"placeholder": "Project Details",
-						"field-name-step": "message"
-					},
-					{
-						"name": "dm-prev-step",
-						"type": "prev",
-						"value": "Previous Step",
-						"step": "2"
-					},
-					{
-						"name": "dm-next-step",
-						"type": "next",
-						"value": "Next",
-						"step": "6"
-					}
-
-				],
-				[
-					{
-						"name": "step-html-image",
-						"type": "code",
-						"content": "<div class='banner-svg'><?php SVGRenderer::renderSVG('employ'); ?><label>Job Offer</label></div>"
-					},
-					{
-						"name": "step-job-title",
-						"type": "text",
-						"placeholder": "Job Title",
-						"field-name-step": "message"
-					},
-					{
-						"name": "step-salary",
-						"type": "text",
-						"placeholder": "Salary Offer",
-						"field-name-step": "message"
-					},
-					{
-						"name": "step-offer-details",
-						"type": "textarea",
-						"placeholder": "Details Offer",
-						"field-name-step": "message"
-					},
-					{
-						"name": "dm-prev-step",
-						"type": "prev",
-						"value": "Previous Step",
-						"step": "2"
-					},
-					{
-						"name": "dm-next-step",
-						"type": "next",
-						"value": "Next",
-						"step": "6"
-					}
-				],
-				[
-					{
-						"name": "step-phone-number",
-						"type": "text",
-						"placeholder": "Your Phone Number (Optional)",
-						"field-name-step": "phone"
-					},
-					{
-						"name": "step-your-contact",
-						"type": "text",
-						"placeholder": "Your Contact (Optional)",
-						"field-name-step": "message"
-					},
-					{
-						"name": "step-your-company",
-						"type": "text",
-						"placeholder": "Your Company (Optional)",
-						"field-name-step": "message"
-					},
-					{
-						"name": "dm-prev-step",
-						"type": "prev",
-						"value": "Go Back",
-						"step": "2"
-					},
-					{
-						"name": "dm-form-button",
-						"type": "submit",
-						"value": "Submit",
-						"redirect": "Proceed to the form"
-					}
-				]
-			],
-			"type": "steps",
-			"external-form-url": "https://docs.google.com/forms/d/e/1FAIpQLSdkMKYQyLa4H7yxU7RMUK97urwK5LMvbk-dFs9-wKpCRCO_Ng/viewform",
-			"external-form-type": "google-forms"
-		},
-		"menu": {
-			"title": "Contact",
-			"list": [
-				{
-					"text": "CV English",
-					"icon-svg": "resume",
-					"link": "content/cv/cv-2/dm-cv-2-english-public-compressed.pdf"
-				},
-				{
-					"text": "CV Romanian",
-					"icon-svg": "resume",
-					"link": "content/cv/cv-2/dm-cv-2-romana-public-compressed.pdf"
-				},
-				{
-					"text": "Contact Form",
-					"icon-svg": "form",
-					"link": "https://docs.google.com/forms/d/e/1FAIpQLSdkMKYQyLa4H7yxU7RMUK97urwK5LMvbk-dFs9-wKpCRCO_Ng/viewform"
-				}
-			]
-		}
-	},
-	"socials": {
-		"title": "Socials",
-		"visual-list": [
-			{
-				"title": "YouTube",
-				"link": "https://www.youtube.com/channel/UCZGb7hnkyawMgnSO9T-rnnQ",
-				"icon-svg": "youtube"
-			},
-			{
-				"title": "Facebook",
-				"link": "https://www.facebook.com/denismarginas09",
-				"icon-svg": "facebook"
-			},
-			{
-				"title": "Linkedin",
-				"link": "https://www.linkedin.com/in/denismarginas09/",
-				"icon-svg": "linkedin"
-			},
-			{
-				"title": "X",
-				"link": "https://x.com/DenisMarginas",
-				"icon-svg": "x"
-			},
-			{
-				"title": "Google Site",
-				"link": "https://sites.google.com/view/denis-marginas",
-				"icon-svg": "google-site"
-			},
-			{
-				"title": "Github",
-				"link": "https://github.com/denismarginas",
-				"icon-svg": "github"
-			}
-		],
-		"text-list": [
-			{
-				"title": "Google Site:",
-				"text": "sites.google.com/view/denis-marginas",
-				"link": "https://sites.google.com/view/denis-marginas/portfolio"
-			},
-			{
-				"title": "Google Form:",
-				"text": "forms.gle/vTHeLVkc1TwXCxBJA",
-				"link": "https://forms.gle/vTHeLVkc1TwXCxBJA"
-			},
-			{
-				"title": "Facebook Page:",
-				"text": "facebook.com/denismarginas09",
-				"link": "https://www.facebook.com/denismarginas09"
-			},
-			{
-				"title": "Linkedin:",
-				"text": "linkedin.com/in/denismarginas09",
-				"link": "https://www.linkedin.com/in/denismarginas09/"
-			},
-			{
-				"title": "Github:",
-				"text": "github.com/denismarginas",
-				"link": "https://github.com/denismarginas"
-			},
-			{
-				"title": "GitHub Pages",
-				"text": "denismarginas.github.io",
-				"link": "https://denismarginas.github.io/portfolio/"
-			}
-		]
-		
-	},
-	"experience": {
-		"title": "Experience",
-		"text": [
-			"Before entering the web development field, I worked as a freelance video editor, specializing in editing videos for video games. After completing my university studies in Mathematics and Informatics, I shifted my focus to web development and began pursuing a career in that field.",
-			"In 2019, I joined Pia Soft Product as a web developer and video-photo editor. During my time there, I worked on various tasks, including creating presentation websites and online shops using platforms like WordPress and Prestashop. I also handled SEO optimization, website and host maintenance, customer communication, and designing banners, logos, and video advertisements. Working independently on my tasks, I took the initiative to learn from scratch, except for my prior experience in video editing. Additionally, I developed web applications using PHP, TPL, SQL, JavaScript, jQuery, HTML, CSS, and more.",
-			"Towards the end of 2021, I transitioned to working full time at Netex Romania, where I was hired as a front-end developer. My responsibilities involved maintaining multiple WordPress websites and working on web design projects. The web design aspect was particularly challenging as I received templates and page sections in formats, similar to Figma projects, and had to recreate them as static web pages using HTML, SASS, Node.js, Bootstrap, JavaScript, and jQuery. Initially, I worked independently on my part of the project, but later collaborated with a colleague who joined to assist with the same project. During this time, I gained valuable experience with the GitLab platform, learned Git commands, and improved my teamwork skills."
-		],
-		"images": {
-			"portrait" :{
-				"img": "dm-personal-with-laptop.webp",
-				"img-path": "/personal-images/"
-			},
-			"banner" : {
-				"img": "dm-working-in-office.webp",
-				"img-path": "/personal-images/"
-			}
-		},
-		"knowledge-lists-text": {
-			"text-items": [
-				"I have experience as a Full-Stack Web Developer on projects such as presentation websites, online shops, booking web applications, competition form applications, and SEO optimization. Additionally, I have experience as a Photo-Video Editor working on projects like ad banners, promotional offers, company logos, identity media content, and video ads."
-			],
-			"list-items": [
-				{
-					"category": "Web Development",
-					"category": "Web Development",
-					"items": [
-						"Technology: PHP, TPL, SQL, JS, Git, HTML, CSS, SASS/SCSS, Python, C/C++, jQuery 3, Bootstrap 5",
-						"Platforms: WordPress, Prestashop, Node.js, GitHub Pages, Google Site, XAMPP, cPanel",
-						"CMS: Elementor, WPBakery, Gutenberg",
-						"Others: HeidiSQL, phpMyAdmin, GitLab, GitHub, Visual Studio Code, PhpStorm, PyCharm, Prepros, Figma",
-						"Operating Systems: Windows, Linux"
-					]
-				},
-				{
-					"category": "Photo-Video Editing",
-					"items": [
-						"Video Editing Software: Sony Vegas Pro, Adobe After Effects, Topaz Video Enhance",
-						"Video Editing Plugins: BCC, RSMB, Sapphire, Ignite Pro, Optical Flares, Plexus, Particular, Element 3D, 3D Camera Tracking",
-						"Photo Editing Software: Photopea, Photoshop, Paint.net, Xara Photo, Topaz Gigapixel",
-						"3D Programs: Blender"
-					]
-				},
-				{
-					"category": "Office Software",
-					"items": [
-						"Microsoft Office: Microsoft Excel, Microsoft Word, Microsoft PowerPoint",
-						"Google Drive: Google Sheets, Google Docs, Google Slides"
-					]
-				}
-			]
-		},
-		"buttons": [
-			{
-				"button_text": "Summary Experience",
-				"button_page_redirect_slug": "summary-experience",
-				"button-icon-svg": "projects"
-			},
-			{
-				"button_text": "Employee Experience",
-				"button_page_redirect_slug": "employee-experience",
-				"button-icon-svg": "employ"
-			},
-			{
-				"button_text": "Projects Catalog",
-				"button_page_redirect_slug": "projects",
-				"button-icon-svg": "about-me"
-			}
-
-		],
-		"knowledge-lists-items": [
-			{
-				"icon": "wordpress",
-				"url": "https://wordpress.org/",
-				"title": "Wordpress"
-			},
-			{
-				"icon": "prestashop",
-				"url": "https://prestashop.com/",
-				"title": "Prestashop"
-			},
-			{
-				"icon": "html",
-				"url": "https://en.wikipedia.org/wiki/HTML",
-				"title": "HTML"
-			},
-			{
-				"icon": "css",
-				"url": "https://en.wikipedia.org/wiki/CSS",
-				"title": "CSSS"
-			},
-			{
-				"icon": "js",
-				"url": "https://en.wikipedia.org/wiki/JavaScript",
-				"title": "Java Script"
-			},
-			{
-				"icon": "bootstrap",
-				"url": "https://getbootstrap.com/",
-				"title": "Bootstrap"
-			},
-			{
-				"icon": "jquery",
-				"url": "https://jquery.com/",
-				"title": "jQuery"
-			},
-			{
-				"icon": "nodejs",
-				"url": "https://nodejs.org/en",
-				"title": "Node JS"
-			},
-			{
-				"icon": "sass",
-				"url": "https://sass-lang.com/",
-				"title": "SASS"
-			},
-			{
-				"icon": "php",
-				"url": "https://www.php.net/",
-				"title": "PHP"
-			},
-			{
-				"icon": "tpl",
-				"url": "https://www.smarty.net/docs/en/what.is.smarty.tpl",
-				"title": "TPL Smarty"
-			},
-			{
-				"icon": "c++",
-				"url": "https://en.wikipedia.org/wiki/C%2B%2B",
-				"title": "C++"
-			},
-			{
-				"icon": "c",
-				"url": "https://en.wikipedia.org/wiki/C_(programming_language)",
-				"title": "C"
-			},
-			{
-				"icon": "python",
-				"url": "https://www.python.org/",
-				"title": "Python"
-			},
-			{
-				"icon": "sql",
-				"url": "https://en.wikipedia.org/wiki/SQL",
-				"title": "SQL"
-			},
-			{
-				"icon": "xampp",
-				"url": "https://www.apachefriends.org/",
-				"title": "XAMPP"
-			},
-			{
-				"icon": "phpmyadmin",
-				"url": "https://www.phpmyadmin.net/",
-				"title": "PHP My Admin"
-			},
-			{
-				"icon": "vscode",
-				"url": "https://code.visualstudio.com/",
-				"title": "Visual Studio Code"
-			},
-			{
-				"icon": "phpstorm",
-				"url": "https://www.jetbrains.com/phpstorm/",
-				"title": "PhpStorm"
-			},
-			{
-				"icon": "pycharm",
-				"url": "https://www.jetbrains.com/pycharm/",
-				"title": "PyCharm"
-			},
-			{
-				"icon": "sv",
-				"url": "https://www.vegascreativesoftware.com/us/vegas-pro/",
-				"title": "Sony Vegas"
-			},
-			{
-				"icon": "ae",
-				"url": "https://www.adobe.com/products/aftereffects.html",
-				"title": "Adobe After Effects"
-			},
-			{
-				"icon": "photopea",
-				"url": "https://www.photopea.com/",
-				"title": "Photopea"
-			},
-			{
-				"icon": "xaraphoto",
-				"url": "https://www.xara.com/photo-graphic-plus/",
-				"title": "Xara Photo"
-			},
-			{
-				"icon": "blender",
-				"url": "https://www.blender.org/",
-				"title": "Blender"
-			},
-			{
-				"icon": "office",
-				"url": "https://www.office.com/",
-				"title": "Office"
-			},
-			{
-				"icon": "googledrive",
-				"url": "https://www.google.com/drive/",
-				"title": "Google Drive"
-			},
-			{
-				"icon": "github_colors",
-				"url": "https://github.com/",
-				"title": "Git Hub"
-			},
-			{
-				"icon": "gitlab",
-				"url": "https://about.gitlab.com/",
-				"title": "Git Lab"
-			},
-			{
-				"icon": "chatgpt",
-				"url": "https://chat.openai.com/",
-				"title": "Chat GPT"
-			}
-		]
-	},
-	"work-experience": {
-		"title": "WORK",
-		"subtitle": "EXPERIENCE",
-		"description": "Since 2019, I have actively immersed myself in numerous web projects, collaborating with diverse companies to create a wide range of online solutions. Throughout this period, my expertise has encompassed the development of presentation sites, online stores, web applications, SEO optimization, as well as web design.",
-		"images" : {
-			"screen": {
-				"img-path": "design-elements",
-				"img-preview": "monitor-with-project.webp"
-			},
-			"cards": [
-				{
-					"img-path": "design-elements",
-					"img-preview": "mini-work-card-3d-editing.webp"
-				},
-				{
-					"img-path": "design-elements",
-					"img-preview": "mini-work-card-video-editing.webp"
-				},
-				{
-					"img-path": "design-elements",
-					"img-preview": "mini-work-card-seo-optimization.webp"
-				},
-				{
-					"img-path": "design-elements",
-					"img-preview": "mini-work-card-web-design.webp"
-				},
-				{
-					"img-path": "design-elements",
-					"img-preview": "mini-work-card-photo-editing.webp"
-				}
-			]
-		},
-		"buttons": [
-			{
-				"button_text": "More Details",
-				"button_page_redirect": "Experience",
-				"button_page_redirect_slug": "experience"
-			}
-		],
-		"web-development-section": {
-			"text-list": [
-				{
-					"title": "DESIGN",
-					"description": "I can create a responsive website using HTML and CSS/SCSS to ensure that all your pages look and fit perfectly on every device. Additionally, you have the freedom to choose any theme or design that you would like to implement according to your preferences."
-	
-				},
-				{
-					"title": "SEO",
-					"description": "Boost your website's search engine traffic with my SEO expertise. I'll optimize all pages with keyword-specific meta titles and descriptions, and generate a sitemap for improved visibility."
-	
-				},
-				{
-					"title": "DEVELOPMENT",
-					"description": "I specialize in implementing modules, developing web applications, and creating functions for platforms such as Prestashop and WordPress. My expertise covers a range of languages including PHP, TPL, HTML, CSS, JavaScript, and MySQL."
-	
-				},
-				{
-					"title": "SUPPORT",
-					"description": "I offer comprehensive solutions and assistance for all your project needs, helping you achieve the desired results. For further information, please use the contact form available on the website's contact page."
-	
-				}
-			],
-			"img-path": "design-elements",
-			"img-list": {
-				"img-laptop": "website-responsive-laptop.webp",
-				"img-tablet": "website-responsive-tablet.webp",
-				"img-phone": "website-responsive-phone.webp"
-			}
-
-		}
-	},
-	"project-info": {
-		"dates": {
-			"start-date": {
-				"text": "Begining of the webiste:",
-				"date": "04.06.2023"
-			},
-			"end-date": {
-				"text": "Last update of webiste:",
-				"date": "curent-date"
-			}
-		},
-		"copyright": {
-			"text": "©All copyrights reserved by Denis Marginas"
-		}
-	},
-	"hobby": {
-		"title": "List of hobbies",
-		"img-path": "hobby",
-		"list": [
-			{
-				"name": "Video Games",
-				"icon-svg": "hobby-video-games",
-				"img": "hobby-video-games.webp"
-			},
-			{
-				"name": "Cycling",
-				"icon-svg": "hobby-cycling",
-				"img": "hobby-cycling.webp"
-			},
-			{
-				"name": "Table Tennis",
-				"icon-svg": "hobby-ping-pong",
-				"img": "hobby-ping-pong.webp"
-			},
-			{
-				"name": "Photo Editing",
-				"icon-svg": "hobby-photo-editing",
-				"img": "hobby-photo-editing.webp"
-			},
-			{
-				"name": "Video Editing",
-				"icon-svg": "hobby-video-editing",
-				"img": "hobby-video-editing.webp"
-			},
-			{
-				"name": "Web Design",
-				"icon-svg": "hobby-web-design",
-				"img": "hobby-web-design.webp"
-			},
-			{
-				"name": "Computer Hardware",
-				"icon-svg": "hobby-computer-hardware",
-				"img": "hobby-computer-hardware.webp"
-			},
-			{
-				"name": "Recording Cinematics",
-				"icon-svg": "hobby-recording-cinematics",
-				"img": "hobby-recording-cinematics.webp"
-			}
-		]
-	},
-	"posts-socials": {
-		"blog-username": "Denis Marginas",
-		"blog-description": "Dive into the world of a full-stack web developer and skilled photo-video editor. Explore the intersection of web development and visual storytelling on Denis Ionut Marginas's insightful blog.",
-		"blog-img-logo": "content/img/projects/denismarginas/media/logo/logo2.webp",
-		"blog-img-wallpaper": "content/img/projects/denismarginas/media/banner-linkedin/banner-linkedin-01.webp"
-	},
-	"post-projects" : {
-		"img": {
-			"background": {
-				"overlay-texture": "content/img/design-elements/overlay-texture-noise.webp",
-				"overlay-shape-1": "hexagon-3d",
-				"overlay-shape-2": "distortion-plane-3d"
-			},
-			"devices" : {
-				"post-laptop": "content/img/design-elements/device-layout-laptop.webp",
-				"post-phone": "content/img/design-elements/device-layout-phone.webp",
-				"tablet-landscape": "content/img/design-elements/device-layout-tablet-landscape.webp",
-				"tablet": "content/img/design-elements/device-layout-tablet.webp",
-				"phone-model-01": "content/img/design-elements/device-layout-phone-model-001.webp",
-				"phone-model-02": "content/img/design-elements/device-layout-phone-model-002.webp",
-				"phone-model-03": "content/img/design-elements/device-layout-phone-model-003.webp",
-				"desktop-model-01": "content/img/design-elements/device-layout-desktop-model-001.webp",
-				"desktop-model-02": "content/img/design-elements/device-layout-desktop-model-002.webp",
-				"desktop-model-03": "content/img/design-elements/device-layout-desktop-model-003.webp"
-
-			}
-		},
-		"fields": {
-			"web_url": "Website: ",
-			"web_platform": "Platform: ",
-			"web_technology": "Technology: ",
-			"web_plugins": "Modules: ",
-			"project_collaboration": "Project Collaboration: ",
-			"web_project_status": "Web Project Status:",
-			"media_facebook_url": "Facebook: ",
-			"media_instagram_url": "Instagram: ",
-			"media_youtube_url": "YouTube: ",
-			"media_platforms": "Media Platforms: ",
-			"employer_type": "Worked as:",
-			"employer_location": "Worked at:",
-			"date": "Date:"
-		},
-		"index": "false"
-	},
-	"privacy-policy": {
-		"title": "Privacy Policy",
-		"content": [
-			{
-				"subtitle": "Google Analytics",
-				"text": "We use Google Analytics on this website to analyze and understand how visitors interact with our site. Google Analytics is a web analytics service provided by Google Inc. It helps us track and report website traffic, allowing us to improve our content and user experience based on data collected."
-			},
-			{
-				"subtitle": "What Google Analytics Does",
-				"text": "Google Analytics collects data about your visit, including your IP address, browser type, and the pages you view. This information is used to generate reports on website activity and user behavior. The data collected by Google Analytics is aggregated and anonymized, meaning it does not personally identify you."
-			},
-			{
-				"subtitle": "How We Use the Data",
-				"text": "The information collected through Google Analytics helps us understand how users navigate our site, which pages are popular, and how we can enhance our website's performance. We use this data to make informed decisions about our content and services, aiming to provide a better experience for our visitors."
-			},
-			{
-				"subtitle": "Opt-Out",
-				"text": "You can choose to opt-out of Google Analytics tracking by installing the Google Analytics Opt-out Browser Add-on or by disabling cookies in your browser settings. Please note that opting out may affect your experience on our website."
-			},
-			{
-				"text": "For more details on how Google Analytics handles your data, you can refer to Google's Privacy Policy."
-			}
-		]
-	},
-	"page-not-found": {
-		"title": "404",
-		"description": "NOT FOUND"
-	}
+  "about": {
+    "title": "About Me",
+    "birth-date": "09/09/1997",
+    "text": [
+      "My name is Denis Ionuț Mărginaș, I'm <?php echo calculatePersonAge(); ?> years old, and I have experience as a full-stack web developer. I am passionate about technology and creativity, always seeking to expand my skills and expertise in web development, staying curious about the latest innovations.",
+      "Before entering the web development industry, I focused on video editing, specifically for video games. My interest in cinematic executions and angles led to freelance opportunities where I honed my skills. With a strong background in Mathematics and Informatics, I eventually shifted my focus to web development, which has since become my main area of expertise. In my free time, I enjoy building computer hardware, playing video games, cycling, and playing tennis.",
+      "Looking ahead, I aim to continue growing as a developer, stay updated with the latest technologies, and make a significant impact in the tech industry. When I’m not coding, I enjoy gaming and exploring new technologies that inspire my work."
+    ],
+    "buttons": [
+      {
+        "button_text": "More Details",
+        "button_page_redirect": "About",
+        "button_page_redirect_slug": "about"
+      }
+    ],
+    "images": {
+      "compress": {
+        "img": "dm-personal-image-2.webp",
+        "img-path": "/personal-images/"
+      },
+      "standard": {
+        "img": "dm-personal-image-1.webp",
+        "img-path": "/personal-images/"
+      }
+    }
+  },
+  "portfolio-video-archive": [
+    {
+      "video": "experience-highlights-1.webm",
+      "video-path": "projects/denismarginas/personal-portfolio/",
+      "video-thumbnail": "experience-highlights-1.webp",
+      "video-thumbnail-path": "/thumbnails/",
+      "video-data": {
+        "title": "Experience Highlights",
+        "short-description": "This is a summary of my most impactful projects and tasks from 2019 to 2025. In just a few seconds, you'll see a presentation of some of the most unique and defining examples from my professional experience.</br></br>Editing Software: Adobe After Effects 2023, Sony Vegas Pro 20, Photopea, Topaz Video Enhance AI</br>Sondtrack: Lorn - Yo2_Rustlin",
+        "date": "Apr 14, 2025",
+        "youtube-button-text": "Watch on YouTube",
+        "youtube-button-link": "https://www.youtube.com/watch?v=HxGdZ_embL8",
+        "youtube-button-icon-svg": "socials-youtube",
+        "timeline": {
+          "text": "Video Timeline:",
+          "list": [
+            "00:00 - 00:08 - Intro",
+            "00:08 - 00:22 - Experience Highlights",
+            "00:22 - 00:28 - Contact"
+          ]
+        },
+        "video-color-primary": "#5d6977"
+      }
+    },
+    {
+      "video": "personal-portfolio-1.webm",
+      "video-path": "projects/denismarginas/personal-portfolio/",
+      "video-thumbnail": "personal-portfolio-1.webp",
+      "video-thumbnail-path": "/thumbnails/",
+      "video-data": {
+        "title": "Portfolio Showcase",
+        "short-description": "Experience a captivating journey through my professional work from 2019 to 2023 in this short video. From a captivating intro to web development, photo editing, and video editing, witness my diverse expertise in just under two minutes.</br></br>Editing Software: Sony Vegas Pro 20, Photopea, Topaz Video Enhance AI</br>Sondtrack: Skeler - Tel Aviv (Hijacked Remix)",
+        "date": "Apr 20, 2023",
+        "youtube-button-text": "Watch on YouTube",
+        "youtube-button-link": "https://www.youtube.com/watch?v=ilz2avyGG_U",
+        "youtube-button-icon-svg": "socials-youtube",
+        "timeline": {
+          "text": "Video Timeline:",
+          "list": [
+            "00:00 - 00:04 - Intro",
+            "00:04 - 00:55 - Web Development",
+            "00:55 - 01:14 - Photo Editing",
+            "01:14 - 01:52 - Video Editing",
+            "01:52 - 01:56 - Outro"
+          ]
+        },
+        "video-color-primary": "#5d6977"
+      }
+    }
+  ],
+  "cards-categories": [
+    {
+      "type": "page",
+      "page": "social-activity",
+      "name": "Social Activity",
+      "svg": "projects",
+      "background-img": "overlay-texture-textile.webp",
+      "background-img-path": "/design-elements/"
+    },
+    {
+      "type": "page",
+      "page": "personal-workstation-build-1",
+      "name": "Personal Workstation",
+      "svg": "workstation",
+      "background-img": "overlay-texture-textile.webp",
+      "background-img-path": "/design-elements/"
+    },
+    {
+      "type": "page",
+      "page": "employee-experience",
+      "name": "Employee Experience",
+      "svg": "employ",
+      "background-img": "overlay-texture-textile.webp",
+      "background-img-path": "/design-elements/"
+    },
+    {
+      "type": "page",
+      "page": "education-experience",
+      "name": "Education Experience",
+      "svg": "resume",
+      "background-img": "overlay-texture-textile.webp",
+      "background-img-path": "/design-elements/"
+    },
+    {
+      "type": "page",
+      "page": "projects",
+      "name": "Projects Experience",
+      "svg": "about-me",
+      "background-img": "overlay-texture-textile.webp",
+      "background-img-path": "/design-elements/"
+    }
+  ],
+  "contact": {
+    "data": {
+      "title": "Contact Data",
+      "text": [
+        "You can reach me by phone on WhatsApp or through my personal email address.",
+        "Contact details are provided in the section below."
+      ],
+      "contacts": [
+        {
+          "label": "Email:",
+          "value": "denismarginas09@gmail.com",
+          "link": "mailto:denismarginas09@gmail.com"
+        },
+        {
+          "label": "Address:",
+          "value": "Romania, Baia Mare",
+          "warning-text": "For security reasons, the address is not displayed. However, you can request the contact address by sending an email to the provided email address."
+        },
+        {
+          "label": "Phone:",
+          "value": "+40-74*******",
+          "warning-text": "For security reasons, the phone number is not displayed. However, you can request the contact phone number by sending a mail to the provided email address."
+        }
+      ],
+      "img": "dm-personal-image-0.webp",
+      "img-path": "/personal-images/"
+    },
+    "resume": {
+      "text-list": [
+        "I am a skilled professional with expertise in web development and programming. With a strong foundation in various web platforms and programming languages, I possess the ability to create dynamic and user-friendly websites. My proficiency extends to page builders and web development programs, enabling me to design and customize web pages effectively.",
+        "I have experience working with a range of software and tools, including photo editing and video editing programs. My knowledge extends to streaming programs and other widely used applications, such as Microsoft Office and Google Suite.",
+        "With a strong technical aptitude and adaptability, I am confident in my ability to contribute to innovative projects and deliver exceptional results. I am eager to leverage my skills and experiences to make a meaningful impact."
+      ],
+      "img": "dm-desktop-working.webp",
+      "img-path": "/personal-images/",
+      "download-button-text": "Download",
+      "cv-list": [
+        {
+          "name": "Resume #3 English",
+          "thumbnail": "content/cv/cv-3/dm-cv-3-english-public-thumbnail.webp",
+          "image": "content/cv/cv-3/dm-cv-3-english-public-compressed.webp",
+          "pdf": "content/cv/cv-3/dm-cv-3-english-public-compressed.pdf",
+          "date": "Sep 27, 2024",
+          "description": "CV - Model 3"
+        },
+        {
+          "name": "Resume #3 Romanian",
+          "thumbnail": "content/cv/cv-3/dm-cv-3-romana-public-thumbnail.webp",
+          "image": "content/cv/cv-3/dm-cv-3-romana-public-compressed.webp",
+          "pdf": "content/cv/cv-3/dm-cv-3-romana-public-compressed.pdf",
+          "date": "Sep 27, 2024",
+          "description": "CV - Model 3"
+        },
+        {
+          "name": "Resume #2 English",
+          "thumbnail": "content/cv/cv-2/dm-cv-2-english-public-thumbnail.webp",
+          "image": "content/cv/cv-2/dm-cv-2-english-public-compressed.webp",
+          "pdf": "content/cv/cv-2/dm-cv-2-english-public-compressed.pdf",
+          "date": "Jun 3, 2023",
+          "description": "CV - Model 2"
+        },
+        {
+          "name": "Resume #2 Romanian",
+          "thumbnail": "content/cv/cv-2/dm-cv-2-romana-public-thumbnail.webp",
+          "image": "content/cv/cv-2/dm-cv-2-romana-public-compressed.webp",
+          "pdf": "content/cv/cv-2/dm-cv-2-romana-public-compressed.pdf",
+          "date": "Jun 3, 2023",
+          "description": "CV - Model 2"
+        },
+        {
+          "name": "Resume #1 English",
+          "thumbnail": "content/cv/cv-1/dm-cv-1-english-public-thumbnail.webp",
+          "image": "content/cv/cv-1/dm-cv-1-english-public-compressed.webp",
+          "pdf": "content/cv/cv-1/dm-cv-1-english-public-compressed.pdf",
+          "date": "May 16, 2023",
+          "description": "CV - Model 1"
+        },
+        {
+          "name": "Resume #1 Romanian",
+          "thumbnail": "content/cv/cv-1/dm-cv-1-romana-public-thumbnail.webp",
+          "image": "content/cv/cv-1/dm-cv-1-romana-public-compressed.webp",
+          "pdf": "content/cv/cv-1/dm-cv-1-romana-public-compressed.pdf",
+          "date": "May 16, 2023",
+          "description": "CV - Model 1"
+        }
+      ]
+    },
+    "form": {
+      "title": "Contact Form",
+      "fields": [
+        {
+          "name": "name",
+          "type": "text",
+          "placeholder": "Name",
+          "field-name-extern": "entry.372576771"
+        },
+        {
+          "name": "email",
+          "type": "text",
+          "placeholder": "Email",
+          "field-name-extern": "entry.1216480420"
+        },
+        {
+          "name": "phone",
+          "type": "text",
+          "placeholder": "Phone Number",
+          "field-name-extern": "entry.839463599"
+        },
+        {
+          "name": "message",
+          "type": "textarea",
+          "placeholder": "Message",
+          "field-name-extern": "entry.401433199"
+        },
+        {
+          "name": "dm-form-button",
+          "type": "submit",
+          "value": "Submit",
+          "redirect": "Proceed to the form"
+        }
+      ],
+      "step-fields": [
+        [
+          {
+            "name": "step-html-banner",
+            "type": "code",
+            "content": "<?php echo renderImage('content/img/projects/denismarginas/media/banners-ultra-wide/wallpaper-contact-02.webp', false, 'banner'); ?>"
+          },
+          {
+            "name": "step-name",
+            "type": "text",
+            "placeholder": "Name",
+            "field-name-step": "name"
+          },
+          {
+            "name": "step-email",
+            "type": "text",
+            "placeholder": "Email",
+            "field-name-step": "email"
+          },
+          {
+            "name": "dm-next-step",
+            "type": "next",
+            "value": "Next Step",
+            "step": "2"
+          }
+        ],
+        [
+          {
+            "name": "step-html-image",
+            "type": "code",
+            "content": "<div class='banner-svg'><?php SVGRenderer::renderSVG('faq'); ?><label>Subject</label></div>"
+          },
+          {
+            "name": "subject",
+            "type": "radio",
+            "placeholder": "Subject",
+            "values": [
+              {
+                "name": "send-a-message",
+                "value": "Send a Message",
+                "step": "3",
+                "content": "<div class='option-preview'><?php SVGRenderer::renderSVG('envelope'); ?></div>"
+              },
+              {
+                "name": "hire-me-for-a-freelance-project",
+                "value": "Hire me for a freelance project",
+                "step": "4",
+                "content": "<div class='option-preview'><?php SVGRenderer::renderSVG( 'folder-open'); ?></div>"
+              },
+              {
+                "name": "offer-me-a-position-at-your-company",
+                "value": "Offer me a position at your company",
+                "step": "5",
+                "content": "<div class='option-preview'><?php SVGRenderer::renderSVG( 'employ'); ?></div>"
+              }
+            ],
+            "field-name-step": "message"
+          },
+          {
+            "name": "dm-prev-step",
+            "type": "prev",
+            "value": "Previous Step",
+            "step": "1"
+          },
+          {
+            "name": "dm-next-step",
+            "type": "next",
+            "value": "Next Step",
+            "step": "subject"
+          }
+        ],
+        [
+          {
+            "name": "step-html-image",
+            "type": "code",
+            "content": "<div class='banner-svg'><?php SVGRenderer::renderSVG('envelope'); ?><label>Send a Message</label></div>"
+          },
+          {
+            "name": "step-message",
+            "type": "textarea",
+            "placeholder": "Message",
+            "field-name-step": "message"
+          },
+          {
+            "name": "dm-prev-step",
+            "type": "prev",
+            "value": "Previous Step",
+            "step": "2"
+          },
+          {
+            "name": "dm-form-button",
+            "type": "submit",
+            "value": "Submit",
+            "redirect": "Proceed to the form"
+          }
+        ],
+        [
+          {
+            "name": "step-html-image",
+            "type": "code",
+            "content": "<div class='banner-svg'><?php SVGRenderer::renderSVG('folder-open'); ?><label>Project Request</label></div>"
+          },
+          {
+            "name": "step-project-type",
+            "type": "radio",
+            "placeholder": "Project Type",
+            "values": [
+              {
+                "name": "web-development",
+                "value": "Web Development",
+                "content": "<div class='option-preview'><?php SVGRenderer::renderSVG( 'hobby-web-design'); ?></div>"
+              },
+              {
+                "name": "video-editing",
+                "value": "Video Editing",
+                "content": "<div class='option-preview'><?php SVGRenderer::renderSVG( 'hobby-video-editing'); ?></div>"
+              },
+              {
+                "name": "photo-editing",
+                "value": "Photo Editing",
+                "content": "<div class='option-preview'><?php SVGRenderer::renderSVG( 'hobby-photo-editing'); ?></div>"
+              },
+              {
+                "name": "other",
+                "value": "Other",
+                "content": "<div class='option-preview'><?php SVGRenderer::renderSVG( 'hobby-unknown'); ?></div>"
+              }
+            ],
+            "field-name-step": "message"
+          },
+          {
+            "name": "step-budget",
+            "type": "text",
+            "placeholder": "Project Budget",
+            "field-name-step": "message"
+          },
+          {
+            "name": "step-project-details",
+            "type": "textarea",
+            "placeholder": "Project Details",
+            "field-name-step": "message"
+          },
+          {
+            "name": "dm-prev-step",
+            "type": "prev",
+            "value": "Previous Step",
+            "step": "2"
+          },
+          {
+            "name": "dm-next-step",
+            "type": "next",
+            "value": "Next",
+            "step": "6"
+          }
+        ],
+        [
+          {
+            "name": "step-html-image",
+            "type": "code",
+            "content": "<div class='banner-svg'><?php SVGRenderer::renderSVG('employ'); ?><label>Job Offer</label></div>"
+          },
+          {
+            "name": "step-job-title",
+            "type": "text",
+            "placeholder": "Job Title",
+            "field-name-step": "message"
+          },
+          {
+            "name": "step-salary",
+            "type": "text",
+            "placeholder": "Salary Offer",
+            "field-name-step": "message"
+          },
+          {
+            "name": "step-offer-details",
+            "type": "textarea",
+            "placeholder": "Details Offer",
+            "field-name-step": "message"
+          },
+          {
+            "name": "dm-prev-step",
+            "type": "prev",
+            "value": "Previous Step",
+            "step": "2"
+          },
+          {
+            "name": "dm-next-step",
+            "type": "next",
+            "value": "Next",
+            "step": "6"
+          }
+        ],
+        [
+          {
+            "name": "step-phone-number",
+            "type": "text",
+            "placeholder": "Your Phone Number (Optional)",
+            "field-name-step": "phone"
+          },
+          {
+            "name": "step-your-contact",
+            "type": "text",
+            "placeholder": "Your Contact (Optional)",
+            "field-name-step": "message"
+          },
+          {
+            "name": "step-your-company",
+            "type": "text",
+            "placeholder": "Your Company (Optional)",
+            "field-name-step": "message"
+          },
+          {
+            "name": "dm-prev-step",
+            "type": "prev",
+            "value": "Go Back",
+            "step": "2"
+          },
+          {
+            "name": "dm-form-button",
+            "type": "submit",
+            "value": "Submit",
+            "redirect": "Proceed to the form"
+          }
+        ]
+      ],
+      "type": "steps",
+      "external-form-url": "https://docs.google.com/forms/d/e/1FAIpQLSdkMKYQyLa4H7yxU7RMUK97urwK5LMvbk-dFs9-wKpCRCO_Ng/viewform",
+      "external-form-type": "google-forms"
+    },
+    "menu": {
+      "title": "Contact",
+      "list": [
+        {
+          "text": "CV English",
+          "icon-svg": "resume",
+          "link": "content/cv/cv-2/dm-cv-2-english-public-compressed.pdf"
+        },
+        {
+          "text": "CV Romanian",
+          "icon-svg": "resume",
+          "link": "content/cv/cv-2/dm-cv-2-romana-public-compressed.pdf"
+        },
+        {
+          "text": "Contact Form",
+          "icon-svg": "form",
+          "link": "https://docs.google.com/forms/d/e/1FAIpQLSdkMKYQyLa4H7yxU7RMUK97urwK5LMvbk-dFs9-wKpCRCO_Ng/viewform"
+        }
+      ]
+    }
+  },
+  "socials": {
+    "title": "Socials",
+    "visual-list": [
+      {
+        "title": "YouTube",
+        "link": "https://www.youtube.com/channel/UCZGb7hnkyawMgnSO9T-rnnQ",
+        "icon-svg": "youtube"
+      },
+      {
+        "title": "Facebook",
+        "link": "https://www.facebook.com/denismarginas09",
+        "icon-svg": "facebook"
+      },
+      {
+        "title": "Linkedin",
+        "link": "https://www.linkedin.com/in/denismarginas09/",
+        "icon-svg": "linkedin"
+      },
+      {
+        "title": "X",
+        "link": "https://x.com/DenisMarginas",
+        "icon-svg": "x"
+      },
+      {
+        "title": "Google Site",
+        "link": "https://sites.google.com/view/denis-marginas",
+        "icon-svg": "google-site"
+      },
+      {
+        "title": "Github",
+        "link": "https://github.com/denismarginas",
+        "icon-svg": "github"
+      }
+    ],
+    "text-list": [
+      {
+        "title": "Google Site:",
+        "text": "sites.google.com/view/denis-marginas",
+        "link": "https://sites.google.com/view/denis-marginas/portfolio"
+      },
+      {
+        "title": "Google Form:",
+        "text": "forms.gle/vTHeLVkc1TwXCxBJA",
+        "link": "https://forms.gle/vTHeLVkc1TwXCxBJA"
+      },
+      {
+        "title": "Facebook Page:",
+        "text": "facebook.com/denismarginas09",
+        "link": "https://www.facebook.com/denismarginas09"
+      },
+      {
+        "title": "Linkedin:",
+        "text": "linkedin.com/in/denismarginas09",
+        "link": "https://www.linkedin.com/in/denismarginas09/"
+      },
+      {
+        "title": "Github:",
+        "text": "github.com/denismarginas",
+        "link": "https://github.com/denismarginas"
+      },
+      {
+        "title": "GitHub Pages",
+        "text": "denismarginas.github.io",
+        "link": "https://denismarginas.github.io/portfolio/"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "text": [
+      "Before entering the web development field, I worked as a freelance video editor, specializing in editing videos for video games. After completing my university studies in Mathematics and Informatics, I shifted my focus to web development and began pursuing a career in that field.",
+      "In 2019, I joined Pia Soft Product as a web developer and video-photo editor. During my time there, I worked on various tasks, including creating presentation websites and online shops using platforms like WordPress and Prestashop. I also handled SEO optimization, website and host maintenance, customer communication, and designing banners, logos, and video advertisements. Working independently on my tasks, I took the initiative to learn from scratch, except for my prior experience in video editing. Additionally, I developed web applications using PHP, TPL, SQL, JavaScript, jQuery, HTML, CSS, and more.",
+      "Towards the end of 2021, I transitioned to working full time at Netex Romania, where I was hired as a front-end developer. My responsibilities involved maintaining multiple WordPress websites and working on web design projects. The web design aspect was particularly challenging as I received templates and page sections in formats, similar to Figma projects, and had to recreate them as static web pages using HTML, SASS, Node.js, Bootstrap, JavaScript, and jQuery. Initially, I worked independently on my part of the project, but later collaborated with a colleague who joined to assist with the same project. During this time, I gained valuable experience with the GitLab platform, learned Git commands, and improved my teamwork skills."
+    ],
+    "images": {
+      "portrait": {
+        "img": "dm-personal-with-laptop.webp",
+        "img-path": "/personal-images/"
+      },
+      "banner": {
+        "img": "dm-working-in-office.webp",
+        "img-path": "/personal-images/"
+      }
+    },
+    "knowledge-lists-text": {
+      "text-items": [
+        "I have experience as a Full-Stack Web Developer on projects such as presentation websites, online shops, booking web applications, competition form applications, and SEO optimization. Additionally, I have experience as a Photo-Video Editor working on projects like ad banners, promotional offers, company logos, identity media content, and video ads."
+      ],
+      "list-items": [
+        {
+          "category": "Web Development",
+          "category": "Web Development",
+          "items": [
+            "Technology: PHP, TPL, SQL, JS, Git, HTML, CSS, SASS/SCSS, Python, C/C++, jQuery 3, Bootstrap 5",
+            "Platforms: WordPress, Prestashop, Node.js, GitHub Pages, Google Site, XAMPP, cPanel",
+            "CMS: Elementor, WPBakery, Gutenberg",
+            "Others: HeidiSQL, phpMyAdmin, GitLab, GitHub, Visual Studio Code, PhpStorm, PyCharm, Prepros, Figma",
+            "Operating Systems: Windows, Linux"
+          ]
+        },
+        {
+          "category": "Photo-Video Editing",
+          "items": [
+            "Video Editing Software: Sony Vegas Pro, Adobe After Effects, Topaz Video Enhance",
+            "Video Editing Plugins: BCC, RSMB, Sapphire, Ignite Pro, Optical Flares, Plexus, Particular, Element 3D, 3D Camera Tracking",
+            "Photo Editing Software: Photopea, Photoshop, Paint.net, Xara Photo, Topaz Gigapixel",
+            "3D Programs: Blender"
+          ]
+        },
+        {
+          "category": "Office Software",
+          "items": [
+            "Microsoft Office: Microsoft Excel, Microsoft Word, Microsoft PowerPoint",
+            "Google Drive: Google Sheets, Google Docs, Google Slides"
+          ]
+        }
+      ]
+    },
+    "buttons": [
+      {
+        "button_text": "Summary Experience",
+        "button_page_redirect_slug": "summary-experience",
+        "button-icon-svg": "projects"
+      },
+      {
+        "button_text": "Employee Experience",
+        "button_page_redirect_slug": "employee-experience",
+        "button-icon-svg": "employ"
+      },
+      {
+        "button_text": "Projects Catalog",
+        "button_page_redirect_slug": "projects",
+        "button-icon-svg": "about-me"
+      }
+    ],
+    "knowledge-lists-items": [
+      {
+        "icon": "wordpress",
+        "url": "https://wordpress.org/",
+        "title": "Wordpress"
+      },
+      {
+        "icon": "prestashop",
+        "url": "https://prestashop.com/",
+        "title": "Prestashop"
+      },
+      {
+        "icon": "html",
+        "url": "https://en.wikipedia.org/wiki/HTML",
+        "title": "HTML"
+      },
+      {
+        "icon": "css",
+        "url": "https://en.wikipedia.org/wiki/CSS",
+        "title": "CSSS"
+      },
+      {
+        "icon": "js",
+        "url": "https://en.wikipedia.org/wiki/JavaScript",
+        "title": "Java Script"
+      },
+      {
+        "icon": "bootstrap",
+        "url": "https://getbootstrap.com/",
+        "title": "Bootstrap"
+      },
+      {
+        "icon": "jquery",
+        "url": "https://jquery.com/",
+        "title": "jQuery"
+      },
+      {
+        "icon": "nodejs",
+        "url": "https://nodejs.org/en",
+        "title": "Node JS"
+      },
+      {
+        "icon": "sass",
+        "url": "https://sass-lang.com/",
+        "title": "SASS"
+      },
+      {
+        "icon": "php",
+        "url": "https://www.php.net/",
+        "title": "PHP"
+      },
+      {
+        "icon": "tpl",
+        "url": "https://www.smarty.net/docs/en/what.is.smarty.tpl",
+        "title": "TPL Smarty"
+      },
+      {
+        "icon": "c++",
+        "url": "https://en.wikipedia.org/wiki/C%2B%2B",
+        "title": "C++"
+      },
+      {
+        "icon": "c",
+        "url": "https://en.wikipedia.org/wiki/C_(programming_language)",
+        "title": "C"
+      },
+      {
+        "icon": "python",
+        "url": "https://www.python.org/",
+        "title": "Python"
+      },
+      {
+        "icon": "sql",
+        "url": "https://en.wikipedia.org/wiki/SQL",
+        "title": "SQL"
+      },
+      {
+        "icon": "xampp",
+        "url": "https://www.apachefriends.org/",
+        "title": "XAMPP"
+      },
+      {
+        "icon": "phpmyadmin",
+        "url": "https://www.phpmyadmin.net/",
+        "title": "PHP My Admin"
+      },
+      {
+        "icon": "vscode",
+        "url": "https://code.visualstudio.com/",
+        "title": "Visual Studio Code"
+      },
+      {
+        "icon": "phpstorm",
+        "url": "https://www.jetbrains.com/phpstorm/",
+        "title": "PhpStorm"
+      },
+      {
+        "icon": "pycharm",
+        "url": "https://www.jetbrains.com/pycharm/",
+        "title": "PyCharm"
+      },
+      {
+        "icon": "sv",
+        "url": "https://www.vegascreativesoftware.com/us/vegas-pro/",
+        "title": "Sony Vegas"
+      },
+      {
+        "icon": "ae",
+        "url": "https://www.adobe.com/products/aftereffects.html",
+        "title": "Adobe After Effects"
+      },
+      {
+        "icon": "photopea",
+        "url": "https://www.photopea.com/",
+        "title": "Photopea"
+      },
+      {
+        "icon": "xaraphoto",
+        "url": "https://www.xara.com/photo-graphic-plus/",
+        "title": "Xara Photo"
+      },
+      {
+        "icon": "blender",
+        "url": "https://www.blender.org/",
+        "title": "Blender"
+      },
+      {
+        "icon": "office",
+        "url": "https://www.office.com/",
+        "title": "Office"
+      },
+      {
+        "icon": "googledrive",
+        "url": "https://www.google.com/drive/",
+        "title": "Google Drive"
+      },
+      {
+        "icon": "github_colors",
+        "url": "https://github.com/",
+        "title": "Git Hub"
+      },
+      {
+        "icon": "gitlab",
+        "url": "https://about.gitlab.com/",
+        "title": "Git Lab"
+      },
+      {
+        "icon": "chatgpt",
+        "url": "https://chat.openai.com/",
+        "title": "Chat GPT"
+      }
+    ]
+  },
+  "work-experience": {
+    "title": "WORK",
+    "subtitle": "EXPERIENCE",
+    "description": "Since 2019, I have actively immersed myself in numerous web projects, collaborating with diverse companies to create a wide range of online solutions. Throughout this period, my expertise has encompassed the development of presentation sites, online stores, web applications, SEO optimization, as well as web design.",
+    "images": {
+      "screen": {
+        "img-path": "design-elements",
+        "img-preview": "monitor-with-project.webp"
+      },
+      "cards": [
+        {
+          "img-path": "projects",
+          "img-preview": "agromir/media-3d-tire-animation/3d-editing-blender-agromir-1.webp"
+        },
+        {
+          "img-path": "projects",
+          "img-preview": "agromir/media-video-editing/video-editing-agromir-1.webp"
+        },
+        {
+          "img-path": "projects",
+          "img-preview": "agromir/web/seo-optimization/seo-optimization-1.webp"
+        },
+        {
+          "img-path": "projects",
+          "img-preview": "reifendirekt/web/home/home.webp"
+        },
+        {
+          "img-path": "projects",
+          "img-preview": "revelnail-avadores/media-photo-editing-banner/photo-editing-revelnail-1.webp"
+        }
+      ]
+    },
+    "buttons": [
+      {
+        "button_text": "More Details",
+        "button_page_redirect": "Experience",
+        "button_page_redirect_slug": "experience"
+      }
+    ],
+    "web-development-section": {
+      "text-list": [
+        {
+          "title": "DESIGN",
+          "description": "I can create a responsive website using HTML and CSS/SCSS to ensure that all your pages look and fit perfectly on every device. Additionally, you have the freedom to choose any theme or design that you would like to implement according to your preferences."
+        },
+        {
+          "title": "SEO",
+          "description": "Boost your website's search engine traffic with my SEO expertise. I'll optimize all pages with keyword-specific meta titles and descriptions, and generate a sitemap for improved visibility."
+        },
+        {
+          "title": "DEVELOPMENT",
+          "description": "I specialize in implementing modules, developing web applications, and creating functions for platforms such as Prestashop and WordPress. My expertise covers a range of languages including PHP, TPL, HTML, CSS, JavaScript, and MySQL."
+        },
+        {
+          "title": "SUPPORT",
+          "description": "I offer comprehensive solutions and assistance for all your project needs, helping you achieve the desired results. For further information, please use the contact form available on the website's contact page."
+        }
+      ],
+      "img-path": "design-elements",
+      "img-list": {
+        "img-laptop": "website-responsive-laptop.webp",
+        "img-tablet": "website-responsive-tablet.webp",
+        "img-phone": "website-responsive-phone.webp"
+      }
+    }
+  },
+  "project-info": {
+    "dates": {
+      "start-date": {
+        "text": "Begining of the webiste:",
+        "date": "04.06.2023"
+      },
+      "end-date": {
+        "text": "Last update of webiste:",
+        "date": "curent-date"
+      }
+    },
+    "copyright": {
+      "text": "©All copyrights reserved by Denis Marginas"
+    }
+  },
+  "hobby": {
+    "title": "List of hobbies",
+    "img-path": "hobby",
+    "list": [
+      {
+        "name": "Video Games",
+        "icon-svg": "hobby-video-games",
+        "img": "hobby-video-games.webp"
+      },
+      {
+        "name": "Cycling",
+        "icon-svg": "hobby-cycling",
+        "img": "hobby-cycling.webp"
+      },
+      {
+        "name": "Table Tennis",
+        "icon-svg": "hobby-ping-pong",
+        "img": "hobby-ping-pong.webp"
+      },
+      {
+        "name": "Photo Editing",
+        "icon-svg": "hobby-photo-editing",
+        "img": "hobby-photo-editing.webp"
+      },
+      {
+        "name": "Video Editing",
+        "icon-svg": "hobby-video-editing",
+        "img": "hobby-video-editing.webp"
+      },
+      {
+        "name": "Web Design",
+        "icon-svg": "hobby-web-design",
+        "img": "hobby-web-design.webp"
+      },
+      {
+        "name": "Computer Hardware",
+        "icon-svg": "hobby-computer-hardware",
+        "img": "hobby-computer-hardware.webp"
+      },
+      {
+        "name": "Recording Cinematics",
+        "icon-svg": "hobby-recording-cinematics",
+        "img": "hobby-recording-cinematics.webp"
+      }
+    ]
+  },
+  "posts-socials": {
+    "blog-username": "Denis Marginas",
+    "blog-description": "Dive into the world of a full-stack web developer and skilled photo-video editor. Explore the intersection of web development and visual storytelling on Denis Ionut Marginas's insightful blog.",
+    "blog-img-logo": "content/img/projects/denismarginas/media/logo/logo2.webp",
+    "blog-img-wallpaper": "content/img/projects/denismarginas/media/banner-linkedin/banner-linkedin-01.webp"
+  },
+  "post-projects": {
+    "img": {
+      "background": {
+        "overlay-texture": "content/img/design-elements/overlay-texture-noise.webp",
+        "overlay-shape-1": "hexagon-3d",
+        "overlay-shape-2": "distortion-plane-3d"
+      },
+      "devices": {
+        "post-laptop": "content/img/design-elements/device-layout-laptop.webp",
+        "post-phone": "content/img/design-elements/device-layout-phone.webp",
+        "tablet-landscape": "content/img/design-elements/device-layout-tablet-landscape.webp",
+        "tablet": "content/img/design-elements/device-layout-tablet.webp",
+        "phone-model-01": "content/img/design-elements/device-layout-phone-model-001.webp",
+        "phone-model-02": "content/img/design-elements/device-layout-phone-model-002.webp",
+        "phone-model-03": "content/img/design-elements/device-layout-phone-model-003.webp",
+        "desktop-model-01": "content/img/design-elements/device-layout-desktop-model-001.webp",
+        "desktop-model-02": "content/img/design-elements/device-layout-desktop-model-002.webp",
+        "desktop-model-03": "content/img/design-elements/device-layout-desktop-model-003.webp"
+      }
+    },
+    "fields": {
+      "web_url": "Website: ",
+      "web_platform": "Platform: ",
+      "web_technology": "Technology: ",
+      "web_plugins": "Modules: ",
+      "project_collaboration": "Project Collaboration: ",
+      "web_project_status": "Web Project Status:",
+      "media_facebook_url": "Facebook: ",
+      "media_instagram_url": "Instagram: ",
+      "media_youtube_url": "YouTube: ",
+      "media_platforms": "Media Platforms: ",
+      "employer_type": "Worked as:",
+      "employer_location": "Worked at:",
+      "date": "Date:"
+    },
+    "index": "false"
+  },
+  "privacy-policy": {
+    "title": "Privacy Policy",
+    "content": [
+      {
+        "subtitle": "Google Analytics",
+        "text": "We use Google Analytics on this website to analyze and understand how visitors interact with our site. Google Analytics is a web analytics service provided by Google Inc. It helps us track and report website traffic, allowing us to improve our content and user experience based on data collected."
+      },
+      {
+        "subtitle": "What Google Analytics Does",
+        "text": "Google Analytics collects data about your visit, including your IP address, browser type, and the pages you view. This information is used to generate reports on website activity and user behavior. The data collected by Google Analytics is aggregated and anonymized, meaning it does not personally identify you."
+      },
+      {
+        "subtitle": "How We Use the Data",
+        "text": "The information collected through Google Analytics helps us understand how users navigate our site, which pages are popular, and how we can enhance our website's performance. We use this data to make informed decisions about our content and services, aiming to provide a better experience for our visitors."
+      },
+      {
+        "subtitle": "Opt-Out",
+        "text": "You can choose to opt-out of Google Analytics tracking by installing the Google Analytics Opt-out Browser Add-on or by disabling cookies in your browser settings. Please note that opting out may affect your experience on our website."
+      },
+      {
+        "text": "For more details on how Google Analytics handles your data, you can refer to Google's Privacy Policy."
+      }
+    ]
+  },
+  "page-not-found": {
+    "title": "404",
+    "description": "NOT FOUND"
+  }
 }

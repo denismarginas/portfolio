@@ -65,8 +65,9 @@
             }
           }
           .cards-container {
-            width: 50%;
+            width: 75%;
             position: relative;
+            perspective: 1400px;
             height: 500px;
             z-index: 1;
             transition: all 0.3s ease-in-out;
@@ -77,35 +78,42 @@
               width: auto;
               height: auto;
               max-width: 100%;
+              box-shadow: 5px 5px 8px rgba( var( --dm-color-black-rgb ), 0.5 );
+              transform-style: preserve-3d;
 
               &:hover {
                 filter: saturate(1);
               }
             }
             .card-1 {
-              width: 20%;
-              left: 14%;
-              top: 34%;
-            }
-            .card-2 {
               width: 40%;
               left: 14%;
-              bottom: 12%;
+              top: 34%;
+              transform: rotate3d(0, -1, -0.01, 55deg) translateZ(-30px);
+            }
+            .card-2 {
+              width: 60%;
+              left: 14%;
+              bottom: 8%;
+              transform: rotate3d(0, -1, -0.01, 55deg) translateZ(-20px);
             }
             .card-3 {
               width: 55%;
               right: 0%;
               top: 30%;
+              transform: rotate3d(0, -1, -0.01, 55deg) translateZ(0px);
             }
             .card-4 {
-              width: 66%;
+              width: 76%;
               left: 22%;
-              top: 0%;
+              top: 10%;
+              transform: rotate3d(0, -1, -0.01, 55deg) translateZ(20px);
             }
             .card-5 {
               width: 50%;
-              right: 20%;
-              bottom: 5%;
+              right: 10%;
+              bottom: 12%;
+              transform: rotate3d(0, -1, -0.01, 55deg) translateZ(25px);
             }
             .bg {
               border-radius: 20%;
@@ -142,7 +150,7 @@
           &.projects-previews {
             > .screen-container {
               > img {
-                height: 500px;
+                height: 520px;
               }
             }
             > .cards-container {
@@ -178,11 +186,11 @@
           &.projects-previews {
             > .screen-container {
               > img {
-                height: 480px;
+                height: 450px;
               }
             }
             > .cards-container {
-              height: 420px;
+              height: 400px;
             }
           }
         }
@@ -195,15 +203,15 @@
         >  li {
           &.projects-previews {
             > .screen-container {
-              margin-left: -25%;
+              margin-left: -35%;
 
               > img {
                 height: 460px;
               }
             }
             > .cards-container {
-              width: 75%;
-              height: 420px;
+              width: 85%;
+              height: 400px;
             }
           }
         }
@@ -256,10 +264,12 @@
 
             > .screen-container {
               width: 50%;
-              margin-left: -20%;
+              margin-left: -30%;
             }
             > .cards-container {
               width: 60%;
+              margin-left: -20%;
+              height: 300px;
             }
           }
         }
@@ -292,7 +302,9 @@
                 }
             }
             > .cards-container {
-              height: 280px;
+              width: 70%;
+              margin-left: -30%;
+              height: 270px;
             }
           }
         }
@@ -315,8 +327,8 @@
               }
             }
             > .cards-container {
-              width: 80%;
-              height: 290px;
+              margin-top: 5%;
+              height: 240px;
 
               .bg {
                 filter: blur(25px);
@@ -339,7 +351,7 @@
             }
             > .cards-container {
               width: 80%;
-              height: 260px;
+              height: 220px;
             }
           }
         }
@@ -364,8 +376,7 @@
               }
             }
             > .cards-container {
-              width: 80%;
-              height: 200px;
+              height: 180px;
             }
           }
         }

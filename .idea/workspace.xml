@@ -6,10 +6,9 @@
       <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/json/data/data-content-personal.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-content-personal.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/json/data/data-posts-projects.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/data/data-posts-projects.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/json/index/index-data-pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/index/index-data-pages.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/json/index/index-data-posts-projects.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/json/index/index-data-posts-projects.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/xml/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/content/xml/sitemap.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/education-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/education-experience.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employee-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/employee-experience.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/experience.html" afterDir="false" />
@@ -48,6 +47,7 @@
       <change beforePath="$PROJECT_DIR$/project-denismarginas-github-portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-denismarginas-github-portfolio.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-denismarginas-google-site.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-denismarginas-google-site.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-denismarginas.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-denismarginas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-devillajewelry.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-devillajewelry.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-dsautocenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-dsautocenter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-earldom.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-earldom.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-edlaparis.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-edlaparis.html" afterDir="false" />
@@ -115,7 +115,6 @@
       <change beforePath="$PROJECT_DIR$/project-woodworkart.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-woodworkart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project-ypages.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-ypages.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/robots.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/social-activity.html" beforeDir="false" afterPath="$PROJECT_DIR$/social-activity.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/summary-experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/summary-experience.html" afterDir="false" />
@@ -276,7 +275,12 @@
       <workItem from="1745754838708" duration="11095000" />
       <workItem from="1745826645090" duration="2914000" />
       <workItem from="1746894518568" duration="2099000" />
-      <workItem from="1748026746351" duration="886000" />
+      <workItem from="1748026746351" duration="1079000" />
+      <workItem from="1748159775274" duration="162000" />
+      <workItem from="1748160006823" duration="145000" />
+      <workItem from="1748160164173" duration="155000" />
+      <workItem from="1748160328503" duration="46000" />
+      <workItem from="1748160384542" duration="168000" />
     </task>
     <servers />
   </component>
