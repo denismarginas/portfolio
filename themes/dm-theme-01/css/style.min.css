@@ -11421,8 +11421,8 @@ body.theme-dark .dm-video-media-content {
   content: "";
   z-index: 1;
   background-color: var(--dm-color-white);
-  -webkit-transform: rotate(40deg);
-          transform: rotate(40deg);
+  -webkit-transform: rotate(41deg);
+          transform: rotate(41deg);
   margin-right: -195%;
   position: absolute;
   top: 0%;
@@ -11491,9 +11491,9 @@ body.theme-dark .dm-video-media-content {
   content: "";
   z-index: 1;
   background-color: var(--dm-color-white);
-  -webkit-transform: rotate(50deg);
-          transform: rotate(50deg);
-  margin-right: -495%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-right: -485%;
   margin-top: -100%;
   position: absolute;
   top: 0%;

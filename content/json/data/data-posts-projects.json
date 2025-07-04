@@ -5849,7 +5849,12 @@
         }
       ],
       "web_project_status": "Done",
-      "project_types": ["online shop", "web content", "web design"],
+      "project_types": [
+        "online shop",
+        "web content",
+        "web design",
+        "web maintenance"
+      ],
       "project_collaboration": ["Individual", "Teamwork"],
       "project_contractor": ["Mentor Marketing Experts"],
       "employer": "Mentor Marketing Experts",
@@ -6829,6 +6834,9 @@
         },
         {
           "name": "ACF to REST API"
+        },
+        {
+          "name": "Yoast SEO"
         }
       ],
       "web_project_status": "Undone",
@@ -7536,6 +7544,9 @@
         {
           "name": "Unlimited Elements for Elementor Premium",
           "svg": "unlimited-elements"
+        },
+        {
+          "name": "Yoast SEO"
         }
       ],
       "web_project_status": "Done",
@@ -7707,6 +7718,9 @@
         {
           "name": "Woocommerce",
           "svg": "woocommerce"
+        },
+        {
+          "name": "Yoast SEO"
         }
       ],
       "web_project_status": "Done",
@@ -7803,6 +7817,9 @@
         {
           "name": "Woocommerce",
           "svg": "woocommerce"
+        },
+        {
+          "name": "Yoast SEO"
         }
       ],
       "web_project_status": "Done",
@@ -7820,6 +7837,758 @@
         "post_color_secondary": "#ffffff",
         "post_color_background": "#ffffff",
         "post_color_text_on_background": "#c4a77c"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-implantsisrael",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "implantsisrael",
+      "title": "Implants Israel",
+      "logo": "logo/logo.webp",
+      "logo_path": "implantsisrael",
+      "logo_type": "webp",
+      "description": "A presentation website was created to capture interest and drive conversions. The project involved both design and content creation. Using Figma for the design and Elementor—enhanced by additional plugins—for content building, I crafted the site's visual layout and textual elements to deliver a cohesive and engaging user experience.",
+      "categories": ["Web Development Projects"],
+      "web_url": "implantsisrael.com",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        },
+        {
+          "name": "Unlimited Elements for Elementor Premium",
+          "svg": "unlimited-elements"
+        },
+        {
+          "name": "Yoast SEO"
+        }
+      ],
+      "web_project_status": "Done",
+      "project_types": ["presentation website", "web design"],
+      "project_collaboration": ["Individual", "Teamwork"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "05.2025",
+        "date_end": "06.2025"
+      },
+      "tags": ["web"],
+      "colors": {
+        "post_color_primary": "#262626",
+        "post_color_secondary": "#ffffff",
+        "post_color_background": "#ffffff",
+        "post_color_text_on_background": "#262626"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-corfuprivatecruises",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "corfuprivatecruises",
+      "title": "Corfu Private Cruises",
+      "logo": "logo/logo.webp",
+      "logo_path": "corfuprivatecruises",
+      "logo_type": "webp",
+      "description": "A cruise booking application built on the WordPress platform, where users can select tours by boat. The tours are created as WooCommerce products with variations such as capacity, duration, and boat type. Using the WooCommerce Product Add-Ons Ultimate plugin, additional custom fields were implemented for enhanced personalization, including the number of guests, departure location, restaurant stop, and departure time.<br><br>This website was developed as a replica of another existing site, requiring the design and functionality to match 100% accurately. The cruise/tour products involve complex field relationships, which were achieved through a combination of plugins, custom PHP, and vanilla JavaScript, ensuring a seamless and interactive user experience on the frontend.<br><br>The site includes custom JavaScript enhancements that update deposit details when variations change, sync visual selectors with WooCommerce options, improve number input usability, toggle cruise feature lists, change the booking button text based on selected dates, adjust guest limits by boat capacity, and filter boat options by passenger count.",
+      "categories": ["Web Development Projects"],
+      "web_url": "corfuprivatecruises.com",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        },
+        {
+          "name": "Unlimited Elements for Elementor Premium",
+          "svg": "unlimited-elements"
+        },
+        {
+          "name": "Dynamic Elementor",
+          "svg": "dynamic-elementor"
+        },
+        {
+          "name": "Code Snippets"
+        },
+        {
+          "name": "Deposits & Partial Payments for WooCommerce - Pro"
+        },
+        {
+          "name": "WooCommerce Product Add-Ons Ultimate"
+        },
+        {
+          "name": "Secure Custom Fields",
+          "svg": "acf"
+        },
+        {
+          "name": "Woocommerce",
+          "svg": "woocommerce"
+        },
+        {
+          "name": "WooCommerce Stripe Gateway"
+        },
+        {
+          "name": "Yoast SEO"
+        }
+      ],
+      "web_project_status": "Done",
+      "project_types": ["online shop", "booking application"],
+      "project_collaboration": ["Individual", "Teamwork"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "05.2025",
+        "date_end": "06.2025"
+      },
+      "tags": ["web", "content-web"],
+      "colors": {
+        "post_color_primary": "#234455",
+        "post_color_secondary": "#ffffff",
+        "post_color_background": "#234455",
+        "post_color_text_on_background": "#ffffff"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>",
+      "<?php echo renderTitle('Deposit Plugin Dynamic Price Update Handler'); ?>",
+      "<?php echo renderImageBlockProject($post_current_data,'web/deposit-plugin-dynamic-price-update-handler/', 'deposit-plugin-dynamic-price-update-handler.webp'); ?>",
+      "<?php echo renderParagraphBlockProject('A JavaScript observer was implemented on the website to monitor changes to the total price of WooCommerce products. This was necessary because the deposit amount depends on the selected product variation.<br>The observer dynamically updates the deposit option when selected, displaying a notification message that shows the price difference between the full amount and the deposit amount. This ensures users always see accurate deposit pricing based on their chosen variation.<br><br>The logic was added due to the behavior of the deposit plugin used on the product page, which allows customers to choose between paying in full or paying a deposit.'); ?>",
+      "<?php echo renderTitle('WooCommerce Custom Options to Variation Sync'); ?>",
+      "<?php echo renderImageBlockProject($post_current_data,'web/wooocommerce-custom-options-to-variation-sync/', 'wooocommerce-custom-options-to-variation-sync.webp'); ?>",
+      "<?php echo renderParagraphBlockProject('This script enables custom product option blocks (e.g., for cruise duration, boat capacity, boat type, or grouped fields) to stay in sync with standard WooCommerce variation selects. It detects user interactions with styled option blocks, updates the underlying select element accordingly, and triggers the necessary change events so WooCommerce can update variation prices, availability, and deposit behaviors properly. This improves compatibility between visual product selectors and WooCommerce’s native variation system.'); ?>",
+      "<?php echo renderTitle('Number Input Customizer'); ?>",
+      "<?php echo renderImageBlockProject($post_current_data,'web/number-input-customizer/', 'number-input-customizer.webp'); ?>",
+      "<?php echo renderParagraphBlockProject('This script enhances the number input fields created by the Product Addons plugin in WooCommerce by transforming them into a user-friendly component with a central value display flanked by customizable minus and plus buttons. It respects minimum, maximum, and step attributes, and dynamically updates both the hidden input and visible number. It provides a clean UI and better user interaction for numeric fields like quantities, hours, or people.'); ?>",
+      "<?php echo renderTitle('ACF Repeater Show More/Less'); ?>",
+      "<?php echo renderImageBlockProject($post_current_data,'web/acf-repeater-show-more-less/', 'acf-repeater-show-more-less.webp'); ?>",
+      "<?php echo renderParagraphBlockProject('Displays a limited number of cruise feature items (from an ACF Repeater field added to the product/post) by default, with a +X more and Show less toggle to expand or collapse the full list.'); ?>",
+      "<?php echo renderTitle('Dynamic Add to Cart Text for Date Picker'); ?>",
+      "<?php echo renderImageBlockProject($post_current_data,'web/dynamic-add-to-cart-text-date/', 'dynamic-add-to-cart-text-date.webp'); ?>",
+      "<?php echo renderParagraphBlockProject('Automatically updates the WooCommerce Add to Cart button text based on the selected date from a Product Add-Ons date field. If no date is selected, it shows Select a Date; otherwise, it changes to Book Now. This enhances booking flow for products like cruises or appointments.'); ?>",
+      "<?php echo renderTitle('Auto Limit Guest Input by Selected Boat Type'); ?>",
+      "<?php echo renderImageBlockProject($post_current_data,'web/auto-limit-guests-by-boat-type/', 'auto-limit-guests-by-boat-type.webp'); ?>",
+      "<?php echo renderParagraphBlockProject('Automatically adjusts the Number of Guests input field based on the selected boat type or capacity variation in a cruise product. When a user selects a boat type (variation), the script reads the number (e.g., capacity) and sets it as the maximum allowed in the number input field. It also updates the UI to reflect the max limit and prevents values above it. Useful when variations are displayed as custom visual selectors instead of standard dropdowns.'); ?>",
+      "<?php echo renderTitle('Passenger Filter Buttons for Elementor Loop'); ?>",
+      "<?php echo renderImageBlockProject($post_current_data,'web/filter-boats-by-passenger-count/', 'filter-boats-by-passenger-count.webp'); ?>",
+      "<?php echo renderParagraphBlockProject('Adds custom filter buttons that dynamically show or hide Elementor loop items (boats) based on their passenger capacity. Each button targets loop items by reading the number of passengers inside a .filter-passengers span element and filters accordingly. Useful for categorizing boat listings into ranges like ≤7 passengers or 8–11 passengers with visual button toggles instead of traditional form elements.'); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-polishroots",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "polishroots",
+      "title": "Polish Roots - LP",
+      "logo": "logo/logo.webp",
+      "logo_path": "polishroots",
+      "logo_type": "webp",
+      "description": "A simple landing page built with Elementor Pro, featuring a custom design to promote a food and culture tour service in Warsaw and Krakow.",
+      "categories": ["Web Development Projects"],
+      "web_url": "polishroots.net",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        }
+      ],
+      "web_project_status": "Done",
+      "project_types": ["landing page", "web design"],
+      "project_collaboration": ["Teamwork"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "07.2025",
+        "date_end": "07.2025"
+      },
+      "tags": ["web"],
+      "colors": {
+        "post_color_primary": "#252f55",
+        "post_color_secondary": "#ffffff",
+        "post_color_background": "#252f55",
+        "post_color_text_on_background": "#ffffff"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-lagoafogo",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "lagoafogo",
+      "title": "Lagoa do Fogo - LP",
+      "logo": "logo/logo.webp",
+      "logo_path": "lagoafogo",
+      "logo_type": "webp",
+      "description": "A simple landing page showcasing a travel destination, highlighting the most important information. Built on WordPress using Elementor Pro. This website was not created for a client but was part of additional projects included under Mentor Marketing travel websites.<br><br>The footer features a custom carousel developed by me using vanilla JavaScript, HTML, and CSS. It integrates with a custom API from mentor-marketing.com, which provides a list of travel websites stored as custom posts on the company site. This list is used to dynamically generate the carousel items on document load.",
+      "categories": ["Web Development Projects"],
+      "web_url": "lagoafogo.com",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        },
+        {
+          "name": "Yoast SEO"
+        }
+      ],
+      "web_project_status": "Done",
+      "project_types": ["landing page", "web design"],
+      "project_collaboration": ["Teamwork"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "03.2025",
+        "date_end": "03.2025"
+      },
+      "tags": ["web"],
+      "colors": {
+        "post_color_primary": "#467d2a",
+        "post_color_secondary": "#ffffff",
+        "post_color_background": "#467d2a",
+        "post_color_text_on_background": "#ffffff"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-pontadaferraria",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "pontadaferraria",
+      "title": "Ponta da Ferraria - LP",
+      "logo": "logo/logo.webp",
+      "logo_path": "pontadaferraria",
+      "logo_type": "webp",
+      "description": "A simple landing page showcasing a travel destination, highlighting the most important information. Built on WordPress using Elementor Pro. This website was not created for a client but was part of additional projects included under Mentor Marketing travel websites.<br><br>The footer features a custom carousel developed by me using vanilla JavaScript, HTML, and CSS. It integrates with a custom API from mentor-marketing.com, which provides a list of travel websites stored as custom posts on the company site. This list is used to dynamically generate the carousel items on document load.",
+      "categories": ["Web Development Projects"],
+      "web_url": "pontadaferraria.com",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        },
+        {
+          "name": "Yoast SEO"
+        }
+      ],
+      "web_project_status": "Done",
+      "project_types": ["landing page", "web design"],
+      "project_collaboration": ["Teamwork"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "03.2025",
+        "date_end": "03.2025"
+      },
+      "tags": ["web"],
+      "colors": {
+        "post_color_primary": "#415d7d",
+        "post_color_secondary": "#ffffff",
+        "post_color_background": "#415d7d",
+        "post_color_text_on_background": "#ffffff"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-lagoaempadadas",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "lagoaempadadas",
+      "title": "Lagoa Empadadas - LP",
+      "logo": "logo/logo.webp",
+      "logo_path": "lagoaempadadas",
+      "logo_type": "webp",
+      "description": "A simple landing page showcasing a travel destination, highlighting the most important information. Built on WordPress using Elementor Pro. This website was not created for a client but was part of additional projects included under Mentor Marketing travel websites.<br><br>The footer features a custom carousel developed by me using vanilla JavaScript, HTML, and CSS. It integrates with a custom API from mentor-marketing.com, which provides a list of travel websites stored as custom posts on the company site. This list is used to dynamically generate the carousel items on document load.",
+      "categories": ["Web Development Projects"],
+      "web_url": "lagoaempadadas.com",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        },
+        {
+          "name": "Yoast SEO"
+        }
+      ],
+      "web_project_status": "Done",
+      "project_types": ["landing page", "web design"],
+      "project_collaboration": ["Teamwork"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "03.2025",
+        "date_end": "03.2025"
+      },
+      "tags": ["web"],
+      "colors": {
+        "post_color_primary": "#3e533f",
+        "post_color_secondary": "#ffffff",
+        "post_color_background": "#3e533f",
+        "post_color_text_on_background": "#ffffff"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-hotspringssaomiguel",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "hotspringssaomiguel",
+      "title": "Hot Springs São Miguel - LP",
+      "logo": "logo/logo.webp",
+      "logo_path": "hotspringssaomiguel",
+      "logo_type": "webp",
+      "description": "A simple landing page showcasing a travel destination, highlighting the most important information. Built on WordPress using Elementor Pro. This website was not created for a client but was part of additional projects included under Mentor Marketing travel websites.<br><br>The footer features a custom carousel developed by me using vanilla JavaScript, HTML, and CSS. It integrates with a custom API from mentor-marketing.com, which provides a list of travel websites stored as custom posts on the company site. This list is used to dynamically generate the carousel items on document load.",
+      "categories": ["Web Development Projects"],
+      "web_url": "hotspringssaomiguel.com",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        },
+        {
+          "name": "Yoast SEO"
+        }
+      ],
+      "web_project_status": "Done",
+      "project_types": ["landing page", "web design"],
+      "project_collaboration": ["Teamwork"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "04.2025",
+        "date_end": "04.2025"
+      },
+      "tags": ["web"],
+      "colors": {
+        "post_color_primary": "#6d7e51",
+        "post_color_secondary": "#ffffff",
+        "post_color_background": "#6d7e51",
+        "post_color_text_on_background": "#ffffff"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-lakefurnas",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "lakefurnas",
+      "title": "Lake Furnas",
+      "logo": "logo/logo.webp",
+      "logo_path": "lakefurnas",
+      "logo_type": "webp",
+      "description": "A simple landing page showcasing a travel destination, highlighting the most important information. Built on WordPress using Elementor Pro. This website was not created for a client but was part of additional projects included under Mentor Marketing travel websites.<br><br>The footer features a custom carousel developed by me using vanilla JavaScript, HTML, and CSS. It integrates with a custom API from mentor-marketing.com, which provides a list of travel websites stored as custom posts on the company site. This list is used to dynamically generate the carousel items on document load.",
+      "categories": ["Web Development Projects"],
+      "web_url": "lakefurnas.com",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        },
+        {
+          "name": "Yoast SEO"
+        }
+      ],
+      "web_project_status": "Done",
+      "project_types": ["presentation website", "web design"],
+      "project_collaboration": ["Teamwork"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "06.2025",
+        "date_end": "06.2025"
+      },
+      "tags": ["web"],
+      "colors": {
+        "post_color_primary": "#135559",
+        "post_color_secondary": "#ffffff",
+        "post_color_background": "#135559",
+        "post_color_text_on_background": "#ffffff"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-dabocadoinferno",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "dabocadoinferno",
+      "title": "da Boca do Inferno",
+      "logo": "logo/logo.webp",
+      "logo_path": "dabocadoinferno",
+      "logo_type": "webp",
+      "description": "A simple landing page showcasing a travel destination, highlighting the most important information. Built on WordPress using Elementor Pro. This website was not created for a client but was part of additional projects included under Mentor Marketing travel websites.<br><br>The footer features a custom carousel developed by me using vanilla JavaScript, HTML, and CSS. It integrates with a custom API from mentor-marketing.com, which provides a list of travel websites stored as custom posts on the company site. This list is used to dynamically generate the carousel items on document load.",
+      "categories": ["Web Development Projects"],
+      "web_url": "dabocadoinferno.com",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        },
+        {
+          "name": "Yoast SEO"
+        }
+      ],
+      "web_project_status": "Done",
+      "project_types": ["presentation website", "web design"],
+      "project_collaboration": ["Teamwork"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "06.2025",
+        "date_end": "06.2025"
+      },
+      "tags": ["web"],
+      "colors": {
+        "post_color_primary": "#363e4a",
+        "post_color_secondary": "#ffffff",
+        "post_color_background": "#363e4a",
+        "post_color_text_on_background": "#ffffff"
       }
     },
     "post_content": [
