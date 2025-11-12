@@ -8596,5 +8596,163 @@
       "<?php echo renderSectionWebProject($post_current_data); ?>"
     ],
     "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-terranostrapark",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "terranostrapark",
+      "title": "Terra Nostra Park - LP",
+      "logo": "logo/logo.webp",
+      "logo_path": "terranostrapark",
+      "logo_type": "webp",
+      "description": "A simple landing page showcasing a travel destination, highlighting the most important information. Built on WordPress using Elementor Pro. This website was not created for a client but was part of additional projects included under Mentor Marketing travel websites.<br><br>The footer features a custom carousel developed by me using vanilla JavaScript, HTML, and CSS. It integrates with a custom API from mentor-marketing.com, which provides a list of travel websites stored as custom posts on the company site. This list is used to dynamically generate the carousel items on document load.",
+      "categories": ["Web Development Projects"],
+      "web_url": "terranostrapark.com",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        },
+        {
+          "name": "Yoast SEO"
+        }
+      ],
+      "web_project_status": "Done",
+      "project_types": ["landing page", "web design"],
+      "project_collaboration": ["Teamwork"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "11.2025",
+        "date_end": "11.2025"
+      },
+      "tags": ["web"],
+      "colors": {
+        "post_color_primary": "#2d9556",
+        "post_color_secondary": "#ffffff",
+        "post_color_background": "#ffffff",
+        "post_color_text_on_background": "#2d9556"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-dereh-haski",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "dereh-haski",
+      "title": "Dereh Haski",
+      "logo": "logo/logo.webp",
+      "logo_path": "dereh-haski",
+      "logo_type": "webp",
+      "description": "Simple landing page promoting an international Ski and Snowboard Instructor Course in Gudauri, Georgia, built on WordPress using Elementor Pro. The page highlights key course information, including levels, pricing, schedules, and the benefits of obtaining an internationally recognized ISIA certification. It features sections on accommodation, transfers, ski passes, and exclusive career opportunities for top graduates to join the Derech HaSki instructor team across Europe and beyond.",
+      "categories": ["Web Development Projects"],
+      "web_url": "dereh-haski.co.il",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        }
+      ],
+      "web_project_status": "Done",
+      "project_types": [
+        "web maintenance",
+        "landing page",
+        "web design",
+        "web content"
+      ],
+      "project_collaboration": ["Teamwork"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "11.2025",
+        "date_end": "11.2025"
+      },
+      "tags": ["web", "content-web"],
+      "colors": {
+        "post_color_primary": "#00beff",
+        "post_color_secondary": "#ffffff",
+        "post_color_background": "#ffffff",
+        "post_color_text_on_background": "#00beff"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
   }
 ]

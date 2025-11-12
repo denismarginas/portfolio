@@ -251,6 +251,12 @@ Allow: /
 Meta-robots: noindex, nofollow
 
 User-agent: *
+Disallow: /project-dereh-haski
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
 Disallow: /project-devillajewelry
 Crawl-delay: 10
 Allow: /
@@ -642,6 +648,12 @@ Meta-robots: noindex, nofollow
 
 User-agent: *
 Disallow: /project-symbol-podcasts
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
+Disallow: /project-terranostrapark
 Crawl-delay: 10
 Allow: /
 Meta-robots: noindex, nofollow
