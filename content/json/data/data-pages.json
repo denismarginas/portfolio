@@ -1,123 +1,107 @@
 [
-    {
-        "file": "index",
-        "content": [
-            ["about", "compress"],
-            ["categories"],
-            ["work-experience"]
-        ]
-    },
-    {
-        "file": "404",
-        "content": [ 
-            ["404"]
-        ] 
-    },
-    {
-        "file": "home",
-        "content": [
-            ["about", "compress"],
-            ["categories"],
-            ["work-experience"]
-        ]
-    },
-    {
-        "file": "about",
-        "content": [
-            ["about", "standard"],
-            ["hobby-list"],
-            ["carousel-post-items", "compress"]
-        ]
-    },
-    {
-        "file": "contact",
-        "content": [
-            ["contact-data"],
-            ["resume-data"],
-            ["contact-details"]
-        ]
-    },
-    {
-        "file": "experience",
-        "content": [
-            ["experience-knowledge", "standard"],
-            ["categories"],
-            ["portfolio-showcase"],
-            ["carousel-post-items", "standard"]
-        ]
-    },
-    {
-        "file": "summary-experience",
-        "content": [
-            ["summary-experience"]
-        ]
-    },
-    {
-        "file": "employee-experience",
-        "content": [
-            ["hero", "compress-squares", {"filename": "employee-experience"}],
-            ["job-list"]
-        ]
-    },
-    {
-        "file": "education-experience",
-        "content": [
-            ["hero", "compress-squares", {"filename": "education-experience"}],
-            ["education-list"]
-        ]
-    },
-    {
-        "file": "search",
-        "content": [
-            ["search"]
-        ]
-    },
-    {
-        "file": "workstations",
-        "content": [
-            ["hero", "compress-squares", {"filename": "workstations"}],
-            ["workstation-list"]
-        ]
-    },
-    {
-        "file": "projects",
-        "content": [
-            ["hero", "compress-waves", {"filename": "projects"}],
-            ["post-items"]
-        ]
-    },
-    {
-        "file": "web-development-projects",
-        "content": [
-            ["hero", "compress-waves", {"filename": "web-development-projects"}],
-            ["post-items-web"]
-        ]
-    },
-    {
-        "file": "visual-media-projects",
-        "content": [
-            ["hero", "compress-waves", {"filename": "visual-media-projects"}],
-            ["post-items-media"]
-        ]
-    },
-    {
-        "file": "miscellaneous-projects",
-        "content": [
-            ["hero", "compress-waves", {"filename": "miscellaneous-projects"}],
-            ["post-items-miscellaneous"]
-        ]
-    },
-    {
-        "file": "social-activity",
-        "content": [
-            ["blog-header"],
-            ["blog-posts"]
-        ]
-    },
-    {
-        "file": "privacy-policy",
-        "content": [
-            ["gdpr"]
-        ]
-    }
+  {
+    "file": "index",
+    "content": [["about", "compress"], ["categories"], ["work-experience"]]
+  },
+  {
+    "file": "404",
+    "content": [["404"]]
+  },
+  {
+    "file": "home",
+    "content": [["about", "compress"], ["categories"], ["work-experience"]]
+  },
+  {
+    "file": "about",
+    "content": [
+      ["about", "standard"],
+      ["hobby-list"],
+      ["carousel-post-items", "compress"]
+    ]
+  },
+  {
+    "file": "contact",
+    "content": [["contact-data"], ["resume-data"], ["contact-details"]]
+  },
+  {
+    "file": "experience",
+    "content": [
+      ["experience-knowledge", "standard"],
+      ["categories"],
+      ["portfolio-showcase"],
+      ["carousel-post-items", "standard"]
+    ]
+  },
+  {
+    "file": "summary-experience",
+    "content": [["summary-experience"]]
+  },
+  {
+    "file": "employee-experience",
+    "content": [
+      ["hero", "compress-squares", { "filename": "employee-experience" }],
+      ["job-list"]
+    ]
+  },
+  {
+    "file": "education-experience",
+    "content": [
+      ["hero", "compress-squares", { "filename": "education-experience" }],
+      ["education-list"]
+    ]
+  },
+  {
+    "file": "search",
+    "content": [["search"]]
+  },
+  {
+    "file": "workstations",
+    "content": [
+      ["hero", "compress-squares", { "filename": "workstations" }],
+      ["workstation-list"]
+    ]
+  },
+  {
+    "file": "video-games",
+    "content": [
+      ["hero", "compress-squares", { "filename": "video-games" }],
+      ["video-games-list"]
+    ]
+  },
+  {
+    "file": "projects",
+    "content": [
+      ["hero", "compress-waves", { "filename": "projects" }],
+      ["post-items"]
+    ]
+  },
+  {
+    "file": "web-development-projects",
+    "content": [
+      ["hero", "compress-waves", { "filename": "web-development-projects" }],
+      ["post-items-web"]
+    ]
+  },
+  {
+    "file": "visual-media-projects",
+    "content": [
+      ["hero", "compress-waves", { "filename": "visual-media-projects" }],
+      ["post-items-media"]
+    ]
+  },
+  {
+    "file": "miscellaneous-projects",
+    "content": [
+      ["hero", "compress-waves", { "filename": "miscellaneous-projects" }],
+      ["post-items-miscellaneous"]
+    ]
+  },
+  {
+    "file": "social-activity",
+    "content": [["blog-header"], ["blog-posts"]]
+  },
+  {
+    "file": "privacy-policy",
+    "content": [["gdpr"]]
+  }
 ]

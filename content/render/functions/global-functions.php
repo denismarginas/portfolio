@@ -1,26 +1,30 @@
 <?php
 
-function checkEcho($var) {
+function checkEcho($var)
+{
     if (isset($var) && !empty($var)) {
         echo $var;
     }
 }
 
-function addHttps($url) {
+function addHttps($url)
+{
     if (!empty($url) && strpos($url, 'https://') !== 0) {
         $url = 'https://' . $url;
     }
     return $url;
 }
 
-function removeHttps($url) {
+function removeHttps($url)
+{
     if (!empty($url) && strpos($url, 'https://') === 0) {
         $url = substr($url, 8);
     }
     return $url;
 }
 
-function getImagesInFolder($path) {
+function getImagesInFolder($path)
+{
     $imageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
     $images = [];
 
@@ -40,7 +44,8 @@ function getImagesInFolder($path) {
     return $images;
 }
 
-function getVideosInFolder($path) {
+function getVideosInFolder($path)
+{
     $videoExtensions = ['webm', 'mp4', 'avi'];
     $videos = [];
 
@@ -60,7 +65,8 @@ function getVideosInFolder($path) {
     return $videos;
 }
 
-function getFilesInFolder($path) {
+function getFilesInFolder($path)
+{
     $files = [];
     if (is_dir($path)) {
         $items = scandir($path);
@@ -79,7 +85,8 @@ function getFilesInFolder($path) {
     return $files;
 }
 
-function getDirectoriesInFolder($path) {
+function getDirectoriesInFolder($path)
+{
     $directories = [];
     if (is_dir($path)) {
         $items = scandir($path);
@@ -98,7 +105,8 @@ function getDirectoriesInFolder($path) {
     return $directories;
 }
 
-function countFilesInFolder($folderPath) {
+function countFilesInFolder($folderPath)
+{
     $fileCount = 0;
 
     if (is_dir($folderPath)) {
@@ -124,7 +132,8 @@ function countFilesInFolder($folderPath) {
     return $fileCount;
 }
 
-function listDesign($nr) {
+function listDesign($nr)
+{
     switch ($nr) {
         case ($nr % 13 === 0):
             return "items-divisible-by-13";
@@ -147,7 +156,8 @@ function listDesign($nr) {
     }
 }
 
-function renderImage($src, $popup = false, $class = false, $lazyLoad = true, $additionalAttributes = array()) {
+function renderImage($src, $popup = false, $class = false, $lazyLoad = true, $additionalAttributes = array())
+{
     $src_current = __DIR__ . "/../../../" . $src;
 
     if (!file_exists($src_current)) {
@@ -170,10 +180,10 @@ function renderImage($src, $popup = false, $class = false, $lazyLoad = true, $ad
 
     $add_class = "";
     if (isset($class) and !empty($class)) {
-        $add_class = 'class="'.$class.'" ';
+        $add_class = 'class="' . $class . '" ';
     }
 
-    $html = '<img '.$add_class.'src="' . $src . '" width="' . $width . '" height="' . $height . '" alt="' . $alt . '"';
+    $html = '<img ' . $add_class . 'src="' . $src . '" width="' . $width . '" height="' . $height . '" alt="' . $alt . '"';
 
     foreach ($additionalAttributes as $attr => $value) {
         $html .= ' ' . $attr . '="' . $value . '"';
@@ -190,24 +200,25 @@ function renderImage($src, $popup = false, $class = false, $lazyLoad = true, $ad
     return $html;
 }
 
-function renderVideo($src, $thumbnail = NULL, $thumbnail_bg = NULL) {
+function renderVideo($src, $thumbnail = NULL, $thumbnail_bg = NULL)
+{
     $html = '<div class="video-container paused" data-volume-level="high">';
 
-    if(isset($thumbnail) && !empty($thumbnail)) {
-      $html .= '<div class="thumbnail"';
+    if (isset($thumbnail) && !empty($thumbnail)) {
+        $html .= '<div class="thumbnail"';
 
-      if(isset($thumbnail_bg) && !empty($thumbnail_bg)) {
-        $html .= 'style="background-image: url(\'' . $thumbnail_bg . '\')"';
+        if (isset($thumbnail_bg) && !empty($thumbnail_bg)) {
+            $html .= 'style="background-image: url(\'' . $thumbnail_bg . '\')"';
 
-      }
-      $html .= '>';
-      $html .= renderImage($thumbnail);
-      $html .= '</div>';
-      $html .= '<div class="show-play" style="display:flex;">'.SVGRenderer::getSVG('play').'</div>';
-      $html .= '<div class="show-pause" style="display:none;">'.SVGRenderer::getSVG('pause').'</div>';
+        }
+        $html .= '>';
+        $html .= renderImage($thumbnail);
+        $html .= '</div>';
+        $html .= '<div class="show-play" style="display:flex;">' . SVGRenderer::getSVG('play') . '</div>';
+        $html .= '<div class="show-pause" style="display:none;">' . SVGRenderer::getSVG('pause') . '</div>';
     }
 
-    $html   .= '<div class="video-controls-container">
+    $html .= '<div class="video-controls-container">
                   <div class="timeline-container">
                     <div class="timeline">
                         <div class="thumb-indicator"></div>
@@ -254,13 +265,14 @@ function renderVideo($src, $thumbnail = NULL, $thumbnail_bg = NULL) {
                     </button>
                   </div>
                 </div>
-                <video src="'.$src.'">
+                <video src="' . $src . '">
                 </video>
               </div>';
     return $html;
 }
 
-function renderSlider($items_content, $show_arrows = true, $show_dots = true, $show_numbers = false) {
+function renderSlider($items_content, $show_arrows = true, $show_dots = true, $show_numbers = false)
+{
     $navigation = ($show_arrows ? 'arrows' : '') . ($show_dots ? ' dots' : '');
 
     $html = '
@@ -268,11 +280,11 @@ function renderSlider($items_content, $show_arrows = true, $show_dots = true, $s
             <div class="slider-wrapper">
                 <div class="slider-container">';
 
-                    foreach ($items_content as $key => $item_content) {
-                        $number_text = ($show_numbers ? '<div class="number-text">' . ($key + 1) . ' / ' . count($items_content) . '</div>' : '');
-                        $html .= '
+    foreach ($items_content as $key => $item_content) {
+        $number_text = ($show_numbers ? '<div class="number-text">' . ($key + 1) . ' / ' . count($items_content) . '</div>' : '');
+        $html .= '
                                 <div class="slider-element">' . $number_text . $item_content . '</div>';
-                    }
+    }
 
     $html .= ' </div>
             </div>
@@ -281,70 +293,76 @@ function renderSlider($items_content, $show_arrows = true, $show_dots = true, $s
     return $html;
 }
 
-function extractYearFromDateString($dateString) {
-        $formats = [
-          'd.m.Y',
-          'm.Y',
-          'Y',
-          'd/m/Y',
-          'm/Y',
-          'd-m-Y',
-          'm-Y',
-          'd m Y',
-          'm Y'
-        ];
+function extractYearFromDateString($dateString)
+{
+    $formats = [
+        'd.m.Y',
+        'm.Y',
+        'Y',
+        'd/m/Y',
+        'm/Y',
+        'd-m-Y',
+        'm-Y',
+        'd m Y',
+        'm Y'
+    ];
 
-        foreach ($formats as $format) {
+    foreach ($formats as $format) {
 
-            $dateTime = DateTime::createFromFormat($format, $dateString);
+        $dateTime = DateTime::createFromFormat($format, $dateString);
 
-            if ($dateTime) {
-                return $dateTime->format('Y');
-            }
+        if ($dateTime) {
+            return $dateTime->format('Y');
         }
-        return "Unable to extract year from the date string.";
+    }
+    return "Unable to extract year from the date string.";
 }
 
-function removeSpaceAndLowercase($string) {
+function removeSpaceAndLowercase($string)
+{
     $string = str_replace(' ', '', $string);
     return strtolower($string);
 }
 
-function changeSpaceWithHyphenAndLowercase($string) {
+function changeSpaceWithHyphenAndLowercase($string)
+{
     $string = str_replace(' ', '-', $string);
     return strtolower($string);
 }
 
-function getFirstCharacters($string, $n) {
+function getFirstCharacters($string, $n)
+{
     return substr($string, 0, $n);
 }
 
-function seoImplicitFields() {
+function seoImplicitFields()
+{
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
     $google_site_verification = $jsonGlobalData["google-site-verification"];
 
-    if( !isset($google_site_verification) && $google_site_verification != "" ) {
+    if (!isset($google_site_verification) && $google_site_verification != "") {
         $google_site_verification = "Not set.";
     }
     $url_domain = getURL();
     $seoImplicitFieldsStrucutre = [
         'charset' => '<meta charset="UTF-8">',
         'viewport' => '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
-        'title' => '<title>'.$jsonGlobalData["site-identity"].'</title>',
-        'description' => '<meta name="description" content="'.$jsonGlobalData["site-description"].'"/>',
-        'keywords' => '<meta name="keywords" content="'.$jsonGlobalData["site-identity"].'"/>',
+        'title' => '<title>' . $jsonGlobalData["site-identity"] . '</title>',
+        'description' => '<meta name="description" content="' . $jsonGlobalData["site-description"] . '"/>',
+        'keywords' => '<meta name="keywords" content="' . $jsonGlobalData["site-identity"] . '"/>',
         'post-type' => '<meta name="post-type" content="page"/>',
         'slug' => '<meta name="slug" content=""/>',
-        'google-site-verification' => '<meta name="google-site-verification" content="'.$google_site_verification.'">',
+        'google-site-verification' => '<meta name="google-site-verification" content="' . $google_site_verification . '">',
         'robots' => '<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">',
-        'canonical' => '<link rel="canonical" href="'.$url_domain.'">',
-        'favicon' => '<link rel="icon" type="image/x-icon" href="content/img'.$jsonGlobalData['favicon'].'">'
+        'canonical' => '<link rel="canonical" href="' . $url_domain . '">',
+        'favicon' => '<link rel="icon" type="image/x-icon" href="content/img' . $jsonGlobalData['favicon'] . '">'
 
     ];
     return $seoImplicitFieldsStrucutre;
 }
 
-function seoAddInTag($seo_data) {
+function seoAddInTag($seo_data)
+{
     $seo_structure = [
         'title' => '<title>%s</title>',
         'description' => '<meta name="description" content="%s"/>',
@@ -369,7 +387,8 @@ function seoAddInTag($seo_data) {
     return $seo_new_structure;
 }
 
-function seoAddInContent($seo_data, $existing_content_html) {
+function seoAddInContent($seo_data, $existing_content_html)
+{
     $new_seo_fields_content = seoAddInTag($seo_data);
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
 
@@ -421,10 +440,10 @@ function seoAddInContent($seo_data, $existing_content_html) {
     if (isset($seo_data["index"])) {
         $index_value = "Unset correctly, true/false.";
 
-        if( $seo_data["index"] == "false") {
+        if ($seo_data["index"] == "false") {
             $index_value = "noindex, nofollow";
         }
-        if( $seo_data["index"] == "true") {
+        if ($seo_data["index"] == "true") {
             $index_value = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
         }
         $pattern_robots = '/<meta\s+name="robots"\s+content=".*?"\s*\/?>/i';
@@ -443,19 +462,20 @@ function seoAddInContent($seo_data, $existing_content_html) {
     return $existing_content_html;
 }
 
-function getURL() {
+function getURL()
+{
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
     $siteUrl = $jsonGlobalData["url"];
 
 
-    if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+    if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
         $url = "https://";
     else
         $url = "http://";
-    $url.= $_SERVER['HTTP_HOST'];
-    $url.= $_SERVER['REQUEST_URI'];
+    $url .= $_SERVER['HTTP_HOST'];
+    $url .= $_SERVER['REQUEST_URI'];
 
-    if($siteUrl) {
+    if ($siteUrl) {
         $url = $siteUrl;
     } else {
         $url = "http://localhost/";
@@ -464,10 +484,11 @@ function getURL() {
     return $url;
 }
 
-function getDataJson($jsonFileName, $jsonFilePathFolder = null, $extractRowNumber = null) {
+function getDataJson($jsonFileName, $jsonFilePathFolder = null, $extractRowNumber = null)
+{
     if ($jsonFileName !== null) {
 
-        $jsonFolderPath =  '/../../json/';
+        $jsonFolderPath = '/../../json/';
 
         if (pathinfo($jsonFileName, PATHINFO_EXTENSION) !== 'json') {
             $jsonFileName .= '.json';
@@ -497,18 +518,20 @@ function getDataJson($jsonFileName, $jsonFilePathFolder = null, $extractRowNumbe
     }
 }
 
-function stringSeoSiteName() {
+function stringSeoSiteName()
+{
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
     $siteName = $jsonGlobalData["site-identity"];
-    $stringSeoSiteName ="";
+    $stringSeoSiteName = "";
 
-    if( isset($siteName) && !empty($siteName) ) {
-        $stringSeoSiteName = " | ".$siteName;
+    if (isset($siteName) && !empty($siteName)) {
+        $stringSeoSiteName = " | " . $siteName;
     }
     return $stringSeoSiteName;
 }
 
-function getSeoFromCurrentPageData($filename) {
+function getSeoFromCurrentPageData($filename)
+{
     $jsonSeoData = getDataJson('data-pages-seo', 'data');
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
     $stringSeoSiteName = stringSeoSiteName();
@@ -518,18 +541,18 @@ function getSeoFromCurrentPageData($filename) {
         foreach ($jsonSeoData as $pageData) {
             if ($pageData['file'] === $filename) {
 
-                if( str_contains($pageData["seo"]["title"], $siteName)) {
+                if (str_contains($pageData["seo"]["title"], $siteName)) {
                     $titleSeo = $pageData["seo"]["title"];
                 } else {
                     $titleSeo = $pageData["seo"]["title"] . $stringSeoSiteName;
                 }
 
                 $seo = [
-                  "title" => $titleSeo,
-                  "description" => $pageData["seo"]["description"],
-                  "keywords" => $pageData["seo"]["keywords"],
-                  "slug" => $pageData["seo"]["slug"],
-                  "index" => $pageData["seo"]["index"]
+                    "title" => $titleSeo,
+                    "description" => $pageData["seo"]["description"],
+                    "keywords" => $pageData["seo"]["keywords"],
+                    "slug" => $pageData["seo"]["slug"],
+                    "index" => $pageData["seo"]["index"]
                 ];
                 return $seo;
             }
@@ -539,9 +562,10 @@ function getSeoFromCurrentPageData($filename) {
     return null;
 }
 
-function getDataHero($filename) {
+function getDataHero($filename)
+{
 
-    if(!isset($jsonGlobalSeo)) {
+    if (!isset($jsonGlobalSeo)) {
         $jsonGlobalSeo = getDataJson('data-pages-seo', 'data');
     }
 
@@ -550,7 +574,7 @@ function getDataHero($filename) {
     $hero_bg_img = "img-placeholder.webp";
     $hero_description = "";
 
-    if(isset($filename)) {
+    if (isset($filename)) {
         foreach ($jsonGlobalSeo as $item) {
             if (isset($item['file']) && $filename == $item['file'] && isset($item['hero'])) {
                 $heroData = $item['hero'];
@@ -558,7 +582,7 @@ function getDataHero($filename) {
                 $hero_title = $heroData['title'];
                 $hero_bg_img_path = $heroData['bg_img_path'];
                 $hero_bg_img = $heroData['bg_img'];
-                if(isset($heroData['description'])) {
+                if (isset($heroData['description'])) {
                     $hero_description = $heroData['description'];
                 }
             }
@@ -566,26 +590,28 @@ function getDataHero($filename) {
     }
 
     return [
-      'hero_title' => $hero_title,
-      'hero_bg_img_path' => $hero_bg_img_path,
-      'hero_bg_img' => $hero_bg_img,
-      'hero_description' => $hero_description
+        'hero_title' => $hero_title,
+        'hero_bg_img_path' => $hero_bg_img_path,
+        'hero_bg_img' => $hero_bg_img,
+        'hero_description' => $hero_description
     ];
 }
 
-function executePhpInString($string, $params = []) {
+function executePhpInString($string, $params = [])
+{
     // Extract variables from the $params array
     extract($params);
 
     ob_start();
-    eval('?>' . $string . '<?php ');
+    eval ('?>' . $string . '<?php ');
     $output = ob_get_contents();
     ob_end_clean();
 
     return $output;
 }
 
-function calculateDaysWorkedInMonth($currentDate, $jobs) {
+function calculateDaysWorkedInMonth($currentDate, $jobs)
+{
     $daysWorked = 0;
 
     foreach ($jobs as $job) {
@@ -609,7 +635,8 @@ function calculateDaysWorkedInMonth($currentDate, $jobs) {
     return $daysWorked;
 }
 
-function calculatePersonAge(): int {
+function calculatePersonAge(): int
+{
     $birthDate = getDataJson('data-content-personal', 'data')["about"]["birth-date"];
     $age = 0;
 
@@ -623,82 +650,83 @@ function calculatePersonAge(): int {
     return $age;
 }
 
-function renderContactFormField($contact_form_field) {
-    if($contact_form_field["type"] == "text" || $contact_form_field["type"] == "input") : ?>
-        <input id="<?php echo $contact_form_field["name"]; ?>" type="text" name="<?php echo $contact_form_field["name"]; ?>" placeholder="<?php echo $contact_form_field["placeholder"]; ?>" value=""
-            <?php if(isset($contact_form_field["field-name-extern"]) && !empty($contact_form_field["field-name-extern"])) :
-                echo 'field-name-extern="'.$contact_form_field["field-name-extern"].'"';
-            endif;?>
-            <?php if(isset($contact_form_field["field-name-step"]) ) :
-                echo 'field-name-step="'.$contact_form_field["field-name-step"].'"';
-            endif;?>
-        >
-    <?php elseif($contact_form_field["type"] == "message" || $contact_form_field["type"] == "textarea") : ?>
-        <textarea id="<?php echo $contact_form_field["name"]; ?>" type="text" name="<?php echo $contact_form_field["name"]; ?>" placeholder="<?php echo $contact_form_field["placeholder"]; ?>" value=""
-            <?php if(isset($contact_form_field["field-name-extern"]) && !empty($contact_form_field["field-name-extern"])) :
-                echo 'field-name-extern="'.$contact_form_field["field-name-extern"].'"';
-            endif;?>
-            <?php if(isset($contact_form_field["field-name-step"]) ) :
-                echo 'field-name-step="'.$contact_form_field["field-name-step"].'"';
-            endif;?>
-        ></textarea>
-    <?php elseif($contact_form_field["type"] == "radio" || $contact_form_field["type"] == "radiobuttons") : ?>
-        <?php $radioOptions = $contact_form_field["values"] ?? [[
+function renderContactFormField($contact_form_field)
+{
+    if ($contact_form_field["type"] == "text" || $contact_form_field["type"] == "input"): ?>
+        <input id="<?php echo $contact_form_field["name"]; ?>" type="text" name="<?php echo $contact_form_field["name"]; ?>"
+            placeholder="<?php echo $contact_form_field["placeholder"]; ?>" value="" <?php if (isset($contact_form_field["field-name-extern"]) && !empty($contact_form_field["field-name-extern"])):
+                   echo 'field-name-extern="' . $contact_form_field["field-name-extern"] . '"';
+               endif; ?>         <?php if (isset($contact_form_field["field-name-step"])):
+                            echo 'field-name-step="' . $contact_form_field["field-name-step"] . '"';
+                        endif; ?>>
+    <?php elseif ($contact_form_field["type"] == "message" || $contact_form_field["type"] == "textarea"): ?>
+        <textarea id="<?php echo $contact_form_field["name"]; ?>" type="text" name="<?php echo $contact_form_field["name"]; ?>"
+            placeholder="<?php echo $contact_form_field["placeholder"]; ?>" value="" <?php if (isset($contact_form_field["field-name-extern"]) && !empty($contact_form_field["field-name-extern"])):
+                   echo 'field-name-extern="' . $contact_form_field["field-name-extern"] . '"';
+               endif; ?>         <?php if (isset($contact_form_field["field-name-step"])):
+                            echo 'field-name-step="' . $contact_form_field["field-name-step"] . '"';
+                        endif; ?>></textarea>
+    <?php elseif ($contact_form_field["type"] == "radio" || $contact_form_field["type"] == "radiobuttons"): ?>
+        <?php $radioOptions = $contact_form_field["values"] ?? [
+            [
                 "name" => $contact_form_field["name"],
                 "step" => $contact_form_field["step"],
                 "value" => $contact_form_field["value"],
                 "placeholder" => $contact_form_field["placeholder"]
-            ]];
+            ]
+        ];
 
-        foreach ($radioOptions as $option) : ?>
+        foreach ($radioOptions as $option): ?>
             <div class="radio">
 
-                <?php if( isset($option["content"]) && !empty($option["content"])) :
+                <?php if (isset($option["content"]) && !empty($option["content"])):
                     echo executePhpInString($option["content"]);
                 endif; ?>
 
-                <input type="radio" id="<?php echo $option["name"]; ?>" name="<?php echo $contact_form_field["name"]; ?>" value="<?php echo $option["value"]; ?>"
-                    <?php if(isset($option["step"]) ) :
-                        echo 'data-step="'.$option["step"].'"';
-                    endif;?>
-                    <?php if(isset($contact_form_field["field-name-step"]) ) :
-                        echo 'field-name-step="'.$contact_form_field["field-name-step"].'"';
-                        echo 'placeholder="'.$contact_form_field["placeholder"].'"';
-                    endif;?>
-                >
+                <input type="radio" id="<?php echo $option["name"]; ?>" name="<?php echo $contact_form_field["name"]; ?>"
+                    value="<?php echo $option["value"]; ?>" <?php if (isset($option["step"])):
+                           echo 'data-step="' . $option["step"] . '"';
+                       endif; ?>             <?php if (isset($contact_form_field["field-name-step"])):
+                                        echo 'field-name-step="' . $contact_form_field["field-name-step"] . '"';
+                                        echo 'placeholder="' . $contact_form_field["placeholder"] . '"';
+                                    endif; ?>>
                 <span class="checkmark"></span>
                 <label for="<?php echo $option["name"]; ?>"><?php echo $option["value"]; ?></label>
             </div>
         <?php endforeach; ?>
-    <?php elseif($contact_form_field["type"] == "send" || $contact_form_field["type"] == "submit") : ?>
+    <?php elseif ($contact_form_field["type"] == "send" || $contact_form_field["type"] == "submit"): ?>
         <div>
-            <button class="form-submit" id="<?php echo $contact_form_field["name"]; ?>" data-button="primary" data-callback='onSubmit' data-action='submit' type="submit">
+            <button class="form-submit" id="<?php echo $contact_form_field["name"]; ?>" data-button="primary"
+                data-callback='onSubmit' data-action='submit' type="submit">
                 <?php echo $contact_form_field["value"]; ?>
             </button>
 
-            <?php if(isset($jsonContactForm["external-form-url"])) : ?>
-                <a class="external-form-submit" href="<?php echo $jsonContactForm["external-form-url"]; ?>" data-button="primary" target="_blank">
+            <?php if (isset($jsonContactForm["external-form-url"])): ?>
+                <a class="external-form-submit" href="<?php echo $jsonContactForm["external-form-url"]; ?>" data-button="primary"
+                    target="_blank">
                     <?php echo $contact_form_field["redirect"]; ?>
                 </a>
             <?php endif; ?>
         </div>
-    <?php elseif($contact_form_field["type"] == "next" || $contact_form_field["type"] == "step") : ?>
+    <?php elseif ($contact_form_field["type"] == "next" || $contact_form_field["type"] == "step"): ?>
         <div>
-            <button class="form-next-step" id="<?php echo $contact_form_field["name"]; ?>" data-button="primary" data-action="next-step" data-step="<?php echo $contact_form_field["step"]; ?>" type="button">
+            <button class="form-next-step" id="<?php echo $contact_form_field["name"]; ?>" data-button="primary"
+                data-action="next-step" data-step="<?php echo $contact_form_field["step"]; ?>" type="button">
                 <?php echo $contact_form_field["value"]; ?>
             </button>
         </div>
-    <?php elseif($contact_form_field["type"] == "prev" || $contact_form_field["type"] == "step") : ?>
+    <?php elseif ($contact_form_field["type"] == "prev" || $contact_form_field["type"] == "step"): ?>
         <div>
-            <button class="form-prev-step" id="<?php echo $contact_form_field["name"]; ?>" data-button="primary" data-action="prev-step" data-step="<?php echo $contact_form_field["step"]; ?>" type="button">
+            <button class="form-prev-step" id="<?php echo $contact_form_field["name"]; ?>" data-button="primary"
+                data-action="prev-step" data-step="<?php echo $contact_form_field["step"]; ?>" type="button">
                 <?php echo $contact_form_field["value"]; ?>
             </button>
         </div>
-    <?php elseif($contact_form_field["type"] == "html" || $contact_form_field["type"] == "HTML") : ?>
+    <?php elseif ($contact_form_field["type"] == "html" || $contact_form_field["type"] == "HTML"): ?>
         <div class="content">
             <?php echo $contact_form_field["content"]; ?>
         </div>
-    <?php elseif($contact_form_field["type"] == "code" || $contact_form_field["type"] == "CODE") : ?>
+    <?php elseif ($contact_form_field["type"] == "code" || $contact_form_field["type"] == "CODE"): ?>
         <div class="content">
             <?php echo executePhpInString($contact_form_field["content"]); ?>
         </div>
