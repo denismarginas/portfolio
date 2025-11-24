@@ -7,7 +7,14 @@ endif;
 if (!isset($jsonVideoGames)):
     $jsonVideoGames = getDataJson('data-items-games', 'data');
 endif;
+
+$theme_path = $GLOBALS['urlPath'] . $jsonGlobalData["themes-path"] . "/" . $jsonGlobalData["theme-active"]["dir-name"];
+
 ?>
+
+<?php if (!empty($theme_path)): ?>
+    <script src="<?php echo $theme_path; ?>/js/content-data-video-games.js"></script>
+<?php endif; ?>
 
 <section class="dm-video-games-list">
     <container>
