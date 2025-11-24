@@ -19434,8 +19434,8 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   top: 0px;
   right: 0px;
   bottom: 0px;
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(20%, rgba(var(--dm-color-primary-rgb), 0.8)), to(rgba(var(--dm-color-primary-rgb), 0)));
-  background: linear-gradient(to bottom right, rgba(var(--dm-color-primary-rgb), 0.8) 20%, rgba(var(--dm-color-primary-rgb), 0) 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(20%, rgba(var(--dm-color-secondary-rgb), 0.7)), to(rgba(var(--dm-color-primary-rgb), 0)));
+  background: linear-gradient(to bottom right, rgba(var(--dm-color-secondary-rgb), 0.7) 20%, rgba(var(--dm-color-primary-rgb), 0) 100%);
   padding: 6px 9px;
   display: -webkit-box;
   display: -ms-flexbox;
