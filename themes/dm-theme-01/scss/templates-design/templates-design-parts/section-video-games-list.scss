@@ -53,8 +53,8 @@
       --dm-text-heading6-font-weight: 300;
       --dm-text-heading6-line-height: var(--dm-text-heading6-font-size);
       opacity: 0;
-      transform: rotate(25deg) scale(0.8) translateY(10px);
-      transition: all 0.4s ease-in-out;
+      transform: rotate(100deg) scale(0.8) translateY(6px);
+      transition: all 0.2s ease-in-out;
     }
   }
   img {
@@ -100,6 +100,12 @@
       opacity: 0.4;
       transition: all 0.3s ease-in-out;
     }
+    svg {
+      opacity: 0;
+      transform: scale(0.6);
+      transition: all 0.2s ease-in-out;
+    }
+
     &:hover {
       > div {
         opacity: 1;
@@ -140,8 +146,13 @@
       > span {
         opacity: 1;
         transform: rotate(0deg) scale(1) translateY(0px);
-        transition: all 0.4s ease-in-out;
+        transition: all 0.2s ease-in-out;
       }
+    }
+    svg {
+      opacity: 1;
+      transform: scale(1);
+      transition: all 0.2s ease-in-out;
     }
   }
   &[display="false"] {
@@ -153,7 +164,7 @@ body,
 body.theme-light {
   .dm-vg-item {
     .name {
-      --dm-text-medium-color: var(--dm-color-secondary);
+      --dm-text-medium-color: var(--dm-color-gray);
     }
   }
 }
@@ -161,7 +172,7 @@ body.theme-light {
 body.theme-dark {
   .dm-vg-item {
     .name {
-      --dm-text-medium-color: var(--dm-color-primary);
+      --dm-text-medium-color: var(--dm-color-gray-lighten);
     }
   }
 }

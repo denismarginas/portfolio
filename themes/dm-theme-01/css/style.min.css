@@ -19399,10 +19399,10 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   --dm-text-heading6-font-weight: 300;
   --dm-text-heading6-line-height: var(--dm-text-heading6-font-size);
   opacity: 0;
-  -webkit-transform: rotate(25deg) scale(0.8) translateY(10px);
-          transform: rotate(25deg) scale(0.8) translateY(10px);
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transform: rotate(100deg) scale(0.8) translateY(6px);
+          transform: rotate(100deg) scale(0.8) translateY(6px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .dm-vg-item img {
   width: 100px;
@@ -19459,6 +19459,13 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+.dm-vg-item .details-box svg {
+  opacity: 0;
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
 .dm-vg-item .details-box:hover > div {
   opacity: 1;
   -webkit-transition: all 0.3s ease-in-out;
@@ -19510,8 +19517,15 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   opacity: 1;
   -webkit-transform: rotate(0deg) scale(1) translateY(0px);
           transform: rotate(0deg) scale(1) translateY(0px);
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.dm-vg-item:hover svg {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .dm-vg-item[display=false] {
   display: none;
@@ -19519,11 +19533,11 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
 
 body .dm-vg-item .name,
 body.theme-light .dm-vg-item .name {
-  --dm-text-medium-color: var(--dm-color-secondary);
+  --dm-text-medium-color: var(--dm-color-gray);
 }
 
 body.theme-dark .dm-vg-item .name {
-  --dm-text-medium-color: var(--dm-color-primary);
+  --dm-text-medium-color: var(--dm-color-gray-lighten);
 }
 
 /* ---- Responsive Screens ---- */
@@ -27279,8 +27293,7 @@ body:not([java-script=true]) .dm-blog-posts > container > .dm-blog-posts-section
   z-index: 999;
   margin: 0px;
   padding: var(--dm-spacing-primary) 0;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
