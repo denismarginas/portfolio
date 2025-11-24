@@ -19398,6 +19398,11 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   --dm-text-heading6-color: var(--dm-color-white);
   --dm-text-heading6-font-weight: 300;
   --dm-text-heading6-line-height: var(--dm-text-heading6-font-size);
+  opacity: 0;
+  -webkit-transform: rotate(25deg) scale(0.8) translateY(10px);
+          transform: rotate(25deg) scale(0.8) translateY(10px);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .dm-vg-item img {
   width: 100px;
@@ -19500,6 +19505,13 @@ body.theme-dark .dm-about > container > div > svg[data-svg-type=stroke] > path {
   background-color: rgba(var(--dm-color-gray-darken-rgb), 0.3);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+.dm-vg-item:hover .rank > span {
+  opacity: 1;
+  -webkit-transform: rotate(0deg) scale(1) translateY(0px);
+          transform: rotate(0deg) scale(1) translateY(0px);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .dm-vg-item[display=false] {
   display: none;
