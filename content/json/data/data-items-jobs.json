@@ -23,15 +23,8 @@
         "date_end": "18.11.2022"
       }
     ],
-    "work-location-type": [
-      "Remote",
-      "On-site",
-      "Hybrid"
-    ],
-    "function": [
-      "Full-Stack Web Developer",
-      "Photo-Video Editor"
-    ],
+    "work-location-type": ["Remote", "On-site", "Hybrid"],
+    "function": ["Full-Stack Web Developer", "Photo-Video Editor"],
     "work_attributes": [
       "Developed and maintained web applications, troubleshooting, creating documentation, cPanel management, phpmyAdmin, XAMPP, and hosting with Romarg",
       "Proficient in utilizing TPL, PHP, SQL, JavaScript, jQuery, CSS, and HTML for application development and usage",
@@ -60,12 +53,8 @@
         "date_end": "05.04.2023"
       }
     ],
-    "work-location-type": [
-      "Remote"
-    ],
-    "function": [
-      "Front-End Developer"
-    ],
+    "work-location-type": ["Remote"],
+    "function": ["Front-End Developer"],
     "work_attributes": [
       "Developed and maintained WordPress sites, troubleshooting, creating documentation",
       "Designed various web applications, including Newsletter Mail",
@@ -92,12 +81,8 @@
         "date_end": "31.05.2023"
       }
     ],
-    "work-location-type": [
-      "Remote"
-    ],
-    "function": [
-      "Junior Wordpress Developer"
-    ],
+    "work-location-type": ["Remote"],
+    "function": ["Junior Wordpress Developer"],
     "work_attributes": [
       "Developed blocks and pages for a custom WordPress theme using PhpStorm and GitHub",
       "Translated designs from a Figma project into functional web pages",
@@ -123,12 +108,8 @@
         "date_end": "04.08.2023"
       }
     ],
-    "work-location-type": [
-      "On-site"
-    ],
-    "function": [
-      "Full-Stack Web Developer"
-    ],
+    "work-location-type": ["On-site"],
+    "function": ["Full-Stack Web Developer"],
     "work_attributes": [
       "Developing a new website for this company in Wordpress creating a custom theme and Elementor and PHP",
       "Creating a custom design for this company website, with animations JS/CSS"
@@ -137,8 +118,8 @@
   {
     "name": "Mentor Marketing Experts",
     "display": "true",
-    "img": "content/img/projects/mentormarketingexperts/logo/logo.png",
-    "img_bg": "dark",
+    "img": "content/img/projects/mentormarketingexperts/logo/logo-icon.webp",
+    "img_bg": "light",
     "url_web": "https://mentor-marketing.com/",
     "url_linkedin": "https://www.linkedin.com/company/mentor-marketing-experts/",
     "date_start": "26.01.2024",
@@ -151,12 +132,8 @@
         "date_end": "In progress"
       }
     ],
-    "work-location-type": [
-      "Remote"
-    ],
-    "function": [
-      "Web page designer"
-    ],
+    "work-location-type": ["Remote"],
+    "function": ["Web page designer"],
     "work_attributes": [
       "Developing websites in Wordpress using Elementor and other addons/plugins for Elementor",
       "Translated designs from a Figma project into functional web pages using Elementor",

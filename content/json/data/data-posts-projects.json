@@ -4213,6 +4213,7 @@
     "file": "project-specialevents",
     "post_data": {
       "display": "enable",
+      "exclude_from_search": "true",
       "post_single_type": "project",
       "post_type": "projects",
       "media_path": "specialevents",
@@ -8658,8 +8659,8 @@
       "project_contractor": ["Mentor Marketing Experts"],
       "employer": "Mentor Marketing Experts",
       "date": {
-        "date_start": "11.2025",
-        "date_end": "11.2025"
+        "date_start": "10.2025",
+        "date_end": "10.2025"
       },
       "tags": ["web"],
       "colors": {
@@ -8747,6 +8748,565 @@
         "post_color_secondary": "#ffffff",
         "post_color_background": "#ffffff",
         "post_color_text_on_background": "#00beff"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-mentormarketingexperts",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "mentormarketingexperts",
+      "title": "Mentor Marketing Experts - LP",
+      "logo": "logo/logo.png",
+      "logo_path": "mentormarketingexperts",
+      "logo_type": "png",
+      "description": "A landing page was created to capture interest and drive conversions, utilizing Figma for design and Elementor for content creation. This project involves the design and content creation for a website. Utilizing Figma for design the content with Elementor, alongside other plugins enhancing Elementor's capabilities, I crafted the website's visual and textual elements.",
+      "categories": ["Web Development Projects"],
+      "web_url": "mentor-marketing.com",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        },
+        {
+          "name": "Unlimited Elements for Elementor Premium",
+          "svg": "unlimited-elements"
+        }
+      ],
+      "web_project_status": "Undone",
+      "project_types": ["landing page", "web design"],
+      "project_collaboration": ["Individual", "Teamwork"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "11.2025",
+        "date_end": "12.2024"
+      },
+      "tags": ["web"],
+      "colors": {
+        "post_color_primary": "#dd6106",
+        "post_color_secondary": "#ffffff",
+        "post_color_background": "#ffffff",
+        "post_color_text_on_background": "#dd6106"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-tovtavi",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "tovtavi",
+      "title": "TovTavi",
+      "logo": "logo/logo.webp",
+      "logo_path": "tovtavi",
+      "logo_type": "png",
+      "description": "A custom WordPress platform where anyone can join, create offers, or receive offers from others. These offers represent products or services, often related to travel experiences or travel assistance. The project includes many unique features. Users can register using a standard signup form or Google Login, with email verification required to protect the platform.<br>Every offer must be accepted under specific terms by both parties: the user who posted the offer and the user interested in it. Agreements can involve either service exchange or payment. The website also integrates WooCommerce for handling online payments tied to custom offer-term rules. This system is complex, as many front-end functionalities depend on the status of an offer’s payment and terms. Although online payment is currently disabled, it can be enabled at any time if the administrator chooses to manage it.<br>The platform includes a review system where users can rate each other after an offer is completed. Each user has an overall rating based on these reviews.<br>A dedicated My Account area allows users to manage their posted offers, sent and received offer terms, and messages. For every offer created, a unique messaging area is generated for the offer author and the interested user. This space is used for discussing terms, creating offer terms, and viewing a detailed activity log showing who accepted, confirmed, or completed the terms, payments, and more.",
+      "categories": ["Web Development Projects"],
+      "web_url": "tovtavi.co.il",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        },
+        {
+          "name": "Unlimited Elements for Elementor Premium",
+          "svg": "unlimited-elements"
+        },
+        {
+          "name": "Secure Custom Fields",
+          "svg": "acf"
+        },
+        {
+          "name": "Dynamic Content for Elementor",
+          "svg": "dynamic-elementor"
+        },
+        {
+          "name": "Premium Addons for Elementor"
+        },
+        {
+          "name": "Code Snippets"
+        },
+        {
+          "name": "WooCommerce"
+        },
+        {
+          "name": "Speed Optimizer"
+        },
+        {
+          "name": "Yoast SEO"
+        }
+      ],
+      "web_project_status": "Done",
+      "project_types": ["platform", "exchange application", "web design"],
+      "project_collaboration": ["Teamwork", "Individual"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "06.2025",
+        "date_end": "11.2025"
+      },
+      "tags": ["web", "content-web"],
+      "colors": {
+        "post_color_primary": "#003e71",
+        "post_color_secondary": "#ffffff",
+        "post_color_background": "#ffffff",
+        "post_color_text_on_background": "#003e71"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-betzelhaella",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "betzelhaella",
+      "title": "Betzel Haella - LP",
+      "logo": "logo/logo.webp",
+      "logo_path": "betzelhaella",
+      "logo_type": "webp",
+      "description": "A simple landing page built on WordPress with Elementor Pro, using a custom design based on a Figma template.",
+      "categories": ["Web Development Projects"],
+      "web_url": "",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        },
+        {
+          "name": "Yoast SEO"
+        }
+      ],
+      "web_project_status": "Done",
+      "project_types": ["landing page", "web design"],
+      "project_collaboration": ["Teamwork"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "10.2025",
+        "date_end": "10.2025"
+      },
+      "tags": ["web"],
+      "colors": {
+        "post_color_primary": "#d3c7bc",
+        "post_color_secondary": "#252525",
+        "post_color_background": "#ffffff",
+        "post_color_text_on_background": "#252525"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-ai-story-for-kids",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "ai-story-for-kids",
+      "title": "Ai Story For Kids - WP Plugin",
+      "logo": "wp-plugin",
+      "logo_path": "icon",
+      "logo_type": "svg",
+      "description": "WordPress plugin that automatically creates AI-generated custom posts featuring short stories for kids, complete with text and images.<br>Need to configure Gemini API Key for text generation and choose an image provider (free or token-based).<br><br>This plugin uses shortcodes to render the AI story-generation form and to display generated post content in a slider format.",
+      "categories": ["Web Development Projects"],
+      "web_url": "",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        }
+      ],
+      "web_plugins": [],
+      "web_project_status": "Done",
+      "project_types": ["wordpress plugin", "content generator", "web design"],
+      "media_custom": [
+        {
+          "title": "GitHub Repository: ",
+          "url": "github.com/denismarginas/ai-story-for-kids"
+        }
+      ],
+      "project_collaboration": ["Individual"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "10.2025",
+        "date_end": "10.2025"
+      },
+      "tags": ["web"],
+      "colors": {
+        "post_color_primary": "#f0f0f1",
+        "post_color_secondary": "#1d263a",
+        "post_color_background": "#f0f0f1",
+        "post_color_text_on_background": "#2271b1"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-privacy13-tag-manager",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "privacy13-tag-manager",
+      "title": "Privacy13 Tag Manager - WP Plugin",
+      "logo": "wp-plugin",
+      "logo_path": "icon",
+      "logo_type": "svg",
+      "description": "Manage privacy compliance by excluding specific tags, displaying a cookie notice, and integrating acceptance checkboxes with forms. Fully compatible with Elementor v3.2+ and Contact Form 7 v6.1+, allowing you to show cookie consent forms via these plugins or add acceptance checkboxes to their forms.",
+      "categories": ["Web Development Projects"],
+      "web_url": "",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        }
+      ],
+      "web_plugins": [],
+      "web_project_status": "Done",
+      "project_types": ["wordpress plugin", "seo optimization"],
+      "media_custom": [
+        {
+          "title": "GitHub Repository: ",
+          "url": "github.com/denismarginas/privacy13-tag-manager"
+        },
+        {
+          "title": "Plugin Usage: ",
+          "url": "miminuri.co.il"
+        },
+        {
+          "title": "Plugin Usage: ",
+          "url": "akademon.co.il"
+        }
+      ],
+      "project_collaboration": ["Individual"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "09.2025",
+        "date_end": "10.2025"
+      },
+      "tags": ["web"],
+      "colors": {
+        "post_color_primary": "#ffffff",
+        "post_color_secondary": "#1d263a",
+        "post_color_background": "#ffffff",
+        "post_color_text_on_background": "#2271b1"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-neologic",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "neologic",
+      "title": "Neologic",
+      "logo": "logo/logo.webp",
+      "logo_path": "neologic",
+      "logo_type": "webp",
+      "description": "A presentation website was created to capture interest and drive conversions. The project involved both design and content creation. Using Figma for the design and Elementor—enhanced by additional plugins—for content building, I crafted the site's visual layout and textual elements to deliver a cohesive and engaging user experience.<br><br>The website has a custom post type called Careers, where the admin can upload open job positions. On the Careers page, all active jobs are displayed in both a list and a slider. Inside the slider, after the job content, a form is rendered that includes a hidden field containing the job’s post name and a file upload field for sending the CV via email.",
+      "categories": ["Web Development Projects"],
+      "web_url": "neologicvlsi.com",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        },
+        {
+          "name": "Yoast SEO"
+        }
+      ],
+      "web_project_status": "Undone",
+      "project_types": ["presentation website", "web design"],
+      "project_collaboration": ["Individual", "Teamwork"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "11.2025",
+        "date_end": "11.2025"
+      },
+      "tags": ["web"],
+      "colors": {
+        "post_color_primary": "#212b3c",
+        "post_color_secondary": "#ffffff",
+        "post_color_background": "#212b3c",
+        "post_color_text_on_background": "#ffffff"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-avivit",
+    "post_data": {
+      "display": "false",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "avivit",
+      "title": "Avivit",
+      "logo": "logo/logo.webp",
+      "logo_path": "avivit",
+      "logo_type": "webp",
+      "description": "",
+      "categories": ["Web Development Projects"],
+      "web_url": "avivit-weizman.co.il",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        },
+        {
+          "name": "Yoast SEO"
+        }
+      ],
+      "web_project_status": "Undone",
+      "project_types": ["online shop", "web design"],
+      "project_collaboration": ["Individual", "Teamwork"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "11.2025",
+        "date_end": "12.2025"
+      },
+      "tags": ["web"],
+      "colors": {
+        "post_color_primary": "#351818",
+        "post_color_secondary": "#ffffff",
+        "post_color_background": "#ffffff",
+        "post_color_text_on_background": "#351818"
       }
     },
     "post_content": [

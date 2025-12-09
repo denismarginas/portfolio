@@ -95,6 +95,12 @@ Allow: /
 Meta-robots: noindex, nofollow
 
 User-agent: *
+Disallow: /project-ai-story-for-kids
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
 Disallow: /project-amorino
 Crawl-delay: 10
 Allow: /
@@ -114,6 +120,12 @@ Meta-robots: noindex, nofollow
 
 User-agent: *
 Disallow: /project-barantech
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
+Disallow: /project-betzelhaella
 Crawl-delay: 10
 Allow: /
 Meta-robots: noindex, nofollow
@@ -413,6 +425,12 @@ Allow: /
 Meta-robots: noindex, nofollow
 
 User-agent: *
+Disallow: /project-mentormarketingexperts
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
 Disallow: /project-merkaz-nadlan
 Crawl-delay: 10
 Allow: /
@@ -444,6 +462,12 @@ Meta-robots: noindex, nofollow
 
 User-agent: *
 Disallow: /project-nationalrugscleaners
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
+Disallow: /project-neologic
 Crawl-delay: 10
 Allow: /
 Meta-robots: noindex, nofollow
@@ -504,6 +528,12 @@ Meta-robots: noindex, nofollow
 
 User-agent: *
 Disallow: /project-prismanord
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
+Disallow: /project-privacy13-tag-manager
 Crawl-delay: 10
 Allow: /
 Meta-robots: noindex, nofollow
@@ -660,6 +690,12 @@ Meta-robots: noindex, nofollow
 
 User-agent: *
 Disallow: /project-tinib
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
+Disallow: /project-tovtavi
 Crawl-delay: 10
 Allow: /
 Meta-robots: noindex, nofollow
