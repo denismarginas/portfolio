@@ -9149,7 +9149,7 @@
       "colors": {
         "post_color_primary": "#ffffff",
         "post_color_secondary": "#1d263a",
-        "post_color_background": "#ffffff",
+        "post_color_background": "#f0f0f1",
         "post_color_text_on_background": "#2271b1"
       }
     },
