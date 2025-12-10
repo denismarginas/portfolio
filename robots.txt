@@ -113,6 +113,12 @@ Allow: /
 Meta-robots: noindex, nofollow
 
 User-agent: *
+Disallow: /project-avivit
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
 Disallow: /project-axacompany
 Crawl-delay: 10
 Allow: /

@@ -8933,7 +8933,10 @@
     },
     "post_content": [
       "<?php echo renderFeatureHero($post_current_data); ?>",
-      "<?php echo renderSectionWebProject($post_current_data); ?>"
+      "<?php echo renderSectionWebProject($post_current_data); ?>",
+      "<?php echo renderTitle('Email Verification Code'); ?>",
+      "<?php echo renderImageBlockProject($post_current_data,'web/banners/', 'email-verification-code.webp'); ?>",
+      "<?php echo renderParagraphBlockProject('This feature adds secure email verification to new account registrations. When a user submits the form, a unique verification code is automatically generated through a custom PHP integration and sent to the user by email using an HTML email template created with PHP, HTML, and CSS.<br><br>The verification code is valid for 15 minutes. During this time, the user must enter the code on the website to confirm ownership of the email address. After successful confirmation, the system updates the user status to verified.<br>If the code expires, the user must request a new one.<br><br>This functionality is fully integrated with Elementor Pro Forms and runs on a backend PHP script for secure processing and code validation.'); ?>"
     ],
     "layout": "wrapper-layout"
   },
@@ -9240,7 +9243,7 @@
   {
     "file": "project-avivit",
     "post_data": {
-      "display": "false",
+      "display": "enable",
       "post_single_type": "project",
       "post_type": "projects",
       "media_path": "avivit",
@@ -9248,7 +9251,7 @@
       "logo": "logo/logo.webp",
       "logo_path": "avivit",
       "logo_type": "webp",
-      "description": "",
+      "description": "On this WordPress project, I had to redesign a WoodMart theme layout into an Elementor Hello theme while keeping the appearance exactly the same. All complex elements were recreated using additional plugins, and the free-shipping progress bar was implemented with custom PHP and JavaScript.",
       "categories": ["Web Development Projects"],
       "web_url": "avivit-weizman.co.il",
       "web_platform": [
@@ -9290,6 +9293,23 @@
         },
         {
           "name": "Yoast SEO"
+        },
+        {
+          "name": "Unlimited Elements for Elementor Premium",
+          "svg": "unlimited-elements"
+        },
+        {
+          "name": "Dynamic Content for Elementor",
+          "svg": "dynamic-elementor"
+        },
+        {
+          "name": "Premium Addons for Elementor"
+        },
+        {
+          "name": "JetSmartFilters"
+        },
+        {
+          "name": "Code Snippets"
         }
       ],
       "web_project_status": "Undone",
@@ -9305,8 +9325,8 @@
       "colors": {
         "post_color_primary": "#351818",
         "post_color_secondary": "#ffffff",
-        "post_color_background": "#ffffff",
-        "post_color_text_on_background": "#351818"
+        "post_color_background": "#351818",
+        "post_color_text_on_background": "#ffffff"
       }
     },
     "post_content": [
