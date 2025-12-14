@@ -682,6 +682,7 @@
     "file": "project-augustinnailtrainer",
     "post_data": {
       "display": "enable",
+      "exclude_from_search": "true",
       "post_single_type": "project",
       "post_type": "projects",
       "media_path": "augustinnailtrainer",
@@ -1593,6 +1594,7 @@
     "file": "project-cekan",
     "post_data": {
       "display": "enable",
+      "exclude_from_search": "true",
       "post_single_type": "project",
       "post_type": "projects",
       "media_path": "cekan",
@@ -3385,6 +3387,7 @@
     "file": "project-prismanord",
     "post_data": {
       "display": "enable",
+      "exclude_from_search": "true",
       "post_single_type": "project",
       "post_type": "projects",
       "media_path": "prismanord",
@@ -4057,6 +4060,7 @@
     "file": "project-roundselfie",
     "post_data": {
       "display": "enable",
+      "exclude_from_search": "true",
       "post_single_type": "project",
       "post_type": "projects",
       "media_path": "roundselfie",
@@ -4695,6 +4699,7 @@
     "file": "project-promotionalcampaignstndc",
     "post_data": {
       "display": "enable",
+      "exclude_from_search": "true",
       "post_single_type": "project",
       "post_type": "projects",
       "media_path": "promotionalcampaignstndc",
@@ -4824,6 +4829,7 @@
     "file": "project-vreaualpin",
     "post_data": {
       "display": "enable",
+      "exclude_from_search": "true",
       "post_single_type": "project",
       "post_type": "projects",
       "media_path": "vreaualpin",
