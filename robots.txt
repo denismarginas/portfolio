@@ -95,12 +95,6 @@ Allow: /
 Meta-robots: noindex, nofollow
 
 User-agent: *
-Disallow: /project-ai-story-for-kids
-Crawl-delay: 10
-Allow: /
-Meta-robots: noindex, nofollow
-
-User-agent: *
 Disallow: /project-amorino
 Crawl-delay: 10
 Allow: /
@@ -455,6 +449,24 @@ Allow: /
 Meta-robots: noindex, nofollow
 
 User-agent: *
+Disallow: /project-module-ai-story-for-kids
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
+Disallow: /project-module-privacy13-tag-manager
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
+Disallow: /project-module-reviste-si-carti
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
 Disallow: /project-mscardetailing
 Crawl-delay: 10
 Allow: /
@@ -534,12 +546,6 @@ Meta-robots: noindex, nofollow
 
 User-agent: *
 Disallow: /project-prismanord
-Crawl-delay: 10
-Allow: /
-Meta-robots: noindex, nofollow
-
-User-agent: *
-Disallow: /project-privacy13-tag-manager
 Crawl-delay: 10
 Allow: /
 Meta-robots: noindex, nofollow

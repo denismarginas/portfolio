@@ -9025,12 +9025,12 @@
     "layout": "wrapper-layout"
   },
   {
-    "file": "project-ai-story-for-kids",
+    "file": "project-module-ai-story-for-kids",
     "post_data": {
       "display": "enable",
       "post_single_type": "project",
       "post_type": "projects",
-      "media_path": "ai-story-for-kids",
+      "media_path": "module-ai-story-for-kids",
       "title": "Ai Story For Kids - WP Plugin",
       "logo": "wp-plugin",
       "logo_path": "icon",
@@ -9068,7 +9068,7 @@
       "media_custom": [
         {
           "title": "GitHub Repository: ",
-          "url": "github.com/denismarginas/ai-story-for-kids"
+          "url": "github.com/denismarginas/module-ai-story-for-kids"
         }
       ],
       "project_collaboration": ["Individual"],
@@ -9093,12 +9093,12 @@
     "layout": "wrapper-layout"
   },
   {
-    "file": "project-privacy13-tag-manager",
+    "file": "project-module-privacy13-tag-manager",
     "post_data": {
       "display": "enable",
       "post_single_type": "project",
       "post_type": "projects",
-      "media_path": "privacy13-tag-manager",
+      "media_path": "module-privacy13-tag-manager",
       "title": "Privacy13 Tag Manager - WP Plugin",
       "logo": "wp-plugin",
       "logo_path": "icon",
@@ -9136,7 +9136,7 @@
       "media_custom": [
         {
           "title": "GitHub Repository: ",
-          "url": "github.com/denismarginas/privacy13-tag-manager"
+          "url": "github.com/denismarginas/module-privacy13-tag-manager"
         },
         {
           "title": "Plugin Usage: ",
@@ -9333,6 +9333,78 @@
         "post_color_secondary": "#ffffff",
         "post_color_background": "#351818",
         "post_color_text_on_background": "#ffffff"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-module-reviste-si-carti",
+    "post_data": {
+      "display": "enable",
+      "exclude_from_search": "true",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "module-reviste-si-carti",
+      "title": "Reviste si Carti - WP Plugin",
+      "logo": "wp-plugin",
+      "logo_path": "icon",
+      "logo_type": "svg",
+      "description": "This WordPress module creates a custom post type dedicated to PDF books, allowing each post to have attached files. It includes two shortcodes: one for administrators to upload posts with PDF files directly from the front end while logged in, and another to display a list of published posts with downloadable file links. The module is designed for simple and efficient management of PDF content without needing to access the WordPress dashboard.",
+      "categories": ["Web Development Projects", "Miscellaneous Projects"],
+      "web_url": "",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        }
+      ],
+      "web_plugins": [],
+      "web_project_status": "Done",
+      "project_types": ["wordpress plugin"],
+      "media_custom": [
+        {
+          "title": "GitHub Repository: ",
+          "url": "https://github.com/denismarginas/module-reviste-si-carti"
+        },
+        {
+          "title": "Plugin Usage: ",
+          "url": "revistaeducatie.ro/reviste-si-carti/"
+        }
+      ],
+      "project_collaboration": ["Individual"],
+      "employer": "Freelancer",
+      "date": {
+        "date_start": "01.2026",
+        "date_end": "01.2026"
+      },
+      "tags": ["web"],
+      "colors": {
+        "post_color_primary": "#ffffff",
+        "post_color_secondary": "#1d263a",
+        "post_color_background": "#f0f0f1",
+        "post_color_text_on_background": "#2271b1"
       }
     },
     "post_content": [
