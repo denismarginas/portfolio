@@ -61,27 +61,33 @@ RewriteRule ^([^/]+)/?$ $1.html [L]
 
 // -- RENDER VIEW END --
 
-$log[] ="<div style='color : var( --dm-color-status-primary);'>----- Json Check ------</div>";
+$log[] = "<div style='color: var(--dm-color-status-primary);'>----- Json Check ------</div>";
 
 $jsonPath = __DIR__ . '/../json/data/';
 $jsonFiles = glob($jsonPath . '*.json');
 
-foreach ($jsonFiles as $jsonFile) {
-    if(count($jsonFiles) > 0) {
+if (!$jsonFiles || count($jsonFiles) === 0) {
+    $log[] = "No json files found in " . $jsonPath;
+} else {
+    foreach ($jsonFiles as $jsonFile) {
+
         $postJsonFileName = basename($jsonFile, '.json');
         $jsonFileData = getDataJson($postJsonFileName, 'data');
-        if($jsonFileData == null) {
-            $color_json = "var( --dm-color-status-tertiary )";
+
+        if ($jsonFileData === null) {
+            $color_json = "var(--dm-color-status-tertiary)";
+            $preview = "null";
+        } else {
+            $color_json = "var(--dm-color-status-secondary)";
+            $preview = substr(json_encode($jsonFileData), 0, 100) . "...";
         }
-        else {
-            $color_json = "var( --dm-color-status-secondary )";
-        }
-        $log[] = " <div style='color : ".$color_json.";'> ".$postJsonFileName.":  [ ".substr(json_encode($jsonFileData), 0, 100)."... ] </div>";
-    }
-    else {
-        $log[] = "No json files found in ". $jsonPath;
+
+        $log[] = "<div style='color: {$color_json};'>
+            {$postJsonFileName}: [ {$preview} ]
+        </div>";
     }
 }
+
 
 
 
@@ -99,11 +105,11 @@ $seo = [
 echo '<head>';
 $seo_fields = "";
 
-foreach ($seoImplicitFields = seoImplicitFields() as $seo_field_implicit) :
+foreach ($seoImplicitFields = seoImplicitFields() as $seo_field_implicit):
     $seo_fields .= $seo_field_implicit;
 endforeach;
 
-if (isset($seo)) :
+if (isset($seo)):
     $seo_fields = seoAddInContent($seo, $seo_fields);
     //$seo_fields = implode(" ",seoAddInTag($seo));
 endif;
@@ -118,7 +124,7 @@ $renderer_sections->renderSection('debug');
 echo "<section class='dm-debug'>";
 echo "<div class='data-log' style='display: block;position: relative; height: 100%;'><ul>";
 foreach ($log as $log_item) {
-    echo "<li>".$log_item."</li>";
+    echo "<li>" . $log_item . "</li>";
 }
 echo "</ul></div>";
 echo "</section>";
