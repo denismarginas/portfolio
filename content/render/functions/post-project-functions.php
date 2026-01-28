@@ -1,16 +1,17 @@
 <?php
 
-function extractDataPosts($post_path, $json_posts = null) {
+function extractDataPosts($post_path, $json_posts = null)
+{
 
     $posts = [];
-    $posts_json  = getDataJson($json_posts, 'data');
+    $posts_json = getDataJson($json_posts, 'data');
 
-    if(is_dir($post_path)) {
+    if (is_dir($post_path)) {
         $php_files = getFilesInFolder($post_path);
     } else {
         $php_files = null;
     }
-    if (!empty($php_files) ) {
+    if (!empty($php_files)) {
         foreach ($php_files as $file) {
             $file_path = $post_path . $file;
             $file_content = file_get_contents($file_path);
@@ -29,30 +30,28 @@ function extractDataPosts($post_path, $json_posts = null) {
                 $post_dataString = executePhpInString($post_dataString);
                 $post_data = json_decode($post_dataString, true);
 
-                if($post_data["visibility"] = "enable" && isset($post_data["exclude_from_search"] ) != "true" ) {
-                    $posts[] =  [ $file, $post_data ];
+                if ($post_data["visibility"] = "enable" && isset($post_data["exclude_from_search"]) != "true") {
+                    $posts[] = [$file, $post_data];
                 }
 
             } else {
                 preg_match('/\$post_data\s*=\s*\[(.*?)\];/s', $file_content, $matches);
 
                 if (!empty($matches)) {
-                    $post_data = eval("return [{$matches[1]}];");
-                    if($post_data["visibility"] = "enable") {
-                        $posts[] =  [ $file, $post_data ];
+                    $post_data = eval ("return [{$matches[1]}];");
+                    if ($post_data["visibility"] = "enable") {
+                        $posts[] = [$file, $post_data];
                     }
                 } else {
-                    $error =  "Unable to extract post data from the file:". $file;
-                    //$posts[] =  [ $file, $error ];
+                    $error = "Unable to extract post data from the file:" . $file;
                 }
             }
         }
 
-    }
-    elseif(!empty($posts_json)) {
+    } elseif (!empty($posts_json)) {
         foreach ($posts_json as $post) {
 
-            if(!empty($post)) {
+            if (!empty($post)) {
                 $post_file = $post["file"];
                 $post_data = $post["post_data"];
 
@@ -61,8 +60,8 @@ function extractDataPosts($post_path, $json_posts = null) {
                 $post_data = json_decode($post_data_string, true);
 
 
-                if($post_data["visibility"] = "enable"  && isset($post_data["exclude_from_search"] ) != "true") {
-                    $posts[] =  [ "file" => $post_file, "post_data" => $post_data ];
+                if ($post_data["visibility"] = "enable" && isset($post_data["exclude_from_search"]) != "true") {
+                    $posts[] = ["file" => $post_file, "post_data" => $post_data];
                 }
             }
         }
@@ -70,33 +69,31 @@ function extractDataPosts($post_path, $json_posts = null) {
     return $posts;
 }
 
-function dateStartPostSortDesc($a, $b) {
-    if(isset( $a["post_data"]["date"]) and isset( $b["post_data"]["date"]) ) {
+function dateStartPostSortDesc($a, $b)
+{
+    if (isset($a["post_data"]["date"]) and isset($b["post_data"]["date"])) {
         $dateA = $a["post_data"]["date"]["date_start"];
         $dateB = $b["post_data"]["date"]["date_start"];
 
-        // Split the date strings into components
         list($monthA, $yearA) = explode(".", $dateA);
         list($monthB, $yearB) = explode(".", $dateB);
 
-        // Convert components to integers for comparison
         $monthA = intval($monthA);
         $yearA = intval($yearA);
         $monthB = intval($monthB);
         $yearB = intval($yearB);
 
-        // Compare years first
         if ($yearA !== $yearB) {
-            return $yearB - $yearA; // Compare in reverse order
+            return $yearB - $yearA;
         }
 
-        // If years are equal, compare months
-        return $monthB - $monthA; // Compare in reverse order
+        return $monthB - $monthA;
     }
 
 }
 
-function personalTypePostProjectSortAsc($a, $b) {
+function personalTypePostProjectSortAsc($a, $b)
+{
     $aIsPersonal = isset($a['post_data']['project_types']) &&
         is_array($a['post_data']['project_types']) &&
         in_array('personal', $a['post_data']['project_types']);
@@ -114,7 +111,8 @@ function personalTypePostProjectSortAsc($a, $b) {
 }
 
 
-function getCurrentPostProjectData($fileName, $json_posts) {
+function getCurrentPostProjectData($fileName, $json_posts)
+{
     if ($fileName !== null) {
         $jsonFile = $json_posts;
         $posts = getDataJson($jsonFile, 'data');
@@ -134,8 +132,7 @@ function getCurrentPostProjectData($fileName, $json_posts) {
             if ($matchingPost !== null) {
                 if (isset($matchingPost["post_data"]) && $matchingPost["post_data"] !== null) {
                     return $matchingPost["post_data"];
-                }
-                else {
+                } else {
                     echo "There is no data for this file: $fileName";
                     return null;
                 }
@@ -149,21 +146,22 @@ function getCurrentPostProjectData($fileName, $json_posts) {
     }
 }
 
-function getSeoFromCurrentPostProjectData($postData) {
+function getSeoFromCurrentPostProjectData($postData)
+{
     $stringSeoSiteName = stringSeoSiteName();
     $indexJson = getDataJson('data-content-personal', 'data')["post-projects"]["index"];
 
     if ($postData != null) {
         $index = "true";
-        if(isset($indexJson)) {
+        if (isset($indexJson)) {
             $index = $indexJson;
         }
-        if(isset($postData["index"])) {
+        if (isset($postData["index"])) {
             $index = $postData["index"];
         }
 
         $seo = [
-            "title" => $postData["title"].$stringSeoSiteName,
+            "title" => $postData["title"] . $stringSeoSiteName,
             "description" => $postData["description"],
             "keywords" => $postData["media_path"],
             "slug" => $postData["media_path"],
@@ -174,31 +172,33 @@ function getSeoFromCurrentPostProjectData($postData) {
     }
 }
 
-function renderTitle($title = null) {
+function renderTitle($title = null)
+{
     $bg_item_texture_img = renderBgImgOverlayTexture();
     $htmlTemplate = "<h2 id='%s' class='dm-post-title-category' data-motion='transition-fade-0' data-duration='0.7s'>
-                        %s".$bg_item_texture_img."
+                        %s" . $bg_item_texture_img . "
                     </h2>";
 
 
     if ($title !== null) {
-        $id = removeSpaceAndLowercase($title); // Call the function to remove spaces and convert to lowercase
+        $id = removeSpaceAndLowercase($title);
         return sprintf($htmlTemplate, $id, $title);
     } else {
-        $id = removeSpaceAndLowercase("Title"); // Call the function with a default value
+        $id = removeSpaceAndLowercase("Title");
         return sprintf($htmlTemplate, $id, "Title");
     }
 }
 
-function renderDeviceLayout($type,$post_data, $img, $atr) {
+function renderDeviceLayout($type, $post_data, $img, $atr)
+{
     $html = "";
     $data = getDataJson('data-content-personal', 'data')["post-projects"]["img"] ?? [];
 
 
-    if($type == "phone" || $type == "desktop") {
-        $deviceModel1 = $data["devices"][$type."-model-01"] ?? "";
-        $deviceModel2 = $data["devices"][$type."-model-02"] ?? "";
-        $deviceModel3 = $data["devices"][$type."-model-03"] ?? "";
+    if ($type == "phone" || $type == "desktop") {
+        $deviceModel1 = $data["devices"][$type . "-model-01"] ?? "";
+        $deviceModel2 = $data["devices"][$type . "-model-02"] ?? "";
+        $deviceModel3 = $data["devices"][$type . "-model-03"] ?? "";
 
         $deviceMode = "";
         $classDevice = "";
@@ -213,24 +213,23 @@ function renderDeviceLayout($type,$post_data, $img, $atr) {
                 !in_array("bachelor's thesis", $post_data["project_types"])
             ) {
                 $deviceMode = $deviceModel1;
-                $classDevice = " ".$type."-model-01";
-            }
-            elseif ($year) {
+                $classDevice = " " . $type . "-model-01";
+            } elseif ($year) {
                 if ($year < 2022 && !empty($deviceModel1)) {
                     $deviceMode = $deviceModel2;
-                    $classDevice = " ".$type."-model-02";
+                    $classDevice = " " . $type . "-model-02";
                 } elseif ($year >= 2022 && !empty($deviceModel3)) {
                     $deviceMode = $deviceModel3;
-                    $classDevice = " ".$type."-model-03";
+                    $classDevice = " " . $type . "-model-03";
                 }
             } else {
                 $deviceMode = $deviceModel3;
-                $classDevice = " ".$type."-model-03";
+                $classDevice = " " . $type . "-model-03";
             }
         }
 
         if (!empty($deviceMode)) {
-            $device = $GLOBALS['urlPath'].$deviceMode;
+            $device = $GLOBALS['urlPath'] . $deviceMode;
             $html .= renderImage($device, false, "device", true);
         }
 
@@ -258,42 +257,42 @@ function renderDeviceLayout($type,$post_data, $img, $atr) {
             }
         }
 
-        $html .= "<div class='screen".$classDevice."' layout='".$layoutAtr."'>".
-                    renderImage($img, false, "element", true).
-                 "</div>";
+        $html .= "<div class='screen" . $classDevice . "' layout='" . $layoutAtr . "'>" .
+            renderImage($img, false, "element", true) .
+            "</div>";
         $html .= renderImage($img, true, "overlay", true, $atr);
 
-    }
-     else {
+    } else {
         $html .= renderImage($img, true, "", true, $atr);
     }
 
 
-    return "<div class='layout'>".$html."</div>";
+    return "<div class='layout'>" . $html . "</div>";
 }
 
 
 
 
 
-function renderGalleryWeb($post_data) {
+function renderGalleryWeb($post_data)
+{
     $gallery_web_content = "<div id='web' class='dm-gallery-web-content' data-motion='transition-fade-0' data-duration='0.5s'>";
 
     if (!empty($post_data)) {
         $bg_item_texture_img = renderBgImgOverlayTexture();
 
         $gallery_path_web = "web";
-        $gallery_web_path_current = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$gallery_path_web."/";
+        $gallery_web_path_current = $GLOBALS['urlPath'] . "content/img/" . $post_data["post_type"] . "/" . $post_data["media_path"] . "/" . $gallery_path_web . "/";
         $gallery_web_path = __DIR__ . "/../../../" . $gallery_web_path_current;
 
         // Home Desktop Gallery
         $gallery_web_home = "home/";
-        $home_image = getImagesInFolder($gallery_web_path.$gallery_web_home);
+        $home_image = getImagesInFolder($gallery_web_path . $gallery_web_home);
 
         if (!empty($home_image)) {
             $gallery_web_content .= "<div class='dm-web-home-banner' data-motion='transition-fade-0' data-duration='0.8s'>";
             foreach ($home_image as $image_home) {
-                $image_path = $gallery_web_path_current.$gallery_web_home.$image_home;
+                $image_path = $gallery_web_path_current . $gallery_web_home . $image_home;
                 $gallery_web_content .= renderImage($image_path, true);
             }
             $gallery_web_content .= "</div>";
@@ -301,39 +300,39 @@ function renderGalleryWeb($post_data) {
 
         // Desktop Gallery
         $gallery_web_desktop = "desktop/";
-        $gallery_web = getImagesInFolder($gallery_web_path.$gallery_web_desktop);
+        $gallery_web = getImagesInFolder($gallery_web_path . $gallery_web_desktop);
 
         if (!empty($gallery_web)) {
             $gallery_web_content .= '<ul class="dm-web-gallery" data-slider-container-src="dm-web-post-gallery">';
 
             foreach ($gallery_web as $image_web) {
-                $image_path = $gallery_web_path_current.$gallery_web_desktop.$image_web;
+                $image_path = $gallery_web_path_current . $gallery_web_desktop . $image_web;
                 $gallery_web_content .= '
                     <li class="dm-web-gallery-item gallery-item-web" data-motion="transition-fade-0" data-duration="0.3s">' .
-                    $bg_item_texture_img.
-                        renderDeviceLayout("desktop", $post_data, $image_path, [
-                            "data-slider-item" => "true",
-                            "data-slider-items-src" => "dm-web-post-gallery",
-                            "data-slider-item-query-attr" => "web-item-img"
-                        ]) .
+                    $bg_item_texture_img .
+                    renderDeviceLayout("desktop", $post_data, $image_path, [
+                        "data-slider-item" => "true",
+                        "data-slider-items-src" => "dm-web-post-gallery",
+                        "data-slider-item-query-attr" => "web-item-img"
+                    ]) .
                     '</li>';
             }
 
             // Phone Gallery
             $gallery_web_phone = "phone/";
-            $gallery_phone = getImagesInFolder($gallery_web_path.$gallery_web_phone);
+            $gallery_phone = getImagesInFolder($gallery_web_path . $gallery_web_phone);
 
             if (!empty($gallery_phone)) {
                 foreach ($gallery_phone as $image_web) {
-                    $image_path = $gallery_web_path_current.$gallery_web_phone.$image_web;
+                    $image_path = $gallery_web_path_current . $gallery_web_phone . $image_web;
                     $gallery_web_content .= '
                         <li class="dm-web-gallery-item gallery-item-phone" data-motion="transition-fade-0" data-duration="0.3s">' .
-                        $bg_item_texture_img.
-                            renderDeviceLayout("phone", $post_data, $image_path, [
-                                "data-slider-item" => "true",
-                                "data-slider-items-src" => "dm-web-post-gallery",
-                                "data-slider-item-query-attr" => "web-item-img"
-                            ]) .
+                        $bg_item_texture_img .
+                        renderDeviceLayout("phone", $post_data, $image_path, [
+                            "data-slider-item" => "true",
+                            "data-slider-items-src" => "dm-web-post-gallery",
+                            "data-slider-item-query-attr" => "web-item-img"
+                        ]) .
                         '</li>';
                 }
             }
@@ -346,49 +345,60 @@ function renderGalleryWeb($post_data) {
 }
 
 
-function renderGalleryWebMedia($post_data) {
+function renderGalleryWebMedia($post_data)
+{
     $gallery_media_web_content = "<div id='media-web' class='dm-gallery-web-content' data-motion='transition-fade-0' data-duration='0.5s'>";
     $src_current = __DIR__ . "/../../../";
 
-    if(isset($post_data)) {
+    if (isset($post_data)) {
         $gallery_path_web_dir = "web";
         $gallery_path_dir = "media-website";
-        $gallery_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$gallery_path_web_dir."/".$gallery_path_dir."/";
-        $gallery = getImagesInFolder($src_current.$gallery_path );
-        $dirs = getDirectoriesInFolder($src_current.$gallery_path );
+        $gallery_path = $GLOBALS['urlPath'] . "content/img/" . $post_data["post_type"] . "/" . $post_data["media_path"] . "/" . $gallery_path_web_dir . "/" . $gallery_path_dir . "/";
+        $gallery = getImagesInFolder($src_current . $gallery_path);
+        $dirs = getDirectoriesInFolder($src_current . $gallery_path);
 
-        if( !empty($gallery) ) {
-            $gallery_media_web_content .= "<ul class='dm-web-media-gallery' data-list-design='".listDesign(count($gallery))."' 
+        if (!empty($gallery)) {
+            $gallery_media_web_content .= "<ul class='dm-web-media-gallery' data-list-design='" . listDesign(count($gallery)) . "' 
             data-slider-container-src='dm-gallery-web-content'
             data-motion='transition-fade-0' data-duration='0.8s'>";
 
             foreach ($gallery as $item) {
-                $image_path = $gallery_path.$item;
-                $gallery_media_web_content .=  '<li class="dm-web-media-gallery-item" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.3s">' .
-                    renderImage($image_path, true, '',true,
-                        ["data-slider-item" => "true", "data-slider-items-src" => "dm-gallery-web-content", "data-slider-item-query-attr" => "gallery-web-content-0" ]) .
+                $image_path = $gallery_path . $item;
+                $gallery_media_web_content .= '<li class="dm-web-media-gallery-item" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.3s">' .
+                    renderImage(
+                        $image_path,
+                        true,
+                        '',
+                        true,
+                        ["data-slider-item" => "true", "data-slider-items-src" => "dm-gallery-web-content", "data-slider-item-query-attr" => "gallery-web-content-0"]
+                    ) .
                     '<div style="background-image: url("' . $image_path . '")"></div></li>';
             }
 
             $gallery_media_web_content .= "</ul>";
         }
-        if( !empty($dirs) ) {
-            foreach ($dirs as  $key => $dir) {
-                $gallery = getImagesInFolder($src_current.$gallery_path.$dir."/");
+        if (!empty($dirs)) {
+            foreach ($dirs as $key => $dir) {
+                $gallery = getImagesInFolder($src_current . $gallery_path . $dir . "/");
 
-                if( !empty($gallery) ) {
-                    $gallery_media_web_content .= "<ul class='dm-web-media-gallery' data-list-design='".listDesign(count($gallery))."'  " .
-                    "data-slider-container-src='dm-gallery-web-content-$key'";
-                    if ( ($dir == "logo") || ($dir == "favicon") ) {
+                if (!empty($gallery)) {
+                    $gallery_media_web_content .= "<ul class='dm-web-media-gallery' data-list-design='" . listDesign(count($gallery)) . "'  " .
+                        "data-slider-container-src='dm-gallery-web-content-$key'";
+                    if (($dir == "logo") || ($dir == "favicon")) {
                         $gallery_media_web_content .= "data-list-item='logo'";
                     }
                     $gallery_media_web_content .= " data-motion='transition-fade-0' data-duration='0.8s'>";
 
                     foreach ($gallery as $item) {
-                        $image_path = $gallery_path.$dir."/".$item;
-                        $gallery_media_web_content .=  '<li class="dm-web-media-gallery-item" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.3s">' .
-                            renderImage($image_path, true, '',true,
-                                ["data-slider-item" => "true", "data-slider-items-src" => "dm-gallery-web-content-$key", "data-slider-item-query-attr" => "gallery-web-content-$key" ]) .
+                        $image_path = $gallery_path . $dir . "/" . $item;
+                        $gallery_media_web_content .= '<li class="dm-web-media-gallery-item" data-motion="transition-fade-0 transition-slideInRight-0" data-duration="0.3s">' .
+                            renderImage(
+                                $image_path,
+                                true,
+                                '',
+                                true,
+                                ["data-slider-item" => "true", "data-slider-items-src" => "dm-gallery-web-content-$key", "data-slider-item-query-attr" => "gallery-web-content-$key"]
+                            ) .
                             '<div style="background-image: url("' . $image_path . '")"></div></li>';
                     }
 
@@ -403,61 +413,62 @@ function renderGalleryWebMedia($post_data) {
     return $gallery_media_web_content;
 }
 
-function renderGalleryWebContent($post_data) {
+function renderGalleryWebContent($post_data)
+{
     $src_current = __DIR__ . "/../../../";
     $bg_item_texture_img = renderBgImgOverlayTexture();
     $gallery_web_content = "<div id='web-content' class='dm-gallery-web-content' data-motion='transition-fade-0' data-duration='0.5s'>";
 
-    if(isset($post_data)) {
+    if (isset($post_data)) {
         $gallery_path_web = "web";
         $gallery_path_web_content = "content-website";
         $gallery_path_web_desktop = "desktop";
         $gallery_path_web_phone = "phone";
-        $gallery_web_content_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$gallery_path_web."/".$gallery_path_web_content."/";
+        $gallery_web_content_path = $GLOBALS['urlPath'] . "content/img/" . $post_data["post_type"] . "/" . $post_data["media_path"] . "/" . $gallery_path_web . "/" . $gallery_path_web_content . "/";
 
-        $dirs = getDirectoriesInFolder($src_current.$gallery_web_content_path);
+        $dirs = getDirectoriesInFolder($src_current . $gallery_web_content_path);
         foreach ($dirs as $key => $dir) {
 
-            $gallery_web_content_desktop = $gallery_web_content_path.$dir."/".$gallery_path_web_desktop."/";
-            $gallery_web_content_phone = $gallery_web_content_path.$dir."/".$gallery_path_web_phone."/";
+            $gallery_web_content_desktop = $gallery_web_content_path . $dir . "/" . $gallery_path_web_desktop . "/";
+            $gallery_web_content_phone = $gallery_web_content_path . $dir . "/" . $gallery_path_web_phone . "/";
 
-            if (is_dir($src_current.$gallery_web_content_desktop)) {
-                $gallery_web = getImagesInFolder($src_current.$gallery_web_content_desktop );
+            if (is_dir($src_current . $gallery_web_content_desktop)) {
+                $gallery_web = getImagesInFolder($src_current . $gallery_web_content_desktop);
             } else {
-                $gallery_web  = [];
+                $gallery_web = [];
             }
-            if (is_dir($src_current.$gallery_web_content_phone)) {
-                $gallery_phone = getImagesInFolder($src_current.$gallery_web_content_phone );
+            if (is_dir($src_current . $gallery_web_content_phone)) {
+                $gallery_phone = getImagesInFolder($src_current . $gallery_web_content_phone);
             } else {
-                $gallery_phone  = [];
+                $gallery_phone = [];
             }
             $nr_items = count($gallery_web) + count($gallery_phone);
-            $gallery_web_content .= '<ul id="content-web" class="dm-web-gallery" data-list-design="'.listDesign($nr_items).'"
-            data-slider-container-src="dm-gallery-web-content-'.$key.'">';
+            $gallery_web_content .= '<ul id="content-web" class="dm-web-gallery" data-list-design="' . listDesign($nr_items) . '"
+            data-slider-container-src="dm-gallery-web-content-' . $key . '">';
 
-            if( !empty($gallery_web) ) {
+            if (!empty($gallery_web)) {
                 foreach ($gallery_web as $image_web) {
-                    $image_path = $gallery_web_content_desktop.$image_web;
-                    $gallery_web_content .=  '<li class="dm-web-gallery-item gallery-item-web" data-motion="transition-fade-0" data-duration="0.3s">'.
-                        $bg_item_texture_img.
-                            renderDeviceLayout("desktop", $post_data, $image_path, [
-                                "data-slider-item" => "true",
-                                "data-slider-items-src" => "dm-gallery-web-content-$key",
-                                "data-slider-item-query-attr" => "gallery-web-content-$key"
-                            ]) .
-                            '</li>';
+                    $image_path = $gallery_web_content_desktop . $image_web;
+                    $gallery_web_content .= '<li class="dm-web-gallery-item gallery-item-web" data-motion="transition-fade-0" data-duration="0.3s">' .
+                        $bg_item_texture_img .
+                        renderDeviceLayout("desktop", $post_data, $image_path, [
+                            "data-slider-item" => "true",
+                            "data-slider-items-src" => "dm-gallery-web-content-$key",
+                            "data-slider-item-query-attr" => "gallery-web-content-$key"
+                        ]) .
+                        '</li>';
                 }
             }
-            if( !empty($gallery_phone) ) {
+            if (!empty($gallery_phone)) {
                 foreach ($gallery_phone as $image_web) {
-                    $image_path = $gallery_web_content_phone.$image_web;
-                    $gallery_web_content .=  '<li class="dm-web-gallery-item gallery-item-phone" data-motion="transition-fade-0" data-duration="0.3s">' .
-                        $bg_item_texture_img.
-                            renderDeviceLayout("phone", $post_data, $image_path, [
-                                "data-slider-item" => "true",
-                                "data-slider-items-src" => "dm-gallery-web-content-$key",
-                                "data-slider-item-query-attr" => "gallery-web-content-$key"
-                            ]) .
+                    $image_path = $gallery_web_content_phone . $image_web;
+                    $gallery_web_content .= '<li class="dm-web-gallery-item gallery-item-phone" data-motion="transition-fade-0" data-duration="0.3s">' .
+                        $bg_item_texture_img .
+                        renderDeviceLayout("phone", $post_data, $image_path, [
+                            "data-slider-item" => "true",
+                            "data-slider-items-src" => "dm-gallery-web-content-$key",
+                            "data-slider-item-query-attr" => "gallery-web-content-$key"
+                        ]) .
                         '</li>';
                 }
             }
@@ -469,31 +480,37 @@ function renderGalleryWebContent($post_data) {
     return $gallery_web_content;
 }
 
-function renderGalleryMedia($post_data) {
+function renderGalleryMedia($post_data)
+{
     $src_current = __DIR__ . "/../../../";
     $gallery_media_content = "<div id='photo' class='dm-gallery-media-content' data-motion='transition-fade-0' data-duration='0.5s'>";
 
-    if(isset($post_data)) {
+    if (isset($post_data)) {
         $gallery_path_media = "media";
-        $gallery_media_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$gallery_path_media."/";
-        $gallery_media_path_current = $src_current. $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$gallery_path_media."/";
+        $gallery_media_path = $GLOBALS['urlPath'] . "content/img/" . $post_data["post_type"] . "/" . $post_data["media_path"] . "/" . $gallery_path_media . "/";
+        $gallery_media_path_current = $src_current . $GLOBALS['urlPath'] . "content/img/" . $post_data["post_type"] . "/" . $post_data["media_path"] . "/" . $gallery_path_media . "/";
         $directories = glob($gallery_media_path_current . '*', GLOB_ONLYDIR);
 
         foreach ($directories as $key => $directory) {
             if (is_dir($directory)) {
                 $directoryName = basename($directory);
-                $gallery_items = getImagesInFolder($gallery_media_path_current.$directoryName );
+                $gallery_items = getImagesInFolder($gallery_media_path_current . $directoryName);
 
-                if( !empty($gallery_items ) ) {
-                    $gallery_media_content .= "<ul class='dm-media-gallery' data-list-design='".listDesign(count($gallery_items))."'" .
+                if (!empty($gallery_items)) {
+                    $gallery_media_content .= "<ul class='dm-media-gallery' data-list-design='" . listDesign(count($gallery_items)) . "'" .
                         "data-slider-container-src='gallery-media-content-$key' >";
 
                     foreach ($gallery_items as $gallery_item) {
-                        $image_path = $gallery_media_path.$directoryName."/".$gallery_item;
-                        $gallery_media_content .=  "<li class='dm-media-gallery-item' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".
-                            renderImage($image_path, true, '',true,
-                                ["data-slider-item" => "true", "data-slider-items-src" => "gallery-media-content-$key", "data-slider-item-query-attr" => "gallery-media-content-$key" ]) .
-                        "</li>";
+                        $image_path = $gallery_media_path . $directoryName . "/" . $gallery_item;
+                        $gallery_media_content .= "<li class='dm-media-gallery-item' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>" .
+                            renderImage(
+                                $image_path,
+                                true,
+                                '',
+                                true,
+                                ["data-slider-item" => "true", "data-slider-items-src" => "gallery-media-content-$key", "data-slider-item-query-attr" => "gallery-media-content-$key"]
+                            ) .
+                            "</li>";
                     }
                     $gallery_media_content .= "</ul>";
                 }
@@ -504,40 +521,41 @@ function renderGalleryMedia($post_data) {
     return $gallery_media_content;
 }
 
-function renderVideoMedia($post_data) {
+function renderVideoMedia($post_data)
+{
     $src_current = __DIR__ . "/../../../";
 
     $video_media_content = "<div id='video' class='dm-video-media-content' data-motion='transition-fade-0' data-duration='0.5s'>";
 
-    if(isset($post_data)) {
-        $video_media_path = $GLOBALS['urlPath']."content/vid/".$post_data["post_type"]."/".$post_data["media_path"]."/";
-        $logo_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$post_data["logo"];
-        $thumbnail_bg = $GLOBALS['urlPath']."content/img/thumbnails/workpreview-overlay-thumbnail.webp";
-        $video_files = getVideosInFolder($src_current.$video_media_path);
+    if (isset($post_data)) {
+        $video_media_path = $GLOBALS['urlPath'] . "content/vid/" . $post_data["post_type"] . "/" . $post_data["media_path"] . "/";
+        $logo_path = $GLOBALS['urlPath'] . "content/img/" . $post_data["post_type"] . "/" . $post_data["media_path"] . "/" . $post_data["logo"];
+        $thumbnail_bg = $GLOBALS['urlPath'] . "content/img/thumbnails/workpreview-overlay-thumbnail.webp";
+        $video_files = getVideosInFolder($src_current . $video_media_path);
 
-        $directories = glob($src_current.$video_media_path . '*', GLOB_ONLYDIR);
+        $directories = glob($src_current . $video_media_path . '*', GLOB_ONLYDIR);
         foreach ($directories as $directory) {
             if (is_dir($directory)) {
                 $directoryName = basename($directory);
-                $video_items = getVideosInFolder($src_current.$video_media_path.$directoryName );
-                if( !empty($video_items ) ) {
+                $video_items = getVideosInFolder($src_current . $video_media_path . $directoryName);
+                if (!empty($video_items)) {
 
-                    $video_media_content .= "<ul class='dm-media-video' data-list-design='".listDesign(count($video_items))."'>";
+                    $video_media_content .= "<ul class='dm-media-video' data-list-design='" . listDesign(count($video_items)) . "'>";
 
                     foreach ($video_items as $video_item) {
-                        $video_path = $video_media_path.$directoryName."/".$video_item;
-                        $video_media_content .=  "<li class='dm-media-video-item' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderVideo($video_path, $logo_path, $thumbnail_bg)."</li>";
+                        $video_path = $video_media_path . $directoryName . "/" . $video_item;
+                        $video_media_content .= "<li class='dm-media-video-item' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>" . renderVideo($video_path, $logo_path, $thumbnail_bg) . "</li>";
                     }
                     $video_media_content .= "</ul>";
                 }
             }
         }
-        if( !empty($video_files) ) {
-            $video_media_content .= "<ul class='dm-media-video' data-list-design='".listDesign(count($video_files))."'>";
+        if (!empty($video_files)) {
+            $video_media_content .= "<ul class='dm-media-video' data-list-design='" . listDesign(count($video_files)) . "'>";
 
             foreach ($video_files as $video_file) {
-                $video_path = $video_media_path.$video_file;
-                $video_media_content .=  "<li class='dm-media-video-item' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>".renderVideo($video_path, $logo_path, $thumbnail_bg)."</li>";
+                $video_path = $video_media_path . $video_file;
+                $video_media_content .= "<li class='dm-media-video-item' data-motion='transition-fade-0 transition-slideInRight-0' data-duration='0.3s'>" . renderVideo($video_path, $logo_path, $thumbnail_bg) . "</li>";
 
             }
 
@@ -550,12 +568,14 @@ function renderVideoMedia($post_data) {
     return $video_media_content;
 }
 
-function renderVideoMediaStrict( $videos = []) {
+function renderVideoMediaStrict($videos = [])
+{
     $html_content = "<div id='video' class='dm-video-media-content' data-motion='transition-fade-0' data-duration='0.5s'>";
-    if($videos != null) {
+    if ($videos != null) {
         foreach ($videos as $video) {
-            $html_content .= renderVideo($GLOBALS['urlPath']. 'content/vid/'.$video["video-path"],
-                $GLOBALS['urlPath']."content/img/".$video["video-thumbnail-path"]
+            $html_content .= renderVideo(
+                $GLOBALS['urlPath'] . 'content/vid/' . $video["video-path"],
+                $GLOBALS['urlPath'] . "content/img/" . $video["video-thumbnail-path"]
             );
         }
     }
@@ -563,39 +583,42 @@ function renderVideoMediaStrict( $videos = []) {
     return $html_content;
 }
 
-function renderWallpaperPost($post_data, $wallpaper_dir = "wallpaper") {
+function renderWallpaperPost($post_data, $wallpaper_dir = "wallpaper")
+{
     $wallpaper_content = "";
-    if(isset($post_data)) {
-        $wallpaper_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$wallpaper_dir."/";
-        $wallpaper_items = getImagesInFolder($wallpaper_path );
+    if (isset($post_data)) {
+        $wallpaper_path = $GLOBALS['urlPath'] . "content/img/" . $post_data["post_type"] . "/" . $post_data["media_path"] . "/" . $wallpaper_dir . "/";
+        $wallpaper_items = getImagesInFolder($wallpaper_path);
 
-        if( !empty($wallpaper_items) ) {
-            $wallpaper_content .=  "<div class='dm-post-wallpaper'>".renderImage($wallpaper_path.$wallpaper_items[0]);
-            $wallpaper_content .= "<div class='dm-post-wallpaper-logo'>".renderLogoPost($post_data)."</div>";
-            $wallpaper_content .= "<h1 class='dm-post-heading'>".$post_data["title"]."</h1>";
+        if (!empty($wallpaper_items)) {
+            $wallpaper_content .= "<div class='dm-post-wallpaper'>" . renderImage($wallpaper_path . $wallpaper_items[0]);
+            $wallpaper_content .= "<div class='dm-post-wallpaper-logo'>" . renderLogoPost($post_data) . "</div>";
+            $wallpaper_content .= "<h1 class='dm-post-heading'>" . $post_data["title"] . "</h1>";
             $wallpaper_content .= "</div>";
         }
     }
     return $wallpaper_content;
 }
 
-function renderLogoPost($post_data, $popup = false, $class = false, $lazyLoad = true) {
+function renderLogoPost($post_data, $popup = false, $class = false, $lazyLoad = true)
+{
     $render_content = "";
-    if( ($post_data["logo_type"] == "png") || ($post_data["logo_type"] == "jpg") || ($post_data["logo_type"] == "jpeg") || ($post_data["logo_type"] == "webp")) {
-        $path_logo = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["logo_path"]."/".$post_data["logo"];
+    if (($post_data["logo_type"] == "png") || ($post_data["logo_type"] == "jpg") || ($post_data["logo_type"] == "jpeg") || ($post_data["logo_type"] == "webp")) {
+        $path_logo = $GLOBALS['urlPath'] . "content/img/" . $post_data["post_type"] . "/" . $post_data["logo_path"] . "/" . $post_data["logo"];
         $render_content .= renderImage($path_logo, $popup, $class, $lazyLoad);
     }
     return $render_content;
 }
 
-function renderTextVisualMediaPost($post_type = null, $media_path = null, $tags = null) {
+function renderTextVisualMediaPost($post_type = null, $media_path = null, $tags = null)
+{
     $src_current = __DIR__ . "/../../../";
     $media_string = "";
     $img_and_video_text = "";
 
     if (isset($media_path) and isset($post_type)) {
-        $img_path = $src_current.$GLOBALS['urlPath']."content/img/".$post_type."/".$media_path."/media/";
-        $vid_path =$src_current.$GLOBALS['urlPath']."content/vid/".$post_type."/".$media_path."/";
+        $img_path = $src_current . $GLOBALS['urlPath'] . "content/img/" . $post_type . "/" . $media_path . "/media/";
+        $vid_path = $src_current . $GLOBALS['urlPath'] . "content/vid/" . $post_type . "/" . $media_path . "/";
 
         if (file_exists($img_path)) {
             $nr_img = countFilesInFolder($img_path);
@@ -609,7 +632,7 @@ function renderTextVisualMediaPost($post_type = null, $media_path = null, $tags 
             $nr_vid = 0;
         }
 
-        if (($nr_img > 0) || ($nr_vid > 0))  {
+        if (($nr_img > 0) || ($nr_vid > 0)) {
             $media_string .= "of ";
         }
         if ($nr_img > 0) {
@@ -620,7 +643,7 @@ function renderTextVisualMediaPost($post_type = null, $media_path = null, $tags 
                 $media_string .= " photo";
             }
         }
-        if (($nr_img > 0) && ($nr_vid > 0))  {
+        if (($nr_img > 0) && ($nr_vid > 0)) {
             $media_string .= " and ";
             $img_and_video_text = " From stunning imagery to engaging videos, each piece is meticulously created to elevate your brand's online presence.";
         }
@@ -632,12 +655,12 @@ function renderTextVisualMediaPost($post_type = null, $media_path = null, $tags 
                 $media_string .= " video";
             }
         }
-        if (($nr_img == 0) && ($nr_vid == 0))  {
+        if (($nr_img == 0) && ($nr_vid == 0)) {
             $media_string .= "content";
         }
         if (isset($tags)) {
-            $text = "Experience the artistry behind my meticulously crafted media content for this company. Discover a captivating collection ".$media_string." that showcase my expertise in delivering impactful visuals for social media promotion.".$img_and_video_text." Explore the power of my unique visual creations and unlock the potential to captivate your audience.";
-            $text_section = "<p>".$text."</p>";
+            $text = "Experience the artistry behind my meticulously crafted media content for this company. Discover a captivating collection " . $media_string . " that showcase my expertise in delivering impactful visuals for social media promotion." . $img_and_video_text . " Explore the power of my unique visual creations and unlock the potential to captivate your audience.";
+            $text_section = "<p>" . $text . "</p>";
             $tags = "";
             if ($nr_img > 0) {
                 $tags .= '<a class="post-tag" href="#photo">photo</a>';
@@ -646,31 +669,31 @@ function renderTextVisualMediaPost($post_type = null, $media_path = null, $tags 
                 $tags .= '<a class="post-tag" href="#video">video</a>';
             }
             if (($nr_img > 0) || ($nr_vid > 0)) {
-                $text_section .= '<div class="post-tags" >'.$tags.'</div>';
+                $text_section .= '<div class="post-tags" >' . $tags . '</div>';
             }
             return $text_section;
-        }
-        else {
-            $text = "Experience the artistry behind my meticulously crafted media content for this company. Discover a captivating collection ".$media_string." that showcase my expertise in delivering impactful visuals for social media promotion.".$img_and_video_text." Explore the power of my unique visual creations and unlock the potential to captivate your audience.";
+        } else {
+            $text = "Experience the artistry behind my meticulously crafted media content for this company. Discover a captivating collection " . $media_string . " that showcase my expertise in delivering impactful visuals for social media promotion." . $img_and_video_text . " Explore the power of my unique visual creations and unlock the potential to captivate your audience.";
             return $text;
         }
     } else {
         $media_string = "photos and videos";
         $img_and_video_text = "From stunning imagery to engaging videos, each piece is meticulously created to elevate your brand's online presence.";
-        $text = "Experience the artistry behind my meticulously crafted media content for this company. Discover a captivating collection ".$media_string." that showcase my expertise in delivering impactful visuals for social media promotion.".$img_and_video_text." Explore the power of my unique visual creations and unlock the potential to captivate your audience.";
+        $text = "Experience the artistry behind my meticulously crafted media content for this company. Discover a captivating collection " . $media_string . " that showcase my expertise in delivering impactful visuals for social media promotion." . $img_and_video_text . " Explore the power of my unique visual creations and unlock the potential to captivate your audience.";
         return $text;
     }
 }
 
-function renderDetailsVisualMediaPost($post_data) {
+function renderDetailsVisualMediaPost($post_data)
+{
     $html_content = '';
 
     if (isset($post_data) && !empty($post_data)) {
         $html_content .= "<div class='dm-post-details-grid'>";
-        $html_content .=    "<div class='dm-post-logo-details' data-motion='transition-fade-0' data-duration='0.7s'>".renderImage( $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$post_data["logo"])."</div>";
-        $html_content .=    "<div class='dm-post-title-description' data-motion='transition-fade-0' data-duration='0.7s'>";
-        $html_content .=         renderTextVisualMediaPost($post_data["post_type"],$post_data["media_path"], "tags");
-        $html_content .=    "</div>";
+        $html_content .= "<div class='dm-post-logo-details' data-motion='transition-fade-0' data-duration='0.7s'>" . renderImage($GLOBALS['urlPath'] . "content/img/" . $post_data["post_type"] . "/" . $post_data["media_path"] . "/" . $post_data["logo"]) . "</div>";
+        $html_content .= "<div class='dm-post-title-description' data-motion='transition-fade-0' data-duration='0.7s'>";
+        $html_content .= renderTextVisualMediaPost($post_data["post_type"], $post_data["media_path"], "tags");
+        $html_content .= "</div>";
         $html_content .= "</div>";
     }
 
@@ -678,7 +701,8 @@ function renderDetailsVisualMediaPost($post_data) {
     return $html_content;
 }
 
-function renderSectionWebProject($post_data) {
+function renderSectionWebProject($post_data)
+{
     $html_content = '';
 
     if (isset($post_data) && !empty($post_data)) {
@@ -699,7 +723,8 @@ function renderSectionWebProject($post_data) {
     return $html_content;
 }
 
-function renderSectionMediaProject($post_data, $params = []) {
+function renderSectionMediaProject($post_data, $params = [])
+{
 
     $html_content = '';
 
@@ -726,7 +751,8 @@ function renderSectionMediaProject($post_data, $params = []) {
     return $html_content;
 }
 
-function renderParagraphBlockProject($text = null, $htmlcontent = '', $style = '') {
+function renderParagraphBlockProject($text = null, $htmlcontent = '', $style = '')
+{
     $html_content = '';
 
     $html_content .= "<div class='dm-post-title-description' data-motion='transition-fade-0' data-duration='0.7s'";
@@ -744,34 +770,36 @@ function renderParagraphBlockProject($text = null, $htmlcontent = '', $style = '
 }
 
 
-function renderImageBlockProject($post_data, $image_path = null, $image_file_name = null) {
+function renderImageBlockProject($post_data, $image_path = null, $image_file_name = null)
+{
     $html_content = '';
 
     $html_content .= "<div class='dm-post-image' data-motion='transition-fade-0' data-duration='0.7s' data-delay='0.2s'>";
-    $html_content .= renderImage( $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$image_path.$image_file_name, true);
-    $html_content .=  "</div>";
+    $html_content .= renderImage($GLOBALS['urlPath'] . "content/img/" . $post_data["post_type"] . "/" . $post_data["media_path"] . "/" . $image_path . $image_file_name, true);
+    $html_content .= "</div>";
 
     return $html_content;
 }
 
-function renderSliderWithImagesOfProject($post_data, $img_array_path_dir) {
+function renderSliderWithImagesOfProject($post_data, $img_array_path_dir)
+{
     $src_current = __DIR__ . "/../../../";
     $html_content = '<div data-motion="transition-fade-0" data-duration="1.2s">';
 
-    if( $img_array_path_dir != null) {
+    if ($img_array_path_dir != null) {
 
-        $slides_path = $GLOBALS['urlPath']."content/img/".$post_data["post_type"]."/".$post_data["media_path"]."/".$img_array_path_dir."/";
+        $slides_path = $GLOBALS['urlPath'] . "content/img/" . $post_data["post_type"] . "/" . $post_data["media_path"] . "/" . $img_array_path_dir . "/";
 
-        $images = scandir($src_current.$slides_path);
+        $images = scandir($src_current . $slides_path);
         $images_rendered_array = [];
 
-        foreach ( $images as $image_file ) {
+        foreach ($images as $image_file) {
             if ($image_file == '.' || $image_file == '..') {
                 continue;
             }
-            $images_rendered_array[] = renderImage($slides_path.$image_file, true);
+            $images_rendered_array[] = renderImage($slides_path . $image_file, true);
         }
-        $html_content .=  renderSlider($images_rendered_array, true, false, true);
+        $html_content .= renderSlider($images_rendered_array, true, false, true);
         $html_content .= '</div>';
     }
 
@@ -779,23 +807,24 @@ function renderSliderWithImagesOfProject($post_data, $img_array_path_dir) {
     return $html_content;
 }
 
-function renderFeatureHero($post_data) {
+function renderFeatureHero($post_data)
+{
     $src_current = __DIR__ . "/../../../";
     $html_content = '';
     $html_content .= '<div class="dm-post-feature-hero" 
                         data-motion="transition-fade-0" data-duration="0.7s" data-delay="0.1s">';
 
-    $html_content .=  renderBgImgOverlayTexture();
+    $html_content .= renderBgImgOverlayTexture();
 
     ob_start();
     require_once __DIR__ . '/../classes/renderSVG.php';
     require_once __DIR__ . '/../classes/renderStructure.php';
 
-    $img_shape_1 = $GLOBALS['urlPath'].getDataJson('data-content-personal', 'data')["post-projects"]["img"]["background"]["overlay-shape-1"];
-    $html_content .=  SVGRenderer::renderSVG( $img_shape_1);
+    $img_shape_1 = $GLOBALS['urlPath'] . getDataJson('data-content-personal', 'data')["post-projects"]["img"]["background"]["overlay-shape-1"];
+    $html_content .= SVGRenderer::renderSVG($img_shape_1);
 
-    $img_shape_2 = $GLOBALS['urlPath'].getDataJson('data-content-personal', 'data')["post-projects"]["img"]["background"]["overlay-shape-2"];
-    $html_content .=  SVGRenderer::renderSVG( $img_shape_2);
+    $img_shape_2 = $GLOBALS['urlPath'] . getDataJson('data-content-personal', 'data')["post-projects"]["img"]["background"]["overlay-shape-2"];
+    $html_content .= SVGRenderer::renderSVG($img_shape_2);
 
     $renderer = new RendererElements();
     $html_content .= $renderer->renderElement("devices-post-item-web", "", ["post_data" => $post_data]);
@@ -804,16 +833,17 @@ function renderFeatureHero($post_data) {
     $html_content .= $renderer->renderElement("animation-waves");
     $html_content .= ob_get_clean();
 
-    $html_content .=  "</div>";
+    $html_content .= "</div>";
 
 
     return $html_content;
 }
 
-function renderBgImgOverlayTexture() {
+function renderBgImgOverlayTexture()
+{
     $html_content = "";
-    $img_texture = $GLOBALS['urlPath'].getDataJson('data-content-personal', 'data')["post-projects"]["img"]["background"]["overlay-texture"];
-    $html_content .=  '<div class="bg-texture" style="background-image: url("' . $img_texture . '")"></div>';
+    $img_texture = $GLOBALS['urlPath'] . getDataJson('data-content-personal', 'data')["post-projects"]["img"]["background"]["overlay-texture"];
+    $html_content .= '<div class="bg-texture" style="background-image: url("' . $img_texture . '")"></div>';
 
     return $html_content;
 }

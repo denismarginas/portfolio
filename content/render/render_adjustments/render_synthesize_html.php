@@ -1,6 +1,6 @@
 <?php
 
-if(!isset($jsonGlobalData)) :
+if (!isset($jsonGlobalData)):
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
 endif;
 
@@ -9,10 +9,11 @@ $projectPath = __DIR__ . '/../../../';
 
 $GLOBALS['urlPath'] = getUrlPaths();
 
-$pagePath = $projectPath. $renderPath;
+$pagePath = $projectPath . $renderPath;
 $pageFiles = glob($pagePath . '*.html');
 
-function inLineHtml($html) {
+function inLineHtml($html)
+{
     $html = preg_replace('/\s+/', ' ', $html);
     $html = preg_replace('/>\s+</', '><', $html);
     $html = str_replace("\n", '', $html);
@@ -21,7 +22,8 @@ function inLineHtml($html) {
     return $html;
 }
 
-function moveTagsToHead($html) {
+function moveTagsToHead($html)
+{
     preg_match('/<head.*?>/i', $html, $headOpenTag);
     if (!$headOpenTag) {
         $html = preg_replace('/<html.*?>/i', '$0<head></head>', $html);
@@ -32,14 +34,14 @@ function moveTagsToHead($html) {
 
     $existingTags = [];
     foreach ($tagsToMove as $tag) {
-        preg_match_all('/<'.$tag.'.*?<\/'.$tag.'>/is', $html, $matches);
+        preg_match_all('/<' . $tag . '.*?<\/' . $tag . '>/is', $html, $matches);
         foreach ($matches[0] as $foundTag) {
-            $existingTags[] = strip_tags($foundTag); // Store tag content for comparison
+            $existingTags[] = strip_tags($foundTag);
         }
     }
 
     foreach ($tagsToMove as $tag) {
-        $pattern = '/<'.$tag.'.*?<\/'.$tag.'>/is';
+        $pattern = '/<' . $tag . '.*?<\/' . $tag . '>/is';
         preg_match_all($pattern, $html, $matches);
 
         foreach ($matches[0] as $foundTag) {
@@ -57,13 +59,15 @@ function moveTagsToHead($html) {
     return $html;
 }
 
-function standardizeAttributeQuotes($html) {
+function standardizeAttributeQuotes($html)
+{
     $pattern = '/(\w+)\s*=\s*["\']([^"\']+)["\']/';
     $html = preg_replace($pattern, '$1="$2"', $html);
     return $html;
 }
 
-function standardizeBackgroundImageUrls($html) {
+function standardizeBackgroundImageUrls($html)
+{
     $html = html_entity_decode($html);
     $pattern = '/background-image:\s*url\(\s*[\'"]?([^\'"()]+)[\'"]?\s*\)/';
     $replacement = 'background-image: url(\'$1\')';
