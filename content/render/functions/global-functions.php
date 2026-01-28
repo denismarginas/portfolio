@@ -599,7 +599,6 @@ function getDataHero($filename)
 
 function executePhpInString($string, $params = [])
 {
-    // Extract variables from the $params array
     extract($params);
 
     ob_start();
@@ -622,13 +621,12 @@ function calculateDaysWorkedInMonth($currentDate, $jobs)
         $jobStartDate = DateTime::createFromFormat('d.m.Y', $job['date_start']);
         $jobEndDate = ($job['date_end'] === 'In progress') ? new DateTime() : DateTime::createFromFormat('d.m.Y', $job['date_end']);
 
-        // Check if there is an overlap between the job and the current month
         if (
             $currentDate >= $jobStartDate &&
             $currentDate <= min($jobEndDate, clone $currentDate->modify('last day of this month'))
         ) {
             $interval = $jobStartDate->diff(min($jobEndDate, clone $currentDate->modify('last day of this month')));
-            $daysWorked += $interval->days + 1; // Include the end day
+            $daysWorked += $interval->days + 1;
         }
     }
 
@@ -657,15 +655,15 @@ function renderContactFormField($contact_form_field)
             placeholder="<?php echo $contact_form_field["placeholder"]; ?>" value="" <?php if (isset($contact_form_field["field-name-extern"]) && !empty($contact_form_field["field-name-extern"])):
                    echo 'field-name-extern="' . $contact_form_field["field-name-extern"] . '"';
                endif; ?>         <?php if (isset($contact_form_field["field-name-step"])):
-                            echo 'field-name-step="' . $contact_form_field["field-name-step"] . '"';
-                        endif; ?>>
+                             echo 'field-name-step="' . $contact_form_field["field-name-step"] . '"';
+                         endif; ?>>
     <?php elseif ($contact_form_field["type"] == "message" || $contact_form_field["type"] == "textarea"): ?>
         <textarea id="<?php echo $contact_form_field["name"]; ?>" type="text" name="<?php echo $contact_form_field["name"]; ?>"
             placeholder="<?php echo $contact_form_field["placeholder"]; ?>" value="" <?php if (isset($contact_form_field["field-name-extern"]) && !empty($contact_form_field["field-name-extern"])):
                    echo 'field-name-extern="' . $contact_form_field["field-name-extern"] . '"';
                endif; ?>         <?php if (isset($contact_form_field["field-name-step"])):
-                            echo 'field-name-step="' . $contact_form_field["field-name-step"] . '"';
-                        endif; ?>></textarea>
+                             echo 'field-name-step="' . $contact_form_field["field-name-step"] . '"';
+                         endif; ?>></textarea>
     <?php elseif ($contact_form_field["type"] == "radio" || $contact_form_field["type"] == "radiobuttons"): ?>
         <?php $radioOptions = $contact_form_field["values"] ?? [
             [
@@ -687,9 +685,9 @@ function renderContactFormField($contact_form_field)
                     value="<?php echo $option["value"]; ?>" <?php if (isset($option["step"])):
                            echo 'data-step="' . $option["step"] . '"';
                        endif; ?>             <?php if (isset($contact_form_field["field-name-step"])):
-                                        echo 'field-name-step="' . $contact_form_field["field-name-step"] . '"';
-                                        echo 'placeholder="' . $contact_form_field["placeholder"] . '"';
-                                    endif; ?>>
+                                         echo 'field-name-step="' . $contact_form_field["field-name-step"] . '"';
+                                         echo 'placeholder="' . $contact_form_field["placeholder"] . '"';
+                                     endif; ?>>
                 <span class="checkmark"></span>
                 <label for="<?php echo $option["name"]; ?>"><?php echo $option["value"]; ?></label>
             </div>

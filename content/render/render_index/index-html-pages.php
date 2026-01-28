@@ -1,13 +1,13 @@
 <?php
 
-if(!isset($jsonGlobalData)) {
+if (!isset($jsonGlobalData)) {
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
 }
 
 $projectPath = __DIR__ . '/../../../';
 
-$pagesDirectory = $projectPath. $jsonGlobalData["theme-active"]["html-render-path"] ?? "content/pages/";
-$thumbnailDirectory = $pagesDirectory. '/content/img/thumbnails-pages/';
+$pagesDirectory = $projectPath . $jsonGlobalData["theme-active"]["html-render-path"] ?? "content/pages/";
+$thumbnailDirectory = $pagesDirectory . '/content/img/thumbnails-pages/';
 
 $pageData = [];
 
@@ -52,7 +52,7 @@ foreach ($htmlFiles as $file) {
 
         $content = '';
         $bodyElement = $dom->getElementsByTagName('body')->item(0);
-        extractContent($content, $bodyElement); // Call the function directly
+        extractContent($content, $bodyElement);
 
         $content = trim(preg_replace('/\s+/', ' ', $content));
 
@@ -72,7 +72,7 @@ foreach ($htmlFiles as $file) {
         $title = removeStringFromTitle($title, $removeString);
 
         $pageData[] = [
-            'page'=> pathinfo($file, PATHINFO_FILENAME).$jsonGlobalData["page-slug-extension"],
+            'page' => pathinfo($file, PATHINFO_FILENAME) . $jsonGlobalData["page-slug-extension"],
             'meta-title' => $title,
             'meta-description' => $metaDescription,
             'post-type' => $postType,
@@ -83,7 +83,8 @@ foreach ($htmlFiles as $file) {
     }
 }
 
-function extractContent(&$content, $node) {
+function extractContent(&$content, $node)
+{
     if ($node->nodeType === XML_TEXT_NODE) {
         $content .= $node->textContent . ' ';
     } elseif ($node->nodeType === XML_ELEMENT_NODE && $node->getAttribute('class') !== 'dm-debug') {
@@ -93,7 +94,8 @@ function extractContent(&$content, $node) {
     }
 }
 
-function removeStringFromTitle($title, $string) {
+function removeStringFromTitle($title, $string)
+{
     return str_replace($string, '', $title);
 }
 

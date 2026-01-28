@@ -1,26 +1,24 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 
-// Contact Form Steps
     var form = document.getElementById('dm-form');
 
     if (form.getAttribute('data-form-type') === "steps") {
         var steps = form.querySelectorAll('.step');
 
         steps.forEach(function(step) {
-            step.setAttribute('data-toggle-animation', 'collapse'); // Set the toggle animation attribute
-            step.setAttribute('data-display', 'hide'); // Set the display attribute to hide
+            step.setAttribute('data-toggle-animation', 'collapse');
+            step.setAttribute('data-display', 'hide'); 
         });
 
         var currentStepIndex = 0;
-        steps[currentStepIndex].setAttribute('data-display', 'show'); // Show the first step
+        steps[currentStepIndex].setAttribute('data-display', 'show');
 
         function showStep(stepIndex) {
             steps.forEach(function(step) {
-                step.setAttribute('data-display', 'hide'); // Hide all steps
-            });
+                step.setAttribute('data-display', 'hide');
             if (steps[stepIndex]) {
-                steps[stepIndex].setAttribute('data-display', 'show'); // Show the specified step
+                steps[stepIndex].setAttribute('data-display', 'show'); 
             }
         }
 
@@ -53,9 +51,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-
-
-// Contact Form
 function contact_form_exec() {
     var form = document.getElementById('dm-form');
     var externalFormUrl = form.getAttribute('data-external-form-url');

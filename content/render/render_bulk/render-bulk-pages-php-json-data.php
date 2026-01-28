@@ -1,23 +1,22 @@
 <?php
 
-if(!isset($jsonGlobalData)) :
+if (!isset($jsonGlobalData)):
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
 endif;
 
 $renderPath = $jsonGlobalData["theme-active"]["html-render-path"] ?? "";
 $projectPath = __DIR__ . '/../../../';
 
-$log[] ="<div style='color : var( --dm-color-status-primary);'>----- Pages Projects JSON - Rendering ------</div>";
+$log[] = "<div style='color : var( --dm-color-status-primary);'>----- Pages Projects JSON - Rendering ------</div>";
 
-$pagePath = $projectPath. $renderPath;
+$pagePath = $projectPath . $renderPath;
 $pageJsonPath = "data-pages";
 $GLOBALS['urlPath'] = getUrlPaths();
 
 $pages = getDataJson($pageJsonPath, 'data');
 
-if(count($pages) > 0) {
+if (count($pages) > 0) {
     foreach ($pages as $page) {
-        //$log[] = $page["file"];
 
         try {
             $pageHtmlFileName = $page["file"] . '.html';
@@ -25,20 +24,19 @@ if(count($pages) > 0) {
             $pageFilePath = $pagePath . $pageHtmlFileName;
             file_put_contents($pageFilePath, $pageHtmlContent);
 
-            $log[] =  "Rendered: -- $pageHtmlFileName";
+            $log[] = "Rendered: -- $pageHtmlFileName";
 
         } catch (Exception $e) {
             $log[] = "Error: " . $e->getMessage() . PHP_EOL;
         }
-        //break;
     }
 } else {
-    $log[] = "No posts was found in ". $pagePath;
+    $log[] = "No posts was found in " . $pagePath;
 }
 
-function render_page_template_content($page) {
+function render_page_template_content($page)
+{
 
-    // Start output buffering
     ob_start();
 
     $renderer_structure = new RendererStructure();
@@ -46,7 +44,6 @@ function render_page_template_content($page) {
     $renderer_elements = new RendererElements();
 
     $content = "";
-    //$page_content = executePhpInString($page_content, ['filename' => $page["file"]]);
 
     // Render Header
     $seo = getSeoFromCurrentPageData($page['file']);
@@ -71,8 +68,6 @@ function render_page_template_content($page) {
     // Render Footer
     $content .= $renderer_structure->footer();
 
-
-    // Get the captured content from output buffer and append it to $content
     $content .= ob_get_clean();
 
     return $content;

@@ -1,6 +1,6 @@
 <?php
 
-if(!isset($jsonGlobalData)) {
+if (!isset($jsonGlobalData)) {
     $jsonGlobalData = getDataJson('data-global-settings', 'data');
 }
 
@@ -8,9 +8,8 @@ $projectPath = __DIR__ . '/../../../';
 
 $pagesDirectory = $projectPath . ($jsonGlobalData["theme-active"]["html-render-path"] ?? "content/pages/");
 $baseURL = $jsonGlobalData["url"] ?? 'https://localhost.com/';
-$pageSlugExtension = $jsonGlobalData["page-slug-extension"] ?? ''; // Fallback to empty string
+$pageSlugExtension = $jsonGlobalData["page-slug-extension"] ?? '';
 
-// Initialize XML Document
 $xml = new DOMDocument('1.0', 'UTF-8');
 $urlset = $xml->createElement('urlset');
 $urlset->setAttribute('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9');
@@ -35,7 +34,7 @@ foreach ($htmlFiles as $file) {
                 $robotsContent = $metaTag->getAttribute('content');
 
                 if (strpos(strtolower($robotsContent), 'noindex') === false) {
-                    $includeInSitemap = true; // Include the page if it's not "noindex"
+                    $includeInSitemap = true;
                 }
                 break;
             }

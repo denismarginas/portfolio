@@ -1,11 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Helper function to parse a date in dd.MM.yyyy format
     function parseDate(dateString) {
         const [day, month, year] = dateString.split('.').map(Number);
         return new Date(year, month - 1, day);
     }
 
-    // Function to calculate the difference in years, months, and days between two dates
     function calculateWorkTime(startDate, endDate) {
         const start = new Date(startDate);
         const end = new Date(endDate);
@@ -33,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
         return { years, months, days };
     }
 
-    // Main function to process .dm-job elements
     document.querySelectorAll('.dm-job').forEach(job => {
         const workDateLists = job.querySelectorAll('.work-details .work-data .work-dates');
 
@@ -48,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 const startDateText = dateItems[0]?.textContent.trim();
                 const endDateText = dateItems[2]?.textContent.trim();
 
-                // Parse dates using the helper function
                 const startDate = parseDate(startDateText);
                 const endDate = endDateText === "In progress" ? new Date() : parseDate(endDateText);
 
@@ -71,8 +67,6 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-
-        // Check if .work-time already exists to prevent duplicates
         if (!job.querySelector('.work-details .work-data .work-time')) {
             const workTimeHTML = `
                 <li>
