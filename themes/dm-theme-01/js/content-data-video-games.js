@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const list = document.querySelector(".dm-video-games-list");
-  if (!list) return; /
+  if (!list) return;
 
   const params = new URLSearchParams(window.location.search);
   if (params.get("display") !== "all") return;
@@ -47,11 +47,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const rank = document.createElement("select");
       rank.innerHTML = `<option value="">Rank</option>${Array.from(
         { length: 10 },
-        (_, i) => `<option value="${i + 1}">${i + 1}</option>`
+        (_, i) => `<option value="${i + 1}">${i + 1}</option>`,
       ).join("")}`;
       const tagsSet = new Set();
       data.forEach((x) =>
-        x.tags.split(",").forEach((t) => tagsSet.add(t.trim()))
+        x.tags.split(",").forEach((t) => tagsSet.add(t.trim())),
       );
       const tags = document.createElement("select");
       tags.innerHTML =
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (i.dataset.originalDisplay === "false")
               i.setAttribute("display", "false");
           });
-        } 
+        }
       };
 
       const filter = () => {
@@ -93,19 +93,19 @@ document.addEventListener("DOMContentLoaded", function () {
             a
               .querySelector(".name")
               .textContent.trim()
-              .localeCompare(b.querySelector(".name").textContent.trim())
+              .localeCompare(b.querySelector(".name").textContent.trim()),
           );
         if (ns === "za")
           arr.sort((a, b) =>
             b
               .querySelector(".name")
               .textContent.trim()
-              .localeCompare(a.querySelector(".name").textContent.trim())
+              .localeCompare(a.querySelector(".name").textContent.trim()),
           );
 
         if (rk)
           arr = arr.filter(
-            (i) => i.querySelector(".rank span").textContent.trim() === rk
+            (i) => i.querySelector(".rank span").textContent.trim() === rk,
           );
 
         if (tg)
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const ul = i.querySelector(".tags");
             if (!ul) return false;
             return [...ul.querySelectorAll("li")].some(
-              (x) => x.textContent.trim() === tg
+              (x) => x.textContent.trim() === tg,
             );
           });
 
