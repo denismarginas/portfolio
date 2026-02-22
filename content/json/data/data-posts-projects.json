@@ -9035,7 +9035,7 @@
       "logo": "wp-plugin",
       "logo_path": "icon",
       "logo_type": "svg",
-      "description": "WordPress plugin that automatically creates AI-generated custom posts featuring short stories for kids, complete with text and images.<br>Need to configure Gemini API Key for text generation and choose an image provider (free or token-based).<br><br>This plugin uses shortcodes to render the AI story-generation form and to display generated post content in a slider format.",
+      "description": "WordPress plugin that automatically creates AI-generated custom posts featuring short stories for kids, complete with text and images.<br>Need to configure Gemini API Key for text generation and choose an image provider (free or token-based).<br><br>This plugin uses shortcodes to render the AI story-generation form and to display generated post content in a slider format. This plugin was not deployed for a client or on a public website due to the absence of a WooCommerce points-based system.",
       "categories": ["Web Development Projects"],
       "web_url": "",
       "web_platform": [
@@ -9063,7 +9063,7 @@
         }
       ],
       "web_plugins": [],
-      "web_project_status": "Done",
+      "web_project_status": "Undone",
       "project_types": ["wordpress plugin", "content generator", "web design"],
       "media_custom": [
         {
@@ -9391,6 +9391,10 @@
         {
           "title": "Plugin Usage: ",
           "url": "revistaeducatie.ro/reviste-si-carti/"
+        },
+        {
+          "title": "Plugin Usage: ",
+          "url": "cadredidactice.ro/resurse-educationale-deschisered/"
         }
       ],
       "project_collaboration": ["Individual"],
