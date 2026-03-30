@@ -9223,7 +9223,7 @@
           "name": "Yoast SEO"
         }
       ],
-      "web_project_status": "Undone",
+      "web_project_status": "Done",
       "project_types": ["presentation website", "web design"],
       "project_collaboration": ["Individual", "Teamwork"],
       "project_contractor": ["Mentor Marketing Experts"],
@@ -9484,6 +9484,240 @@
         "post_color_secondary": "#1d263a",
         "post_color_background": "#f0f0f1",
         "post_color_text_on_background": "#2271b1"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-primefixgarage",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "primefixgarage",
+      "title": "Primefix",
+      "logo": "logo/logo.webp",
+      "logo_path": "primefixgarage",
+      "logo_type": "webp",
+      "description": "This project was developed using WordPress and the Elementor Pro page builder. The website design was originally created in Figma and then translated into Elementor widgets and elements to bring the layout to life. All textual content was generated with the assistance of AI tools, while images were sourced from a combination of assets provided by the project owner/admin/customer and royalty-free image websites to match the content context. The result is a fully functional, visually cohesive website that faithfully represents the original Figma design while integrating AI-assisted content and high-quality imagery.",
+      "categories": ["Web Development Projects"],
+      "web_url": "primefixgarage.com",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        },
+        {
+          "name": "Yoast SEO"
+        }
+      ],
+      "web_project_status": "Done",
+      "project_types": ["presentation website", "web design"],
+      "project_collaboration": ["Individual", "Teamwork"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "02.2026",
+        "date_end": "02.2025"
+      },
+      "tags": ["web", "content-web"],
+      "colors": {
+        "post_color_primary": "#01233e",
+        "post_color_secondary": "#ffffff",
+        "post_color_background": "#01233e",
+        "post_color_text_on_background": "#ffffff"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-reisr",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "reisr",
+      "title": "Reisr",
+      "logo": "logo/logo.webp",
+      "logo_path": "reisr",
+      "logo_type": "webp",
+      "description": "This project was developed using WordPress and the Elementor Pro page builder. The website design was originally created in Figma and then translated into Elementor widgets and elements to bring the layout to life. All textual content was generated with the assistance of AI tools, while images were sourced from a combination of assets provided by the project owner/admin/customer and royalty-free image websites to match the content context. The result is a fully functional, visually cohesive website that faithfully represents the original Figma design while integrating AI-assisted content and high-quality imagery.",
+      "categories": ["Web Development Projects"],
+      "web_url": "reisr.com",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        },
+        {
+          "name": "Yoast SEO"
+        }
+      ],
+      "web_project_status": "Done",
+      "project_types": ["presentation website", "web design"],
+      "project_collaboration": ["Individual", "Teamwork"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "02.2026",
+        "date_end": "02.2025"
+      },
+      "tags": ["web", "content-web"],
+      "colors": {
+        "post_color_primary": "#232d65",
+        "post_color_secondary": "#ffffff",
+        "post_color_background": "#232d65",
+        "post_color_text_on_background": "#ffffff"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-burlenpropertygroup",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "burlenpropertygroup",
+      "title": "Burlen Property Group",
+      "logo": "logo/logo.webp",
+      "logo_path": "burlenpropertygroup",
+      "logo_type": "webp",
+      "description": "This project was developed using WordPress and the Elementor Pro page builder. The website design was originally created in Figma and then translated into Elementor widgets and elements to bring the layout to life. All textual content was generated with the assistance of AI tools, while images were sourced from a combination of assets provided by the project owner/admin/customer and royalty-free image websites to match the content context. The result is a fully functional, visually cohesive website that faithfully represents the original Figma design while integrating AI-assisted content and high-quality imagery.",
+      "categories": ["Web Development Projects"],
+      "web_url": "burlenpropertygroup.com",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        },
+        {
+          "name": "Yoast SEO"
+        }
+      ],
+      "web_project_status": "Done",
+      "project_types": ["presentation website", "web design"],
+      "project_collaboration": ["Individual", "Teamwork"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "02.2026",
+        "date_end": "02.2025"
+      },
+      "tags": ["web", "content-web"],
+      "colors": {
+        "post_color_primary": "#122333",
+        "post_color_secondary": "#ffffff",
+        "post_color_background": "#122333",
+        "post_color_text_on_background": "#ffffff"
       }
     },
     "post_content": [

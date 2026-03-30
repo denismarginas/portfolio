@@ -551,6 +551,12 @@ Allow: /
 Meta-robots: noindex, nofollow
 
 User-agent: *
+Disallow: /project-primefixgarage
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
 Disallow: /project-prismanord
 Crawl-delay: 10
 Allow: /
@@ -576,6 +582,12 @@ Meta-robots: noindex, nofollow
 
 User-agent: *
 Disallow: /project-reifendirekt
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
+Disallow: /project-reisr
 Crawl-delay: 10
 Allow: /
 Meta-robots: noindex, nofollow
