@@ -467,6 +467,12 @@ Allow: /
 Meta-robots: noindex, nofollow
 
 User-agent: *
+Disallow: /project-module-sell-my-things
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
 Disallow: /project-mscardetailing
 Crawl-delay: 10
 Allow: /
