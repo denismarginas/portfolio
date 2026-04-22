@@ -123,13 +123,13 @@
     "url_web": "https://mentor-marketing.com/",
     "url_linkedin": "https://www.linkedin.com/company/mentor-marketing-experts/",
     "date_start": "26.01.2024",
-    "date_end": "In progress",
+    "date_end": "31.03.2026",
     "work-time-type": [
       {
         "name": "full-time",
         "hours": "8h",
         "date_start": "26.01.2024",
-        "date_end": "In progress"
+        "date_end": "31.03.2026"
       }
     ],
     "work-location-type": ["Remote"],
@@ -139,5 +139,26 @@
       "Translated designs from a Figma project into functional web pages using Elementor",
       "Utilized Trello for task management, along with Zoom and Google Meets, for efficient team communication"
     ]
+  },
+  {
+    "name": "Gi Group",
+    "display": "true",
+    "img": "content/img/projects/gigroup/logo/logo-icon.webp",
+    "img_bg": "light",
+    "url_web": "https://ro.gigroup.com/",
+    "url_linkedin": "https://www.linkedin.com/company/gi-group/",
+    "date_start": "01.04.2026",
+    "date_end": "In progress",
+    "work-time-type": [
+      {
+        "name": "full-time",
+        "hours": "8h",
+        "date_start": "01.04.2026",
+        "date_end": "In progress"
+      }
+    ],
+    "work-location-type": ["Remote"],
+    "function": ["Wordpress Developer", "Web Page Designer"],
+    "work_attributes": ["Working for Mentor Marketing Experts"]
   }
 ]
