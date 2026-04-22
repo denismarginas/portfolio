@@ -142,7 +142,7 @@
   },
   {
     "name": "Gi Group",
-    "display": "true",
+    "display": "false",
     "img": "content/img/projects/gigroup/logo/logo-icon.webp",
     "img_bg": "light",
     "url_web": "https://ro.gigroup.com/",
