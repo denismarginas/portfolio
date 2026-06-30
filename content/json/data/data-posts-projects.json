@@ -9028,6 +9028,7 @@
     "file": "project-module-ai-story-for-kids",
     "post_data": {
       "display": "enable",
+      "exclude_from_search": "true",
       "post_single_type": "project",
       "post_type": "projects",
       "media_path": "module-ai-story-for-kids",
@@ -9431,7 +9432,7 @@
       "logo": "wp-plugin",
       "logo_path": "icon",
       "logo_type": "svg",
-      "description": "Let user to publish a custom page to sell his personal products.",
+      "description": "Sell My Things transforms your standard WordPress site into a powerful, independent multi-vendor marketplace—completely free from WooCommerce.<br><br>Instead of standard e-commerce setups, this plugin introduces a subscription-based publishing model. Users can purchase time-limited subscriptions that grant them a specific quota, such as owning 1 shop and publishing up to 6 products. Once subscribed, regular customers instantly become sellers with access to a dedicated frontend Dashboard to track their sales performance and earnings.<br><br>Designed for seamless direct peer-to-peer transactions, the platform operates without card payment gateways. It features an automated Mark as Sold system when a transaction occurs, alongside a built-in email notification system that keeps both buyers and sellers informed instantly. With its own custom cart, checkout, and account pages, Sell My Things offers a fast, isolated, and lightweight alternative to heavy e-commerce plugins. Plus, it includes a one-click demo data import so you can see a fully functional shop with sample products in action right away.",
       "categories": ["Web Development Projects"],
       "web_url": "",
       "web_platform": [
@@ -9717,6 +9718,419 @@
         "post_color_primary": "#122333",
         "post_color_secondary": "#ffffff",
         "post_color_background": "#122333",
+        "post_color_text_on_background": "#ffffff"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-orions",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "orions",
+      "title": "Orions",
+      "logo": "logo/logo.webp",
+      "logo_path": "orions",
+      "logo_type": "webp",
+      "description": "This project was developed using WordPress and the Elementor Pro page builder. The website design was originally created in Figma and then translated into Elementor widgets and elements to bring the layout to life.",
+      "categories": ["Web Development Projects"],
+      "web_url": "orions.gr",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        },
+        {
+          "name": "Yoast SEO"
+        }
+      ],
+      "web_project_status": "Undone",
+      "project_types": ["presentation website", "web design"],
+      "project_collaboration": ["Individual", "Teamwork"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "04.2026",
+        "date_end": "06.2025"
+      },
+      "tags": ["web"],
+      "colors": {
+        "post_color_primary": "#284838",
+        "post_color_secondary": "#ffffff",
+        "post_color_background": "#ebe8dc",
+        "post_color_text_on_background": "#284838"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+    {
+    "file": "project-umbr",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "umbr",
+      "title": "Umbrella",
+      "logo": "logo/logo.webp",
+      "logo_path": "umbr",
+      "logo_type": "webp",
+      "description": "This project was developed using WordPress and the Elementor Pro page builder. The website design was originally created in Figma and then translated into Elementor widgets and elements to bring the layout to life.",
+      "categories": ["Web Development Projects"],
+      "web_url": "umbr.co",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        },
+        {
+          "name": "Unlimited Elements for Elementor Premium",
+          "svg": "unlimited-elements"
+        },
+        {
+          "name": "Yoast SEO"
+        }
+      ],
+      "web_project_status": "Done",
+      "project_types": ["presentation website", "web design"],
+      "project_collaboration": ["Individual", "Teamwork"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "05.2026",
+        "date_end": "05.2025"
+      },
+      "tags": ["web"],
+      "colors": {
+        "post_color_primary": "#3c2b42",
+        "post_color_secondary": "#ffffff",
+        "post_color_background": "#ffffff",
+        "post_color_text_on_background": "#3c2b42"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+      {
+    "file": "project-zozo",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "zozo",
+      "title": "Zozo Piercing",
+      "logo": "logo/logo.webp",
+      "logo_path": "zozo",
+      "logo_type": "webp",
+      "description": "This project was developed using WordPress and the Elementor Pro page builder. The website design was originally created in Figma and then translated into Elementor widgets and elements to bring the layout to life.",
+      "categories": ["Web Development Projects"],
+      "web_url": "zozo.co",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        },
+        {
+          "name": "Woocommerce",
+          "svg": "woocommerce"
+        },
+        {
+          "name": "Yoast SEO"
+        }
+      ],
+      "web_project_status": "Undone",
+      "project_types": ["online shop", "web design"],
+      "project_collaboration": ["Individual", "Teamwork"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "06.2026",
+        "date_end": "06.2025"
+      },
+      "tags": ["web"],
+      "colors": {
+        "post_color_primary": "#d1baf1",
+        "post_color_secondary": "#121212",
+        "post_color_background": "#ffffff",
+        "post_color_text_on_background": "#121212"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+        {
+    "file": "project-y-stern",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "y-stern",
+      "title": "Y-Stern",
+      "logo": "logo/logo.webp",
+      "logo_path": "y-stern",
+      "logo_type": "webp",
+      "description": "This project was developed using WordPress and the Elementor Pro page builder. The website design was originally created in Figma and then translated into Elementor widgets and elements to bring the layout to life.<br><br>For this project, I built a custom script to extract product data including titles, descriptions, and variations from DOCX, PDF, and image folders into a structured Excel file. I also compressed and converted all product images to WebP format. By uploading the media directly to the hosting server, I used WP All Import to securely and automatically import all data alongside its custom terms and taxonomies.",
+      "categories": ["Web Development Projects"],
+      "web_url": "y-stern.co.il",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        },
+        {
+          "name": "Yoast SEO"
+        }
+      ],
+      "web_project_status": "Done",
+      "project_types": ["presentation website", "web design"],
+      "project_collaboration": ["Individual", "Teamwork"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "05.2026",
+        "date_end": "06.2025"
+      },
+      "tags": ["web", "content-web"],
+      "colors": {
+        "post_color_primary": "#0b0b45",
+        "post_color_secondary": "#ffffff",
+        "post_color_background": "#ffffff",
+        "post_color_text_on_background": "#0b0b45"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+          {
+    "file": "project-kaizin",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "kaizin",
+      "title": "Kaizin",
+      "logo": "logo/logo.webp",
+      "logo_path": "kaizin",
+      "logo_type": "webp",
+      "description": "This project was developed using WordPress and the Elementor Pro page builder. The website design was originally created in Figma and then translated into Elementor widgets and elements to bring the layout to life.<br><br>This project is more than a basic presentation website because it functions as a non-traditional online shop. The company features a web browser extension that helps users interact on LinkedIn. We integrated the data from the website including user profiles, purchases, subscriptions, and encrypted password updates directly with the application using webhooks and the company API.",
+      "categories": ["Web Development Projects"],
+      "web_url": "kaizin.ai",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        },
+        {
+          "name":"WooCommerce",
+          "svg":"woocommerce"
+        },
+        {
+          "name":"Secure Custom Fields",
+          "svg":"scf"
+        },
+        {
+          "name":"Code Snippets",
+          "svg":"code-snippets"
+        },
+        {
+          "name": "WooCommerce Subscriptions"
+        },
+        {
+          "name": "Yoast SEO"
+        }
+      ],
+      "web_project_status": "Done",
+      "project_types": ["online shop", "web design"],
+      "project_collaboration": ["Individual", "Teamwork"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "04.2026",
+        "date_end": "06.2025"
+      },
+      "tags": ["web", "content-web"],
+      "colors": {
+        "post_color_primary": "#fe7baa",
+        "post_color_secondary": "#ffffff",
+        "post_color_background": "#132839",
         "post_color_text_on_background": "#ffffff"
       }
     },

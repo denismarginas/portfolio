@@ -353,6 +353,12 @@ Allow: /
 Meta-robots: noindex, nofollow
 
 User-agent: *
+Disallow: /project-kaizin
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
 Disallow: /project-lagoaempadadas
 Crawl-delay: 10
 Allow: /
@@ -516,6 +522,12 @@ Meta-robots: noindex, nofollow
 
 User-agent: *
 Disallow: /project-offmarket
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
+Disallow: /project-orions
 Crawl-delay: 10
 Allow: /
 Meta-robots: noindex, nofollow
@@ -749,6 +761,12 @@ Allow: /
 Meta-robots: noindex, nofollow
 
 User-agent: *
+Disallow: /project-umbr
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
 Disallow: /project-uppura
 Crawl-delay: 10
 Allow: /
@@ -773,7 +791,19 @@ Allow: /
 Meta-robots: noindex, nofollow
 
 User-agent: *
+Disallow: /project-y-stern
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
 Disallow: /project-ypages
+Crawl-delay: 10
+Allow: /
+Meta-robots: noindex, nofollow
+
+User-agent: *
+Disallow: /project-zozo
 Crawl-delay: 10
 Allow: /
 Meta-robots: noindex, nofollow
