@@ -674,7 +674,7 @@
       "<?php echo renderFeatureHero($post_current_data); ?>",
       "<?php echo renderSectionWebProject($post_current_data); ?>",
       "<?php echo renderTitle('Seo Optimization'); ?>",
-      "<?php echo renderParagraphBlockProject('', renderSliderWithImagesOfProject($post_current_data, 'web/seo-optimization/' )); ?>"
+      "<?php echo renderParagraphBlockProject('', renderSliderWithImagesOfProject($post_current_data, 'web/seo-optimization' )); ?>"
     ],
     "layout": "wrapper-layout"
   },
@@ -6301,7 +6301,8 @@
         "booking application",
         "presentation website",
         "web content",
-        "web design"
+        "web design",
+        "web maintenance"
       ],
       "project_collaboration": ["Teamwork"],
       "project_contractor": ["Mentor Marketing Experts"],
@@ -9133,7 +9134,7 @@
       ],
       "web_plugins": [],
       "web_project_status": "Done",
-      "project_types": ["wordpress plugin", "seo optimization"],
+      "project_types": ["wordpress plugin", "privacy compliance"],
       "media_custom": [
         {
           "title": "GitHub Repository: ",
@@ -9320,7 +9321,7 @@
         }
       ],
       "web_project_status": "Done",
-      "project_types": ["online shop", "web design"],
+      "project_types": ["online shop", "web design", "web maintenance"],
       "project_collaboration": ["Individual", "Teamwork"],
       "project_contractor": ["Mentor Marketing Experts"],
       "employer": "Mentor Marketing Experts",
@@ -9738,7 +9739,7 @@
       "logo": "logo/logo.webp",
       "logo_path": "orions",
       "logo_type": "webp",
-      "description": "This project was developed using WordPress and the Elementor Pro page builder. The website design was originally created in Figma and then translated into Elementor widgets and elements to bring the layout to life.",
+      "description": "This project was developed using WordPress and the Elementor Pro page builder. The website design was originally created in Lovable and then translated into Elementor widgets and elements to bring the layout to life.",
       "categories": ["Web Development Projects"],
       "web_url": "orions.gr",
       "web_platform": [
@@ -9805,7 +9806,7 @@
     ],
     "layout": "wrapper-layout"
   },
-    {
+  {
     "file": "project-umbr",
     "post_data": {
       "display": "enable",
@@ -9887,7 +9888,7 @@
     ],
     "layout": "wrapper-layout"
   },
-      {
+  {
     "file": "project-zozo",
     "post_data": {
       "display": "enable",
@@ -9969,7 +9970,7 @@
     ],
     "layout": "wrapper-layout"
   },
-        {
+  {
     "file": "project-y-stern",
     "post_data": {
       "display": "enable",
@@ -10047,7 +10048,7 @@
     ],
     "layout": "wrapper-layout"
   },
-          {
+  {
     "file": "project-kaizin",
     "post_data": {
       "display": "enable",
@@ -10099,16 +10100,16 @@
           "svg": "elementor"
         },
         {
-          "name":"WooCommerce",
-          "svg":"woocommerce"
+          "name": "WooCommerce",
+          "svg": "woocommerce"
         },
         {
-          "name":"Secure Custom Fields",
-          "svg":"scf"
+          "name": "Secure Custom Fields",
+          "svg": "scf"
         },
         {
-          "name":"Code Snippets",
-          "svg":"code-snippets"
+          "name": "Code Snippets",
+          "svg": "code-snippets"
         },
         {
           "name": "WooCommerce Subscriptions"
@@ -10118,7 +10119,7 @@
         }
       ],
       "web_project_status": "Done",
-      "project_types": ["online shop", "web design"],
+      "project_types": ["online shop", "web design", "api integration"],
       "project_collaboration": ["Individual", "Teamwork"],
       "project_contractor": ["Mentor Marketing Experts"],
       "employer": "Mentor Marketing Experts",
@@ -10137,6 +10138,160 @@
     "post_content": [
       "<?php echo renderFeatureHero($post_current_data); ?>",
       "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-module-wc-colors-product",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "module-wc-colors-product",
+      "title": "WC Product Color Swatches - WP Plugin",
+      "logo": "wp-plugin",
+      "logo_path": "icon",
+      "logo_type": "svg",
+      "description": "This WooCommerce plugin enhances the customer shopping experience by transforming standard text-based color selection dropdowns into visual color swatches across your entire store. By mapping a specific WooCommerce attribute to your product colors, you can assign precise visual colors or images to each individual term. It seamlessly replaces the default variation dropdowns on single product pages with intuitive clickable swatches, keeping the variation form perfectly synchronized while automatically disabling unavailable, out-of-stock, or unpriced product options to prevent invalid selections.<br><br>Beyond individual product pages, the plugin provides flexible display options via a simple shortcode, allowing you to showcase active color swatches anywhere on your site. This shortcode can even be configured to link each swatch directly to its specific variation URL, allowing customers to land right on their chosen option. Additionally, it integrates directly with JetSmartFilters, automatically rendering corresponding color swatches next to checkbox terms in filter lists to make product discovery fast, visual, and user-friendly.",
+      "categories": ["Web Development Projects"],
+      "web_url": "",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        }
+      ],
+      "web_project_status": "Done",
+      "project_types": ["wordpress plugin", "web design"],
+      "media_custom": [
+        {
+          "title": "GitHub Repository: ",
+          "url": "github.com/denismarginas/module-wc-colors-product"
+        },
+        {
+          "title": "Plugin Usage: ",
+          "url": "avivit-weizman.co.il"
+        }
+      ],
+      "project_collaboration": ["Individual"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "06.2026",
+        "date_end": "06.2025"
+      },
+      "tags": ["web"],
+      "colors": {
+        "post_color_primary": "#f0f0f1",
+        "post_color_secondary": "#1d263a",
+        "post_color_background": "#f0f0f1",
+        "post_color_text_on_background": "#2271b1"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>"
+    ],
+    "layout": "wrapper-layout"
+  },
+  {
+    "file": "project-usaconstructiongroupinc",
+    "post_data": {
+      "display": "enable",
+      "post_single_type": "project",
+      "post_type": "projects",
+      "media_path": "usaconstructiongroupinc",
+      "title": "USAC Construction Group",
+      "logo": "logo/logo.webp",
+      "logo_path": "usaconstructiongroupinc",
+      "logo_type": "webp",
+      "description": "This project was developed using WordPress and the Elementor Pro page builder. The website design was built on a foundation of custom Figma templates I created myself, which accounted for roughly 50% of the layout, and then translated into Elementor widgets and elements to bring the design to life. All textual content was generated with the assistance of AI tools, while images were sourced from a combination of assets provided by the customer.",
+      "categories": ["Web Development Projects"],
+      "web_url": "usaconstructiongroupinc.com",
+      "web_platform": [
+        {
+          "name": "Wordpress",
+          "svg": "wordpress"
+        }
+      ],
+      "web_technology": [
+        {
+          "name": "HTML",
+          "svg": "html"
+        },
+        {
+          "name": "CSS",
+          "svg": "css"
+        },
+        {
+          "name": "JS",
+          "svg": "js"
+        },
+        {
+          "name": "SQL",
+          "svg": "sql"
+        },
+        {
+          "name": "PHP",
+          "svg": "php"
+        },
+        {
+          "name": "jQuery",
+          "svg": "jquery"
+        }
+      ],
+      "web_plugins": [
+        {
+          "name": "Elementor Website Builder Pro",
+          "svg": "elementor"
+        },
+        {
+          "name": "Yoast SEO"
+        }
+      ],
+      "web_project_status": "Done",
+      "project_types": [
+        "presentation website",
+        "web design",
+        "seo optimization"
+      ],
+      "project_collaboration": ["Individual", "Teamwork"],
+      "project_contractor": ["Mentor Marketing Experts"],
+      "employer": "Mentor Marketing Experts",
+      "date": {
+        "date_start": "04.2026",
+        "date_end": "05.2025"
+      },
+      "tags": ["web", "content-web"],
+      "colors": {
+        "post_color_primary": "#04183e",
+        "post_color_secondary": "#ffffff",
+        "post_color_background": "#ffffff",
+        "post_color_text_on_background": "#04183e"
+      }
+    },
+    "post_content": [
+      "<?php echo renderFeatureHero($post_current_data); ?>",
+      "<?php echo renderSectionWebProject($post_current_data); ?>",
+      "<?php echo renderParagraphBlockProject('', renderSliderWithImagesOfProject($post_current_data, 'web/seo-optimization' )); ?>"
     ],
     "layout": "wrapper-layout"
   }
