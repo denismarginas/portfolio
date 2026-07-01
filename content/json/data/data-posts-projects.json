@@ -10291,6 +10291,7 @@
     "post_content": [
       "<?php echo renderFeatureHero($post_current_data); ?>",
       "<?php echo renderSectionWebProject($post_current_data); ?>",
+      "<?php echo renderTitle('Seo Optimization'); ?>",
       "<?php echo renderParagraphBlockProject('', renderSliderWithImagesOfProject($post_current_data, 'web/seo-optimization' )); ?>"
     ],
     "layout": "wrapper-layout"
